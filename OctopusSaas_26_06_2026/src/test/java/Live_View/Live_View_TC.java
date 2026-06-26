@@ -51,9 +51,19 @@ public class Live_View_TC extends BaseClassForGEneratorContacts{
 
 				 utilityclassobject.gettest().log(Status.INFO, "Route Name is displayed successfully");
 				 System.out.println("Route Name is displayed");
-			 }
+			 
 		 }
-		
-		
+		 }
 	}
+		 @Test
+		 public void View_Details() throws InterruptedException {
+			 
+		 System.out.println("View Details is clicked");
+	}
+		 @Test
+		 public void View_Details_Popup() throws InterruptedException {
+			 lv.getView_Details().click();
+			
+		 }
+		 
 }
