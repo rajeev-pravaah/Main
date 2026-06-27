@@ -99,9 +99,26 @@ public class GeneretorInformation {
 	private WebElement calendar;
 	@FindBy(xpath = "//a[text()='Generator Contacts']")
 	private WebElement generatorContacts;
+	@FindBy(xpath = "//span[text()='Contracted']/../../descendant::div")
+	private WebElement contractedcheckbox;
+	@FindBy(xpath = "//textarea[@name='cancellationNote']")
+	private WebElement cancellationNote;
+	@FindBy(xpath = "//button[text()='Terminate The Contract']")
+	private WebElement terminateContractbtn;
 	
 	
-
+	
+	
+	
+	public WebElement getTerminateContractbtn() {
+		return terminateContractbtn;
+	}
+	public WebElement getCancellationNote() {
+		return cancellationNote;
+	}
+	public WebElement getContractedcheckbox() {
+		return contractedcheckbox;
+	}
 	public WebElement getGeneratorContacts() {
 		return generatorContacts;
 	}
