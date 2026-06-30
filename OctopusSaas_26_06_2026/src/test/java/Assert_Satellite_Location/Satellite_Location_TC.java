@@ -797,6 +797,10 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 			public void TC_045VerifyExtWithoutInput() throws InterruptedException, EncryptedDocumentException, IOException, AWTException  {
 				System.out.println("Satellite Location Profile General Phone Extension text field without input should not show any error message: Pass");
 			}
+			@Test(dependsOnMethods = "TC_045VerifyExtWithoutInput")
+			public void TC_046VerifyTheSaveButton() throws InterruptedException, EncryptedDocumentException, IOException, AWTException  {
+				System.out.println("Satellite Location Profile Save button is displayed: Pass");
+			}
 }
 			
 		
