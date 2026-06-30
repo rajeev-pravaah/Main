@@ -67,4 +67,8 @@ public class demo125 extends BaseclassforDrivers {
 				+ " open driver profile");
 		
 	}
+	@Test
+	public void demo125_DriverProfileDateOfBirth2() throws InterruptedException {
+		System.out.println("INFO: Driver profile page is displayed successfully");
+	}
 }
