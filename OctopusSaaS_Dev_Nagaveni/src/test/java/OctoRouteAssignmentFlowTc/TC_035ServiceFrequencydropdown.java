@@ -1,0 +1,65 @@
+package OctoRouteAssignmentFlowTc;
+
+import java.awt.AWTException;
+import java.io.IOException;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.Octopussaas.BaseUtility.Baseclass;
+import com.Octopussaas.FileUtility.ExcelUtility;
+import com.Octopussaas.ObjectRepository.AddNewGenerator;
+import com.Octopussaas.ObjectRepository.GeneratorManagentPage;
+import com.Octopussaas.ObjectRepository.GeneretorInformation;
+import com.Octopussaas.ObjectRepository.HomePage;
+import com.Octopussaas.ObjectRepository.LoginPage;
+import com.Octopussaas.ObjectRepository.RouteAssignment;
+import com.Octopussaass.WebdriverUtility.javautility;
+import com.Octopussaass.WebdriverUtility.utilityclassobject;
+import com.Octopussaass.WebdriverUtility.webDriverutility;
+import com.aventstack.extentreports.Status;
+
+@Listeners(ListnerUtility.ListnerUilityImp.class)
+
+public class TC_035ServiceFrequencydropdown extends Baseclass{
+
+
+	ExcelUtility elib;
+	javautility jlib;
+	webDriverutility wlib;
+
+	LoginPage lp;
+	HomePage hp;
+	RouteAssignment ras;
+	@Test
+	public void TC_035() throws EncryptedDocumentException, IOException, InterruptedException, AWTException
+	{
+	
+	elib = new ExcelUtility();
+	jlib = new javautility();
+	wlib = new webDriverutility();
+	lp = new LoginPage(driver);
+	hp = new HomePage(driver);
+	hp.getGeneratoemanag().click();
+	GeneratorManagentPage gmp = new GeneratorManagentPage(driver);
+	String gname = elib.getDataFromExcel("Generator", 1, 1);
+	gmp.CharlieAccounttwo(gname);
+	ras = new RouteAssignment(driver);
+	GeneretorInformation gip = new GeneretorInformation(driver);
+	gip.Ellisebtn();
+	utilityclassobject.gettest().log(Status.INFO, "Route assignment page is displayed successfully");
+	ras=new RouteAssignment(driver);
+	Thread.sleep(15000);
+	ras.AddService();
+	utilityclassobject.gettest().log(Status.INFO, "Add service displayed all text field successfully");
+	ras.NayanRoute();
+	utilityclassobject.gettest().log(Status.INFO, "Route selected successfully");
+	ras.ServiceFrequency();
+	utilityclassobject.gettest().log(Status.INFO, "Service frequency selected successfully");
+
+	}
+}

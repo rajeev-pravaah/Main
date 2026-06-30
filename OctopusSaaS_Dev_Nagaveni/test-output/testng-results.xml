@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-06-30T15:58:18 IST" name="Default suite" finished-at="2026-06-30T15:59:38 IST" duration-ms="79064">
+    <groups>
+    </groups>
+    <test started-at="2026-06-30T15:58:18 IST" name="Default test" finished-at="2026-06-30T15:59:38 IST" duration-ms="79064">
+      <class name="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation">
+        <test-method is-config="true" signature="Bc()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:58:18 IST" name="Bc" finished-at="2026-06-30T15:58:33 IST" duration-ms="14662" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bc -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:58:33 IST" name="Bm" finished-at="2026-06-30T15:58:33 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_049GeneratorInformation_ParentaccountwithInput()[pri:1, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:58:33 IST" name="TC_049GeneratorInformation_ParentaccountwithInput" finished-at="2026-06-30T15:59:00 IST" duration-ms="27223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_049GeneratorInformation_ParentaccountwithInput -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:59:00 IST" name="Am" finished-at="2026-06-30T15:59:02 IST" duration-ms="2011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_052GeneratorInformation_ParentaccountwithAutosave()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:59:02 IST" name="TC_052GeneratorInformation_ParentaccountwithAutosave" finished-at="2026-06-30T15:59:07 IST" depends-on-methods="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_049GeneratorInformation_ParentaccountwithInput" duration-ms="4808" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_052GeneratorInformation_ParentaccountwithAutosave -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:59:02 IST" name="Bm" finished-at="2026-06-30T15:59:02 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:59:07 IST" name="Am" finished-at="2026-06-30T15:59:09 IST" duration-ms="2010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_053GeneratorInformation_ParentaccontwithUnassign()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:59:09 IST" name="TC_053GeneratorInformation_ParentaccontwithUnassign" finished-at="2026-06-30T15:59:12 IST" depends-on-methods="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_052GeneratorInformation_ParentaccountwithAutosave" duration-ms="3080" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_053GeneratorInformation_ParentaccontwithUnassign -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:59:09 IST" name="Bm" finished-at="2026-06-30T15:59:09 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:59:12 IST" name="Am" finished-at="2026-06-30T15:59:14 IST" duration-ms="2006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_054GeneratorInformation_ParentaccountwithUnassignButton()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:59:14 IST" name="TC_054GeneratorInformation_ParentaccountwithUnassignButton" finished-at="2026-06-30T15:59:17 IST" depends-on-methods="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_053GeneratorInformation_ParentaccontwithUnassign" duration-ms="2700" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_054GeneratorInformation_ParentaccountwithUnassignButton -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:59:14 IST" name="Bm" finished-at="2026-06-30T15:59:14 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:59:17 IST" name="Am" finished-at="2026-06-30T15:59:19 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_055GeneratorInformation_ParentaccountwithKeeptheAssigned()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:59:19 IST" name="TC_055GeneratorInformation_ParentaccountwithKeeptheAssigned" finished-at="2026-06-30T15:59:21 IST" depends-on-methods="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_054GeneratorInformation_ParentaccountwithUnassignButton" duration-ms="1903" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_055GeneratorInformation_ParentaccountwithKeeptheAssigned -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:59:19 IST" name="Bm" finished-at="2026-06-30T15:59:19 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:59:21 IST" name="Am" finished-at="2026-06-30T15:59:23 IST" duration-ms="2014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_056GeneratorInformation_unassignwithoutReason()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:59:23 IST" name="TC_056GeneratorInformation_unassignwithoutReason" finished-at="2026-06-30T15:59:26 IST" depends-on-methods="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_055GeneratorInformation_ParentaccountwithKeeptheAssigned" duration-ms="3111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_056GeneratorInformation_unassignwithoutReason -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:59:23 IST" name="Bm" finished-at="2026-06-30T15:59:23 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:59:26 IST" name="Am" finished-at="2026-06-30T15:59:28 IST" duration-ms="2006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_057GeneratorInformtion_Withanotherparentaccount()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:59:28 IST" name="TC_057GeneratorInformtion_Withanotherparentaccount" finished-at="2026-06-30T15:59:36 IST" depends-on-methods="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_056GeneratorInformation_unassignwithoutReason" duration-ms="7398" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_057GeneratorInformtion_Withanotherparentaccount -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:59:28 IST" name="Bm" finished-at="2026-06-30T15:59:28 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@bcec361]" started-at="2026-06-30T15:59:36 IST" name="Am" finished-at="2026-06-30T15:59:38 IST" duration-ms="2008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+      </class> <!-- Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
