@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [OctopussaasOrderedSuite]">
+  <test thread-count="5" name="BillingSettingsTests(failed)">
+    <classes>
+      <class name="OctopussaasBillingSettings.TC_059CustomInvoiceAppendText">
+        <methods>
+          <include name="Am"/>
+          <include name="TC_059AppendCustomInvoiceText"/>
+          <include name="Bm"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_059CustomInvoiceAppendText -->
+      <class name="OctopussaasBillingSettings.TC_031InvoiceChcekBoxWithConfirmAndCancelBtnInPOpup">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+          <include name="TC_031InvoiceChcekBoxWithConfirmandCancekBtn"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_031InvoiceChcekBoxWithConfirmAndCancelBtnInPOpup -->
+      <class name="OctopussaasBillingSettings.TC_070AddpaymentTypeLinkPopup">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+          <include name="TC_070AddpaymentTypeLinkPopup"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_070AddpaymentTypeLinkPopup -->
+      <class name="OctopussaasBillingSettings.TC_072AddPaymentTypeWithValidInput">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="TC_072AddpaymentTypeWithValidInput"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_072AddPaymentTypeWithValidInput -->
+      <class name="OctopussaasBillingSettings.TC_006YearToDateRevenue">
+        <methods>
+          <include name="TC_006YearTodateRevenueDefaultValue"/>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_006YearToDateRevenue -->
+      <class name="OctopussaasBillingSettings.TC_010PastYear20225TextField">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="TC_010PastYear2025TextField"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_010PastYear20225TextField -->
+      <class name="OctopussaasBillingSettings.TC_004HardCloseTextField">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+          <include name="TC_004HardCloseDateVerification"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_004HardCloseTextField -->
+    </classes>
+  </test> <!-- BillingSettingsTests(failed) -->
+</suite> <!-- Failed suite [OctopussaasOrderedSuite] -->

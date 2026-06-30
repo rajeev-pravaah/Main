@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Billing Setting All Tc]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Billing Setting All Tc(failed)">
+    <classes>
+      <class name="OctopussaasBillingSettings.TC_169ProvideBankAccountDetailsWithInstantAccount">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+          <include name="TC_169ProvideBankAccountDetailsWithInstantAccount"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_169ProvideBankAccountDetailsWithInstantAccount -->
+      <class name="OctopussaasBillingSettings.TC_129AddnewWith1stElement">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="TC_129AddnewWith1stElement"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_129AddnewWith1stElement -->
+      <class name="OctopussaasBillingSettings.TC_171RoutingNumberInBankAccountDetailsPopUp">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="TC_171RoutingNumberInBankAccountDetailsPopUp"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_171RoutingNumberInBankAccountDetailsPopUp -->
+      <class name="OctopussaasBillingSettings.TC_133AddnewWith5thElement">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+          <include name="TC_133AddnewWith5thElement"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_133AddnewWith5thElement -->
+      <class name="OctopussaasBillingSettings.TC_139MySettingsPage">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="TC_139MySettingsPage"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_139MySettingsPage -->
+      <class name="OctopussaasBillingSettings.TC_150CvvtextfieldwithInput">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+          <include name="TC_150CvvtextfieldwithInput"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_150CvvtextfieldwithInput -->
+      <class name="OctopussaasBillingSettings.TC_130AddnewWith2ndElement">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="TC_130AddnewWith2ndElement"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_130AddnewWith2ndElement -->
+      <class name="OctopussaasBillingSettings.TC_180CancelAddedPayment">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+          <include name="TC_180CancelAddedPayment"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_180CancelAddedPayment -->
+      <class name="OctopussaasBillingSettings.TC_182MakeDefaultPayment">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+          <include name="TC_182MakeDefaultPayment"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_182MakeDefaultPayment -->
+      <class name="OctopussaasBillingSettings.TC_176SubmitBankDetailsButton">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="TC_176SubmitBankDetailsButton"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_176SubmitBankDetailsButton -->
+      <class name="OctopussaasBillingSettings.TC_167AccountTypePersonalACH">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="TC_167AccountTypePersonalACH"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_167AccountTypePersonalACH -->
+      <class name="OctopussaasBillingSettings.TC_166AccountTypeBusinessInACH">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="TC_166AccountTypeBusinessInACH"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_166AccountTypeBusinessInACH -->
+      <class name="OctopussaasBillingSettings.TC_159InvalidPostalCode">
+        <methods>
+          <include name="TC_159InvalidPostalCode"/>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_159InvalidPostalCode -->
+      <class name="OctopussaasBillingSettings.TC_172AccountNumberInBankAccountDetailsPopup">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+          <include name="TC_172AccountNumberInBankAccountDetailsPopup"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_172AccountNumberInBankAccountDetailsPopup -->
+      <class name="OctopussaasBillingSettings.TC_168ProvideBankAccountDetails">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="TC_168ProvideBankAccountDetails"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_168ProvideBankAccountDetails -->
+      <class name="OctopussaasBillingSettings.TC_181DeleteAddedPayment">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="Ac"/>
+          <include name="TC_181DeleteAddedPayment"/>
+          <include name="Bc"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_181DeleteAddedPayment -->
+      <class name="OctopussaasBillingSettings.TC_121DaysTextfieldWithoutSuspenssionSettings">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="TC_121DaysTextfieldWithoutSuspenssionSettings"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_121DaysTextfieldWithoutSuspenssionSettings -->
+      <class name="OctopussaasBillingSettings.TC_114AutmaticSuspensiondropdownwith10thvlause">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+          <include name="TC_114AutmaticSuspensiondropdownwith10thvlause"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_114AutmaticSuspensiondropdownwith10thvlause -->
+      <class name="OctopussaasBillingSettings.TC_173AccountTypeDropdownfromAccountdetailsCheckBox">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+          <include name="TC_173AccountTypeDropdownfromAccountdetailsCheckBox"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_173AccountTypeDropdownfromAccountdetailsCheckBox -->
+      <class name="OctopussaasBillingSettings.TC_092SubsequentCheckbox">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+          <include name="TC_092SubsequentCheckBox"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_092SubsequentCheckbox -->
+      <class name="OctopussaasBillingSettings.TC_175SelectAccountTypeasSavings">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+          <include name="TC_175SelectAccountTypeasSavings"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_175SelectAccountTypeasSavings -->
+      <class name="OctopussaasBillingSettings.TC_154CvvTextfield">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="TC_154CvvTextfield"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_154CvvTextfield -->
+      <class name="OctopussaasBillingSettings.TC_123ConsolidatedradioBtn">
+        <methods>
+          <include name="Am"/>
+          <include name="Bm"/>
+          <include name="Ac"/>
+          <include name="Bc"/>
+          <include name="TC_123ConsolidatedradioBtn"/>
+        </methods>
+      </class> <!-- OctopussaasBillingSettings.TC_123ConsolidatedradioBtn -->
+    </classes>
+  </test> <!-- Billing Setting All Tc(failed) -->
+</suite> <!-- Failed suite [Billing Setting All Tc] -->

@@ -1,0 +1,295 @@
+<html>
+<head>
+<title>TestNG:  My Profile Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>My Profile Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>43/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Apr 11 15:59:18 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>2004 seconds (2004451 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Octopus_MyProfile.TC_015.TC_015myProfile_lastnamewithEdit()'><b>TC_015myProfile_lastnamewithEdit</b><br>Test class: Octopus_MyProfile.TC_015</td>
+<td></td>
+<td>16</td>
+<td>Octopus_MyProfile.TC_015@3bf7ca37</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_018.TC_018myProfile_lastnamewithNumbers()'><b>TC_018myProfile_lastnamewithNumbers</b><br>Test class: Octopus_MyProfile.TC_018</td>
+<td></td>
+<td>22</td>
+<td>Octopus_MyProfile.TC_018@4b2bac3f</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_028.TC_028myProfile_ExtwithNumbers()'><b>TC_028myProfile_ExtwithNumbers</b><br>Test class: Octopus_MyProfile.TC_028</td>
+<td></td>
+<td>18</td>
+<td>Octopus_MyProfile.TC_028@ba2f4ec</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_041.TC_041myprofile_NewSSRservice()'><b>TC_041myprofile_NewSSRservice</b><br>Test class: Octopus_MyProfile.TC_041</td>
+<td></td>
+<td>22</td>
+<td>Octopus_MyProfile.TC_041@752325ad</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_025.TC_025myProfile_PhonewithSpecialcharacters()'><b>TC_025myProfile_PhonewithSpecialcharacters</b><br>Test class: Octopus_MyProfile.TC_025</td>
+<td></td>
+<td>24</td>
+<td>Octopus_MyProfile.TC_025@2cd76f31</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_034.TC_034myprofile_StandardwithAdmin()'><b>TC_034myprofile_StandardwithAdmin</b><br>Test class: Octopus_MyProfile.TC_034</td>
+<td></td>
+<td>13</td>
+<td>Octopus_MyProfile.TC_034@5dda768f</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_039.TC_039myprofile_ServiceOverview()'><b>TC_039myprofile_ServiceOverview</b><br>Test class: Octopus_MyProfile.TC_039</td>
+<td></td>
+<td>19</td>
+<td>Octopus_MyProfile.TC_039@3a52dba3</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_021.TC_021myProfile_PasswordwithPopup()'><b>TC_021myProfile_PasswordwithPopup</b><br>Test class: Octopus_MyProfile.TC_021</td>
+<td></td>
+<td>85</td>
+<td>Octopus_MyProfile.TC_021@26794848</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_026.TC_026myprofile_extwithInput()'><b>TC_026myprofile_extwithInput</b><br>Test class: Octopus_MyProfile.TC_026</td>
+<td></td>
+<td>10</td>
+<td>Octopus_MyProfile.TC_026@367ffa75</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_032.TC_032myprofile_Adminrole()'><b>TC_032myprofile_Adminrole</b><br>Test class: Octopus_MyProfile.TC_032</td>
+<td></td>
+<td>54</td>
+<td>Octopus_MyProfile.TC_032@fbd1f6</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_040.TC_040myprofile_SSRservice()'><b>TC_040myprofile_SSRservice</b><br>Test class: Octopus_MyProfile.TC_040</td>
+<td></td>
+<td>48</td>
+<td>Octopus_MyProfile.TC_040@2a5c8d3f</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_037.TC_037myprofile_Notification()'><b>TC_037myprofile_Notification</b><br>Test class: Octopus_MyProfile.TC_037</td>
+<td></td>
+<td>15</td>
+<td>Octopus_MyProfile.TC_037@2aceadd4</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_007.TC_007myProfile_Viewtos()'><b>TC_007myProfile_Viewtos</b><br>Test class: Octopus_MyProfile.TC_007</td>
+<td></td>
+<td>30</td>
+<td>Octopus_MyProfile.TC_007@6ed3ccb2</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_013.TC_013myProfile_FirstnamewithNumbers()'><b>TC_013myProfile_FirstnamewithNumbers</b><br>Test class: Octopus_MyProfile.TC_013</td>
+<td></td>
+<td>24</td>
+<td>Octopus_MyProfile.TC_013@7c6908d7</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_036.TC_036myProfile_AdminwithStandard()'><b>TC_036myProfile_AdminwithStandard</b><br>Test class: Octopus_MyProfile.TC_036</td>
+<td></td>
+<td>51</td>
+<td>Octopus_MyProfile.TC_036@24269709</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_016.TC_016myProfile_lastnamewithAlphabets()'><b>TC_016myProfile_lastnamewithAlphabets</b><br>Test class: Octopus_MyProfile.TC_016</td>
+<td></td>
+<td>45</td>
+<td>Octopus_MyProfile.TC_016@79079097</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_019.TC_019myProfile_EmailwithEdit()'><b>TC_019myProfile_EmailwithEdit</b><br>Test class: Octopus_MyProfile.TC_019</td>
+<td></td>
+<td>11</td>
+<td>Octopus_MyProfile.TC_019@4e08711f</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_012.TC_012myProfile_withspecialcharacters()'><b>TC_012myProfile_withspecialcharacters</b><br>Test class: Octopus_MyProfile.TC_012</td>
+<td></td>
+<td>18</td>
+<td>Octopus_MyProfile.TC_012@198b6731</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_023.TC_023myProfile_PhonewithNumbers()'><b>TC_023myProfile_PhonewithNumbers</b><br>Test class: Octopus_MyProfile.TC_023</td>
+<td></td>
+<td>20</td>
+<td>Octopus_MyProfile.TC_023@3d285d7e</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_020.TC_020myProfile_PasswordwithClick()'><b>TC_020myProfile_PasswordwithClick</b><br>Test class: Octopus_MyProfile.TC_020</td>
+<td></td>
+<td>12</td>
+<td>Octopus_MyProfile.TC_020@bcec361</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_009.TC_009myProfile_firstnameWithInput()'><b>TC_009myProfile_firstnameWithInput</b><br>Test class: Octopus_MyProfile.TC_009</td>
+<td></td>
+<td>17</td>
+<td>Octopus_MyProfile.TC_009@15de0b3c</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_003.TC_003myProfile_Mysettings()'><b>TC_003myProfile_Mysettings</b><br>Test class: Octopus_MyProfile.TC_003</td>
+<td></td>
+<td>8</td>
+<td>Octopus_MyProfile.TC_003@7eac9008</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_006.TC_006myProfile_Logout()'><b>TC_006myProfile_Logout</b><br>Test class: Octopus_MyProfile.TC_006</td>
+<td></td>
+<td>9</td>
+<td>Octopus_MyProfile.TC_006@74e52ef6</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_004.TC_004Myprofile_Auditlog()'><b>TC_004Myprofile_Auditlog</b><br>Test class: Octopus_MyProfile.TC_004</td>
+<td></td>
+<td>10</td>
+<td>Octopus_MyProfile.TC_004@4116aac9</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_029.TC_029myprofile_ExtwithSpecialCharacters()'><b>TC_029myprofile_ExtwithSpecialCharacters</b><br>Test class: Octopus_MyProfile.TC_029</td>
+<td></td>
+<td>27</td>
+<td>Octopus_MyProfile.TC_029@1c1bbc4e</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_027.TC_027myprofile_withalpahabets()'><b>TC_027myprofile_withalpahabets</b><br>Test class: Octopus_MyProfile.TC_027</td>
+<td></td>
+<td>22</td>
+<td>Octopus_MyProfile.TC_027@49438269</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_033.TC_033myProfile_OctoconnectRole()'><b>TC_033myProfile_OctoconnectRole</b><br>Test class: Octopus_MyProfile.TC_033</td>
+<td></td>
+<td>13</td>
+<td>Octopus_MyProfile.TC_033@1ce24091</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_042.TC_042myprofile_terminationRequest()'><b>TC_042myprofile_terminationRequest</b><br>Test class: Octopus_MyProfile.TC_042</td>
+<td></td>
+<td>14</td>
+<td>Octopus_MyProfile.TC_042@279fedbd</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_002.TC_002Myprofile_Transporter()'><b>TC_002Myprofile_Transporter</b><br>Test class: Octopus_MyProfile.TC_002</td>
+<td></td>
+<td>9</td>
+<td>Octopus_MyProfile.TC_002@1fa121e2</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_001.TC_001myprofile_Dropdown()'><b>TC_001myprofile_Dropdown</b><br>Test class: Octopus_MyProfile.TC_001</td>
+<td></td>
+<td>43</td>
+<td>Octopus_MyProfile.TC_001@185a6e9</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_008.TC_008myProfile_Mysettings()'><b>TC_008myProfile_Mysettings</b><br>Test class: Octopus_MyProfile.TC_008</td>
+<td></td>
+<td>5</td>
+<td>Octopus_MyProfile.TC_008@1a677343</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_022.TC_O22myProfile_Phonewithinput()'><b>TC_O22myProfile_Phonewithinput</b><br>Test class: Octopus_MyProfile.TC_022</td>
+<td></td>
+<td>24</td>
+<td>Octopus_MyProfile.TC_022@302552ec</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_011.TC_011myProfile_Firstnamewithalphabets()'><b>TC_011myProfile_Firstnamewithalphabets</b><br>Test class: Octopus_MyProfile.TC_011</td>
+<td></td>
+<td>17</td>
+<td>Octopus_MyProfile.TC_011@3857f613</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_010.TC_010myprofile_FirstnamewithEdit()'><b>TC_010myprofile_FirstnamewithEdit</b><br>Test class: Octopus_MyProfile.TC_010</td>
+<td></td>
+<td>13</td>
+<td>Octopus_MyProfile.TC_010@489115ef</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_014.TC_014myProfile_lastnamewithInput()'><b>TC_014myProfile_lastnamewithInput</b><br>Test class: Octopus_MyProfile.TC_014</td>
+<td></td>
+<td>18</td>
+<td>Octopus_MyProfile.TC_014@3c9754d8</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_043.TC_043myprofile_withMultipleService()'><b>TC_043myprofile_withMultipleService</b><br>Test class: Octopus_MyProfile.TC_043</td>
+<td></td>
+<td>24</td>
+<td>Octopus_MyProfile.TC_043@b3ca52e</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_044.TC_044myprofile_withService()'><b>TC_044myprofile_withService</b><br>Test class: Octopus_MyProfile.TC_044</td>
+<td></td>
+<td>25</td>
+<td>Octopus_MyProfile.TC_044@45c7e403</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_005.TC_005Myprofile_HistoricalSettings()'><b>TC_005Myprofile_HistoricalSettings</b><br>Test class: Octopus_MyProfile.TC_005</td>
+<td></td>
+<td>8</td>
+<td>Octopus_MyProfile.TC_005@62ddbd7e</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_024.TC_024myProfile_phonewithAlphabets()'><b>TC_024myProfile_phonewithAlphabets</b><br>Test class: Octopus_MyProfile.TC_024</td>
+<td></td>
+<td>11</td>
+<td>Octopus_MyProfile.TC_024@40005471</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_035.TC_035myProfile_StandardwithoutAdmin()'><b>TC_035myProfile_StandardwithoutAdmin</b><br>Test class: Octopus_MyProfile.TC_035</td>
+<td></td>
+<td>30</td>
+<td>Octopus_MyProfile.TC_035@7a8c8dcf</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_017.TC_017myProfile_lastnamewithSpecialcharacters()'><b>TC_017myProfile_lastnamewithSpecialcharacters</b><br>Test class: Octopus_MyProfile.TC_017</td>
+<td></td>
+<td>22</td>
+<td>Octopus_MyProfile.TC_017@4d1c00d0</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_031.TC_031myprofile_Roles()'><b>TC_031myprofile_Roles</b><br>Test class: Octopus_MyProfile.TC_031</td>
+<td></td>
+<td>44</td>
+<td>Octopus_MyProfile.TC_031@55fe41ea</td></tr>
+<tr>
+<td title='Octopus_MyProfile.TC_038.TC_038myprofile_OctoconnectRequest()'><b>TC_038myprofile_OctoconnectRequest</b><br>Test class: Octopus_MyProfile.TC_038</td>
+<td></td>
+<td>22</td>
+<td>Octopus_MyProfile.TC_038@24aed80c</td></tr>
+</table><p>
+</body>
+</html>

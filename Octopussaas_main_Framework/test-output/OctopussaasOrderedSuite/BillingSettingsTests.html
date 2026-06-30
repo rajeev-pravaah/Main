@@ -1,0 +1,920 @@
+<html>
+<head>
+<title>TestNG:  BillingSettingsTests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>BillingSettingsTests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>64/7/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Apr 10 14:35:33 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>2910 seconds (2910821 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_010PastYear20225TextField.TC_010PastYear2025TextField()'><b>TC_010PastYear2025TextField</b><br>Test class: OctopussaasBillingSettings.TC_010PastYear20225TextField</td>
+<td><div><pre>org.openqa.selenium.InvalidElementStateException: invalid element state
+  (Session info: chrome=146.0.7680.178)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7f93ca23101b7a2d9f3057348d174074, clearElement {id=f.2007A1151A5D41DFC72824773373A41D.d.21D6BFEDBE817EA4A4C315FF593214C7.e.3517}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Rajeev nandi\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52297}, goog:processID: 12284, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52297/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (7f93ca23101b7a2d9f3057348d174074)] -&gt; xpath: (//div[text()=&apos;2025&apos;]/ancestor::div[@class=&apos;flex items-center gap-2&apos;]/descendant::div)[2]]
+Session ID: 7f93ca23101b7a2d9f3057348d174074
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:129)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.clear(Unknown Source)
+	at OctopussaasBillingSettings.TC_010PastYear20225TextField.TC_010PastYear2025TextField(TC_010PastYear20225TextField.java:69)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1955226954", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1955226954'><pre>org.openqa.selenium.InvalidElementStateException: invalid element state
+  (Session info: chrome=146.0.7680.178)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7f93ca23101b7a2d9f3057348d174074, clearElement {id=f.2007A1151A5D41DFC72824773373A41D.d.21D6BFEDBE817EA4A4C315FF593214C7.e.3517}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Rajeev nandi\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52297}, goog:processID: 12284, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52297/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (7f93ca23101b7a2d9f3057348d174074)] -&gt; xpath: (//div[text()=&apos;2025&apos;]/ancestor::div[@class=&apos;flex items-center gap-2&apos;]/descendant::div)[2]]
+Session ID: 7f93ca23101b7a2d9f3057348d174074
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:129)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.clear(Unknown Source)
+	at OctopussaasBillingSettings.TC_010PastYear20225TextField.TC_010PastYear2025TextField(TC_010PastYear20225TextField.java:69)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>9</td>
+<td>OctopussaasBillingSettings.TC_010PastYear20225TextField@131ef10</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_070AddpaymentTypeLinkPopup.TC_070AddpaymentTypeLinkPopup()'><b>TC_070AddpaymentTypeLinkPopup</b><br>Test class: OctopussaasBillingSettings.TC_070AddpaymentTypeLinkPopup</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//img[@alt=&apos;User Avatar&apos;]&quot;}
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6d35ff6baa95efb7ff4b4d11acde5d27, findElement {using=xpath, value=//img[@alt=&apos;User Avatar&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Rajeev nandi\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59640}, goog:processID: 740, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59640/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6d35ff6baa95efb7ff4b4d11acde5d27
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+	at OctopussaasBillingSettings.TC_070AddpaymentTypeLinkPopup.TC_070AddpaymentTypeLinkPopup(TC_070AddpaymentTypeLinkPopup.java:39)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1993142191", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1993142191'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//img[@alt=&apos;User Avatar&apos;]&quot;}
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6d35ff6baa95efb7ff4b4d11acde5d27, findElement {using=xpath, value=//img[@alt=&apos;User Avatar&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Rajeev nandi\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59640}, goog:processID: 740, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59640/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6d35ff6baa95efb7ff4b4d11acde5d27
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+	at OctopussaasBillingSettings.TC_070AddpaymentTypeLinkPopup.TC_070AddpaymentTypeLinkPopup(TC_070AddpaymentTypeLinkPopup.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>32</td>
+<td>OctopussaasBillingSettings.TC_070AddpaymentTypeLinkPopup@1e178745</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_006YearToDateRevenue.TC_006YearTodateRevenueDefaultValue()'><b>TC_006YearTodateRevenueDefaultValue</b><br>Test class: OctopussaasBillingSettings.TC_006YearToDateRevenue</td>
+<td><div><pre>java.lang.AssertionError: Default value in Year to Date Revenue field is not 0 expected [$0.00] but found [0.00]
+	at OctopussaasBillingSettings.TC_006YearToDateRevenue.TC_006YearTodateRevenueDefaultValue(TC_006YearToDateRevenue.java:58)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace378327915", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace378327915'><pre>java.lang.AssertionError: Default value in Year to Date Revenue field is not 0 expected [$0.00] but found [0.00]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at OctopussaasBillingSettings.TC_006YearToDateRevenue.TC_006YearTodateRevenueDefaultValue(TC_006YearToDateRevenue.java:58)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>10</td>
+<td>OctopussaasBillingSettings.TC_006YearToDateRevenue@77f1baf5</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_031InvoiceChcekBoxWithConfirmAndCancelBtnInPOpup.TC_031InvoiceChcekBoxWithConfirmandCancekBtn()'><b>TC_031InvoiceChcekBoxWithConfirmandCancekBtn</b><br>Test class: OctopussaasBillingSettings.TC_031InvoiceChcekBoxWithConfirmAndCancelBtnInPOpup</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//img[@alt=&apos;User Avatar&apos;]&quot;}
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b6cfb1abaa192756b550579fa5bcf311, findElement {using=xpath, value=//img[@alt=&apos;User Avatar&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Rajeev nandi\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54795}, goog:processID: 13916, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54795/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b6cfb1abaa192756b550579fa5bcf311
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+	at OctopussaasBillingSettings.TC_031InvoiceChcekBoxWithConfirmAndCancelBtnInPOpup.TC_031InvoiceChcekBoxWithConfirmandCancekBtn(TC_031InvoiceChcekBoxWithConfirmAndCancelBtnInPOpup.java:43)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace115857872", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace115857872'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//img[@alt=&apos;User Avatar&apos;]&quot;}
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b6cfb1abaa192756b550579fa5bcf311, findElement {using=xpath, value=//img[@alt=&apos;User Avatar&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Rajeev nandi\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54795}, goog:processID: 13916, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54795/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b6cfb1abaa192756b550579fa5bcf311
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+	at OctopussaasBillingSettings.TC_031InvoiceChcekBoxWithConfirmAndCancelBtnInPOpup.TC_031InvoiceChcekBoxWithConfirmandCancekBtn(TC_031InvoiceChcekBoxWithConfirmAndCancelBtnInPOpup.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>32</td>
+<td>OctopussaasBillingSettings.TC_031InvoiceChcekBoxWithConfirmAndCancelBtnInPOpup@63475ace</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_059CustomInvoiceAppendText.TC_059AppendCustomInvoiceText()'><b>TC_059AppendCustomInvoiceText</b><br>Test class: OctopussaasBillingSettings.TC_059CustomInvoiceAppendText</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;h3 class=&quot;font-semibold text-lg mb-4 border-b pb-2&quot;&gt;...&lt;/h3&gt; is not clickable at point (878, 622). Other element would receive the click: &lt;html lang=&quot;en&quot;&gt;...&lt;/html&gt;
+  (Session info: chrome=146.0.7680.178)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f6b8ad5e891d29d9fc83aa50fb3b92aa, clickElement {id=f.5A5FBE67E09BC3FAD43B60FDA157510A.d.82228E96807AE335788D88141DA7BDB2.e.3792}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Rajeev nandi\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53899}, goog:processID: 13188, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53899/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f6b8ad5e891d29d9fc83aa50fb3b92aa)] -&gt; xpath: //h3[text()=&apos;Printing &amp; Envelope Instructions&apos;]]
+Session ID: f6b8ad5e891d29d9fc83aa50fb3b92aa
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+	at OctopussaasBillingSettings.TC_059CustomInvoiceAppendText.TC_059AppendCustomInvoiceText(TC_059CustomInvoiceAppendText.java:58)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace443024593", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace443024593'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;h3 class=&quot;font-semibold text-lg mb-4 border-b pb-2&quot;&gt;...&lt;/h3&gt; is not clickable at point (878, 622). Other element would receive the click: &lt;html lang=&quot;en&quot;&gt;...&lt;/html&gt;
+  (Session info: chrome=146.0.7680.178)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f6b8ad5e891d29d9fc83aa50fb3b92aa, clickElement {id=f.5A5FBE67E09BC3FAD43B60FDA157510A.d.82228E96807AE335788D88141DA7BDB2.e.3792}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Rajeev nandi\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53899}, goog:processID: 13188, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53899/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f6b8ad5e891d29d9fc83aa50fb3b92aa)] -&gt; xpath: //h3[text()=&apos;Printing &amp; Envelope Instructions&apos;]]
+Session ID: f6b8ad5e891d29d9fc83aa50fb3b92aa
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+	at OctopussaasBillingSettings.TC_059CustomInvoiceAppendText.TC_059AppendCustomInvoiceText(TC_059CustomInvoiceAppendText.java:58)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>16</td>
+<td>OctopussaasBillingSettings.TC_059CustomInvoiceAppendText@6a2f6f80</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_072AddPaymentTypeWithValidInput.TC_072AddpaymentTypeWithValidInput()'><b>TC_072AddpaymentTypeWithValidInput</b><br>Test class: OctopussaasBillingSettings.TC_072AddPaymentTypeWithValidInput</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//img[@alt=&apos;User Avatar&apos;]&quot;}
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [28809601e696a33a0c0df5d76abefe3a, findElement {using=xpath, value=//img[@alt=&apos;User Avatar&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Rajeev nandi\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55616}, goog:processID: 15400, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55616/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 28809601e696a33a0c0df5d76abefe3a
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+	at OctopussaasBillingSettings.TC_072AddPaymentTypeWithValidInput.TC_072AddpaymentTypeWithValidInput(TC_072AddPaymentTypeWithValidInput.java:39)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1263447168", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1263447168'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//img[@alt=&apos;User Avatar&apos;]&quot;}
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [28809601e696a33a0c0df5d76abefe3a, findElement {using=xpath, value=//img[@alt=&apos;User Avatar&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Rajeev nandi\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55616}, goog:processID: 15400, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55616/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 28809601e696a33a0c0df5d76abefe3a
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+	at OctopussaasBillingSettings.TC_072AddPaymentTypeWithValidInput.TC_072AddpaymentTypeWithValidInput(TC_072AddPaymentTypeWithValidInput.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>32</td>
+<td>OctopussaasBillingSettings.TC_072AddPaymentTypeWithValidInput@26b3fd41</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_004HardCloseTextField.TC_004HardCloseDateVerification()'><b>TC_004HardCloseDateVerification</b><br>Test class: OctopussaasBillingSettings.TC_004HardCloseTextField</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Hard Close date element not found. Tried the following XPaths:
+By.xpath: //label[contains(normalize-space(),&apos;Hard Close&apos;)]/following-sibling::*[1]
+By.xpath: //label[contains(normalize-space(),&apos;Hard Close&apos;)]/following::input[1]
+By.xpath: //*[contains(normalize-space(),&apos;Hard Close&apos;)]/following::div[1]
+By.xpath: //input[contains(@aria-label,&apos;Hard Close&apos;) or contains(@placeholder,&apos;Hard Close&apos;) or contains(@name,&apos;hardClose&apos;)]
+
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: driver.version: unknown
+	at com.Octopussaas.ObjectRepository.BillingSettings.getHardCloseDate(BillingSettings.java:312)
+	at OctopussaasBillingSettings.TC_004HardCloseTextField.TC_004HardCloseDateVerification(TC_004HardCloseTextField.java:55)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace627709989", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace627709989'><pre>org.openqa.selenium.NoSuchElementException: Hard Close date element not found. Tried the following XPaths:
+By.xpath: //label[contains(normalize-space(),&apos;Hard Close&apos;)]/following-sibling::*[1]
+By.xpath: //label[contains(normalize-space(),&apos;Hard Close&apos;)]/following::input[1]
+By.xpath: //*[contains(normalize-space(),&apos;Hard Close&apos;)]/following::div[1]
+By.xpath: //input[contains(@aria-label,&apos;Hard Close&apos;) or contains(@placeholder,&apos;Hard Close&apos;) or contains(@name,&apos;hardClose&apos;)]
+
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: driver.version: unknown
+	at com.Octopussaas.ObjectRepository.BillingSettings.getHardCloseDate(BillingSettings.java:312)
+	at OctopussaasBillingSettings.TC_004HardCloseTextField.TC_004HardCloseDateVerification(TC_004HardCloseTextField.java:55)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>110</td>
+<td>OctopussaasBillingSettings.TC_004HardCloseTextField@24313fcc</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_033InvoiceDatewithConfirmandCancelBtn.TC_033InvoiceDateChcekPopUpConfirmAndcancelBt()'><b>TC_033InvoiceDateChcekPopUpConfirmAndcancelBt</b><br>Test class: OctopussaasBillingSettings.TC_033InvoiceDatewithConfirmandCancelBtn</td>
+<td></td>
+<td>15</td>
+<td>OctopussaasBillingSettings.TC_033InvoiceDatewithConfirmandCancelBtn@c0c2f8d</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_050TotalChcekBox.TC_050TotalcheckBox()'><b>TC_050TotalcheckBox</b><br>Test class: OctopussaasBillingSettings.TC_050TotalChcekBox</td>
+<td></td>
+<td>17</td>
+<td>OctopussaasBillingSettings.TC_050TotalChcekBox@71e9ddb4</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_038PreviousBalancecheckBox.TC_038PreviousBalanceCheckBox()'><b>TC_038PreviousBalanceCheckBox</b><br>Test class: OctopussaasBillingSettings.TC_038PreviousBalancecheckBox</td>
+<td></td>
+<td>17</td>
+<td>OctopussaasBillingSettings.TC_038PreviousBalancecheckBox@609cd4d8</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_023PastYear2019WithDifferentValue.TC_023PastYear2019TextFieldWithInput()'><b>TC_023PastYear2019TextFieldWithInput</b><br>Test class: OctopussaasBillingSettings.TC_023PastYear2019WithDifferentValue</td>
+<td></td>
+<td>24</td>
+<td>OctopussaasBillingSettings.TC_023PastYear2019WithDifferentValue@ae13544</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_035TermsCheckBox.TC_035TermsChcekBOx()'><b>TC_035TermsChcekBOx</b><br>Test class: OctopussaasBillingSettings.TC_035TermsCheckBox</td>
+<td></td>
+<td>19</td>
+<td>OctopussaasBillingSettings.TC_035TermsCheckBox@6913c1fb</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_039AutoPayStatus.TC_039AutoPayStatus()'><b>TC_039AutoPayStatus</b><br>Test class: OctopussaasBillingSettings.TC_039AutoPayStatus</td>
+<td></td>
+<td>16</td>
+<td>OctopussaasBillingSettings.TC_039AutoPayStatus@17f7cd29</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_034DueDateCheckBOx.TC_034DueDateChcekBOx()'><b>TC_034DueDateChcekBOx</b><br>Test class: OctopussaasBillingSettings.TC_034DueDateCheckBOx</td>
+<td></td>
+<td>23</td>
+<td>OctopussaasBillingSettings.TC_034DueDateCheckBOx@305b7c14</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_017PastYear2022WithDifferentInput.TC_017PastYear2022TextFieldWithInput()'><b>TC_017PastYear2022TextFieldWithInput</b><br>Test class: OctopussaasBillingSettings.TC_017PastYear2022WithDifferentInput</td>
+<td></td>
+<td>15</td>
+<td>OctopussaasBillingSettings.TC_017PastYear2022WithDifferentInput@7c9d8e2</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_042AccountnumberChcekBox.TC_042AccountNumbercheckBox()'><b>TC_042AccountNumbercheckBox</b><br>Test class: OctopussaasBillingSettings.TC_042AccountnumberChcekBox</td>
+<td></td>
+<td>18</td>
+<td>OctopussaasBillingSettings.TC_042AccountnumberChcekBox@158a8276</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_009PatYearTextFields.TC_009PastYearTextFields()'><b>TC_009PastYearTextFields</b><br>Test class: OctopussaasBillingSettings.TC_009PatYearTextFields</td>
+<td></td>
+<td>11</td>
+<td>OctopussaasBillingSettings.TC_009PatYearTextFields@7bedc48a</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_015PastYear2023WithDiffernetinput.TC_015PastYear2023TextFieldWithInput()'><b>TC_015PastYear2023TextFieldWithInput</b><br>Test class: OctopussaasBillingSettings.TC_015PastYear2023WithDiffernetinput</td>
+<td></td>
+<td>14</td>
+<td>OctopussaasBillingSettings.TC_015PastYear2023WithDiffernetinput@70325e14</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_032InvoiceDateChcekboxWithpopup.TC_032InvoiceDateChcekbOxWithPopUP()'><b>TC_032InvoiceDateChcekbOxWithPopUP</b><br>Test class: OctopussaasBillingSettings.TC_032InvoiceDateChcekboxWithpopup</td>
+<td></td>
+<td>19</td>
+<td>OctopussaasBillingSettings.TC_032InvoiceDateChcekboxWithpopup@4988d8b8</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_016PastYear2022WithDefaultvlue.TC_016PastYear2022TextFieldDefaultvalue()'><b>TC_016PastYear2022TextFieldDefaultvalue</b><br>Test class: OctopussaasBillingSettings.TC_016PastYear2022WithDefaultvlue</td>
+<td></td>
+<td>11</td>
+<td>OctopussaasBillingSettings.TC_016PastYear2022WithDefaultvlue@37ceb1df</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_013PastYear2024TextFieldWithDifferentInput.TC_013PastYear2024TextFieldWithInput()'><b>TC_013PastYear2024TextFieldWithInput</b><br>Test class: OctopussaasBillingSettings.TC_013PastYear2024TextFieldWithDifferentInput</td>
+<td></td>
+<td>21</td>
+<td>OctopussaasBillingSettings.TC_013PastYear2024TextFieldWithDifferentInput@2df3b89c</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_041OverduetotalNotice.TC_041OverdueTotalNotice()'><b>TC_041OverdueTotalNotice</b><br>Test class: OctopussaasBillingSettings.TC_041OverduetotalNotice</td>
+<td></td>
+<td>28</td>
+<td>OctopussaasBillingSettings.TC_041OverduetotalNotice@13b6aecc</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_019PastYear2021WithDifferentInput.TC_019PastYear2021TextFieldWithInput()'><b>TC_019PastYear2021TextFieldWithInput</b><br>Test class: OctopussaasBillingSettings.TC_019PastYear2021WithDifferentInput</td>
+<td></td>
+<td>15</td>
+<td>OctopussaasBillingSettings.TC_019PastYear2021WithDifferentInput@6200f9cb</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_058CustomInvoiceTextFieledWithDefaultData.TC_058CustomInvioceWithDefaultData()'><b>TC_058CustomInvioceWithDefaultData</b><br>Test class: OctopussaasBillingSettings.TC_058CustomInvoiceTextFieledWithDefaultData</td>
+<td></td>
+<td>11</td>
+<td>OctopussaasBillingSettings.TC_058CustomInvoiceTextFieledWithDefaultData@1190200a</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_068PaymenttermsDDwith8thElement120.TC_068PaymentTermsDDwitheEigthElemetNet120()'><b>TC_068PaymentTermsDDwitheEigthElemetNet120</b><br>Test class: OctopussaasBillingSettings.TC_068PaymenttermsDDwith8thElement120</td>
+<td></td>
+<td>13</td>
+<td>OctopussaasBillingSettings.TC_068PaymenttermsDDwith8thElement120@7ee8290b</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_057paymetVoucherCheckBox.TC_057PaymentVoucherCheckBox()'><b>TC_057PaymentVoucherCheckBox</b><br>Test class: OctopussaasBillingSettings.TC_057paymetVoucherCheckBox</td>
+<td></td>
+<td>17</td>
+<td>OctopussaasBillingSettings.TC_057paymetVoucherCheckBox@707194ba</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_018PastYear2021DefaultValue.TC_018PastYear2021TextFieldDefaultvalue()'><b>TC_018PastYear2021TextFieldDefaultvalue</b><br>Test class: OctopussaasBillingSettings.TC_018PastYear2021DefaultValue</td>
+<td></td>
+<td>10</td>
+<td>OctopussaasBillingSettings.TC_018PastYear2021DefaultValue@20d525</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_048QuantityChcekBox.TC_048QuantitycheckBox()'><b>TC_048QuantitycheckBox</b><br>Test class: OctopussaasBillingSettings.TC_048QuantityChcekBox</td>
+<td></td>
+<td>20</td>
+<td>OctopussaasBillingSettings.TC_048QuantityChcekBox@7530ad9c</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_064PaymentTermDDwith4thelemet30.TC_064PaymentTermsDDwitheFourtElemet30()'><b>TC_064PaymentTermsDDwitheFourtElemet30</b><br>Test class: OctopussaasBillingSettings.TC_064PaymentTermDDwith4thelemet30</td>
+<td></td>
+<td>14</td>
+<td>OctopussaasBillingSettings.TC_064PaymentTermDDwith4thelemet30@5b94b04d</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_040LastApymentCheckBox.TC_040alstpaymentChcekBox()'><b>TC_040alstpaymentChcekBox</b><br>Test class: OctopussaasBillingSettings.TC_040LastApymentCheckBox</td>
+<td></td>
+<td>16</td>
+<td>OctopussaasBillingSettings.TC_040LastApymentCheckBox@7d8704ef</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_008YearToDaterevenueWithDecimalNumbers.TC_008YearTodateRevenueWithDecimalVAlue()'><b>TC_008YearTodateRevenueWithDecimalVAlue</b><br>Test class: OctopussaasBillingSettings.TC_008YearToDaterevenueWithDecimalNumbers</td>
+<td></td>
+<td>11</td>
+<td>OctopussaasBillingSettings.TC_008YearToDaterevenueWithDecimalNumbers@6c40365c</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_021PastYear2020WithDifferentInput.TC_021PastYear2020TextFieldWithInput()'><b>TC_021PastYear2020TextFieldWithInput</b><br>Test class: OctopussaasBillingSettings.TC_021PastYear2020WithDifferentInput</td>
+<td></td>
+<td>23</td>
+<td>OctopussaasBillingSettings.TC_021PastYear2020WithDifferentInput@69453e37</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_022PastYear2019DefaultValue.TC_022PastYear2019TextFieldDefaultvalue()'><b>TC_022PastYear2019TextFieldDefaultvalue</b><br>Test class: OctopussaasBillingSettings.TC_022PastYear2019DefaultValue</td>
+<td></td>
+<td>13</td>
+<td>OctopussaasBillingSettings.TC_022PastYear2019DefaultValue@6f4a47c7</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_065Paymenttermswith5thelemetNet45.TC_065PaymentTermsDDwitheFithelementNet45()'><b>TC_065PaymentTermsDDwitheFithelementNet45</b><br>Test class: OctopussaasBillingSettings.TC_065Paymenttermswith5thelemetNet45</td>
+<td></td>
+<td>13</td>
+<td>OctopussaasBillingSettings.TC_065Paymenttermswith5thelemetNet45@8c3b9d</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_063PaymentTermswith3rdelementNet15.TC_063PaymentTermsDDwitheThirdElementNet15()'><b>TC_063PaymentTermsDDwitheThirdElementNet15</b><br>Test class: OctopussaasBillingSettings.TC_063PaymentTermswith3rdelementNet15</td>
+<td></td>
+<td>13</td>
+<td>OctopussaasBillingSettings.TC_063PaymentTermswith3rdelementNet15@385e9564</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_046DocumentIdchcekBox.TC_046DocumentIdcheckBox()'><b>TC_046DocumentIdcheckBox</b><br>Test class: OctopussaasBillingSettings.TC_046DocumentIdchcekBox</td>
+<td></td>
+<td>20</td>
+<td>OctopussaasBillingSettings.TC_046DocumentIdchcekBox@1e66f1f5</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_043GeneratorLocationNameCheckBox.TC_043GeneratorLocationNamecheckBox()'><b>TC_043GeneratorLocationNamecheckBox</b><br>Test class: OctopussaasBillingSettings.TC_043GeneratorLocationNameCheckBox</td>
+<td></td>
+<td>17</td>
+<td>OctopussaasBillingSettings.TC_043GeneratorLocationNameCheckBox@3c3d9b6b</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_011PastYearTextfieldWithDifferentInput.TC_011PastYear2025TextFieldWithInput()'><b>TC_011PastYear2025TextFieldWithInput</b><br>Test class: OctopussaasBillingSettings.TC_011PastYearTextfieldWithDifferentInput</td>
+<td></td>
+<td>15</td>
+<td>OctopussaasBillingSettings.TC_011PastYearTextfieldWithDifferentInput@55b0dcab</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_007YearToDateRevenueWithDifferentDigit.TC_007YearTodateRevenueWithDifferentVAlue()'><b>TC_007YearTodateRevenueWithDifferentVAlue</b><br>Test class: OctopussaasBillingSettings.TC_007YearToDateRevenueWithDifferentDigit</td>
+<td></td>
+<td>11</td>
+<td>OctopussaasBillingSettings.TC_007YearToDateRevenueWithDifferentDigit@41a2befb</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_054DiscountCheckBox.TC_054DiscountcheckBox()'><b>TC_054DiscountcheckBox</b><br>Test class: OctopussaasBillingSettings.TC_054DiscountCheckBox</td>
+<td></td>
+<td>18</td>
+<td>OctopussaasBillingSettings.TC_054DiscountCheckBox@65d09a04</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_001DashBoardPage.TC_001dashboardpage()'><b>TC_001dashboardpage</b><br>Test class: OctopussaasBillingSettings.TC_001DashBoardPage</td>
+<td></td>
+<td>0</td>
+<td>OctopussaasBillingSettings.TC_001DashBoardPage@fa4c865</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_069PaymentTermsWith9thelemtDueOnelement.TC_069PaymentTermsDDwitheNinthelementDueonRecipt()'><b>TC_069PaymentTermsDDwitheNinthelementDueonRecipt</b><br>Test class: OctopussaasBillingSettings.TC_069PaymentTermsWith9thelemtDueOnelement</td>
+<td></td>
+<td>16</td>
+<td>OctopussaasBillingSettings.TC_069PaymentTermsWith9thelemtDueOnelement@1f59a598</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_052SubTotalCheckbox.TC_052SubTotalcheckBox()'><b>TC_052SubTotalcheckBox</b><br>Test class: OctopussaasBillingSettings.TC_052SubTotalCheckbox</td>
+<td></td>
+<td>24</td>
+<td>OctopussaasBillingSettings.TC_052SubTotalCheckbox@4961f6af</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_005HardClosedaewithCurrentMonth.TC_005HardCloseDateWithCurrentcalender()'><b>TC_005HardCloseDateWithCurrentcalender</b><br>Test class: OctopussaasBillingSettings.TC_005HardClosedaewithCurrentMonth</td>
+<td></td>
+<td>70</td>
+<td>OctopussaasBillingSettings.TC_005HardClosedaewithCurrentMonth@7d20d0b</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_027Pastyear2017WithDiffererntInput.TC_027PastYear2017TextFieldWithInput()'><b>TC_027PastYear2017TextFieldWithInput</b><br>Test class: OctopussaasBillingSettings.TC_027Pastyear2017WithDiffererntInput</td>
+<td></td>
+<td>24</td>
+<td>OctopussaasBillingSettings.TC_027Pastyear2017WithDiffererntInput@43c1b556</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_024PastYear2018DefaultValue.TC_024PastYear2018TextFieldDefaultvalue()'><b>TC_024PastYear2018TextFieldDefaultvalue</b><br>Test class: OctopussaasBillingSettings.TC_024PastYear2018DefaultValue</td>
+<td></td>
+<td>13</td>
+<td>OctopussaasBillingSettings.TC_024PastYear2018DefaultValue@3d34d211</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_061PaymentTermsDropdownWithElements.TC_061PaymentTermsDDwithelement()'><b>TC_061PaymentTermsDDwithelement</b><br>Test class: OctopussaasBillingSettings.TC_061PaymentTermsDropdownWithElements</td>
+<td></td>
+<td>26</td>
+<td>OctopussaasBillingSettings.TC_061PaymentTermsDropdownWithElements@399c4be1</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_053RateCheckBOx.TC_053RatecheckBox()'><b>TC_053RatecheckBox</b><br>Test class: OctopussaasBillingSettings.TC_053RateCheckBOx</td>
+<td></td>
+<td>18</td>
+<td>OctopussaasBillingSettings.TC_053RateCheckBOx@5aebe890</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_029PastYear2016withDifferentValue.TC_029PastYear2016TextFieldWithInput()'><b>TC_029PastYear2016TextFieldWithInput</b><br>Test class: OctopussaasBillingSettings.TC_029PastYear2016withDifferentValue</td>
+<td></td>
+<td>15</td>
+<td>OctopussaasBillingSettings.TC_029PastYear2016withDifferentValue@22fcf7ab</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_028PastYear2016DefaultValue.TC_028PastYear2016TextFieldDefaultvalue()'><b>TC_028PastYear2016TextFieldDefaultvalue</b><br>Test class: OctopussaasBillingSettings.TC_028PastYear2016DefaultValue</td>
+<td></td>
+<td>12</td>
+<td>OctopussaasBillingSettings.TC_028PastYear2016DefaultValue@587e5365</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_020Pastyear2020DefaultValue.TC_020PastYear2020TextFieldDefaultvalue()'><b>TC_020PastYear2020TextFieldDefaultvalue</b><br>Test class: OctopussaasBillingSettings.TC_020Pastyear2020DefaultValue</td>
+<td></td>
+<td>12</td>
+<td>OctopussaasBillingSettings.TC_020Pastyear2020DefaultValue@2002fc1d</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_044GeneratorServiceAddressCheckBox.TC_044GeneratorServiceAddresscheckBox()'><b>TC_044GeneratorServiceAddresscheckBox</b><br>Test class: OctopussaasBillingSettings.TC_044GeneratorServiceAddressCheckBox</td>
+<td></td>
+<td>17</td>
+<td>OctopussaasBillingSettings.TC_044GeneratorServiceAddressCheckBox@79d8407f</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_071AddPaymentPopWithEmptyTextFieldAndCancelbutton.TC_071AddpaymentTypeLinkPopupWithEmptyTxetFieldandCancelbtn()'><b>TC_071AddpaymentTypeLinkPopupWithEmptyTxetFieldandCancelbtn</b><br>Test class: OctopussaasBillingSettings.TC_071AddPaymentPopWithEmptyTextFieldAndCancelbutton</td>
+<td></td>
+<td>15</td>
+<td>OctopussaasBillingSettings.TC_071AddPaymentPopWithEmptyTextFieldAndCancelbutton@192c3f1e</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_037BillToCheckBOx.TC_037BillToCheckBox()'><b>TC_037BillToCheckBox</b><br>Test class: OctopussaasBillingSettings.TC_037BillToCheckBOx</td>
+<td></td>
+<td>17</td>
+<td>OctopussaasBillingSettings.TC_037BillToCheckBOx@bccb269</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_003BilligSettingPage.TC_003BilligSettings()'><b>TC_003BilligSettings</b><br>Test class: OctopussaasBillingSettings.TC_003BilligSettingPage</td>
+<td></td>
+<td>9</td>
+<td>OctopussaasBillingSettings.TC_003BilligSettingPage@5e5d171f</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_025PastYear2018WithdifferentValue.TC_025PastYear2018TextFieldWithInput()'><b>TC_025PastYear2018TextFieldWithInput</b><br>Test class: OctopussaasBillingSettings.TC_025PastYear2018WithdifferentValue</td>
+<td></td>
+<td>16</td>
+<td>OctopussaasBillingSettings.TC_025PastYear2018WithdifferentValue@7dc0f706</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_056AgingreportChcekBox.TC_056AgingreportCheckBox()'><b>TC_056AgingreportCheckBox</b><br>Test class: OctopussaasBillingSettings.TC_056AgingreportChcekBox</td>
+<td></td>
+<td>18</td>
+<td>OctopussaasBillingSettings.TC_056AgingreportChcekBox@75db5df9</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_036InvoiceTotalChcekBox.TC_036InvoiceTotalChcekBOx()'><b>TC_036InvoiceTotalChcekBOx</b><br>Test class: OctopussaasBillingSettings.TC_036InvoiceTotalChcekBox</td>
+<td></td>
+<td>18</td>
+<td>OctopussaasBillingSettings.TC_036InvoiceTotalChcekBox@66d18979</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_055InvoiceTotalCkeckBoxFromInvoiceFooter.TC_055InvoiceTotalcheckBox()'><b>TC_055InvoiceTotalcheckBox</b><br>Test class: OctopussaasBillingSettings.TC_055InvoiceTotalCkeckBoxFromInvoiceFooter</td>
+<td></td>
+<td>21</td>
+<td>OctopussaasBillingSettings.TC_055InvoiceTotalCkeckBoxFromInvoiceFooter@33c911a1</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_012PastYear2024DefaultValue.TC_012PastYear2024TextFieldDefaultvalue()'><b>TC_012PastYear2024TextFieldDefaultvalue</b><br>Test class: OctopussaasBillingSettings.TC_012PastYear2024DefaultValue</td>
+<td></td>
+<td>10</td>
+<td>OctopussaasBillingSettings.TC_012PastYear2024DefaultValue@38afe297</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_047DescriptionCheckBox.TC_047DescriptioncheckBox()'><b>TC_047DescriptioncheckBox</b><br>Test class: OctopussaasBillingSettings.TC_047DescriptionCheckBox</td>
+<td></td>
+<td>25</td>
+<td>OctopussaasBillingSettings.TC_047DescriptionCheckBox@4e50c791</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_067PaymentTermsDDwith7thelementNet90.TC_067PaymentTermsDDwitheSeventhelementNet90()'><b>TC_067PaymentTermsDDwitheSeventhelementNet90</b><br>Test class: OctopussaasBillingSettings.TC_067PaymentTermsDDwith7thelementNet90</td>
+<td></td>
+<td>14</td>
+<td>OctopussaasBillingSettings.TC_067PaymentTermsDDwith7thelementNet90@f79e</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_066PaymenttermsDDwith6thElementNet60.TC_066PaymentTermsDDwitheSixthelementNet60()'><b>TC_066PaymentTermsDDwitheSixthelementNet60</b><br>Test class: OctopussaasBillingSettings.TC_066PaymenttermsDDwith6thElementNet60</td>
+<td></td>
+<td>15</td>
+<td>OctopussaasBillingSettings.TC_066PaymenttermsDDwith6thElementNet60@4c39bec8</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_060PaymentTermsDD.TC_060PaymentTermsDDwithdefaultValue()'><b>TC_060PaymentTermsDDwithdefaultValue</b><br>Test class: OctopussaasBillingSettings.TC_060PaymentTermsDD</td>
+<td></td>
+<td>12</td>
+<td>OctopussaasBillingSettings.TC_060PaymentTermsDD@45b4c3a9</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_026PastYear2017DefaultValue.TC_026PastYear2017TextFieldDefaultvalue()'><b>TC_026PastYear2017TextFieldDefaultvalue</b><br>Test class: OctopussaasBillingSettings.TC_026PastYear2017DefaultValue</td>
+<td></td>
+<td>10</td>
+<td>OctopussaasBillingSettings.TC_026PastYear2017DefaultValue@4009e306</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_045ServiceDateChcekbox.TC_045ServiceDatecheckBox()'><b>TC_045ServiceDatecheckBox</b><br>Test class: OctopussaasBillingSettings.TC_045ServiceDateChcekbox</td>
+<td></td>
+<td>17</td>
+<td>OctopussaasBillingSettings.TC_045ServiceDateChcekbox@5fbe4146</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_014PastYear2023DefaultValue.TC_014PastYear2023TextFieldDefaultvalue()'><b>TC_014PastYear2023TextFieldDefaultvalue</b><br>Test class: OctopussaasBillingSettings.TC_014PastYear2023DefaultValue</td>
+<td></td>
+<td>10</td>
+<td>OctopussaasBillingSettings.TC_014PastYear2023DefaultValue@23348b5d</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_051TaxesCheckbox.TC_051TaxescheckBox()'><b>TC_051TaxescheckBox</b><br>Test class: OctopussaasBillingSettings.TC_051TaxesCheckbox</td>
+<td></td>
+<td>15</td>
+<td>OctopussaasBillingSettings.TC_051TaxesCheckbox@394df057</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_049WeightCheckBox.TC_049WeightcheckBox()'><b>TC_049WeightcheckBox</b><br>Test class: OctopussaasBillingSettings.TC_049WeightCheckBox</td>
+<td></td>
+<td>21</td>
+<td>OctopussaasBillingSettings.TC_049WeightCheckBox@58a9760d</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_030InvoiceCheckBoxPopUp.TC_030InvoiceChcekBOxPopup()'><b>TC_030InvoiceChcekBOxPopup</b><br>Test class: OctopussaasBillingSettings.TC_030InvoiceCheckBoxPopUp</td>
+<td></td>
+<td>18</td>
+<td>OctopussaasBillingSettings.TC_030InvoiceCheckBoxPopUp@2de23121</td></tr>
+<tr>
+<td title='OctopussaasBillingSettings.TC_062PaymenttermsDDwith2ndElement.TC_062PaymentTermsDDwithelSecondElemetNet10()'><b>TC_062PaymentTermsDDwithelSecondElemetNet10</b><br>Test class: OctopussaasBillingSettings.TC_062PaymenttermsDDwith2ndElement</td>
+<td></td>
+<td>13</td>
+<td>OctopussaasBillingSettings.TC_062PaymenttermsDDwith2ndElement@291caca8</td></tr>
+</table><p>
+</body>
+</html>

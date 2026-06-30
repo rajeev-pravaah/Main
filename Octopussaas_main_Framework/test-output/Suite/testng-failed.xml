@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="TransporterProfile.TC_250tcTC_300TransporterProfile">
+        <methods>
+          <include name="TC_001VerifySignUpPage"/>
+          <include name="TC_282dispatchPhone_morethan10digits"/>
+          <include name="Bc"/>
+          <include name="TC_273DispatchEmail_withnumbers"/>
+          <include name="TC_292subcontractor_OptinButton"/>
+          <include name="Bm"/>
+          <include name="TC_263serviceoffered_Tooltip"/>
+          <include name="TC_281dispatchPhone_withspecialcharacters"/>
+          <include name="TC_272DispatchEmail_withalphabets"/>
+          <include name="TC_266serviceoffered_withSubwaste"/>
+          <include name="TC_284dispatchPhone_withoutInput"/>
+          <include name="TC_006CompanynameTextFieldwithInput"/>
+          <include name="TC_278dispatchPhone_withInput"/>
+          <include name="TC_277dispatchEmail_withAutosave"/>
+          <include name="TC_276dispatchEmail_withoutInput"/>
+          <include name="TC_270serviceoffered_Autosave"/>
+          <include name="TC_293subcontractor_categoriesSelect"/>
+          <include name="TC_279dispatchPhone_withalphabets"/>
+          <include name="TC_285dispatchPhone_WithAutosave"/>
+          <include name="TC_288dispatchExt_withnumbers"/>
+          <include name="TC_291dispatchExt_withAutosave"/>
+          <include name="Ac"/>
+          <include name="TC_267serviceofferes_WithDisablewaste"/>
+          <include name="TC_280dispatchPhone_Withnumbers"/>
+          <include name="TC_286dispatchExt_withInput"/>
+          <include name="TC_295subcontractor_withoutCategory"/>
+          <include name="TC_287dispatchExt_withalphabets"/>
+          <include name="TC_269serviceoffered_Uncheckmainservice"/>
+          <include name="TC_265serviceoffered_withMainservice"/>
+          <include name="Am"/>
+          <include name="TC_002AcceptTerms"/>
+          <include name="TC_275dispatchEmail_withInavalidformat"/>
+          <include name="TC_274dispatchEmail_withspecialcharacters"/>
+          <include name="TC_283dispatchPhone_lessthan10digits"/>
+          <include name="TC_271DispatchEmail_withInput"/>
+          <include name="TC_289dispatchExt_withspecialcharacters"/>
+          <include name="TC_264serviceoffered_withServices"/>
+          <include name="TC_268serviceoffered_uncheckIndividually"/>
+          <include name="TC_290dispatchExt_withoutInput"/>
+          <include name="TC_294subcontractor_categoriesMorethan3"/>
+        </methods>
+      </class> <!-- TransporterProfile.TC_250tcTC_300TransporterProfile -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
