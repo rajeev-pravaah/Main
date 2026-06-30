@@ -952,7 +952,18 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 
 	    }
 	    
+	    @Test
+	    public void TC_058GeneratorInformtion()
+	    {
+	    	System.out.println("Fefb");
+	    }
 	    	
+	    
+	    @Test
+	    public void TC_059GeneratorInformtion1()
+	    {
+	    	System.out.println("jdh");
+	    }
 	    
 	    
 	    
