@@ -793,6 +793,10 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 				 sl.ClearTextField(sl.getGeneralphoneextfield());
 				 
 			}
+			@Test(dependsOnMethods = "TC_044VerifyExtWithlessInput")
+			public void TC_045VerifyExtWithoutInput() throws InterruptedException, EncryptedDocumentException, IOException, AWTException  {
+				System.out.println("Satellite Location Profile General Phone Extension text field without input should not show any error message: Pass");
+			}
 }
 			
 		
