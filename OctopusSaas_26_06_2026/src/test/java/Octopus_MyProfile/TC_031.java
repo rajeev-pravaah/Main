@@ -1,0 +1,25 @@
+package Octopus_MyProfile;
+
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.Octopussaas.BaseUtility.Baseclass;
+import com.Octopussaas.ObjectRepository.HomePage;
+import com.Octopussaass.WebdriverUtility.utilityclassobject;
+import com.aventstack.extentreports.Status;
+@Listeners(ListnerUtility.ListnerUilityImp.class)
+
+
+public class TC_031 extends Baseclass{
+	
+	@Test
+	public void TC_031myprofile_Roles() throws InterruptedException
+	{
+		HomePage hp = new HomePage(driver);
+		hp.Mysettings();
+		hp.RoleDropdown();
+		utilityclassobject.gettest().log(Status.INFO, "Roles assigned to the profile appears in the field");
+
+	}
+
+}
