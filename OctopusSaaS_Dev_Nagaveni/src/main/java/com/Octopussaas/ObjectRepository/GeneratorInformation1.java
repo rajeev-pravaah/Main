@@ -109,10 +109,22 @@ public class GeneratorInformation1 {
 	private WebElement extTextfield;
 	@FindBy (xpath = "//p[contains (text(),'Phone number must be 10 digits')]")
 	private WebElement mainphoneErmsg;
+	@FindBy (xpath = "//input[@placeholder='info@example.com']")
+	private WebElement generatorEmail;
+	@FindBy (xpath = "//p[contains (text(),'Please enter a valid email address')]")
+	private WebElement generatoremailErmsg;
 	
 	
 	
 	
+	public WebElement getGeneratoremailErmsg() {
+		return generatoremailErmsg;
+	}
+
+	public WebElement getGeneratorEmail() {
+		return generatorEmail;
+	}
+
 	public WebElement getMainphoneErmsg() {
 		return mainphoneErmsg;
 	}

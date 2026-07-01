@@ -1169,7 +1169,76 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 			utilityclassobject.gettest().log(Status.PASS,"The user is able to proceed as it is not a mandatory field");
 	    }
 	    
+	    @Test(dependsOnMethods = "TC_071GeneratorInformation_ExtwithoutInput")
+	    public void TC_072GeneratorInformation_GeneratorEmailwithalphabets() throws EncryptedDocumentException, IOException
+	    {
+	    		gp.getGeneratorEmail().click();
+			gp.getGeneratorEmail().sendKeys(Keys.CONTROL + "a");
+			gp.getGeneratorEmail().sendKeys(Keys.DELETE);
+			String input = elib.getDataFromExcel("GeneratorInformation", 22, 1);
+			gp.getGeneratorEmail().sendKeys(input);
+			utilityclassobject.gettest().log(Status.PASS,"Generator Email textfield will accept alphabets");
+		}
 	    
+	    @Test(dependsOnMethods = "TC_072GeneratorInformation_GeneratorEmailwithalphabets")
+	    public void TC_073GeneratorInformation_GeneratorEmailwithNumbers() throws EncryptedDocumentException, IOException
+	    {
+	    	    gp.getGeneratorEmail().click();
+			gp.getGeneratorEmail().sendKeys(Keys.CONTROL + "a");
+			gp.getGeneratorEmail().sendKeys(Keys.DELETE);
+			String input = elib.getDataFromExcel("GeneratorInformation", 22, 2);
+			gp.getGeneratorEmail().sendKeys(input);
+			utilityclassobject.gettest().log(Status.PASS,"Generator Email textfield will accept numbers");
+		}
+	    
+	    @Test(dependsOnMethods = "TC_073GeneratorInformation_GeneratorEmailwithNumbers")
+	    public void TC_074GeneratorInformation_GeneratorEmailwithspecialcharacters() throws EncryptedDocumentException, IOException
+	    {
+	    		gp.getGeneratorEmail().click();
+			gp.getGeneratorEmail().sendKeys(Keys.CONTROL + "a");
+			gp.getGeneratorEmail().sendKeys(Keys.DELETE);
+			String input = elib.getDataFromExcel("GeneratorInformation", 22, 3);
+			gp.getGeneratorEmail().sendKeys(input);
+			utilityclassobject.gettest().log(Status.PASS,"Generator Email textfield will accept specialcharacters");
+		}
+	    
+	    @Test(dependsOnMethods = "TC_074GeneratorInformation_GeneratorEmailwithspecialcharacters")
+	    public void TC_075GeneratorInformation_GeneratorEmailwithInvalid() throws EncryptedDocumentException, IOException
+	    {
+	     	gp.getGeneratorEmail().click();
+			gp.getGeneratorEmail().sendKeys(Keys.CONTROL + "a");
+			gp.getGeneratorEmail().sendKeys(Keys.DELETE);
+			String input = elib.getDataFromExcel("GeneratorInformation", 22, 4);
+			gp.getGeneratorEmail().sendKeys(input);
+			String errormsg = gp.getGeneratoremailErmsg().getText();
+			System.out.println(errormsg);
+			utilityclassobject.gettest().log(Status.PASS,"Generator Email textfield does not accept invalid email address");
+
+	    }
+	    
+	    @Test(dependsOnMethods = "TC_075GeneratorInformation_GeneratorEmailwithInvalid")
+	    public void TC_076GeneratorInformation_GeneratorEmailwithValid() throws EncryptedDocumentException, IOException
+	    {
+	    		gp.getGeneratorEmail().click();
+			gp.getGeneratorEmail().sendKeys(Keys.CONTROL + "a");
+			gp.getGeneratorEmail().sendKeys(Keys.DELETE);
+			String input = elib.getDataFromExcel("GeneratorInformation", 22, 5);
+			gp.getGeneratorEmail().sendKeys(input);
+			utilityclassobject.gettest().log(Status.PASS,"Generator Email textfield accepts valid email address");
+
+	    }
+	    
+	    @Test(dependsOnMethods = "TC_076GeneratorInformation_GeneratorEmailwithValid")
+	    public void TC_077GeneratorInformation_GeneratorEmailwithAutosave() throws EncryptedDocumentException, IOException
+	    {
+	     	gp.getGeneratorEmail().click();
+			gp.getGeneratorEmail().sendKeys(Keys.CONTROL + "a");
+			gp.getGeneratorEmail().sendKeys(Keys.DELETE);
+			String input = elib.getDataFromExcel("GeneratorInformation", 22, 5);
+			gp.getGeneratorEmail().sendKeys(input);
+			utilityclassobject.gettest().log(Status.PASS,"Generator Email textfield accepts valid input and autosaves the data");
+
+	    }
 	    
 	    
 	    
