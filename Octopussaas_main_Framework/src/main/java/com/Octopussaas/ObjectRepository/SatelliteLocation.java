@@ -108,11 +108,27 @@ public class SatelliteLocation {
 	private WebElement companylogopfield;
 	@FindBy(xpath = "//p[text()='Satellite Location Status* ']/../../descendant::button")
 	private WebElement satellitelocationstatusdropdown;
+	@FindBy(id = "satellite-location status")
+	private WebElement satellitelocationstatusdropdownfield;
+	@FindBy(xpath = "//div[text()='Inactive']")
+	private WebElement inactivefromstatusdropdownfield;
+	@FindBy(xpath = "//div[text()='Active']")
+	private WebElement activefromstatusdropdownfield;
 	
 	
 	
 	
 	
+	
+	public WebElement getActivefromstatusdropdownfield() {
+		return activefromstatusdropdownfield;
+	}
+	public WebElement getInactivefromstatusdropdownfield() {
+		return inactivefromstatusdropdownfield;
+	}
+	public WebElement getSatellitelocationstatusdropdownfield() {
+		return satellitelocationstatusdropdownfield;
+	}
 	public WebElement getSatellitelocationstatusdropdown() {
 		return satellitelocationstatusdropdown;
 	}

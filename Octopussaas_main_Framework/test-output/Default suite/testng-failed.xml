@@ -6,10 +6,36 @@
       <class name="Assert_Satellite_Location.Satellite_Location_TC">
         <methods>
           <include name="Ac"/>
-          <include name="Bc"/>
-          <include name="TC_074VerifyLogoUploadWithouAddingLogo"/>
-          <include name="Bm"/>
+          <include name="TC_015VerifySatellitLocationWebsiteFieldAcceptsInput"/>
+          <include name="TC_005VerifySatellitLocationFieldacceptsAlphabets"/>
+          <include name="TC_076VerifySatelliteLocationStatusDisplayedAsWhileAddingSatellite"/>
+          <include name="TC_018VerifySatellitLocationWebsiteFieldWithSpecialCharacters"/>
+          <include name="TC_021VerifyTheAddNewSatelliteLocationStatusFieldDefaultValue"/>
+          <include name="TC_011VerifySatellitLocationEmailFieldWithNumbers"/>
+          <include name="TC_022VerifySatelliteLocationIsAbletoChangeStatus"/>
+          <include name="TC_012VerifySatellitLocationEmailFieldWithSpecialCharacters"/>
+          <include name="TC_007VerifySatellitLocationFieldacceptsSpecialCharacters"/>
           <include name="Am"/>
+          <include name="TC_001VerifyTheSatelliteLocationPageisDisplayed"/>
+          <include name="TC_010VerifySatellitLocationEmailFieldWithAlphabets"/>
+          <include name="TC_068VerifyGoogleRevireLinkWithValidinput"/>
+          <include name="TC_017VerifySatellitLocationWebsiteFieldWithNumbers"/>
+          <include name="TC_023VerifyStatusDropDownISAbletoSelectMultipleOptions"/>
+          <include name="TC_020VerifySatellitLocationWebsiteFieldWithoutInput"/>
+          <include name="TC_024VerifyTheAddNewSatelliteLocationRedirectToSatelliteLocationProfile"/>
+          <include name="TC_002VerifyTheSatelliteLocationPreviouslyAddedlist"/>
+          <include name="TC_006VerifySatellitLocationFieldacceptsNumbers"/>
+          <include name="Bc"/>
+          <include name="TC_013VerifySatellitLocationEmailFieldWithInvaliInput"/>
+          <include name="TC_075VerifyNotAbleToPassinputInsideSatellietLoactionStatus"/>
+          <include name="Bm"/>
+          <include name="TC_014VerifySatellitLocationEmailFieldWithoutInput"/>
+          <include name="TC_003VerifyTheAddNewSatelliteLocationButton"/>
+          <include name="TC_016VerifySatellitLocationWebsiteFieldWithAlphabets"/>
+          <include name="TC_019VerifySatellitLocationWebsiteFieldWithInvalidInput"/>
+          <include name="TC_009VerifySatellitLocationEmailFieldAcceptsInput"/>
+          <include name="TC_008VerifySatellitLocationFieldWithoutInput"/>
+          <include name="TC_004VerifySatelliteLocationNameFieldWithInput"/>
         </methods>
       </class> <!-- Assert_Satellite_Location.Satellite_Location_TC -->
     </classes>
