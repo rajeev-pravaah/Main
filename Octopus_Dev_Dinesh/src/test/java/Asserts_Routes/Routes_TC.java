@@ -41,6 +41,7 @@ public class Routes_TC extends BaseClassForGEneratorContacts{
 		public void TC_003_verifyNewRouteCanBeAdded() {
 			
 			System.out.println("Hello");
+			System.out.println("Hi");
 		}
 		
 		
