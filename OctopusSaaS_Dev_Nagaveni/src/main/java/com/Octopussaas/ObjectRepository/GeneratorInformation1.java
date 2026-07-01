@@ -103,9 +103,28 @@ public class GeneratorInformation1 {
 	private WebElement pricebookGenerator;
 	@FindBy (xpath = "//button[contains (text(),'Keep This Assigned')]")
 	private WebElement keeptheAssigendButton;
+	@FindBy (xpath = "(//input[@placeholder='(123) 456-7890'])[1]")
+	private WebElement generatormainphone;
+	@FindBy (xpath = "//input[@id='undefined-ext']")
+	private WebElement extTextfield;
+	@FindBy (xpath = "//p[contains (text(),'Phone number must be 10 digits')]")
+	private WebElement mainphoneErmsg;
 	
 	
 	
+	
+	public WebElement getMainphoneErmsg() {
+		return mainphoneErmsg;
+	}
+
+	public WebElement getExtTextfield() {
+		return extTextfield;
+	}
+
+	public WebElement getGeneratormainphone() {
+		return generatormainphone;
+	}
+
 	public WebElement getKeeptheAssigendButton() {
 		return keeptheAssigendButton;
 	}

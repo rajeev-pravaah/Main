@@ -5,16 +5,22 @@
     <classes>
       <class name="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation">
         <methods>
-          <include name="TC_056GeneratorInformation_unassignwithoutReason"/>
-          <include name="Bc"/>
+          <include name="TC_060GeneratorInformation_Phonewithnumbers"/>
           <include name="TC_052GeneratorInformation_ParentaccountwithAutosave"/>
           <include name="TC_057GeneratorInformtion_Withanotherparentaccount"/>
-          <include name="Bm"/>
           <include name="TC_049GeneratorInformation_ParentaccountwithInput"/>
+          <include name="TC_055GeneratorInformation_ParentaccountwithKeeptheAssigned"/>
+          <include name="TC_056GeneratorInformation_unassignwithoutReason"/>
+          <include name="Bc"/>
+          <include name="TC_061GeneratorInformation_Phonewithspecialcharacters"/>
+          <include name="TC_058GeneratorInformation_PhonewithInput"/>
+          <include name="Bm"/>
+          <include name="TC_062GeneratorInformation_Phonewithmorethan10digits"/>
           <include name="TC_053GeneratorInformation_ParentaccontwithUnassign"/>
           <include name="TC_054GeneratorInformation_ParentaccountwithUnassignButton"/>
           <include name="Am"/>
-          <include name="TC_055GeneratorInformation_ParentaccountwithKeeptheAssigned"/>
+          <include name="TC_059GeneratorInformation_Phonewithalphabets"/>
+          <include name="TC_063GeneratorInformation_PhonewithshortInput"/>
         </methods>
       </class> <!-- Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation -->
     </classes>

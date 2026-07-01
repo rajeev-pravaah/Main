@@ -952,18 +952,224 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 
 	    }
 	    
-	    @Test
-	    public void TC_058GeneratorInformtion()
+	    @Test(dependsOnMethods = "TC_057GeneratorInformtion_Withanotherparentaccount")
+	    public void TC_058GeneratorInformation_PhonewithInput() throws EncryptedDocumentException, IOException
 	    {
-	    	System.out.println("Fefb");
+			elib = new ExcelUtility();
+	    		gp.getGeneratormainphone().click();
+			gp.getGeneratormainphone().sendKeys(Keys.CONTROL + "a");
+			gp.getGeneratormainphone().sendKeys(Keys.DELETE);
+			String input = elib.getDataFromExcel("GeneratorInformation", 16, 1);
+			gp.getGeneratormainphone().sendKeys(input);
+		    utilityclassobject.gettest().log(Status.PASS,"Generator main phone textfield will accept Input");
 	    }
-	    	
 	    
-	    @Test
-	    public void TC_059GeneratorInformtion1()
+	    @Test(dependsOnMethods = "TC_058GeneratorInformation_PhonewithInput")
+	    public void TC_059GeneratorInformation_Phonewithalphabets() throws EncryptedDocumentException, IOException
 	    {
-	    	System.out.println("jdh");
+	    		gp.getGeneratormainphone().click();
+			gp.getGeneratormainphone().sendKeys(Keys.CONTROL + "a");
+			gp.getGeneratormainphone().sendKeys(Keys.DELETE);
+			String input = elib.getDataFromExcel("GeneratorInformation", 16, 2);
+			gp.getGeneratormainphone().sendKeys(input);
+			String actualValue = gp.getGeneratormainphone().getAttribute("value");
+
+			// Verify that alphabets are not accepted
+			if (actualValue.matches(".*[a-zA-Z].*")) {
+			    utilityclassobject.gettest().log(Status.FAIL,
+			            "Generator Main Phone text field accepted alphabets.");
+			} else {
+			    utilityclassobject.gettest().log(Status.PASS,
+			            "Generator Main Phone text field does not accept alphabets.");
+			}
+			System.out.println("Generator main phone field will not accept alphabets");
 	    }
+	    
+	    @Test(dependsOnMethods = "TC_059GeneratorInformation_Phonewithalphabets")
+	    public void TC_060GeneratorInformation_Phonewithnumbers() throws EncryptedDocumentException, IOException
+	    {
+	    		gp.getGeneratormainphone().click();
+			gp.getGeneratormainphone().sendKeys(Keys.CONTROL + "a");
+			gp.getGeneratormainphone().sendKeys(Keys.DELETE);
+			String input = elib.getDataFromExcel("GeneratorInformation", 16, 3);
+			gp.getGeneratormainphone().sendKeys(input);
+		    utilityclassobject.gettest().log(Status.PASS,"Generator main phone textfield will accept numbers");
+	    }
+	    
+	    @Test(dependsOnMethods = "TC_060GeneratorInformation_Phonewithnumbers")
+	    public void TC_061GeneratorInformation_Phonewithspecialcharacters() throws EncryptedDocumentException, IOException
+	    {
+	     	gp.getGeneratormainphone().click();
+			gp.getGeneratormainphone().sendKeys(Keys.CONTROL + "a");
+			gp.getGeneratormainphone().sendKeys(Keys.DELETE);
+			String input = elib.getDataFromExcel("GeneratorInformation", 16, 4);
+			gp.getGeneratormainphone().sendKeys(input);
+			String actualValue = gp.getGeneratormainphone().getAttribute("value");
+
+			// Verify that alphabets are not accepted
+			if (actualValue.matches(".*[#$^&].*")) {
+			    utilityclassobject.gettest().log(Status.FAIL,
+			            "Generator Main Phone text field accepted alphabets.");
+			} else {
+			    utilityclassobject.gettest().log(Status.PASS,
+			            "Generator Main Phone text field does not accept alphabets.");
+			}
+			System.out.println("Generator main phone field will not accept specialcharacters");
+	    }
+	    
+	    @Test(dependsOnMethods = "TC_061GeneratorInformation_Phonewithspecialcharacters")
+	    public void TC_062GeneratorInformation_Phonewithmorethan10digits() throws EncryptedDocumentException, IOException
+	    {
+	     	gp.getGeneratormainphone().click();
+			gp.getGeneratormainphone().sendKeys(Keys.CONTROL + "a");
+			gp.getGeneratormainphone().sendKeys(Keys.DELETE);
+			long txt = 475638476587346783L;
+			gp.getGeneratormainphone().sendKeys(String.valueOf(txt));
+			String actualValue = gp.getGeneratormainphone().getAttribute("value");
+
+			// Verify the field accepts only 10 digits
+			if (actualValue.length() == 10) {
+			    utilityclassobject.gettest().log(Status.FAIL,
+			            "Generator Main Phone text field accepted more than 10 digits:"+ actualValue);
+			} else {
+			    utilityclassobject.gettest().log(Status.PASS,
+			            "Generator Main Phone text field does not accept more than 10 didgits: " + actualValue);
+			}
+			System.out.println("Generator main phone text field will not accept more than 10 digits");
+	    }
+	    
+	    @Test(dependsOnMethods = "TC_062GeneratorInformation_Phonewithmorethan10digits")
+	    public void TC_063GeneratorInformation_PhonewithshortInput() throws EncryptedDocumentException, IOException
+	    {
+	    		gp.getGeneratormainphone().click();
+			gp.getGeneratormainphone().sendKeys(Keys.CONTROL + "a");
+			gp.getGeneratormainphone().sendKeys(Keys.DELETE);
+			String input = elib.getDataFromExcel("GeneratorInformation", 16, 6);
+			gp.getGeneratormainphone().sendKeys(input);
+			gp.getExtTextfield().click();
+			String errormsg = gp.getMainphoneErmsg().getText();
+			System.out.println(errormsg);
+		    utilityclassobject.gettest().log(Status.PASS,"Generator main phone textfield does not accept short input");
+	      }
+	    
+	    @Test(dependsOnMethods = "TC_063GeneratorInformation_PhonewithshortInput")
+	    public void TC_064GeneratorInformation_PhonewithoutInput()
+	    {
+	    	    gp.getGeneratormainphone().click();
+			gp.getGeneratormainphone().sendKeys(Keys.CONTROL + "a");
+			gp.getGeneratormainphone().sendKeys(Keys.DELETE);
+		    utilityclassobject.gettest().log(Status.PASS,"The user is able to save the details as it is not a mandatory field");
+
+	    }
+	    
+	    @Test(dependsOnMethods = "TC_064GeneratorInformation_PhonewithoutInput")
+	    public void TC_065GeneratorInformation_ExtwithInput() throws EncryptedDocumentException, IOException
+	    {
+	    	    gp.getExtTextfield().click();
+			gp.getExtTextfield().sendKeys(Keys.CONTROL + "a");
+			gp.getExtTextfield().sendKeys(Keys.DELETE);
+			String input = elib.getDataFromExcel("GeneratorInformation", 19, 1);
+			gp.getExtTextfield().sendKeys(input);
+		    utilityclassobject.gettest().log(Status.PASS,"Generator main Ext textfield will accept inpput");
+	    }
+	    
+	    @Test(dependsOnMethods = "TC_065GeneratorInformation_ExtwithInput")
+	    public void TC_066GeneratorInformation_Extwithalphabets() throws EncryptedDocumentException, IOException
+	    {
+	    		gp.getExtTextfield().click();
+	    		gp.getExtTextfield().sendKeys(Keys.CONTROL + "a");
+	    		gp.getExtTextfield().sendKeys(Keys.DELETE);
+	    		String input = elib.getDataFromExcel("GeneratorInformation", 19, 2);
+	    		gp.getExtTextfield().sendKeys(input);
+	    		String actualValue = gp.getExtTextfield().getAttribute("value");
+
+			// Verify that alphabets are not accepted
+			if (actualValue.matches(".*[a-zA-Z].*")) {
+			    utilityclassobject.gettest().log(Status.FAIL,
+			            "Generator Main Ext text field accepted alphabets.");
+			} else {
+			    utilityclassobject.gettest().log(Status.PASS,
+			            "Generator Main Ext text field does not accept alphabets.");
+			}
+			System.out.println("Generator main Ext field will not accept alphabets");
+			
+	    }
+	    
+	    @Test(dependsOnMethods = "TC_066GeneratorInformation_Extwithalphabets")
+	    public void TC_067GeneratorInformation_Extwithnumbers() throws EncryptedDocumentException, IOException
+	    {
+	    	 	gp.getExtTextfield().click();
+			gp.getExtTextfield().sendKeys(Keys.CONTROL + "a");
+			gp.getExtTextfield().sendKeys(Keys.DELETE);
+			String input = elib.getDataFromExcel("GeneratorInformation", 19, 3);
+			gp.getExtTextfield().sendKeys(input);
+			utilityclassobject.gettest().log(Status.PASS,"Generator main Ext textfield will accept numbers");
+		}
+	    
+	    @Test(dependsOnMethods = "TC_067GeneratorInformation_Extwithnumbers")
+	    public void TC_068GeneratorInformation_Extwithspecialcharacters() throws EncryptedDocumentException, IOException
+	    {
+	    	    gp.getExtTextfield().click();
+			gp.getExtTextfield().sendKeys(Keys.CONTROL + "a");
+			gp.getExtTextfield().sendKeys(Keys.DELETE);
+			String input = elib.getDataFromExcel("GeneratorInformation", 16, 4);
+			gp.getExtTextfield().sendKeys(input);
+			String actualValue = gp.getExtTextfield().getAttribute("value");
+
+			// Verify that alphabets are not accepted
+			if (actualValue.matches(".*[#$^&].*")) {
+			    utilityclassobject.gettest().log(Status.FAIL,
+			            "Generator Main Ext text field accepted alphabets.");
+			} else {
+			    utilityclassobject.gettest().log(Status.PASS,
+			            "Generator Main Ext text field does not accept alphabets.");
+			}
+			System.out.println("Generator main Ext field will not accept specialcharacters");
+	    }
+	    
+	    @Test(dependsOnMethods = "TC_068GeneratorInformation_Extwithspecialcharacters")
+	    public void TC_069GeneratorInformation_ExtwithMorethan5digits()
+	    {
+	    		gp.getExtTextfield().click();
+			gp.getExtTextfield().sendKeys(Keys.CONTROL + "a");
+			gp.getExtTextfield().sendKeys(Keys.DELETE);
+			long txt = 475638476587346783L;
+			gp.getExtTextfield().sendKeys(String.valueOf(txt));
+			String actualValue = gp.getExtTextfield().getAttribute("value");
+
+			// Verify the field accepts only 10 digits
+			if (actualValue.length() == 5) {
+			    utilityclassobject.gettest().log(Status.PASS,
+			            "Generator Main Ext text field does not accept more than 5 didgits: "+ actualValue);
+			} else {
+			    utilityclassobject.gettest().log(Status.FAIL,
+			            "Generator Main Ext text field accepted more than 5 didgits: " + actualValue);
+			}
+			System.out.println("Generator main Ext text field will not accept more than 10 digits");
+			
+	    }
+	    
+	    @Test(dependsOnMethods = "TC_069GeneratorInformation_ExtwithMorethan5digits")
+	    public void TC_070GeneratorInformation_ExtwithshortInput() throws EncryptedDocumentException, IOException
+	    {
+	    		gp.getExtTextfield().click();
+			gp.getExtTextfield().sendKeys(Keys.CONTROL + "a");
+			gp.getExtTextfield().sendKeys(Keys.DELETE);
+			String input = elib.getDataFromExcel("GeneratorInformation", 19, 6);
+			gp.getExtTextfield().sendKeys(input);
+			utilityclassobject.gettest().log(Status.PASS,"Generator main Ext textfield will accept short input");
+		}
+	    
+	    @Test(dependsOnMethods = "TC_070GeneratorInformation_ExtwithshortInput")
+	    public void TC_071GeneratorInformation_ExtwithoutInput()
+	    {
+	    		gp.getExtTextfield().click();
+			gp.getExtTextfield().sendKeys(Keys.CONTROL + "a");
+			gp.getExtTextfield().sendKeys(Keys.DELETE);
+			utilityclassobject.gettest().log(Status.PASS,"The user is able to proceed as it is not a mandatory field");
+	    }
+	    
+	    
 	    
 	    
 	    
