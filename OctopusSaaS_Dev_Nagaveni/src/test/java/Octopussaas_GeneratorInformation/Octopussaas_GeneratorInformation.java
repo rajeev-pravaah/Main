@@ -1255,6 +1255,17 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    
 	    
 	    
+	    @Test(dependsOnMethods = "TC_076GeneratorInformation_GeneratorEmailwithValid")
+	    public void TC_0789GeneratorInformation_GeneratorEmailwithAutosave() throws EncryptedDocumentException, IOException
+	    {
+	     	gp.getGeneratorEmail().click();
+			gp.getGeneratorEmail().sendKeys(Keys.CONTROL + "a");
+			gp.getGeneratorEmail().sendKeys(Keys.DELETE);
+			String input = elib.getDataFromExcel("GeneratorInformation", 22, 5);
+			gp.getGeneratorEmail().sendKeys(input);
+			utilityclassobject.gettest().log(Status.PASS,"Generator Email textfield accepts valid input and autosaves the data");
+
+	    }
 	    
 	    
 	    
