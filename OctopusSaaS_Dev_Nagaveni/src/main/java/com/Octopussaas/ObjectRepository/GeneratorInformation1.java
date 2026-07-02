@@ -113,10 +113,67 @@ public class GeneratorInformation1 {
 	private WebElement generatorEmail;
 	@FindBy (xpath = "//p[contains (text(),'Please enter a valid email address')]")
 	private WebElement generatoremailErmsg;
+	@FindBy (xpath = "//button[@id='generator-status']")
+	private WebElement generatorStatus;
+	@FindBy (xpath = "(//div[@class='relative inline-block']//button)[2]")
+	private WebElement tooltip;
+	@FindBy (xpath = "//button[@aria-label='Close tooltip']")
+	private WebElement closetooltip;
+	@FindBy (xpath = "//li[@role='option']//div[contains (text(),'Prospect')]")
+	private WebElement prospectStatus;
+	@FindBy (xpath = "//li[@role='option']//div[contains (text(),'Dead File')]")
+	private WebElement deadfielStatus;
+	@FindBy (xpath = "//li[@role='option']//div[contains (text(),'Administrative Account')]")
+	private WebElement administrativeStatus;
+	@FindBy (xpath = "//textarea[@name='cancellationNote']")
+	private WebElement statusNote;
+	@FindBy (xpath = "//button[contains (text(),'Update The Status')]")
+	private WebElement updateStatus;
+	@FindBy (xpath = "//button[contains (text(),'Keep Current Status')]")
+	private WebElement keepCureentstatus;
+	@FindBy (xpath = "(//button[contains (text(),'✕')])[2]")
+	private WebElement statusCancelbutton;
 	
 	
 	
 	
+	
+	public WebElement getKeepCureentstatus() {
+		return keepCureentstatus;
+	}
+
+	public WebElement getUpdateStatus() {
+		return updateStatus;
+	}
+
+	public WebElement getStatusNote() {
+		return statusNote;
+	}
+
+	public WebElement getAdministrativeStatus() {
+		return administrativeStatus;
+	}
+
+	public WebElement getDeadfielStatus() {
+		return deadfielStatus;
+	}
+
+	public WebElement getProspectStatus() {
+		return prospectStatus;
+	}
+
+	public WebElement getClosetooltip() {
+		return closetooltip;
+	}
+
+	public WebElement getTooltip() {
+		return tooltip;
+	}
+
+	public WebElement getGeneratorStatus() {
+		return generatorStatus;
+	}
+
 	public WebElement getGeneratoremailErmsg() {
 		return generatoremailErmsg;
 	}
@@ -420,6 +477,38 @@ public class GeneratorInformation1 {
 		Thread.sleep(200);
 		noteUnassignbutton.click();
 		Thread.sleep(2000);	
+	}
+	
+	public void Updatestatus() throws InterruptedException
+	{
+		WebElement location = driver.findElement(By.xpath("//div[@class='modal-box']"));
+		Assert.assertTrue(location.isDisplayed(), "Model box is displayed");
+		statusNote.sendKeys("Remove");
+		Thread.sleep(200);
+		updateStatus.click();
+		Thread.sleep(2000);
+	}
+	
+	public void KeepCurrentstatus() throws InterruptedException
+	{
+		WebElement location = driver.findElement(By.xpath("//div[@class='modal-box']"));
+		Assert.assertTrue(location.isDisplayed(), "Model box is displayed");
+		statusNote.sendKeys("Remove");
+		Thread.sleep(200);
+		keepCureentstatus.click();
+		Thread.sleep(2000);
+	}
+	
+	public void StatuswithoutNote() throws InterruptedException
+	{
+		WebElement location = driver.findElement(By.xpath("//div[@class='modal-box']"));
+		Assert.assertTrue(location.isDisplayed(), "Model box is displayed");
+		statusNote.sendKeys(Keys.CONTROL + "a");
+		statusNote.sendKeys(Keys.DELETE);
+		updateStatus.click();
+		Thread.sleep(200);
+		statusCancelbutton.click();
+		
 	}
 
 	

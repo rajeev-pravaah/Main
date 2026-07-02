@@ -5,21 +5,38 @@
     <classes>
       <class name="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation">
         <methods>
-          <include name="TC_060GeneratorInformation_Phonewithnumbers"/>
+          <include name="TC_079GeneratorInformation_GeneratorstatuswithTooltip"/>
           <include name="TC_052GeneratorInformation_ParentaccountwithAutosave"/>
           <include name="TC_057GeneratorInformtion_Withanotherparentaccount"/>
-          <include name="TC_049GeneratorInformation_ParentaccountwithInput"/>
+          <include name="TC_072GeneratorInformation_GeneratorEmailwithalphabets"/>
+          <include name="TC_078GeneratorInformation_withDefaultgeneratorStatus"/>
+          <include name="TC_064GeneratorInformation_PhonewithoutInput"/>
           <include name="TC_055GeneratorInformation_ParentaccountwithKeeptheAssigned"/>
-          <include name="TC_056GeneratorInformation_unassignwithoutReason"/>
+          <include name="TC_070GeneratorInformation_ExtwithshortInput"/>
           <include name="Bc"/>
+          <include name="TC_066GeneratorInformation_Extwithalphabets"/>
+          <include name="TC_065GeneratorInformation_ExtwithInput"/>
+          <include name="TC_062GeneratorInformation_Phonewithmorethan10digits"/>
+          <include name="Bm"/>
+          <include name="TC_067GeneratorInformation_Extwithnumbers"/>
+          <include name="TC_053GeneratorInformation_ParentaccontwithUnassign"/>
+          <include name="TC_076GeneratorInformation_GeneratorEmailwithValid"/>
+          <include name="TC_054GeneratorInformation_ParentaccountwithUnassignButton"/>
+          <include name="TC_069GeneratorInformation_ExtwithMorethan5digits"/>
+          <include name="TC_075GeneratorInformation_GeneratorEmailwithInvalid"/>
+          <include name="TC_060GeneratorInformation_Phonewithnumbers"/>
+          <include name="TC_077GeneratorInformation_GeneratorEmailwithAutosave"/>
+          <include name="TC_049GeneratorInformation_ParentaccountwithInput"/>
+          <include name="TC_071GeneratorInformation_ExtwithoutInput"/>
+          <include name="TC_056GeneratorInformation_unassignwithoutReason"/>
+          <include name="TC_073GeneratorInformation_GeneratorEmailwithNumbers"/>
           <include name="TC_061GeneratorInformation_Phonewithspecialcharacters"/>
           <include name="TC_058GeneratorInformation_PhonewithInput"/>
-          <include name="Bm"/>
-          <include name="TC_062GeneratorInformation_Phonewithmorethan10digits"/>
-          <include name="TC_053GeneratorInformation_ParentaccontwithUnassign"/>
-          <include name="TC_054GeneratorInformation_ParentaccountwithUnassignButton"/>
+          <include name="TC_080GeneratorInformation_Generatorwithchangeinstatus"/>
+          <include name="TC_074GeneratorInformation_GeneratorEmailwithspecialcharacters"/>
           <include name="Am"/>
           <include name="TC_059GeneratorInformation_Phonewithalphabets"/>
+          <include name="TC_068GeneratorInformation_Extwithspecialcharacters"/>
           <include name="TC_063GeneratorInformation_PhonewithshortInput"/>
         </methods>
       </class> <!-- Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation -->

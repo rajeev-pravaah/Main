@@ -33,12 +33,13 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	ExcelUtility elib;
 	String generatorInput;
 	WebElement street;
+	String editedgeneratorInput;
 	
-	
-	/*@Test(priority = 1)
+	/*
+	@Test(priority = 1)
 	public void TC_001GeneratorInformation_withNewGenerator() throws InterruptedException, EncryptedDocumentException, IOException
 	{
-		gp = new GeneratorInformation(driver);
+		gp = new GeneratorInformation1(driver);
 		elib = new ExcelUtility();
 		gp.getAddnew().click();
 		Thread.sleep(200);
@@ -68,14 +69,16 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		Assert.assertTrue(generatorname.isDisplayed(), "Generator name  is displayed");
 		System.out.println(generatorname);
 		utilityclassobject.gettest().log(Status.INFO, "The Generator name is present on the top left of the page");
-	}*/
+	}
 	
 	
 	//need to write testcase 3
-	/*
-	@Test(priority = 1)
+	
+	@Test(dependsOnMethods = "TC_002GeneratorInformation_withAddedgeneratorname")
 	public void TC_004AssetsServicevehicle_withserviceaddress() throws InterruptedException
 	{
+		//need to delete these 
+		
 		WebElement generatormanagment = driver.findElement(By.xpath("//h6[contains (text(),'Generator Management')]"));
 		generatormanagment.click();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -375,7 +378,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		    
 	}
 	
-	/*@Test(dependsOnMethods = "TC_010GeneratorInformation_Withouttag")
+	@Test(dependsOnMethods = "TC_010GeneratorInformation_Withouttag")
 	public void TC_011GeneratorInformation_Generatorname()
 	{
 		WebElement generatorname = driver.findElement(By.xpath("//input[@placeholder='Enter Generator Name']"));
@@ -383,10 +386,10 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		String name = generatorname.getText();
 		System.out.println(name);
 	    utilityclassobject.gettest().log(Status.PASS,"The name added while adding generator is present in the field");
-	}*/
+	}
 	
 	// need to change the dependency
-	@Test(dependsOnMethods = "TC_010GeneratorInformation_Withouttag")
+	@Test(dependsOnMethods = "TC_011GeneratorInformation_Generatorname")
 	public void TC_012GeneratorInformation_EditedGeneratorName() throws EncryptedDocumentException, IOException
 	{
 		elib = new ExcelUtility();
@@ -395,7 +398,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		gp.getGeneratornameField().sendKeys(Keys.DELETE);
 		Random random = new Random();
 		int sixDigit1 = 100000 + random.nextInt(900000);
-		String editedgeneratorInput = elib.getDataFromExcel("GeneratorInformation", 1, 1)+sixDigit1;
+		editedgeneratorInput = elib.getDataFromExcel("GeneratorInformation", 1, 1)+sixDigit1;
 		gp.getGeneratornameField().sendKeys(editedgeneratorInput);
 		System.out.println(editedgeneratorInput);
 	    utilityclassobject.gettest().log(Status.PASS,"The user is able to edit the name of the generator");
@@ -430,7 +433,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		gp.getGeneratornameField().click();
 		gp.getGeneratornameField().sendKeys(Keys.CONTROL + "a");
 		gp.getGeneratornameField().sendKeys(Keys.DELETE);
-		gp.getGeneratornameField().sendKeys("Max_298310");
+		gp.getGeneratornameField().sendKeys(editedgeneratorInput);
 	    utilityclassobject.gettest().log(Status.PASS,"Generator name textfield will autosave the data");
 	}
 	
@@ -446,7 +449,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    utilityclassobject.gettest().log(Status.PASS,"Generator name textfield without input error message is displayed");
 
 		gp.getGeneratornameField().click();
-		gp.getGeneratornameField().sendKeys("Max_298310");
+		gp.getGeneratornameField().sendKeys(editedgeneratorInput);
 		gp.getOctoNumber().click();
 
 	}
@@ -702,7 +705,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    utilityclassobject.gettest().log(Status.PASS,"Generator note textfield will accept specialcharacters");
 	}
 	
-	/*@Test(dependsOnMethods = "TC_042GeneratorInformation_GeneratorNotewithspecialcharacters")
+	@Test(dependsOnMethods = "TC_042GeneratorInformation_GeneratorNotewithspecialcharacters")
 	public void TC_044GeneratorInformation_Attachtoservicelocation()
 	{
 		WebElement servicelocation = driver.findElement(By.xpath("//button[@id='attach-to service location']"));
@@ -711,11 +714,11 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		Assert.assertTrue(location.isDisplayed(), "Loaction is displayed");
 	    utilityclassobject.gettest().log(Status.PASS,"The main location of the generator is present in the field");
 
-	}*/
+	}
 	
-	/*
+	
 	//need to change the dependency
-	@Test(dependsOnMethods = "TC_042GeneratorInformation_GeneratorNotewithspecialcharacters")
+	@Test(dependsOnMethods = "TC_044GeneratorInformation_Attachtoservicelocation")
 	public void TC_045GeneratorInformation_Servicelocationwithotherlocation() throws InterruptedException
 	{
 		gp.getServiceLocation().click();
@@ -840,14 +843,15 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		        ExpectedConditions.elementToBeClickable(generatorInfo)));
 
 		driver.findElement(generatorInfo).click();
+		Thread.sleep(20000);
 		
 		//gp.ParentaccountwithInput();
-		//utilityclassobject.gettest().log(Status.INFO, "The user is able to enter manual input");	
+		utilityclassobject.gettest().log(Status.INFO, "The user is able to enter manual input");	
 
 	}
 	
-	/*
-	@Test(dependsOnMethods = "TC_049GeneratorInformation_ParentaccountwithInput")
+	
+	/*@Test(dependsOnMethods = "TC_049GeneratorInformation_ParentaccountwithInput")
 	public void TC_050GeneratorInformation_ParentaccontwithGenerators()
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -889,7 +893,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	
 		//need to change the dependency
 	
-	    @Test(dependsOnMethods = "TC_049GeneratorInformation_ParentaccountwithInput")
+	    @Test(dependsOnMethods = "TC_049GeneratorInformation_ParentaccountwithInput"/*"TC_051GeneratorInformation_ParentaccountwithGenerator"*/)
 	    public void TC_052GeneratorInformation_ParentaccountwithAutosave() throws InterruptedException
 	    {
 	    		gp.Unassignbutton();
@@ -1240,32 +1244,75 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 
 	    }
 	    
-	    
-	    @Test(dependsOnMethods = "TC_076GeneratorInformation_GeneratorEmailwithValid")
-	    public void TC_078GeneratorInformation_GeneratorEmailwithAutosave() throws EncryptedDocumentException, IOException
+	    @Test(dependsOnMethods = "TC_077GeneratorInformation_GeneratorEmailwithAutosave")
+	    public void TC_078GeneratorInformation_withDefaultgeneratorStatus()
 	    {
-	     	gp.getGeneratorEmail().click();
-			gp.getGeneratorEmail().sendKeys(Keys.CONTROL + "a");
-			gp.getGeneratorEmail().sendKeys(Keys.DELETE);
-			String input = elib.getDataFromExcel("GeneratorInformation", 22, 5);
-			gp.getGeneratorEmail().sendKeys(input);
-			utilityclassobject.gettest().log(Status.PASS,"Generator Email textfield accepts valid input and autosaves the data");
+	    		WebElement generatorstatus = driver.findElement(By.xpath("//button[@id='generator-status']"));
+			Assert.assertTrue(generatorstatus.isDisplayed(), "Generator status is displayed");
+			WebElement status = driver.findElement(By.xpath("(//span[contains (text(),'Prospect')])[2]"));
+			Assert.assertTrue(status.isDisplayed(), "Status is displayed");
+		    utilityclassobject.gettest().log(Status.PASS,"The Generator status is present and it is having Prospect as default");
+	    }
+	    
+	    @Test(dependsOnMethods = "TC_078GeneratorInformation_withDefaultgeneratorStatus")
+	    public void TC_079GeneratorInformation_GeneratorstatuswithTooltip()
+	    {
+	    		gp.getTooltip().click();
+	    		WebElement tooltip = driver.findElement(By.xpath("//div[@class='w-full h-full p-2 bg-white']"));
+			Assert.assertTrue(tooltip.isDisplayed(), "Generator status tooltip is displayed");
+			gp.getClosetooltip().click();
+		    utilityclassobject.gettest().log(Status.PASS,"The tooltip is present and when clicked upon, it opens the octo info");
+
+	    }
+	    
+	    @Test(dependsOnMethods = "TC_079GeneratorInformation_GeneratorstatuswithTooltip")
+	    public void TC_080GeneratorInformation_Generatorwithchangewithnote() throws InterruptedException
+	    {
+	    	  gp.getGeneratorStatus().click();
+	    	  gp.getDeadfielStatus().click();
+	    	  gp.Updatestatus();
+	    	  Thread.sleep(200);
+	    	  gp.getGeneratorStatus().click();
+	    	  gp.getProspectStatus().click();
+	    	  gp.Updatestatus();
+	    	  Thread.sleep(200);
+	    	  gp.getGeneratorStatus().click();
+	    	  gp.getAdministrativeStatus().click();
+	    	  gp.Updatestatus();
+	    	  Thread.sleep(200);
+	    	  gp.getGeneratorStatus().click();
+	    	  gp.getProspectStatus().click();
+	    	  gp.Updatestatus();
+	    	  Thread.sleep(200);
+	    	  utilityclassobject.gettest().log(Status.PASS,"The user is able to change the status of the generator accordingly");
+
+	    }
+	    
+	    @Test(dependsOnMethods = "TC_080GeneratorInformation_Generatorwithchangewithnote")
+	    public void TC_081GeneratorInformation_statuswithKeepcurrentstatus() throws InterruptedException
+	    {
+	    	  gp.getGeneratorStatus().click();
+	    	  gp.getDeadfielStatus().click();
+	    	  gp.KeepCurrentstatus();
+	    	  Thread.sleep(200);
+	    	  utilityclassobject.gettest().log(Status.PASS,"The generator status does not get changed");
 
 	    }
 	    
 	    
-	    
-	    @Test(dependsOnMethods = "TC_076GeneratorInformation_GeneratorEmailwithValid")
-	    public void TC_0789GeneratorInformation_GeneratorEmailwithAutosave() throws EncryptedDocumentException, IOException
+	    @Test(dependsOnMethods = "TC_081GeneratorInformation_statuswithKeepcurrentstatus")
+	    public void TC_082GeneratorInformation_StatuswithoutNote() throws InterruptedException
 	    {
-	     	gp.getGeneratorEmail().click();
-			gp.getGeneratorEmail().sendKeys(Keys.CONTROL + "a");
-			gp.getGeneratorEmail().sendKeys(Keys.DELETE);
-			String input = elib.getDataFromExcel("GeneratorInformation", 22, 5);
-			gp.getGeneratorEmail().sendKeys(input);
-			utilityclassobject.gettest().log(Status.PASS,"Generator Email textfield accepts valid input and autosaves the data");
+	    	  gp.getGeneratorStatus().click();
+	    	  gp.getDeadfielStatus().click();
+	    	  gp.StatuswithoutNote();
+	    	  utilityclassobject.gettest().log(Status.PASS,"The system indicates to fill the field as it is mandatory");
 
+	    	  
 	    }
+	    
+	    
+	   
 	    
 	    
 	    
