@@ -11,6 +11,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
+import com.Octopussaass.WebdriverUtility.webDriverutility;
+
 public class SatelliteLocation {
 	WebDriver driver;
 
@@ -114,12 +116,105 @@ public class SatelliteLocation {
 	private WebElement inactivefromstatusdropdownfield;
 	@FindBy(xpath = "//div[text()='Active']")
 	private WebElement activefromstatusdropdownfield;
+	@FindBy(xpath = "//input[@placeholder='Enter Registration Number 1']")
+	private WebElement registrationnumber1field;
+	@FindBy(xpath = "//p[text()='Registration Number 1 is required']")
+	private WebElement registrationnumber1errormessage;
+	@FindBy(xpath = "//input[@placeholder='Enter Registration Number 2']")
+	private WebElement registrationnumber2field;
+	@FindBy(xpath = "//input[@placeholder='Enter EPA ID Number']")
+	private WebElement epanumberfield;
+	@FindBy(xpath = "//input[@placeholder='Enter DOT Number']")
+	private WebElement dotnumberfield;
+	@FindBy(xpath = "//input[@placeholder='Enter EIN']")
+	private WebElement einfield;
+	@FindBy(xpath = "//input[@placeholder='Enter Entity ID Number']")
+	private WebElement entityidnumberfield;
+	@FindBy(xpath = "//input[@placeholder='Enter SOS Number']")
+	private WebElement sosnumberfield;
+	@FindBy(xpath = "//input[@placeholder='Enter SIC Code']")
+	private WebElement siccodefield;
+	@FindBy(xpath = "//input[@placeholder='Enter NAICS Code']")
+	private WebElement naicscodefield;
+	@FindBy(xpath = "//input[@placeholder='Enter CAGE Code']")
+	private WebElement cagecodefield;
+	@FindBy(id = "serviceAddress-name")
+	private WebElement satelliteserviceinfonamefield;
+	@FindBy(id = "serviceAddress-street")
+	private WebElement satelliteserviceinfostreetfield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[1]")
+	private WebElement satelliteserviceinfonameerrormessage;
+	@FindBy(xpath = "(//p[text()='This field is required'])[2]")
+	private WebElement satelliteserviceinfostreeterrormessage;
+	@FindBy(xpath = "//div[@class='font-medium']/../..")
+	private WebElement streetSuggestionbox;
+	@FindBy(xpath = "//span[text()='Medical Waste Services']")
+	private WebElement medicalwasteservicestxt;
 	
 	
 	
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	public WebElement getMedicalwasteservicestxt() {
+		return medicalwasteservicestxt;
+	}
+	public WebElement getStreetSuggestionbox() {
+		return streetSuggestionbox;
+	}
+	public WebElement getSatelliteserviceinfostreeterrormessage() {
+		return satelliteserviceinfostreeterrormessage;
+	}
+	public WebElement getSatelliteserviceinfoNameerrormessage() {
+		return satelliteserviceinfonameerrormessage;
+	}
+	public WebElement getSatelliteserviceinfostreetfield() {
+		return satelliteserviceinfostreetfield;
+	}
+	public WebElement getCagecodefield() {
+		return cagecodefield;
+	}
+	public WebElement getSatelliteserviceinfonamefield() {
+		return satelliteserviceinfonamefield;
+	}
+	public WebElement getNaicscodefield() {
+		return naicscodefield;
+	}
+	public WebElement getSiccodefield() {
+		return siccodefield;
+	}
+	public WebElement getSosnumberfield() {
+		return sosnumberfield;
+	}
+	public WebElement getEntityidnumberfield() {
+		return entityidnumberfield;
+	}
+	public WebElement getEinfield() {
+		return einfield;
+	}
+	public WebElement getDotnumberfield() {
+		return dotnumberfield;
+	}
+	public WebElement getEpanumberfield() {
+		return epanumberfield;
+	}
+	public WebElement getRegistrationnumber2field() {
+		return registrationnumber2field;
+	}
+	public WebElement getRegistrationnumber1errormessage() {
+		return registrationnumber1errormessage;
+	}
+	public WebElement getRegistrationnumber1field() {
+		return registrationnumber1field;
+	}
 	public WebElement getActivefromstatusdropdownfield() {
 		return activefromstatusdropdownfield;
 	}
@@ -270,4 +365,10 @@ public class SatelliteLocation {
 	 		       .sendKeys(Keys.DELETE)
 	 		       .perform();
 		}
+	public void SaveButton()
+	{
+		webDriverutility wlib = new webDriverutility();
+		wlib.scrollToelement(driver, savebutton);
+		savebutton.click();
+	}
 }
