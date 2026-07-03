@@ -360,13 +360,21 @@ public class RouteAssignment {
 	private List<WebElement> Addtagslists;
 	@FindBy(xpath = ".//input[@type='checkbox']")
 	private WebElement checkboxforalladdtsglists;
+	@FindBy(xpath = "//button[@class='popup-close']")
+	private WebElement closepopupfromMap;
+	@FindBy(xpath = "//*[name()='svg' and contains(@class,'starIcon')]")
+	private WebElement stariconinMap;
 	
 	
 	
 	
 	
-	
-	
+	public WebElement getStariconinMap() {
+		return stariconinMap;
+	}
+	public WebElement getClosepopupfromMap() {
+		return closepopupfromMap;
+	}
 	public WebElement getCheckboxforalladdtsglists() {
 		return checkboxforalladdtsglists;
 	}

@@ -1117,13 +1117,6 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		}
 		@Test(dependsOnMethods = "TC_067VerifyGoogleRevireLinkWithInvalidInputPrompterrorMessage"/*"TC_024VerifyTheAddNewSatelliteLocationRedirectToSatelliteLocationProfile"*/)
 		public void TC_068VerifyGoogleRevireLinkWithValidinput() throws InterruptedException, EncryptedDocumentException, IOException, AWTException  {
-		
-			
-			 
-			 
-			
-			
-			
 			sl.getGooglereviewlinkfield().click();
 			 String googlelink = elib.getDataFromExcel("SatelliteLocation", 35, 6);
 			 sl.getGooglereviewlinkfield().sendKeys(googlelink);
@@ -1697,11 +1690,11 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 				 utilityclassobject.gettest().log(Status.FAIL, "Satellite Service Info Name text field is not mandatory: Fail");
 			 }
 		}
-		@Test(/*dependsOnMethods = "TC_113VerifySatelliteServiceinfoNameFieldisMandatory"*/)
+		@Test(dependsOnMethods = "TC_113VerifySatelliteServiceinfoNameFieldisMandatory")
 		public void TC_114VerifySatelliteServiceinfoStreetFieldAcceptsAlphabets() throws InterruptedException, EncryptedDocumentException, IOException
 		{
  //it is not an Magic Tc While running check the dependency To run independently comment dependency 
-			
+			/*
 			//comment it
 			//comment it
 			//comment it
@@ -1736,6 +1729,8 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 			 //comment it
 			//comment it//comment it
 			//comment it
+		
+			 */
 			sl.getSatelliteserviceinfostreetfield().click();
 			 String Satelliteserviceinfostreet = elib.getDataFromExcel("SatelliteLocation", 62, 1);
 			 sl.getSatelliteserviceinfostreetfield().sendKeys(Satelliteserviceinfostreet);
@@ -1797,11 +1792,21 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		public void TC_118VerifyStreetDisplayedSuggestionDropdownWhenUserEntersValidStreetName() throws InterruptedException, EncryptedDocumentException, IOException
 		{
           
-			
+			/*
 			   wlib.scrollToelement(driver, sl.getMedicalwasteservicestxt());
 			sl.getSatelliteserviceinfostreetfield().click();
 			 String Satelliteserviceinfostreet = elib.getDataFromExcel("SatelliteLocation", 62, 4);
 			 sl.getSatelliteserviceinfostreetfield().sendKeys(Satelliteserviceinfostreet);
+			 //write code click on backspace button in text field only one time to get the suggestion dropdown
+			// Click the text field first
+			 WebElement textField = sl.getSatelliteserviceinfostreetfield();
+			 textField.click();
+
+			 // Press Backspace only once
+			 textField.sendKeys(Keys.BACK_SPACE);
+			 
+			 
+			 
 			 Thread.sleep(2000);
 			 if(sl.getStreetSuggestionbox().isDisplayed())
 			 {
@@ -1815,8 +1820,27 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 			 }
 			 Thread.sleep(2000);
 			 sl.ClearTextField(sl.getSatelliteserviceinfostreetfield());
-
+     */
 		}
+		@Test(dependsOnMethods = "TC_118VerifyStreetDisplayedSuggestionDropdownWhenUserEntersValidStreetName")
+		public void TC_119VerifyStreetisAbleToSelectSuggestionnames() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+		  /*
+			
+			 wlib.scrollToelement(driver, sl.getMedicalwasteservicestxt());
+			 sl.getSatelliteserviceinfostreetfield().click();
+			 //String Satelliteserviceinfostreet = elib.getDataFromExcel("SatelliteLocation", 62, 5);
+			 sl.getSatelliteserviceinfostreetfield().sendKeys("1237 s");
+			 Thread.sleep(2000);
+			 sl.getStreetSuggestionboxfirstoption().click();
+			 System.out.println("Selected Street name from suggestion dropdown is: " +sl.getSatelliteserviceinfostreetfield().getText());
+			 utilityclassobject.gettest().log(Status.INFO, "Selected Street name from suggestion dropdown is: " +sl.getSatelliteserviceinfostreetfield().getText());
+			 System.out.println("User is able to select street name from suggestion dropdown: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, "User is able to select street name from suggestion dropdown: Pass");
+			 
+         */
+		}
+		
 		
 		
 		

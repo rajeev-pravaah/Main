@@ -277,7 +277,93 @@ public class All_TC_RouteAssignment extends BaseClassForGEneratorContacts{
 			}
 			ras.getGobacktorouteassignmentpage().click();
 		}
-		
+		@Test(dependsOnMethods = "TC_008VerifyUserisabletoRedirectToGeneratorInformationPage")
+		public void TC_009VerifyLocationOfGeneratorVisibleinMapView() throws EncryptedDocumentException, IOException, InterruptedException, AWTException {
+			ginfo.Contracted();
+			WebElement street = ginfo.getStreet();
+			String streetAddress = street.getAttribute("value");
+			ginfo.Ellisebtn();
+			ras.getStarsymbol().click();
+
+			String add = driver.findElement(By.xpath("//p[contains(text(),'" + streetAddress + "')]")).getText();
+			System.out.println(add);
+			if(add.contains(streetAddress))
+			{
+				System.out.println("Adresss matched successfully : PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Adresss matched successfully : PASS");
+			}
+			else
+			{
+				System.out.println("Adresss not matched : FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Adresss not matched : FAIL");
+			}
+			ras.getClosepopupfromMap().click();
+			
+			
+		}
+		@Test(dependsOnMethods = "TC_009VerifyLocationOfGeneratorVisibleinMapView")
+		public void TC_010VerifyTheStarFromMap() throws EncryptedDocumentException, IOException, InterruptedException, AWTException {
+		  if(ras.getStarsymbol().isDisplayed())
+		  {
+			  System.out.println("Star symbol is displayed on map view : PASS");
+			  utilityclassobject.gettest().log(Status.PASS, "Star symbol is displayed on map view : PASS");
+		  }
+		  else
+		  {
+			  System.out.println("Star symbol is not displayed on map view : FAIL");
+			  utilityclassobject.gettest().log(Status.FAIL, "Star symbol is not displayed on map view : FAIL");
+		  }
+		}
+		@Test(dependsOnMethods = "TC_010VerifyTheStarFromMap")
+		public void TC_011VerifyTheMapisAbletoZoomin() throws EncryptedDocumentException, IOException, InterruptedException, AWTException {
+			WebElement elessr = ras.getSSRbtn();
+			Thread.sleep(2000);
+			wlib.scrollToelement(driver, elessr);
+			WebElement plusButton = ras.getPlusIconinMap();
+			plusButton.click();
+			plusButton.click();
+			plusButton.click();
+			plusButton.click();
+			plusButton.click();
+			plusButton.click();
+			System.out.println("Map is zoomed in successfully");
+			utilityclassobject.gettest().log(Status.INFO, "Map is zoomed in successfully");
+	        Thread.sleep(3000);
+	        
+		}
+		@Test(dependsOnMethods = "TC_011VerifyTheMapisAbletoZoomin")
+		public void TC_012VerifyTheMapisDisplayedwithOtherLocations() throws EncryptedDocumentException, IOException, InterruptedException, AWTException {
+			WebElement minus = ras.getMinusicon();
+			minus.click();
+			minus.click();
+			minus.click();
+			minus.click();
+			minus.click();
+			minus.click();
+			minus.click();
+			minus.click();
+			minus.click();
+			minus.click();
+			minus.click();
+			System.out.println("Map is zoomed out successfully");
+		}
+		@Test(dependsOnMethods = "TC_012VerifyTheMapisDisplayedwithOtherLocations")
+		public void TC_013VerifySSRbuttonisPresentandClickable() throws EncryptedDocumentException, IOException, InterruptedException, AWTException {
+			wlib.scrollToelement(driver, ras.getSSRbtn());
+			if(ras.getSSRbtn().isDisplayed())
+			{
+				System.out.println("SSR button is displayed successfully : PASS");
+				utilityclassobject.gettest().log(Status.PASS, "SSR button is displayed successfully : PASS");
+			}
+			else
+			{
+				System.out.println("SSR button is not displayed : FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "SSR button is not displayed : FAIL");
+			}
+			ras.getSSRbtn().click();
+			System.out.println("SSR button is clicked successfully");
+			utilityclassobject.gettest().log(Status.INFO, "SSR button is displayed and clickable");
+		}
 		
 		
 	

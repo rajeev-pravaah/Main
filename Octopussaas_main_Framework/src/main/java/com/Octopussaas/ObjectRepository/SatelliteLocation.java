@@ -150,6 +150,10 @@ public class SatelliteLocation {
 	private WebElement streetSuggestionbox;
 	@FindBy(xpath = "//span[text()='Medical Waste Services']")
 	private WebElement medicalwasteservicestxt;
+	@FindBy(xpath = "//div[@class='font-medium']")
+	private WebElement streetSuggestionboxfirstoption;
+	@FindBy(id = "serviceAddress-suite")
+	private WebElement satelliteserviceinfosuitefield;
 	
 	
 	
@@ -163,7 +167,9 @@ public class SatelliteLocation {
 	
 	
 	
-	
+	public WebElement getStreetSuggestionboxfirstoption() {
+		return streetSuggestionboxfirstoption;
+	}
 	public WebElement getMedicalwasteservicestxt() {
 		return medicalwasteservicestxt;
 	}

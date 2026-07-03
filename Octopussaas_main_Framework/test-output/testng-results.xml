@@ -1,77 +1,1397 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="109" passed="108" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-02T15:33:25 IST" name="Default suite" finished-at="2026-07-02T15:35:24 IST" duration-ms="119073">
+  <suite started-at="2026-07-03T16:17:44 IST" name="Default suite" finished-at="2026-07-03T16:28:30 IST" duration-ms="645693">
     <groups>
     </groups>
-    <test started-at="2026-07-02T15:33:25 IST" name="Default test" finished-at="2026-07-02T15:35:24 IST" duration-ms="119073">
+    <test started-at="2026-07-03T16:17:44 IST" name="Default test" finished-at="2026-07-03T16:28:30 IST" duration-ms="645693">
       <class name="Assert_Satellite_Location.Satellite_Location_TC">
-        <test-method is-config="true" signature="Bc()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@71687585]" started-at="2026-07-02T15:33:25 IST" name="Bc" finished-at="2026-07-02T15:33:54 IST" duration-ms="29012" status="PASS">
+        <test-method is-config="true" signature="Bc()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:17:44 IST" name="Bc" finished-at="2026-07-03T16:18:17 IST" duration-ms="33063" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bc -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@71687585]" started-at="2026-07-02T15:33:54 IST" name="Bm" finished-at="2026-07-02T15:33:54 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:17 IST" name="Bm" finished-at="2026-07-03T16:18:17 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method signature="TC_114VerifySatelliteServiceinfoStreetFieldAcceptsAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@71687585]" started-at="2026-07-02T15:33:54 IST" name="TC_114VerifySatelliteServiceinfoStreetFieldAcceptsAlphabets" finished-at="2026-07-02T15:34:25 IST" duration-ms="30815" status="PASS">
+        <test-method signature="TC_001VerifyTheSatelliteLocationPageisDisplayed()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:17 IST" name="TC_001VerifyTheSatelliteLocationPageisDisplayed" finished-at="2026-07-03T16:18:27 IST" duration-ms="9484" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_001VerifyTheSatelliteLocationPageisDisplayed -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:27 IST" name="Am" finished-at="2026-07-03T16:18:29 IST" duration-ms="2014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:29 IST" name="Bm" finished-at="2026-07-03T16:18:29 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_002VerifyTheSatelliteLocationPreviouslyAddedlist()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:29 IST" name="TC_002VerifyTheSatelliteLocationPreviouslyAddedlist" finished-at="2026-07-03T16:18:29 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_001VerifyTheSatelliteLocationPageisDisplayed" duration-ms="249" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_002VerifyTheSatelliteLocationPreviouslyAddedlist -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:29 IST" name="Am" finished-at="2026-07-03T16:18:31 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:31 IST" name="Bm" finished-at="2026-07-03T16:18:31 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_003VerifyTheAddNewSatelliteLocationButton()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:31 IST" name="TC_003VerifyTheAddNewSatelliteLocationButton" finished-at="2026-07-03T16:18:31 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_002VerifyTheSatelliteLocationPreviouslyAddedlist" duration-ms="243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_003VerifyTheAddNewSatelliteLocationButton -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:31 IST" name="Am" finished-at="2026-07-03T16:18:33 IST" duration-ms="2008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_004VerifySatelliteLocationNameFieldWithInput()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:33 IST" name="TC_004VerifySatelliteLocationNameFieldWithInput" finished-at="2026-07-03T16:18:39 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_003VerifyTheAddNewSatelliteLocationButton" duration-ms="5245" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_004VerifySatelliteLocationNameFieldWithInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:33 IST" name="Bm" finished-at="2026-07-03T16:18:33 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:39 IST" name="Am" finished-at="2026-07-03T16:18:41 IST" duration-ms="2018" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_005VerifySatellitLocationFieldacceptsAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:41 IST" name="TC_005VerifySatellitLocationFieldacceptsAlphabets" finished-at="2026-07-03T16:18:43 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_004VerifySatelliteLocationNameFieldWithInput" duration-ms="2578" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_005VerifySatellitLocationFieldacceptsAlphabets -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:41 IST" name="Bm" finished-at="2026-07-03T16:18:41 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:43 IST" name="Am" finished-at="2026-07-03T16:18:45 IST" duration-ms="2006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_006VerifySatellitLocationFieldacceptsNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:45 IST" name="TC_006VerifySatellitLocationFieldacceptsNumbers" finished-at="2026-07-03T16:18:48 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_005VerifySatellitLocationFieldacceptsAlphabets" duration-ms="2606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_006VerifySatellitLocationFieldacceptsNumbers -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:45 IST" name="Bm" finished-at="2026-07-03T16:18:45 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:48 IST" name="Am" finished-at="2026-07-03T16:18:50 IST" duration-ms="2006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_007VerifySatellitLocationFieldacceptsSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:50 IST" name="TC_007VerifySatellitLocationFieldacceptsSpecialCharacters" finished-at="2026-07-03T16:18:53 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_006VerifySatellitLocationFieldacceptsNumbers" duration-ms="2705" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_007VerifySatellitLocationFieldacceptsSpecialCharacters -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:50 IST" name="Bm" finished-at="2026-07-03T16:18:50 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:53 IST" name="Am" finished-at="2026-07-03T16:18:55 IST" duration-ms="2004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_008VerifySatellitLocationFieldWithoutInput()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:55 IST" name="TC_008VerifySatellitLocationFieldWithoutInput" finished-at="2026-07-03T16:18:57 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_007VerifySatellitLocationFieldacceptsSpecialCharacters" duration-ms="2251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_008VerifySatellitLocationFieldWithoutInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:55 IST" name="Bm" finished-at="2026-07-03T16:18:55 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:57 IST" name="Am" finished-at="2026-07-03T16:18:59 IST" duration-ms="2010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_009VerifySatellitLocationEmailFieldAcceptsInput()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:59 IST" name="TC_009VerifySatellitLocationEmailFieldAcceptsInput" finished-at="2026-07-03T16:19:02 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_008VerifySatellitLocationFieldWithoutInput" duration-ms="2791" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_009VerifySatellitLocationEmailFieldAcceptsInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:18:59 IST" name="Bm" finished-at="2026-07-03T16:18:59 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:02 IST" name="Am" finished-at="2026-07-03T16:19:04 IST" duration-ms="2004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_010VerifySatellitLocationEmailFieldWithAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:04 IST" name="TC_010VerifySatellitLocationEmailFieldWithAlphabets" finished-at="2026-07-03T16:19:06 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_009VerifySatellitLocationEmailFieldAcceptsInput" duration-ms="2551" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_010VerifySatellitLocationEmailFieldWithAlphabets -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:04 IST" name="Bm" finished-at="2026-07-03T16:19:04 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:06 IST" name="Am" finished-at="2026-07-03T16:19:08 IST" duration-ms="2020" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:08 IST" name="Bm" finished-at="2026-07-03T16:19:08 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_011VerifySatellitLocationEmailFieldWithNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:08 IST" name="TC_011VerifySatellitLocationEmailFieldWithNumbers" finished-at="2026-07-03T16:19:11 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_010VerifySatellitLocationEmailFieldWithAlphabets" duration-ms="2662" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_011VerifySatellitLocationEmailFieldWithNumbers -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:11 IST" name="Am" finished-at="2026-07-03T16:19:13 IST" duration-ms="2014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_012VerifySatellitLocationEmailFieldWithSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:13 IST" name="TC_012VerifySatellitLocationEmailFieldWithSpecialCharacters" finished-at="2026-07-03T16:19:15 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_011VerifySatellitLocationEmailFieldWithNumbers" duration-ms="2389" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_012VerifySatellitLocationEmailFieldWithSpecialCharacters -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:13 IST" name="Bm" finished-at="2026-07-03T16:19:13 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:15 IST" name="Am" finished-at="2026-07-03T16:19:17 IST" duration-ms="2013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:17 IST" name="Bm" finished-at="2026-07-03T16:19:17 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_013VerifySatellitLocationEmailFieldWithInvaliInput()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:17 IST" name="TC_013VerifySatellitLocationEmailFieldWithInvaliInput" finished-at="2026-07-03T16:19:18 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_012VerifySatellitLocationEmailFieldWithSpecialCharacters" duration-ms="522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_013VerifySatellitLocationEmailFieldWithInvaliInput -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:18 IST" name="Am" finished-at="2026-07-03T16:19:20 IST" duration-ms="2015" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_014VerifySatellitLocationEmailFieldWithoutInput()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:20 IST" name="TC_014VerifySatellitLocationEmailFieldWithoutInput" finished-at="2026-07-03T16:19:22 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_013VerifySatellitLocationEmailFieldWithInvaliInput" duration-ms="2189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_014VerifySatellitLocationEmailFieldWithoutInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:20 IST" name="Bm" finished-at="2026-07-03T16:19:20 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:22 IST" name="Am" finished-at="2026-07-03T16:19:24 IST" duration-ms="2012" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_015VerifySatellitLocationWebsiteFieldAcceptsInput()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:24 IST" name="TC_015VerifySatellitLocationWebsiteFieldAcceptsInput" finished-at="2026-07-03T16:19:27 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_014VerifySatellitLocationEmailFieldWithoutInput" duration-ms="2514" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_015VerifySatellitLocationWebsiteFieldAcceptsInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:24 IST" name="Bm" finished-at="2026-07-03T16:19:24 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:27 IST" name="Am" finished-at="2026-07-03T16:19:29 IST" duration-ms="2001" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_016VerifySatellitLocationWebsiteFieldWithAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:29 IST" name="TC_016VerifySatellitLocationWebsiteFieldWithAlphabets" finished-at="2026-07-03T16:19:31 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_015VerifySatellitLocationWebsiteFieldAcceptsInput" duration-ms="2476" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_016VerifySatellitLocationWebsiteFieldWithAlphabets -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:29 IST" name="Bm" finished-at="2026-07-03T16:19:29 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:31 IST" name="Am" finished-at="2026-07-03T16:19:33 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:33 IST" name="Bm" finished-at="2026-07-03T16:19:33 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_017VerifySatellitLocationWebsiteFieldWithNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:33 IST" name="TC_017VerifySatellitLocationWebsiteFieldWithNumbers" finished-at="2026-07-03T16:19:36 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_016VerifySatellitLocationWebsiteFieldWithAlphabets" duration-ms="2433" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_017VerifySatellitLocationWebsiteFieldWithNumbers -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:36 IST" name="Am" finished-at="2026-07-03T16:19:38 IST" duration-ms="2000" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:38 IST" name="Bm" finished-at="2026-07-03T16:19:38 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_018VerifySatellitLocationWebsiteFieldWithSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:38 IST" name="TC_018VerifySatellitLocationWebsiteFieldWithSpecialCharacters" finished-at="2026-07-03T16:19:40 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_017VerifySatellitLocationWebsiteFieldWithNumbers" duration-ms="2479" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_018VerifySatellitLocationWebsiteFieldWithSpecialCharacters -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:40 IST" name="Am" finished-at="2026-07-03T16:19:42 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:42 IST" name="Bm" finished-at="2026-07-03T16:19:42 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_019VerifySatellitLocationWebsiteFieldWithInvalidInput()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:42 IST" name="TC_019VerifySatellitLocationWebsiteFieldWithInvalidInput" finished-at="2026-07-03T16:19:46 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_018VerifySatellitLocationWebsiteFieldWithSpecialCharacters" duration-ms="3613" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_019VerifySatellitLocationWebsiteFieldWithInvalidInput -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:46 IST" name="Am" finished-at="2026-07-03T16:19:48 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_020VerifySatellitLocationWebsiteFieldWithoutInput()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:48 IST" name="TC_020VerifySatellitLocationWebsiteFieldWithoutInput" finished-at="2026-07-03T16:19:50 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_019VerifySatellitLocationWebsiteFieldWithInvalidInput" duration-ms="2166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_020VerifySatellitLocationWebsiteFieldWithoutInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:48 IST" name="Bm" finished-at="2026-07-03T16:19:48 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:50 IST" name="Am" finished-at="2026-07-03T16:19:52 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:52 IST" name="Bm" finished-at="2026-07-03T16:19:52 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_021VerifyTheAddNewSatelliteLocationStatusFieldDefaultValue()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:52 IST" name="TC_021VerifyTheAddNewSatelliteLocationStatusFieldDefaultValue" finished-at="2026-07-03T16:19:52 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_020VerifySatellitLocationWebsiteFieldWithoutInput" duration-ms="67" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_021VerifyTheAddNewSatelliteLocationStatusFieldDefaultValue -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:52 IST" name="Am" finished-at="2026-07-03T16:19:54 IST" duration-ms="2000" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_022VerifySatelliteLocationIsAbletoChangeStatus()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:54 IST" name="TC_022VerifySatelliteLocationIsAbletoChangeStatus" finished-at="2026-07-03T16:19:54 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_021VerifyTheAddNewSatelliteLocationStatusFieldDefaultValue" duration-ms="387" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_022VerifySatelliteLocationIsAbletoChangeStatus -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:54 IST" name="Bm" finished-at="2026-07-03T16:19:54 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:54 IST" name="Am" finished-at="2026-07-03T16:19:56 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_023VerifyStatusDropDownISAbletoSelectMultipleOptions()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:56 IST" name="TC_023VerifyStatusDropDownISAbletoSelectMultipleOptions" finished-at="2026-07-03T16:19:57 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_022VerifySatelliteLocationIsAbletoChangeStatus" duration-ms="1034" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_023VerifyStatusDropDownISAbletoSelectMultipleOptions -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:56 IST" name="Bm" finished-at="2026-07-03T16:19:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:57 IST" name="Am" finished-at="2026-07-03T16:19:59 IST" duration-ms="2004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_024VerifyTheAddNewSatelliteLocationRedirectToSatelliteLocationProfile()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:59 IST" name="TC_024VerifyTheAddNewSatelliteLocationRedirectToSatelliteLocationProfile" finished-at="2026-07-03T16:20:20 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_023VerifyStatusDropDownISAbletoSelectMultipleOptions" duration-ms="21083" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_024VerifyTheAddNewSatelliteLocationRedirectToSatelliteLocationProfile -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:19:59 IST" name="Bm" finished-at="2026-07-03T16:19:59 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:20 IST" name="Am" finished-at="2026-07-03T16:20:22 IST" duration-ms="2014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_025VerifyTheSatelliteLocationProfileInformationTooltipidpresent()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:22 IST" name="TC_025VerifyTheSatelliteLocationProfileInformationTooltipidpresent" finished-at="2026-07-03T16:20:23 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_024VerifyTheAddNewSatelliteLocationRedirectToSatelliteLocationProfile" duration-ms="61" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_025VerifyTheSatelliteLocationProfileInformationTooltipidpresent -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:22 IST" name="Bm" finished-at="2026-07-03T16:20:22 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:23 IST" name="Am" finished-at="2026-07-03T16:20:25 IST" duration-ms="2008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_026VerifyTheSatelliteLocationProfileInformationTooltipText()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:25 IST" name="TC_026VerifyTheSatelliteLocationProfileInformationTooltipText" finished-at="2026-07-03T16:20:27 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_025VerifyTheSatelliteLocationProfileInformationTooltipidpresent" duration-ms="2456" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_026VerifyTheSatelliteLocationProfileInformationTooltipText -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:25 IST" name="Bm" finished-at="2026-07-03T16:20:25 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:27 IST" name="Am" finished-at="2026-07-03T16:20:29 IST" duration-ms="2012" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_027VerifyNameOFtheLocation()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:29 IST" name="TC_027VerifyNameOFtheLocation" finished-at="2026-07-03T16:20:29 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_026VerifyTheSatelliteLocationProfileInformationTooltipText" duration-ms="61" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_027VerifyNameOFtheLocation -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:29 IST" name="Bm" finished-at="2026-07-03T16:20:29 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:29 IST" name="Am" finished-at="2026-07-03T16:20:31 IST" duration-ms="2014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_028VerifyComapanyNameTextFieldisEditable()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:31 IST" name="TC_028VerifyComapanyNameTextFieldisEditable" finished-at="2026-07-03T16:20:35 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_027VerifyNameOFtheLocation" duration-ms="3976" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_028VerifyComapanyNameTextFieldisEditable -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:31 IST" name="Bm" finished-at="2026-07-03T16:20:31 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:35 IST" name="Am" finished-at="2026-07-03T16:20:37 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_029VerifyCompanyDisplayNameAcceptsInput()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:37 IST" name="TC_029VerifyCompanyDisplayNameAcceptsInput" finished-at="2026-07-03T16:20:39 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_028VerifyComapanyNameTextFieldisEditable" duration-ms="1909" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_029VerifyCompanyDisplayNameAcceptsInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:37 IST" name="Bm" finished-at="2026-07-03T16:20:37 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:39 IST" name="Am" finished-at="2026-07-03T16:20:41 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_030VerifyCompanyDisplayNameWithAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:41 IST" name="TC_030VerifyCompanyDisplayNameWithAlphabets" finished-at="2026-07-03T16:20:43 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_029VerifyCompanyDisplayNameAcceptsInput" duration-ms="1908" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_030VerifyCompanyDisplayNameWithAlphabets -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:41 IST" name="Bm" finished-at="2026-07-03T16:20:41 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:43 IST" name="Am" finished-at="2026-07-03T16:20:45 IST" duration-ms="2004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:45 IST" name="Bm" finished-at="2026-07-03T16:20:45 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_031VerifyCompanyDisplayNameWithNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:45 IST" name="TC_031VerifyCompanyDisplayNameWithNumbers" finished-at="2026-07-03T16:20:47 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_030VerifyCompanyDisplayNameWithAlphabets" duration-ms="1772" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_031VerifyCompanyDisplayNameWithNumbers -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:47 IST" name="Am" finished-at="2026-07-03T16:20:49 IST" duration-ms="2010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_032VerifyCompanyDisplayNameWithSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:49 IST" name="TC_032VerifyCompanyDisplayNameWithSpecialCharacters" finished-at="2026-07-03T16:20:51 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_031VerifyCompanyDisplayNameWithNumbers" duration-ms="1820" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_032VerifyCompanyDisplayNameWithSpecialCharacters -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:49 IST" name="Bm" finished-at="2026-07-03T16:20:49 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:51 IST" name="Am" finished-at="2026-07-03T16:20:53 IST" duration-ms="2014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_033VerifyCompanyDisplayNameWithoutInput()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:53 IST" name="TC_033VerifyCompanyDisplayNameWithoutInput" finished-at="2026-07-03T16:20:55 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_032VerifyCompanyDisplayNameWithSpecialCharacters" duration-ms="2288" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_033VerifyCompanyDisplayNameWithoutInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:53 IST" name="Bm" finished-at="2026-07-03T16:20:53 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:55 IST" name="Am" finished-at="2026-07-03T16:20:57 IST" duration-ms="2008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_034VerifyGeneralPhoneNumberAcceptsInput()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:57 IST" name="TC_034VerifyGeneralPhoneNumberAcceptsInput" finished-at="2026-07-03T16:20:59 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_033VerifyCompanyDisplayNameWithoutInput" duration-ms="2028" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_034VerifyGeneralPhoneNumberAcceptsInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:57 IST" name="Bm" finished-at="2026-07-03T16:20:57 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:20:59 IST" name="Am" finished-at="2026-07-03T16:21:01 IST" duration-ms="2008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_035VerifyGeneralPhoneNumberShouldnotaccpetAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:01 IST" name="TC_035VerifyGeneralPhoneNumberShouldnotaccpetAlphabets" finished-at="2026-07-03T16:21:01 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_034VerifyGeneralPhoneNumberAcceptsInput" duration-ms="454" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_035VerifyGeneralPhoneNumberShouldnotaccpetAlphabets -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:01 IST" name="Bm" finished-at="2026-07-03T16:21:01 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:01 IST" name="Am" finished-at="2026-07-03T16:21:03 IST" duration-ms="2004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_036VerifyGeneralPhoneNumberShouldacceptNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:03 IST" name="TC_036VerifyGeneralPhoneNumberShouldacceptNumbers" finished-at="2026-07-03T16:21:05 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_035VerifyGeneralPhoneNumberShouldnotaccpetAlphabets" duration-ms="1980" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_036VerifyGeneralPhoneNumberShouldacceptNumbers -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:03 IST" name="Bm" finished-at="2026-07-03T16:21:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:05 IST" name="Am" finished-at="2026-07-03T16:21:07 IST" duration-ms="2011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_037VerifyGeneralPhoneNumberShouldnotaccpetSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:07 IST" name="TC_037VerifyGeneralPhoneNumberShouldnotaccpetSpecialCharacters" finished-at="2026-07-03T16:21:09 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_036VerifyGeneralPhoneNumberShouldacceptNumbers" duration-ms="1877" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_037VerifyGeneralPhoneNumberShouldnotaccpetSpecialCharacters -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:07 IST" name="Bm" finished-at="2026-07-03T16:21:07 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:09 IST" name="Am" finished-at="2026-07-03T16:21:11 IST" duration-ms="2013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:11 IST" name="Bm" finished-at="2026-07-03T16:21:11 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_038VerifyGeneralPhoneNumberWithoutInputShouldDisplayMandatoryField()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:11 IST" name="TC_038VerifyGeneralPhoneNumberWithoutInputShouldDisplayMandatoryField" finished-at="2026-07-03T16:21:12 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_037VerifyGeneralPhoneNumberShouldnotaccpetSpecialCharacters" duration-ms="958" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_038VerifyGeneralPhoneNumberWithoutInputShouldDisplayMandatoryField -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:12 IST" name="Am" finished-at="2026-07-03T16:21:14 IST" duration-ms="2010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:14 IST" name="Bm" finished-at="2026-07-03T16:21:14 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_039VerifyExtWithValidInput()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:14 IST" name="TC_039VerifyExtWithValidInput" finished-at="2026-07-03T16:21:16 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_038VerifyGeneralPhoneNumberWithoutInputShouldDisplayMandatoryField" duration-ms="1887" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_039VerifyExtWithValidInput -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:16 IST" name="Am" finished-at="2026-07-03T16:21:18 IST" duration-ms="2010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:18 IST" name="Bm" finished-at="2026-07-03T16:21:18 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_040VerifyExtNotAcceptsAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:18 IST" name="TC_040VerifyExtNotAcceptsAlphabets" finished-at="2026-07-03T16:21:20 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_039VerifyExtWithValidInput" duration-ms="2170" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_040VerifyExtNotAcceptsAlphabets -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:20 IST" name="Am" finished-at="2026-07-03T16:21:22 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_041VerifyExtAcceptsNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:22 IST" name="TC_041VerifyExtAcceptsNumbers" finished-at="2026-07-03T16:21:26 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_040VerifyExtNotAcceptsAlphabets" duration-ms="4128" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_041VerifyExtAcceptsNumbers -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:22 IST" name="Bm" finished-at="2026-07-03T16:21:22 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:26 IST" name="Am" finished-at="2026-07-03T16:21:28 IST" duration-ms="2001" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_042VerifyExtNotAcceptsSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:28 IST" name="TC_042VerifyExtNotAcceptsSpecialCharacters" finished-at="2026-07-03T16:21:30 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_041VerifyExtAcceptsNumbers" duration-ms="1890" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_042VerifyExtNotAcceptsSpecialCharacters -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:28 IST" name="Bm" finished-at="2026-07-03T16:21:28 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:30 IST" name="Am" finished-at="2026-07-03T16:21:32 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:32 IST" name="Bm" finished-at="2026-07-03T16:21:32 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_043VerifyExtWithlonginput()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:32 IST" name="TC_043VerifyExtWithlonginput" finished-at="2026-07-03T16:21:34 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_042VerifyExtNotAcceptsSpecialCharacters" duration-ms="1770" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_043VerifyExtWithlonginput -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:34 IST" name="Am" finished-at="2026-07-03T16:21:36 IST" duration-ms="2008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_044VerifyExtWithlessInput()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:36 IST" name="TC_044VerifyExtWithlessInput" finished-at="2026-07-03T16:21:38 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_043VerifyExtWithlonginput" duration-ms="1716" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_044VerifyExtWithlessInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:36 IST" name="Bm" finished-at="2026-07-03T16:21:36 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:38 IST" name="Am" finished-at="2026-07-03T16:21:40 IST" duration-ms="2003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:40 IST" name="Bm" finished-at="2026-07-03T16:21:40 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_045VerifyEmailisPresentIntheEmailTextField()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:40 IST" name="TC_045VerifyEmailisPresentIntheEmailTextField" finished-at="2026-07-03T16:21:40 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_044VerifyExtWithlessInput" duration-ms="57" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_045VerifyEmailisPresentIntheEmailTextField -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:40 IST" name="Am" finished-at="2026-07-03T16:21:42 IST" duration-ms="2001" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_046VerifyEmailTextFieldisEditable()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:42 IST" name="TC_046VerifyEmailTextFieldisEditable" finished-at="2026-07-03T16:21:48 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_045VerifyEmailisPresentIntheEmailTextField" duration-ms="6211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_046VerifyEmailTextFieldisEditable -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:42 IST" name="Bm" finished-at="2026-07-03T16:21:42 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:48 IST" name="Am" finished-at="2026-07-03T16:21:50 IST" duration-ms="2006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_047VerifyEmailTextFieldisMandatory()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:50 IST" name="TC_047VerifyEmailTextFieldisMandatory" finished-at="2026-07-03T16:21:54 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_046VerifyEmailTextFieldisEditable" duration-ms="4277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_047VerifyEmailTextFieldisMandatory -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:50 IST" name="Bm" finished-at="2026-07-03T16:21:50 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:54 IST" name="Am" finished-at="2026-07-03T16:21:56 IST" duration-ms="2004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_048VerifyWebsitename()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:56 IST" name="TC_048VerifyWebsitename" finished-at="2026-07-03T16:21:58 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_047VerifyEmailTextFieldisMandatory" duration-ms="1692" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_048VerifyWebsitename -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:56 IST" name="Bm" finished-at="2026-07-03T16:21:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:21:58 IST" name="Am" finished-at="2026-07-03T16:22:00 IST" duration-ms="2014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_049VerifyWebsiteTextFieldAcceptsAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:00 IST" name="TC_049VerifyWebsiteTextFieldAcceptsAlphabets" finished-at="2026-07-03T16:22:04 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_048VerifyWebsitename" duration-ms="3955" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_049VerifyWebsiteTextFieldAcceptsAlphabets -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:00 IST" name="Bm" finished-at="2026-07-03T16:22:00 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:04 IST" name="Am" finished-at="2026-07-03T16:22:06 IST" duration-ms="2017" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:06 IST" name="Bm" finished-at="2026-07-03T16:22:06 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_050VerifyWebsiteTextFieldAcceptsNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:06 IST" name="TC_050VerifyWebsiteTextFieldAcceptsNumbers" finished-at="2026-07-03T16:22:10 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_049VerifyWebsiteTextFieldAcceptsAlphabets" duration-ms="3874" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_050VerifyWebsiteTextFieldAcceptsNumbers -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:10 IST" name="Am" finished-at="2026-07-03T16:22:12 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:12 IST" name="Bm" finished-at="2026-07-03T16:22:12 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_051VerifyWebsiteTextFieldAcceptsSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:12 IST" name="TC_051VerifyWebsiteTextFieldAcceptsSpecialCharacters" finished-at="2026-07-03T16:22:16 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_050VerifyWebsiteTextFieldAcceptsNumbers" duration-ms="3853" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_051VerifyWebsiteTextFieldAcceptsSpecialCharacters -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:16 IST" name="Am" finished-at="2026-07-03T16:22:18 IST" duration-ms="2000" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:18 IST" name="Bm" finished-at="2026-07-03T16:22:18 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_052VerifyWebsiteTextFieldAcceptsCopiPastedInputs()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:18 IST" name="TC_052VerifyWebsiteTextFieldAcceptsCopiPastedInputs" finished-at="2026-07-03T16:22:22 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_051VerifyWebsiteTextFieldAcceptsSpecialCharacters" duration-ms="3830" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_052VerifyWebsiteTextFieldAcceptsCopiPastedInputs -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:22 IST" name="Am" finished-at="2026-07-03T16:22:24 IST" duration-ms="2013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:24 IST" name="Bm" finished-at="2026-07-03T16:22:24 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_057VerifyBusinessHoursAcceptInputs()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:24 IST" name="TC_057VerifyBusinessHoursAcceptInputs" finished-at="2026-07-03T16:22:28 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_052VerifyWebsiteTextFieldAcceptsCopiPastedInputs" duration-ms="4471" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_057VerifyBusinessHoursAcceptInputs -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:28 IST" name="Am" finished-at="2026-07-03T16:22:30 IST" duration-ms="2005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:30 IST" name="Bm" finished-at="2026-07-03T16:22:30 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_058VerifyBusinessHoursAcceptAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:30 IST" name="TC_058VerifyBusinessHoursAcceptAlphabets" finished-at="2026-07-03T16:22:34 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_057VerifyBusinessHoursAcceptInputs" duration-ms="3795" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_058VerifyBusinessHoursAcceptAlphabets -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:34 IST" name="Am" finished-at="2026-07-03T16:22:36 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:36 IST" name="Bm" finished-at="2026-07-03T16:22:36 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_059VerifyBusinessHoursAcceptNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:36 IST" name="TC_059VerifyBusinessHoursAcceptNumbers" finished-at="2026-07-03T16:22:40 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_058VerifyBusinessHoursAcceptAlphabets" duration-ms="3765" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_059VerifyBusinessHoursAcceptNumbers -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:40 IST" name="Am" finished-at="2026-07-03T16:22:42 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_060VerifyBusinessHoursAcceptSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:42 IST" name="TC_060VerifyBusinessHoursAcceptSpecialCharacters" finished-at="2026-07-03T16:22:46 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_059VerifyBusinessHoursAcceptNumbers" duration-ms="3755" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_060VerifyBusinessHoursAcceptSpecialCharacters -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:42 IST" name="Bm" finished-at="2026-07-03T16:22:42 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:46 IST" name="Am" finished-at="2026-07-03T16:22:48 IST" duration-ms="2015" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_061VerifyBusinessHoursAcceptCombinationofAllInputs()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:48 IST" name="TC_061VerifyBusinessHoursAcceptCombinationofAllInputs" finished-at="2026-07-03T16:22:51 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_060VerifyBusinessHoursAcceptSpecialCharacters" duration-ms="3805" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_061VerifyBusinessHoursAcceptCombinationofAllInputs -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:48 IST" name="Bm" finished-at="2026-07-03T16:22:48 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:51 IST" name="Am" finished-at="2026-07-03T16:22:53 IST" duration-ms="2005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_062VerifyGoogleRevireLinkAcceptsInput()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:53 IST" name="TC_062VerifyGoogleRevireLinkAcceptsInput" finished-at="2026-07-03T16:22:57 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_061VerifyBusinessHoursAcceptCombinationofAllInputs" duration-ms="4002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_062VerifyGoogleRevireLinkAcceptsInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:53 IST" name="Bm" finished-at="2026-07-03T16:22:53 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:57 IST" name="Am" finished-at="2026-07-03T16:22:59 IST" duration-ms="2005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:59 IST" name="Bm" finished-at="2026-07-03T16:22:59 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_063VerifyGoogleRevireLinkAcceptsAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:22:59 IST" name="TC_063VerifyGoogleRevireLinkAcceptsAlphabets" finished-at="2026-07-03T16:23:03 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_062VerifyGoogleRevireLinkAcceptsInput" duration-ms="3890" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_063VerifyGoogleRevireLinkAcceptsAlphabets -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:03 IST" name="Am" finished-at="2026-07-03T16:23:05 IST" duration-ms="2010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:05 IST" name="Bm" finished-at="2026-07-03T16:23:05 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_064VerifyGoogleRevireLinkAcceptsNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:05 IST" name="TC_064VerifyGoogleRevireLinkAcceptsNumbers" finished-at="2026-07-03T16:23:09 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_063VerifyGoogleRevireLinkAcceptsAlphabets" duration-ms="3834" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_064VerifyGoogleRevireLinkAcceptsNumbers -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:09 IST" name="Am" finished-at="2026-07-03T16:23:11 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:11 IST" name="Bm" finished-at="2026-07-03T16:23:11 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_065VerifyGoogleRevireLinkAcceptsSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:11 IST" name="TC_065VerifyGoogleRevireLinkAcceptsSpecialCharacters" finished-at="2026-07-03T16:23:15 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_064VerifyGoogleRevireLinkAcceptsNumbers" duration-ms="3814" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_065VerifyGoogleRevireLinkAcceptsSpecialCharacters -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:15 IST" name="Am" finished-at="2026-07-03T16:23:17 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_066VerifyGoogleRevireLinkAcceptsCopyPasetdInputs()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:17 IST" name="TC_066VerifyGoogleRevireLinkAcceptsCopyPasetdInputs" finished-at="2026-07-03T16:23:21 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_065VerifyGoogleRevireLinkAcceptsSpecialCharacters" duration-ms="4087" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_066VerifyGoogleRevireLinkAcceptsCopyPasetdInputs -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:17 IST" name="Bm" finished-at="2026-07-03T16:23:17 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:21 IST" name="Am" finished-at="2026-07-03T16:23:23 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:23 IST" name="Bm" finished-at="2026-07-03T16:23:23 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_067VerifyGoogleRevireLinkWithInvalidInputPrompterrorMessage()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:23 IST" name="TC_067VerifyGoogleRevireLinkWithInvalidInputPrompterrorMessage" finished-at="2026-07-03T16:23:29 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_066VerifyGoogleRevireLinkAcceptsCopyPasetdInputs" duration-ms="6148" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_067VerifyGoogleRevireLinkWithInvalidInputPrompterrorMessage -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:29 IST" name="Am" finished-at="2026-07-03T16:23:31 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_068VerifyGoogleRevireLinkWithValidinput()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:31 IST" name="TC_068VerifyGoogleRevireLinkWithValidinput" finished-at="2026-07-03T16:23:37 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_067VerifyGoogleRevireLinkWithInvalidInputPrompterrorMessage" duration-ms="6088" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_068VerifyGoogleRevireLinkWithValidinput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:31 IST" name="Bm" finished-at="2026-07-03T16:23:31 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:37 IST" name="Am" finished-at="2026-07-03T16:23:39 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_075VerifyNotAbleToPassinputInsideSatellietLoactionStatus()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:39 IST" name="TC_075VerifyNotAbleToPassinputInsideSatellietLoactionStatus" finished-at="2026-07-03T16:23:40 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_068VerifyGoogleRevireLinkWithValidinput" duration-ms="541" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_075VerifyNotAbleToPassinputInsideSatellietLoactionStatus -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:39 IST" name="Bm" finished-at="2026-07-03T16:23:39 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:40 IST" name="Am" finished-at="2026-07-03T16:23:42 IST" duration-ms="2011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:42 IST" name="Bm" finished-at="2026-07-03T16:23:42 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_076VerifySatelliteLocationStatusDisplayedAsWhileAddingSatellite()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:42 IST" name="TC_076VerifySatelliteLocationStatusDisplayedAsWhileAddingSatellite" finished-at="2026-07-03T16:23:42 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_075VerifyNotAbleToPassinputInsideSatellietLoactionStatus" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_076VerifySatelliteLocationStatusDisplayedAsWhileAddingSatellite -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:42 IST" name="Am" finished-at="2026-07-03T16:23:44 IST" duration-ms="2014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:44 IST" name="Bm" finished-at="2026-07-03T16:23:44 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_077VerifyStatusCanbeChange()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:44 IST" name="TC_077VerifyStatusCanbeChange" finished-at="2026-07-03T16:23:47 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_076VerifySatelliteLocationStatusDisplayedAsWhileAddingSatellite" duration-ms="2711" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_077VerifyStatusCanbeChange -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:47 IST" name="Am" finished-at="2026-07-03T16:23:49 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:49 IST" name="Bm" finished-at="2026-07-03T16:23:49 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_078VerifyRegistrationNumber1AcceptsAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:49 IST" name="TC_078VerifyRegistrationNumber1AcceptsAlphabets" finished-at="2026-07-03T16:23:52 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_077VerifyStatusCanbeChange" duration-ms="3856" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_078VerifyRegistrationNumber1AcceptsAlphabets -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:52 IST" name="Am" finished-at="2026-07-03T16:23:54 IST" duration-ms="2006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:54 IST" name="Bm" finished-at="2026-07-03T16:23:54 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_079VerifyRegistrationNumber1AcceptsNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:54 IST" name="TC_079VerifyRegistrationNumber1AcceptsNumbers" finished-at="2026-07-03T16:23:58 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_078VerifyRegistrationNumber1AcceptsAlphabets" duration-ms="3849" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_079VerifyRegistrationNumber1AcceptsNumbers -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:23:58 IST" name="Am" finished-at="2026-07-03T16:24:00 IST" duration-ms="2006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_080VerifyRegistrationNumber1AcceptsSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:00 IST" name="TC_080VerifyRegistrationNumber1AcceptsSpecialCharacters" finished-at="2026-07-03T16:24:04 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_079VerifyRegistrationNumber1AcceptsNumbers" duration-ms="3792" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_080VerifyRegistrationNumber1AcceptsSpecialCharacters -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:00 IST" name="Bm" finished-at="2026-07-03T16:24:00 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:04 IST" name="Am" finished-at="2026-07-03T16:24:06 IST" duration-ms="2014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:06 IST" name="Bm" finished-at="2026-07-03T16:24:06 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_081VerifyRegistrationNumber1IsMandatoryField()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:06 IST" name="TC_081VerifyRegistrationNumber1IsMandatoryField" finished-at="2026-07-03T16:24:10 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_080VerifyRegistrationNumber1AcceptsSpecialCharacters" duration-ms="3766" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_081VerifyRegistrationNumber1IsMandatoryField -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:10 IST" name="Am" finished-at="2026-07-03T16:24:12 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:12 IST" name="Bm" finished-at="2026-07-03T16:24:12 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_082VerifyRegistrationNumber2AcceptsAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:12 IST" name="TC_082VerifyRegistrationNumber2AcceptsAlphabets" finished-at="2026-07-03T16:24:16 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_081VerifyRegistrationNumber1IsMandatoryField" duration-ms="3884" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_082VerifyRegistrationNumber2AcceptsAlphabets -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:16 IST" name="Am" finished-at="2026-07-03T16:24:18 IST" duration-ms="2010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_083VerifyRegistrationNumber2AcceptsNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:18 IST" name="TC_083VerifyRegistrationNumber2AcceptsNumbers" finished-at="2026-07-03T16:24:22 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_082VerifyRegistrationNumber2AcceptsAlphabets" duration-ms="3751" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_083VerifyRegistrationNumber2AcceptsNumbers -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:18 IST" name="Bm" finished-at="2026-07-03T16:24:18 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:22 IST" name="Am" finished-at="2026-07-03T16:24:24 IST" duration-ms="2010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:24 IST" name="Bm" finished-at="2026-07-03T16:24:24 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_084VerifyRegistrationNumber2AcceptsSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:24 IST" name="TC_084VerifyRegistrationNumber2AcceptsSpecialCharacters" finished-at="2026-07-03T16:24:27 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_083VerifyRegistrationNumber2AcceptsNumbers" duration-ms="3704" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_084VerifyRegistrationNumber2AcceptsSpecialCharacters -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:27 IST" name="Am" finished-at="2026-07-03T16:24:29 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:29 IST" name="Bm" finished-at="2026-07-03T16:24:29 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_085VerifyRegistrationNumber2IsNotMandatoryField()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:29 IST" name="TC_085VerifyRegistrationNumber2IsNotMandatoryField" finished-at="2026-07-03T16:24:32 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_084VerifyRegistrationNumber2AcceptsSpecialCharacters" duration-ms="2411" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_085VerifyRegistrationNumber2IsNotMandatoryField -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:32 IST" name="Am" finished-at="2026-07-03T16:24:34 IST" duration-ms="2016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:34 IST" name="Bm" finished-at="2026-07-03T16:24:34 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_086VerifyEPAidNumberTextfieldAcceptsAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:34 IST" name="TC_086VerifyEPAidNumberTextfieldAcceptsAlphabets" finished-at="2026-07-03T16:24:38 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_085VerifyRegistrationNumber2IsNotMandatoryField" duration-ms="4704" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_086VerifyEPAidNumberTextfieldAcceptsAlphabets -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:38 IST" name="Am" finished-at="2026-07-03T16:24:40 IST" duration-ms="2012" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_087VerifyEPAidNumberTextfieldAcceptsNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:40 IST" name="TC_087VerifyEPAidNumberTextfieldAcceptsNumbers" finished-at="2026-07-03T16:24:44 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_086VerifyEPAidNumberTextfieldAcceptsAlphabets" duration-ms="3771" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_087VerifyEPAidNumberTextfieldAcceptsNumbers -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:40 IST" name="Bm" finished-at="2026-07-03T16:24:40 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:44 IST" name="Am" finished-at="2026-07-03T16:24:46 IST" duration-ms="2002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:46 IST" name="Bm" finished-at="2026-07-03T16:24:46 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_088VerifyEPAidNumberTextfieldAcceptsSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:46 IST" name="TC_088VerifyEPAidNumberTextfieldAcceptsSpecialCharacters" finished-at="2026-07-03T16:24:50 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_087VerifyEPAidNumberTextfieldAcceptsNumbers" duration-ms="3697" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_088VerifyEPAidNumberTextfieldAcceptsSpecialCharacters -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:50 IST" name="Am" finished-at="2026-07-03T16:24:52 IST" duration-ms="2003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:52 IST" name="Bm" finished-at="2026-07-03T16:24:52 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_089VerifyDOTnumberfieldAcceptsAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:52 IST" name="TC_089VerifyDOTnumberfieldAcceptsAlphabets" finished-at="2026-07-03T16:24:56 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_088VerifyEPAidNumberTextfieldAcceptsSpecialCharacters" duration-ms="3854" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_089VerifyDOTnumberfieldAcceptsAlphabets -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:56 IST" name="Am" finished-at="2026-07-03T16:24:58 IST" duration-ms="2004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_090VerifyDOTnumberfieldAcceptsNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:58 IST" name="TC_090VerifyDOTnumberfieldAcceptsNumbers" finished-at="2026-07-03T16:25:02 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_089VerifyDOTnumberfieldAcceptsAlphabets" duration-ms="3725" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_090VerifyDOTnumberfieldAcceptsNumbers -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:24:58 IST" name="Bm" finished-at="2026-07-03T16:24:58 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:02 IST" name="Am" finished-at="2026-07-03T16:25:04 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_091VerifyDOTnumberfieldAcceptsSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:04 IST" name="TC_091VerifyDOTnumberfieldAcceptsSpecialCharacters" finished-at="2026-07-03T16:25:07 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_090VerifyDOTnumberfieldAcceptsNumbers" duration-ms="3689" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_091VerifyDOTnumberfieldAcceptsSpecialCharacters -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:04 IST" name="Bm" finished-at="2026-07-03T16:25:04 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:07 IST" name="Am" finished-at="2026-07-03T16:25:09 IST" duration-ms="2010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_092VerifyEINFieldAcceptsAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:09 IST" name="TC_092VerifyEINFieldAcceptsAlphabets" finished-at="2026-07-03T16:25:13 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_091VerifyDOTnumberfieldAcceptsSpecialCharacters" duration-ms="3848" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_092VerifyEINFieldAcceptsAlphabets -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:09 IST" name="Bm" finished-at="2026-07-03T16:25:09 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:13 IST" name="Am" finished-at="2026-07-03T16:25:15 IST" duration-ms="2005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_093VerifyEINFieldAcceptsNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:15 IST" name="TC_093VerifyEINFieldAcceptsNumbers" finished-at="2026-07-03T16:25:19 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_092VerifyEINFieldAcceptsAlphabets" duration-ms="3954" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_093VerifyEINFieldAcceptsNumbers -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:15 IST" name="Bm" finished-at="2026-07-03T16:25:15 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:19 IST" name="Am" finished-at="2026-07-03T16:25:21 IST" duration-ms="2014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:21 IST" name="Bm" finished-at="2026-07-03T16:25:21 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_094VerifyEINFieldAcceptsSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:21 IST" name="TC_094VerifyEINFieldAcceptsSpecialCharacters" finished-at="2026-07-03T16:25:25 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_093VerifyEINFieldAcceptsNumbers" duration-ms="3750" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_094VerifyEINFieldAcceptsSpecialCharacters -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:25 IST" name="Am" finished-at="2026-07-03T16:25:27 IST" duration-ms="2006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_095VerifyEntityIDNumberieldAcceptsAlpabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:27 IST" name="TC_095VerifyEntityIDNumberieldAcceptsAlpabets" finished-at="2026-07-03T16:25:31 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_094VerifyEINFieldAcceptsSpecialCharacters" duration-ms="3809" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_095VerifyEntityIDNumberieldAcceptsAlpabets -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:27 IST" name="Bm" finished-at="2026-07-03T16:25:27 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:31 IST" name="Am" finished-at="2026-07-03T16:25:33 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:33 IST" name="Bm" finished-at="2026-07-03T16:25:33 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_096VerifyEntityIDNumberieldAcceptsNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:33 IST" name="TC_096VerifyEntityIDNumberieldAcceptsNumbers" finished-at="2026-07-03T16:25:36 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_095VerifyEntityIDNumberieldAcceptsAlpabets" duration-ms="3740" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_096VerifyEntityIDNumberieldAcceptsNumbers -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:36 IST" name="Am" finished-at="2026-07-03T16:25:38 IST" duration-ms="2002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:38 IST" name="Bm" finished-at="2026-07-03T16:25:38 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_097VerifyEntityIDNumberieldAcceptsSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:38 IST" name="TC_097VerifyEntityIDNumberieldAcceptsSpecialCharacters" finished-at="2026-07-03T16:25:42 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_096VerifyEntityIDNumberieldAcceptsNumbers" duration-ms="3704" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_097VerifyEntityIDNumberieldAcceptsSpecialCharacters -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:42 IST" name="Am" finished-at="2026-07-03T16:25:44 IST" duration-ms="2015" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_098VerifySOSNumberFieldAcceptsAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:44 IST" name="TC_098VerifySOSNumberFieldAcceptsAlphabets" finished-at="2026-07-03T16:25:48 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_097VerifyEntityIDNumberieldAcceptsSpecialCharacters" duration-ms="3808" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_098VerifySOSNumberFieldAcceptsAlphabets -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:44 IST" name="Bm" finished-at="2026-07-03T16:25:44 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:48 IST" name="Am" finished-at="2026-07-03T16:25:50 IST" duration-ms="2016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_099VerifySOSNumberFieldAcceptsNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:50 IST" name="TC_099VerifySOSNumberFieldAcceptsNumbers" finished-at="2026-07-03T16:25:54 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_098VerifySOSNumberFieldAcceptsAlphabets" duration-ms="3808" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_099VerifySOSNumberFieldAcceptsNumbers -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:50 IST" name="Bm" finished-at="2026-07-03T16:25:50 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:54 IST" name="Am" finished-at="2026-07-03T16:25:56 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_100VerifySOSNumberFieldAcceptsSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:56 IST" name="TC_100VerifySOSNumberFieldAcceptsSpecialCharacters" finished-at="2026-07-03T16:25:59 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_099VerifySOSNumberFieldAcceptsNumbers" duration-ms="3700" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_100VerifySOSNumberFieldAcceptsSpecialCharacters -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:56 IST" name="Bm" finished-at="2026-07-03T16:25:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:25:59 IST" name="Am" finished-at="2026-07-03T16:26:01 IST" duration-ms="2006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:01 IST" name="Bm" finished-at="2026-07-03T16:26:01 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_101VerifySICFieldAcceptsAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:01 IST" name="TC_101VerifySICFieldAcceptsAlphabets" finished-at="2026-07-03T16:26:05 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_100VerifySOSNumberFieldAcceptsSpecialCharacters" duration-ms="3849" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_101VerifySICFieldAcceptsAlphabets -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:05 IST" name="Am" finished-at="2026-07-03T16:26:07 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:07 IST" name="Bm" finished-at="2026-07-03T16:26:07 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_102VerifySICFieldAcceptsNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:07 IST" name="TC_102VerifySICFieldAcceptsNumbers" finished-at="2026-07-03T16:26:11 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_101VerifySICFieldAcceptsAlphabets" duration-ms="3762" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_102VerifySICFieldAcceptsNumbers -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:11 IST" name="Am" finished-at="2026-07-03T16:26:13 IST" duration-ms="2013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_103VerifySICFieldAcceptsSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:13 IST" name="TC_103VerifySICFieldAcceptsSpecialCharacters" finished-at="2026-07-03T16:26:17 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_102VerifySICFieldAcceptsNumbers" duration-ms="3678" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_103VerifySICFieldAcceptsSpecialCharacters -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:13 IST" name="Bm" finished-at="2026-07-03T16:26:13 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:17 IST" name="Am" finished-at="2026-07-03T16:26:19 IST" duration-ms="2014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_104VerifyNAICSCodeAcceptsAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:19 IST" name="TC_104VerifyNAICSCodeAcceptsAlphabets" finished-at="2026-07-03T16:26:23 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_103VerifySICFieldAcceptsSpecialCharacters" duration-ms="3781" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_104VerifyNAICSCodeAcceptsAlphabets -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:19 IST" name="Bm" finished-at="2026-07-03T16:26:19 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:23 IST" name="Am" finished-at="2026-07-03T16:26:25 IST" duration-ms="2004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_105VerifyNAICSCodeAcceptsNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:25 IST" name="TC_105VerifyNAICSCodeAcceptsNumbers" finished-at="2026-07-03T16:26:28 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_104VerifyNAICSCodeAcceptsAlphabets" duration-ms="3785" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_105VerifyNAICSCodeAcceptsNumbers -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:25 IST" name="Bm" finished-at="2026-07-03T16:26:25 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:28 IST" name="Am" finished-at="2026-07-03T16:26:30 IST" duration-ms="2016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_106VerifyNAICSCodeAcceptsSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:30 IST" name="TC_106VerifyNAICSCodeAcceptsSpecialCharacters" finished-at="2026-07-03T16:26:34 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_105VerifyNAICSCodeAcceptsNumbers" duration-ms="3684" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_106VerifyNAICSCodeAcceptsSpecialCharacters -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:30 IST" name="Bm" finished-at="2026-07-03T16:26:30 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:34 IST" name="Am" finished-at="2026-07-03T16:26:36 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_107VerifyCageCodeFiledAcceptsAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:36 IST" name="TC_107VerifyCageCodeFiledAcceptsAlphabets" finished-at="2026-07-03T16:26:40 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_106VerifyNAICSCodeAcceptsSpecialCharacters" duration-ms="3848" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_107VerifyCageCodeFiledAcceptsAlphabets -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:36 IST" name="Bm" finished-at="2026-07-03T16:26:36 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:40 IST" name="Am" finished-at="2026-07-03T16:26:42 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_108VerifyCageCodeFiledAcceptsNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:42 IST" name="TC_108VerifyCageCodeFiledAcceptsNumbers" finished-at="2026-07-03T16:26:46 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_107VerifyCageCodeFiledAcceptsAlphabets" duration-ms="3774" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_108VerifyCageCodeFiledAcceptsNumbers -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:42 IST" name="Bm" finished-at="2026-07-03T16:26:42 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:46 IST" name="Am" finished-at="2026-07-03T16:26:48 IST" duration-ms="2014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:48 IST" name="Bm" finished-at="2026-07-03T16:26:48 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_109VerifyCageCodeFiledAcceptsSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:48 IST" name="TC_109VerifyCageCodeFiledAcceptsSpecialCharacters" finished-at="2026-07-03T16:26:51 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_108VerifyCageCodeFiledAcceptsNumbers" duration-ms="3693" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_109VerifyCageCodeFiledAcceptsSpecialCharacters -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:51 IST" name="Am" finished-at="2026-07-03T16:26:53 IST" duration-ms="2003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_110VerifySatelliteServiceinfoNamefieldAcceptsAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:53 IST" name="TC_110VerifySatelliteServiceinfoNamefieldAcceptsAlphabets" finished-at="2026-07-03T16:26:57 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_109VerifyCageCodeFiledAcceptsSpecialCharacters" duration-ms="3995" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_110VerifySatelliteServiceinfoNamefieldAcceptsAlphabets -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:53 IST" name="Bm" finished-at="2026-07-03T16:26:53 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:57 IST" name="Am" finished-at="2026-07-03T16:26:59 IST" duration-ms="2012" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_111VerifySatelliteServiceinfoNamefieldAcceptsNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:59 IST" name="TC_111VerifySatelliteServiceinfoNamefieldAcceptsNumbers" finished-at="2026-07-03T16:27:03 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_110VerifySatelliteServiceinfoNamefieldAcceptsAlphabets" duration-ms="3870" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_111VerifySatelliteServiceinfoNamefieldAcceptsNumbers -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:26:59 IST" name="Bm" finished-at="2026-07-03T16:26:59 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:03 IST" name="Am" finished-at="2026-07-03T16:27:05 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:05 IST" name="Bm" finished-at="2026-07-03T16:27:05 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_112VerifySatelliteServiceinfoNamefieldAcceptsSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:05 IST" name="TC_112VerifySatelliteServiceinfoNamefieldAcceptsSpecialCharacters" finished-at="2026-07-03T16:27:09 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_111VerifySatelliteServiceinfoNamefieldAcceptsNumbers" duration-ms="3872" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_112VerifySatelliteServiceinfoNamefieldAcceptsSpecialCharacters -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:09 IST" name="Am" finished-at="2026-07-03T16:27:11 IST" duration-ms="2013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:11 IST" name="Bm" finished-at="2026-07-03T16:27:11 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_113VerifySatelliteServiceinfoNameFieldisMandatory()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:11 IST" name="TC_113VerifySatelliteServiceinfoNameFieldisMandatory" finished-at="2026-07-03T16:27:16 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_112VerifySatelliteServiceinfoNamefieldAcceptsSpecialCharacters" duration-ms="4332" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_113VerifySatelliteServiceinfoNameFieldisMandatory -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:16 IST" name="Am" finished-at="2026-07-03T16:27:18 IST" duration-ms="2003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_114VerifySatelliteServiceinfoStreetFieldAcceptsAlphabets()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:18 IST" name="TC_114VerifySatelliteServiceinfoStreetFieldAcceptsAlphabets" finished-at="2026-07-03T16:27:22 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_113VerifySatelliteServiceinfoNameFieldisMandatory" duration-ms="3995" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_114VerifySatelliteServiceinfoStreetFieldAcceptsAlphabets -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@71687585]" started-at="2026-07-02T15:34:25 IST" name="Am" finished-at="2026-07-02T15:34:27 IST" duration-ms="2014" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@71687585]" started-at="2026-07-02T15:34:27 IST" name="Bm" finished-at="2026-07-02T15:34:27 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:18 IST" name="Bm" finished-at="2026-07-03T16:27:18 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method signature="TC_115VerifySatelliteServiceinfoStreetFieldAcceptsNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@71687585]" started-at="2026-07-02T15:34:27 IST" name="TC_115VerifySatelliteServiceinfoStreetFieldAcceptsNumbers" finished-at="2026-07-02T15:34:31 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_114VerifySatelliteServiceinfoStreetFieldAcceptsAlphabets" duration-ms="3947" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:22 IST" name="Am" finished-at="2026-07-03T16:27:24 IST" duration-ms="2016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:24 IST" name="Bm" finished-at="2026-07-03T16:27:24 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_115VerifySatelliteServiceinfoStreetFieldAcceptsNumbers()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:24 IST" name="TC_115VerifySatelliteServiceinfoStreetFieldAcceptsNumbers" finished-at="2026-07-03T16:27:27 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_114VerifySatelliteServiceinfoStreetFieldAcceptsAlphabets" duration-ms="3807" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_115VerifySatelliteServiceinfoStreetFieldAcceptsNumbers -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@71687585]" started-at="2026-07-02T15:34:31 IST" name="Am" finished-at="2026-07-02T15:34:33 IST" duration-ms="2008" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:27 IST" name="Am" finished-at="2026-07-03T16:27:29 IST" duration-ms="2010" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@71687585]" started-at="2026-07-02T15:34:33 IST" name="Bm" finished-at="2026-07-02T15:34:33 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method signature="TC_116VerifySatelliteServiceinfoStreetFieldAcceptsSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@71687585]" started-at="2026-07-02T15:34:33 IST" name="TC_116VerifySatelliteServiceinfoStreetFieldAcceptsSpecialCharacters" finished-at="2026-07-02T15:34:37 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_115VerifySatelliteServiceinfoStreetFieldAcceptsNumbers" duration-ms="3826" status="PASS">
+        <test-method signature="TC_116VerifySatelliteServiceinfoStreetFieldAcceptsSpecialCharacters()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:29 IST" name="TC_116VerifySatelliteServiceinfoStreetFieldAcceptsSpecialCharacters" finished-at="2026-07-03T16:27:33 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_115VerifySatelliteServiceinfoStreetFieldAcceptsNumbers" duration-ms="3817" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_116VerifySatelliteServiceinfoStreetFieldAcceptsSpecialCharacters -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@71687585]" started-at="2026-07-02T15:34:37 IST" name="Am" finished-at="2026-07-02T15:34:39 IST" duration-ms="2015" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:29 IST" name="Bm" finished-at="2026-07-03T16:27:29 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:33 IST" name="Am" finished-at="2026-07-03T16:27:35 IST" duration-ms="2001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_117VerifySatelliteServiceinfoStreetFieldisMandatory()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@71687585]" started-at="2026-07-02T15:34:39 IST" name="TC_117VerifySatelliteServiceinfoStreetFieldisMandatory" finished-at="2026-07-02T15:34:43 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_116VerifySatelliteServiceinfoStreetFieldAcceptsSpecialCharacters" duration-ms="4340" status="PASS">
+        <test-method signature="TC_117VerifySatelliteServiceinfoStreetFieldisMandatory()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:35 IST" name="TC_117VerifySatelliteServiceinfoStreetFieldisMandatory" finished-at="2026-07-03T16:27:40 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_116VerifySatelliteServiceinfoStreetFieldAcceptsSpecialCharacters" duration-ms="4302" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_117VerifySatelliteServiceinfoStreetFieldisMandatory -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@71687585]" started-at="2026-07-02T15:34:39 IST" name="Bm" finished-at="2026-07-02T15:34:39 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:35 IST" name="Bm" finished-at="2026-07-03T16:27:35 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@71687585]" started-at="2026-07-02T15:34:43 IST" name="Am" finished-at="2026-07-02T15:34:45 IST" duration-ms="2017" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:40 IST" name="Am" finished-at="2026-07-03T16:27:42 IST" duration-ms="2006" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@71687585]" started-at="2026-07-02T15:34:45 IST" name="Bm" finished-at="2026-07-02T15:34:45 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method signature="TC_118VerifyStreetDisplayedSuggestionDropdownWhenUserEntersValidStreetName()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@71687585]" started-at="2026-07-02T15:34:45 IST" name="TC_118VerifyStreetDisplayedSuggestionDropdownWhenUserEntersValidStreetName" finished-at="2026-07-02T15:35:18 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_117VerifySatelliteServiceinfoStreetFieldisMandatory" duration-ms="32840" status="PASS">
+        <test-method signature="TC_118VerifyStreetDisplayedSuggestionDropdownWhenUserEntersValidStreetName()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:42 IST" name="TC_118VerifyStreetDisplayedSuggestionDropdownWhenUserEntersValidStreetName" finished-at="2026-07-03T16:27:48 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_117VerifySatelliteServiceinfoStreetFieldisMandatory" duration-ms="6807" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_118VerifyStreetDisplayedSuggestionDropdownWhenUserEntersValidStreetName -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@71687585]" started-at="2026-07-02T15:35:18 IST" name="Am" finished-at="2026-07-02T15:35:20 IST" duration-ms="2017" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:42 IST" name="Bm" finished-at="2026-07-03T16:27:42 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:48 IST" name="Am" finished-at="2026-07-03T16:27:50 IST" duration-ms="2006" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Ac()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@71687585]" started-at="2026-07-02T15:35:20 IST" name="Ac" finished-at="2026-07-02T15:35:24 IST" duration-ms="4024" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:50 IST" name="Bm" finished-at="2026-07-03T16:27:50 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_119VerifyStreetisAbleToSelectSuggestionnames()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:27:50 IST" name="TC_119VerifyStreetisAbleToSelectSuggestionnames" finished-at="2026-07-03T16:28:23 IST" depends-on-methods="Assert_Satellite_Location.Satellite_Location_TC.TC_118VerifyStreetDisplayedSuggestionDropdownWhenUserEntersValidStreetName" duration-ms="32753" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='font-medium']"}
+  (Session info: chrome=149.0.7827.201)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [54888b751f02ba574cf5829f186e2739, findElement {value=//div[@class='font-medium'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.201, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\Rajeev nandi\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50363}, goog:processID: 6592, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50363/devtoo..., se:cdpVersion: 149.0.7827.201, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 54888b751f02ba574cf5829f186e2739]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='font-medium']"}
+  (Session info: chrome=149.0.7827.201)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [54888b751f02ba574cf5829f186e2739, findElement {value=//div[@class='font-medium'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.201, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\Rajeev nandi\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50363}, goog:processID: 6592, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50363/devtoo..., se:cdpVersion: 149.0.7827.201, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 54888b751f02ba574cf5829f186e2739
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy18.click(Unknown Source)
+at Assert_Satellite_Location.Satellite_Location_TC.TC_119VerifyStreetisAbleToSelectSuggestionnames(Satellite_Location_TC.java:1835)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_119VerifyStreetisAbleToSelectSuggestionnames -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:28:24 IST" name="Am" finished-at="2026-07-03T16:28:26 IST" duration-ms="2002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Ac()[pri:0, instance:Assert_Satellite_Location.Satellite_Location_TC@1807f5a7]" started-at="2026-07-03T16:28:26 IST" name="Ac" finished-at="2026-07-03T16:28:30 IST" duration-ms="4016" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Ac -->
