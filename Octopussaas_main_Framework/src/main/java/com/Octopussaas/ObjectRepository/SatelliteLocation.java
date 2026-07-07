@@ -153,20 +153,54 @@ public class SatelliteLocation {
 	@FindBy(xpath = "//div[@class='font-medium']")
 	private WebElement streetSuggestionboxfirstoption;
 	@FindBy(id = "serviceAddress-suite")
-	private WebElement satelliteserviceinfosuitefield;
+	private WebElement suitefield;
+	@FindBy(id = "serviceAddress-city")
+	private WebElement cityfield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[3]")
+	private WebElement cityerrormessage;
+	@FindBy(id = "serviceAddress-state")
+	private WebElement statefield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[4]")
+	private WebElement stateerrormessage;
+	@FindBy(xpath = "//div[text()='Services Offered']")
+	private WebElement servicesofferedtxt;
+	@FindBy(xpath = "//li[@role='option']")
+	private List<WebElement> stateslist;
+	@FindBy(id = "serviceAddress-zipCode")
+	private WebElement zipcodefield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[4]")
+	private WebElement zipcodeerrormessage;
 	
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public WebElement getZipcodeerrormessage() {
+		return zipcodeerrormessage;
+	}
+	public WebElement getZipcodefield() {
+		return zipcodefield;
+	}
+	public List<WebElement> getStatelist() {
+		return stateslist;
+	}
+	public WebElement getServicesofferedtxt() {
+		return servicesofferedtxt;
+	}
+	public WebElement getStateerrormessage() {
+		return stateerrormessage;
+	}
+	public WebElement getStatefield() {
+		return statefield;
+	}
+	public WebElement getCityerrormessage() {
+		return cityerrormessage;
+	}
+	public WebElement getCityfield() {
+		return cityfield;
+	}
+	public WebElement getSuitefield() {
+		return suitefield;
+	}
 	public WebElement getStreetSuggestionboxfirstoption() {
 		return streetSuggestionboxfirstoption;
 	}
@@ -377,4 +411,15 @@ public class SatelliteLocation {
 		wlib.scrollToelement(driver, savebutton);
 		savebutton.click();
 	}
+	
+	public void ClearthevalueUsingBackspace(WebElement element) throws InterruptedException {
+	    element.click();
+	    Thread.sleep(1000);
+	    String value = element.getAttribute("value");
+	    int length = value.length();
+	    for (int i = 0; i < length; i++) {
+	        element.sendKeys(Keys.BACK_SPACE);
+	    }
+	}
+	
 }

@@ -2,11 +2,16 @@ package OctoRouteAssignmentFlowTc;
 
 import java.awt.AWTException;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -297,8 +302,17 @@ public class All_TC_RouteAssignment extends BaseClassForGEneratorContacts{
 				System.out.println("Adresss not matched : FAIL");
 				utilityclassobject.gettest().log(Status.FAIL, "Adresss not matched : FAIL");
 			}
-			ras.getClosepopupfromMap().click();
 			
+			// Close popup inside canvas — use resilient click to avoid StaleElementReferenceException
+			
+			WebElement canvas = driver.findElement(By.tagName("canvas"));
+			System.out.println("Canvas displayed : " + canvas.isDisplayed());	
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+			WebElement closeBtn = wait.until(ExpectedConditions.elementToBeClickable(
+			        By.xpath("//button[@class='popup-close' and @aria-label='close']")));
+
+			closeBtn.click();
 			
 		}
 		@Test(dependsOnMethods = "TC_009VerifyLocationOfGeneratorVisibleinMapView")
@@ -319,7 +333,12 @@ public class All_TC_RouteAssignment extends BaseClassForGEneratorContacts{
 			WebElement elessr = ras.getSSRbtn();
 			Thread.sleep(2000);
 			wlib.scrollToelement(driver, elessr);
-			WebElement plusButton = ras.getPlusIconinMap();
+			//WebElement plusButton = ras.getPlusIconinMap();
+			WebElement plusButton = driver.findElement(By.xpath(
+				    "(//button[contains(@class,'w-10') and contains(@class,'h-10') and contains(@class,'rounded')])[1]"
+				));
+
+				plusButton.click();
 			plusButton.click();
 			plusButton.click();
 			plusButton.click();
@@ -363,6 +382,9 @@ public class All_TC_RouteAssignment extends BaseClassForGEneratorContacts{
 			ras.getSSRbtn().click();
 			System.out.println("SSR button is clicked successfully");
 			utilityclassobject.gettest().log(Status.INFO, "SSR button is displayed and clickable");
+		
+		
+		
 		}
 		
 		

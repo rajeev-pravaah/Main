@@ -1694,43 +1694,11 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		public void TC_114VerifySatelliteServiceinfoStreetFieldAcceptsAlphabets() throws InterruptedException, EncryptedDocumentException, IOException
 		{
  //it is not an Magic Tc While running check the dependency To run independently comment dependency 
-			/*
-			//comment it
-			//comment it
-			//comment it
 			
-			elib=new ExcelUtility();
-			hp = new HomePage(driver);
-			utilityclassobject.gettest().log(com.aventstack.extentreports.Status.INFO, "Home Page is displayed");
-			System.out.println("Home Page is displayed");
-			Thread.sleep(6000);
-			sl = new SatelliteLocation(driver);
-			sl.getAssets().click();
-			sl.getSatellite_Locations().click();
-			sl.getSatelliteLocationsList().isDisplayed();
-			utilityclassobject.gettest().log(Status.INFO, "Satellite Location Page is displayed");
-			 System.out.println("Satellite Location Page is displayed");
-			  List<WebElement> namelists = sl.getSatelliteLocationNameinlist();
-			   //print each value using for loop
-			  for(int i=0; i<namelists.size(); i++) {
-				  String name = namelists.get(i).getText();
-				  ExcelUtility elib1 = new ExcelUtility();
-					 String satellitename = elib1.getDataFromExcel("SatelliteLocation", 35, 7);
-				  if(name.equals(satellitename)) {
-					  namelists.get(i).click();
-					  utilityclassobject.gettest().log(Status.INFO, "Clicked on Satellite Location Name in the list: " +name);
-					  System.out.println("Clicked on Satellite Location Name in the list: " +name);
-					  break;
-				  }
-				  
-			  }
-			  
-			 
-			 //comment it
-			//comment it//comment it
-			//comment it
+			
 		
-			 */
+			 
+			//SatelliteLocation s1 = new SatelliteLocation(driver);
 			sl.getSatelliteserviceinfostreetfield().click();
 			 String Satelliteserviceinfostreet = elib.getDataFromExcel("SatelliteLocation", 62, 1);
 			 sl.getSatelliteserviceinfostreetfield().sendKeys(Satelliteserviceinfostreet);
@@ -1820,13 +1788,15 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 			 }
 			 Thread.sleep(2000);
 			 sl.ClearTextField(sl.getSatelliteserviceinfostreetfield());
-     */
+     
+     
+			 */
 		}
 		@Test(dependsOnMethods = "TC_118VerifyStreetDisplayedSuggestionDropdownWhenUserEntersValidStreetName")
 		public void TC_119VerifyStreetisAbleToSelectSuggestionnames() throws InterruptedException, EncryptedDocumentException, IOException
 		{
-		  /*
-			
+		  
+			/*
 			 wlib.scrollToelement(driver, sl.getMedicalwasteservicestxt());
 			 sl.getSatelliteserviceinfostreetfield().click();
 			 //String Satelliteserviceinfostreet = elib.getDataFromExcel("SatelliteLocation", 62, 5);
@@ -1837,11 +1807,334 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 			 utilityclassobject.gettest().log(Status.INFO, "Selected Street name from suggestion dropdown is: " +sl.getSatelliteserviceinfostreetfield().getText());
 			 System.out.println("User is able to select street name from suggestion dropdown: Pass");
 			 utilityclassobject.gettest().log(Status.PASS, "User is able to select street name from suggestion dropdown: Pass");
+			 	*/
+         
+		}
+		@Test(dependsOnMethods = "TC_119VerifyStreetisAbleToSelectSuggestionnames")
+		public void TC_120VerifySuiteAcceptsalphabets() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			//scroll to suite field and click on that and pass the alphabtes
+			//scroll to suite field
+			 wlib.scrollToelement(driver, sl.getSuitefield());
+			sl.getSuitefield().click();
+			 String Suite = elib.getDataFromExcel("SatelliteLocation", 64, 1);
+			 sl.getSuitefield().sendKeys(Suite);
+			 Thread.sleep(2000);
+			 System.out.println(" Suite is: " +sl.getSuitefield().getText());
+			 utilityclassobject.gettest().log(Status.INFO, " Suite is: " +sl.getSuitefield().getText());
+			 System.out.println(" Suite text field accepts Alphabets: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, " Suite text field accepts Alphabets: Pass");
+			 sl.ClearTextField(sl.getSuitefield());
+			
+
+		}
+		@Test(dependsOnMethods = "TC_120VerifySuiteAcceptsalphabets")
+		public void TC_121VerifySuiteAcceptsNumbers() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getSuitefield().click();
+			 String Suite = elib.getDataFromExcel("SatelliteLocation", 64, 2);
+			 sl.getSuitefield().sendKeys(Suite);
+			 Thread.sleep(2000);
+			 System.out.println(" Suite is: " +sl.getSuitefield().getText());
+			 utilityclassobject.gettest().log(Status.INFO, " Suite is: " +sl.getSuitefield().getText());
+			 System.out.println(" Suite text field accepts Numbers: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, " Suite text field accepts Numbers: Pass");
+			 sl.ClearTextField(sl.getSuitefield());
+			
+
+		}
+		@Test(dependsOnMethods = "TC_121VerifySuiteAcceptsNumbers")
+		public void TC_122VerifySuiteAcceptsSpecialCharacters() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getSuitefield().click();
+			 String Suite = elib.getDataFromExcel("SatelliteLocation", 64, 3);
+			 sl.getSuitefield().sendKeys(Suite);
+			 Thread.sleep(2000);
+			 System.out.println(" Suite is: " +sl.getSuitefield().getText());
+			 utilityclassobject.gettest().log(Status.INFO, " Suite is: " +sl.getSuitefield().getText());
+			 System.out.println(" Suite text field accepts Special Characters: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, " Suite text field accepts Special Characters: Pass");
+			 sl.ClearTextField(sl.getSuitefield());
+			
+
+		}
+		@Test(dependsOnMethods = "TC_122VerifySuiteAcceptsSpecialCharacters")
+		public void TC_123VerifySuiteFieldisNOtMandatory() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getSuitefield().click();
+			 sl.ClearTextField(sl.getSuitefield());
+			 sl.SaveButton();
 			 
-         */
+			 wlib.scrollToelement(driver,sl.getSuitefield());
+			 Thread.sleep(2000);
+			 System.out.println("Suite text field is not mandatory: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, "Suite text field is not mandatory: Pass");
 		}
 		
+		@Test(dependsOnMethods = "TC_123VerifySuiteFieldisNOtMandatory")
+		public void TC_124VerifyCityFieldAcceptsAlphabets() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getCityfield().click();
+			 String City = elib.getDataFromExcel("SatelliteLocation", 66, 1);
+			 sl.getCityfield().sendKeys(City);
+			 Thread.sleep(2000);
+			 System.out.println(" City is: " +sl.getCityfield().getText());
+			 utilityclassobject.gettest().log(Status.INFO, " City is: " +sl.getCityfield().getText());
+			 System.out.println(" City text field accepts Alphabets: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, " City text field accepts Alphabets: Pass");
+			 sl.ClearTextField(sl.getCityfield());
+		}
+		@Test(dependsOnMethods = "TC_124VerifyCityFieldAcceptsAlphabets")
+		public void TC_125VerifyCityFieldAcceptsNumbers() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getCityfield().click();
+			 String City = elib.getDataFromExcel("SatelliteLocation", 66, 2);
+			 sl.getCityfield().sendKeys(City);
+			 Thread.sleep(2000);
+			 System.out.println(" City is: " +sl.getCityfield().getText());
+			 utilityclassobject.gettest().log(Status.INFO, " City is: " +sl.getCityfield().getText());
+			 System.out.println(" City text field accepts Numbers: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, " City text field accepts Numbers: Pass");
+			 sl.ClearTextField(sl.getCityfield());
+		}
+			 
+		@Test(dependsOnMethods = "TC_125VerifyCityFieldAcceptsNumbers")
+		public void TC_126VerifyCityFieldAcceptsSpecialCharacters() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getCityfield().click();
+			 String City = elib.getDataFromExcel("SatelliteLocation", 66, 3);
+			 sl.getCityfield().sendKeys(City);
+			 Thread.sleep(2000);
+			 System.out.println(" City is: " +sl.getCityfield().getText());
+			 utilityclassobject.gettest().log(Status.INFO, " City is: " +sl.getCityfield().getText());
+			 System.out.println(" City text field accepts Special Characters: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, " City text field accepts Special Characters: Pass");
+			 sl.ClearTextField(sl.getCityfield());
+		}
 		
-		
-		
+		@Test(dependsOnMethods = "TC_126VerifyCityFieldAcceptsSpecialCharacters")
+		public void TC_127VerifyCityFieldisMandatory() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getCityfield().click();
+			 sl.ClearTextField(sl.getCityfield());
+			 sl.SaveButton();
+			 
+			 wlib.scrollToelement(driver,sl.getCityfield());
+			 Thread.sleep(2000);
+			 if(sl.getCityerrormessage().isDisplayed())
+			 {
+				 System.out.println("City text field is mandatory: Pass");
+				 utilityclassobject.gettest().log(Status.PASS, "City text field is mandatory: Pass");
+			 }
+			 else
+			 {
+				 System.out.println("City text field is not mandatory: Fail");
+				 utilityclassobject.gettest().log(Status.FAIL, "City text field is not mandatory: Fail");
+			 }
+		}
+		@Test(dependsOnMethods = "TC_127VerifyCityFieldisMandatory")
+		public void TC_128VerifyStateFieldIsMandatoryField() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getStatefield().click();
+			 sl.ClearTextField(sl.getStatefield());
+			 sl.SaveButton();
+			 
+			 wlib.scrollToelement(driver,sl.getStatefield());
+			 Thread.sleep(2000);
+			 if(sl.getStateerrormessage().isDisplayed())
+			 {
+				 System.out.println("State text field is mandatory: Pass");
+				 utilityclassobject.gettest().log(Status.PASS, "State text field is mandatory: Pass");
+			 }
+			 else
+			 {
+				 System.out.println("State text field is not mandatory: Fail");
+				 utilityclassobject.gettest().log(Status.FAIL, "State text field is not mandatory: Fail");
+			 }
+		}
+		@Test(dependsOnMethods = "TC_128VerifyStateFieldIsMandatoryField")
+		public void TC_129VerifyStateFieldAcceptsAlphabets() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getStatefield().click();
+			 String State = elib.getDataFromExcel("SatelliteLocation", 68, 1);
+			 sl.getStatefield().sendKeys(State);
+			 Thread.sleep(2000);
+			 System.out.println(" State is: " +sl.getStatefield().getText());
+			 utilityclassobject.gettest().log(Status.INFO, " State is: " +sl.getStatefield().getText());
+			 System.out.println(" State text field accepts Alphabets: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, " State text field accepts Alphabets: Pass");
+			 sl.ClearTextField(sl.getStatefield());
+		}
+		@Test(dependsOnMethods = "TC_129VerifyStateFieldAcceptsAlphabets")
+		public void TC_130VerifyStateFieldShouldNotAcceptsNumbers() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getStatefield().click();
+			 String State = elib.getDataFromExcel("SatelliteLocation", 68, 2);
+			 sl.getStatefield().sendKeys(State);
+			 Thread.sleep(2000);
+			 System.out.println(" State is: " +sl.getStatefield().getText());
+			 utilityclassobject.gettest().log(Status.INFO, " State is: " +sl.getStatefield().getText());
+			//verify that state field should not accept numbers
+			 if(sl.getStatefield().getText().equals(State))
+			 {
+				 System.out.println(" State text field accepts Numbers: Fail");
+				 utilityclassobject.gettest().log(Status.FAIL, " State text field accepts Numbers: Fail");
+			 }
+			 else
+			 {
+				 System.out.println(" State text field should not accept Numbers: Pass");
+				 utilityclassobject.gettest().log(Status.PASS, " State text field should not accept Numbers: Pass");
+			 }
+			 sl.ClearTextField(sl.getStatefield());
+		}
+		@Test(dependsOnMethods = "TC_130VerifyStateFieldAcceptsNumbers")
+		public void TC_131VerifyStateFieldShouldNotAcceptsSpecialCharacters() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getStatefield().click();
+			 String State = elib.getDataFromExcel("SatelliteLocation", 68, 3);
+			 sl.getStatefield().sendKeys(State);
+			 Thread.sleep(2000);
+			 System.out.println(" State is: " +sl.getStatefield().getText());
+			 utilityclassobject.gettest().log(Status.INFO, " State is: " +sl.getStatefield().getText());
+			//verify that state field should not accept special characters
+			 if(sl.getStatefield().getText().equals(State))
+			 {
+				 System.out.println(" State text field accepts Special Characters: Fail");
+				 utilityclassobject.gettest().log(Status.FAIL, " State text field accepts Special Characters: Fail");
+			 }
+			 else
+			 {
+				 System.out.println(" State text field should not accept Special Characters: Pass");
+				 utilityclassobject.gettest().log(Status.PASS, " State text field should not accept Special Characters: Pass");
+			 }
+			 sl.ClearTextField(sl.getStatefield());
+		}
+		@Test(/*dependsOnMethods = "TC_131VerifyStateFieldShouldNotAcceptsSpecialCharacters"*/)
+		public void TC_132VerifyUserIsAbleToSelectValueFromStateDD() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			//comment it
+			//comment it
+			//comment it
+			
+			elib=new ExcelUtility();
+			hp = new HomePage(driver);
+			utilityclassobject.gettest().log(com.aventstack.extentreports.Status.INFO, "Home Page is displayed");
+			System.out.println("Home Page is displayed");
+			Thread.sleep(6000);
+			sl = new SatelliteLocation(driver);
+			sl.getAssets().click();
+			sl.getSatellite_Locations().click();
+			sl.getSatelliteLocationsList().isDisplayed();
+			utilityclassobject.gettest().log(Status.INFO, "Satellite Location Page is displayed");
+			 System.out.println("Satellite Location Page is displayed");
+			  List<WebElement> namelists = sl.getSatelliteLocationNameinlist();
+			   //print each value using for loop
+			  for(int i=0; i<namelists.size(); i++) {
+				  String name = namelists.get(i).getText();
+				  ExcelUtility elib1 = new ExcelUtility();
+					 String satellitename = elib1.getDataFromExcel("SatelliteLocation", 35, 7);
+				  if(name.equals(satellitename)) {
+					  namelists.get(i).click();
+					  utilityclassobject.gettest().log(Status.INFO, "Clicked on Satellite Location Name in the list: " +name);
+					  System.out.println("Clicked on Satellite Location Name in the list: " +name);
+					  break;
+				  }
+				  
+			  }
+			  
+			 
+			 //comment it
+			//comment it//comment it
+			//comment it
+			//verify that user is able to select value from state dropdown
+			  wlib.scrollToelement(driver, sl.getServicesofferedtxt());
+			sl.getStatefield().click();
+			List<WebElement> elements = sl.getStatelist();
+			for(WebElement element : elements) {
+				//click on first element in the list
+				System.out.println("State dropdown values are: " +element.getText());
+				if(element.getText().equals("AL")) {
+					element.click();
+					System.out.println("User is able to select value from state dropdown: Pass");
+					utilityclassobject.gettest().log(Status.PASS, "User is able to select value from state dropdown: Pass");
+				
+					break;
+				}
+				else {
+					System.out.println("User is not able to select value from state dropdown: Fail");
+					utilityclassobject.gettest().log(Status.FAIL, "User is not able to select value from state dropdown: Fail");
+				}
+				
+					
+			}
+			 sl.ClearTextField(sl.getStatefield());
+			 //click on text field and using back space clear the value in the text field
+			 sl.ClearthevalueUsingBackspace(sl.getStatefield());
+			 sl.getServicesofferedtxt().click();
+
+			
+		}
+		@Test(dependsOnMethods = "TC_132VerifyUserIsAbleToSelectValueFromStateDD")
+		public void TC_133VerifyZipCodeFieldAcceptsAlphabets() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getZipcodefield().click();
+			 String Zipcode = elib.getDataFromExcel("SatelliteLocation", 70, 1);
+			 sl.getZipcodefield().sendKeys(Zipcode);
+			 Thread.sleep(2000);
+			 System.out.println(" Zip Code is: " +sl.getZipcodefield().getText());
+			 utilityclassobject.gettest().log(Status.INFO, " Zip Code is: " +sl.getZipcodefield().getText());
+			 System.out.println(" Zip Code text field accepts Alphabets: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, " Zip Code text field accepts Alphabets: Pass");
+			 sl.ClearTextField(sl.getZipcodefield());
+			
+		}
+		@Test(dependsOnMethods = "TC_133VerifyZipCodeFieldAcceptsAlphabets")
+		public void TC_134VerifyZipCodeFieldAcceptsNumbers() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getZipcodefield().click();
+			 String Zipcode = elib.getDataFromExcel("SatelliteLocation", 70, 2);
+			 sl.getZipcodefield().sendKeys(Zipcode);
+			 Thread.sleep(2000);
+			 System.out.println(" Zip Code is: " +sl.getZipcodefield().getText());
+			 utilityclassobject.gettest().log(Status.INFO, " Zip Code is: " +sl.getZipcodefield().getText());
+			 System.out.println(" Zip Code text field accepts Numbers: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, " Zip Code text field accepts Numbers: Pass");
+			 sl.ClearTextField(sl.getZipcodefield());
+			
+		}
+		@Test(dependsOnMethods = "TC_134VerifyZipCodeFieldAcceptsNumbers")
+		public void TC_135VerifyZipCodeFieldAcceptsSpecialCharacters() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getZipcodefield().click();
+			 String Zipcode = elib.getDataFromExcel("SatelliteLocation", 70, 3);
+			 sl.getZipcodefield().sendKeys(Zipcode);
+			 Thread.sleep(2000);
+			 System.out.println(" Zip Code is: " +sl.getZipcodefield().getText());
+			 utilityclassobject.gettest().log(Status.INFO, " Zip Code is: " +sl.getZipcodefield().getText());
+			 System.out.println(" Zip Code text field accepts Special Characters: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, " Zip Code text field accepts Special Characters: Pass");
+			 sl.ClearTextField(sl.getZipcodefield());
+			
+		}
+		@Test(dependsOnMethods = "TC_135VerifyZipCodeFieldAcceptsSpecialCharacters")
+		public void TC_136VerifyZipCodeFieldisMandatory() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getZipcodefield().click();
+			 sl.ClearTextField(sl.getZipcodefield());
+			 sl.SaveButton();
+			 
+			 wlib.scrollToelement(driver,sl.getZipcodefield());
+			 Thread.sleep(2000);
+			 if(sl.getZipcodeerrormessage().isDisplayed())
+			 {
+				 System.out.println("Zip Code text field is mandatory: Pass");
+				 utilityclassobject.gettest().log(Status.PASS, "Zip Code text field is mandatory: Pass");
+			 }
+			 else
+			 {
+				 System.out.println("Zip Code text field is not mandatory: Fail");
+				 utilityclassobject.gettest().log(Status.FAIL, "Zip Code text field is not mandatory: Fail");
+			 }
+		}
+			 
 }	
