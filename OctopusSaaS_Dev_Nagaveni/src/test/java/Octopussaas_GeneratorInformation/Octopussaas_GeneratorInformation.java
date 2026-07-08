@@ -59,6 +59,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		Thread.sleep(20000);
 		WebElement generatorInformation = driver.findElement(By.xpath("//div[@class='h-full p-5']"));
 		Assert.assertTrue(generatorInformation.isDisplayed(), "Generator Information page is displayed");
+		System.out.println("The user is able to access the generator information page");
 		utilityclassobject.gettest().log(Status.INFO, "The user is able to access the generator information page");
 	}
 	
@@ -68,6 +69,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		WebElement generatorname = driver.findElement(By.xpath("//h6[contains (text(), '"+generatorInput+"')]"));
 		Assert.assertTrue(generatorname.isDisplayed(), "Generator name  is displayed");
 		System.out.println(generatorname);
+		System.out.println("The Generator name is present on the top left of the page");
 		utilityclassobject.gettest().log(Status.INFO, "The Generator name is present on the top left of the page");
 	}
 	
@@ -110,11 +112,12 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		wait2.until(ExpectedConditions.refreshed(
 		        ExpectedConditions.elementToBeClickable(generatorInfo)));
 
-		driver.findElement(generatorInfo).click();
+		driver.findElement(generatorInfo).click();*
 		
 		WebElement generatorserviceaddress = driver.findElement(By.xpath("//h6[@title='Service Address']"));
 		Assert.assertTrue(generatorserviceaddress.isDisplayed(), "Generator name  is displayed");
 		System.out.println(generatorserviceaddress);
+		System.out.println("The service address show up blank below the Octo number :PASS");
 		utilityclassobject.gettest().log(Status.PASS, "The service address show up blank below the Octo number");
 	}
 	
@@ -131,6 +134,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		act1.moveToElement(address).perform();
 		Assert.assertTrue(address.isDisplayed(), "Generator name  is displayed");
 		System.out.println(address);
+		System.out.println("The added service address showup in the service address place :PASS");
 		utilityclassobject.gettest().log(Status.PASS, "The added service address showup in the service address place");
 
 	}
@@ -141,6 +145,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		WebElement creationDate = driver.findElement(By.xpath("//h6[contains (text(),'Created Date: ')]"));
 		Assert.assertTrue(creationDate.isDisplayed(), "Creation Date  is displayed");
 		System.out.println(creationDate);
+		System.out.println(" The Creation Date is present on the top left of the page:PASS");
 		utilityclassobject.gettest().log(Status.PASS, "The Creation Date is present on the top left of the page");
 	}
 	
@@ -220,7 +225,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	            e.printStackTrace();
 	        }
 	    }
-
+    		System.out.println("The Creation Date is present on the top left of the page ");
 	    utilityclassobject.gettest().log(Status.INFO,"User is able to add all available tags");
 	}
 	
@@ -228,6 +233,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	public void TC_008GeneratorInformation_Removetags() throws InterruptedException
 	{
 		gp.RemoveAddedtags();
+		System.out.println("User is able to remove the added tags : PASS");
 	    utilityclassobject.gettest().log(Status.PASS,"User is able to remove the added tags");
 		
 	}
@@ -236,7 +242,6 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	public void TC_009GeneratorInformation_addmoreTag()
 	{
 		 gp = new GeneratorInformation1(driver);
-
 		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 		    String[] tags = {
@@ -385,6 +390,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		Assert.assertTrue(generatorname.isDisplayed(), "Generator name field  is displayed");
 		String name = generatorname.getText();
 		System.out.println(name);
+		System.out.println("The name added while adding generator is present in the field :PASS");
 	    utilityclassobject.gettest().log(Status.PASS,"The name added while adding generator is present in the field");
 	}
 	
@@ -401,6 +407,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		editedgeneratorInput = elib.getDataFromExcel("GeneratorInformation", 1, 1)+sixDigit1;
 		gp.getGeneratornameField().sendKeys(editedgeneratorInput);
 		System.out.println(editedgeneratorInput);
+		System.out.println("The user is able to edit the name of the generator :PASS");
 	    utilityclassobject.gettest().log(Status.PASS,"The user is able to edit the name of the generator");
 	}
 	
@@ -412,6 +419,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		gp.getGeneratornameField().sendKeys(Keys.DELETE);
 		String input = elib.getDataFromExcel("GeneratorInformation", 4, 1);
 		gp.getGeneratornameField().sendKeys(input);
+		System.out.println("Generator name textfield will accept numbers : PASS" );
 	    utilityclassobject.gettest().log(Status.PASS,"Generator name textfield will accept numbers");
 
 	}
@@ -424,6 +432,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		gp.getGeneratornameField().sendKeys(Keys.DELETE);
 		String input = elib.getDataFromExcel("GeneratorInformation", 4, 2);
 		gp.getGeneratornameField().sendKeys(input);
+		System.out.println("Generator name textfield will accept specialcharacters : PASS");
 	    utilityclassobject.gettest().log(Status.PASS,"Generator name textfield will accept specialcharacters");
 	}
 	
@@ -434,6 +443,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		gp.getGeneratornameField().sendKeys(Keys.CONTROL + "a");
 		gp.getGeneratornameField().sendKeys(Keys.DELETE);
 		gp.getGeneratornameField().sendKeys(editedgeneratorInput);
+		System.out.println("Generator name textfield will autosave the data : PASS");
 	    utilityclassobject.gettest().log(Status.PASS,"Generator name textfield will autosave the data");
 	}
 	
@@ -446,6 +456,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		Thread.sleep(2000);
 		String errormsg = gp.getGeneratornameErmsg().getText();
 		System.out.println(errormsg);
+		System.out.println("Generator name textfield without input error message is displayed : PASS");
 	    utilityclassobject.gettest().log(Status.PASS,"Generator name textfield without input error message is displayed");
 
 		gp.getGeneratornameField().click();
@@ -461,6 +472,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		Assert.assertTrue(octonumber.isDisplayed(), "octonumber is displayed");
 		String generatedOctonumber = octonumber.getAttribute("value").trim();
 		System.out.println(generatedOctonumber);
+		System.out.println("Octo number is auto generated and present in the field : PASS");
 		utilityclassobject.gettest().log(Status.PASS, "Octo number is auto generated and present in the field");		
 	}
 	
@@ -468,6 +480,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	public void TC_018GenratorInformation_OctoNumberwithEdit()
 	{
 		gp.OctonumberwithEdit();
+		System.out.println("The user is not be able to edit the OCTO Number as it is auto- generated : PASS");
 		utilityclassobject.gettest().log(Status.PASS, "The user is not be able to edit the OCTO Number as it is auto- generated");		
 	}
 	
@@ -478,6 +491,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		Assert.assertTrue(InternalaccountNumber.isDisplayed(), "octonumber is displayed");
 		String generatedInternalnumber = InternalaccountNumber.getAttribute("value").trim();
 		System.out.println(generatedInternalnumber);
+		System.out.println("Internal account number is present in the field : PASS");
 		utilityclassobject.gettest().log(Status.PASS, "Internal account number is present in the field");		
 	}
 	
@@ -489,6 +503,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		gp.getInternalaccountNumber().sendKeys(Keys.DELETE);
 		String input = elib.getDataFromExcel("GeneratorInformation", 7, 1);
 		gp.getInternalaccountNumber().sendKeys(input);
+		System.out.println("Internal account number textfield will accept alphabets : PASS");
 	    utilityclassobject.gettest().log(Status.PASS,"Internal account number textfield will accept alphabets");
 	}
 	
@@ -500,6 +515,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		gp.getInternalaccountNumber().sendKeys(Keys.DELETE);
 		String input = elib.getDataFromExcel("GeneratorInformation", 7, 2);
 		gp.getInternalaccountNumber().sendKeys(input);
+		System.out.println("Internal account number textfield will accept numbers : PASS");
 	    utilityclassobject.gettest().log(Status.PASS,"Internal account number textfield will accept numbers");
 	}
 	
@@ -511,6 +527,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		gp.getInternalaccountNumber().sendKeys(Keys.DELETE);
 		String input = elib.getDataFromExcel("GeneratorInformation", 7, 3);
 		gp.getInternalaccountNumber().sendKeys(input);
+		System.out.println("Internal account number textfield will accept specialcharacters : PASS");
 	    utilityclassobject.gettest().log(Status.PASS,"Internal account number textfield will accept specialcharacters");
 	}
 	
@@ -521,6 +538,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		gp.getInternalaccountNumber().sendKeys(Keys.CONTROL + "a");
 		gp.getInternalaccountNumber().sendKeys(Keys.DELETE);
 		gp.getInternalaccountNumber().sendKeys("1235698");
+		System.out.println("Internal account number textfield will accept Input and autosave the works : PASS");
 	    utilityclassobject.gettest().log(Status.PASS,"Internal account number textfield will accept Input and autosave the works");
 	}
 	
@@ -531,6 +549,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		Assert.assertTrue(InternalaccountNumber.isDisplayed(), "Internal account number is displayed");
 		String generatedInternalnumber = InternalaccountNumber.getText();
 		System.out.println(generatedInternalnumber);
+		System.out.println("Internal account number is present below the octonumber of the generator : PASS");
 		utilityclassobject.gettest().log(Status.INFO, "Internal account number is present below the octonumber of the generator");		
 	}
 	
@@ -542,6 +561,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		gp.getGeneratorpermitNumber().sendKeys(Keys.DELETE);
 		String input = elib.getDataFromExcel("GeneratorInformation", 10, 1);
 		gp.getGeneratorpermitNumber().sendKeys(input);
+		System.out.println("Generator permit number textfield will accept alphabets : PASS");
 	    utilityclassobject.gettest().log(Status.PASS,"Generator permit number textfield will accept alphabets");
 	}
 	
@@ -553,6 +573,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		gp.getGeneratorpermitNumber().sendKeys(Keys.DELETE);
 		String input = elib.getDataFromExcel("GeneratorInformation", 10, 2);
 		gp.getGeneratorpermitNumber().sendKeys(input);
+		System.out.println("Generator permit number textfield will accept numbers : PASS");
 	    utilityclassobject.gettest().log(Status.PASS,"Generator permit number textfield will accept numbers");
 	}
 	
@@ -564,6 +585,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		gp.getGeneratorpermitNumber().sendKeys(Keys.DELETE);
 		String input = elib.getDataFromExcel("GeneratorInformation", 10, 3);
 		gp.getGeneratorpermitNumber().sendKeys(input);
+		System.out.println("Generator permit number textfield will accept specialcharacters : PASS");
 	    utilityclassobject.gettest().log(Status.PASS,"Generator permit number textfield will accept specialcharacters");
 	}
 	
@@ -575,6 +597,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		gp.getGeneratorpermitNumber().sendKeys(Keys.DELETE);
 		String input = elib.getDataFromExcel("GeneratorInformation", 10, 2);
 		gp.getGeneratorpermitNumber().sendKeys(input);
+		System.out.println("Generator permit number textfield will accept input and autosave : PASS");
 	    utilityclassobject.gettest().log(Status.PASS,"Generator permit number textfield will accept input and autosave");
 	}
 	
@@ -583,6 +606,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	public void TC_029GeneratorInformation_GeneratorWebsitewithAlphabets() throws EncryptedDocumentException, IOException
 	{
 		gp.getGeneratorwebsite().click();
+	
 		gp.getGeneratorwebsite().sendKeys(Keys.CONTROL + "a");
 		gp.getGeneratorwebsite().sendKeys(Keys.DELETE);
 		String input = elib.getDataFromExcel("GeneratorInformation", 10, 1);
@@ -632,7 +656,8 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		gp.getGeneratorwebsite().click();
 		gp.getGeneratorwebsite().sendKeys(Keys.CONTROL + "a");
 		gp.getGeneratorwebsite().sendKeys(Keys.DELETE);
-		gp.getGeneratorwebsite().sendKeys("https://www.facebook.com");
+		gp.ge
+		tGeneratorwebsite().sendKeys("https://www.facebook.com");
 	    utilityclassobject.gettest().log(Status.PASS,"The field accepts the URL in the valid format");		   
 	}
 	
@@ -712,7 +737,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		Assert.assertTrue(servicelocation.isDisplayed(), "Servicelocation is displayed");
 		WebElement location = driver.findElement(By.xpath("//span[contains (text(),'(Henry) Premier Med Waste Solution display')]"));
 		Assert.assertTrue(location.isDisplayed(), "Loaction is displayed");
-	    utilityclassobject.gettest().log(Status.PASS,"The main location of the generator is present in the field");
+	    util1tyclassobject.gettest().log(Status.PASS,"The main location of the generator is present in the field");
 
 	}
 	
@@ -797,6 +822,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		gp.getServiceLocation().click();
 		Thread.sleep(2000);
 		gp.getHenryLocation().click();
+		System.out.println("The autosaves the data");
 		utilityclassobject.gettest().log(Status.INFO, "The autosaves the data");	
 	}*/
 	
@@ -805,7 +831,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	@Test(priority = 1)
 	public void TC_049GeneratorInformation_ParentaccountwithInput() throws InterruptedException
 	{
-		gp = new GeneratorInformation1(driver);
+		/*gp = new GeneratorInformation1(driver);
 		WebElement generatormanagment = driver.findElement(By.xpath("//h6[contains (text(),'Generator Management')]"));
 		generatormanagment.click();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -843,9 +869,10 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		        ExpectedConditions.elementToBeClickable(generatorInfo)));
 
 		driver.findElement(generatorInfo).click();
-		Thread.sleep(20000);
-		
+		Thread.sleep(20000);*/
+			
 		//gp.ParentaccountwithInput();
+		System.out.println("The user is able to enter manual input");
 		utilityclassobject.gettest().log(Status.INFO, "The user is able to enter manual input");	
 
 	}
@@ -876,29 +903,33 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 
 		        Assert.assertTrue(typeElement.isDisplayed(),
 		                type + " is displayed");
+		        System.out.println("Already existing generators are present in the dropdown");
 				utilityclassobject.gettest().log(Status.INFO, "Already existing generators are present in the dropdown");
 
 		    }
 		    
 		   
 	}
+		//needto change the dependency
 	
 	    @Test(dependsOnMethods = "TC_050GeneratorInformation_ParentaccontwithGenerators")
 	    public void TC_051GeneratorInformation_ParentaccountwithGenerator()
 	    {
-	    	   gp.ParentaccountGenerator();
+	    	   gp.ParentaccountG													enerator();
+	    	   System.out.println("The user is able to select a generator as a parent account");
 	    	   utilityclassobject.gettest().log(Status.INFO, "The user is able to select a generator as a parent account");
-	    }*/
+	    }
 	
 	
 		//need to change the dependency
 	
-	    @Test(dependsOnMethods = "TC_049GeneratorInformation_ParentaccountwithInput"/*"TC_051GeneratorInformation_ParentaccountwithGenerator"*/)
+	    @Test(dependsOnMethods = "TC_051GeneratorInformation_ParentaccountwithGenerator")
 	    public void TC_052GeneratorInformation_ParentaccountwithAutosave() throws InterruptedException
 	    {
 	    		gp.Unassignbutton();
 	    		gp.getParentAccount().click();
 	    		gp.ParentaccountGenerator();
+	    		System.out.println("The autosave saves the data");
 		    	utilityclassobject.gettest().log(Status.INFO, "The autosave saves the data");	
 	    }
 	    
@@ -908,6 +939,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    	  gp.Unassignbutton();
 	    	  gp.getParentAccount().click();
 	    	  gp.ParentAccountwithCostalgroup();
+	    	  System.out.println("A pop up appeared- asking reason to unassign");
 		  utilityclassobject.gettest().log(Status.INFO, "A pop up appeared- asking reason to unassign");	
    	 
 	    }
@@ -916,6 +948,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    public void TC_054GeneratorInformation_ParentaccountwithUnassignButton() throws InterruptedException
 	    {
 	    		gp.Unassignbutton();
+	    		System.out.println("The parent account got unassigned successfully.");
 	  		utilityclassobject.gettest().log(Status.INFO, "The parent account got unassigned successfully.");	
 
 	    }
@@ -924,6 +957,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    public void TC_055GeneratorInformation_ParentaccountwithKeeptheAssigned()
 	    {
 	    	   gp.KeeptheAssigned();
+	    	   System.out.println("The parent account will not get unassigned");
 		   utilityclassobject.gettest().log(Status.INFO, "The parent account will not get unassigned");	
 	    }
 	    
@@ -937,6 +971,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    		Thread.sleep(200);
 	    		WebElement cancel = driver.findElement(By.xpath("(//button[contains (text(),'✕')])[2]"));
 	    		cancel.click();
+	    		System.out.println("The system indicates to fill the field as it is mandatory");
 	 		utilityclassobject.gettest().log(Status.INFO, "The system indicates to fill the field as it is mandatory");	
 
 	    }
@@ -952,6 +987,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    		Thread.sleep(200);
 	    		gp.getParentAccount().click();
 	    		gp.ParentaccountGenerator();
+	    		System.out.println("The user is able to assign another generator as its parent account");
 		 	utilityclassobject.gettest().log(Status.INFO, "The user is able to assign another generator as its parent account");	
 
 	    }
@@ -965,6 +1001,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 			gp.getGeneratormainphone().sendKeys(Keys.DELETE);
 			String input = elib.getDataFromExcel("GeneratorInformation", 16, 1);
 			gp.getGeneratormainphone().sendKeys(input);
+			System.out.println("Generator main phone textfield will accept Input : PASS");
 		    utilityclassobject.gettest().log(Status.PASS,"Generator main phone textfield will accept Input");
 	    }
 	    
@@ -980,9 +1017,11 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 
 			// Verify that alphabets are not accepted
 			if (actualValue.matches(".*[a-zA-Z].*")) {
+				System.out.println("Generator Main Phone text field accepted alphabets. :PASS");
 			    utilityclassobject.gettest().log(Status.FAIL,
 			            "Generator Main Phone text field accepted alphabets.");
 			} else {
+				System.out.println("Generator Main Phone text field does not accept alphabets. : PASS");
 			    utilityclassobject.gettest().log(Status.PASS,
 			            "Generator Main Phone text field does not accept alphabets.");
 			}
@@ -997,6 +1036,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 			gp.getGeneratormainphone().sendKeys(Keys.DELETE);
 			String input = elib.getDataFromExcel("GeneratorInformation", 16, 3);
 			gp.getGeneratormainphone().sendKeys(input);
+			System.out.println("Generator main phone textfield will accept numbers :PASS");
 		    utilityclassobject.gettest().log(Status.PASS,"Generator main phone textfield will accept numbers");
 	    }
 	    
@@ -1012,11 +1052,13 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 
 			// Verify that alphabets are not accepted
 			if (actualValue.matches(".*[#$^&].*")) {
+				System.out.println("Generator Main Phone text field accepted Special characters. : PASS");
 			    utilityclassobject.gettest().log(Status.FAIL,
-			            "Generator Main Phone text field accepted alphabets.");
+			            "Generator Main Phone text field accepted Special characters.");
 			} else {
+				System.out.println("Generator Main Phone text field does not accept Special characters : PASS");
 			    utilityclassobject.gettest().log(Status.PASS,
-			            "Generator Main Phone text field does not accept alphabets.");
+			            "Generator Main Phone text field does not accept Special characters");
 			}
 			System.out.println("Generator main phone field will not accept specialcharacters");
 	    }
@@ -1123,10 +1165,10 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 			// Verify that alphabets are not accepted
 			if (actualValue.matches(".*[#$^&].*")) {
 			    utilityclassobject.gettest().log(Status.FAIL,
-			            "Generator Main Ext text field accepted alphabets.");
+			            "Generator Main Ext text field accepted specialcharacters.");
 			} else {
 			    utilityclassobject.gettest().log(Status.PASS,
-			            "Generator Main Ext text field does not accept alphabets.");
+			            "Generator Main Ext text field does not accept specialcharacters.");
 			}
 			System.out.println("Generator main Ext field will not accept specialcharacters");
 	    }
@@ -1163,6 +1205,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 			gp.getExtTextfield().sendKeys(input);
 			utilityclassobject.gettest().log(Status.PASS,"Generator main Ext textfield will accept short input");
 		}
+	    
 	    
 	    @Test(dependsOnMethods = "TC_070GeneratorInformation_ExtwithshortInput")
 	    public void TC_071GeneratorInformation_ExtwithoutInput()
@@ -1242,11 +1285,53 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 			gp.getGeneratorEmail().sendKeys(input);
 			utilityclassobject.gettest().log(Status.PASS,"Generator Email textfield accepts valid input and autosaves the data");
 
-	    }
+	    }*/
 	    
-	    @Test(dependsOnMethods = "TC_077GeneratorInformation_GeneratorEmailwithAutosave")
-	    public void TC_078GeneratorInformation_withDefaultgeneratorStatus()
+	    //need to change the dependency
+	    @Test(priority = 1)
+	    public void TC_078GeneratorInformation_withDefaultgeneratorStatus() throws InterruptedException
 	    {
+	    		gp = new GeneratorInformation1(driver);
+			WebElement generatormanagment = driver.findElement(By.xpath("//h6[contains (text(),'Generator Management')]"));
+			generatormanagment.click();
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			
+			WebElement generatorlocation = driver.findElement(By.xpath("//h6[contains (text(),'Generator Locations')]"));
+			generatorlocation.click();
+			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+			
+
+			WebElement searchoption = wait.until(
+			        ExpectedConditions.elementToBeClickable(
+			                By.xpath("//input[@placeholder='Search by Name, Phone Number, Email, or Address']")));
+
+			searchoption.click();
+			searchoption.sendKeys("Max_298310");
+			Thread.sleep(20000);
+
+			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+			WebElement generator = wait2.until(
+			    ExpectedConditions.refreshed(
+			        ExpectedConditions.elementToBeClickable(
+			            By.xpath("//div[contains(text(),'OCTO Number')]/following::div[contains(text(),'G-108-3316')]")
+			        )
+			    )
+			);
+
+			generator.click();
+			Thread.sleep(2000);
+			By generatorInfo = By.xpath("//a[contains(text(),'Generator Information')]");
+
+			WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+			wait3.until(ExpectedConditions.refreshed(
+			        ExpectedConditions.elementToBeClickable(generatorInfo)));
+
+			driver.findElement(generatorInfo).click();
+			Thread.sleep(20000);
+			
+
 	    		WebElement generatorstatus = driver.findElement(By.xpath("//button[@id='generator-status']"));
 			Assert.assertTrue(generatorstatus.isDisplayed(), "Generator status is displayed");
 			WebElement status = driver.findElement(By.xpath("(//span[contains (text(),'Prospect')])[2]"));
@@ -1254,6 +1339,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		    utilityclassobject.gettest().log(Status.PASS,"The Generator status is present and it is having Prospect as default");
 	    }
 	    
+	    //need to change the dependency
 	    @Test(dependsOnMethods = "TC_078GeneratorInformation_withDefaultgeneratorStatus")
 	    public void TC_079GeneratorInformation_GeneratorstatuswithTooltip()
 	    {
@@ -1268,22 +1354,28 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    @Test(dependsOnMethods = "TC_079GeneratorInformation_GeneratorstatuswithTooltip")
 	    public void TC_080GeneratorInformation_Generatorwithchangewithnote() throws InterruptedException
 	    {
-	    	  gp.getGeneratorStatus().click();
-	    	  gp.getDeadfielStatus().click();
-	    	  gp.Updatestatus();
+		    	gp.getGeneratorStatus().click();
+		    	gp.getDeadfielStatus().click();
+		    	gp.Updatestatus();
+	
+		    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		    	wait.until(ExpectedConditions.invisibilityOfElementLocated(
+		    	        By.xpath("//div[contains(@class,'fixed') and contains(@class,'inset-0')]")));
+	
+		    	wait.until(ExpectedConditions.elementToBeClickable(gp.getGeneratorStatus())).click();
+	
+		    	gp.getProspectStatus().click();
+		    	gp.Updatestatus();
+	    	  System.out.println("Prospect status got updated");
 	    	  Thread.sleep(200);
-	    	  gp.getGeneratorStatus().click();
-	    	  gp.getProspectStatus().click();
-	    	  gp.Updatestatus();
-	    	  Thread.sleep(200);
-	    	  gp.getGeneratorStatus().click();
+	    	  /*gp.getGeneratorStatus().click();
 	    	  gp.getAdministrativeStatus().click();
 	    	  gp.Updatestatus();
 	    	  Thread.sleep(200);
 	    	  gp.getGeneratorStatus().click();
 	    	  gp.getProspectStatus().click();
 	    	  gp.Updatestatus();
-	    	  Thread.sleep(200);
+	    	  Thread.sleep(200);*/
 	    	  utilityclassobject.gettest().log(Status.PASS,"The user is able to change the status of the generator accordingly");
 
 	    }
@@ -1307,13 +1399,225 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    	  gp.getDeadfielStatus().click();
 	    	  gp.StatuswithoutNote();
 	    	  utilityclassobject.gettest().log(Status.PASS,"The system indicates to fill the field as it is mandatory");
-
-	    	  
+   	  
 	    }
 	    
+	    @Test(dependsOnMethods = "TC_082GeneratorInformation_StatuswithoutNote")
+	    public void TC_083GeneratorInformation_Changeinstatus() throws InterruptedException
+	    {
+	    	  gp.getGeneratorStatus().click();
+	    	  gp.getDeadfielStatus().click();
+	    	  gp.Updatestatus();
+	    	  System.out.println("Dead File status got updated");
+	    	  Thread.sleep(200);
+	    	 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		    	wait.until(ExpectedConditions.invisibilityOfElementLocated(
+		    	        By.xpath("//div[contains(@class,'fixed') and contains(@class,'inset-0')]")));
+	
+		    	wait.until(ExpectedConditions.elementToBeClickable(gp.getGeneratorStatus())).click();
+	    	  gp.getProspectStatus().click();
+	    	  gp.Updatestatus();
+	    	  System.out.println("Prospect status got updated");
+	    	  Thread.sleep(200);
+	    	  /*gp.getGeneratorStatus().click();
+	    	  gp.getAdministrativeStatus().click();
+	    	  gp.Updatestatus();
+	    	  System.out.println("Administrative status got updated");
+	    	  Thread.sleep(200);
+	    	  gp.getGeneratorStatus().click();
+	    	  gp.getProspectStatus().click();
+	    	  gp.Updatestatus();
+	    	  System.out.println("Prospect status got updated");
+	    	  Thread.sleep(200);
+	    	  System.out.println("The user is able to change the status of the generator accordingly :PASS");*/
+	    	  utilityclassobject.gettest().log(Status.PASS,"The user is able to change the status of the generator accordingly");
+
+	    }
 	    
+	    @Test(dependsOnMethods = "TC_083GeneratorInformation_Changeinstatus")
+	    public void TC_084GeneratorInformation_IndustrytypewithOptions()
+	    {
+	    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			 gp.getIndustryType().click();
+			   WebElement dropdown = wait.until(
+			            ExpectedConditions.visibilityOfElementLocated(
+			                    By.xpath("//ul[@role='listbox']")));
+
+			    Assert.assertTrue(dropdown.isDisplayed(),
+			            "vehicle type dropdown is displayed");
+
+			    String[] types = {
+			            "Urgent Care Clinics",
+			            "Dental Clinics",
+			            "Surgery Centers",
+			            "Pharmacies & Biotech",
+			            "Veterinary Clinics",
+			            "Skilled Nursing",
+			            "Fire, Police & EMS",
+			            "Doctor Offices",
+			            "Hospitals",
+			            "Medical Spas",
+			            "Schools",
+			            "Manufacturing",
+			            "Retail and Wholesale Trade",
+			            "Construction and Engineering",
+			            "Hospitality and Recreation",
+			            "Professional and Technical Services",
+			            "Laboratory",
+			            "Dialysis",
+			            "Behavioral Health",
+			            "Long Term Acute Care",
+			            "Tattoo Parlor",
+			            "Non-Medical Professional"
+			            
+			    };
+
+			    Actions actions = new Actions(driver);
+
+			    for (String type : types) {
+
+			        WebElement typeElement = wait.until(
+			                ExpectedConditions.presenceOfElementLocated(
+			                        By.xpath("//li[@role='option']//span[contains (text(),'"+type+"')]")));
+
+			        actions.moveToElement(typeElement).perform();
+
+			        Assert.assertTrue(typeElement.isDisplayed(),
+			                type + " is displayed");
+			        System.out.println("Industry type options are present in the dropdwon :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Industry type options are present in the dropdwon");
+			    }
+	    }
+	    
+	    @Test(dependsOnMethods = "TC_084GeneratorInformation_IndustrytypewithOptions")
+	    public void TC_085VerifySelecttheIndustrytype() throws InterruptedException
+	    {
+	    	     gp.getIndustryType().click();
+	    	     gp.getIndustryType().click();
+	    	     Thread.sleep(200);
+	    	     gp.IndustrytypeOption();
+	    	     System.out.println("user is able to select a industry type");
+			 utilityclassobject.gettest().log(Status.PASS, "user is able to select a industry type from the dropdown");	    	     
+	    }
+	    
+	    @Test(dependsOnMethods = "TC_085VerifySelecttheIndustrytype")
+	    public void TC_086VerifySelectmorethanIndustrytype() throws InterruptedException
+	    {
+	    	     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			 gp.getIndustryType().click();
+			 gp.getIndustryType().click();
+			 gp.getNonmedicalType().click();
+			 Thread.sleep(2000);
+			 gp.getIndustryType().click();
+			 gp.getIndustryType().click();
+			 gp.getIndustryType().click();
+			 gp.getUregentCareType().click();			    
+			  List<WebElement> selectedOptions = driver.findElements(
+			        By.xpath("//li[@aria-selected='true']")
+			    );
+
+			    if (selectedOptions.size() > 1) {
+			        System.out.println("FAILED : Field accepts multiple options");
+			    } else {
+			        System.out.println("PASSED : Field allows only single selection");
+			    }
+			    System.out.println("The user is not be able to select multiple industrytypes");
+				utilityclassobject.gettest().log(Status.INFO, "The user is not be able to select multiple industrytypes");
+	    }
 	   
+	    @Test(dependsOnMethods = "TC_086VerifySelectmorethanIndustrytype")
+	    public void TC_088VerifyContractedcheckboxwithClick()
+	    {
+	    		gp.ContractedCheckbox();
+	    		System.out.println("contracted checkbox is not clickable as expected");
+			utilityclassobject.gettest().log(Status.INFO, "contracted checkbox is not clickable as expected");
+	    }
 	    
+	    @Test(dependsOnMethods = "TC_088VerifyContractedcheckboxwithClick")
+	    public void TC_089VerifycontractedcheckboxwithClick_withaddingInformation() throws InterruptedException
+	    {
+	    	     gp.getStreet().click();
+	    	     gp.getStreet().sendKeys(Keys.CONTROL + "a");
+	    	     gp.getStreet().sendKeys(Keys.DELETE);
+	    	     //gp.getStreet().sendKeys("1237 2");
+	    	     gp.getStreet().sendKeys("6598 3");
+	    	     Thread.sleep(2000);
+	    	     WebElement servicestreet = driver.findElement(By.xpath("(//div[contains (text(),'6598 Three Locks Road')])[1]"));
+	    		 //WebElement servicestreet = driver.findElement(By.xpath("//div[contains(text(),'1237 Two Ridge Road, Wintersville, Ohio 43953, United States')]"));
+	    	     Actions act = new Actions(driver);
+	    	     act.moveToElement(servicestreet).click().perform();
+	    	     System.out.println("Street address enterd into the field");
+	    	     gp.getServiceEmail().click();
+	    	     gp.getServiceEmail().sendKeys(Keys.CONTROL + "a");
+	    	     gp.getServiceEmail().sendKeys(Keys.DELETE);
+	    	     gp.getServiceEmail().sendKeys("test@2342test.com");
+	    	     System.out.println("Email address enterd into the field");
+	    	     gp.getServicePhone().click();
+	    	     gp.getServicePhone().sendKeys(Keys.CONTROL + "a");
+	    	     gp.getServicePhone().sendKeys(Keys.DELETE);
+	    	     gp.getServicePhone().sendKeys("4859849849");
+	    	     System.out.println("Phone number enterd into the field");
+	    	     Thread.sleep(2000);
+	    	     gp.getCopyButton().click();
+	    	     Thread.sleep(200);
+	    	     gp.ContractedCheckbox();
+	    	     gp.getContractedCheckbox().click();
+	    	     Thread.sleep(200);
+	    	     WebElement popup = driver.findElement(By.xpath("//div[@class='modal-box']"));
+	    	     Assert.assertTrue(popup.isDisplayed());
+	    	     System.out.println("Popup is displayed");
+	    	     Thread.sleep(200);
+	    	     WebElement button = driver.findElement(By.xpath("(//button[contains (text(),'✕')])[2]"));
+	    	     button.click();
+	    	     System.out.println("user is able click on the contracted checkbox");
+	    	     Thread.sleep(2000);
+	 		 utilityclassobject.gettest().log(Status.INFO, "contracted checkbox is enabled and user is a able to check it");
+
+	    }
+	    
+	    @Test(dependsOnMethods = "TC_089VerifycontractedcheckboxwithClick_withaddingInformation")
+	    public void TC_090VerifycheckboxwithoutGeneratorBilling() throws InterruptedException
+	    {
+		     gp.getStreet().click();
+	   	     gp.getStreet().sendKeys(Keys.CONTROL + "a");
+	   	     gp.getStreet().sendKeys(Keys.DELETE);
+	   	     //gp.getStreet().sendKeys("1237 2");
+	   	     gp.getStreet().sendKeys("6598 3");
+	   	     Thread.sleep(2000);
+	   	     WebElement servicestreet = driver.findElement(By.xpath("(//div[contains (text(),'6598 Three Locks Road')])[1]"));
+	   		 //WebElement servicestreet = driver.findElement(By.xpath("//div[contains(text(),'1237 Two Ridge Road, Wintersville, Ohio 43953, United States')]"));
+	   	     Actions act = new Actions(driver);
+	   	     act.moveToElement(servicestreet).click().perform();
+	   	     System.out.println("Street address enterd into the field");
+	   	     gp.getServiceEmail().click();
+	   	     gp.getServiceEmail().sendKeys(Keys.CONTROL + "a");
+	   	     gp.getServiceEmail().sendKeys(Keys.DELETE);
+	   	     gp.getServiceEmail().sendKeys("test@2342test.com");
+	   	     System.out.println("Email address enterd into the field");
+	   	     gp.getServicePhone().click();
+	   	     gp.getServicePhone().sendKeys(Keys.CONTROL + "a");
+	   	     gp.getServicePhone().sendKeys(Keys.DELETE);
+	   	     gp.getServicePhone().sendKeys("4859849849");
+	   	     System.out.println("Phone number enterd into the field");
+	   	     Thread.sleep(200);
+	   	     gp.getBillingaddressStreet().click();
+	   	     gp.getBillingaddressStreet().sendKeys(Keys.CONTROL + "a");
+	   	     gp.getBillingaddressStreet().sendKeys(Keys.DELETE);
+	   	     Thread.sleep(200);
+	   	     gp.getBillingaddressEmail().click();
+	   	     gp.getBillingaddressEmail().sendKeys(Keys.CONTROL + "a");
+	   	     gp.getBillingaddressEmail().sendKeys(Keys.DELETE); 
+	   	     Thread.sleep(200);
+	   	     gp.getBillinaddressPhone().click();
+	   	     gp.getBillinaddressPhone().sendKeys(Keys.CONTROL + "a");
+	   	     gp.getBillinaddressPhone().sendKeys(Keys.DELETE); 
+	   	     Thread.sleep(200);
+	   	     gp.ContractedCheckbox();
+	   	     gp.getContractedCheckbox().click();
+	   	     System.out.println("user is not able click on the contracted checkbox");
+ 	         Thread.sleep(2000);
+		     utilityclassobject.gettest().log(Status.INFO, "The user is not be able to check the checkbox"); 
+	    }
 	    
 	    
 	    

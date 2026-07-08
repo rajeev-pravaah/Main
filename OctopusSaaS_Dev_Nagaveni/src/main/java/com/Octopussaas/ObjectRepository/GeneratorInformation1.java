@@ -133,11 +133,74 @@ public class GeneratorInformation1 {
 	private WebElement keepCureentstatus;
 	@FindBy (xpath = "(//button[contains (text(),'✕')])[2]")
 	private WebElement statusCancelbutton;
+	@FindBy (xpath = "//input[@id='industry-type']")
+	private WebElement industryType;
+	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'Urgent Care Clinics')]")
+	private WebElement uregentCareType;
+	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'Skilled Nursing')]")
+	private WebElement skillednursingType;
+	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'Non-Medical Professional')]")
+	private WebElement nonmedicalType;
+	@FindBy (xpath = "//div[@role='checkbox' and .//span[normalize-space()='Contracted']]/div")
+	private WebElement contractedCheckbox;
+	@FindBy (xpath = "//input[@id='serviceAddress-email']")
+	private WebElement serviceEmail;
+	@FindBy (xpath = "//input[@id='serviceAddress-phone']")
+	private WebElement servicePhone;
+	@FindBy (xpath = "//label[contains (text(),'Copy to Billing Information')]/preceding-sibling::button[@type='button']")
+	private WebElement copyButton;
+	@FindBy (xpath = "//input[@id='billingAddress-street']")
+	private WebElement billingaddressStreet;
+	@FindBy (xpath = "//input[@id='billingAddress-email']")
+	private WebElement billingaddressEmail;
+	@FindBy (xpath = "//input[@id='billingAddress-phone']")
+	private WebElement billinaddressPhone;
 	
 	
-	
-	
-	
+	public WebElement getBillinaddressPhone() {
+		return billinaddressPhone;
+	}
+
+	public WebElement getBillingaddressEmail() {
+		return billingaddressEmail;
+	}
+
+	public WebElement getBillingaddressStreet() {
+		return billingaddressStreet;
+	}
+
+	public WebElement getCopyButton() {
+		return copyButton;
+	}
+
+	public WebElement getServicePhone() {
+		return servicePhone;
+	}
+
+	public WebElement getServiceEmail() {
+		return serviceEmail;
+	}
+
+	public WebElement getContractedCheckbox() {
+		return contractedCheckbox;
+	}
+
+	public WebElement getNonmedicalType() {
+		return nonmedicalType;
+	}
+
+	public WebElement getSkillednursingType() {
+		return skillednursingType;
+	}
+
+	public WebElement getUregentCareType() {
+		return uregentCareType;
+	}
+
+	public WebElement getIndustryType() {
+		return industryType;
+	}
+
 	public WebElement getKeepCureentstatus() {
 		return keepCureentstatus;
 	}
@@ -507,9 +570,32 @@ public class GeneratorInformation1 {
 		statusNote.sendKeys(Keys.DELETE);
 		updateStatus.click();
 		Thread.sleep(200);
-		statusCancelbutton.click();
+		statusCancelbutton.click();	
+	}
+	
+	public void IndustrytypeOption() throws InterruptedException
+	{
+		uregentCareType.click();
+		Thread.sleep(200);
+		industryType.click();
+		Actions act = new Actions(driver);
+		act.moveToElement(skillednursingType).click().perform();
+		Thread.sleep(200);
+		industryType.click();
+		Actions act1 = new Actions(driver);
+		act1.moveToElement(nonmedicalType).click().perform();
 		
 	}
-
 	
+	public void ContractedCheckbox()
+	{
+		WebElement element = driver.findElement(By.xpath("//div[@role='checkbox' and .//span[normalize-space()='Contracted']]/div"));
+		String ariaDisabled = element.getAttribute("aria-disabled");
+
+	    if ("true".equals(ariaDisabled)) {
+	        System.out.println("Element is disabled");
+	    } else {
+	        System.out.println("Element is enabled");
+	    }
+	}
 }
