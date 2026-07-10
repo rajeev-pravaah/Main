@@ -1,7 +1,9 @@
 package com.Octopussaas.ObjectRepository;
 
+import java.io.IOException;
 import java.util.List;
 
+import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +12,9 @@ import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Listeners;
 
+import com.Octopussaas.FileUtility.ExcelUtility;
 import com.Octopussaass.WebdriverUtility.webDriverutility;
 
 public class SatelliteLocation {
@@ -170,10 +174,91 @@ public class SatelliteLocation {
 	private WebElement zipcodefield;
 	@FindBy(xpath = "(//p[text()='This field is required'])[4]")
 	private WebElement zipcodeerrormessage;
+	@FindBy(id = "serviceAddress-email")
+	private WebElement serviceaddressemailfield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[5]")
+	private WebElement serviceaddressemailerrormessage;
+	@FindBy(xpath = "//p[text()='Invalid email format']")
+	private WebElement serviceaddressemailformaterrormessage;
+	@FindBy(id = "serviceAddress-phone")
+	private WebElement serviceaddressphonefield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[6]")
+	private WebElement serviceaddressphoneerrormessage;
+	@FindBy(id = "serviceAddress-phone-ext")
+	private WebElement serviceaddressphoneextfield;
+	@FindBy(id = "billingAddress-name")
+	private WebElement billingaddressnamefield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[7]")
+	private WebElement billingaddressnameerrormessage;
+	@FindBy(id = "billingAddress-street")
+	private WebElement billingaddressstreetfield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[8]")
+	private WebElement billingaddressstreeterrormessage;
+	@FindBy(id = "billingAddress-suite")
+	private WebElement billingaddresssuitefield;
+	@FindBy(id = "billingAddress-city")
+	private WebElement billingaddresscityfield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[10]")
+	private WebElement billingaddresscityerrormessage;
+	@FindBy(id = "billingAddress-state")
+	private WebElement billingaddressstatefield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[11]")
+	private WebElement billingaddressstateerrormessage;
+	@FindBy(xpath = "//li[@role='option']")
+	private List<WebElement> billingaddressstatelist;
 	
 	
 	
 	
+	
+	public List<WebElement> getBillingaddressstatelist() {
+		return billingaddressstatelist;
+	}
+	public WebElement getBillingaddressstateerrormessage() {
+		return billingaddressstateerrormessage;
+	}
+	public WebElement getBillingaddressstatefield() {
+		return billingaddressstatefield;
+	}
+	public WebElement getBillingaddresscityerrormessage() {
+		return billingaddresscityerrormessage;
+	}
+	public WebElement getBillingaddresscityfield() {
+		return billingaddresscityfield;
+	}
+	public WebElement getBillingaddresssuitefield() {
+		return billingaddresssuitefield;
+	}
+	public WebElement getBillingaddressstreeterrormessage() {
+		return billingaddressstreeterrormessage;
+	}
+	public WebElement getBillingaddressstreetfield() {
+		return billingaddressstreetfield;
+	}
+	public WebElement getBillingaddressnameerrormessage() {
+		return billingaddressnameerrormessage;
+	}
+	public WebElement getBillingaddressnamefield() {
+		return billingaddressnamefield;
+	}
+	public WebElement getServiceaddressphoneextfield() {
+		return serviceaddressphoneextfield;
+	}
+	public WebElement getServiceaddressphoneerrormessage() {
+		return serviceaddressphoneerrormessage;
+	}
+	public WebElement getServiceaddressphonefield() {
+		return serviceaddressphonefield;
+	}
+	public WebElement getServiceaddressemailformaterrormessage() {
+		return serviceaddressemailformaterrormessage;
+	}
+	public WebElement getServiceaddressemailerrormessage() {
+		return serviceaddressemailerrormessage;
+	}
+	public WebElement getServiceaddressemailfield() {
+		return serviceaddressemailfield;
+	}
 	public WebElement getZipcodeerrormessage() {
 		return zipcodeerrormessage;
 	}
@@ -420,6 +505,33 @@ public class SatelliteLocation {
 	    for (int i = 0; i < length; i++) {
 	        element.sendKeys(Keys.BACK_SPACE);
 	    }
+	}
+	ExcelUtility elib;
+	HomePage hp ;
+	public void MagicTcfroSatelliteLocation() throws InterruptedException, EncryptedDocumentException, IOException
+	{
+		elib = new ExcelUtility();
+		hp = new HomePage(driver);
+		System.out.println("Home Page is displayed");
+		Thread.sleep(6000);
+		SatelliteLocation sl = new SatelliteLocation(driver);
+		sl.getAssets().click();
+		sl.getSatellite_Locations().click();
+		sl.getSatelliteLocationsList().isDisplayed();
+		 System.out.println("Satellite Location Page is displayed");
+		  List<WebElement> namelists = sl.getSatelliteLocationNameinlist();
+		   //print each value using for loop
+		  for(int i=0; i<namelists.size(); i++) {
+			  String name = namelists.get(i).getText();
+			  ExcelUtility elib1 = new ExcelUtility();
+				 String satellitename = elib1.getDataFromExcel("SatelliteLocation", 35, 7);
+			  if(name.equals(satellitename)) {
+				  namelists.get(i).click();
+				  System.out.println("Clicked on Satellite Location Name in the list: " +name);
+				  break;
+			  }
+			  
+		  }
 	}
 	
 }

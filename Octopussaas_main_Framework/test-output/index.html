@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Rajeev nandi\AppData\Local\Temp\testng-eclipse-514232708\testng-customsuite.xml</span>
+                    <span>C:\Users\Rajeev nandi\AppData\Local\Temp\testng-eclipse-1883146766\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">13 methods, 1 failed,   12 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Assert_Satellite_Location.Satellite_Location_TC" class="method navigator-link" hash-for-method="TC_177VerifyBillingInformationSateDDabletoSelectOptionFromDropdown">TC_177VerifyBillingInformationSateDDabletoSelectOptionFromDropdown</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,27 +117,62 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Assert_Satellite_Location.Satellite_Location_TC" class="method navigator-link" hash-for-method="TC_132VerifyUserIsAbleToSelectValueFromStateDD">TC_132VerifyUserIsAbleToSelectValueFromStateDD</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Assert_Satellite_Location.Satellite_Location_TC" class="method navigator-link" hash-for-method="TC_165VerifyBillingInformationSuiteTxtfieldAcceptsAlpabets">TC_165VerifyBillingInformationSuiteTxtfieldAcceptsAlpabets</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Assert_Satellite_Location.Satellite_Location_TC" class="method navigator-link" hash-for-method="TC_133VerifyZipCodeFieldAcceptsAlphabets">TC_133VerifyZipCodeFieldAcceptsAlphabets</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Assert_Satellite_Location.Satellite_Location_TC" class="method navigator-link" hash-for-method="TC_166VerifyBillingInformationSuiteTxtfieldAcceptsNumbers">TC_166VerifyBillingInformationSuiteTxtfieldAcceptsNumbers</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Assert_Satellite_Location.Satellite_Location_TC" class="method navigator-link" hash-for-method="TC_134VerifyZipCodeFieldAcceptsNumbers">TC_134VerifyZipCodeFieldAcceptsNumbers</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Assert_Satellite_Location.Satellite_Location_TC" class="method navigator-link" hash-for-method="TC_167VerifyBillingInformationSuiteTxtfieldAcceptsSpecialCharacters">TC_167VerifyBillingInformationSuiteTxtfieldAcceptsSpecialCharacters</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Assert_Satellite_Location.Satellite_Location_TC" class="method navigator-link" hash-for-method="TC_135VerifyZipCodeFieldAcceptsSpecialCharacters">TC_135VerifyZipCodeFieldAcceptsSpecialCharacters</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Assert_Satellite_Location.Satellite_Location_TC" class="method navigator-link" hash-for-method="TC_168VerifyBillingInformationSuiteTxtfieldisNotMandatory">TC_168VerifyBillingInformationSuiteTxtfieldisNotMandatory</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Assert_Satellite_Location.Satellite_Location_TC" class="method navigator-link" hash-for-method="TC_136VerifyZipCodeFieldisMandatory">TC_136VerifyZipCodeFieldisMandatory</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Assert_Satellite_Location.Satellite_Location_TC" class="method navigator-link" hash-for-method="TC_169VerifyBillingInformationCityFieldAcceptsAlphabets">TC_169VerifyBillingInformationCityFieldAcceptsAlphabets</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Assert_Satellite_Location.Satellite_Location_TC" class="method navigator-link" hash-for-method="TC_170VerifyBillingInformationCityFieldAcceptsNumbers">TC_170VerifyBillingInformationCityFieldAcceptsNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Assert_Satellite_Location.Satellite_Location_TC" class="method navigator-link" hash-for-method="TC_171VerifyBillingInformationCityFieldAcceptsSpecialCharacters">TC_171VerifyBillingInformationCityFieldAcceptsSpecialCharacters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Assert_Satellite_Location.Satellite_Location_TC" class="method navigator-link" hash-for-method="TC_172VerifyBillingInformationCityFieldisMandatory">TC_172VerifyBillingInformationCityFieldisMandatory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Assert_Satellite_Location.Satellite_Location_TC" class="method navigator-link" hash-for-method="TC_173VerifyBillingInformationStateFieldisMandatoryField">TC_173VerifyBillingInformationStateFieldisMandatoryField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Assert_Satellite_Location.Satellite_Location_TC" class="method navigator-link" hash-for-method="TC_174VerifyBillingInformationStateFieldAcceptsAlphabtes">TC_174VerifyBillingInformationStateFieldAcceptsAlphabtes</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Assert_Satellite_Location.Satellite_Location_TC" class="method navigator-link" hash-for-method="TC_175VerifyBillingInformationStateFieldAcceptsNumbers">TC_175VerifyBillingInformationStateFieldAcceptsNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Assert_Satellite_Location.Satellite_Location_TC" class="method navigator-link" hash-for-method="TC_176VerifyBillingInformationStateFieldAcceptsSpecialCharacters">TC_176VerifyBillingInformationStateFieldAcceptsSpecialCharacters</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -138,6 +187,75 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">Assert_Satellite_Location.Satellite_Location_TC</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_177VerifyBillingInformationSateDDabletoSelectOptionFromDropdown">
+                  </a> <!-- TC_177VerifyBillingInformationSateDDabletoSelectOptionFromDropdown -->
+                  <span class="method-name">TC_177VerifyBillingInformationSateDDabletoSelectOptionFromDropdown</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=150.0.7871.101)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d258aa0394fdec283ea13a145a63dcb, getElementText {id=f.A1640FBA3BB7596EE3869A12D3D56798.d.A6657611785B6E6DBFF3826B26D57A67.e.13946}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.101, chrome: {chromedriverVersion: 150.0.7871.115 (25f5b661e5b..., userDataDir: C:\Users\Rajeev nandi\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55934}, goog:processID: 21876, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55934/devtoo..., se:cdpVersion: 150.0.7871.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9d258aa0394fdec283ea13a145a63dcb)] -&gt; xpath: //li[@role=&apos;option&apos;]]
+Session ID: 9d258aa0394fdec283ea13a145a63dcb
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
+	at Assert_Satellite_Location.Satellite_Location_TC.TC_177VerifyBillingInformationSateDDabletoSelectOptionFromDropdown(Satellite_Location_TC.java:2798)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -146,37 +264,86 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_132VerifyUserIsAbleToSelectValueFromStateDD">
-                  </a> <!-- TC_132VerifyUserIsAbleToSelectValueFromStateDD -->
-                  <span class="method-name">TC_132VerifyUserIsAbleToSelectValueFromStateDD</span>
+                  <a name="TC_165VerifyBillingInformationSuiteTxtfieldAcceptsAlpabets">
+                  </a> <!-- TC_165VerifyBillingInformationSuiteTxtfieldAcceptsAlpabets -->
+                  <span class="method-name">TC_165VerifyBillingInformationSuiteTxtfieldAcceptsAlpabets</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_133VerifyZipCodeFieldAcceptsAlphabets">
-                  </a> <!-- TC_133VerifyZipCodeFieldAcceptsAlphabets -->
-                  <span class="method-name">TC_133VerifyZipCodeFieldAcceptsAlphabets</span>
+                  <a name="TC_166VerifyBillingInformationSuiteTxtfieldAcceptsNumbers">
+                  </a> <!-- TC_166VerifyBillingInformationSuiteTxtfieldAcceptsNumbers -->
+                  <span class="method-name">TC_166VerifyBillingInformationSuiteTxtfieldAcceptsNumbers</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_134VerifyZipCodeFieldAcceptsNumbers">
-                  </a> <!-- TC_134VerifyZipCodeFieldAcceptsNumbers -->
-                  <span class="method-name">TC_134VerifyZipCodeFieldAcceptsNumbers</span>
+                  <a name="TC_167VerifyBillingInformationSuiteTxtfieldAcceptsSpecialCharacters">
+                  </a> <!-- TC_167VerifyBillingInformationSuiteTxtfieldAcceptsSpecialCharacters -->
+                  <span class="method-name">TC_167VerifyBillingInformationSuiteTxtfieldAcceptsSpecialCharacters</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_135VerifyZipCodeFieldAcceptsSpecialCharacters">
-                  </a> <!-- TC_135VerifyZipCodeFieldAcceptsSpecialCharacters -->
-                  <span class="method-name">TC_135VerifyZipCodeFieldAcceptsSpecialCharacters</span>
+                  <a name="TC_168VerifyBillingInformationSuiteTxtfieldisNotMandatory">
+                  </a> <!-- TC_168VerifyBillingInformationSuiteTxtfieldisNotMandatory -->
+                  <span class="method-name">TC_168VerifyBillingInformationSuiteTxtfieldisNotMandatory</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_136VerifyZipCodeFieldisMandatory">
-                  </a> <!-- TC_136VerifyZipCodeFieldisMandatory -->
-                  <span class="method-name">TC_136VerifyZipCodeFieldisMandatory</span>
+                  <a name="TC_169VerifyBillingInformationCityFieldAcceptsAlphabets">
+                  </a> <!-- TC_169VerifyBillingInformationCityFieldAcceptsAlphabets -->
+                  <span class="method-name">TC_169VerifyBillingInformationCityFieldAcceptsAlphabets</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_170VerifyBillingInformationCityFieldAcceptsNumbers">
+                  </a> <!-- TC_170VerifyBillingInformationCityFieldAcceptsNumbers -->
+                  <span class="method-name">TC_170VerifyBillingInformationCityFieldAcceptsNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_171VerifyBillingInformationCityFieldAcceptsSpecialCharacters">
+                  </a> <!-- TC_171VerifyBillingInformationCityFieldAcceptsSpecialCharacters -->
+                  <span class="method-name">TC_171VerifyBillingInformationCityFieldAcceptsSpecialCharacters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_172VerifyBillingInformationCityFieldisMandatory">
+                  </a> <!-- TC_172VerifyBillingInformationCityFieldisMandatory -->
+                  <span class="method-name">TC_172VerifyBillingInformationCityFieldisMandatory</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_173VerifyBillingInformationStateFieldisMandatoryField">
+                  </a> <!-- TC_173VerifyBillingInformationStateFieldisMandatoryField -->
+                  <span class="method-name">TC_173VerifyBillingInformationStateFieldisMandatoryField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_174VerifyBillingInformationStateFieldAcceptsAlphabtes">
+                  </a> <!-- TC_174VerifyBillingInformationStateFieldAcceptsAlphabtes -->
+                  <span class="method-name">TC_174VerifyBillingInformationStateFieldAcceptsAlphabtes</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_175VerifyBillingInformationStateFieldAcceptsNumbers">
+                  </a> <!-- TC_175VerifyBillingInformationStateFieldAcceptsNumbers -->
+                  <span class="method-name">TC_175VerifyBillingInformationStateFieldAcceptsNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_176VerifyBillingInformationStateFieldAcceptsSpecialCharacters">
+                  </a> <!-- TC_176VerifyBillingInformationStateFieldAcceptsSpecialCharacters -->
+                  <span class="method-name">TC_176VerifyBillingInformationStateFieldAcceptsSpecialCharacters</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -184,7 +351,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Rajeev nandi\AppData\Local\Temp\testng-eclipse-514232708\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Rajeev nandi\AppData\Local\Temp\testng-eclipse-1883146766\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -195,11 +362,19 @@
     &lt;classes&gt;
       &lt;class name=&quot;Assert_Satellite_Location.Satellite_Location_TC&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;TC_136VerifyZipCodeFieldisMandatory&quot;/&gt;
-          &lt;include name=&quot;TC_135VerifyZipCodeFieldAcceptsSpecialCharacters&quot;/&gt;
-          &lt;include name=&quot;TC_134VerifyZipCodeFieldAcceptsNumbers&quot;/&gt;
-          &lt;include name=&quot;TC_132VerifyUserIsAbleToSelectValueFromStateDD&quot;/&gt;
-          &lt;include name=&quot;TC_133VerifyZipCodeFieldAcceptsAlphabets&quot;/&gt;
+          &lt;include name=&quot;TC_168VerifyBillingInformationSuiteTxtfieldisNotMandatory&quot;/&gt;
+          &lt;include name=&quot;TC_170VerifyBillingInformationCityFieldAcceptsNumbers&quot;/&gt;
+          &lt;include name=&quot;TC_177VerifyBillingInformationSateDDabletoSelectOptionFromDropdown&quot;/&gt;
+          &lt;include name=&quot;TC_174VerifyBillingInformationStateFieldAcceptsAlphabtes&quot;/&gt;
+          &lt;include name=&quot;TC_165VerifyBillingInformationSuiteTxtfieldAcceptsAlpabets&quot;/&gt;
+          &lt;include name=&quot;TC_166VerifyBillingInformationSuiteTxtfieldAcceptsNumbers&quot;/&gt;
+          &lt;include name=&quot;TC_173VerifyBillingInformationStateFieldisMandatoryField&quot;/&gt;
+          &lt;include name=&quot;TC_167VerifyBillingInformationSuiteTxtfieldAcceptsSpecialCharacters&quot;/&gt;
+          &lt;include name=&quot;TC_172VerifyBillingInformationCityFieldisMandatory&quot;/&gt;
+          &lt;include name=&quot;TC_176VerifyBillingInformationStateFieldAcceptsSpecialCharacters&quot;/&gt;
+          &lt;include name=&quot;TC_175VerifyBillingInformationStateFieldAcceptsNumbers&quot;/&gt;
+          &lt;include name=&quot;TC_171VerifyBillingInformationCityFieldAcceptsSpecialCharacters&quot;/&gt;
+          &lt;include name=&quot;TC_169VerifyBillingInformationCityFieldAcceptsAlphabets&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- Assert_Satellite_Location.Satellite_Location_TC --&gt;
     &lt;/classes&gt;
@@ -241,32 +416,64 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(13);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC_132VerifyUserIsAbleToSelectValueFromStateDD')
+data.setCell(0, 1, 'TC_165VerifyBillingInformationSuiteTxtfieldAcceptsAlpabets')
 data.setCell(0, 2, 'Assert_Satellite_Location.Satellite_Location_TC')
-data.setCell(0, 3, 35648);
+data.setCell(0, 3, 25835);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TC_136VerifyZipCodeFieldisMandatory')
+data.setCell(1, 1, 'TC_168VerifyBillingInformationSuiteTxtfieldisNotMandatory')
 data.setCell(1, 2, 'Assert_Satellite_Location.Satellite_Location_TC')
-data.setCell(1, 3, 4401);
+data.setCell(1, 3, 5084);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TC_133VerifyZipCodeFieldAcceptsAlphabets')
+data.setCell(2, 1, 'TC_167VerifyBillingInformationSuiteTxtfieldAcceptsSpecialCharacters')
 data.setCell(2, 2, 'Assert_Satellite_Location.Satellite_Location_TC')
-data.setCell(2, 3, 3965);
+data.setCell(2, 3, 4461);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'TC_134VerifyZipCodeFieldAcceptsNumbers')
+data.setCell(3, 1, 'TC_173VerifyBillingInformationStateFieldisMandatoryField')
 data.setCell(3, 2, 'Assert_Satellite_Location.Satellite_Location_TC')
-data.setCell(3, 3, 3922);
+data.setCell(3, 3, 4204);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'TC_135VerifyZipCodeFieldAcceptsSpecialCharacters')
+data.setCell(4, 1, 'TC_172VerifyBillingInformationCityFieldisMandatory')
 data.setCell(4, 2, 'Assert_Satellite_Location.Satellite_Location_TC')
-data.setCell(4, 3, 3818);
+data.setCell(4, 3, 4083);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'TC_169VerifyBillingInformationCityFieldAcceptsAlphabets')
+data.setCell(5, 2, 'Assert_Satellite_Location.Satellite_Location_TC')
+data.setCell(5, 3, 3893);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'TC_174VerifyBillingInformationStateFieldAcceptsAlphabtes')
+data.setCell(6, 2, 'Assert_Satellite_Location.Satellite_Location_TC')
+data.setCell(6, 3, 3806);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'TC_170VerifyBillingInformationCityFieldAcceptsNumbers')
+data.setCell(7, 2, 'Assert_Satellite_Location.Satellite_Location_TC')
+data.setCell(7, 3, 3700);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'TC_171VerifyBillingInformationCityFieldAcceptsSpecialCharacters')
+data.setCell(8, 2, 'Assert_Satellite_Location.Satellite_Location_TC')
+data.setCell(8, 3, 3668);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'TC_176VerifyBillingInformationStateFieldAcceptsSpecialCharacters')
+data.setCell(9, 2, 'Assert_Satellite_Location.Satellite_Location_TC')
+data.setCell(9, 3, 3642);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'TC_166VerifyBillingInformationSuiteTxtfieldAcceptsNumbers')
+data.setCell(10, 2, 'Assert_Satellite_Location.Satellite_Location_TC')
+data.setCell(10, 3, 3635);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'TC_175VerifyBillingInformationStateFieldAcceptsNumbers')
+data.setCell(11, 2, 'Assert_Satellite_Location.Satellite_Location_TC')
+data.setCell(11, 3, 3550);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'TC_177VerifyBillingInformationSateDDabletoSelectOptionFromDropdown')
+data.setCell(12, 2, 'Assert_Satellite_Location.Satellite_Location_TC')
+data.setCell(12, 3, 324);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 51 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -281,253 +488,319 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">121 ignored methods</span>
+            <span class="header-content">154 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">Assert_Satellite_Location.Satellite_Location_TC</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TC_129VerifyStateFieldAcceptsAlphabets</span>
+                <span class="ignored-method-name">TC_037VerifyGeneralPhoneNumberShouldnotaccpetSpecialCharacters</span>
                 <br/>
-                <span class="ignored-method-name">TC_092VerifyEINFieldAcceptsAlphabets</span>
+                <span class="ignored-method-name">TC_094VerifyEINFieldAcceptsSpecialCharacters</span>
                 <br/>
-                <span class="ignored-method-name">TC_032VerifyCompanyDisplayNameWithSpecialCharacters</span>
+                <span class="ignored-method-name">TC_104VerifyNAICSCodeAcceptsAlphabets</span>
                 <br/>
-                <span class="ignored-method-name">TC_115VerifySatelliteServiceinfoStreetFieldAcceptsNumbers</span>
+                <span class="ignored-method-name">TC_057VerifyBusinessHoursAcceptInputs</span>
                 <br/>
-                <span class="ignored-method-name">TC_009VerifySatellitLocationEmailFieldAcceptsInput</span>
+                <span class="ignored-method-name">TC_027VerifyNameOFtheLocation</span>
                 <br/>
-                <span class="ignored-method-name">TC_121VerifySuiteAcceptsNumbers</span>
+                <span class="ignored-method-name">TC_043VerifyExtWithlonginput</span>
                 <br/>
-                <span class="ignored-method-name">TC_080VerifyRegistrationNumber1AcceptsSpecialCharacters</span>
+                <span class="ignored-method-name">TC_076VerifySatelliteLocationStatusDisplayedAsWhileAddingSatellite</span>
                 <br/>
-                <span class="ignored-method-name">TC_081VerifyRegistrationNumber1IsMandatoryField</span>
+                <span class="ignored-method-name">TC_117VerifySatelliteServiceinfoStreetFieldisMandatory</span>
                 <br/>
-                <span class="ignored-method-name">TC_131VerifyStateFieldShouldNotAcceptsSpecialCharacters</span>
+                <span class="ignored-method-name">TC_002VerifyTheSatelliteLocationPreviouslyAddedlist</span>
                 <br/>
-                <span class="ignored-method-name">TC_006VerifySatellitLocationFieldacceptsNumbers</span>
+                <span class="ignored-method-name">TC_048VerifyWebsitename</span>
                 <br/>
-                <span class="ignored-method-name">TC_120VerifySuiteAcceptsalphabets</span>
+                <span class="ignored-method-name">TC_146VerifyPhoneNumberFieldAcceptsNumbers</span>
                 <br/>
-                <span class="ignored-method-name">TC_046VerifyEmailTextFieldisEditable</span>
+                <span class="ignored-method-name">TC_024VerifyTheAddNewSatelliteLocationRedirectToSatelliteLocationProfile</span>
                 <br/>
-                <span class="ignored-method-name">TC_122VerifySuiteAcceptsSpecialCharacters</span>
+                <span class="ignored-method-name">TC_031VerifyCompanyDisplayNameWithNumbers</span>
                 <br/>
-                <span class="ignored-method-name">TC_013VerifySatellitLocationEmailFieldWithInvaliInput</span>
+                <span class="ignored-method-name">TC_014VerifySatellitLocationEmailFieldWithoutInput</span>
                 <br/>
-                <span class="ignored-method-name">TC_091VerifyDOTnumberfieldAcceptsSpecialCharacters</span>
+                <span class="ignored-method-name">TC_103VerifySICFieldAcceptsSpecialCharacters</span>
                 <br/>
-                <span class="ignored-method-name">TC_082VerifyRegistrationNumber2AcceptsAlphabets</span>
+                <span class="ignored-method-name">TC_019VerifySatellitLocationWebsiteFieldWithInvalidInput</span>
                 <br/>
-                <span class="ignored-method-name">TC_090VerifyDOTnumberfieldAcceptsNumbers</span>
+                <span class="ignored-method-name">TC_093VerifyEINFieldAcceptsNumbers</span>
                 <br/>
-                <span class="ignored-method-name">TC_001VerifyTheSatelliteLocationPageisDisplayed</span>
+                <span class="ignored-method-name">TC_128VerifyStateFieldIsMandatoryField</span>
                 <br/>
-                <span class="ignored-method-name">TC_012VerifySatellitLocationEmailFieldWithSpecialCharacters</span>
+                <span class="ignored-method-name">TC_114VerifySatelliteServiceinfoStreetFieldAcceptsAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_111VerifySatelliteServiceinfoNamefieldAcceptsNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_060VerifyBusinessHoursAcceptSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_087VerifyEPAidNumberTextfieldAcceptsNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_066VerifyGoogleRevireLinkAcceptsCopyPasetdInputs</span>
+                <br/>
+                <span class="ignored-method-name">TC_045VerifyEmailisPresentIntheEmailTextField</span>
+                <br/>
+                <span class="ignored-method-name">TC_029VerifyCompanyDisplayNameAcceptsInput</span>
+                <br/>
+                <span class="ignored-method-name">TC_102VerifySICFieldAcceptsNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_050VerifyWebsiteTextFieldAcceptsNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_130VerifyStateFieldShouldNotAcceptsNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_163VerifyBillingInformationShouldDisplaySuggestion</span>
+                <br/>
+                <span class="ignored-method-name">TC_020VerifySatellitLocationWebsiteFieldWithoutInput</span>
+                <br/>
+                <span class="ignored-method-name">TC_085VerifyRegistrationNumber2IsNotMandatoryField</span>
+                <br/>
+                <span class="ignored-method-name">TC_030VerifyCompanyDisplayNameWithAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_033VerifyCompanyDisplayNameWithoutInput</span>
+                <br/>
+                <span class="ignored-method-name">TC_141VerifyEmailIdShouldNotAcceptsInvalidInput</span>
+                <br/>
+                <span class="ignored-method-name">TC_159VerifyBillingInformationStreetFieldAcceptsAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_078VerifyRegistrationNumber1AcceptsAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_095VerifyEntityIDNumberieldAcceptsAlpabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_011VerifySatellitLocationEmailFieldWithNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_123VerifySuiteFieldisNOtMandatory</span>
+                <br/>
+                <span class="ignored-method-name">TC_025VerifyTheSatelliteLocationProfileInformationTooltipidpresent</span>
+                <br/>
+                <span class="ignored-method-name">TC_016VerifySatellitLocationWebsiteFieldWithAlphabets</span>
                 <br/>
                 <span class="ignored-method-name">TC_108VerifyCageCodeFiledAcceptsNumbers</span>
                 <br/>
                 <span class="ignored-method-name">TC_008VerifySatellitLocationFieldWithoutInput</span>
                 <br/>
-                <span class="ignored-method-name">TC_034VerifyGeneralPhoneNumberAcceptsInput</span>
+                <span class="ignored-method-name">TC_021VerifyTheAddNewSatelliteLocationStatusFieldDefaultValue</span>
                 <br/>
-                <span class="ignored-method-name">TC_110VerifySatelliteServiceinfoNamefieldAcceptsAlphabets</span>
-                <br/>
-                <span class="ignored-method-name">TC_124VerifyCityFieldAcceptsAlphabets</span>
+                <span class="ignored-method-name">TC_089VerifyDOTnumberfieldAcceptsAlphabets</span>
                 <br/>
                 <span class="ignored-method-name">TC_084VerifyRegistrationNumber2AcceptsSpecialCharacters</span>
                 <br/>
-                <span class="ignored-method-name">TC_083VerifyRegistrationNumber2AcceptsNumbers</span>
+                <span class="ignored-method-name">TC_099VerifySOSNumberFieldAcceptsNumbers</span>
                 <br/>
-                <span class="ignored-method-name">TC_113VerifySatelliteServiceinfoNameFieldisMandatory</span>
+                <span class="ignored-method-name">TC_061VerifyBusinessHoursAcceptCombinationofAllInputs</span>
+                <br/>
+                <span class="ignored-method-name">TC_106VerifyNAICSCodeAcceptsSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_086VerifyEPAidNumberTextfieldAcceptsAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_126VerifyCityFieldAcceptsSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_161VerifyBillingInformationStreetFieldAcceptsSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_015VerifySatellitLocationWebsiteFieldAcceptsInput</span>
+                <br/>
+                <span class="ignored-method-name">TC_012VerifySatellitLocationEmailFieldWithSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_142VerifyEmailIdShouldAcceptsvalidInput</span>
+                <br/>
+                <span class="ignored-method-name">TC_059VerifyBusinessHoursAcceptNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_112VerifySatelliteServiceinfoNamefieldAcceptsSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_133VerifyZipCodeFieldAcceptsAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_044VerifyExtWithlessInput</span>
+                <br/>
+                <span class="ignored-method-name">TC_039VerifyExtWithValidInput</span>
+                <br/>
+                <span class="ignored-method-name">TC_004VerifySatelliteLocationNameFieldWithInput</span>
+                <br/>
+                <span class="ignored-method-name">TC_075VerifyNotAbleToPassinputInsideSatellietLoactionStatus</span>
+                <br/>
+                <span class="ignored-method-name">TC_028VerifyComapanyNameTextFieldisEditable</span>
+                <br/>
+                <span class="ignored-method-name">TC_081VerifyRegistrationNumber1IsMandatoryField</span>
+                <br/>
+                <span class="ignored-method-name">TC_052VerifyWebsiteTextFieldAcceptsCopiPastedInputs</span>
+                <br/>
+                <span class="ignored-method-name">TC_118VerifyStreetDisplayedSuggestionDropdownWhenUserEntersValidStreetName</span>
+                <br/>
+                <span class="ignored-method-name">TC_139VerifyEmailfoeldAcceptsNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_149VerifPhonenumberExtfieldAcceptsInput</span>
+                <br/>
+                <span class="ignored-method-name">TC_158VerifyBillingInformationNameFieldisMandatory</span>
+                <br/>
+                <span class="ignored-method-name">TC_058VerifyBusinessHoursAcceptAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_127VerifyCityFieldisMandatory</span>
+                <br/>
+                <span class="ignored-method-name">TC_101VerifySICFieldAcceptsAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_038VerifyGeneralPhoneNumberWithoutInputShouldDisplayMandatoryField</span>
+                <br/>
+                <span class="ignored-method-name">TC_156VerifyBillingInformationNameFieldAcceptsNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_107VerifyCageCodeFiledAcceptsAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_035VerifyGeneralPhoneNumberShouldnotaccpetAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_151VerifyPhonenumberExtfieldAcceptNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_105VerifyNAICSCodeAcceptsNumbers</span>
                 <br/>
                 <span class="ignored-method-name">TC_007VerifySatellitLocationFieldacceptsSpecialCharacters</span>
                 <br/>
-                <span class="ignored-method-name">TC_040VerifyExtNotAcceptsAlphabets</span>
+                <span class="ignored-method-name">TC_124VerifyCityFieldAcceptsAlphabets</span>
                 <br/>
-                <span class="ignored-method-name">TC_022VerifySatelliteLocationIsAbletoChangeStatus</span>
+                <span class="ignored-method-name">TC_135VerifyZipCodeFieldAcceptsSpecialCharacters</span>
                 <br/>
-                <span class="ignored-method-name">TC_078VerifyRegistrationNumber1AcceptsAlphabets</span>
+                <span class="ignored-method-name">TC_032VerifyCompanyDisplayNameWithSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_006VerifySatellitLocationFieldacceptsNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_144VerifyPhoneNumberFieldAcceptsValidInput</span>
+                <br/>
+                <span class="ignored-method-name">TC_136VerifyZipCodeFieldisMandatory</span>
+                <br/>
+                <span class="ignored-method-name">TC_162VerifyBillingInformationStreetFieldisMandatory</span>
+                <br/>
+                <span class="ignored-method-name">TC_077VerifyStatusCanbeChange</span>
+                <br/>
+                <span class="ignored-method-name">TC_143VerifyEmailfoeldisMandatory</span>
+                <br/>
+                <span class="ignored-method-name">TC_129VerifyStateFieldAcceptsAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_110VerifySatelliteServiceinfoNamefieldAcceptsAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_080VerifyRegistrationNumber1AcceptsSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_145VerifyPhoneNumberFieldShouldNotAcceptsAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_017VerifySatellitLocationWebsiteFieldWithNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_092VerifyEINFieldAcceptsAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_150VerifyPhonenumberExtfieldShouldNotAcceptAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_115VerifySatelliteServiceinfoStreetFieldAcceptsNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_152VerifyPhonenumberExtfieldShouldNotAcceptSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_005VerifySatellitLocationFieldacceptsAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_009VerifySatellitLocationEmailFieldAcceptsInput</span>
+                <br/>
+                <span class="ignored-method-name">TC_121VerifySuiteAcceptsNumbers</span>
                 <br/>
                 <span class="ignored-method-name">TC_098VerifySOSNumberFieldAcceptsAlphabets</span>
                 <br/>
-                <span class="ignored-method-name">TC_010VerifySatellitLocationEmailFieldWithAlphabets</span>
+                <span class="ignored-method-name">TC_120VerifySuiteAcceptsalphabets</span>
                 <br/>
-                <span class="ignored-method-name">TC_096VerifyEntityIDNumberieldAcceptsNumbers</span>
+                <span class="ignored-method-name">TC_018VerifySatellitLocationWebsiteFieldWithSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_137VerifyEmailfoeldAcceptsValidInput</span>
+                <br/>
+                <span class="ignored-method-name">TC_022VerifySatelliteLocationIsAbletoChangeStatus</span>
+                <br/>
+                <span class="ignored-method-name">TC_138VerifyEmailfoeldAcceptsAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_153VerifyPhonenumberExtfieldisNotAcceptsMoreThan5digits</span>
+                <br/>
+                <span class="ignored-method-name">TC_148VerifyPhoneNumberFieldisMandatory</span>
+                <br/>
+                <span class="ignored-method-name">TC_113VerifySatelliteServiceinfoNameFieldisMandatory</span>
+                <br/>
+                <span class="ignored-method-name">TC_046VerifyEmailTextFieldisEditable</span>
+                <br/>
+                <span class="ignored-method-name">TC_122VerifySuiteAcceptsSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_132VerifyUserIsAbleToSelectValueFromStateDD</span>
                 <br/>
                 <span class="ignored-method-name">TC_068VerifyGoogleRevireLinkWithValidinput</span>
                 <br/>
+                <span class="ignored-method-name">TC_034VerifyGeneralPhoneNumberAcceptsInput</span>
+                <br/>
+                <span class="ignored-method-name">TC_040VerifyExtNotAcceptsAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_013VerifySatellitLocationEmailFieldWithInvaliInput</span>
+                <br/>
+                <span class="ignored-method-name">TC_164VerifyBillingInformationStreetFieldAcceptsSuggestions</span>
+                <br/>
                 <span class="ignored-method-name">TC_042VerifyExtNotAcceptsSpecialCharacters</span>
                 <br/>
-                <span class="ignored-method-name">TC_036VerifyGeneralPhoneNumberShouldacceptNumbers</span>
+                <span class="ignored-method-name">TC_091VerifyDOTnumberfieldAcceptsSpecialCharacters</span>
                 <br/>
-                <span class="ignored-method-name">TC_026VerifyTheSatelliteLocationProfileInformationTooltipText</span>
+                <span class="ignored-method-name">TC_090VerifyDOTnumberfieldAcceptsNumbers</span>
                 <br/>
-                <span class="ignored-method-name">TC_041VerifyExtAcceptsNumbers</span>
+                <span class="ignored-method-name">TC_140VerifyEmailfoeldAcceptsSpecialCharacters</span>
                 <br/>
-                <span class="ignored-method-name">TC_051VerifyWebsiteTextFieldAcceptsSpecialCharacters</span>
+                <span class="ignored-method-name">TC_083VerifyRegistrationNumber2AcceptsNumbers</span>
                 <br/>
-                <span class="ignored-method-name">TC_088VerifyEPAidNumberTextfieldAcceptsSpecialCharacters</span>
+                <span class="ignored-method-name">TC_082VerifyRegistrationNumber2AcceptsAlphabets</span>
                 <br/>
                 <span class="ignored-method-name">TC_047VerifyEmailTextFieldisMandatory</span>
                 <br/>
                 <span class="ignored-method-name">TC_049VerifyWebsiteTextFieldAcceptsAlphabets</span>
                 <br/>
-                <span class="ignored-method-name">TC_063VerifyGoogleRevireLinkAcceptsAlphabets</span>
+                <span class="ignored-method-name">TC_051VerifyWebsiteTextFieldAcceptsSpecialCharacters</span>
                 <br/>
-                <span class="ignored-method-name">TC_018VerifySatellitLocationWebsiteFieldWithSpecialCharacters</span>
-                <br/>
-                <span class="ignored-method-name">TC_109VerifyCageCodeFiledAcceptsSpecialCharacters</span>
+                <span class="ignored-method-name">TC_026VerifyTheSatelliteLocationProfileInformationTooltipText</span>
                 <br/>
                 <span class="ignored-method-name">TC_003VerifyTheAddNewSatelliteLocationButton</span>
                 <br/>
-                <span class="ignored-method-name">TC_119VerifyStreetisAbleToSelectSuggestionnames</span>
-                <br/>
-                <span class="ignored-method-name">TC_117VerifySatelliteServiceinfoStreetFieldisMandatory</span>
-                <br/>
-                <span class="ignored-method-name">TC_125VerifyCityFieldAcceptsNumbers</span>
-                <br/>
-                <span class="ignored-method-name">TC_077VerifyStatusCanbeChange</span>
-                <br/>
-                <span class="ignored-method-name">TC_094VerifyEINFieldAcceptsSpecialCharacters</span>
-                <br/>
-                <span class="ignored-method-name">TC_064VerifyGoogleRevireLinkAcceptsNumbers</span>
+                <span class="ignored-method-name">TC_036VerifyGeneralPhoneNumberShouldacceptNumbers</span>
                 <br/>
                 <span class="ignored-method-name">TC_079VerifyRegistrationNumber1AcceptsNumbers</span>
                 <br/>
-                <span class="ignored-method-name">TC_035VerifyGeneralPhoneNumberShouldnotaccpetAlphabets</span>
+                <span class="ignored-method-name">TC_064VerifyGoogleRevireLinkAcceptsNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_119VerifyStreetisAbleToSelectSuggestionnames</span>
+                <br/>
+                <span class="ignored-method-name">TC_063VerifyGoogleRevireLinkAcceptsAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_109VerifyCageCodeFiledAcceptsSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_001VerifyTheSatelliteLocationPageisDisplayed</span>
+                <br/>
+                <span class="ignored-method-name">TC_155VerifyBillingInformationNameFieldAcceptsAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_134VerifyZipCodeFieldAcceptsNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_096VerifyEntityIDNumberieldAcceptsNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_100VerifySOSNumberFieldAcceptsSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_041VerifyExtAcceptsNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_160VerifyBillingInformationStreetFieldAcceptsNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_125VerifyCityFieldAcceptsNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_154VerifyPhonenumberExtfieldShouldAcceptsLessDigits</span>
+                <br/>
+                <span class="ignored-method-name">TC_131VerifyStateFieldShouldNotAcceptsSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_010VerifySatellitLocationEmailFieldWithAlphabets</span>
+                <br/>
+                <span class="ignored-method-name">TC_157VerifyBillingInformationNameFieldAcceptsSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_067VerifyGoogleRevireLinkWithInvalidInputPrompterrorMessage</span>
+                <br/>
+                <span class="ignored-method-name">TC_147VerifyPhoneNumberFieldShouldNotAcceptsSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_097VerifyEntityIDNumberieldAcceptsSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_088VerifyEPAidNumberTextfieldAcceptsSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_062VerifyGoogleRevireLinkAcceptsInput</span>
                 <br/>
                 <span class="ignored-method-name">TC_023VerifyStatusDropDownISAbletoSelectMultipleOptions</span>
                 <br/>
                 <span class="ignored-method-name">TC_116VerifySatelliteServiceinfoStreetFieldAcceptsSpecialCharacters</span>
                 <br/>
                 <span class="ignored-method-name">TC_065VerifyGoogleRevireLinkAcceptsSpecialCharacters</span>
-                <br/>
-                <span class="ignored-method-name">TC_097VerifyEntityIDNumberieldAcceptsSpecialCharacters</span>
-                <br/>
-                <span class="ignored-method-name">TC_076VerifySatelliteLocationStatusDisplayedAsWhileAddingSatellite</span>
-                <br/>
-                <span class="ignored-method-name">TC_058VerifyBusinessHoursAcceptAlphabets</span>
-                <br/>
-                <span class="ignored-method-name">TC_067VerifyGoogleRevireLinkWithInvalidInputPrompterrorMessage</span>
-                <br/>
-                <span class="ignored-method-name">TC_128VerifyStateFieldIsMandatoryField</span>
-                <br/>
-                <span class="ignored-method-name">TC_038VerifyGeneralPhoneNumberWithoutInputShouldDisplayMandatoryField</span>
-                <br/>
-                <span class="ignored-method-name">TC_027VerifyNameOFtheLocation</span>
-                <br/>
-                <span class="ignored-method-name">TC_024VerifyTheAddNewSatelliteLocationRedirectToSatelliteLocationProfile</span>
-                <br/>
-                <span class="ignored-method-name">TC_062VerifyGoogleRevireLinkAcceptsInput</span>
-                <br/>
-                <span class="ignored-method-name">TC_100VerifySOSNumberFieldAcceptsSpecialCharacters</span>
-                <br/>
-                <span class="ignored-method-name">TC_048VerifyWebsitename</span>
-                <br/>
-                <span class="ignored-method-name">TC_111VerifySatelliteServiceinfoNamefieldAcceptsNumbers</span>
-                <br/>
-                <span class="ignored-method-name">TC_037VerifyGeneralPhoneNumberShouldnotaccpetSpecialCharacters</span>
-                <br/>
-                <span class="ignored-method-name">TC_087VerifyEPAidNumberTextfieldAcceptsNumbers</span>
-                <br/>
-                <span class="ignored-method-name">TC_019VerifySatellitLocationWebsiteFieldWithInvalidInput</span>
-                <br/>
-                <span class="ignored-method-name">TC_130VerifyStateFieldShouldNotAcceptsNumbers</span>
-                <br/>
-                <span class="ignored-method-name">TC_103VerifySICFieldAcceptsSpecialCharacters</span>
-                <br/>
-                <span class="ignored-method-name">TC_085VerifyRegistrationNumber2IsNotMandatoryField</span>
-                <br/>
-                <span class="ignored-method-name">TC_057VerifyBusinessHoursAcceptInputs</span>
-                <br/>
-                <span class="ignored-method-name">TC_031VerifyCompanyDisplayNameWithNumbers</span>
-                <br/>
-                <span class="ignored-method-name">TC_043VerifyExtWithlonginput</span>
-                <br/>
-                <span class="ignored-method-name">TC_002VerifyTheSatelliteLocationPreviouslyAddedlist</span>
-                <br/>
-                <span class="ignored-method-name">TC_020VerifySatellitLocationWebsiteFieldWithoutInput</span>
-                <br/>
-                <span class="ignored-method-name">TC_050VerifyWebsiteTextFieldAcceptsNumbers</span>
-                <br/>
-                <span class="ignored-method-name">TC_045VerifyEmailisPresentIntheEmailTextField</span>
-                <br/>
-                <span class="ignored-method-name">TC_060VerifyBusinessHoursAcceptSpecialCharacters</span>
-                <br/>
-                <span class="ignored-method-name">TC_030VerifyCompanyDisplayNameWithAlphabets</span>
-                <br/>
-                <span class="ignored-method-name">TC_033VerifyCompanyDisplayNameWithoutInput</span>
-                <br/>
-                <span class="ignored-method-name">TC_104VerifyNAICSCodeAcceptsAlphabets</span>
-                <br/>
-                <span class="ignored-method-name">TC_114VerifySatelliteServiceinfoStreetFieldAcceptsAlphabets</span>
-                <br/>
-                <span class="ignored-method-name">TC_029VerifyCompanyDisplayNameAcceptsInput</span>
-                <br/>
-                <span class="ignored-method-name">TC_123VerifySuiteFieldisNOtMandatory</span>
-                <br/>
-                <span class="ignored-method-name">TC_095VerifyEntityIDNumberieldAcceptsAlpabets</span>
-                <br/>
-                <span class="ignored-method-name">TC_086VerifyEPAidNumberTextfieldAcceptsAlphabets</span>
-                <br/>
-                <span class="ignored-method-name">TC_015VerifySatellitLocationWebsiteFieldAcceptsInput</span>
-                <br/>
-                <span class="ignored-method-name">TC_106VerifyNAICSCodeAcceptsSpecialCharacters</span>
-                <br/>
-                <span class="ignored-method-name">TC_126VerifyCityFieldAcceptsSpecialCharacters</span>
-                <br/>
-                <span class="ignored-method-name">TC_011VerifySatellitLocationEmailFieldWithNumbers</span>
-                <br/>
-                <span class="ignored-method-name">TC_089VerifyDOTnumberfieldAcceptsAlphabets</span>
-                <br/>
-                <span class="ignored-method-name">TC_059VerifyBusinessHoursAcceptNumbers</span>
-                <br/>
-                <span class="ignored-method-name">TC_039VerifyExtWithValidInput</span>
-                <br/>
-                <span class="ignored-method-name">TC_004VerifySatelliteLocationNameFieldWithInput</span>
-                <br/>
-                <span class="ignored-method-name">TC_066VerifyGoogleRevireLinkAcceptsCopyPasetdInputs</span>
-                <br/>
-                <span class="ignored-method-name">TC_005VerifySatellitLocationFieldacceptsAlphabets</span>
-                <br/>
-                <span class="ignored-method-name">TC_025VerifyTheSatelliteLocationProfileInformationTooltipidpresent</span>
-                <br/>
-                <span class="ignored-method-name">TC_021VerifyTheAddNewSatelliteLocationStatusFieldDefaultValue</span>
-                <br/>
-                <span class="ignored-method-name">TC_061VerifyBusinessHoursAcceptCombinationofAllInputs</span>
-                <br/>
-                <span class="ignored-method-name">TC_112VerifySatelliteServiceinfoNamefieldAcceptsSpecialCharacters</span>
-                <br/>
-                <span class="ignored-method-name">TC_028VerifyComapanyNameTextFieldisEditable</span>
-                <br/>
-                <span class="ignored-method-name">TC_102VerifySICFieldAcceptsNumbers</span>
-                <br/>
-                <span class="ignored-method-name">TC_107VerifyCageCodeFiledAcceptsAlphabets</span>
-                <br/>
-                <span class="ignored-method-name">TC_093VerifyEINFieldAcceptsNumbers</span>
-                <br/>
-                <span class="ignored-method-name">TC_118VerifyStreetDisplayedSuggestionDropdownWhenUserEntersValidStreetName</span>
-                <br/>
-                <span class="ignored-method-name">TC_017VerifySatellitLocationWebsiteFieldWithNumbers</span>
-                <br/>
-                <span class="ignored-method-name">TC_014VerifySatellitLocationEmailFieldWithoutInput</span>
-                <br/>
-                <span class="ignored-method-name">TC_075VerifyNotAbleToPassinputInsideSatellietLoactionStatus</span>
-                <br/>
-                <span class="ignored-method-name">TC_016VerifySatellitLocationWebsiteFieldWithAlphabets</span>
-                <br/>
-                <span class="ignored-method-name">TC_105VerifyNAICSCodeAcceptsNumbers</span>
-                <br/>
-                <span class="ignored-method-name">TC_044VerifyExtWithlessInput</span>
-                <br/>
-                <span class="ignored-method-name">TC_052VerifyWebsiteTextFieldAcceptsCopiPastedInputs</span>
-                <br/>
-                <span class="ignored-method-name">TC_099VerifySOSNumberFieldAcceptsNumbers</span>
-                <br/>
-                <span class="ignored-method-name">TC_101VerifySICFieldAcceptsAlphabets</span>
-                <br/>
-                <span class="ignored-method-name">TC_127VerifyCityFieldisMandatory</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -546,67 +819,165 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">Bm</span>
-                <span class="method-start">29946 ms</span>
+                <span class="method-start">27307 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">TC_132VerifyUserIsAbleToSelectValueFromStateDD</span>
-                <span class="method-start">29955 ms</span>
+                <span class="method-name">TC_165VerifyBillingInformationSuiteTxtfieldAcceptsAlpabets</span>
+                <span class="method-start">27311 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Am</span>
-                <span class="method-start">65610 ms</span>
+                <span class="method-start">53154 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">TC_133VerifyZipCodeFieldAcceptsAlphabets</span>
-                <span class="method-start">67631 ms</span>
+                <span class="method-name">TC_166VerifyBillingInformationSuiteTxtfieldAcceptsNumbers</span>
+                <span class="method-start">55175 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">Bm</span>
-                <span class="method-start">67631 ms</span>
+                <span class="method-start">55175 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">Am</span>
-                <span class="method-start">71600 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">TC_134VerifyZipCodeFieldAcceptsNumbers</span>
-                <span class="method-start">73608 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">Bm</span>
-                <span class="method-start">73608 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method after">
-                <span class="method-name">Am</span>
-                <span class="method-start">77533 ms</span>
+                <span class="method-start">58812 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">Bm</span>
-                <span class="method-start">79549 ms</span>
+                <span class="method-start">60818 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">TC_135VerifyZipCodeFieldAcceptsSpecialCharacters</span>
-                <span class="method-start">79551 ms</span>
+                <span class="method-name">TC_167VerifyBillingInformationSuiteTxtfieldAcceptsSpecialCharacters</span>
+                <span class="method-start">60818 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Am</span>
-                <span class="method-start">83372 ms</span>
+                <span class="method-start">65290 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">Bm</span>
-                <span class="method-start">85389 ms</span>
+                <span class="method-start">67350 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">TC_136VerifyZipCodeFieldisMandatory</span>
-                <span class="method-start">85389 ms</span>
+                <span class="method-name">TC_168VerifyBillingInformationSuiteTxtfieldisNotMandatory</span>
+                <span class="method-start">67352 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Am</span>
-                <span class="method-start">89793 ms</span>
+                <span class="method-start">72437 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">74444 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_169VerifyBillingInformationCityFieldAcceptsAlphabets</span>
+                <span class="method-start">74446 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">78346 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">80348 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_170VerifyBillingInformationCityFieldAcceptsNumbers</span>
+                <span class="method-start">80348 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">84052 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">86058 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_171VerifyBillingInformationCityFieldAcceptsSpecialCharacters</span>
+                <span class="method-start">86058 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">89729 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">91741 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_172VerifyBillingInformationCityFieldisMandatory</span>
+                <span class="method-start">91742 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">95825 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_173VerifyBillingInformationStateFieldisMandatoryField</span>
+                <span class="method-start">97829 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">97829 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">102033 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">104039 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_174VerifyBillingInformationStateFieldAcceptsAlphabtes</span>
+                <span class="method-start">104041 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">107848 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">109865 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_175VerifyBillingInformationStateFieldAcceptsNumbers</span>
+                <span class="method-start">109867 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">113417 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">115435 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_176VerifyBillingInformationStateFieldAcceptsSpecialCharacters</span>
+                <span class="method-start">115435 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">119077 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">121079 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_177VerifyBillingInformationSateDDabletoSelectOptionFromDropdown</span>
+                <span class="method-start">121081 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">121848 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">Ac</span>
-                <span class="method-start">91806 ms</span>
+                <span class="method-start">123863 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

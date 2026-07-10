@@ -5,11 +5,23 @@
     <classes>
       <class name="Assert_Satellite_Location.Satellite_Location_TC">
         <methods>
-          <include name="TC_132VerifyUserIsAbleToSelectValueFromStateDD"/>
           <include name="Ac"/>
+          <include name="TC_170VerifyBillingInformationCityFieldAcceptsNumbers"/>
           <include name="Bc"/>
+          <include name="TC_167VerifyBillingInformationSuiteTxtfieldAcceptsSpecialCharacters"/>
+          <include name="TC_169VerifyBillingInformationCityFieldAcceptsAlphabets"/>
+          <include name="TC_172VerifyBillingInformationCityFieldisMandatory"/>
           <include name="Bm"/>
+          <include name="TC_165VerifyBillingInformationSuiteTxtfieldAcceptsAlpabets"/>
+          <include name="TC_177VerifyBillingInformationSateDDabletoSelectOptionFromDropdown"/>
+          <include name="TC_174VerifyBillingInformationStateFieldAcceptsAlphabtes"/>
+          <include name="TC_173VerifyBillingInformationStateFieldisMandatoryField"/>
           <include name="Am"/>
+          <include name="TC_175VerifyBillingInformationStateFieldAcceptsNumbers"/>
+          <include name="TC_171VerifyBillingInformationCityFieldAcceptsSpecialCharacters"/>
+          <include name="TC_166VerifyBillingInformationSuiteTxtfieldAcceptsNumbers"/>
+          <include name="TC_176VerifyBillingInformationStateFieldAcceptsSpecialCharacters"/>
+          <include name="TC_168VerifyBillingInformationSuiteTxtfieldisNotMandatory"/>
         </methods>
       </class> <!-- Assert_Satellite_Location.Satellite_Location_TC -->
     </classes>
