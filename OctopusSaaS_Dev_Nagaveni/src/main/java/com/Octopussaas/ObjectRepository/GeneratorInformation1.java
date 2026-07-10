@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.Octopussaass.WebdriverUtility.utilityclassobject;
+import com.Octopussaass.WebdriverUtility.webDriverutility;
 import com.aventstack.extentreports.Status;
 
 public class GeneratorInformation1 {
@@ -141,8 +142,8 @@ public class GeneratorInformation1 {
 	private WebElement skillednursingType;
 	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'Non-Medical Professional')]")
 	private WebElement nonmedicalType;
-	@FindBy (xpath = "//div[@role='checkbox' and .//span[normalize-space()='Contracted']]/div")
-	private WebElement contractedCheckbox;
+	@FindBy(xpath = "//div[contains(@class,'cursor-pointer') and contains(@class,'border-2')]")
+	private WebElement checkBox;
 	@FindBy (xpath = "//input[@id='serviceAddress-email']")
 	private WebElement serviceEmail;
 	@FindBy (xpath = "//input[@id='serviceAddress-phone']")
@@ -155,8 +156,16 @@ public class GeneratorInformation1 {
 	private WebElement billingaddressEmail;
 	@FindBy (xpath = "//input[@id='billingAddress-phone']")
 	private WebElement billinaddressPhone;
+	@FindBy (xpath = "//input[@id='serviceAddress-attention']")
+	private WebElement serviceAttention;
+	@FindBy(xpath = "//span[contains(text(),'Contracted')]")
+	private WebElement contracedsc;
 	
 	
+	public WebElement getServiceAttention() {
+		return serviceAttention;
+	}
+
 	public WebElement getBillinaddressPhone() {
 		return billinaddressPhone;
 	}
@@ -181,9 +190,10 @@ public class GeneratorInformation1 {
 		return serviceEmail;
 	}
 
-	public WebElement getContractedCheckbox() {
-		return contractedCheckbox;
+	public WebElement getCheckBox() {
+		return checkBox;
 	}
+
 
 	public WebElement getNonmedicalType() {
 		return nonmedicalType;
@@ -587,9 +597,12 @@ public class GeneratorInformation1 {
 		
 	}
 	
-	public void ContractedCheckbox()
+	public void ContractedCheckbox() throws InterruptedException
 	{
-		WebElement element = driver.findElement(By.xpath("//div[@role='checkbox' and .//span[normalize-space()='Contracted']]/div"));
+		checkBox.click();
+		WebElement element = driver.findElement(By.xpath("//div[@class='flex items-center rounded-lg  gap-2 w-fit ']"));
+		
+		Thread.sleep(200);
 		String ariaDisabled = element.getAttribute("aria-disabled");
 
 	    if ("true".equals(ariaDisabled)) {
@@ -597,5 +610,21 @@ public class GeneratorInformation1 {
 	    } else {
 	        System.out.println("Element is enabled");
 	    }
+	}
+	
+	public void Contracted() throws InterruptedException
+	{
+		Actions act= new Actions(driver);
+          act.scrollToElement(contracedsc).perform();
+          checkBox.click();
+  		Actions act1= new Actions(driver);
+  		webDriverutility wlib = new webDriverutility();
+  		/*
+  		wlib.waitUntilElementClickable(driver, Yesbtn);
+  		act1.doubleClick(Yesbtn).perform();
+  		//cancelbtn.click();
+  		Thread.sleep(4000);*/
+
+         // Yesbtn.click();
 	}
 }

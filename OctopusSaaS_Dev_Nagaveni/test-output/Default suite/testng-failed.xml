@@ -5,20 +5,11 @@
     <classes>
       <class name="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation">
         <methods>
-          <include name="TC_080GeneratorInformation_Generatorwithchangewithnote"/>
-          <include name="TC_079GeneratorInformation_GeneratorstatuswithTooltip"/>
           <include name="TC_088VerifyContractedcheckboxwithClick"/>
-          <include name="TC_085VerifySelecttheIndustrytype"/>
-          <include name="TC_089VerifycontractedcheckboxwithClick_withaddingInformation"/>
-          <include name="TC_082GeneratorInformation_StatuswithoutNote"/>
-          <include name="TC_090VerifycheckboxwithoutGeneratorBilling"/>
-          <include name="TC_078GeneratorInformation_withDefaultgeneratorStatus"/>
-          <include name="TC_084GeneratorInformation_IndustrytypewithOptions"/>
           <include name="Bc"/>
-          <include name="TC_083GeneratorInformation_Changeinstatus"/>
-          <include name="TC_086VerifySelectmorethanIndustrytype"/>
           <include name="Bm"/>
-          <include name="TC_081GeneratorInformation_statuswithKeepcurrentstatus"/>
+          <include name="TC_089VerifycontractedcheckboxwithClick_withaddingInformation"/>
+          <include name="TC_090VerifycheckboxwithoutGeneratorBilling"/>
           <include name="Am"/>
         </methods>
       </class> <!-- Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation -->

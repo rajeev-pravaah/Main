@@ -317,10 +317,11 @@ public class GeneretorInformation {
           checkBox.click();
   		Actions act1= new Actions(driver);
   		webDriverutility wlib = new webDriverutility();
+  		/*
   		wlib.waitUntilElementClickable(driver, Yesbtn);
   		act1.doubleClick(Yesbtn).perform();
   		//cancelbtn.click();
-  		Thread.sleep(4000);
+  		Thread.sleep(4000);*/
 
          // Yesbtn.click();
 	}

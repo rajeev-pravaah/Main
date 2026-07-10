@@ -1,159 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="10" failed="1" skipped="1">
+<testng-results ignored="0" total="3" passed="1" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-08T14:02:29 IST" name="Default suite" finished-at="2026-07-08T14:06:37 IST" duration-ms="247490">
+  <suite started-at="2026-07-10T15:53:50 IST" name="Default suite" finished-at="2026-07-10T15:55:03 IST" duration-ms="73331">
     <groups>
     </groups>
-    <test started-at="2026-07-08T14:02:29 IST" name="Default test" finished-at="2026-07-08T14:06:37 IST" duration-ms="247490">
+    <test started-at="2026-07-10T15:53:50 IST" name="Default test" finished-at="2026-07-10T15:55:03 IST" duration-ms="73331">
       <class name="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation">
-        <test-method is-config="true" signature="Bc()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:02:30 IST" name="Bc" finished-at="2026-07-08T14:02:48 IST" duration-ms="18973" status="PASS">
+        <test-method is-config="true" signature="Bc()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@233795b6]" started-at="2026-07-10T15:53:50 IST" name="Bc" finished-at="2026-07-10T15:54:08 IST" duration-ms="18480" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bc -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:02:49 IST" name="Bm" finished-at="2026-07-08T14:02:49 IST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@233795b6]" started-at="2026-07-10T15:54:08 IST" name="Bm" finished-at="2026-07-10T15:54:08 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method signature="TC_078GeneratorInformation_withDefaultgeneratorStatus()[pri:1, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:02:49 IST" name="TC_078GeneratorInformation_withDefaultgeneratorStatus" finished-at="2026-07-08T14:03:36 IST" duration-ms="47673" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_078GeneratorInformation_withDefaultgeneratorStatus -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:03:36 IST" name="Am" finished-at="2026-07-08T14:03:38 IST" duration-ms="2011" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:03:38 IST" name="Bm" finished-at="2026-07-08T14:03:38 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method signature="TC_079GeneratorInformation_GeneratorstatuswithTooltip()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:03:38 IST" name="TC_079GeneratorInformation_GeneratorstatuswithTooltip" finished-at="2026-07-08T14:03:39 IST" depends-on-methods="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_078GeneratorInformation_withDefaultgeneratorStatus" duration-ms="625" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_079GeneratorInformation_GeneratorstatuswithTooltip -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:03:39 IST" name="Am" finished-at="2026-07-08T14:03:41 IST" duration-ms="2002" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:03:41 IST" name="Bm" finished-at="2026-07-08T14:03:41 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method signature="TC_080GeneratorInformation_Generatorwithchangewithnote()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:03:41 IST" name="TC_080GeneratorInformation_Generatorwithchangewithnote" finished-at="2026-07-08T14:04:18 IST" depends-on-methods="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_079GeneratorInformation_GeneratorstatuswithTooltip" duration-ms="37086" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_080GeneratorInformation_Generatorwithchangewithnote -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:04:18 IST" name="Am" finished-at="2026-07-08T14:04:20 IST" duration-ms="2003" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:04:20 IST" name="Bm" finished-at="2026-07-08T14:04:20 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method signature="TC_081GeneratorInformation_statuswithKeepcurrentstatus()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:04:20 IST" name="TC_081GeneratorInformation_statuswithKeepcurrentstatus" finished-at="2026-07-08T14:04:24 IST" depends-on-methods="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_080GeneratorInformation_Generatorwithchangewithnote" duration-ms="3569" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_081GeneratorInformation_statuswithKeepcurrentstatus -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:04:24 IST" name="Am" finished-at="2026-07-08T14:04:26 IST" duration-ms="2016" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:04:26 IST" name="Bm" finished-at="2026-07-08T14:04:26 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method signature="TC_082GeneratorInformation_StatuswithoutNote()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:04:26 IST" name="TC_082GeneratorInformation_StatuswithoutNote" finished-at="2026-07-08T14:04:27 IST" depends-on-methods="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_081GeneratorInformation_statuswithKeepcurrentstatus" duration-ms="1620" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_082GeneratorInformation_StatuswithoutNote -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:04:27 IST" name="Am" finished-at="2026-07-08T14:04:29 IST" duration-ms="2007" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:04:29 IST" name="Bm" finished-at="2026-07-08T14:04:29 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method signature="TC_083GeneratorInformation_Changeinstatus()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:04:29 IST" name="TC_083GeneratorInformation_Changeinstatus" finished-at="2026-07-08T14:05:06 IST" depends-on-methods="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_082GeneratorInformation_StatuswithoutNote" duration-ms="36948" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_083GeneratorInformation_Changeinstatus -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:05:06 IST" name="Am" finished-at="2026-07-08T14:05:08 IST" duration-ms="2005" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:05:08 IST" name="Bm" finished-at="2026-07-08T14:05:08 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method signature="TC_084GeneratorInformation_IndustrytypewithOptions()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:05:08 IST" name="TC_084GeneratorInformation_IndustrytypewithOptions" finished-at="2026-07-08T14:05:14 IST" depends-on-methods="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_083GeneratorInformation_Changeinstatus" duration-ms="5799" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_084GeneratorInformation_IndustrytypewithOptions -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:05:14 IST" name="Am" finished-at="2026-07-08T14:05:16 IST" duration-ms="2021" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:05:16 IST" name="Bm" finished-at="2026-07-08T14:05:16 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method signature="TC_085VerifySelecttheIndustrytype()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:05:16 IST" name="TC_085VerifySelecttheIndustrytype" finished-at="2026-07-08T14:05:18 IST" depends-on-methods="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_084GeneratorInformation_IndustrytypewithOptions" duration-ms="1820" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_085VerifySelecttheIndustrytype -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:05:18 IST" name="Am" finished-at="2026-07-08T14:05:20 IST" duration-ms="2013" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Am -->
-        <test-method signature="TC_086VerifySelectmorethanIndustrytype()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:05:20 IST" name="TC_086VerifySelectmorethanIndustrytype" finished-at="2026-07-08T14:05:53 IST" depends-on-methods="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_085VerifySelecttheIndustrytype" duration-ms="33230" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_086VerifySelectmorethanIndustrytype -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:05:20 IST" name="Bm" finished-at="2026-07-08T14:05:20 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:05:53 IST" name="Am" finished-at="2026-07-08T14:05:55 IST" duration-ms="2010" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Am -->
-        <test-method signature="TC_088VerifyContractedcheckboxwithClick()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:05:55 IST" name="TC_088VerifyContractedcheckboxwithClick" finished-at="2026-07-08T14:05:55 IST" depends-on-methods="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_086VerifySelectmorethanIndustrytype" duration-ms="89" status="PASS">
+        <test-method signature="TC_088VerifyContractedcheckboxwithClick()[pri:1, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@233795b6]" started-at="2026-07-10T15:54:08 IST" name="TC_088VerifyContractedcheckboxwithClick" finished-at="2026-07-10T15:54:57 IST" duration-ms="49219" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_088VerifyContractedcheckboxwithClick -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:05:55 IST" name="Bm" finished-at="2026-07-08T14:05:55 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:05:55 IST" name="Am" finished-at="2026-07-08T14:05:57 IST" duration-ms="2014" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@233795b6]" started-at="2026-07-10T15:54:57 IST" name="Am" finished-at="2026-07-10T15:54:59 IST" duration-ms="2012" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_089VerifycontractedcheckboxwithClick_withaddingInformation()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:05:57 IST" name="TC_089VerifycontractedcheckboxwithClick_withaddingInformation" finished-at="2026-07-08T14:06:35 IST" depends-on-methods="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_088VerifyContractedcheckboxwithClick" duration-ms="37251" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@233795b6]" started-at="2026-07-10T15:54:59 IST" name="Bm" finished-at="2026-07-10T15:54:59 IST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_089VerifycontractedcheckboxwithClick_withaddingInformation()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@233795b6]" started-at="2026-07-10T15:54:59 IST" name="TC_089VerifycontractedcheckboxwithClick_withaddingInformation" finished-at="2026-07-10T15:55:01 IST" depends-on-methods="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_088VerifyContractedcheckboxwithClick" duration-ms="1198" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='modal-box']"}
+              <![CDATA[element click intercepted: Element <input id="serviceAddress-street" type="text" step="1" autocomplete="off" class="
+disabled:bg-white
+w-full text-cardTextGray bg-inputBg border-none rounded-full
+py-2 h-9 px-4 text-sm
+focus:outline-none focus:ring-1 leading-tight focus:ring-dashInActiveBtnText
+hover:cursor-text disabled:cursor-not-allowed
+" value="6598 Three Locks Road"> is not clickable at point (834, 824). Other element would receive the click: <div class="z-40 fixed inset-0 bg-[#CCCCCC87] bg-opacity-50 flex justify-center items-center ">...</div>
   (Session info: chrome=149.0.7827.201)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.34.0', revision: '707dcb4246*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6a0267ccf164d5ca4e39784e906cd386, findElement {value=//div[@class='modal-box'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.201, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\nagav\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61974}, goog:processID: 9392, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61974/devtoo..., se:cdpVersion: 149.0.7827.201, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6a0267ccf164d5ca4e39784e906cd386]]>
+Command: [677d3a970534352f8a7e8d6e2b229fb7, clickElement {id=f.8C722CC43E6ED5FCBE67F822C888313B.d.DEEE3B235303B0D15718324F33320379.e.13567}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.201, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\nagav\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52226}, goog:processID: 20916, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52226/devtoo..., se:cdpVersion: 149.0.7827.201, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (677d3a970534352f8a7e8d6e2b229fb7)] -> xpath: //input[@id='serviceAddress-street']]
+Session ID: 677d3a970534352f8a7e8d6e2b229fb7]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='modal-box']"}
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input id="serviceAddress-street" type="text" step="1" autocomplete="off" class="
+disabled:bg-white
+w-full text-cardTextGray bg-inputBg border-none rounded-full
+py-2 h-9 px-4 text-sm
+focus:outline-none focus:ring-1 leading-tight focus:ring-dashInActiveBtnText
+hover:cursor-text disabled:cursor-not-allowed
+" value="6598 Three Locks Road"> is not clickable at point (834, 824). Other element would receive the click: <div class="z-40 fixed inset-0 bg-[#CCCCCC87] bg-opacity-50 flex justify-center items-center ">...</div>
   (Session info: chrome=149.0.7827.201)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.34.0', revision: '707dcb4246*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6a0267ccf164d5ca4e39784e906cd386, findElement {value=//div[@class='modal-box'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.201, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\nagav\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61974}, goog:processID: 9392, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61974/devtoo..., se:cdpVersion: 149.0.7827.201, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6a0267ccf164d5ca4e39784e906cd386
+Command: [677d3a970534352f8a7e8d6e2b229fb7, clickElement {id=f.8C722CC43E6ED5FCBE67F822C888313B.d.DEEE3B235303B0D15718324F33320379.e.13567}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.201, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\nagav\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52226}, goog:processID: 20916, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52226/devtoo..., se:cdpVersion: 149.0.7827.201, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (677d3a970534352f8a7e8d6e2b229fb7)] -> xpath: //input[@id='serviceAddress-street']]
+Session ID: 677d3a970534352f8a7e8d6e2b229fb7
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -164,11 +72,13 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
-at Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_089VerifycontractedcheckboxwithClick_withaddingInformation(Octopussaas_GeneratorInformation.java:1566)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+at Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_089VerifycontractedcheckboxwithClick_withaddingInformation(Octopussaas_GeneratorInformation.java:1572)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -197,27 +107,23 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_089VerifycontractedcheckboxwithClick_withaddingInformation -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:05:57 IST" name="Bm" finished-at="2026-07-08T14:05:57 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:06:35 IST" name="Am" finished-at="2026-07-08T14:06:37 IST" duration-ms="2018" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@233795b6]" started-at="2026-07-10T15:55:01 IST" name="Am" finished-at="2026-07-10T15:55:03 IST" duration-ms="2019" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_090VerifycheckboxwithoutGeneratorBilling()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]" started-at="2026-07-08T14:06:37 IST" name="TC_090VerifycheckboxwithoutGeneratorBilling" finished-at="2026-07-08T14:06:37 IST" depends-on-methods="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_089VerifycontractedcheckboxwithClick_withaddingInformation" duration-ms="0" status="SKIP">
+        <test-method signature="TC_090VerifycheckboxwithoutGeneratorBilling()[pri:0, instance:Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@233795b6]" started-at="2026-07-10T15:55:03 IST" name="TC_090VerifycheckboxwithoutGeneratorBilling" finished-at="2026-07-10T15:55:03 IST" depends-on-methods="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_089VerifycontractedcheckboxwithClick_withaddingInformation" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_090VerifycheckboxwithoutGeneratorBilling() on instance Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa depends on not successfully finished methods 
-[Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_089VerifycontractedcheckboxwithClick_withaddingInformation() on instance Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]]]>
+              <![CDATA[Method Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_090VerifycheckboxwithoutGeneratorBilling() on instance Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@233795b6 depends on not successfully finished methods 
+[Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_089VerifycontractedcheckboxwithClick_withaddingInformation() on instance Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@233795b6]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_090VerifycheckboxwithoutGeneratorBilling() on instance Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa depends on not successfully finished methods 
-[Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_089VerifycontractedcheckboxwithClick_withaddingInformation() on instance Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@1e800aaa]
+              <![CDATA[java.lang.Throwable: Method Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_090VerifycheckboxwithoutGeneratorBilling() on instance Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@233795b6 depends on not successfully finished methods 
+[Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation.TC_089VerifycontractedcheckboxwithClick_withaddingInformation() on instance Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation@233795b6]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
