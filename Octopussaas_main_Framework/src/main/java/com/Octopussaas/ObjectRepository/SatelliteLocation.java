@@ -206,11 +206,57 @@ public class SatelliteLocation {
 	private WebElement billingaddressstateerrormessage;
 	@FindBy(xpath = "//li[@role='option']")
 	private List<WebElement> billingaddressstatelist;
+	@FindBy(id = "billingAddress-zipCode")
+	private WebElement billingaddresszipcodefield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[12]")
+	private WebElement billingaddresszipcodeerrormessage;
+	@FindBy(id = "billingAddress-email")
+	private WebElement billingaddressemailfield;
+	@FindBy(xpath = "//p[text()='Invalid email format']")
+	private WebElement billingaddressemailInvaliderrormessage;
+	@FindBy(xpath = "(//p[text()='This field is required'])[11]")
+	private WebElement billingaddressemailerrormessage;
+	@FindBy(id = "billingAddress-phone")
+	private WebElement billingaddressphonefield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[12]")
+	private WebElement billingaddressphoneerrormessage;
+	@FindBy(id = "billingAddress-phone-ext")
+	private WebElement billingaddressphoneextfield;
 	
 	
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	public WebElement getBillingaddressphoneextfield() {
+		return billingaddressphoneextfield;
+	}
+	public WebElement getBillingaddressphoneerrormessage() {
+		return billingaddressphoneerrormessage;
+	}
+	public WebElement getBillingaddressphonefield() {
+		return billingaddressphonefield;
+	}
+	public WebElement getBillingaddressemailerrormessage() {
+		return billingaddressemailerrormessage;
+	}
+	public WebElement getBillingaddressemailInvaliderrormessage() {
+		return billingaddressemailInvaliderrormessage;
+	}
+	public WebElement getBillingaddressemailfield() {
+		return billingaddressemailfield;
+	}
+	public WebElement getBillingaddresszipcodeerrormessage() {
+		return billingaddresszipcodeerrormessage;
+	}
+	public WebElement getBillingaddresszipcodefield() {
+		return billingaddresszipcodefield;
+	}
 	public List<WebElement> getBillingaddressstatelist() {
 		return billingaddressstatelist;
 	}
