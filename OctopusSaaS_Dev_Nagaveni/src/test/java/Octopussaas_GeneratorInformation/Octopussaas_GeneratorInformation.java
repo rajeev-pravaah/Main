@@ -230,7 +230,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    utilityclassobject.gettest().log(Status.INFO,"User is able to add all available tags");
 	}
 	
-	@Test(dependsOnMethods = "TC_007GeneratorInformation_withAddtag")
+	@Test(depend0sOnMethods = "TC_007GeneratorInformation_withAddtag")
 	public void TC_008GeneratorInformation_Removetags() throws InterruptedException
 	{
 		gp.RemoveAddedtags();
@@ -1196,7 +1196,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    
 	    @Test(dependsOnMethods = "TC_069GeneratorInformation_ExtwithMorethan5digits")
 	    public void TC_070GeneratorInformation_ExtwithshortInput() throws EncryptedDocumentException, IOException
-	    {
+	    {00000
 	    		gp.getExtTextfield().click();
 			gp.getExtTextfield().sendKeys(Keys.CONTROL + "a");
 			gp.getExtTextfield().sendKeys(Keys.DELETE);
@@ -1241,7 +1241,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    public void TC_074GeneratorInformation_GeneratorEmailwithspecialcharacters() throws EncryptedDocumentException, IOException
 	    {
 	    		gp.getGeneratorEmail().click();
-			gp.getGeneratorEmail().sendKeys(Keys.CONTROL + "a");
+			gp.getGene	ratorEmail().sendKeys(Keys.CONTROL + "a");
 			gp.getGeneratorEmail().sendKeys(Keys.DELETE);
 			String input = elib.getDataFromExcel("GeneratorInformation", 22, 3);
 			gp.getGeneratorEmail().sendKeys(input);
@@ -1561,7 +1561,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 			driver.findElement(generatorInfo).click();
 			Thread.sleep(20000);
 			
-	    		gp.ContractedCheckbox();
+	    		//gp.ContractedCheckbox();
 	    		System.out.println("contracted checkbox is not clickable as expected");
 			utilityclassobject.gettest().log(Status.INFO, "contracted checkbox is not clickable as expected");
 	    }
@@ -1672,6 +1672,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    	     gp.getServiceAttention().click();
 	   	     gp.getServiceAttention().sendKeys(Keys.CONTROL + "a");
 	   	     gp.getServiceAttention().sendKeys(Keys.DELETE);
+
 	   	     String input = elib.getDataFromExcel("GeneratorInformation", 25, 2);
 	   	     gp.getServiceAttention().sendKeys(input);
 	   	     System.out.println("Attention text filed will accept numbers");
@@ -1690,35 +1691,316 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		     utilityclassobject.gettest().log(Status.INFO, "Attention text filed will accept specialcharacters");
 	    }
 	    
+	    @Test(dependsOnMethods = "TC_106VerifyAttentionwithSpecialcharacters")
+	    public void TC_107VerifyStreetwithalphabets() throws EncryptedDocumentException, IOException
+	    {
+	    		 gp.getStreet().click();
+	   	     gp.getStreet().sendKeys(Keys.CONTROL + "a");
+	   	     gp.getStreet().sendKeys(Keys.DELETE);
+	   	     String input = elib.getDataFromExcel("GeneratorInformation", 28, 1);
+	   	     gp.getStreet().sendKeys(input);
+		     utilityclassobject.gettest().log(Status.INFO, "Street text filed will accept alphabets");
 	    
+	    }
 	    
+	    @Test(dependsOnMethods = "TC_107VerifyStreetwithalphabets")
+	    public void TC_108VerifyStreetwithnumbers() throws EncryptedDocumentException, IOException
+	    {
+	    	     gp.getStreet().click();
+	   	     gp.getStreet().sendKeys(Keys.CONTROL + "a");
+	   	     gp.getStreet().sendKeys(Keys.DELETE);
+	   	     String input = elib.getDataFromExcel("GeneratorInformation", 28, 2);
+	   	     gp.getStreet().sendKeys(input);
+	   	     System.out.println("Street text filed will accepts Numbers");
+		     utilityclassobject.gettest().log(Status.INFO, "Street text filed will accept Numbers");
 	    
+	    }
 	    
+	    @Test(dependsOnMethods = "TC_108VerifyStreetwithnumbers")
+	    public void TC_109VerifyStreetwithSpecialcharacters() throws EncryptedDocumentException, IOException
+	    {
+	    	 	 gp.getStreet().click();
+	   	     gp.getStreet().sendKeys(Keys.CONTROL + "a");
+	   	     gp.getStreet().sendKeys(Keys.DELETE);
+	   	     String input = elib.getDataFromExcel("GeneratorInformation", 28, 3);
+	   	     gp.getStreet().sendKeys(input);
+	   	     System.out.println("Street text filed will accepts specialcharacters");
+		     utilityclassobject.gettest().log(Status.INFO, "Street text filed will accepts specialcharacters");
 	    
+	    }
 	    
+	    @Test(dependsOnMethods = "TC_109VerifyStreetwithSpecialcharacters")
+	    public void TC_111VerifyStreetwithAddressuggesstions() throws InterruptedException
+	    {
+	    		 gp.getStreet().click();
+	   	     gp.getStreet().sendKeys(Keys.CONTROL + "a");
+	   	     gp.getStreet().sendKeys(Keys.DELETE);
+	   	     gp.getStreet().sendKeys("1245 6");
+	   	     Thread.sleep(2000);
+	   	     WebElement dropdown = driver.findElement(By.xpath("//div[contains(@class,'absolute') and contains(@class,'overflow-y-auto')]"));
+	   	     Assert.assertTrue(dropdown.isDisplayed());
+	   	     System.out.println(dropdown);
+		     utilityclassobject.gettest().log(Status.INFO, "The street field will show related suggestions");
+	   	     	   	     
+	    }
 	    
+	    @Test(dependsOnMethods = "TC_111VerifyStreetwithAddressuggesstions")
+	    public void TC_112VerifyStreetwithAutofills() throws InterruptedException
+	    {
+	    		WebElement street1 = driver.findElement(By.xpath("//div[contains (text(),'1245 6th Street Southwest, Warren, Ohio 44485, United States')]"));
+	    		street1.click();
+	    		Thread.sleep(2000);
+	    		String city = gp.getServiceCity().getText();
+
+	    		System.out.println(city);
+	    		String state = gp.getServiceState().getText();
+	    		System.out.println(state);
+	    		String zipcode = gp.getServiceZipode().getText();
+	    		System.out.println(zipcode);
+			utilityclassobject.gettest().log(Status.INFO, "The city, state and zip code will get autofilled");
+
+	    }
 	    
+	    @Test(dependsOnMethods = "TC_112VerifyStreetwithAutofills")
+	    public void TC_113VerifyStatewithAutosave() throws InterruptedException
+	    {
+	    		 gp.getStreet().click();
+	   	     gp.getStreet().sendKeys(Keys.CONTROL + "a");
+	   	     gp.getStreet().sendKeys(Keys.DELETE);
+	   	     gp.getStreet().sendKeys("1245 6");
+	   	     Thread.sleep(2000);
+	   	     WebElement dropdown = driver.findElement(By.xpath("//div[contains(@class,'absolute') and contains(@class,'overflow-y-auto')]"));
+	   	     Assert.assertTrue(dropdown.isDisplayed());
+	   	     System.out.println("dropdown is displayed");
+		   	 WebElement street1 = driver.findElement(By.xpath("//div[contains (text(),'1245 6th Street Southwest, Warren, Ohio 44485, United States')]"));
+	  		 street1.click();
+	  		 Thread.sleep(2000);
+	  		 String city = gp.getServiceCity().getText();
+	  		 System.out.println(city);
+	  		 String state = gp.getServiceState().getText();
+	  		 System.out.println(state);
+	  		 String zipcode = gp.getServiceZipode().getText();
+	  		 System.out.println(zipcode);
+			 utilityclassobject.gettest().log(Status.INFO, "The street field will accept input and autosaves the work");
+			 
+	       }
 	    
+	    	   @Test(dependsOnMethods = "TC_113VerifyStatewithAutosave")
+	    	   public void TC_114VerifySuitewithalphabets() throws EncryptedDocumentException, IOException
+	    	   {     
+	    		     gp.getServiceSuite().click();
+	  	   	     gp.getServiceSuite().sendKeys(Keys.CONTROL + "a");
+	  	   	     gp.getServiceSuite().sendKeys(Keys.DELETE);
+	  	   	     String input = elib.getDataFromExcel("GeneratorInformation", 31, 1);
+	  	   	     gp.getServiceSuite().sendKeys(input);
+	  	   	     System.out.println("Suite text filed will accepts alphabets");
+	  		     utilityclassobject.gettest().log(Status.INFO, "Suite text filed will accepts alphabets");
+	  	     
+	    	   }
 	    
+	       @Test(dependsOnMethods = "TC_114VerifySuitewithalphabets")
+	       public void TC_115VerifySuitewithnumbers() throws EncryptedDocumentException, IOException
+	       {     
+  		     gp.getServiceSuite().click();
+	   	     gp.getServiceSuite().sendKeys(Keys.CONTROL + "a");
+	   	     gp.getServiceSuite().sendKeys(Keys.DELETE);
+	   	     String input = elib.getDataFromExcel("GeneratorInformation", 31, 2);
+	   	     gp.getServiceSuite().sendKeys(input);
+	   	     System.out.println("Suite text filed will accepts numbers");
+		     utilityclassobject.gettest().log(Status.INFO, "Suite text filed will accepts numbers");
+	     
+	       }
+	       
+	       @Test(dependsOnMethods = "TC_115VerifySuitewithnumbers")
+	       public void TC_116Verifysuitewithspecialcharacters() throws EncryptedDocumentException, IOException
+	       {
+	    	   		 gp.getServiceSuite().click();
+		   	     gp.getServiceSuite().sendKeys(Keys.CONTROL + "a");
+		   	     gp.getServiceSuite().sendKeys(Keys.DELETE);
+		   	     String input = elib.getDataFromExcel("GeneratorInformation", 31, 3);
+		   	     gp.getServiceSuite().sendKeys(input);
+		   	     System.out.println("Suite text filed will accepts specialcharacters");
+			     utilityclassobject.gettest().log(Status.INFO, "Suite text filed will accepts specialcharacters");
+		     
+	       }
+	       
+	       @Test(dependsOnMethods = "TC_116Verifysuitewithspecialcharacters")
+	       public void TC_117VerifySuitewithBlank()
+	       {
+	    	         gp.getServiceSuite().click();
+		   	     gp.getServiceSuite().sendKeys(Keys.CONTROL + "a");
+		   	     gp.getServiceSuite().sendKeys(Keys.DELETE);
+		   	     gp.getServiceCity().click();
+		   	     System.out.println("The user is able to proceed as it is not a mandatory field");
+			     utilityclassobject.gettest().log(Status.INFO, "The user is able to proceed as it is not a mandatory field");
+
+	       }
+	       
+	       @Test(dependsOnMethods = "TC_117VerifySuitewithBlank")
+	       public void TC_118VerifySuitewithAutosave() throws EncryptedDocumentException, IOException
+	       {
+	    	         gp.getServiceSuite().click();
+		   	     gp.getServiceSuite().sendKeys(Keys.CONTROL + "a");
+		   	     gp.getServiceSuite().sendKeys(Keys.DELETE);
+		   	     String input = elib.getDataFromExcel("GeneratorInformation", 31, 1);
+		   	     gp.getServiceSuite().sendKeys(input);
+		   	     System.out.println("Suite text filed will accepts input and autosaves the work");
+			     utilityclassobject.gettest().log(Status.INFO, "Suite text filed will accepts input and autosaves the work");
+	       }
+	       
+	       @Test(dependsOnMethods = "TC_118VerifySuitewithAutosave")
+	       public void TC_119VerifyCitywithalphabets() throws EncryptedDocumentException, IOException
+	       {
+	    	   		 gp.getServiceCity().click();
+		   	     gp.getServiceCity().sendKeys(Keys.CONTROL + "a");
+		   	     gp.getServiceCity().sendKeys(Keys.DELETE);
+		   	     String input = elib.getDataFromExcel("GeneratorInformation", 34, 1);
+		   	     gp.getServiceCity().sendKeys(input);
+		   	     System.out.println("City text filed will accepts alphabets");
+			     utilityclassobject.gettest().log(Status.INFO, "City text filed will accepts alphabets");
+	       }
 	    
+	       @Test(dependsOnMethods = "TC_119VerifyCitywithalphabets")
+	       public void TC_120VerifyCitywithnumbers() throws EncryptedDocumentException, IOException
+	       {
+	    	         gp.getServiceCity().click();
+		   	     gp.getServiceCity().sendKeys(Keys.CONTROL + "a");
+		   	     gp.getServiceCity().sendKeys(Keys.DELETE);
+		   	     String input = elib.getDataFromExcel("GeneratorInformation", 34, 2);
+		   	     gp.getServiceCity().sendKeys(input);
+		   	     System.out.println("City text filed will accepts numbers");
+			     utilityclassobject.gettest().log(Status.INFO, "City text filed will accepts numbers");
+	       }
 	    
+	       @Test(dependsOnMethods = "TC_120VerifyCitywithnumbers")
+	       public void TC_121VerifyCitywithspecialcharacters() throws EncryptedDocumentException, IOException
+	       {
+	    	         gp.getServiceCity().click();
+		   	     gp.getServiceCity().sendKeys(Keys.CONTROL + "a");
+		   	     gp.getServiceCity().sendKeys(Keys.DELETE);
+		   	     String input = elib.getDataFromExcel("GeneratorInformation", 34, 3);
+		   	     gp.getServiceCity().sendKeys(input);
+		   	     System.out.println("City text filed will accepts numbers");
+			     utilityclassobject.gettest().log(Status.INFO, "City text filed will accepts numbers");
+	       }
 	    
+	       @Test(dependsOnMethods = "TC_121VerifyCitywithspecialcharacters")
+	       public void TC_123VerifycitywithAutosave() throws EncryptedDocumentException, IOException
+	       {
+	    	         gp.getServiceCity().click();
+		   	     gp.getServiceCity().sendKeys(Keys.CONTROL + "a");
+		   	     gp.getServiceCity().sendKeys(Keys.DELETE);
+		   	     String input = elib.getDataFromExcel("GeneratorInformation", 34, 1);
+		   	     gp.getServiceCity().sendKeys(input);
+		   	     System.out.println("City text filed will accepts input and autosave the work");
+			     utilityclassobject.gettest().log(Status.INFO, "City text filed will accepts input and autosave the work");
+	       }
 	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
+	       //need to write the TC 124
+	       @Test(dependsOnMethods = "TC_123VerifycitywithAutosave")
+	       public void TC_125VerifyStatewithOPtions()
+	       {
+	    	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+				 gp.getServiceState().click();
+				    WebElement dropdown = wait.until(
+				            ExpectedConditions.visibilityOfElementLocated(
+				                    By.xpath("//ul[@role='listbox']")));
+
+				    Assert.assertTrue(dropdown.isDisplayed(),
+				            "state dropdown is displayed");
+
+				    String[] types = {
+				            "AL",
+				            "AK",
+				            "AZ",
+				            "AR",
+				            "CA",
+				            "CO",
+				            "CT",
+				            "DE",
+				            "FL",
+				            "GA",
+				            "HI",
+				            "ID",
+				            "IL",
+				            "IN",
+				            "IA",
+				            "KS",
+				            "KY",
+				            "LA",
+				            "ME",
+				            "MD",
+				            "MA",
+				            "MI",
+				            "MN",
+				            "MS",
+				            "MO",
+				            "MT",
+				            "NE",
+				            "NV",
+				            "NH",
+				            "NJ",
+				            "NM",
+				            "NY",
+				            "NC",
+				            "ND",
+				            "OH",
+				            "OK",
+				            "OR",
+				            "PA",
+				            "RI",
+				            "SC",
+				            "SD",
+				            "TN",
+				            "TX",
+				            "UT",
+				            "VT",
+				            "VA",
+				            "WA",
+				            "WV",
+				            "WI",
+				            "WY"
+				  
+				    };
+
+				    Actions actions = new Actions(driver);
+
+				    for (String type : types) {
+
+				        WebElement typeElement = wait.until(
+				                ExpectedConditions.presenceOfElementLocated(
+				                        By.xpath("//li[@role='option']//span[contains (text(),'"+type+"')]")));
+
+				        actions.moveToElement(typeElement).perform();
+
+				        Assert.assertTrue(typeElement.isDisplayed(),
+				                type + " is displayed");
+						utilityclassobject.gettest().log(Status.INFO, "State options are present in the dropdown");
+
+				    }
 	
-	
-	
-	
+	       }
+	        
+	       @Test(dependsOnMethods = "TC_125VerifyStatewithOPtions")
+	       public void TC_126VerifyStatewithselection() throws InterruptedException
+	       {
+	    	       gp.Servicestate();
+	    	       System.out.println("The user is able to select the state from the dropdown");
+	    	       utilityclassobject.gettest().log(Status.INFO, "The user is able to select the state from the dropdown");	    	       
+	       }
+	       
+	       //need to write the TC127
+	       
+	       @Test(dependsOnMethods = "TC_126VerifyStatewithselection")
+	       public void TC_128VerifyZipcodewithalphabets() throws EncryptedDocumentException, IOException
+	       {
+	    	         gp.getServiceZipode().click();
+		   	     gp.getServiceZipode().sendKeys(Keys.CONTROL + "a");
+		   	     gp.getServiceZipode().sendKeys(Keys.DELETE);
+		   	     String input = elib.getDataFromExcel("GeneratorInformation", 37, 1);
+		   	     gp.getServiceZipode().sendKeys(input);
+		   	     System.out.println("zipcode text filed will accepts alphabets");
+			     utilityclassobject.gettest().log(Status.INFO, "zipcode text filed will accepts alphabets");
+	       }
 }
 

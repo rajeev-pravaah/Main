@@ -5,11 +5,23 @@
     <classes>
       <class name="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation">
         <methods>
+          <include name="TC_109VerifyStreetwithSpecialcharacters"/>
           <include name="TC_088VerifyContractedcheckboxwithClick"/>
-          <include name="Bc"/>
-          <include name="Bm"/>
+          <include name="TC_107VerifyStreetwithalphabets"/>
           <include name="TC_089VerifycontractedcheckboxwithClick_withaddingInformation"/>
           <include name="TC_090VerifycheckboxwithoutGeneratorBilling"/>
+          <include name="TC_115VerifySuitewithnumbers"/>
+          <include name="TC_108VerifyStreetwithnumbers"/>
+          <include name="TC_106VerifyAttentionwithSpecialcharacters"/>
+          <include name="TC_114VerifySuitewithalphabets"/>
+          <include name="Bc"/>
+          <include name="TC_104VerifyAttentionwithAlphabets"/>
+          <include name="TC_116Verifysuitewithspecialcharacters"/>
+          <include name="Bm"/>
+          <include name="TC_105VerifyAttentionwithNumbers"/>
+          <include name="TC_113VerifyStatewithAutosave"/>
+          <include name="TC_111VerifyStreetwithAddressuggesstions"/>
+          <include name="TC_112VerifyStreetwithAutofills"/>
           <include name="Am"/>
         </methods>
       </class> <!-- Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation -->

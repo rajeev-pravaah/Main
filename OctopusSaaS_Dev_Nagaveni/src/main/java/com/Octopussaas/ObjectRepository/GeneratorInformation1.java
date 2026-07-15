@@ -160,8 +160,50 @@ public class GeneratorInformation1 {
 	private WebElement serviceAttention;
 	@FindBy(xpath = "//span[contains(text(),'Contracted')]")
 	private WebElement contracedsc;
+	@FindBy (xpath = "//input[@id='serviceAddress-city']")
+	private WebElement serviceCity;
+	@FindBy (xpath = "//input[@id='serviceAddress-state']")
+	private WebElement serviceState;
+	@FindBy (xpath = "//input[@id='serviceAddress-zipCode']")
+	private WebElement serviceZipode;
+	@FindBy (xpath = "//input[@id='serviceAddress-suite']")
+	private WebElement serviceSuite;
+	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'AZ')]")
+	private WebElement aZstate;
+	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'FL')]")
+	private WebElement fLstate;
+	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'WV')]")
+	private WebElement wVState;
 	
 	
+	public WebElement getwVState() {
+		return wVState;
+	}
+
+	public WebElement getfLstate() {
+		return fLstate;
+	}
+
+	public WebElement getaZstate() {
+		return aZstate;
+	}
+
+	public WebElement getServiceSuite() {
+		return serviceSuite;
+	}
+
+	public WebElement getServiceZipode() {
+		return serviceZipode;
+	}
+
+	public WebElement getServiceState() {
+		return serviceState;
+	}
+
+	public WebElement getServiceCity() {
+		return serviceCity;
+	}
+
 	public WebElement getServiceAttention() {
 		return serviceAttention;
 	}
@@ -626,5 +668,19 @@ public class GeneratorInformation1 {
   		Thread.sleep(4000);*/
 
          // Yesbtn.click();
+	}
+	
+	public void Servicestate() throws InterruptedException
+	{
+		serviceState.click();
+		aZstate.click();
+		Thread.sleep(200);
+		serviceState.click();
+		Actions act = new Actions(driver);
+		act.moveToElement(fLstate).click().perform();
+		Thread.sleep(200);
+		serviceState.click();
+		Actions act1 = new Actions(driver);
+		act1.moveToElement(wVState).click().perform();
 	}
 }
