@@ -1526,6 +1526,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 			generatormanagment.click();
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			
+			
 			WebElement generatorlocation = driver.findElement(By.xpath("//h6[contains (text(),'Generator Locations')]"));
 			generatorlocation.click();
 			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -1583,7 +1584,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    	     gp.getServiceEmail().click();
 	    	     gp.getServiceEmail().sendKeys(Keys.CONTROL + "a");
 	    	     gp.getServiceEmail().sendKeys(Keys.DELETE);
-	    	     gp.getServiceEmail().sendKeys("test@2342test.com");
+ 	    	     gp.getServiceEmail().sendKeys("test@2342test.com");
 	    	     System.out.println("Email address enterd into the field");
 	    	     gp.getServicePhone().click();
 	    	     gp.getServicePhone().sendKeys(Keys.CONTROL + "a");
@@ -2002,5 +2003,286 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		   	     System.out.println("zipcode text filed will accepts alphabets");
 			     utilityclassobject.gettest().log(Status.INFO, "zipcode text filed will accepts alphabets");
 	       }
-}
+	       
+	       @Test(dependsOnMethods = "TC_128VerifyZipcodewithalphabets")
+	       public void TC_129VerifyZipcodewithnumbers() throws EncryptedDocumentException, IOException
+	       {
+	    	   		 gp.getServiceZipode().click();
+		   	     gp.getServiceZipode().sendKeys(Keys.CONTROL + "a");
+		   	     gp.getServiceZipode().sendKeys(Keys.DELETE);
+		   	     String input = elib.getDataFromExcel("GeneratorInformation", 37, 2);
+		   	     gp.getServiceZipode().sendKeys(input);
+		   	     System.out.println("zipcode text filed will accepts numbers");
+			     utilityclassobject.gettest().log(Status.INFO, "zipcode text filed will accepts numbers");
+	       }
+	       
+	       @Test(dependsOnMethods = "TC_129VerifyZipcodewithnumbers")
+	       public void TC_130VerifyZipcodewithspecialcharacters() throws EncryptedDocumentException, IOException
+	       {
+  	   		 gp.getServiceZipode().click();
+	   	     gp.getServiceZipode().sendKeys(Keys.CONTROL + "a");
+	   	     gp.getServiceZipode().sendKeys(Keys.DELETE);
+	   	     String input = elib.getDataFromExcel("GeneratorInformation", 37, 3);
+	   	     gp.getServiceZipode().sendKeys(input);
+	   	     System.out.println("zipcode text filed will accepts specialcharacters");
+		     utilityclassobject.gettest().log(Status.INFO, "zipcode text filed will accepts specialcharacters");
+     }
+	       
+	       //need to write TC_131 and 132
+	       
+	       @Test(dependsOnMethods = "TC_130VerifyZipcodewithspecialcharacters")
+	       public void TC_133VerifyEmailwithalphabets() throws EncryptedDocumentException, IOException
+	       {
+	    	         gp.getServiceEmail().click();
+		   	     gp.getServiceEmail().sendKeys(Keys.CONTROL + "a");
+		   	     gp.getServiceEmail().sendKeys(Keys.DELETE);
+		   	     String input = elib.getDataFromExcel("GeneratorInformation", 40, 1);
+		   	     gp.getServiceEmail().sendKeys(input);
+		   	     System.out.println("Email text filed will accepts alphabets");
+			     utilityclassobject.gettest().log(Status.INFO, "Email text filed will accepts alphabets");
+	       }
+	       
+	       @Test(dependsOnMethods = "TC_133VerifyEmailwithalphabets")
+	       public void TC_134VerifyEmailwithnumbers() throws EncryptedDocumentException, IOException
+	       {
+	    	         gp.getServiceEmail().click();
+		   	     gp.getServiceEmail().sendKeys(Keys.CONTROL + "a");
+		   	     gp.getServiceEmail().sendKeys(Keys.DELETE);
+		   	     String input = elib.getDataFromExcel("GeneratorInformation", 40, 2);
+		   	     gp.getServiceEmail().sendKeys(input);
+		   	     System.out.println("Email text filed will accepts numbers");
+			     utilityclassobject.gettest().log(Status.INFO, "Email text filed will accepts numbers");
+	       }
+	       
+	       @Test(dependsOnMethods = "TC_134VerifyEmailwithnumbers")
+	       public void TC_135VerifyEmailwithspecialcharacters() throws EncryptedDocumentException, IOException
+	       {
+	    	         gp.getServiceEmail().click();
+		   	     gp.getServiceEmail().sendKeys(Keys.CONTROL + "a");
+		   	     gp.getServiceEmail().sendKeys(Keys.DELETE);
+		   	     String input = elib.getDataFromExcel("GeneratorInformation", 40, 3);
+		   	     gp.getServiceEmail().sendKeys(input);
+		   	     System.out.println("Email text filed will accepts specialcharacters");
+			     utilityclassobject.gettest().log(Status.INFO, "Email text filed will accepts specialcharacters");
+	       }
+	       
+	       @Test(dependsOnMethods = "TC_135VerifyEmailwithspecialcharacters")
+	       public void TC_136VerifyEmailwithInvalidinput() throws EncryptedDocumentException, IOException, InterruptedException
+	       {
+	    	         gp.getServiceEmail().click();
+		   	     gp.getServiceEmail().sendKeys(Keys.CONTROL + "a");
+		   	     gp.getServiceEmail().sendKeys(Keys.DELETE);
+		   	     String input = elib.getDataFromExcel("GeneratorInformation", 40, 4);
+		   	     gp.getServiceEmail().sendKeys(input);
+		   	     //Thread.sleep(200);
+		   	     String errormsg = gp.getEmailinvalidErmsg().getText();
+		   	     System.out.println(errormsg);
+		   	     System.out.println("Email text filed will not accept invalid format and it will propmt Error message");
+			     utilityclassobject.gettest().log(Status.INFO, "Email text filed will not accept invalid format and it will propmt Error messag");
+	       }
+	      
+	       //need to write 137
+	       
+	       @Test(dependsOnMethods = "TC_136VerifyEmailwithInvalidinput")
+	       public void TC_138VerifyPhonewithalphabets() throws EncryptedDocumentException, IOException
+	       {
+	    	        gp.getServicePhone().click();
+				gp.getServicePhone().sendKeys(Keys.CONTROL + "a");
+				gp.getServicePhone().sendKeys(Keys.DELETE);
+				String input = elib.getDataFromExcel("GeneratorInformation", 43, 1);
+				gp.getServicePhone().sendKeys(input);
+				String actualValue = gp.getServicePhone().getAttribute("value");
+
+				// Verify that alphabets are not accepted
+				if (actualValue.matches(".*[a-zA-Z].*")) {
+					System.out.println("Generator Main Phone text field accepted alphabets. :PASS");
+				    utilityclassobject.gettest().log(Status.FAIL,
+				            "Phone text field accepted alphabets.");
+				} else {
+					System.out.println("Phone text field does not accept alphabets. : PASS");
+				    utilityclassobject.gettest().log(Status.PASS,
+				            "Phone text field does not accept alphabets.");
+				}
+				System.out.println("Phone text field will not accept alphabets");
+	       }
+	       
+	       @Test(dependsOnMethods = "TC_138VerifyPhonewithalphabets")
+	       public void TC_139VerifyphonewithNumbers() throws EncryptedDocumentException, IOException
+	       {
+	    	        gp.getServicePhone().click();
+				gp.getServicePhone().sendKeys(Keys.CONTROL + "a");
+				gp.getServicePhone().sendKeys(Keys.DELETE);
+				String input = elib.getDataFromExcel("GeneratorInformation", 43, 2);
+				gp.getServicePhone().sendKeys(input);
+				System.out.println("Phone text filed will accepts numbers");
+			    utilityclassobject.gettest().log(Status.INFO, "Phone text filed will accepts numbers");
+	       }
+	       
+	       @Test(dependsOnMethods = "TC_139VerifyphonewithNumbers")
+	       public void TC_140VerifyPhonewithspecialcharacters() throws EncryptedDocumentException, IOException
+	       {
+	    	        gp.getServicePhone().click();
+				gp.getServicePhone().sendKeys(Keys.CONTROL + "a");
+				gp.getServicePhone().sendKeys(Keys.DELETE);
+				String input = elib.getDataFromExcel("GeneratorInformation", 43, 3);
+				gp.getServicePhone().sendKeys(input);
+				String actualValue = gp.getServicePhone().getAttribute("value");
+
+				// Verify that alphabets are not accepted
+				if (actualValue.matches(".*[#$^&].*")) {
+					System.out.println("Phone text field accepted specialcharacters. :PASS");
+				    utilityclassobject.gettest().log(Status.FAIL,
+				            "Phone text field accepted alphabets.");
+				} else {
+					System.out.println("Phone text field does not accept specialcharacters. : PASS");
+				    utilityclassobject.gettest().log(Status.PASS,
+				            "Phone text field does not accept specialcharacters.");
+				}
+				System.out.println("Phone text field does not accept specialcharacters.");
+	       }
+	       
+	       @Test(dependsOnMethods = "TC_140VerifyPhonewithspecialcharacters")
+	       public void TC_141VerifyPhonewithmorethan10digits()
+	       {
+		     	gp.getServicePhone().click();
+				gp.getServicePhone().sendKeys(Keys.CONTROL + "a");
+				gp.getServicePhone().sendKeys(Keys.DELETE);
+				long txt = 475638476587346783L;
+				gp.getServicePhone().sendKeys(String.valueOf(txt));
+				String actualValue = gp.getServicePhone().getAttribute("value");
+
+				// Verify the field accepts only 10 digits
+				if (actualValue.length() == 10) {
+				    utilityclassobject.gettest().log(Status.FAIL,
+				            "Phone text field accepted more than 10 digits:"+ actualValue);
+				} else {
+				    utilityclassobject.gettest().log(Status.PASS,
+				            "Phone text field does not accept more than 10 didgits: " + actualValue);
+				}
+				System.out.println("Phone text field will not accept more than 10 digits");
+	       }
+	       
+	       @Test(dependsOnMethods = "TC_141VerifyPhonewithmorethan10digits")
+	       public void TC_142VerifyPhonewithshortinput() throws EncryptedDocumentException, IOException, InterruptedException
+	       {
+	    	        gp.getServicePhone().click();
+				gp.getServicePhone().sendKeys(Keys.CONTROL + "a");
+				gp.getServicePhone().sendKeys(Keys.DELETE);
+				String input = elib.getDataFromExcel("GeneratorInformation", 43, 5);
+				gp.getServicePhone().sendKeys(input);
+				Thread.sleep(2000);
+				String errormsg = gp.getPhoneErmsg().getText();
+				System.out.println(errormsg);
+				System.out.println("Phone text field will not accept short input");
+			    utilityclassobject.gettest().log(Status.INFO, "Phone text field will not accept short input");
+
+	       }
+	       
+	       //need to write Tc 143
+	       
+	       @Test(dependsOnMethods = "TC_142VerifyPhonewithshortinput")
+	       public void TC_144VerifyExtwithalphabets() throws EncryptedDocumentException, IOException
+	       {
+	    	        gp.getExt().click();
+				gp.getExt().sendKeys(Keys.CONTROL + "a");
+				gp.getExt().sendKeys(Keys.DELETE);
+				String input = elib.getDataFromExcel("GeneratorInformation", 46, 1);
+				gp.getExt().sendKeys(input);
+				String actualValue = gp.getExt().getAttribute("value");
+
+				// Verify that alphabets are not accepted
+				if (actualValue.matches(".*[a-zA-Z].*")) {
+					System.out.println("Ext text field accepted alphabets. :PASS");
+				    utilityclassobject.gettest().log(Status.FAIL,
+				            "Ext text field accepted alphabets.");
+				} else {
+					System.out.println("Phone text field does not accept alphabets. : PASS");
+				    utilityclassobject.gettest().log(Status.PASS,
+				            "Ext text field does not accept alphabets.");
+				}
+				System.out.println("Ext text field will not accept alphabets");
+	       }
+	       
+	       @Test(dependsOnMethods = "TC_144VerifyExtwithalphabets")
+	       public void TC_145VerifyExtwithNumbers() throws EncryptedDocumentException, IOException
+	       {
+	    	        gp.getExt().click();
+				gp.getExt().sendKeys(Keys.CONTROL + "a");
+				gp.getExt().sendKeys(Keys.DELETE);
+				String input = elib.getDataFromExcel("GeneratorInformation", 46, 2 );
+				gp.getExt().sendKeys(input);
+				System.out.println("Ext text field will accept numbers");
+			    utilityclassobject.gettest().log(Status.INFO, "Ext text field will accept numbers");			
+	       }
+	       
+	       @Test(dependsOnMethods = "TC_145VerifyExtwithNumbers")
+	       public void TC_146VerifyExtwithspecialcharacters() throws EncryptedDocumentException, IOException
+	       {
+	    	        gp.getExt().click();
+				gp.getExt().sendKeys(Keys.CONTROL + "a");
+				gp.getExt().sendKeys(Keys.DELETE);
+				String input = elib.getDataFromExcel("GeneratorInformation", 46, 3);
+				gp.getExt().sendKeys(input);
+				String actualValue = gp.getExt().getAttribute("value");
+
+				// Verify that alphabets are not accepted
+				if (actualValue.matches(".*[#$^&].*")) {
+					System.out.println("Ext text field accepted specialcharacters. :PASS");
+				    utilityclassobject.gettest().log(Status.FAIL,
+				            "Ext text field accepted alphabets.");
+				} else {
+					System.out.println("Ext text field does not accept specialcharacters. : PASS");
+				    utilityclassobject.gettest().log(Status.PASS,
+				            "Ext text field does not accept specialcharacters.");
+				}
+				System.out.println("Ext text field does not accept specialcharacters.");
+	       }
+	       
+	       @Test(dependsOnMethods = "TC_146VerifyExtwithspecialcharacters")
+	       public void TC_147VerifyExtwithmorethan5() throws EncryptedDocumentException, IOException
+	       {
+	    	        gp.getExt().click();
+				gp.getExt().sendKeys(Keys.CONTROL + "a");
+				gp.getExt().sendKeys(Keys.DELETE);
+				String input = elib.getDataFromExcel("GeneratorInformation", 46, 4);
+				gp.getExt().sendKeys(String.valueOf(input));
+				String actualValue = gp.getServicePhone().getAttribute("value");
+
+				// Verify the field accepts only 10 digits
+				if (actualValue.length() == 5) {
+				    utilityclassobject.gettest().log(Status.FAIL,
+				            "Ext text field accepted more than 5 digits:"+ actualValue);
+				} else {
+				    utilityclassobject.gettest().log(Status.PASS,
+				            "Ext text field does not accept more than 5 didgits: " + actualValue);
+				}
+				System.out.println("Ext text field will not accept more than 5 digits");
+	       }
+	       
+	       @Test(dependsOnMethods = "TC_147VerifyExtwithmorethan5")
+	       public void TC_148VerifyExtwithshortInput() throws EncryptedDocumentException, IOException
+	       {
+	   	        gp.getExt().click();
+				gp.getExt().sendKeys(Keys.CONTROL + "a");
+				gp.getExt().sendKeys(Keys.DELETE);
+				String input = elib.getDataFromExcel("GeneratorInformation", 46, 5);
+				gp.getExt().sendKeys(input);
+				System.out.println("Ext text field will accept short input");
+			    utilityclassobject.gettest().log(Status.INFO, "Ext text field will accept short input");			
+           }
+	       
+	       @Test(dependsOnMethods = "TC_148VerifyExtwithshortInput")
+	       public void TC_149VerifyExtwithoutInput()
+	       {
+	    	        gp.getExt().click();
+				gp.getExt().sendKeys(Keys.CONTROL + "a");
+				gp.getExt().sendKeys(Keys.DELETE);
+				System.out.println("The user is able to proceed as it is not mandatory");
+			    utilityclassobject.gettest().log(Status.INFO, "The user is able to proceed as it is not mandatory");			
+	       }
+	       
+}			
+
+
+
 

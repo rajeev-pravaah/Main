@@ -5,24 +5,50 @@
     <classes>
       <class name="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation">
         <methods>
-          <include name="TC_109VerifyStreetwithSpecialcharacters"/>
           <include name="TC_088VerifyContractedcheckboxwithClick"/>
-          <include name="TC_107VerifyStreetwithalphabets"/>
-          <include name="TC_089VerifycontractedcheckboxwithClick_withaddingInformation"/>
+          <include name="TC_128VerifyZipcodewithalphabets"/>
+          <include name="TC_121VerifyCitywithspecialcharacters"/>
+          <include name="TC_119VerifyCitywithalphabets"/>
+          <include name="TC_146VerifyExtwithspecialcharacters"/>
+          <include name="TC_149VerifyExtwithoutInput"/>
+          <include name="TC_118VerifySuitewithAutosave"/>
           <include name="TC_090VerifycheckboxwithoutGeneratorBilling"/>
           <include name="TC_115VerifySuitewithnumbers"/>
+          <include name="TC_145VerifyExtwithNumbers"/>
+          <include name="TC_114VerifySuitewithalphabets"/>
+          <include name="TC_138VerifyPhonewithalphabets"/>
+          <include name="TC_123VerifycitywithAutosave"/>
+          <include name="Bc"/>
+          <include name="TC_148VerifyExtwithshortInput"/>
+          <include name="Bm"/>
+          <include name="TC_139VerifyphonewithNumbers"/>
+          <include name="TC_142VerifyPhonewithshortinput"/>
+          <include name="TC_120VerifyCitywithnumbers"/>
+          <include name="TC_135VerifyEmailwithspecialcharacters"/>
+          <include name="TC_112VerifyStreetwithAutofills"/>
+          <include name="TC_109VerifyStreetwithSpecialcharacters"/>
+          <include name="TC_144VerifyExtwithalphabets"/>
+          <include name="TC_107VerifyStreetwithalphabets"/>
+          <include name="TC_136VerifyEmailwithInvalidinput"/>
+          <include name="TC_089VerifycontractedcheckboxwithClick_withaddingInformation"/>
+          <include name="TC_147VerifyExtwithmorethan5"/>
+          <include name="TC_134VerifyEmailwithnumbers"/>
           <include name="TC_108VerifyStreetwithnumbers"/>
           <include name="TC_106VerifyAttentionwithSpecialcharacters"/>
-          <include name="TC_114VerifySuitewithalphabets"/>
-          <include name="Bc"/>
+          <include name="TC_140VerifyPhonewithspecialcharacters"/>
           <include name="TC_104VerifyAttentionwithAlphabets"/>
           <include name="TC_116Verifysuitewithspecialcharacters"/>
-          <include name="Bm"/>
           <include name="TC_105VerifyAttentionwithNumbers"/>
-          <include name="TC_113VerifyStatewithAutosave"/>
+          <include name="TC_129VerifyZipcodewithnumbers"/>
+          <include name="TC_125VerifyStatewithOPtions"/>
+          <include name="TC_126VerifyStatewithselection"/>
+          <include name="TC_133VerifyEmailwithalphabets"/>
+          <include name="TC_130VerifyZipcodewithspecialcharacters"/>
+          <include name="TC_141VerifyPhonewithmorethan10digits"/>
           <include name="TC_111VerifyStreetwithAddressuggesstions"/>
-          <include name="TC_112VerifyStreetwithAutofills"/>
+          <include name="TC_113VerifyStatewithAutosave"/>
           <include name="Am"/>
+          <include name="TC_117VerifySuitewithBlank"/>
         </methods>
       </class> <!-- Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation -->
     </classes>

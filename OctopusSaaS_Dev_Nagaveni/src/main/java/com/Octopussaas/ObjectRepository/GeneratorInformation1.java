@@ -174,8 +174,26 @@ public class GeneratorInformation1 {
 	private WebElement fLstate;
 	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'WV')]")
 	private WebElement wVState;
+	@FindBy (xpath = "//p[contains (text(),'Invalid email format')]")
+	private WebElement emailinvalidErmsg;
+	@FindBy (xpath = "//p[contains (text(),'Phone number must be 10 digits')]")
+	private WebElement phoneErmsg;
+	@FindBy (xpath = "//input[@id='serviceAddress-phone-ext']")
+	private WebElement ext;
 	
 	
+	public WebElement getExt() {
+		return ext;
+	}
+
+	public WebElement getPhoneErmsg() {
+		return phoneErmsg;
+	}
+
+	public WebElement getEmailinvalidErmsg() {
+		return emailinvalidErmsg;
+	}
+
 	public WebElement getwVState() {
 		return wVState;
 	}
