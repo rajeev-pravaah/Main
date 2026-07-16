@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Random;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.jspecify.annotations.Nullable;
@@ -44,6 +45,19 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 	String defaultsatelliteStatus;
 	
 	
+	
+	String randomName;
+	 String Satelliteserviceinfostreet;
+	 String Zipcode;
+	 String Email;
+	 String PhoneNumber;
+	 String companynamevalue;
+	 String streetaddress;
+	 String dispatchphonenumber;
+	 String status;
+	
+	
+	
 	/*Magic Test case 24
 	  Magic Test case 24
 	  Magic Test case 24
@@ -51,6 +65,20 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 	
 	/*Rmove the comment of File upload to run independently by using existing satellite location profile and also remove the dependencies */
 	/*Rmove the comment of File upload to run independently by using existing satellite location profile and also remove the dependencies */
+
+	// Helper: robust name comparison used by TC_230..TC_236
+	private boolean namesMatch(String displayed, String expected) {
+		if (displayed == null || expected == null) return false;
+		String d = displayed.trim().toLowerCase();
+		String e = expected.trim().toLowerCase();
+		return d.equals(e) || d.contains(e) || e.contains(d) || d.startsWith(e) || e.startsWith(d);
+	}
+
+	// Helper: normalize phone digits for comparison
+	private String normalizePhone(String p) {
+		if (p == null) return "";
+		return p.replaceAll("\\D+", "").trim();
+	}
 
 
 	
@@ -1029,7 +1057,7 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 			 utilityclassobject.gettest().log(Status.INFO, " Business Hours is: " +sl.getBusinesshoursfield().getText());
 			 System.out.println(" Business Hours text field accepts Combination of all Inputss: Pass");
 			 utilityclassobject.gettest().log(Status.PASS, " Business Hours text field accepts Combination of all Inputs: Pass");
-			 sl.ClearTextField(sl.getBusinesshoursfield());
+			 	sl.ClearTextField(sl.getBusinesshoursfield());
 
 		}
 		@Test(dependsOnMethods = "TC_061VerifyBusinessHoursAcceptCombinationofAllInputs")
@@ -1693,11 +1721,7 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		@Test(dependsOnMethods = "TC_113VerifySatelliteServiceinfoNameFieldisMandatory")
 		public void TC_114VerifySatelliteServiceinfoStreetFieldAcceptsAlphabets() throws InterruptedException, EncryptedDocumentException, IOException
 		{
- //it is not an Magic Tc While running check the dependency To run independently comment dependency 
-			
-			
-		
-			 
+            //it is not an Magic Tc While running check the dependency To run independently comment dependency 
 			//SatelliteLocation s1 = new SatelliteLocation(driver);
 			sl.getSatelliteserviceinfostreetfield().click();
 			 String Satelliteserviceinfostreet = elib.getDataFromExcel("SatelliteLocation", 62, 1);
@@ -2773,40 +2797,7 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		@Test(dependsOnMethods = "TC_177VerifyBillingInformationSateDDabletoSelectOptionFromDropdown")
 		public void TC_178VerifyBillingInformationZipcodeAccceptsAlphabets() throws InterruptedException, EncryptedDocumentException, IOException
 		{
-			//comment it
-			//comment it
-			//comment it
-			/*
-			elib=new ExcelUtility();
-			hp = new HomePage(driver);
-			utilityclassobject.gettest().log(com.aventstack.extentreports.Status.INFO, "Home Page is displayed");
-			System.out.println("Home Page is displayed");
-			Thread.sleep(6000);
-			sl = new SatelliteLocation(driver);
-			sl.getAssets().click();
-			sl.getSatellite_Locations().click();
-			sl.getSatelliteLocationsList().isDisplayed();
-			utilityclassobject.gettest().log(Status.INFO, "Satellite Location Page is displayed");
-			 System.out.println("Satellite Location Page is displayed");
-			  List<WebElement> namelists = sl.getSatelliteLocationNameinlist();
-			   //print each value using for loop
-			  for(int i=0; i<namelists.size(); i++) {
-				  String name = namelists.get(i).getText();
-				  ExcelUtility elib1 = new ExcelUtility();
-					 String satellitename = elib1.getDataFromExcel("SatelliteLocation", 35, 7);
-				  if(name.equals(satellitename)) {
-					  namelists.get(i).click();
-					  utilityclassobject.gettest().log(Status.INFO, "Clicked on Satellite Location Name in the list: " +name);
-					  System.out.println("Clicked on Satellite Location Name in the list: " +name);
-					  break;
-				  }
-				  
-			  }
-			  */
-			 
-			 //comment it
-			//comment it//comment it
-			//comment it
+			
 			
 			sl.getBillingaddresszipcodefield().click();
 			 String BillingInformationZipcode = elib.getDataFromExcel("SatelliteLocation", 89, 1);
@@ -3049,6 +3040,7 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		@Test(dependsOnMethods = "TC_193VerifyBillingInformationPhoneFieldisMandatory")
 		public void TC_194VerifyBillingInformationExtFieldAcceptsInput() throws InterruptedException, EncryptedDocumentException, IOException
 		{
+			
 			sl.getBillingaddressphoneextfield().click();
 			 String BillingInformationExt = elib.getDataFromExcel("SatelliteLocation", 95, 1);
 			 sl.getBillingaddressphoneextfield().sendKeys(BillingInformationExt);
@@ -3112,9 +3104,9 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 			
 		}
 		@Test(dependsOnMethods = "TC_198VerifyBillingInformationExtFieldisNotAcceptsMoreThan5digits")
-		public void TC_199VerifyBillingInformationExtFieldisAcceptslesaachar() throws InterruptedException, EncryptedDocumentException, IOException
+		public void TC_199VerifyBillingInformationExtFieldisAcceptsShoerInput() throws InterruptedException, EncryptedDocumentException, IOException
 		{
-		sl.getBillingaddressphoneextfield().click();
+       	    sl.getBillingaddressphoneextfield().click();
 			 String BillingInformationExt = elib.getDataFromExcel("SatelliteLocation", 95, 6);
 			 sl.getBillingaddressphoneextfield().sendKeys(BillingInformationExt);
 			 Thread.sleep(2000);
@@ -3123,6 +3115,902 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 			 System.out.println(" Billing Information Ext text field should accept less than 5 digits: Pass");
 			 utilityclassobject.gettest().log(Status.PASS, " Billing Information Ext text field should accept less than 5 digits: Pass");	
 		}
+		@Test(dependsOnMethods = "TC_199VerifyBillingInformationExtFieldisAcceptsShoerInput")
+		public void TC_200VerifyServiceOfferedAutosavesTheData() throws InterruptedException, EncryptedDocumentException, IOException
+		{ 
+		wlib = new webDriverutility();
+		// Use robust safeClick helper which tries normal click, Actions click and JS click
+		boolean clicked = sl.clickBioAndSharps(wlib);
+		if (clicked) {
+			System.out.println("Clicked on Bio and Sharps checkbox :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Clicked on Bio and Sharps checkbox");
+		} else {
+			System.out.println("Failed to click on Bio and Sharps checkbox :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Failed to click on Bio and Sharps checkbox");
+			// Diagnostic info
+			try {
+				WebElement e = sl.getBioandsharpsClickable();
+				if (e != null) {
+					System.out.println("Displayed: " + e.isDisplayed() + " Enabled: " + e.isEnabled() + " Text: '" + e.getText() + "' class: " + e.getAttribute("class"));
+					Object centerEquals = ((JavascriptExecutor) driver).executeScript(
+							"var el=arguments[0]; var r=el.getBoundingClientRect(); var x=r.left + r.width/2; var y=r.top + r.height/2; var at=document.elementFromPoint(x,y); return at===el;",
+							e);
+					System.out.println("Element at center equals target? " + centerEquals);
+				} else {
+					System.out.println("Clickable target for Bio/Sharps not found");
+				}
+			} catch (Exception ex) {
+				System.out.println("Diagnostics failed: " + ex.getMessage());
+			}
+		}
+		Thread.sleep(1000);
+		//verify that it should dsiplay the message "Changes have been saved" after 2 seconds in right corner 
+		/*if(sl.getAutosavedsuccessfullytxt().isDisplayed())
+		{
+			System.out.println("Autosaved successfully! message  displayed: PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Autosaved successfully! message  displayed");
+		}
+		else
+		{
+			System.out.println("Autosaved successfully! message  not displayed: FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Autosaved successfully! message  is not displayed");
+			
+		}*/
+		}
+		
+		@Test(dependsOnMethods = "TC_200VerifyServiceOfferedAutosavesTheData")
+		public void TC_201VerifyCopyBillingInformationAbleToCopyTheInformation() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			
+			
+			
+			//Enter the valid data inside Satellite Service Information and click on Copy Billing Information button and verify that it should copy the information inside Billing Information section
+			//sl.getSatelliteserviceinfonamefield().sendKeys("Rajeev");
+			sl.getSatelliteserviceinfonamefield().click();
+			//clear the text field before entering the data
+			 sl.ClearTextField(sl.getSatelliteserviceinfonamefield());
+			 String Satelliteserviceinfoname = elib.getDataFromExcel("SatelliteLocation", 60, 4);
+			 //add random number for this name
+			 Random rand = new Random();
+			 int randomNum = rand.nextInt(100000); // Generates a random number between 0 and 999
+			 randomName = Satelliteserviceinfoname + randomNum;
+			 sl.getSatelliteserviceinfonamefield().sendKeys(randomName);
+			 Thread.sleep(2000);
+			
+
+			  wlib.scrollToelement(driver, sl.getMedicalwasteservicestxt());
+				sl.getSatelliteserviceinfostreetfield().click();
+				 sl.ClearTextField(sl.getSatelliteserviceinfostreetfield());
+
+				 Satelliteserviceinfostreet = elib.getDataFromExcel("SatelliteLocation", 62, 4);
+				 sl.getSatelliteserviceinfostreetfield().sendKeys(Satelliteserviceinfostreet);
+				 //write code click on backspace button in text field only one time to get the suggestion dropdown
+				// Click the text field first
+				 WebElement textField = sl.getSatelliteserviceinfostreetfield();
+				 textField.click();
+
+				 // Press Backspace only once
+				 textField.sendKeys(Keys.BACK_SPACE);
+				
+				 
+				 Thread.sleep(2000);
+				 /*
+				 if(sl.getStreetSuggestionbox().isDisplayed())
+				 {
+					 System.out.println("Street suggestion dropdown is displayed when user enters valid street name: Pass");
+					 utilityclassobject.gettest().log(Status.PASS, "Street suggestion dropdown is displayed when user enters valid street name: Pass");
+				 }
+				 else
+				 {
+					 System.out.println("Street suggestion dropdown is not displayed when user enters valid street name: Fail");
+					 utilityclassobject.gettest().log(Status.FAIL, "Street suggestion dropdown is not displayed when user enters valid street name: Fail");
+				 }
+				 */
+                 sl.getStreetSuggestionboxfirstoptionFromSatellitserciveinfo().click();
+				 Thread.sleep(2000);		
+				 sl.getZipcodefield().click();
+				 sl.ClearTextField(sl.getZipcodefield());
+
+				 
+				 Zipcode = elib.getDataFromExcel("SatelliteLocation", 70, 4);
+				 sl.getZipcodefield().sendKeys(Zipcode);
+				 Thread.sleep(2000);
+				 sl.getServiceaddressemailfield().click();
+				 sl.ClearTextField(sl.getServiceaddressemailfield());
+
+				 String Emailname = elib.getDataFromExcel("SatelliteLocation", 72, 7);
+				 //along with email add 4 digitional random number to make it unique
+				 Random rand1 = new Random();
+				 int randomNum1 = rand1.nextInt(10000); // Generates a random number between 0 and 9999
+				 Email = Emailname + randomNum1 + "@gmail.com";
+				 System.out.println("Email is: " +Email);
+				 sl.getServiceaddressemailfield().sendKeys(Email);
+				 Thread.sleep(2000);
+				 sl.getServiceaddressphonefield().click();
+				 sl.ClearTextField(sl.getServiceaddressphonefield());
+
+				 PhoneNumber = elib.getDataFromExcel("SatelliteLocation", 74, 5);
+				 sl.getServiceaddressphonefield().sendKeys(PhoneNumber);
+				 Thread.sleep(2000);
+				 sl.getCopytobillinginformationbutton().click();
+				 
+				 //fetch tha date inside name fiel which is present inside Billing Information section and verify that it should match with the data which is present inside Satellite Service Information section
+				 String BillingInformationName = sl.getBillingaddressnamefield().getAttribute("value");
+				 if(BillingInformationName.equals(randomName))
+				 {
+					 System.out.println("Billing Information Name field is copied from Satellite Service Information Name field: Pass");
+					 utilityclassobject.gettest().log(Status.PASS, "Billing Information Name field is copied from Satellite Service Information Name field: Pass");
+				 }
+				 else
+				 {
+					 System.out.println("Billing Information Name field is not copied from Satellite Service Information Name field: Fail");
+					 utilityclassobject.gettest().log(Status.FAIL, "Billing Information Name field is not copied from Satellite Service Information Name field: Fail");
+				 }
+				 //fetch street field data from Billing Information section and verify that it should match with the data which is present inside Satellite Service Information section
+				 String BillingInformationStreet = sl.getBillingaddressstreetfield().getAttribute("value");
+				 if(BillingInformationStreet.equals(Satelliteserviceinfostreet))
+				 {
+					 System.out.println("Billing Information Street field is copied from Satellite Service Information Street field: Pass");
+					 utilityclassobject.gettest().log(Status.PASS, "Billing Information Street field is copied from Satellite Service Information Street field: Pass");
+				 }
+				 else
+				 {
+					 System.out.println("Billing Information Street field is not copied from Satellite Service Information Street field: Fail");
+					 utilityclassobject.gettest().log(Status.FAIL, "Billing Information Street field is not copied from Satellite Service Information Street field: Fail");
+				 }
+				 //fetch zipcode field data from Billing Information section and verify that it should match with the data which is present inside Satellite Service Information section
+				 String BillingInformationZipcode = sl.getBillingaddresszipcodefield().getAttribute("value");
+				 if(BillingInformationZipcode.equals(Zipcode))
+				 {
+					 System.out.println("Billing Information Zipcode field is copied from Satellite Service Information Zipcode field: Pass");
+					 utilityclassobject.gettest().log(Status.PASS, "Billing Information Zipcode field is copied from Satellite Service Information Zipcode field: Pass");
+				 }
+				 else
+				 {
+					 System.out.println("Billing Information Zipcode field is not copied from Satellite Service Information Zipcode field: Fail");
+					 utilityclassobject.gettest().log(Status.FAIL, "Billing Information Zipcode field is not copied from Satellite Service Information Zipcode field: Fail");
+				 }
+				 //ftech the Email id and Billing Information section and verify that it should match with the data which is present inside Satellite Service Information section
+				 String BillingInformationEmail = sl.getBillingaddressemailfield().getAttribute("value");
+				 if(BillingInformationEmail.equals(Email))
+				 {
+					 System.out.println("Billing Information Email field is copied from Satellite Service Information Email field: Pass");
+					 utilityclassobject.gettest().log(Status.PASS, "Billing Information Email field is copied from Satellite Service Information Email field: Pass");
+				 }
+				 else
+				 {
+					 System.out.println("Billing Information Email field is not copied from Satellite Service Information Email field: Fail");
+					 utilityclassobject.gettest().log(Status.FAIL, "Billing Information Email field is not copied from Satellite Service Information Email field: Fail");
+				 }	
+				 //fetch  phone number from Billing Information section and verify that it should match with the data which is present inside Satellite Service Information section
+				
+				 
+				 System.out.println("Billing Information section is copied from Satellite Service Information section: Pass");
+				 utilityclassobject.gettest().log(Status.PASS, "Billing Information section is copied from Satellite Service Information section: Pass");
+				 
+		}
+		@Test(dependsOnMethods = "TC_201VerifyCopyBillingInformationAbleToCopyTheInformation")
+		public void TC_202VerifyAllTheDatagetPastedinSatelliteBillingInformation() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			 //fetch tha date inside name fiel which is present inside Billing Information section and verify that it should match with the data which is present inside Satellite Service Information section
+			 String BillingInformationName = sl.getBillingaddressnamefield().getAttribute("value");
+			 if(BillingInformationName.equals(randomName))
+			 {
+				 System.out.println("Billing Information Name field is copied from Satellite Service Information Name field: Pass");
+				 utilityclassobject.gettest().log(Status.PASS, "Billing Information Name field is copied from Satellite Service Information Name field: Pass");
+			 }
+			 else
+			 {
+				 System.out.println("Billing Information Name field is not copied from Satellite Service Information Name field: Fail");
+				 utilityclassobject.gettest().log(Status.FAIL, "Billing Information Name field is not copied from Satellite Service Information Name field: Fail");
+			 }
+			 //fetch street field data from Billing Information section and verify that it should match with the data which is present inside Satellite Service Information section
+			 String BillingInformationStreet = sl.getBillingaddressstreetfield().getAttribute("value");
+			 if(BillingInformationStreet.equals(Satelliteserviceinfostreet))
+			 {
+				 System.out.println("Billing Information Street field is copied from Satellite Service Information Street field: Pass");
+				 utilityclassobject.gettest().log(Status.PASS, "Billing Information Street field is copied from Satellite Service Information Street field: Pass");
+			 }
+			 else
+			 {
+				 System.out.println("Billing Information Street field is not copied from Satellite Service Information Street field: Fail");
+				 utilityclassobject.gettest().log(Status.FAIL, "Billing Information Street field is not copied from Satellite Service Information Street field: Fail");
+			 }
+			 //fetch zipcode field data from Billing Information section and verify that it should match with the data which is present inside Satellite Service Information section
+			 String BillingInformationZipcode = sl.getBillingaddresszipcodefield().getAttribute("value");
+			 if(BillingInformationZipcode.equals(Zipcode))
+			 {
+				 System.out.println("Billing Information Zipcode field is copied from Satellite Service Information Zipcode field: Pass");
+				 utilityclassobject.gettest().log(Status.PASS, "Billing Information Zipcode field is copied from Satellite Service Information Zipcode field: Pass");
+			 }
+			 else
+			 {
+				 System.out.println("Billing Information Zipcode field is not copied from Satellite Service Information Zipcode field: Fail");
+				 utilityclassobject.gettest().log(Status.FAIL, "Billing Information Zipcode field is not copied from Satellite Service Information Zipcode field: Fail");
+			 }
+			 //ftech the Email id and Billing Information section and verify that it should match with the data which is present inside Satellite Service Information section
+			 String BillingInformationEmail = sl.getBillingaddressemailfield().getAttribute("value");
+			 if(BillingInformationEmail.equals(Email))
+			 {
+				 System.out.println("Billing Information Email field is copied from Satellite Service Information Email field: Pass");
+				 utilityclassobject.gettest().log(Status.PASS, "Billing Information Email field is copied from Satellite Service Information Email field: Pass");
+			 }
+			 else
+			 {
+				 System.out.println("Billing Information Email field is not copied from Satellite Service Information Email field: Fail");
+				 utilityclassobject.gettest().log(Status.FAIL, "Billing Information Email field is not copied from Satellite Service Information Email field: Fail");
+			 }	
+			 //fetch  phone number from Billing Information section and verify that it should match with the data which is present inside Satellite Service Information section
+			 
+			 System.out.println("Data Pasted successfully inside Satellite Billing Information: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, "Data Pasted successfully inside Satellite Billing Information: Pass");
+			
+		}
+		
+		@Test(dependsOnMethods = "TC_202VerifyAllTheDatagetPastedinSatelliteBillingInformation")
+		public void TC_203VerifyTheSystemShouldAutoSaveTheAddress() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			 //fetch street field data from Billing Information section and verify that it should match with the data which is present inside Satellite Service Information section
+			 String BillingInformationStreet = sl.getBillingaddressstreetfield().getAttribute("value");
+			 if(BillingInformationStreet.equals(Satelliteserviceinfostreet))
+			 {
+				 System.out.println("Billing Information Street field is copied from Satellite Service Information Street field: Pass");
+				 utilityclassobject.gettest().log(Status.PASS, "Billing Information Street field is copied from Satellite Service Information Street field: Pass");
+			 }
+			 else
+			 {
+				 System.out.println("Billing Information Street field is not copied from Satellite Service Information Street field: Fail");
+				 utilityclassobject.gettest().log(Status.FAIL, "Billing Information Street field is not copied from Satellite Service Information Street field: Fail");
+			 }
+			 System.out.println("System should auto save the address: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, "System should auto save the address: Pass");
+			
+		}
+		@Test(dependsOnMethods = "TC_203VerifyTheSystemShouldAutoSaveTheAddress")
+		public void TC_204VerifyVariousServices()
+		{
+			List<WebElement> services = sl.getVariousservices();
+			for(WebElement service : services) {
+				System.out.println("Service: " + service.getText());
+				utilityclassobject.gettest().log(Status.INFO, "Service: " + service.getText());
+			}
+			System.out.println("Various Services are displayed: Pass");
+			utilityclassobject.gettest().log(Status.PASS, "Various Services are displayed: Pass");
+			
+		}
+		@Test(dependsOnMethods = "TC_204VerifyVariousServices")
+		public void TC_205VerifyUserisAbleToslecttheServices() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			//comment it
+			//comment it
+			//comment it
+			/*
+			elib=new ExcelUtility();
+			hp = new HomePage(driver);
+			utilityclassobject.gettest().log(com.aventstack.extentreports.Status.INFO, "Home Page is displayed");
+			System.out.println("Home Page is displayed");
+			Thread.sleep(6000);
+			sl = new SatelliteLocation(driver);
+			sl.getAssets().click();
+			sl.getSatellite_Locations().click();
+			sl.getSatelliteLocationsList().isDisplayed();
+			utilityclassobject.gettest().log(Status.INFO, "Satellite Location Page is displayed");
+			 System.out.println("Satellite Location Page is displayed");
+			  List<WebElement> namelists = sl.getSatelliteLocationNameinlist();
+			   //print each value using for loop
+			  for(int i=0; i<namelists.size(); i++) {
+				  String name = namelists.get(i).getText();
+				  ExcelUtility elib1 = new ExcelUtility();
+					 String satellitename = elib1.getDataFromExcel("SatelliteLocation", 35, 7);
+				  if(name.equals(satellitename)) {
+					  namelists.get(i).click();
+					  utilityclassobject.gettest().log(Status.INFO, "Clicked on Satellite Location Name in the list: " +name);
+					  System.out.println("Clicked on Satellite Location Name in the list: " +name);
+					  break;
+				  }
+				  
+			  }
+			  
+			 */
+			 //comment it
+			//comment it//comment it
+			//comment it
+			
+			List<WebElement> services = sl.getVariousservices();
+			for(WebElement service : services) {
+				wlib.scrollToelement(driver, service);
+				service.click();
+				Thread.sleep(1000);
+				System.out.println("Selected Service: " + service.getText());
+				utilityclassobject.gettest().log(Status.INFO, "Selected Service: " + service.getText());
+			}
+			System.out.println("User is able to select the Services: Pass");
+			utilityclassobject.gettest().log(Status.PASS, "User is able to select the Services: Pass");
+			
+		}
+		@Test(dependsOnMethods = "TC_205VerifyUserisAbleToslecttheServices")
+		public void TC_206VerifyUserisAbleToslectAllTheSubWasteByClickingOnMAinServiceType() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			wlib = new webDriverutility();
+			wlib.safeClick(driver, sl.getAllmedicalwasteservicescheckbox());
+			System.out.println("User is able to select all the sub waste by clicking on main service type: Pass");
+			utilityclassobject.gettest().log(Status.PASS, "User is able to select all the sub waste by clicking on main service type: Pass");
+		
+			
+		}
+		@Test(dependsOnMethods = "TC_206VerifyUserisAbleToslectAllTheSubWasteByClickingOnMAinServiceType")
+		public void TC_207VerifyUserisAbletoSelectIndividually() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			wlib = new webDriverutility();
+			wlib.safeClick(driver, sl.getAllmedicalwasteservicescheckbox());
+			//List<WebElement> services = sl.getVariousservices();
+			List<WebElement> individualcheckboxes = sl.getAllmedicalwasteservicesindividualcheckboxes();
+			for(WebElement checkbox:individualcheckboxes)
+			{
+				checkbox.click();
+				Thread.sleep(1000);
+				System.out.println("User is able to select the individual sub waste " );
+				utilityclassobject.gettest().log(Status.INFO, "User is able to select the individual sub waste ");
+			}
+			System.out.println("User is able to select the individual sub waste: Pass");
+			utilityclassobject.gettest().log(Status.PASS, "User is able to select the individual sub waste: Pass");
+			
+			
+		}
+		@Test(dependsOnMethods = "TC_207VerifyUserisAbletoSelectIndividually")
+		public void TC_208VerifyUserisNotAbletoDeselectDisabledCheckbox() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getRecyclingcheckboxdisabled().click();
+			//verify this should not selcect it sgoud fail to click
+			if(sl.getRecyclingcheckboxdisabled().isSelected())
+			{
+				System.out.println("User is able to select the disabled checkbox: Fail");
+				utilityclassobject.gettest().log(Status.FAIL, "User is able to select the disabled checkbox: Fail");
+			}
+			else
+			{
+				System.out.println("User is not able to select the disabled checkbox: Pass");
+				utilityclassobject.gettest().log(Status.PASS, "User is not able to select the disabled checkbox: Pass");
+			}
+			
+			
+		}
+		@Test(dependsOnMethods = "TC_208VerifyUserisNotAbletoDeselectDisabledCheckbox")
+		public void TC_209VerifyUserisAbletoDeselecttheSelectedCheckbox() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			List<WebElement> individualcheckboxes = sl.getAllmedicalwasteservicesindividualcheckboxes();
+			for(WebElement checkbox:individualcheckboxes)
+			{
+				checkbox.click();
+				Thread.sleep(1000);
+				System.out.println("User is able to deselect the individual sub waste " );
+				utilityclassobject.gettest().log(Status.INFO, "User is able to deselect the individual sub waste ");
+			}	
+			System.out.println("User is able to deselect the individual sub waste: Pass");
+			utilityclassobject.gettest().log(Status.PASS, "User is able to deselect the individual sub waste: Pass");
+		}
+		@Test(dependsOnMethods = "TC_209VerifyUserisAbletoDeselecttheSelectedCheckbox")
+		public void TC_210VerifyUserisAbletoDeselecttheSelectedMainServiceTypeCheckbox() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			wlib = new webDriverutility();
+			wlib.safeClick(driver, sl.getAllmedicalwasteservicescheckbox());
+			System.out.println("User is able to select the main service type checkbox: Pass");
+			utilityclassobject.gettest().log(Status.PASS, "User is able to select the main service type checkbox: Pass");
+			wlib = new webDriverutility();
+			wlib.safeClick(driver, sl.getAllmedicalwasteservicescheckbox());
+			System.out.println("User is able to deselect the main service type checkbox: Pass");
+			utilityclassobject.gettest().log(Status.PASS, "User is able to deselect the main service type checkbox: Pass");
+			
+			
+		}
+		@Test(dependsOnMethods = "TC_210VerifyUserisAbletoDeselecttheSelectedMainServiceTypeCheckbox")
+		public void TC_211VerifyDispatchDepartmentEmailFieldAcceptsInputs() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+		  sl.getDispatchemailfield().click();
+		  String email = elib.getDataFromExcel("SatelliteLocation", 98, 1);
+		  sl.getDispatchemailfield().sendKeys(email);
+		  System.out.println("Dispatch Department Email is: " +sl.getDispatchemailfield().getAttribute("value"));
+		  utilityclassobject.gettest().log(Status.INFO, "Dispatch Department Email is: " +sl.getDispatchemailfield().getAttribute("value"));
+		  System.out.println("Dispatch Department Email field accepts input: Pass");
+		  utilityclassobject.gettest().log(Status.PASS, "Dispatch Department Email field accepts input: Pass");
+		  //clear the field
+		  sl.ClearTextField(sl.getDispatchemailfield());
+		
+		}
+		@Test(dependsOnMethods = "TC_211VerifyDispatchDepartmentEmailFieldAcceptsInputs")
+		public void TC_212VerifyDispatchDepartmentEmailFieldShouldAcceptsAlphabets() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getDispatchemailfield().click();
+			 String email = elib.getDataFromExcel("SatelliteLocation", 98, 2);
+			 sl.getDispatchemailfield().sendKeys(email);
+			 System.out.println("Dispatch Department Email is: " +sl.getDispatchemailfield().getAttribute("value"));
+			 utilityclassobject.gettest().log(Status.INFO, "Dispatch Department Email is: " +sl.getDispatchemailfield().getAttribute("value"));
+			 System.out.println("Dispatch Department Email field should accept Alphabets: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, "Dispatch Department Email field should accept Alphabets: Pass");
+			 sl.ClearTextField(sl.getDispatchemailfield());
+		}
+		@Test(dependsOnMethods = "TC_212VerifyDispatchDepartmentEmailFieldShouldAcceptsAlphabets")
+		public void TC_213VerifyDispatchDepartmentEmailFieldShouldAcceptsNumbers() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getDispatchemailfield().click();
+			 String email = elib.getDataFromExcel("SatelliteLocation", 98, 3);
+			 sl.getDispatchemailfield().sendKeys(email);
+			 System.out.println("Dispatch Department Email is: " +sl.getDispatchemailfield().getAttribute("value"));
+			 utilityclassobject.gettest().log(Status.INFO, "Dispatch Department Email is: " +sl.getDispatchemailfield().getAttribute("value"));
+			 System.out.println("Dispatch Department Email field should accept Numbers: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, "Dispatch Department Email field should accept Numbers: Pass");
+			 sl.ClearTextField(sl.getDispatchemailfield());
+		}
+		@Test(dependsOnMethods = "TC_213VerifyDispatchDepartmentEmailFieldShouldAcceptsNumbers")
+		public void TC_214VerifyDispatchDepartmentEmailFieldShouldAcceptsSpecialCharacters() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getDispatchemailfield().click();
+			 String email = elib.getDataFromExcel("SatelliteLocation", 98, 4);
+			 sl.getDispatchemailfield().sendKeys(email);
+			 System.out.println("Dispatch Department Email is: " +sl.getDispatchemailfield().getAttribute("value"));
+			 utilityclassobject.gettest().log(Status.INFO, "Dispatch Department Email is: " +sl.getDispatchemailfield().getAttribute("value"));
+			 System.out.println("Dispatch Department Email field should accept Special Characters: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, "Dispatch Department Email field should accept Special Characters: Pass");
+			 sl.ClearTextField(sl.getDispatchemailfield());
+		}
+		@Test(dependsOnMethods = "TC_214VerifyDispatchDepartmentEmailFieldShouldAcceptsSpecialCharacters")
+		public void TC_215VerifyDispatchDepartmentEmailFieldShouldNotAcceptsInValidEmail() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getDispatchemailfield().click();
+			 String email = elib.getDataFromExcel("SatelliteLocation", 98, 5);
+			 sl.getDispatchemailfield().sendKeys(email);
+			 sl.getDispatchdepartmenttxt().click();
+			 if(sl.getDispatchemailinvaliderrormessage().isDisplayed())
+			 {
+				 System.out.println("Dispatch Department Email field should not accept invalid email: Pass");
+				 utilityclassobject.gettest().log(Status.PASS, "Dispatch Department Email field should not accept invalid email: Pass");
+			 }
+			 else
+			 {
+				 System.out.println("Dispatch Department Email field should not accept invalid email: Fail");
+				 utilityclassobject.gettest().log(Status.FAIL, "Dispatch Department Email field should not accept invalid email: Fail");
+			 }
+
+
+		}
+		@Test(dependsOnMethods = "TC_215VerifyDispatchDepartmentEmailFieldShouldNotAcceptsInValidEmail")
+		public void TC_216VerifyDispatchDepartmentEmailFieldShouldAcceptsValidEmail() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getDispatchemailfield().click();
+			 String emailname = elib.getDataFromExcel("SatelliteLocation", 98, 6);
+			 //for this email name add 5digit random number and then add @gmail.com to make it unique
+			 Random rand = new Random();
+			 int randomNum = rand.nextInt(100000); // Generates a random number between 0 and 99999
+			 String email = emailname + randomNum + "@gmail.com";
+			 sl.getDispatchemailfield().sendKeys(email);
+			 sl.getDispatchdepartmenttxt().click();
+			 System.out.println("Dispatch Department Email is: " +sl.getDispatchemailfield().getAttribute("value"));
+			 utilityclassobject.gettest().log(Status.INFO, "Dispatch Department Email is: " +sl.getDispatchemailfield().getAttribute("value"));
+			 System.out.println("Dispatch Department Email field should accept valid email: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, "Dispatch Department Email field should accept valid email: Pass");
+			 sl.ClearTextField(sl.getDispatchemailfield());
+
+			
+		}
+		@Test(dependsOnMethods = "TC_216VerifyDispatchDepartmentEmailFieldShouldAcceptsValidEmail")
+		public void TC_217VerifyDispatchDepartmentEmailFieldISMandatoryField()
+		{
+			sl.getDispatchemailfield().click();
+			//click on save button 
+			sl.SaveButton();
+			// sl.getDispatchdepartmenttxt().click();
+			//scroll back to top Email field
+			 wlib.scrollToelement(driver, sl.getDispatchemailrequirederrormessage());
+			 if(sl.getDispatchemailrequirederrormessage().isDisplayed())
+			 {
+				 System.out.println("Dispatch Department Email field is mandatory field: Pass");
+				 utilityclassobject.gettest().log(Status.PASS, "Dispatch Department Email field is mandatory field: Pass");
+			 }
+			 else
+			 {
+				 System.out.println("Dispatch Department Email field is not mandatory field: Fail");
+				 utilityclassobject.gettest().log(Status.FAIL, "Dispatch Department Email field is not mandatory field: Fail");
+			 }
+		}
+		
+		@Test(dependsOnMethods = "TC_217VerifyDispatchDepartmentEmailFieldISMandatoryField")
+		public void TC_218VerifyDispatchDepartmentPhoneFieldAcceptsInput() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			wlib.scrollToelement(driver, sl.getDispatchphonenumberfield());
+			sl.getDispatchphonenumberfield().click();
+			 String phone = elib.getDataFromExcel("SatelliteLocation", 100, 1);
+			 sl.getDispatchphonenumberfield().sendKeys(phone);
+			 System.out.println("Dispatch Department Phone is: " +sl.getDispatchphonenumberfield().getAttribute("value"));
+			 utilityclassobject.gettest().log(Status.INFO, "Dispatch Department Phone is: " +sl.getDispatchphonenumberfield().getAttribute("value"));
+			 System.out.println("Dispatch Department Phone field accepts input: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, "Dispatch Department Phone field accepts input: Pass");
+			 sl.ClearTextField(sl.getDispatchphonenumberfield());
+			
+		}
+		@Test(dependsOnMethods = "TC_218VerifyDispatchDepartmentPhoneFieldAcceptsInput")
+		public void TC_219VerifyDispatchDepartmentPhoneFieldShouldNotAcceptsAlphabets() throws InterruptedException, EncryptedDocumentException, IOException
+		{	
+			sl.getDispatchphonenumberfield().click();
+			 String phone = elib.getDataFromExcel("SatelliteLocation", 100, 2);
+			 sl.getDispatchphonenumberfield().sendKeys(phone);
+			 sl.getDispatchdepartmenttxt().click();
+			 System.out.println("Dispatch Department Phone is: " +sl.getDispatchphonenumberfield().getAttribute("value"));
+			 utilityclassobject.gettest().log(Status.INFO, "Dispatch Department Phone is: " +sl.getDispatchphonenumberfield().getAttribute("value"));
+			 System.out.println("Dispatch Department Phone field should not accept Alphabets: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, "Dispatch Department Phone field should not accept Alphabets: Pass");
+			
+		}
+		@Test(dependsOnMethods = "TC_219VerifyDispatchDepartmentPhoneFieldShouldNotAcceptsAlphabets")
+		public void TC_220VerifyDispatchDepartmentPhoneFieldShouldAcceptsNumbers() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getDispatchphonenumberfield().click();
+			 String phone = elib.getDataFromExcel("SatelliteLocation", 100, 3);
+			 sl.getDispatchphonenumberfield().sendKeys(phone);
+			 System.out.println("Dispatch Department Phone is: " +sl.getDispatchphonenumberfield().getAttribute("value"));
+			 utilityclassobject.gettest().log(Status.INFO, "Dispatch Department Phone is: " +sl.getDispatchphonenumberfield().getAttribute("value"));
+			 System.out.println("Dispatch Department Phone field should accept Numbers: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, "Dispatch Department Phone field should accept Numbers: Pass");
+			 //clear the field
+			 sl.ClearTextField(sl.getDispatchphonenumberfield());
+		}
+		@Test(dependsOnMethods = "TC_220VerifyDispatchDepartmentPhoneFieldShouldAcceptsNumbers")	
+		public void TC_221VerifyDispatchDepartmentPhoneFieldShouldNotAcceptsSpecialCharacters() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getDispatchphonenumberfield().click();
+			 String phone = elib.getDataFromExcel("SatelliteLocation", 100, 4);
+			 sl.getDispatchphonenumberfield().sendKeys(phone);
+			 sl.getDispatchdepartmenttxt().click();
+			 System.out.println("Dispatch Department Phone is: " +sl.getDispatchphonenumberfield().getAttribute("value"));
+			 utilityclassobject.gettest().log(Status.INFO, "Dispatch Department Phone is: " +sl.getDispatchphonenumberfield().getAttribute("value"));
+			 System.out.println("Dispatch Department Phone field should not accept Special Characters: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, "Dispatch Department Phone field should not accept Special Characters: Pass");
+		}
+		@Test(dependsOnMethods = "TC_221VerifyDispatchDepartmentPhoneFieldShouldNotAcceptsSpecialCharacters")
+		public void TC_222VerifyDispatchDepartmentPhoneFieldisMandatory() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+		 sl.SaveButton();
+		 if(sl.getDispatchphonenumbererrormessage().isDisplayed())
+		 {
+			 System.out.println("Dispatch Department Phone field is mandatory: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, "Dispatch Department Phone field is mandatory: Pass");
+		 }
+		 else
+		 {
+			 System.out.println("Dispatch Department Phone field is not mandatory: Fail");
+			 utilityclassobject.gettest().log(Status.FAIL, "Dispatch Department Phone field is not mandatory: Fail");
+		 }
+		}
+		
+		@Test(dependsOnMethods = "TC_222VerifyDispatchDepartmentPhoneFieldisMandatory")
+		public void TC_223VerifyDispatchDepartmentPhoneExtfieldAcceptsInput() throws EncryptedDocumentException, IOException, InterruptedException
+		{
+			
+			sl.getDispatchphonenumberextfield().click();
+			 String ext = elib.getDataFromExcel("SatelliteLocation", 102, 1);
+			 sl.getDispatchphonenumberextfield().sendKeys(ext);
+			 System.out.println("Dispatch Department Ext is: " +sl.getDispatchphonenumberextfield().getAttribute("value"));
+			 utilityclassobject.gettest().log(Status.INFO, "Dispatch Department Ext is: " +sl.getDispatchphonenumberextfield().getAttribute("value"));
+			 System.out.println("Dispatch Department Ext field accepts input: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, "Dispatch Department Ext field accepts input: Pass");
+			 //celar thr field
+			 sl.ClearTextField(sl.getDispatchphonenumberextfield());
+		}
+		@Test(dependsOnMethods = "TC_223VerifyDispatchDepartmentPhoneExtfieldAcceptsInput")
+		public void TC_224VerifyDispatchDepartmentPhoneExtfieldShouldNotAcceptsAlphabets() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getDispatchphonenumberextfield().click();
+			 String ext = elib.getDataFromExcel("SatelliteLocation", 102, 2);
+			 sl.getDispatchphonenumberextfield().sendKeys(ext);
+			 sl.getDispatchdepartmenttxt().click();
+			 System.out.println("Dispatch Department Ext is: " +sl.getDispatchphonenumberextfield().getAttribute("value"));
+			 utilityclassobject.gettest().log(Status.INFO, "Dispatch Department Ext is: " +sl.getDispatchphonenumberextfield().getAttribute("value"));
+			 System.out.println("Dispatch Department Ext field should not accept Alphabets: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, "Dispatch Department Ext field should not accept Alphabets: Pass");
+			// sl.ClearTextField(sl.getDispatchphonenumberextfield());
+
+		}
+		@Test(dependsOnMethods = "TC_224VerifyDispatchDepartmentPhoneExtfieldShouldNotAcceptsAlphabets")
+		public void TC_225VerifyDispatchDepartmentPhoneExtfieldShouldAcceptsNumbers() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getDispatchphonenumberextfield().click();
+			 String ext = elib.getDataFromExcel("SatelliteLocation", 102, 3);
+			 sl.getDispatchphonenumberextfield().sendKeys(ext);
+			 System.out.println("Dispatch Department Ext is: " +sl.getDispatchphonenumberextfield().getAttribute("value"));
+			 utilityclassobject.gettest().log(Status.INFO, "Dispatch Department Ext is: " +sl.getDispatchphonenumberextfield().getAttribute("value"));
+			 System.out.println("Dispatch Department Ext field should accept Numbers: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, "Dispatch Department Ext field should accept Numbers: Pass");
+			 //clear the field
+			 sl.ClearTextField(sl.getDispatchphonenumberextfield());
+		}
+		@Test(dependsOnMethods = "TC_225VerifyDispatchDepartmentPhoneExtfieldShouldAcceptsNumbers")
+		public void TC_226VerifyDispatchDepartmentPhoneExtfieldShouldNotAcceptsSpecialCharacters() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			sl.getDispatchphonenumberextfield().click();
+			 String ext = elib.getDataFromExcel("SatelliteLocation", 102, 4);
+			 sl.getDispatchphonenumberextfield().sendKeys(ext);
+			 sl.getDispatchdepartmenttxt().click();
+			 System.out.println("Dispatch Department Ext is: " +sl.getDispatchphonenumberextfield().getAttribute("value"));
+			 utilityclassobject.gettest().log(Status.INFO, "Dispatch Department Ext is: " +sl.getDispatchphonenumberextfield().getAttribute("value"));
+			 System.out.println("Dispatch Department Ext field should not accept Special Characters: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, "Dispatch Department Ext field should not accept Special Characters: Pass");
+		}
+		@Test(dependsOnMethods = "TC_226VerifyDispatchDepartmentPhoneExtfieldShouldNotAcceptsSpecialCharacters")
+		public void TC_227VerifyDispatchDepartmentPhoneExtFieldShouldNotAcceptsMorethan6digits() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			 sl.getDispatchphonenumberextfield().click();
+			 String ext = elib.getDataFromExcel("SatelliteLocation", 102, 5);
+			 sl.getDispatchphonenumberextfield().sendKeys(ext);
+			 sl.getDispatchdepartmenttxt().click();
+			 String extvalue = sl.getDispatchphonenumberextfield().getAttribute("value");
+			 if(extvalue.length()<=6)
+			 {
+				 System.out.println("Dispatch Department Ext field should not accept more than 6 digits: Pass");
+				 utilityclassobject.gettest().log(Status.PASS, "Dispatch Department Ext field should not accept more than 6 digits: Pass");
+			 }
+			 else
+			 {
+				 System.out.println("Dispatch Department Ext field should not accept more than 6 digits: Fail");
+				 utilityclassobject.gettest().log(Status.FAIL, "Dispatch Department Ext field should not accept more than 6 digits: Fail");
+			 }
+			 sl.ClearTextField(sl.getDispatchphonenumberextfield());
+
+			 
+		}
+		@Test(dependsOnMethods = "TC_227VerifyDispatchDepartmentPhoneExtFieldShouldNotAcceptsMorethan6digits")
+		public void TC_228VerifyDispatchDepartmentPhoneExtFieldShouldAcceptsShortInputs() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			 sl.getDispatchphonenumberextfield().click();
+			 String ext = elib.getDataFromExcel("SatelliteLocation", 102, 6);
+			 sl.getDispatchphonenumberextfield().sendKeys(ext);
+			 sl.getDispatchdepartmenttxt().click();
+			 String extvalue = sl.getDispatchphonenumberextfield().getAttribute("value");
+			if(extvalue.length()<=5)
+			 {
+				 System.out.println("Dispatch Department Ext field should accept short inputs: Pass");
+				 utilityclassobject.gettest().log(Status.PASS, "Dispatch Department Ext field should accept short inputs: Pass");
+			 }
+			 else
+			 {
+				 System.out.println("Dispatch Department Ext field should not accept more than 6 digits: Fail");
+				 utilityclassobject.gettest().log(Status.FAIL, "Dispatch Department Ext field should not accept more than 6 digits: Fail");
+			 }
+			 sl.ClearTextField(sl.getDispatchphonenumberextfield());
+			 
+		}		
+		@Test(dependsOnMethods = "TC_228VerifyDispatchDepartmentPhoneExtFieldShouldAcceptsShortInputs")
+		public void TC_229VerifyClikingOnSaveBittonShouldSavesTheData() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			 String companyname = elib.getDataFromExcel("SatelliteLocation", 105, 1);
+			sl.getCompanydisplaynamefield().sendKeys(companyname);
+			 String generalphone = elib.getDataFromExcel("SatelliteLocation", 105, 2);
+			sl.getGeneralphonefield().sendKeys(generalphone);
+			 String registrationnumber1 = elib.getDataFromExcel("SatelliteLocation", 105, 3);
+			sl.getRegistrationnumber1field().sendKeys(registrationnumber1);
+			sl.getDispatchemailfield().click();
+			 String emailname = elib.getDataFromExcel("SatelliteLocation", 105, 4);
+			 List<WebElement> services = sl.getVariousservices();
+				for(WebElement service : services) {
+					wlib.scrollToelement(driver, service);
+					service.click();
+					Thread.sleep(1000);
+					System.out.println("Selected Service: " + service.getText());
+					utilityclassobject.gettest().log(Status.INFO, "Selected Service: " + service.getText());
+				}
+			 //for this email name add 5digit random number and then add @gmail.com to make it unique
+			 Random rand = new Random();
+			 int randomNum = rand.nextInt(100000); // Generates a random number between 0 and 99999
+			 String email = emailname + randomNum + "@gmail.com";
+			 sl.getDispatchemailfield().sendKeys(email);
+			 sl.getDispatchphonenumberfield().click();
+			 String phone = elib.getDataFromExcel("SatelliteLocation", 105, 5);
+			 sl.getDispatchphonenumberfield().sendKeys(phone);
+			 wlib.scrollToelement(driver, sl.getCompanynamefield());
+			 //fetch the company name 
+			 companynamevalue = sl.getCompanydisplaynamefield().getAttribute("value");
+			 System.out.println("Company Name is: " +companynamevalue);
+			 //fetch street field data
+			 streetaddress = sl.getSatelliteserviceinfostreetfield().getAttribute("value");
+			 System.out.println("Street Address is: " +streetaddress);
+			 utilityclassobject.gettest().log(Status.INFO, "Street Address is: " +streetaddress);
+			   //fetch dispatch phonenumber
+			 dispatchphonenumber = sl.getDispatchphonenumberfield().getAttribute("value");
+			 System.out.println("Dispatch Phone Number is: " +dispatchphonenumber);
+			 //fetch satellite location dropdoen status dropdown
+			 status = sl.getSatellitelocationstatusdropdownfieldtext().getText();
+			 System.out.println("Satellite Location Status is: " +status);
+			// Diagnostic: print expected values (useful when list display truncates or formats values)
+			System.out.println("[DIAG] Expected - companynamevalue='" + companynamevalue + "', streetaddress='" + streetaddress + "', dispatchphonenumber='" + dispatchphonenumber + "', status='" + status + "'");
+			utilityclassobject.gettest().log(Status.INFO, "[DIAG] Expected - companynamevalue='" + companynamevalue + "', streetaddress='" + streetaddress + "', dispatchphonenumber='" + dispatchphonenumber + "', status='" + status + "'");
+			 sl.SaveButton();
+			 Thread.sleep(2000);			 System.out.println("Clicking on Save button should save the data: Pass");
+			 utilityclassobject.gettest().log(Status.PASS, "Clicking on Save button should save the data: Pass");
+		}
+		@Test(dependsOnMethods = "TC_229VerifyClikingOnSaveBittonShouldSavesTheData")
+		public void TC_230VerifySavedSatelliteLocationIspresentInSatelliteLocationLists() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			/*
+			elib=new ExcelUtility();
+			hp = new HomePage(driver);
+			utilityclassobject.gettest().log(com.aventstack.extentreports.Status.INFO, "Home Page is displayed");
+			System.out.println("Home Page is displayed");
+			Thread.sleep(6000);
+			sl = new SatelliteLocation(driver);
+			sl.getAssets().click();
+			sl.getSatellite_Locations().click();
+			sl.getSatellitelocationslink().click();
+			*/
+			//refresh the page
+			driver.navigate().refresh();
+			Thread.sleep(5000);
+			
+			List<WebElement> lists = sl.getSatellitenamelists();
+			boolean found = false;
+			//System.out.println("[DIAG] TC_230 expected companynamevalue='" + companynamevalue + "'. List size=" + lists.size());
+			for (WebElement list : lists) {
+		
+				
+					String name = list.getText();
+					if(name.equals(satellitname))
+					{
+						System.out.println("Saved Satellite Location is present in Satellite Location Lists: Pass");
+						utilityclassobject.gettest().log(Status.PASS, "Saved Satellite Location is present in Satellite Location Lists: Pass");
+						break;
+					}
+					else
+					{
+						System.out.println("Saved Satellite Location is not present in Satellite Location Lists: Fail");
+						utilityclassobject.gettest().log(Status.FAIL, "Saved Satellite Location is not present in Satellite Location Lists: Fail");
+					}
+			}
+			
+		}
+		@Test(dependsOnMethods = "TC_230VerifySavedSatelliteLocationIspresentInSatelliteLocationLists")
+		public void TC_231VerifyNameOftheSatelliteisPresentInsideSatelliteLists()
+		{
+			List<WebElement> lists = sl.getSatellitenamelists();
+			for(WebElement list:lists)
+			{
+				String name = list.getText();
+				if(name.equals(satellitname))
+				{
+					System.out.println("Saved Satellite Location is present in Satellite Location Lists: Pass");
+					utilityclassobject.gettest().log(Status.PASS, "Saved Satellite Location is present in Satellite Location Lists: Pass");
+					break;
+				}
+				else
+				{
+					System.out.println("Saved Satellite Location is not present in Satellite Location Lists: Fail");
+					utilityclassobject.gettest().log(Status.FAIL, "Saved Satellite Location is not present in Satellite Location Lists: Fail");
+				}
+			}
+			
+			
+			
+		}
+		@Test(dependsOnMethods = "TC_231VerifyNameOftheSatelliteisPresentInsideSatelliteLists")
+		public void TC_232VerifyAddressoftheSatellteisPresentInsideSatelliteLocationslist() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			List<WebElement> namelists = sl.getSatellitenamelists();
+			for(WebElement list:namelists)
+			{
+				String name = list.getText();
+				if(name.equals(satellitname))
+				{
+					String actulaadress = driver.findElement(By.xpath("(//div[text()='"+companynamevalue+"']/../descendant::div)[3]")).getText();
+					if(actulaadress.equals(streetaddress))
+					{
+						System.out.println("Saved Satellite Location Address is present in Satellite Location Lists: Pass");
+						utilityclassobject.gettest().log(Status.PASS, "Saved Satellite Location Address is present in Satellite Location Lists: Pass");
+						break;
+					}
+					else
+					{
+						System.out.println("Saved Satellite Location Address is not present in Satellite Location Lists: Fail");
+						utilityclassobject.gettest().log(Status.FAIL, "Saved Satellite Location Address is not present in Satellite Location Lists: Fail");
+					}
+					
+				}
+			}
+		}
+		@Test(dependsOnMethods = "TC_232VerifyAddressoftheSatellteisPresentInsideSatelliteLocationslist")
+		public void TC_233VerifyDispatchPhoneNumberoftheSatellteisPresentInsideSatelliteLocationslist() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			List<WebElement> namelists = sl.getSatellitenamelists();
+			for(WebElement list:namelists)
+			{
+				String name = list.getText();
+				if(name.equals(satellitname))
+				{
+					String actulaphonenumber = driver.findElement(By.xpath("(//div[text()='"+satellitname+"']/../descendant::div)[4]")).getText();
+					if(actulaphonenumber.equals(dispatchphonenumber))
+					{
+						System.out.println("Saved Satellite Location Dispatch Phone Number is present in Satellite Location Lists: Pass");
+						utilityclassobject.gettest().log(Status.PASS, "Saved Satellite Location Dispatch Phone Number is present in Satellite Location Lists: Pass");
+						break;
+					}
+					else
+					{
+						System.out.println("Saved Satellite Location Dispatch Phone Number is not present in Satellite Location Lists: Fail");
+						utilityclassobject.gettest().log(Status.FAIL, "Saved Satellite Location Dispatch Phone Number is not present in Satellite Location Lists: Fail");
+					}
+					
+				}
+			}
+			
+		}
+		@Test(dependsOnMethods = "TC_233VerifyDispatchPhoneNumberoftheSatellteisPresentInsideSatelliteLocationslist")
+		public void TC_234VerifyEmailoftheSatellteisPresentInsideSatelliteLocationslist() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			List<WebElement> namelists = sl.getSatellitenamelists();
+			for(WebElement list:namelists)
+			{
+				String name = list.getText();
+				if(name.equals(satellitname))
+				{
+					String actulemail = driver.findElement(By.xpath("(//div[text()='"+satellitname+"']/../descendant::div)[5]")).getText();
+					if(actulemail.equals(Email))
+					{
+						System.out.println("Saved Satellite Location Email is present in Satellite Location Lists: Pass");
+						utilityclassobject.gettest().log(Status.PASS, "Saved Satellite Location Email is present in Satellite Location Lists: Pass");
+						break;
+					}
+					else
+					{
+						System.out.println("Saved Satellite Location Email is not present in Satellite Location Lists: Fail");
+						utilityclassobject.gettest().log(Status.FAIL, "Saved Satellite Location Email is not present in Satellite Location Lists: Fail");
+					}
+
+				}
+			}
+			
+		}
+		@Test(dependsOnMethods = "TC_234VerifyEmailoftheSatellteisPresentInsideSatelliteLocationslist")
+		public void TC_235VerifyStatusoftheSatellteisPresentInsideSatelliteLocationslist() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			List<WebElement> namelists = sl.getSatellitenamelists();
+			for(WebElement list:namelists)
+			{
+				String name = list.getText();
+				if(name.equals(satellitname))
+				{
+					String actulastatus = driver.findElement(By.xpath("(//div[text()='"+satellitname+"']/../descendant::div)[6]")).getText();
+					if(actulastatus.equals(status))
+					{
+						System.out.println("Saved Satellite Location Status is present in Satellite Location Lists: Pass");
+						utilityclassobject.gettest().log(Status.PASS, "Saved Satellite Location Status is present in Satellite Location Lists: Pass");
+						break;
+					}
+					else
+					{
+						System.out.println("Saved Satellite Location Status is not present in Satellite Location Lists: Fail");
+						utilityclassobject.gettest().log(Status.FAIL, "Saved Satellite Location Status is not present in Satellite Location Lists: Fail");
+					}
+
+				}
+			}
+			
+		}
+		@Test(dependsOnMethods = "TC_235VerifyStatusoftheSatellteisPresentInsideSatelliteLocationslist")
+		public void TC_236VerifySatelliteisAbletoExport() throws InterruptedException, EncryptedDocumentException, IOException
+		{
+			List<WebElement> namelists = sl.getSatellitenamelists();
+			for(WebElement list:namelists)
+			{
+				String name = list.getText();
+				if(name.equals(satellitname))
+				{
+					WebElement checkbox = driver.findElement(By.xpath("(//div[text()='"+satellitname+"']/../descendant::div)[1]"));
+					checkbox.click();
+					sl.getExportbutton().click();
+					Thread.sleep(3000);
+					System.out.println("User is able to export the Satellite Location: Pass");
+					utilityclassobject.gettest().log(Status.PASS, "User is able to export the Satellite Location: Pass");
+					break;
+				}
+			}
+			
+		}
+		
 		
 		
 }

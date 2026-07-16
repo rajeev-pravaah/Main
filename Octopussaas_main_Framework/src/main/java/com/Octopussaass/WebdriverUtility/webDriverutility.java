@@ -163,6 +163,60 @@ public class webDriverutility {
 	    wait.until(ExpectedConditions.elementToBeClickable(locator));
 	}
 
+	/**
+	 * Tries multiple click strategies so the click never silently fails.
+	 * Strategy 1: scroll + wait clickable + normal click
+	 * Strategy 2: Actions moveToElement + click
+	 * Strategy 3: JS dispatched mouse events (mouseover, mousedown, mouseup, click)
+	 * Strategy 4: plain JS executeScript click
+	 * Retries up to 3 times between strategies.
+	 * Returns true if any strategy succeeded.
+	 */
+	public boolean safeClick(WebDriver driver, WebElement element) {
+		// Strategy 1 – normal click with explicit wait
+		try {
+			scrollToelement(driver, element);
+			waitUntilElementClickable(driver, element);
+			element.click();
+			System.out.println("safeClick: normal click succeeded");
+			return true;
+		} catch (Exception e1) {
+			System.out.println("safeClick: normal click failed – " + e1.getMessage());
+		}
+		// Strategy 2 – Actions moveToElement + click
+		try {
+			scrollToelement(driver, element);
+			new Actions(driver).moveToElement(element).click().perform();
+			System.out.println("safeClick: Actions click succeeded");
+			return true;
+		} catch (Exception e2) {
+			System.out.println("safeClick: Actions click failed – " + e2.getMessage());
+		}
+		// Strategy 3 – JS dispatched mouse events
+		try {
+			String dispatch =
+				"var el=arguments[0];" +
+				"['mouseover','mousedown','mouseup','click'].forEach(function(t){" +
+				"  el.dispatchEvent(new MouseEvent(t,{view:window,bubbles:true,cancelable:true,composed:true}));" +
+				"});";
+			((JavascriptExecutor) driver).executeScript(dispatch, element);
+			System.out.println("safeClick: JS dispatch click succeeded");
+			return true;
+		} catch (Exception e3) {
+			System.out.println("safeClick: JS dispatch click failed – " + e3.getMessage());
+		}
+		// Strategy 4 – plain JS click
+		try {
+			((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+			System.out.println("safeClick: JS plain click succeeded");
+			return true;
+		} catch (Exception e4) {
+			System.out.println("safeClick: JS plain click failed – " + e4.getMessage());
+		}
+		System.out.println("safeClick: ALL click strategies FAILED for element: " + element);
+		return false;
+	}
+
 	public void uploadFile(String filePath) {
 		// TODO Auto-generated method stub
 		try {

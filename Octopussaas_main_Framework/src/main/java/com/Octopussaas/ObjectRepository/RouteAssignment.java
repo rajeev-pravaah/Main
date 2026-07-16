@@ -364,11 +364,28 @@ public class RouteAssignment {
 	private WebElement closepopupfromMap;
 	@FindBy(xpath = "//*[name()='svg' and contains(@class,'starIcon')]")
 	private WebElement stariconinMap;
+	@FindBy(xpath = "//label[text()='Subcontractor *']")
+	private WebElement subcontrctortext;
+	@FindBy(xpath = "//div[@class='flex gap-8 w-full']")
+	private WebElement subcontractorAllFields;
+	@FindBy(xpath = "//h6[text()='Generator Locations']")
+	private WebElement generatorLocations;
 	
 	
 	
 	
 	
+	
+	
+	public WebElement getGeneratorLocations() {
+		return generatorLocations;
+	}
+	public WebElement getSubcontractorAllFields() {
+		return subcontractorAllFields;
+	}
+	public WebElement getSubcontrctortext() {
+		return subcontrctortext;
+	}
 	public WebElement getStariconinMap() {
 		return stariconinMap;
 	}

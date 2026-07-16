@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -222,17 +223,140 @@ public class SatelliteLocation {
 	private WebElement billingaddressphoneerrormessage;
 	@FindBy(id = "billingAddress-phone-ext")
 	private WebElement billingaddressphoneextfield;
+	@FindBy(xpath = "//span[text()='Bio/Sharps']/../descendant::div")
+	private WebElement bioandsharpscheckbox;
+	@FindBy(xpath = "//div[contains(text(),'Autosaved successfully!')]")
+	private WebElement autosavedsuccessfullytxt;
+	@FindBy(xpath = "//label[text()='Copy to Billing Information']/../descendant::button")
+	private WebElement copytobillinginformationbutton;
+	@FindBy(xpath = "//div[text()='1237 3rd Street, Portsmouth, Ohio 45662, United States']")
+	private WebElement streetSuggestionboxfirstoptionFromSatellitserciveinfo;
+	@FindBy(xpath = "//span[text()='Medical Waste Services']/../../..")
+	private List<WebElement> variousservices;
+	@FindBy(xpath = "//span[text()='Medical Waste Services']/../descendant::div")
+	private WebElement allmedicalwasteservicescheckbox;
+	@FindBy(xpath = "//div[@class='flex items-center mb-2 ']/descendant::div[@role='checkbox']")
+	private List<WebElement> allmedicalwasteservicesindividualcheckboxes;
+	@FindBy(xpath = "//span[text()='Recycling']/../div")
+	private WebElement recyclingcheckboxdisabled;
+	@FindBy(id = "dispatch-email")
+	private WebElement dispatchemailfield;
+	@FindBy(xpath = "//p[text()='Please enter a valid email address']")
+	private WebElement dispatchemailinvaliderrormessage;
+	@FindBy(xpath = "//div[text()='Dispatch Department']")
+	private WebElement dispatchdepartmenttxt;
+	@FindBy(xpath = "//label[text()='Email*']/../../descendant::p[text()='Email is required']")
+	private WebElement dispatchemailrequirederrormessage;
+	@FindBy(id = "dispatch-phone-number")
+	private WebElement dispatchphonenumberfield;
+	@FindBy(xpath = "(//label[text()='Phone'])[3]/../../descendant::p")
+	private WebElement dispatchphonenumbererrormessage;
+	@FindBy(id = "dispatch-phone-number-ext")
+	private WebElement dispatchphonenumberextfield;
+	@FindBy(xpath = "//div[@class='truncate max-w-60 w-60 px-4 text-ellipsis']")
+	private List<WebElement> satellitenamelists;
+	@FindBy(xpath = "//a[text()='Satellite Locations']")
+	private WebElement satellitelocationslink;
+	@FindBy(xpath = "//p[text()='Satellite Location Status* ']/../../descendant::span")
+	private WebElement satellitelocationstatusdropdownfieldtext;
+	@FindBy(xpath = "//button[text()='Export']")
+	private WebElement exportbutton;
 	
 	
 	
 	
 	
 	
-	
-	
-	
-	
-	
+	public WebElement getExportbutton() {
+		return exportbutton;
+	}
+	public WebElement getSatellitelocationstatusdropdownfieldtext() {
+		return satellitelocationstatusdropdownfieldtext;
+	}
+	public WebElement getSatellitelocationslink() {
+		return satellitelocationslink;
+	}
+	public List<WebElement> getSatellitenamelists() {
+		return satellitenamelists;
+	}
+	public WebElement getDispatchphonenumberextfield() {
+		return dispatchphonenumberextfield;
+	}
+	public WebElement getDispatchphonenumbererrormessage() {
+		return dispatchphonenumbererrormessage;
+	}
+	public WebElement getDispatchphonenumberfield() {
+		return dispatchphonenumberfield;
+	}
+	public WebElement getDispatchemailrequirederrormessage() {
+		return dispatchemailrequirederrormessage;
+	}
+	public WebElement getDispatchdepartmenttxt() {
+		return dispatchdepartmenttxt;
+	}
+	public WebElement getDispatchemailinvaliderrormessage() {
+		return dispatchemailinvaliderrormessage;
+	}
+	public WebElement getDispatchemailfield() {
+		return dispatchemailfield;
+	}
+	public WebElement getRecyclingcheckboxdisabled() {
+		return recyclingcheckboxdisabled;
+	}
+	public List<WebElement> getAllmedicalwasteservicesindividualcheckboxes() {
+		return allmedicalwasteservicesindividualcheckboxes;
+	}
+	public WebElement getAllmedicalwasteservicescheckbox() {
+		return allmedicalwasteservicescheckbox;
+	}
+	public List<WebElement> getVariousservices() {
+		return variousservices;
+	}
+	public WebElement getStreetSuggestionboxfirstoptionFromSatellitserciveinfo() {
+		return streetSuggestionboxfirstoptionFromSatellitserciveinfo;
+	}
+	public WebElement getCopytobillinginformationbutton() {
+		return copytobillinginformationbutton;
+	}
+	public WebElement getAutosavedsuccessfullytxt() {
+		return autosavedsuccessfullytxt;
+	}
+	public WebElement getBioandsharpscheckbox() {
+		return bioandsharpscheckbox;
+	}
+
+	/**
+	 * Returns the most appropriate clickable element for the Bio/Sharps checkbox.
+	 * Tries: input inside ancestor label, ancestor label itself, then the original div.
+	 */
+	public WebElement getBioandsharpsClickable() {
+		// try input inside label
+		try {
+			WebElement input = driver.findElement(By.xpath("//span[text()='Bio/Sharps']/ancestor::label//input"));
+			if (input.isDisplayed() && input.isEnabled()) return input;
+		} catch (Exception ignored) {}
+		// try the label itself
+		try {
+			WebElement label = driver.findElement(By.xpath("//span[text()='Bio/Sharps']/ancestor::label"));
+			if (label.isDisplayed() && label.isEnabled()) return label;
+		} catch (Exception ignored) {}
+		// try the span itself
+		try {
+			WebElement span = driver.findElement(By.xpath("//span[text()='Bio/Sharps']"));
+			if (span.isDisplayed() && span.isEnabled()) return span;
+		} catch (Exception ignored) {}
+		// fallback to original div
+		return bioandsharpscheckbox;
+	}
+
+	/**
+	 * Clicks the Bio/Sharps checkbox using every available click strategy.
+	 * Returns true if click succeeded.
+	 */
+	public boolean clickBioAndSharps(webDriverutility wlib) {
+		WebElement target = getBioandsharpsClickable();
+		return wlib.safeClick(driver, target);
+	}
 	public WebElement getBillingaddressphoneextfield() {
 		return billingaddressphoneextfield;
 	}
