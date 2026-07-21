@@ -67,18 +67,7 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 	/*Rmove the comment of File upload to run independently by using existing satellite location profile and also remove the dependencies */
 
 	// Helper: robust name comparison used by TC_230..TC_236
-	private boolean namesMatch(String displayed, String expected) {
-		if (displayed == null || expected == null) return false;
-		String d = displayed.trim().toLowerCase();
-		String e = expected.trim().toLowerCase();
-		return d.equals(e) || d.contains(e) || e.contains(d) || d.startsWith(e) || e.startsWith(d);
-	}
-
-	// Helper: normalize phone digits for comparison
-	private String normalizePhone(String p) {
-		if (p == null) return "";
-		return p.replaceAll("\\D+", "").trim();
-	}
+	
 
 
 	
@@ -121,8 +110,8 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 	}
 	@Test(dependsOnMethods = "TC_003VerifyTheAddNewSatelliteLocationButton")																				
 	public void TC_004VerifySatelliteLocationNameFieldWithInput() throws InterruptedException, EncryptedDocumentException, IOException  {
-		sl.getSatelliteLocationName().isDisplayed();
-		utilityclassobject.gettest().log(Status.INFO, "Add New Satellite Location Name Field is displayed");
+	 	 sl.getSatelliteLocationName().isDisplayed();
+		 utilityclassobject.gettest().log(Status.INFO, "Add New Satellite Location Name Field is displayed");
 		 System.out.println("Add New Satellite Location Name Field is displayed");
 		 elib = new ExcelUtility();
 		 String satellitname = elib.getDataFromExcel("SatelliteLocation", 1, 1);
@@ -2110,7 +2099,7 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		@Test(dependsOnMethods = "TC_135VerifyZipCodeFieldAcceptsSpecialCharacters")
 		public void TC_136VerifyZipCodeFieldisMandatory() throws InterruptedException, EncryptedDocumentException, IOException
 		{
-			sl.getZipcodefield().click();
+			 sl.getZipcodefield().click();
 			 sl.ClearTextField(sl.getZipcodefield());
 			 sl.SaveButton();
 			 
@@ -2146,7 +2135,7 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		@Test(dependsOnMethods = "TC_137VerifyEmailfoeldAcceptsValidInput")
 		public void TC_138VerifyEmailfoeldAcceptsAlphabets() throws InterruptedException, EncryptedDocumentException, IOException
 		{
-			sl.getServiceaddressemailfield().click();
+			 sl.getServiceaddressemailfield().click();
 			 String Email = elib.getDataFromExcel("SatelliteLocation", 72, 2);
 			 sl.getServiceaddressemailfield().sendKeys(Email);
 			 Thread.sleep(2000);
@@ -2161,7 +2150,7 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		@Test(dependsOnMethods = "TC_138VerifyEmailfoeldAcceptsAlphabets")
 		public void TC_139VerifyEmailfoeldAcceptsNumbers() throws InterruptedException, EncryptedDocumentException, IOException
 		{
-			sl.getServiceaddressemailfield().click();
+			 sl.getServiceaddressemailfield().click();
 			 String Email = elib.getDataFromExcel("SatelliteLocation", 72, 3);
 			 sl.getServiceaddressemailfield().sendKeys(Email);
 			 Thread.sleep(2000);
@@ -2174,7 +2163,7 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		@Test(dependsOnMethods = "TC_139VerifyEmailfoeldAcceptsNumbers")
 		public void TC_140VerifyEmailfoeldAcceptsSpecialCharacters() throws InterruptedException, EncryptedDocumentException, IOException
 		{
-			sl.getServiceaddressemailfield().click();
+			 sl.getServiceaddressemailfield().click();
 			 String Email = elib.getDataFromExcel("SatelliteLocation", 72, 4);
 			 sl.getServiceaddressemailfield().sendKeys(Email);
 			 Thread.sleep(2000);
@@ -2187,7 +2176,7 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		@Test(dependsOnMethods = "TC_140VerifyEmailfoeldAcceptsSpecialCharacters")
 		public void TC_141VerifyEmailIdShouldNotAcceptsInvalidInput() throws InterruptedException, EncryptedDocumentException, IOException
 		{
-			sl.getServiceaddressemailfield().click();
+			 sl.getServiceaddressemailfield().click();
 			 String Email = elib.getDataFromExcel("SatelliteLocation", 72, 5);
 			 sl.getServiceaddressemailfield().sendKeys(Email);
 			 Thread.sleep(2000);
@@ -2209,7 +2198,7 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		@Test(dependsOnMethods = "TC_141VerifyEmailIdShouldNotAcceptsInvalidInput")
 		public void TC_142VerifyEmailIdShouldAcceptsvalidInput() throws InterruptedException, EncryptedDocumentException, IOException
 		{
-			sl.getServiceaddressemailfield().click();
+			 sl.getServiceaddressemailfield().click();
 			 String Email = elib.getDataFromExcel("SatelliteLocation", 72, 6);
 			 sl.getServiceaddressemailfield().sendKeys(Email);
 			 Thread.sleep(2000);
@@ -2224,7 +2213,7 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		@Test(dependsOnMethods = "TC_142VerifyEmailIdShouldAcceptsvalidInput")
 		public void TC_143VerifyEmailfoeldisMandatory() throws InterruptedException, EncryptedDocumentException, IOException
 		{
-			sl.getServiceaddressemailfield().click();
+			 sl.getServiceaddressemailfield().click();
 			 sl.ClearTextField(sl.getServiceaddressemailfield());
 			 sl.SaveButton();
 			 
@@ -2244,7 +2233,7 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		@Test(dependsOnMethods = "TC_143VerifyEmailfoeldisMandatory")
 		public void TC_144VerifyPhoneNumberFieldAcceptsValidInput() throws InterruptedException, EncryptedDocumentException, IOException
 		{
-			sl.getServiceaddressphonefield().click();
+			 sl.getServiceaddressphonefield().click();
 			 String PhoneNumber = elib.getDataFromExcel("SatelliteLocation", 74, 1);
 			 sl.getServiceaddressphonefield().sendKeys(PhoneNumber);
 			 Thread.sleep(2000);
@@ -2258,7 +2247,7 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		@Test(dependsOnMethods = "TC_144VerifyPhoneNumberFieldAcceptsValidInput")
 		public void TC_145VerifyPhoneNumberFieldShouldNotAcceptsAlphabets() throws InterruptedException, EncryptedDocumentException, IOException
 		{
-			sl.getServiceaddressphonefield().click();
+			 sl.getServiceaddressphonefield().click();
 			 String PhoneNumber = elib.getDataFromExcel("SatelliteLocation", 74, 2);
 			 sl.getServiceaddressphonefield().sendKeys(PhoneNumber);
 			 Thread.sleep(2000);
@@ -2279,7 +2268,7 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		@Test(dependsOnMethods = "TC_145VerifyPhoneNumberFieldShouldNotAcceptsAlphabets")
 		public void TC_146VerifyPhoneNumberFieldAcceptsNumbers() throws InterruptedException, EncryptedDocumentException, IOException
 		{
-			sl.getServiceaddressphonefield().click();
+			 sl.getServiceaddressphonefield().click();
 			 String PhoneNumber = elib.getDataFromExcel("SatelliteLocation", 74, 3);
 			 sl.getServiceaddressphonefield().sendKeys(PhoneNumber);
 			 Thread.sleep(2000);
@@ -2292,7 +2281,7 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		@Test(dependsOnMethods = "TC_146VerifyPhoneNumberFieldAcceptsNumbers")
 		public void TC_147VerifyPhoneNumberFieldShouldNotAcceptsSpecialCharacters() throws InterruptedException, EncryptedDocumentException, IOException
 		{
-			sl.getServiceaddressphonefield().click();
+			 sl.getServiceaddressphonefield().click();
 			 String PhoneNumber = elib.getDataFromExcel("SatelliteLocation", 74, 4);
 			 sl.getServiceaddressphonefield().sendKeys(PhoneNumber);
 			 Thread.sleep(2000);
@@ -2314,7 +2303,7 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		@Test(dependsOnMethods = "TC_147VerifyPhoneNumberFieldShouldNotAcceptsSpecialCharacters")
 		public void TC_148VerifyPhoneNumberFieldisMandatory() throws InterruptedException, EncryptedDocumentException, IOException
 		{
-			sl.getServiceaddressphonefield().click();
+			 sl.getServiceaddressphonefield().click();
 			 sl.ClearTextField(sl.getServiceaddressphonefield());
 			 sl.SaveButton();
 			 
@@ -2335,7 +2324,7 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		public void TC_149VerifPhonenumberExtfieldAcceptsInput() throws InterruptedException, EncryptedDocumentException, IOException
 		{
 			
-			sl.getServiceaddressphoneextfield().click();
+			 sl.getServiceaddressphoneextfield().click();
 			 String PhoneExt = elib.getDataFromExcel("SatelliteLocation", 76, 1);
 			 sl.getServiceaddressphoneextfield().sendKeys(PhoneExt);
 			 Thread.sleep(2000);
@@ -2349,7 +2338,7 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		@Test(dependsOnMethods = "TC_149VerifPhonenumberExtfieldAcceptsInput")
 		public void TC_150VerifyPhonenumberExtfieldShouldNotAcceptAlphabets() throws InterruptedException, EncryptedDocumentException, IOException
 		{
-			sl.getServiceaddressphoneextfield().click();
+			 sl.getServiceaddressphoneextfield().click();
 			 String PhoneExt = elib.getDataFromExcel("SatelliteLocation", 76, 2);
 			 sl.getServiceaddressphoneextfield().sendKeys(PhoneExt);
 			 Thread.sleep(2000);
@@ -2372,7 +2361,7 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 		@Test(dependsOnMethods = "TC_150VerifyPhonenumberExtfieldShouldNotAcceptAlphabets")
 		public void TC_151VerifyPhonenumberExtfieldAcceptNumbers() throws InterruptedException, EncryptedDocumentException, IOException
 		{
-		 sl.getServiceaddressphoneextfield().click();
+		     sl.getServiceaddressphoneextfield().click();
 			 String PhoneExt = elib.getDataFromExcel("SatelliteLocation", 76, 3);
 			 sl.getServiceaddressphoneextfield().sendKeys(PhoneExt);
 			 Thread.sleep(2000);
@@ -3837,8 +3826,9 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 			sl = new SatelliteLocation(driver);
 			sl.getAssets().click();
 			sl.getSatellite_Locations().click();
-			sl.getSatellitelocationslink().click();
 			*/
+			sl.getSatellitelocationslink().click();
+			
 			//refresh the page
 			driver.navigate().refresh();
 			Thread.sleep(5000);
