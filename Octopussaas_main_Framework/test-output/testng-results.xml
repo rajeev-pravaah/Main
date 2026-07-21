@@ -1,139 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="1" skipped="1">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-20T18:02:46 IST" name="Default suite" finished-at="2026-07-20T18:03:56 IST" duration-ms="69250">
+  <suite started-at="2026-07-21T15:51:25 IST" name="Default suite" finished-at="2026-07-21T15:53:33 IST" duration-ms="127279">
     <groups>
     </groups>
-    <test started-at="2026-07-20T18:02:46 IST" name="Default test" finished-at="2026-07-20T18:03:56 IST" duration-ms="69250">
-      <class name="Assets_Disposal_Facilities.Disposal_Facilities_All_TC">
-        <test-method is-config="true" signature="Bc()[pri:0, instance:Assets_Disposal_Facilities.Disposal_Facilities_All_TC@5965d37]" started-at="2026-07-20T18:02:46 IST" name="Bc" finished-at="2026-07-20T18:03:17 IST" duration-ms="31077" status="PASS">
+    <test started-at="2026-07-21T15:51:25 IST" name="Default test" finished-at="2026-07-21T15:53:33 IST" duration-ms="127279">
+      <class name="Assert_Satellite_Location.Satellitelocation_Tc230to236">
+        <test-method is-config="true" signature="Bc()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@2ab4bc72]" started-at="2026-07-21T15:51:25 IST" name="Bc" finished-at="2026-07-21T15:51:56 IST" duration-ms="31107" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bc -->
-        <test-method signature="TC_001VerifyAbletoAccessDisposalFacilitiesPage()[pri:0, instance:Assets_Disposal_Facilities.Disposal_Facilities_All_TC@5965d37]" started-at="2026-07-20T18:03:18 IST" name="TC_001VerifyAbletoAccessDisposalFacilitiesPage" finished-at="2026-07-20T18:03:49 IST" duration-ms="31085" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//h2[text()='Disposal Facilities List']"}
-  (Session info: chrome=150.0.7871.128)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f520ce0c5bc4aa80fd0eadf92af63fa3, findElement {value=//h2[text()='Disposal Facilities List'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.128, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\Rajeev nandi\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55684}, goog:processID: 27288, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55684/devtoo..., se:cdpVersion: 150.0.7871.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f520ce0c5bc4aa80fd0eadf92af63fa3]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h2[text()='Disposal Facilities List']"}
-  (Session info: chrome=150.0.7871.128)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f520ce0c5bc4aa80fd0eadf92af63fa3, findElement {value=//h2[text()='Disposal Facilities List'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.128, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\Rajeev nandi\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55684}, goog:processID: 27288, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55684/devtoo..., se:cdpVersion: 150.0.7871.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f520ce0c5bc4aa80fd0eadf92af63fa3
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy18.isDisplayed(Unknown Source)
-at Assets_Disposal_Facilities.Disposal_Facilities_All_TC.TC_001VerifyAbletoAccessDisposalFacilitiesPage(Disposal_Facilities_All_TC.java:26)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_001VerifyAbletoAccessDisposalFacilitiesPage -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Assets_Disposal_Facilities.Disposal_Facilities_All_TC@5965d37]" started-at="2026-07-20T18:03:18 IST" name="Bm" finished-at="2026-07-20T18:03:18 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@2ab4bc72]" started-at="2026-07-21T15:51:56 IST" name="Bm" finished-at="2026-07-21T15:51:56 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Assets_Disposal_Facilities.Disposal_Facilities_All_TC@5965d37]" started-at="2026-07-20T18:03:49 IST" name="Am" finished-at="2026-07-20T18:03:51 IST" duration-ms="2003" status="PASS">
+        <test-method signature="TC_230VerifySavedSatelliteLocationIspresentInSatelliteLocationLists()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@2ab4bc72]" started-at="2026-07-21T15:51:56 IST" name="TC_230VerifySavedSatelliteLocationIspresentInSatelliteLocationLists" finished-at="2026-07-21T15:53:10 IST" duration-ms="73074" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_230VerifySavedSatelliteLocationIspresentInSatelliteLocationLists -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@2ab4bc72]" started-at="2026-07-21T15:53:10 IST" name="Am" finished-at="2026-07-21T15:53:12 IST" duration-ms="2016" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_002VerifyAbletoctoInfofromTootlip()[pri:0, instance:Assets_Disposal_Facilities.Disposal_Facilities_All_TC@5965d37]" started-at="2026-07-20T18:03:51 IST" name="TC_002VerifyAbletoctoInfofromTootlip" finished-at="2026-07-20T18:03:51 IST" depends-on-methods="Assets_Disposal_Facilities.Disposal_Facilities_All_TC.TC_001VerifyAbletoAccessDisposalFacilitiesPage" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Assets_Disposal_Facilities.Disposal_Facilities_All_TC.TC_002VerifyAbletoctoInfofromTootlip() on instance Assets_Disposal_Facilities.Disposal_Facilities_All_TC@5965d37 depends on not successfully finished methods 
-[Assets_Disposal_Facilities.Disposal_Facilities_All_TC.TC_001VerifyAbletoAccessDisposalFacilitiesPage() on instance Assets_Disposal_Facilities.Disposal_Facilities_All_TC@5965d37]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Assets_Disposal_Facilities.Disposal_Facilities_All_TC.TC_002VerifyAbletoctoInfofromTootlip() on instance Assets_Disposal_Facilities.Disposal_Facilities_All_TC@5965d37 depends on not successfully finished methods 
-[Assets_Disposal_Facilities.Disposal_Facilities_All_TC.TC_001VerifyAbletoAccessDisposalFacilitiesPage() on instance Assets_Disposal_Facilities.Disposal_Facilities_All_TC@5965d37]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@2ab4bc72]" started-at="2026-07-21T15:53:12 IST" name="Bm" finished-at="2026-07-21T15:53:12 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_002VerifyAbletoctoInfofromTootlip -->
-        <test-method is-config="true" signature="Ac()[pri:0, instance:Assets_Disposal_Facilities.Disposal_Facilities_All_TC@5965d37]" started-at="2026-07-20T18:03:52 IST" name="Ac" finished-at="2026-07-20T18:03:56 IST" duration-ms="4026" status="PASS">
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_231VerifyNameOftheSatelliteisPresentInsideSatelliteLists()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@2ab4bc72]" started-at="2026-07-21T15:53:12 IST" name="TC_231VerifyNameOftheSatelliteisPresentInsideSatelliteLists" finished-at="2026-07-21T15:53:14 IST" depends-on-methods="Assert_Satellite_Location.Satellitelocation_Tc230to236.TC_230VerifySavedSatelliteLocationIspresentInSatelliteLocationLists" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_231VerifyNameOftheSatelliteisPresentInsideSatelliteLists -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@2ab4bc72]" started-at="2026-07-21T15:53:14 IST" name="Am" finished-at="2026-07-21T15:53:16 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@2ab4bc72]" started-at="2026-07-21T15:53:16 IST" name="Bm" finished-at="2026-07-21T15:53:16 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_232VerifyAddressoftheSatellteisPresentInsideSatelliteLocationslist()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@2ab4bc72]" started-at="2026-07-21T15:53:16 IST" name="TC_232VerifyAddressoftheSatellteisPresentInsideSatelliteLocationslist" finished-at="2026-07-21T15:53:18 IST" depends-on-methods="Assert_Satellite_Location.Satellitelocation_Tc230to236.TC_231VerifyNameOftheSatelliteisPresentInsideSatelliteLists" duration-ms="2380" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_232VerifyAddressoftheSatellteisPresentInsideSatelliteLocationslist -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@2ab4bc72]" started-at="2026-07-21T15:53:18 IST" name="Am" finished-at="2026-07-21T15:53:20 IST" duration-ms="2003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_233VerifyDispatchPhoneNumberoftheSatellteisPresentInsideSatelliteLocationslist()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@2ab4bc72]" started-at="2026-07-21T15:53:20 IST" name="TC_233VerifyDispatchPhoneNumberoftheSatellteisPresentInsideSatelliteLocationslist" finished-at="2026-07-21T15:53:22 IST" depends-on-methods="Assert_Satellite_Location.Satellitelocation_Tc230to236.TC_232VerifyAddressoftheSatellteisPresentInsideSatelliteLocationslist" duration-ms="2191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_233VerifyDispatchPhoneNumberoftheSatellteisPresentInsideSatelliteLocationslist -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@2ab4bc72]" started-at="2026-07-21T15:53:20 IST" name="Bm" finished-at="2026-07-21T15:53:20 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@2ab4bc72]" started-at="2026-07-21T15:53:22 IST" name="Am" finished-at="2026-07-21T15:53:24 IST" duration-ms="2012" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_234VerifyEmailoftheSatellteisPresentInsideSatelliteLocationslist()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@2ab4bc72]" started-at="2026-07-21T15:53:24 IST" name="TC_234VerifyEmailoftheSatellteisPresentInsideSatelliteLocationslist" finished-at="2026-07-21T15:53:26 IST" depends-on-methods="Assert_Satellite_Location.Satellitelocation_Tc230to236.TC_233VerifyDispatchPhoneNumberoftheSatellteisPresentInsideSatelliteLocationslist" duration-ms="2292" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_234VerifyEmailoftheSatellteisPresentInsideSatelliteLocationslist -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@2ab4bc72]" started-at="2026-07-21T15:53:24 IST" name="Bm" finished-at="2026-07-21T15:53:24 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@2ab4bc72]" started-at="2026-07-21T15:53:26 IST" name="Am" finished-at="2026-07-21T15:53:28 IST" duration-ms="2006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Ac()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@2ab4bc72]" started-at="2026-07-21T15:53:28 IST" name="Ac" finished-at="2026-07-21T15:53:33 IST" duration-ms="4023" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Ac -->
-      </class> <!-- Assets_Disposal_Facilities.Disposal_Facilities_All_TC -->
+      </class> <!-- Assert_Satellite_Location.Satellitelocation_Tc230to236 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Listeners;
@@ -31,6 +32,8 @@ public class Satellitelocation_Tc230to236 extends BaseClassForGEneratorContacts 
 
 	int randonnum;
 	SatelliteLocation sl;
+	String satellitename1;
+	String emailaddress1;
 
 	@Test
 	public void TC_230VerifySavedSatelliteLocationIspresentInSatelliteLocationLists()
@@ -152,7 +155,8 @@ public class Satellitelocation_Tc230to236 extends BaseClassForGEneratorContacts 
 		sl.getCompanydisplaynamefield().sendKeys("Test Company Display Name" + randonnum);
 		sl.getGeneralphonefield().click();
 		sl.getGeneralphonefield().sendKeys("1234567890");
-		satellitename = sl.getSatelliteLocationName().getAttribute("value");
+		
+	    satellitename1 = sl.getSatelliteLocationName().getAttribute("value");
 		System.out.println("Satellite Location Name is: " + satellitename);
 
 		// Fetch street address
@@ -160,12 +164,13 @@ public class Satellitelocation_Tc230to236 extends BaseClassForGEneratorContacts 
 		System.out.println("Street Address is: " + streetaddress);
 
 		// Fetch phone number
-		phonenumber = sl.getBillingaddressphonefield().getAttribute("value");
+		phonenumber = sl.getGeneralphonefield().getAttribute("value");
 		System.out.println("Phone Number is: " + phonenumber);
 
 		// Fetch email address
-		emailaddress = sl.getGeneralemailfield().getAttribute("value");
-		System.out.println("Email Address is: " + emailaddress);
+		
+		emailaddress1 = sl.getGeneralemailfield().getAttribute("value");
+		System.out.println("Email Address is: " + emailaddress1);
 
 		// Status (if it is also an input field)
 		status = sl.getSatellitelocationstatusdropdownfieldtext().getAttribute("value");
@@ -255,12 +260,16 @@ public class Satellitelocation_Tc230to236 extends BaseClassForGEneratorContacts 
 			throws InterruptedException, EncryptedDocumentException, IOException {
 		List<WebElement> namelists = sl.getSatellitenamelists();
 		boolean foundAddress = false;
+		System.out.println(" Satellite name " + satellitename1);
+
 		for (WebElement list : namelists) {
 			String name = list.getText();
-			if (name.equals(satellitname)) {
+			if (name.equals(satellitename1)) {
 				String actulaadress = driver
-						.findElement(By.xpath("//div[normalize-space()='"+satellitname+"']/following-sibling::div[1]"))
+						.findElement(By.xpath("//div[normalize-space()='"+satellitename1+"']/following-sibling::div[1]"))
 						.getText();
+				System.out.println("Actual Address: " + actulaadress);
+				System.out.println("Expected Address: " + streetaddress);
 					if (actulaadress.contains(streetaddress)) {
 						foundAddress = true;
 						System.out.println("Saved Satellite Location Address is present in Satellite Location Lists: Pass");
@@ -280,9 +289,9 @@ public class Satellitelocation_Tc230to236 extends BaseClassForGEneratorContacts 
 			try { driver.navigate().refresh(); Thread.sleep(3000); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
 			namelists = sl.getSatellitenamelists();
 			for (WebElement list : namelists) {
-				if (list.getText().equals(satellitname)) {
+				if (list.getText().equals(satellitename1)) {
 					String actulaadress = driver
-						.findElement(By.xpath("//div[normalize-space()='"+satellitname+"']/following-sibling::div[1]"))
+						.findElement(By.xpath("//div[normalize-space()='"+satellitename1+"']/following-sibling::div[1]"))
 						.getText();
 						if (actulaadress.contains(streetaddress)) {
 							foundAddress = true;
@@ -309,9 +318,9 @@ public class Satellitelocation_Tc230to236 extends BaseClassForGEneratorContacts 
 		boolean foundPhone = false;
 		for (WebElement list : namelists) {
 			String name = list.getText();
-			if (name.equals(satellitname)) {
+			if (name.equals(satellitename1)) {
 				String actulaphonenumber = driver
-						.findElement(By.xpath("//a[.//div[normalize-space()='"+satellitname+"']]//span[contains(@class,'truncate')]"))
+						.findElement(By.xpath("//a[.//div[normalize-space()='"+satellitename1+"']]//span[contains(@class,'truncate')]"))
 						.getText();
 				if (actulaphonenumber.contains(phonenumber)) {
 					foundPhone = true;
@@ -333,9 +342,9 @@ public class Satellitelocation_Tc230to236 extends BaseClassForGEneratorContacts 
 			try { driver.navigate().refresh(); Thread.sleep(3000); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
 			namelists = sl.getSatellitenamelists();
 			for (WebElement list : namelists) {
-				if (list.getText().equals(satellitname)) {
+				if (list.getText().equals(satellitename1)) {
 					String actulaphonenumber = driver
-						.findElement(By.xpath("//a[.//div[normalize-space()='"+satellitname+"']]//span[contains(@class,'truncate')]"))
+						.findElement(By.xpath("//a[.//div[normalize-space()='"+satellitename1+"']]//span[contains(@class,'truncate')]"))
 						.getText();
 					if (actulaphonenumber.contains(phonenumber)) {
 						foundPhone = true;
@@ -362,11 +371,13 @@ public class Satellitelocation_Tc230to236 extends BaseClassForGEneratorContacts 
 		boolean foundEmail = false;
 		for (WebElement list : namelists) {
 			String name = list.getText();
-			if (name.equals(satellitname)) {
+			if (name.equals(satellitename1)) {
 				String actulemail = driver
-						.findElement(By.xpath("//div[normalize-space()='"+satellitname+"']/following-sibling::div[2]"))
+						.findElement(By.xpath("//div[normalize-space()='"+satellitename1+"']/following-sibling::div[3]"))
 						.getText();
-				if (actulemail.contains(emailnamewithrandom)) {
+				System.out.println("Actual Email: " + actulemail);
+				System.out.println("Expected Email: " + emailaddress1);
+				if (actulemail.contains(emailaddress1)) {
 					foundEmail = true;
 					System.out.println("Saved Satellite Location Email is present in Satellite Location Lists: Pass");
 					utilityclassobject.gettest().log(Status.PASS,
@@ -384,9 +395,9 @@ public class Satellitelocation_Tc230to236 extends BaseClassForGEneratorContacts 
 			try { driver.navigate().refresh(); Thread.sleep(3000); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
 			namelists = sl.getSatellitenamelists();
 			for (WebElement list : namelists) {
-				if (list.getText().equals(satellitname)) {
+				if (list.getText().equals(satellitename1)) {
 					String actulemail = driver
-						.findElement(By.xpath("//div[normalize-space()='"+satellitname+"']/following-sibling::div[2]"))
+						.findElement(By.xpath("//div[normalize-space()='"+satellitename1+"']/following-sibling::div[2]"))
 						.getText();
 					if (actulemail.contains(emailnamewithrandom)) {
 						foundEmail = true;

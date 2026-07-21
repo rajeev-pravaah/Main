@@ -261,12 +261,30 @@ public class SatelliteLocation {
 	private WebElement satellitelocationstatusdropdownfieldtext;
 	@FindBy(xpath = "//button[text()='Export']")
 	private WebElement exportbutton;
+	@FindBy(xpath = "//select[@class='bg-white text-gray-700 px-2 py-1 rounded']")
+	private WebElement exportyeardropdown;
+	@FindBy(xpath = "(//select[@class='bg-white text-gray-700 px-2 py-1 rounded'])[2]")
+	private WebElement exportyearmonthdropdown;	
 	
 	
 	
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	public WebElement getExportyearmonthdropdown() {
+		return exportyearmonthdropdown;
+	}
+	public WebElement getExportyeardropdown() {
+		return exportyeardropdown;
+	}
 	public WebElement getExportbutton() {
 		return exportbutton;
 	}

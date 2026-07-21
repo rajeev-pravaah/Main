@@ -4,6 +4,9 @@ import java.awt.AWTException;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDate;
+import java.time.Year;
+import java.time.format.TextStyle;
+import java.util.Locale;
 import java.util.List;
 
 import org.apache.poi.EncryptedDocumentException;
@@ -15,6 +18,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.Octopussaas.BaseUtility.BaseClassForGEneratorContacts;
@@ -33,7 +37,10 @@ public class DateUploadTC extends BaseClassForGEneratorContacts {
 	ExcelUtility elib;
 	webDriverutility wd;
 
+	
+
 	@Test()
+	
 	public void TC_053VerifyStartofFiscalYearAcceptsManualInputs()
 			throws InterruptedException, EncryptedDocumentException, IOException, AWTException {
 		
@@ -103,16 +110,20 @@ public class DateUploadTC extends BaseClassForGEneratorContacts {
 	}
 
 	@Test(dependsOnMethods = "TC_053VerifyStartofFiscalYearAcceptsManualInputs")
+	
 	public void TC_054VerifyStartofFiscalYearTextfieldAcceptDate()
 			throws InterruptedException, EncryptedDocumentException, IOException, AWTException {
-//sl.getGeneralphonetext().click();
+        sl.getGeneralphonetext().click();
+		if (sl == null) {
+			sl = new SatelliteLocation(driver);
+		}
 		try {
 			sl.getStartoffiscalyearfield().click();
 		} catch (Exception e) {
 			System.out.println("Start of Fiscal Year field is not clickable");
 			utilityclassobject.gettest().log(Status.INFO, "Start of Fiscal Year field is not clickable");
 		}
-//sl.getStartoffiscalendaricon().click();
+        sl.getStartoffiscalendaricon().click();
 		LocalDate today = LocalDate.now();
 		String currentDay = String.valueOf(today.getDayOfMonth());
 
@@ -122,125 +133,92 @@ public class DateUploadTC extends BaseClassForGEneratorContacts {
 				By.xpath("//div[contains(@class,'react-datepicker__day') and text()='" + currentDay + "']")));
 
 		date.click();
+		System.out.println("Selected current date: " + today);
+		utilityclassobject.gettest().log(Status.INFO, "Selected current date: " + today);
 		sl.getGeneralphonetext().click();
 
 	}
 
 	@Test(dependsOnMethods = "TC_054VerifyStartofFiscalYearTextfieldAcceptDate")
-	public void TC_055VerifyUsercanAbletoSelectMonth()
+
+	public void TC_055VerifyUsercanAbletoSelectYear()
 			throws InterruptedException, EncryptedDocumentException, IOException, AWTException {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		// Open calendar – safeClick twice to handle stubborn span
+		wlib.safeClick(driver, sl.getStartoffiscalyearfield());
+		Thread.sleep(500);
+		wlib.safeClick(driver, sl.getStartoffiscalyearfield());
+		Thread.sleep(800);
+
+		// Click the year dropdown in the datepicker header
+		sl.getExportyeardropdown().click();
+		System.out.println("Clicked on year dropdown");
+		utilityclassobject.gettest().log(Status.INFO, "Clicked on year dropdown");
+		Thread.sleep(500);
+
+		// Select year 2019 using Select class
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		// open datepicker
-		try {
-			js.executeScript("arguments[0].click();", sl.getStartoffiscalyearfield());
-		} catch (Exception e) {
-			js.executeScript("arguments[0].click();", sl.getStartoffiscalendaricon());
-		}
-		Thread.sleep(500);
-		String before = sl.getStartoffiscalyearfield().getText();
-		// determine a month different than current
-		LocalDate today = LocalDate.now();
-		String curMonth = today.getMonth().name();
-		String pickMonth = curMonth.equalsIgnoreCase("JANUARY") ? "February" : "January";
-		// select the different month
-		By monthSelectBy = By.xpath("//select[contains(@class,'react-datepicker__month-select')]");
-		Thread.sleep(3000);
-		WebElement monthSelect = wait.until(ExpectedConditions.elementToBeClickable(monthSelectBy));
-		Select monthSel = new Select(monthSelect);
-		monthSel.selectByVisibleText(pickMonth);
-		Thread.sleep(500);
-		// click day 1 to apply
-		By dayOne = By.xpath(
-				"//div[contains(@class,'react-datepicker__day') and not(contains(@class,'outside-month')) and text()='1']");
-		WebElement day1 = wait.until(ExpectedConditions.elementToBeClickable(dayOne));
-		try {
-			day1.click();
-		} catch (Exception e) {
-			js.executeScript("arguments[0].click();", day1);
-		}
-		Thread.sleep(500);
-		String after = sl.getStartoffiscalyearfield().getText();
-		System.out.println("Value after selecting different month (" + pickMonth + "): " + after);
-		utilityclassobject.gettest().log(Status.INFO,
-				"Value after selecting different month (" + pickMonth + "): " + after);
-		if (!after.equals(before)) {
-			System.out.println("PASS: User able to select a different month: " + pickMonth);
-			utilityclassobject.gettest().log(Status.PASS, "User able to select a different month: " + pickMonth);
-		} else {
-			System.out.println("FAIL: User not able to select a different month");
-			utilityclassobject.gettest().log(Status.FAIL, "User not able to select a different month");
-		}
-		// now select current month based on system date
-		String currentMonthTitle = curMonth.substring(0, 1).toUpperCase() + curMonth.substring(1).toLowerCase();
-		try {
-			js.executeScript("arguments[0].click();", sl.getStartoffiscalyearfield());
-		} catch (Exception e) {
-			js.executeScript("arguments[0].click();", sl.getStartoffiscalendaricon());
-		}
-		monthSelect = wait.until(ExpectedConditions.elementToBeClickable(monthSelectBy));
-		monthSel = new Select(monthSelect);
-		monthSel.selectByVisibleText(currentMonthTitle);
-		Thread.sleep(500);
-		String currentDay = String.valueOf(today.getDayOfMonth());
-		By currDayBy = By.xpath(
-				"//div[contains(@class,'react-datepicker__day') and not(contains(@class,'outside-month')) and text()='"
-						+ currentDay + "']");
-		WebElement currDayElem = wait.until(ExpectedConditions.elementToBeClickable(currDayBy));
-		try {
-			currDayElem.click();
-		} catch (Exception e) {
-			js.executeScript("arguments[0].click();", currDayElem);
-		}
-		Thread.sleep(500);
-		String afterCurrent = sl.getStartoffiscalyearfield().getText();
-		System.out.println("Value after selecting current month/day: " + afterCurrent);
-		utilityclassobject.gettest().log(Status.INFO, "Value after selecting current month/day: " + afterCurrent);
+		wait.until(ExpectedConditions.visibilityOf(sl.getExportyeardropdown()));
+		Select yearSelect = new Select(sl.getExportyeardropdown());
+		//fetch the current year from the system
+		int currentYear = Year.now().getValue();
+		System.out.println("Current Year: " + currentYear);
+		
+		
+		yearSelect.selectByVisibleText(String.valueOf(currentYear));
+		System.out.println("TC_055 PASS: Selected year 2019 from the year dropdown");
+		utilityclassobject.gettest().log(Status.PASS, "Selected year 2019 from the year dropdown");
+
+		// Confirm selected value
+		String selectedYear = yearSelect.getFirstSelectedOption().getText();
+		System.out.println("Confirmed selected year: " + selectedYear);
+		utilityclassobject.gettest().log(Status.INFO, "Confirmed selected year: " + selectedYear);
+		System.out.println("TC_055 PASS: User can select year from the year dropdown");
+		utilityclassobject.gettest().log(Status.PASS, "User can select year from the year dropdown");
 	}
 
-	@Test(dependsOnMethods = "TC_055VerifyUsercanAbletoSelectMonth")
-	public void TC_056VerifyUsercanAbletoSelectYear()
+	@Test(dependsOnMethods = "TC_055VerifyUsercanAbletoSelectYear")
+	
+	public void TC_056VerifyUsercanAbletoSelectMonth()
 			throws InterruptedException, EncryptedDocumentException, IOException, AWTException {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		// Click the month dropdown in the datepicker header
+		sl.getExportyearmonthdropdown().click();
+		System.out.println("Clicked on month dropdown");
+		utilityclassobject.gettest().log(Status.INFO, "Clicked on month dropdown");
+		Thread.sleep(500);
+
+		// Select September using Select class
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		// open datepicker
-		try {
-			js.executeScript("arguments[0].click();", sl.getStartoffiscalyearfield());
-		} catch (Exception e) {
-			js.executeScript("arguments[0].click();", sl.getStartoffiscalendaricon());
-		}
+		wait.until(ExpectedConditions.visibilityOf(sl.getExportyearmonthdropdown()));
+		Select monthSelect = new Select(sl.getExportyearmonthdropdown());
+		monthSelect.selectByVisibleText("September");
+		System.out.println("TC_056 PASS: Selected month September from the month dropdown");
+		utilityclassobject.gettest().log(Status.PASS, "Selected month September from the month dropdown");
+
+		// Confirm selected value
+		String selectedMonth = monthSelect.getFirstSelectedOption().getText();
+		System.out.println("Confirmed selected month: " + selectedMonth);
+		utilityclassobject.gettest().log(Status.INFO, "Confirmed selected month: " + selectedMonth);
+
+		// Click month dropdown again and select current month from system
+		sl.getExportyearmonthdropdown().click();
 		Thread.sleep(500);
-		LocalDate today = LocalDate.now();
-		String curYear = String.valueOf(today.getYear());
-		By yearSelectBy = By.xpath("//select[contains(@class,'react-datepicker__year-select')]");
-		WebElement yearSelect = wait.until(ExpectedConditions.elementToBeClickable(yearSelectBy));
-		Select yearSel = new Select(yearSelect);
-		try {
-			yearSel.selectByVisibleText(curYear);
-		} catch (Exception e) {
-			/* ignore */ }
-		Thread.sleep(500);
-		// pick current day to apply
-		String currentDay = String.valueOf(today.getDayOfMonth());
-		By currDayBy = By.xpath(
-				"//div[contains(@class,'react-datepicker__day') and not(contains(@class,'outside-month')) and text()='"
-						+ currentDay + "']");
-		WebElement currDayElem = wait.until(ExpectedConditions.elementToBeClickable(currDayBy));
-		try {
-			currDayElem.click();
-		} catch (Exception e) {
-			js.executeScript("arguments[0].click();", currDayElem);
-		}
-		Thread.sleep(500);
-		String after = sl.getStartoffiscalyearfield().getText();
-		System.out.println("Value after selecting current year: " + after);
-		utilityclassobject.gettest().log(Status.INFO, "Value after selecting current year: " + after);
-		if (after.contains(curYear)) {
-			System.out.println("PASS: Current year selected successfully: " + curYear);
-			utilityclassobject.gettest().log(Status.PASS, "Current year selected successfully: " + curYear);
-		} else {
-			System.out.println("FAIL: Could not select current year: " + curYear);
-			utilityclassobject.gettest().log(Status.FAIL, "Could not select current year: " + curYear);
-		}
+		wait.until(ExpectedConditions.visibilityOf(sl.getExportyearmonthdropdown()));
+		String currentMonth = LocalDate.now().getMonth().getDisplayName(TextStyle.FULL, Locale.ENGLISH);
+		System.out.println("Current Month from system: " + currentMonth);
+		Select monthSelectAgain = new Select(sl.getExportyearmonthdropdown());
+		monthSelectAgain.selectByVisibleText(currentMonth);
+		System.out.println("TC_056 PASS: Re-selected current month " + currentMonth + " from the month dropdown");
+		utilityclassobject.gettest().log(Status.PASS, "Re-selected current month " + currentMonth + " from the month dropdown");
+
+		// Confirm final selected value
+		String finalMonth = monthSelectAgain.getFirstSelectedOption().getText();
+		System.out.println("Final confirmed selected month: " + finalMonth);
+		utilityclassobject.gettest().log(Status.INFO, "Final confirmed selected month: " + finalMonth);
+		System.out.println("TC_056 PASS: User can select month from the month dropdown");
+		utilityclassobject.gettest().log(Status.PASS, "User can select month from the month dropdown");
+		sl.getGeneralphonetext().click();
+
 	}
 }

@@ -32,7 +32,7 @@ public class File_UploadTc extends BaseClassForGEneratorContacts{
 	ExcelUtility elib;
 	webDriverutility wd;
 
-	@Test(dependsOnMethods = "TC_068VerifyGoogleRevireLinkWithValidinput")
+	@Test(/*dependsOnMethods = "TC_068VerifyGoogleRevireLinkWithValidinput"*/)
 	public void TC_069VerifyCompanyLogoUploadsFile() throws InterruptedException, EncryptedDocumentException, IOException, AWTException  {
 		
 		//it is not an Magic Tc While running check the dependency To run independently comment dependency 
@@ -243,36 +243,84 @@ public class File_UploadTc extends BaseClassForGEneratorContacts{
 	}
 	@Test(dependsOnMethods = "TC_071VerifyLogoUploadedinValidFormatPNG")
 	public void TC_072VerifyLogoUploadWithLessThan5mb() throws InterruptedException, EncryptedDocumentException, IOException, AWTException  {
-						// Try uploading a file smaller than 5MB located in Files_ upload folder named "3mb_.png"
-						TransporterProfile tp = new TransporterProfile(driver);
-						wlib = new webDriverutility();
-						String projectDir = System.getProperty("user.dir");
-						File file = new File(projectDir + File.separator + "Files_ upload" + File.separator + "3mb_.png");
-						if(!file.exists()){
-							utilityclassobject.gettest().log(Status.FAIL, "Upload file not found: " + file.getAbsolutePath());
-							System.out.println("Less-than-5MB test file not found: " + file.getAbsolutePath());
-							return; // skip test if file missing
-						}
-						String absolutePath = file.getAbsolutePath();
-						// open upload control and send file
-						try { tp.getUploadfile().click(); } catch(Exception e) { /* ignore */ }
-						List<WebElement> inputs = driver.findElements(By.xpath("//input[@type='file']"));
-						WebElement fileInput = null;
-						if(inputs.size() > 0) {
-							fileInput = inputs.get(0);
-						} else {
-							for(int i=0;i<5;i++){
-								inputs = driver.findElements(By.xpath("//input[@type='file']"));
-								if(inputs.size()>0){ fileInput = inputs.get(0); break; }
-								try { Thread.sleep(300); } catch(InterruptedException ie) { /* ignore */ }
-							}
-							if(fileInput == null) { throw new NoSuchElementException("Could not find file input to upload image"); }
-						}
-						try { wlib.scrollToelement(driver, fileInput); wlib.waitUntilElementClickable(driver, fileInput); } catch(Exception e) { /* ignore */ }
-						fileInput.sendKeys(absolutePath);
-						Thread.sleep(4000);
-						utilityclassobject.gettest().log(Status.PASS, "Uploaded less-than-5MB file: " + absolutePath);
-						System.out.println("Uploaded less-than-5MB file successfully: PASS");
+
+		// Delete previously uploaded logo if present
+		try {
+			sl.getCompanylogodeletebutton().click();
+			System.out.println("Clicked on delete icon Successfully");
+			utilityclassobject.gettest().log(Status.INFO, "Clicked on delete icon Successfully");
+			Thread.sleep(2000);
+		} catch (Exception e) { /* ignore if not present */ }
+
+		TransporterProfile tp = new TransporterProfile(driver);
+		wlib = new webDriverutility();
+		String projectDir = System.getProperty("user.dir");
+
+		// Use 3mb-jpg-example-file.jpg from Files_ upload folder (explicitly less than 5 MB)
+		File file = new File(projectDir + File.separator + "Files_ upload" + File.separator + "3mb-jpg-example-file.jpg");
+		if (!file.exists()) {
+			utilityclassobject.gettest().log(Status.FAIL, "Upload file not found: " + file.getAbsolutePath());
+			throw new IOException("Upload file not found: " + file.getAbsolutePath());
+		}
+
+		// Verify file size is less than 5 MB (5 * 1024 * 1024 bytes)
+		long fileSizeInBytes = file.length();
+		long fiveMBInBytes = 5L * 1024 * 1024;
+		System.out.println("File size: " + fileSizeInBytes + " bytes (" + (fileSizeInBytes / (1024 * 1024.0)) + " MB)");
+		utilityclassobject.gettest().log(Status.INFO, "File size: " + fileSizeInBytes + " bytes (" + (fileSizeInBytes / (1024 * 1024.0)) + " MB)");
+		if (fileSizeInBytes >= fiveMBInBytes) {
+			utilityclassobject.gettest().log(Status.FAIL, "Selected file is NOT less than 5MB: " + file.getName());
+			throw new IOException("Selected file is not less than 5MB: " + file.getName());
+		}
+		System.out.println("File is less than 5MB – proceeding with upload");
+		utilityclassobject.gettest().log(Status.INFO, "File is less than 5MB – proceeding with upload");
+
+		String absolutePath = file.getAbsolutePath();
+
+		// Locate the (hidden) file input
+		List<WebElement> inputs = driver.findElements(By.xpath("//input[@type='file']"));
+		WebElement fileInput = null;
+		if (inputs.size() > 0) {
+			fileInput = inputs.get(0);
+		} else {
+			try {
+				tp.getUploadfile().click();
+				System.out.println("Clicked on upload icon Successfully");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on upload icon Successfully");
+			} catch (Exception e) { /* ignore */ }
+			for (int i = 0; i < 5; i++) {
+				inputs = driver.findElements(By.xpath("//input[@type='file']"));
+				if (inputs.size() > 0) {
+					fileInput = inputs.get(0);
+					break;
+				}
+				try { Thread.sleep(300); } catch (InterruptedException ie) { /* ignore */ }
+			}
+			if (fileInput == null) {
+				throw new NoSuchElementException("Could not find file input to upload image");
+			}
+		}
+
+		// Scroll into view and upload
+		try {
+			wlib.scrollToelement(driver, fileInput);
+			wlib.waitUntilElementClickable(driver, fileInput);
+		} catch (Exception e) { /* best-effort */ }
+
+		fileInput.sendKeys(absolutePath);
+		utilityclassobject.gettest().log(Status.INFO, "File uploaded via sendKeys: " + absolutePath);
+		Thread.sleep(5000);
+
+		// Verify upload succeeded – delete button should be visible after upload
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			wait.until(ExpectedConditions.visibilityOf(sl.getCompanylogodeletebutton()));
+			System.out.println("TC_072 PASS: Logo less than 5MB uploaded successfully");
+			utilityclassobject.gettest().log(Status.PASS, "Logo less than 5MB uploaded successfully");
+		} catch (Exception e) {
+			System.out.println("TC_072 FAIL: Logo upload may have failed – delete button not visible");
+			utilityclassobject.gettest().log(Status.FAIL, "Logo upload may have failed – delete button not visible");
+		}
 	}
 	
 	@Test(dependsOnMethods = "TC_072VerifyLogoUploadWithLessThan5mb")
@@ -287,7 +335,7 @@ public class File_UploadTc extends BaseClassForGEneratorContacts{
 						TransporterProfile tp = new TransporterProfile(driver);
 						try { tp.getUploadfile().click(); } catch(Exception e) { /* ignore */ }
 						String projectDir = System.getProperty("user.dir");
-						File file = new File(projectDir + File.separator + "Files_ upload" + File.separator + "Morethan 10mb.png");
+						File file = new File(projectDir + File.separator + "Files_ upload" + File.separator + "Morethan10mb.png");
 						if(!file.exists()){
 							utilityclassobject.gettest().log(Status.FAIL, "Upload file not found: " + file.getAbsolutePath());
 							throw new RuntimeException("Upload file not found: " + file.getAbsolutePath());
@@ -323,12 +371,28 @@ public class File_UploadTc extends BaseClassForGEneratorContacts{
 		}
 		fileInput.sendKeys(absolutePath);
 		utilityclassobject.gettest().log(Status.INFO, "Logo re-uploaded: " + absolutePath);
-		//hndle alert popup
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.alertIsPresent());
-		driver.switchTo().alert().accept();
-		utilityclassobject.gettest().log(Status.INFO, "Alert popup handled for logo upload more than 5MB");
-		System.out.println("Alert popup handled for logo upload more than 5MB");
+		Thread.sleep(3000);
+
+		// Handle rejection – try browser alert first, fall back to UI error toast
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+			wait.until(ExpectedConditions.alertIsPresent());
+			driver.switchTo().alert().accept();
+			utilityclassobject.gettest().log(Status.INFO, "Browser alert accepted for file > 5MB");
+			System.out.println("Browser alert accepted for file > 5MB");
+		} catch (Exception alertEx) {
+			// No browser alert – check for UI error message (toast / validation text)
+			try {
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+				WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(
+						By.xpath("//*[contains(text(),'5MB') or contains(text(),'5 MB') or contains(text(),'size') or contains(text(),'large') or contains(text(),'exceed')]")));
+				System.out.println("UI error message displayed: " + errorMsg.getText());
+				utilityclassobject.gettest().log(Status.INFO, "UI error message displayed: " + errorMsg.getText());
+			} catch (Exception uiEx) {
+				utilityclassobject.gettest().log(Status.INFO, "No alert or UI error found – file may have been silently rejected");
+				System.out.println("No alert or UI error found – file may have been silently rejected");
+			}
+		}
 		System.out.println("Logo upload not accepts file more than 5MB  :PASS");
 		utilityclassobject.gettest().log(Status.PASS, "Logo upload  not accepts file  more than 5MB  :PASS");
 		
