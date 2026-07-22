@@ -36,8 +36,8 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	WebElement street;
 	String editedgeneratorInput;
 	
-	/*
-	@Test(priority = 1)
+	
+	/*@Test(priority = 1)
 	public void TC_001GeneratorInformation_withNewGenerator() throws InterruptedException, EncryptedDocumentException, IOException
 	{
 		gp = new GeneratorInformation1(driver);
@@ -151,7 +151,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	}
 	
 	@Test(dependsOnMethods = "TC_006GeneratorInformation_withAddedCreationdate")
-	public void TC_0007GeneratorInformation_withAddtag() throws InterruptedException
+	public void TC_007GeneratorInformation_withAddtag() throws InterruptedException
 	{
 	    gp = new GeneratorInformation1(driver);
 
@@ -230,7 +230,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    utilityclassobject.gettest().log(Status.INFO,"User is able to add all available tags");
 	}
 	
-	@Test(depend0sOnMethods = "TC_007GeneratorInformation_withAddtag")
+	@Test(dependsOnMethods = "TC_007GeneratorInformation_withAddtag")
 	public void TC_008GeneratorInformation_Removetags() throws InterruptedException
 	{
 		gp.RemoveAddedtags();
@@ -826,51 +826,12 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	}
 	
 	//need to add the dependency
-	/*
+	
 	@Test(dependsOnMethods = "TC_048GeneratorInformation_ServicelocationwithAutosave")
 	public void TC_049GeneratorInformation_ParentaccountwithInput() throws InterruptedException
 	{
-		/*gp = new GeneratorInformation1(driver);
-		WebElement generatormanagment = driver.findElement(By.xpath("//h6[contains (text(),'Generator Management')]"));
-		generatormanagment.click();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		
-		WebElement generatorlocation = driver.findElement(By.xpath("//h6[contains (text(),'Generator Locations')]"));
-		generatorlocation.click();
-		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
-		
-
-		WebElement searchoption = wait.until(
-		        ExpectedConditions.elementToBeClickable(
-		                By.xpath("//input[@placeholder='Search by Name, Phone Number, Email, or Address']")));
-
-		searchoption.click();
-		searchoption.sendKeys("Max_298310");
-		Thread.sleep(20000);
-
-		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(20));
-
-		WebElement generator = wait2.until(
-		    ExpectedConditions.refreshed(
-		        ExpectedConditions.elementToBeClickable(
-		            By.xpath("//div[contains(text(),'OCTO Number')]/following::div[contains(text(),'G-108-3316')]")
-		        )
-		    )
-		);
-
-		generator.click();
-		Thread.sleep(2000);
-		By generatorInfo = By.xpath("//a[contains(text(),'Generator Information')]");
-
-		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(20));
-
-		wait3.until(ExpectedConditions.refreshed(
-		        ExpectedConditions.elementToBeClickable(generatorInfo)));
-
-		driver.findElement(generatorInfo).click();
-		Thread.sleep(20000);
 			
-		//gp.ParentaccountwithInput();
+		gp.ParentaccountwithInput();
 		System.out.println("The user is able to enter manual input");
 		utilityclassobject.gettest().log(Status.INFO, "The user is able to enter manual input");	
 
@@ -1196,7 +1157,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    
 	    @Test(dependsOnMethods = "TC_069GeneratorInformation_ExtwithMorethan5digits")
 	    public void TC_070GeneratorInformation_ExtwithshortInput() throws EncryptedDocumentException, IOException
-	    {00000
+	    {
 	    		gp.getExtTextfield().click();
 			gp.getExtTextfield().sendKeys(Keys.CONTROL + "a");
 			gp.getExtTextfield().sendKeys(Keys.DELETE);
@@ -1241,7 +1202,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    public void TC_074GeneratorInformation_GeneratorEmailwithspecialcharacters() throws EncryptedDocumentException, IOException
 	    {
 	    		gp.getGeneratorEmail().click();
-			gp.getGene	ratorEmail().sendKeys(Keys.CONTROL + "a");
+			gp.getGeneratorEmail().sendKeys(Keys.CONTROL + "a");
 			gp.getGeneratorEmail().sendKeys(Keys.DELETE);
 			String input = elib.getDataFromExcel("GeneratorInformation", 22, 3);
 			gp.getGeneratorEmail().sendKeys(input);
@@ -1290,47 +1251,6 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    @Test(dependsOnMethods = "TC_077GeneratorInformation_GeneratorEmailwithAutosave")
 	    public void TC_078GeneratorInformation_withDefaultgeneratorStatus() throws InterruptedException
 	    {
-	    		gp = new GeneratorInformation1(driver);
-			WebElement generatormanagment = driver.findElement(By.xpath("//h6[contains (text(),'Generator Management')]"));
-			generatormanagment.click();
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-			
-			WebElement generatorlocation = driver.findElement(By.xpath("//h6[contains (text(),'Generator Locations')]"));
-			generatorlocation.click();
-			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
-			
-
-			WebElement searchoption = wait.until(
-			        ExpectedConditions.elementToBeClickable(
-			                By.xpath("//input[@placeholder='Search by Name, Phone Number, Email, or Address']")));
-
-			searchoption.click();
-			searchoption.sendKeys("Max_298310");
-			Thread.sleep(20000);
-
-			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(20));
-
-			WebElement generator = wait2.until(
-			    ExpectedConditions.refreshed(
-			        ExpectedConditions.elementToBeClickable(
-			            By.xpath("//div[contains(text(),'OCTO Number')]/following::div[contains(text(),'G-108-3316')]")
-			        )
-			    )
-			);
-
-			generator.click();
-			Thread.sleep(2000);
-			By generatorInfo = By.xpath("//a[contains(text(),'Generator Information')]");
-
-			WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(20));
-
-			wait3.until(ExpectedConditions.refreshed(
-			        ExpectedConditions.elementToBeClickable(generatorInfo)));
-
-			driver.findElement(generatorInfo).click();
-			Thread.sleep(20000);
-			
-
 	    		WebElement generatorstatus = driver.findElement(By.xpath("//button[@id='generator-status']"));
 			Assert.assertTrue(generatorstatus.isDisplayed(), "Generator status is displayed");
 			WebElement status = driver.findElement(By.xpath("(//span[contains (text(),'Prospect')])[2]"));
@@ -1411,7 +1331,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    	  gp.Updatestatus();
 	    	  System.out.println("Prospect status got updated");
 	    	  Thread.sleep(200);
-	    	  gp.getGeneratorStatus().click();
+	    	  /*gp.getGeneratorStatus().click();
 	    	  gp.getAdministrativeStatus().click();
 	    	  gp.Updatestatus();
 	    	  System.out.println("Administrative status got updated");
@@ -1422,7 +1342,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    	  System.out.println("Prospect status got updated");
 	    	  Thread.sleep(200);
 	    	  System.out.println("The user is able to change the status of the generator accordingly :PASS");
-	    	  //utilityclassobject.gettest().log(Status.PASS,"The user is able to change the status of the generator accordingly");
+	    	  utilityclassobject.gettest().log(Status.PASS,"The user is able to change the status of the generator accordingly");
 
 	    }
 	    
@@ -1490,8 +1410,9 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    	     gp.IndustrytypeOption();
 	    	     System.out.println("user is able to select a industry type");
 			 utilityclassobject.gettest().log(Status.PASS, "user is able to select a industry type from the dropdown");	    	     
-	    }
+	    }*/
 	    
+	    /*
 	    @Test(dependsOnMethods = "TC_085VerifySelecttheIndustrytype")
 	    public void TC_086VerifySelectmorethanIndustrytype() throws InterruptedException
 	    {
@@ -1515,54 +1436,14 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 			    }
 			    System.out.println("The user is not be able to select multiple industrytypes");
 				utilityclassobject.gettest().log(Status.INFO, "The user is not be able to select multiple industrytypes");
-	    }*/
+	    }
 	   
 		//need to change the dependency
-	    @Test(priority = 1)
+	    @Test(dependsOnMethods = "TC_086VerifySelectmorethanIndustrytype")
 	    public void TC_088VerifyContractedcheckboxwithClick() throws InterruptedException
 	    {
-	     	gp = new GeneratorInformation1(driver);
-			WebElement generatormanagment = driver.findElement(By.xpath("//h6[contains (text(),'Generator Management')]"));
-			generatormanagment.click();
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			
-			
-			WebElement generatorlocation = driver.findElement(By.xpath("//h6[contains (text(),'Generator Locations')]"));
-			generatorlocation.click();
-			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
-			
-
-			WebElement searchoption = wait.until(
-			        ExpectedConditions.elementToBeClickable(
-			                By.xpath("//input[@placeholder='Search by Name, Phone Number, Email, or Address']")));
-
-			searchoption.click();
-			searchoption.sendKeys("Max_298310");
-			Thread.sleep(20000);
-
-			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(20));
-
-			WebElement generator = wait2.until(
-			    ExpectedConditions.refreshed(
-			        ExpectedConditions.elementToBeClickable(
-			            By.xpath("//div[contains(text(),'OCTO Number')]/following::div[contains(text(),'G-108-3316')]")
-			        )
-			    )
-			);
-
-			generator.click();
-			Thread.sleep(2000);
-			By generatorInfo = By.xpath("//a[contains(text(),'Generator Information')]");
-
-			WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(20));
-
-			wait3.until(ExpectedConditions.refreshed(
-			        ExpectedConditions.elementToBeClickable(generatorInfo)));
-
-			driver.findElement(generatorInfo).click();
-			Thread.sleep(20000);
-			
-	    		//gp.ContractedCheckbox();
+	    		gp.ContractedCheckbox();
 	    		System.out.println("contracted checkbox is not clickable as expected");
 			utilityclassobject.gettest().log(Status.INFO, "contracted checkbox is not clickable as expected");
 	    }
@@ -1654,7 +1535,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    }
 	    
 	    //need to complete the contracted checkbox testcase
-	    @Test(dependsOnMethods = "TC_090VerifycheckboxwithoutGeneratorBilling")
+	    @Test(dependsOnMethods = "TC_085VerifySelecttheIndustrytype")
 	    public void TC_104VerifyAttentionwithAlphabets() throws EncryptedDocumentException, IOException
 	    {
 	    		 elib = new ExcelUtility();
@@ -1751,13 +1632,12 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 	    		WebElement street1 = driver.findElement(By.xpath("//div[contains (text(),'1245 6th Street Southwest, Warren, Ohio 44485, United States')]"));
 	    		street1.click();
 	    		Thread.sleep(2000);
-	    		String city = gp.getServiceCity().getText();
-
-	    		System.out.println(city);
-	    		String state = gp.getServiceState().getText();
-	    		System.out.println(state);
-	    		String zipcode = gp.getServiceZipode().getText();
-	    		System.out.println(zipcode);
+	    		String city = gp.getBillingcity().getAttribute("value");
+    			System.out.println("City: " + city);
+			String state = gp.getBillingstate().getAttribute("value");
+			System.out.println("State: " + state);
+			String zipcode = gp.getBillingzipcode().getAttribute("value");
+			System.out.println("Zip Code: " + zipcode);
 			utilityclassobject.gettest().log(Status.INFO, "The city, state and zip code will get autofilled");
 
 	    }
@@ -1856,10 +1736,12 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		   	     gp.getServiceCity().sendKeys(Keys.CONTROL + "a");
 		   	     gp.getServiceCity().sendKeys(Keys.DELETE);
 		   	     String input = elib.getDataFromExcel("GeneratorInformation", 34, 1);
+		 
 		   	     gp.getServiceCity().sendKeys(input);
 		   	     System.out.println("City text filed will accepts alphabets");
 			     utilityclassobject.gettest().log(Status.INFO, "City text filed will accepts alphabets");
 	       }
+
 	    
 	       @Test(dependsOnMethods = "TC_119VerifyCitywithalphabets")
 	       public void TC_120VerifyCitywithnumbers() throws EncryptedDocumentException, IOException
@@ -2012,6 +1894,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 		   	     gp.getServiceZipode().sendKeys(Keys.DELETE);
 		   	     String input = elib.getDataFromExcel("GeneratorInformation", 37, 2);
 		   	     gp.getServiceZipode().sendKeys(input);
+		   	
 		   	     System.out.println("zipcode text filed will accepts numbers");
 			     utilityclassobject.gettest().log(Status.INFO, "zipcode text filed will accepts numbers");
 	       }
@@ -2103,6 +1986,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 				    utilityclassobject.gettest().log(Status.PASS,
 				            "Phone text field does not accept alphabets.");
 				}
+			
 				System.out.println("Phone text field will not accept alphabets");
 	       }
 	       
@@ -2170,7 +2054,7 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 				gp.getServicePhone().sendKeys(Keys.DELETE);
 				String input = elib.getDataFromExcel("GeneratorInformation", 43, 5);
 				gp.getServicePhone().sendKeys(input);
-				Thread.sleep(2000);
+				//Thread.sleep(2000);
 				String errormsg = gp.getPhoneErmsg().getText();
 				System.out.println(errormsg);
 				System.out.println("Phone text field will not accept short input");
@@ -2279,9 +2163,145 @@ public class Octopussaas_GeneratorInformation extends BaseclassforGeneratorInfor
 				gp.getExt().sendKeys(Keys.DELETE);
 				System.out.println("The user is able to proceed as it is not mandatory");
 			    utilityclassobject.gettest().log(Status.INFO, "The user is able to proceed as it is not mandatory");			
+	       }*/
+	       
+	       //need to write TC 150 to 158
+	
+			//need to change the dependency 
+	       @Test(priority = 1)
+	       public void TC_159VerifybillingAttentionwithalphabets() throws EncryptedDocumentException, IOException, InterruptedException
+	       {
+	    	   		gp = new GeneratorInformation1(driver);
+	    	   		elib = new ExcelUtility();
+	    	   		gp.GeneratorInformation();
+	    	        gp.getBillingattention().click();
+				gp.getBillingattention().sendKeys(Keys.CONTROL + "a");
+				gp.getBillingattention().sendKeys(Keys.DELETE);
+				String input = elib.getDataFromExcel("GeneratorInformation", 25, 1);
+				gp.getBillingattention().sendKeys(input);
+				System.out.println("Attention text field will accept alphabets");
+			    utilityclassobject.gettest().log(Status.INFO, "Attention text field will accept alphabets");			
+
 	       }
 	       
+	       @Test(dependsOnMethods = "TC_159VerifybillingAttentionwithalphabets")
+	       public void TC_160VerifybillingAttentionwithnumbers() throws InterruptedException, EncryptedDocumentException, IOException
+	       {
+	   	        gp.getBillingattention().click();
+				gp.getBillingattention().sendKeys(Keys.CONTROL + "a");
+				gp.getBillingattention().sendKeys(Keys.DELETE);
+				String input = elib.getDataFromExcel("GeneratorInformation", 25, 2);
+				gp.getBillingattention().sendKeys(input);
+				System.out.println("Attention text field will accept numbers");
+			    utilityclassobject.gettest().log(Status.INFO, "Attention text field will accept numbers");			
+
+	    	   
+	       }
+	       
+	       @Test(dependsOnMethods = "TC_160VerifybillingAttentionwithnumbers")
+	       public void TC_161VerifybillingAttentionwithspecialcharacters() throws EncryptedDocumentException, IOException
+	       {
+	    	        gp.getBillingattention().click();
+				gp.getBillingattention().sendKeys(Keys.CONTROL + "a");
+				gp.getBillingattention().sendKeys(Keys.DELETE);
+				String input = elib.getDataFromExcel("GeneratorInformation", 25, 3);
+				gp.getBillingattention().sendKeys(input);
+				System.out.println("Attention text field will accept specialcharacters");
+			    utilityclassobject.gettest().log(Status.INFO, "Attention text field will accept specialcharacters");			
+	       }
+	       
+	       
+	       @Test(dependsOnMethods = "TC_161VerifybillingAttentionwithspecialcharacters")
+	       public void TC_162VerifybillingStreetwithalphabets() throws EncryptedDocumentException, IOException
+	       {
+	    	        gp.getBillingaddressStreet().click();
+				gp.getBillingaddressStreet().sendKeys(Keys.CONTROL + "a");
+				gp.getBillingaddressStreet().sendKeys(Keys.DELETE);
+				String input = elib.getDataFromExcel("GeneratorInformation", 28, 1);
+				gp.getBillingaddressStreet().sendKeys(input);
+				System.out.println("Street text field will accept alphabets");
+			    utilityclassobject.gettest().log(Status.INFO, "Street text field will accept alphabets");			
+	       }
+	       
+	       @Test(dependsOnMethods = "TC_162VerifybillingStreetwithalphabets")
+	       public void TC_163VerifybillingStreetwithnumbers() throws EncryptedDocumentException, IOException
+	       {
+	    	        gp.getBillingaddressStreet().click();
+				gp.getBillingaddressStreet().sendKeys(Keys.CONTROL + "a");
+				gp.getBillingaddressStreet().sendKeys(Keys.DELETE);
+				String input = elib.getDataFromExcel("GeneratorInformation", 28, 2);
+				gp.getBillingaddressStreet().sendKeys(input);
+				System.out.println("Street text field will accept numbers");
+			    utilityclassobject.gettest().log(Status.INFO, "Street text field will accept numbers");	
+	       }
+	       
+	       
+	       @Test(dependsOnMethods = "TC_163VerifybillingStreetwithnumbers")
+	       public void TC_164VerifybillingStreetwithspecialcharacters() throws EncryptedDocumentException, IOException
+	       {
+	    	        gp.getBillingaddressStreet().click();
+				gp.getBillingaddressStreet().sendKeys(Keys.CONTROL + "a");
+				gp.getBillingaddressStreet().sendKeys(Keys.DELETE);
+				String input = elib.getDataFromExcel("GeneratorInformation", 28, 3);
+				gp.getBillingaddressStreet().sendKeys(input);
+				System.out.println("Street text field will accept specialcharacters");
+			    utilityclassobject.gettest().log(Status.INFO, "Street text field will accept specialcharacters");	
+	       }
+	       
+	       //need to write TC 165
+	       @Test(dependsOnMethods = "TC_164VerifybillingStreetwithspecialcharacters")
+	       public void TC_166VerifybillingStreetwithsuggestion() throws InterruptedException
+	       {
+	    		     gp.getBillingaddressStreet().click();
+		   	     gp.getBillingaddressStreet().sendKeys(Keys.CONTROL + "a");
+		   	     gp.getBillingaddressStreet().sendKeys(Keys.DELETE);
+		   	     gp.getBillingaddressStreet().sendKeys("1245 6");
+		   	     Thread.sleep(2000);
+		   	     WebElement dropdown = driver.findElement(By.xpath("//div[contains(@class,'absolute') and contains(@class,'overflow-y-auto')]"));
+		   	     Assert.assertTrue(dropdown.isDisplayed());
+		   	     System.out.println(dropdown);
+			     utilityclassobject.gettest().log(Status.INFO, "The billing street field will show related suggestions");
+		   }
+	       
+	       @Test(dependsOnMethods = "TC_166VerifybillingStreetwithsuggestion")
+	       public void TC_167VerifybillingStreetwithAutofills() throws InterruptedException
+	       {
+		    	    WebElement street1 = driver.findElement(By.xpath("//div[contains (text(),'1245 6th Street Southwest, Warren, Ohio 44485, United States')]"));
+		    		street1.click();
+		    		String city = gp.getBillingcity().getAttribute("value");
+		    		System.out.println("City: " + city);
+		    		String state = gp.getBillingstate().getAttribute("value");
+		    		System.out.println("State: " + state);
+		    		String zipcode = gp.getBillingzipcode().getAttribute("value");
+		    		System.out.println("Zip Code: " + zipcode);
+				utilityclassobject.gettest().log(Status.INFO, "The city, state and zip code will get autofilled");
+	       }
+	       
+	       @Test(dependsOnMethods = "TC_167VerifybillingStreetwithAutofills")
+	       public void TC_168VerifybillingStreetwithAutosave() throws InterruptedException
+	       {
+	    	         gp.getBillingaddressStreet().click();
+		   	     gp.getBillingaddressStreet().sendKeys(Keys.CONTROL + "a");
+		   	     gp.getBillingaddressStreet().sendKeys(Keys.DELETE);
+		   	     gp.getBillingaddressStreet().sendKeys("1245 6");
+		   	     Thread.sleep(2000);
+		   	     WebElement dropdown = driver.findElement(By.xpath("//div[contains(@class,'absolute') and contains(@class,'overflow-y-auto')]"));
+		   	     Assert.assertTrue(dropdown.isDisplayed());
+		   	     System.out.println("dropdown is displayed");
+			   	 WebElement street1 = driver.findElement(By.xpath("//div[contains (text(),'1245 6th Street Southwest, Warren, Ohio 44485, United States')]"));
+		  		 street1.click();
+		  		 Thread.sleep(2000);
+		  		 String city = gp.getBillingcity().getText();
+		  		 System.out.println(city);
+		  		 String state = gp.getBillingstate().getText();
+		  		 System.out.println(state);
+		  		 String zipcode = gp.getBillingzipcode().getText();
+		  		 System.out.println(zipcode);
+				 utilityclassobject.gettest().log(Status.INFO, "The street field will accept input and autosaves");
+				 
+	       }
 }			
+
 
 
 

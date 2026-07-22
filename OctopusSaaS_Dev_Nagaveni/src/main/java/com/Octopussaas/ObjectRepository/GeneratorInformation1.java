@@ -1,5 +1,7 @@
 package com.Octopussaas.ObjectRepository;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -7,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.Octopussaass.WebdriverUtility.utilityclassobject;
@@ -180,8 +184,37 @@ public class GeneratorInformation1 {
 	private WebElement phoneErmsg;
 	@FindBy (xpath = "//input[@id='serviceAddress-phone-ext']")
 	private WebElement ext;
+	@FindBy (xpath = "//input[@id='billingAddress-attention']")
+	private WebElement billingattention;
+	@FindBy (xpath = "//input[@id='billingAddress-city']")
+	private WebElement billingcity;
+	@FindBy (xpath = "//input[@id='billingAddress-state']")
+	private WebElement billingstate; 
+	@FindBy (xpath = "//input[@id='billingAddress-zipCode']")
+	private WebElement billingzipcode;
 	
 	
+	
+	
+	
+	
+	
+	public WebElement getBillingzipcode() {
+		return billingzipcode;
+	}
+
+	public WebElement getBillingstate() {
+		return billingstate;
+	}
+
+	public WebElement getBillingcity() {
+		return billingcity;
+	}
+
+	public WebElement getBillingattention() {
+		return billingattention;
+	}
+
 	public WebElement getExt() {
 		return ext;
 	}
@@ -700,5 +733,47 @@ public class GeneratorInformation1 {
 		serviceState.click();
 		Actions act1 = new Actions(driver);
 		act1.moveToElement(wVState).click().perform();
+	}
+	
+	public void GeneratorInformation() throws InterruptedException
+	{
+		WebElement generatormanagment = driver.findElement(By.xpath("//h6[contains (text(),'Generator Management')]"));
+		generatormanagment.click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement generatorlocation = driver.findElement(By.xpath("//h6[contains (text(),'Generator Locations')]"));
+		generatorlocation.click();
+		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+
+		WebElement searchoption = wait.until(
+		        ExpectedConditions.elementToBeClickable(
+		                By.xpath("//input[@placeholder='Search by Name, Phone Number, Email, or Address']")));
+
+		searchoption.click();
+		searchoption.sendKeys("Max_298310");
+		Thread.sleep(20000);
+
+		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+		WebElement generator = wait2.until(
+		    ExpectedConditions.refreshed(
+		        ExpectedConditions.elementToBeClickable(
+		            By.xpath("//div[contains(text(),'OCTO Number')]/following::div[contains(text(),'G-108-3316')]")
+		        )
+		    )
+		);
+
+		generator.click();
+		Thread.sleep(2000);
+		By generatorInfo = By.xpath("//a[contains(text(),'Generator Information')]");
+
+		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+		wait3.until(ExpectedConditions.refreshed(
+		        ExpectedConditions.elementToBeClickable(generatorInfo)));
+
+		driver.findElement(generatorInfo).click();
+		Thread.sleep(20000);
 	}
 }
