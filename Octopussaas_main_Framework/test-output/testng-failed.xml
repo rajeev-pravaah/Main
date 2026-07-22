@@ -6,10 +6,16 @@
       <class name="Assert_Satellite_Location.Satellitelocation_Tc230to236">
         <methods>
           <include name="Ac"/>
+          <include name="TC_232VerifyAddressoftheSatellteisPresentInsideSatelliteLocationslist"/>
           <include name="Bc"/>
+          <include name="TC_233VerifyDispatchPhoneNumberoftheSatellteisPresentInsideSatelliteLocationslist"/>
+          <include name="TC_231VerifyNameOftheSatelliteisPresentInsideSatelliteLists"/>
           <include name="Bm"/>
-          <include name="TC_230VerifySavedSatelliteLocationIspresentInSatelliteLocationLists"/>
+          <include name="TC_235VerifyStatusoftheSatellteisPresentInsideSatelliteLocationslist"/>
+          <include name="TC_234VerifyEmailoftheSatellteisPresentInsideSatelliteLocationslist"/>
+          <include name="TC_236VerifyUsercanExporttheSatellitelist"/>
           <include name="Am"/>
+          <include name="TC_230VerifySavedSatelliteLocationIspresentInSatelliteLocationLists"/>
         </methods>
       </class> <!-- Assert_Satellite_Location.Satellitelocation_Tc230to236 -->
     </classes>

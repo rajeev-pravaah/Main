@@ -265,6 +265,8 @@ public class SatelliteLocation {
 	private WebElement exportyeardropdown;
 	@FindBy(xpath = "(//select[@class='bg-white text-gray-700 px-2 py-1 rounded'])[2]")
 	private WebElement exportyearmonthdropdown;	
+	@FindBy(xpath = "//button[@title='Export progress']")
+	private WebElement exportprogressbutton;
 	
 	
 	
@@ -278,7 +280,9 @@ public class SatelliteLocation {
 	
 	
 	
-	
+	public WebElement getExportprogressbutton() {
+		return exportprogressbutton;
+	}
 	public WebElement getExportyearmonthdropdown() {
 		return exportyearmonthdropdown;
 	}

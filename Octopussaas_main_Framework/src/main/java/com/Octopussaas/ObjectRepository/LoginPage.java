@@ -52,7 +52,7 @@ public class LoginPage {
 	 * triggered by automation speed).
 	 */
 	public void LoginToApp(String Username, String password) throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(12));
 
 		// ── Step 1: Wait for the email field to be visible & clickable ──────────────
 		wait.until(ExpectedConditions.visibilityOf(EmailAdressTextField));

@@ -123,55 +123,36 @@ public class BaseClassForGEneratorContacts {
  		LoginPage lp = new LoginPage(driver);
  		lp.LoginToApp(USERNAME, PASSWORD);
 
- 		// ── Firebase App Check error auto-recovery ──────────────────────────────────
+ 		// ── Firebase / Login failure auto-recovery ──────────────────────────────────
+ 		// If Firebase App Check error (or any login failure) occurs, the browser stays
+ 		// on the login/auth URL instead of navigating to the dashboard.
+ 		// Check the current URL — if still on login page, refresh and retry once.
  		try {
- 			// Short wait for toast to appear
- 			Thread.sleep(1500);
+ 			String currentUrl = driver.getCurrentUrl();
+ 			System.out.println("[INFO] URL after login attempt: " + currentUrl);
 
- 			boolean firebaseErrorPresent = false;
- 			try {
- 				java.util.List<WebElement> toasts = driver.findElements(
- 					By.xpath("//*[contains(text(),'firebase-app-check-token-is-invalid') "
- 						+ "or contains(text(),'Firebase: Error')]"));
- 				if (!toasts.isEmpty()) {
- 					for (WebElement toast : toasts) {
- 						String msg = toast.getText();
- 						if (msg != null && msg.toLowerCase().contains("firebase-app-check-token-is-invalid")) {
- 							firebaseErrorPresent = true;
- 							System.out.println("[WARN] Firebase App Check error detected: " + msg);
- 							break;
- 						}
- 					}
- 				}
- 			} catch (Exception ignored) {}
+ 			boolean loginFailed = currentUrl.contains("/auth")
+ 					|| currentUrl.contains("/login")
+ 					|| currentUrl.contains("/sign-in");
 
- 			if (firebaseErrorPresent) {
- 				System.out.println("[INFO] Refreshing page and re-entering credentials due to Firebase error...");
+ 			if (loginFailed) {
+ 				System.out.println("[WARN] Login failed (still on login page). Refreshing and retrying...");
 
- 				// Refresh to clear the error
  				driver.navigate().refresh();
- 				Thread.sleep(1000);
+ 				Thread.sleep(2000);
 
- 				// Navigate back to the login URL
- 				driver.get(URL);
- 				Thread.sleep(1000);
-
- 				// Wait until the email field is visible
- 				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
- 				try {
- 					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='email']")));
- 				} catch (Exception e) {
- 					Thread.sleep(1500);
- 				}
+ 				// Wait for email field to be ready
+ 				new WebDriverWait(driver, Duration.ofSeconds(15))
+ 					.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='email']")));
 
  				LoginPage lp2 = new LoginPage(driver);
  				lp2.LoginToApp(USERNAME, PASSWORD);
- 				System.out.println("[INFO] Re-login completed after Firebase App Check error.");
+ 				System.out.println("[INFO] Re-login completed successfully.");
  			} else {
- 				System.out.println("[INFO] No Firebase error detected. Proceeding normally.");
+ 				System.out.println("[INFO] Login successful. Proceeding normally.");
  			}
  		} catch (Exception e) {
- 			System.out.println("[WARN] Firebase check encountered an exception: " + e.getMessage());
+ 			System.out.println("[WARN] Login recovery check failed: " + e.getMessage());
  		}
  		// ───────────────────────────────────────────────────────────────────────────
 

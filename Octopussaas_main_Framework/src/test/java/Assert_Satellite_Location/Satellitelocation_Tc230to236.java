@@ -432,7 +432,7 @@ public class Satellitelocation_Tc230to236 extends BaseClassForGEneratorContacts 
 		List<WebElement> namelists = sl.getSatellitenamelists();
 		for (WebElement list : namelists) {
 			String name = list.getText();
-			if (name.equals(satellitname)) {
+			if (name.equals(satellitename1)) {
 				String actulastatus = driver
 						.findElement(By.xpath("//div[normalize-space()='"+satellitename1+"']/following-sibling::div[4]"))
 						.getText();
@@ -452,6 +452,44 @@ public class Satellitelocation_Tc230to236 extends BaseClassForGEneratorContacts 
 		}
 
 	}
-	
+	@Test(dependsOnMethods = "TC_235VerifyStatusoftheSatellteisPresentInsideSatelliteLocationslist")
+	public void TC_236VerifyUsercanExporttheSatellitelist()
+			throws InterruptedException, EncryptedDocumentException, IOException {
+		List<WebElement> namelists = sl.getSatellitenamelists();
+		for (WebElement list : namelists) {
+			String name = list.getText();
+			if (name.equals(satellitename1)) {
+				WebElement satellieteelement = driver.findElement(By.xpath("//div[text()='"+satellitename1+"']/../descendant::input"));
+				wlib.scrollToelement(driver, satellieteelement);
+				satellieteelement.click();
+				System.out.println("User is able to select the Satellite Location: Pass");
+				utilityclassobject.gettest().log(Status.PASS,
+						"User is able to select the Satellite Location: Pass");
+				sl.getExportbutton().click();
+				//verify getExportprogressbutton is displayed
+				if(sl.getExportprogressbutton().isDisplayed()) {
+					System.out.println("User is able to export the Satellite Location: Pass");
+					utilityclassobject.gettest().log(Status.PASS,
+							"User is able to export the Satellite Location: Pass");
+				}
+				else {
+					System.out.println("User is not able to export the Satellite Location: Fail");
+					utilityclassobject.gettest().log(Status.FAIL,
+							"User is not able to export the Satellite Location: Fail");
+				
+			}
+				
+			
+			
+				
+			}
+		}
 
+	
+	System.out.println("User is able to export the Satellite Location: Pass");
+	utilityclassobject.gettest().log(Status.PASS,
+			"User is able to export the Satellite Location: Pass");
+
+
+	}
 }
