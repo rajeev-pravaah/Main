@@ -1,7 +1,10 @@
 package com.Octopussaas.ObjectRepository;
 
+import java.io.IOException;
 import java.util.List;
 
+import org.apache.poi.EncryptedDocumentException;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,6 +13,10 @@ import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Listeners;
+
+import com.Octopussaas.FileUtility.ExcelUtility;
+import com.Octopussaass.WebdriverUtility.webDriverutility;
 
 public class SatelliteLocation {
 	WebDriver driver;
@@ -84,6 +91,182 @@ public class SatelliteLocation {
 	private WebElement generalphoneerrormessage;
 	@FindBy(xpath = "(//label[text()='General Phone*']/../descendant::input)[2]")
 	private WebElement generalphoneextfield;
+	@FindBy(xpath = "//input[@placeholder='Enter General Email']")
+	private WebElement generalemailfield;
+	@FindBy(xpath = "//p[text()='Email is required']")
+	private WebElement generalemailerrormessage;
+	@FindBy(xpath = "//label[text()='Website URL']/../descendant::input")
+	private WebElement generalwebsitefield;
+	@FindBy(xpath = "//label[text()='Start of Fiscal Year']/../descendant::span")
+	private WebElement startoffiscalyearfield;
+	@FindBy(xpath = "//div[@data-testid='startOfFiscalYear']//following-sibling::*[name()='svg']")
+	private WebElement startoffiscalendaricon;
+	@FindBy(xpath = "//input[@placeholder='Enter Business Hours']")
+	private WebElement businesshoursfield;
+	@FindBy(xpath = "//input[@placeholder='Enter Google Review Link']")
+	private WebElement googlereviewlinkfield;
+	@FindBy(xpath = "//p[text()='Please enter a valid URL']")
+	private WebElement googlereviewlinkerrormessage;
+	@FindBy(xpath = "//div[contains(@class,'truncate') and contains(@class,'max-w-60')]")
+	private List<WebElement> satelliteLocationNameinlist;
+	@FindBy(xpath = "(//label[text()='Company Logo ']/../descendant::button)[2]")
+	private WebElement companylogodeletebutton;
+	@FindBy(xpath = "//label[text()='Company Logo ']/../descendant::div")
+	private WebElement companylogopfield;
+	@FindBy(xpath = "//p[text()='Satellite Location Status* ']/../../descendant::button")
+	private WebElement satellitelocationstatusdropdown;
+	@FindBy(id = "satellite-location status")
+	private WebElement satellitelocationstatusdropdownfield;
+	@FindBy(xpath = "//div[text()='Inactive']")
+	private WebElement inactivefromstatusdropdownfield;
+	@FindBy(xpath = "//div[text()='Active']")
+	private WebElement activefromstatusdropdownfield;
+	@FindBy(xpath = "//input[@placeholder='Enter Registration Number 1']")
+	private WebElement registrationnumber1field;
+	@FindBy(xpath = "//p[text()='Registration Number 1 is required']")
+	private WebElement registrationnumber1errormessage;
+	@FindBy(xpath = "//input[@placeholder='Enter Registration Number 2']")
+	private WebElement registrationnumber2field;
+	@FindBy(xpath = "//input[@placeholder='Enter EPA ID Number']")
+	private WebElement epanumberfield;
+	@FindBy(xpath = "//input[@placeholder='Enter DOT Number']")
+	private WebElement dotnumberfield;
+	@FindBy(xpath = "//input[@placeholder='Enter EIN']")
+	private WebElement einfield;
+	@FindBy(xpath = "//input[@placeholder='Enter Entity ID Number']")
+	private WebElement entityidnumberfield;
+	@FindBy(xpath = "//input[@placeholder='Enter SOS Number']")
+	private WebElement sosnumberfield;
+	@FindBy(xpath = "//input[@placeholder='Enter SIC Code']")
+	private WebElement siccodefield;
+	@FindBy(xpath = "//input[@placeholder='Enter NAICS Code']")
+	private WebElement naicscodefield;
+	@FindBy(xpath = "//input[@placeholder='Enter CAGE Code']")
+	private WebElement cagecodefield;
+	@FindBy(id = "serviceAddress-name")
+	private WebElement satelliteserviceinfonamefield;
+	@FindBy(id = "serviceAddress-street")
+	private WebElement satelliteserviceinfostreetfield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[1]")
+	private WebElement satelliteserviceinfonameerrormessage;
+	@FindBy(xpath = "(//p[text()='This field is required'])[2]")
+	private WebElement satelliteserviceinfostreeterrormessage;
+	@FindBy(xpath = "//div[@class='font-medium']/../..")
+	private WebElement streetSuggestionbox;
+	@FindBy(xpath = "//span[text()='Medical Waste Services']")
+	private WebElement medicalwasteservicestxt;
+	@FindBy(xpath = "//div[@class='font-medium']")
+	private WebElement streetSuggestionboxfirstoption;
+	@FindBy(id = "serviceAddress-suite")
+	private WebElement suitefield;
+	@FindBy(id = "serviceAddress-city")
+	private WebElement cityfield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[3]")
+	private WebElement cityerrormessage;
+	@FindBy(id = "serviceAddress-state")
+	private WebElement statefield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[4]")
+	private WebElement stateerrormessage;
+	@FindBy(xpath = "//div[text()='Services Offered']")
+	private WebElement servicesofferedtxt;
+	@FindBy(xpath = "//li[@role='option']")
+	private List<WebElement> stateslist;
+	@FindBy(id = "serviceAddress-zipCode")
+	private WebElement zipcodefield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[4]")
+	private WebElement zipcodeerrormessage;
+	@FindBy(id = "serviceAddress-email")
+	private WebElement serviceaddressemailfield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[5]")
+	private WebElement serviceaddressemailerrormessage;
+	@FindBy(xpath = "//p[text()='Invalid email format']")
+	private WebElement serviceaddressemailformaterrormessage;
+	@FindBy(id = "serviceAddress-phone")
+	private WebElement serviceaddressphonefield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[6]")
+	private WebElement serviceaddressphoneerrormessage;
+	@FindBy(id = "serviceAddress-phone-ext")
+	private WebElement serviceaddressphoneextfield;
+	@FindBy(id = "billingAddress-name")
+	private WebElement billingaddressnamefield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[7]")
+	private WebElement billingaddressnameerrormessage;
+	@FindBy(id = "billingAddress-street")
+	private WebElement billingaddressstreetfield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[8]")
+	private WebElement billingaddressstreeterrormessage;
+	@FindBy(id = "billingAddress-suite")
+	private WebElement billingaddresssuitefield;
+	@FindBy(id = "billingAddress-city")
+	private WebElement billingaddresscityfield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[10]")
+	private WebElement billingaddresscityerrormessage;
+	@FindBy(id = "billingAddress-state")
+	private WebElement billingaddressstatefield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[11]")
+	private WebElement billingaddressstateerrormessage;
+	@FindBy(xpath = "//li[@role='option']")
+	private List<WebElement> billingaddressstatelist;
+	@FindBy(id = "billingAddress-zipCode")
+	private WebElement billingaddresszipcodefield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[12]")
+	private WebElement billingaddresszipcodeerrormessage;
+	@FindBy(id = "billingAddress-email")
+	private WebElement billingaddressemailfield;
+	@FindBy(xpath = "//p[text()='Invalid email format']")
+	private WebElement billingaddressemailInvaliderrormessage;
+	@FindBy(xpath = "(//p[text()='This field is required'])[11]")
+	private WebElement billingaddressemailerrormessage;
+	@FindBy(id = "billingAddress-phone")
+	private WebElement billingaddressphonefield;
+	@FindBy(xpath = "(//p[text()='This field is required'])[12]")
+	private WebElement billingaddressphoneerrormessage;
+	@FindBy(id = "billingAddress-phone-ext")
+	private WebElement billingaddressphoneextfield;
+	@FindBy(xpath = "//span[text()='Bio/Sharps']/../descendant::div")
+	private WebElement bioandsharpscheckbox;
+	@FindBy(xpath = "//div[contains(text(),'Autosaved successfully!')]")
+	private WebElement autosavedsuccessfullytxt;
+	@FindBy(xpath = "//label[text()='Copy to Billing Information']/../descendant::button")
+	private WebElement copytobillinginformationbutton;
+	@FindBy(xpath = "//div[text()='1237 3rd Street, Portsmouth, Ohio 45662, United States']")
+	private WebElement streetSuggestionboxfirstoptionFromSatellitserciveinfo;
+	@FindBy(xpath = "//span[text()='Medical Waste Services']/../../..")
+	private List<WebElement> variousservices;
+	@FindBy(xpath = "//span[text()='Medical Waste Services']/../descendant::div")
+	private WebElement allmedicalwasteservicescheckbox;
+	@FindBy(xpath = "//div[@class='flex items-center mb-2 ']/descendant::div[@role='checkbox']")
+	private List<WebElement> allmedicalwasteservicesindividualcheckboxes;
+	@FindBy(xpath = "//span[text()='Recycling']/../div")
+	private WebElement recyclingcheckboxdisabled;
+	@FindBy(id = "dispatch-email")
+	private WebElement dispatchemailfield;
+	@FindBy(xpath = "//p[text()='Please enter a valid email address']")
+	private WebElement dispatchemailinvaliderrormessage;
+	@FindBy(xpath = "//div[text()='Dispatch Department']")
+	private WebElement dispatchdepartmenttxt;
+	@FindBy(xpath = "//label[text()='Email*']/../../descendant::p[text()='Email is required']")
+	private WebElement dispatchemailrequirederrormessage;
+	@FindBy(id = "dispatch-phone-number")
+	private WebElement dispatchphonenumberfield;
+	@FindBy(xpath = "(//label[text()='Phone'])[3]/../../descendant::p")
+	private WebElement dispatchphonenumbererrormessage;
+	@FindBy(id = "dispatch-phone-number-ext")
+	private WebElement dispatchphonenumberextfield;
+	@FindBy(xpath = "//div[@class='truncate max-w-60 w-60 px-4 text-ellipsis']")
+	private List<WebElement> satellitenamelists;
+	@FindBy(xpath = "//a[text()='Satellite Locations']")
+	private WebElement satellitelocationslink;
+	@FindBy(xpath = "//p[text()='Satellite Location Status* ']/../../descendant::span")
+	private WebElement satellitelocationstatusdropdownfieldtext;
+	@FindBy(xpath = "//button[text()='Export']")
+	private WebElement exportbutton;
+	@FindBy(xpath = "//select[@class='bg-white text-gray-700 px-2 py-1 rounded']")
+	private WebElement exportyeardropdown;
+	@FindBy(xpath = "(//select[@class='bg-white text-gray-700 px-2 py-1 rounded'])[2]")
+	private WebElement exportyearmonthdropdown;	
+	@FindBy(xpath = "//button[@title='Export progress']")
+	private WebElement exportprogressbutton;
 	
 	
 	
@@ -93,6 +276,307 @@ public class SatelliteLocation {
 	
 	
 	
+	
+	
+	
+	
+	public WebElement getExportprogressbutton() {
+		return exportprogressbutton;
+	}
+	public WebElement getExportyearmonthdropdown() {
+		return exportyearmonthdropdown;
+	}
+	public WebElement getExportyeardropdown() {
+		return exportyeardropdown;
+	}
+	public WebElement getExportbutton() {
+		return exportbutton;
+	}
+	public WebElement getSatellitelocationstatusdropdownfieldtext() {
+		return satellitelocationstatusdropdownfieldtext;
+	}
+	public WebElement getSatellitelocationslink() {
+		return satellitelocationslink;
+	}
+	public List<WebElement> getSatellitenamelists() {
+		return satellitenamelists;
+	}
+	public WebElement getDispatchphonenumberextfield() {
+		return dispatchphonenumberextfield;
+	}
+	public WebElement getDispatchphonenumbererrormessage() {
+		return dispatchphonenumbererrormessage;
+	}
+	public WebElement getDispatchphonenumberfield() {
+		return dispatchphonenumberfield;
+	}
+	public WebElement getDispatchemailrequirederrormessage() {
+		return dispatchemailrequirederrormessage;
+	}
+	public WebElement getDispatchdepartmenttxt() {
+		return dispatchdepartmenttxt;
+	}
+	public WebElement getDispatchemailinvaliderrormessage() {
+		return dispatchemailinvaliderrormessage;
+	}
+	public WebElement getDispatchemailfield() {
+		return dispatchemailfield;
+	}
+	public WebElement getRecyclingcheckboxdisabled() {
+		return recyclingcheckboxdisabled;
+	}
+	public List<WebElement> getAllmedicalwasteservicesindividualcheckboxes() {
+		return allmedicalwasteservicesindividualcheckboxes;
+	}
+	public WebElement getAllmedicalwasteservicescheckbox() {
+		return allmedicalwasteservicescheckbox;
+	}
+	public List<WebElement> getVariousservices() {
+		return variousservices;
+	}
+	public WebElement getStreetSuggestionboxfirstoptionFromSatellitserciveinfo() {
+		return streetSuggestionboxfirstoptionFromSatellitserciveinfo;
+	}
+	public WebElement getCopytobillinginformationbutton() {
+		return copytobillinginformationbutton;
+	}
+	public WebElement getAutosavedsuccessfullytxt() {
+		return autosavedsuccessfullytxt;
+	}
+	public WebElement getBioandsharpscheckbox() {
+		return bioandsharpscheckbox;
+	}
+
+	/**
+	 * Returns the most appropriate clickable element for the Bio/Sharps checkbox.
+	 * Tries: input inside ancestor label, ancestor label itself, then the original div.
+	 */
+	public WebElement getBioandsharpsClickable() {
+		// try input inside label
+		try {
+			WebElement input = driver.findElement(By.xpath("//span[text()='Bio/Sharps']/ancestor::label//input"));
+			if (input.isDisplayed() && input.isEnabled()) return input;
+		} catch (Exception ignored) {}
+		// try the label itself
+		try {
+			WebElement label = driver.findElement(By.xpath("//span[text()='Bio/Sharps']/ancestor::label"));
+			if (label.isDisplayed() && label.isEnabled()) return label;
+		} catch (Exception ignored) {}
+		// try the span itself
+		try {
+			WebElement span = driver.findElement(By.xpath("//span[text()='Bio/Sharps']"));
+			if (span.isDisplayed() && span.isEnabled()) return span;
+		} catch (Exception ignored) {}
+		// fallback to original div
+		return bioandsharpscheckbox;
+	}
+
+	/**
+	 * Clicks the Bio/Sharps checkbox using every available click strategy.
+	 * Returns true if click succeeded.
+	 */
+	public boolean clickBioAndSharps(webDriverutility wlib) {
+		WebElement target = getBioandsharpsClickable();
+		return wlib.safeClick(driver, target);
+	}
+	public WebElement getBillingaddressphoneextfield() {
+		return billingaddressphoneextfield;
+	}
+	public WebElement getBillingaddressphoneerrormessage() {
+		return billingaddressphoneerrormessage;
+	}
+	public WebElement getBillingaddressphonefield() {
+		return billingaddressphonefield;
+	}
+	public WebElement getBillingaddressemailerrormessage() {
+		return billingaddressemailerrormessage;
+	}
+	public WebElement getBillingaddressemailInvaliderrormessage() {
+		return billingaddressemailInvaliderrormessage;
+	}
+	public WebElement getBillingaddressemailfield() {
+		return billingaddressemailfield;
+	}
+	public WebElement getBillingaddresszipcodeerrormessage() {
+		return billingaddresszipcodeerrormessage;
+	}
+	public WebElement getBillingaddresszipcodefield() {
+		return billingaddresszipcodefield;
+	}
+	public List<WebElement> getBillingaddressstatelist() {
+		return billingaddressstatelist;
+	}
+	public WebElement getBillingaddressstateerrormessage() {
+		return billingaddressstateerrormessage;
+	}
+	public WebElement getBillingaddressstatefield() {
+		return billingaddressstatefield;
+	}
+	public WebElement getBillingaddresscityerrormessage() {
+		return billingaddresscityerrormessage;
+	}
+	public WebElement getBillingaddresscityfield() {
+		return billingaddresscityfield;
+	}
+	public WebElement getBillingaddresssuitefield() {
+		return billingaddresssuitefield;
+	}
+	public WebElement getBillingaddressstreeterrormessage() {
+		return billingaddressstreeterrormessage;
+	}
+	public WebElement getBillingaddressstreetfield() {
+		return billingaddressstreetfield;
+	}
+	public WebElement getBillingaddressnameerrormessage() {
+		return billingaddressnameerrormessage;
+	}
+	public WebElement getBillingaddressnamefield() {
+		return billingaddressnamefield;
+	}
+	public WebElement getServiceaddressphoneextfield() {
+		return serviceaddressphoneextfield;
+	}
+	public WebElement getServiceaddressphoneerrormessage() {
+		return serviceaddressphoneerrormessage;
+	}
+	public WebElement getServiceaddressphonefield() {
+		return serviceaddressphonefield;
+	}
+	public WebElement getServiceaddressemailformaterrormessage() {
+		return serviceaddressemailformaterrormessage;
+	}
+	public WebElement getServiceaddressemailerrormessage() {
+		return serviceaddressemailerrormessage;
+	}
+	public WebElement getServiceaddressemailfield() {
+		return serviceaddressemailfield;
+	}
+	public WebElement getZipcodeerrormessage() {
+		return zipcodeerrormessage;
+	}
+	public WebElement getZipcodefield() {
+		return zipcodefield;
+	}
+	public List<WebElement> getStatelist() {
+		return stateslist;
+	}
+	public WebElement getServicesofferedtxt() {
+		return servicesofferedtxt;
+	}
+	public WebElement getStateerrormessage() {
+		return stateerrormessage;
+	}
+	public WebElement getStatefield() {
+		return statefield;
+	}
+	public WebElement getCityerrormessage() {
+		return cityerrormessage;
+	}
+	public WebElement getCityfield() {
+		return cityfield;
+	}
+	public WebElement getSuitefield() {
+		return suitefield;
+	}
+	public WebElement getStreetSuggestionboxfirstoption() {
+		return streetSuggestionboxfirstoption;
+	}
+	public WebElement getMedicalwasteservicestxt() {
+		return medicalwasteservicestxt;
+	}
+	public WebElement getStreetSuggestionbox() {
+		return streetSuggestionbox;
+	}
+	public WebElement getSatelliteserviceinfostreeterrormessage() {
+		return satelliteserviceinfostreeterrormessage;
+	}
+	public WebElement getSatelliteserviceinfoNameerrormessage() {
+		return satelliteserviceinfonameerrormessage;
+	}
+	public WebElement getSatelliteserviceinfostreetfield() {
+		return satelliteserviceinfostreetfield;
+	}
+	public WebElement getCagecodefield() {
+		return cagecodefield;
+	}
+	public WebElement getSatelliteserviceinfonamefield() {
+		return satelliteserviceinfonamefield;
+	}
+	public WebElement getNaicscodefield() {
+		return naicscodefield;
+	}
+	public WebElement getSiccodefield() {
+		return siccodefield;
+	}
+	public WebElement getSosnumberfield() {
+		return sosnumberfield;
+	}
+	public WebElement getEntityidnumberfield() {
+		return entityidnumberfield;
+	}
+	public WebElement getEinfield() {
+		return einfield;
+	}
+	public WebElement getDotnumberfield() {
+		return dotnumberfield;
+	}
+	public WebElement getEpanumberfield() {
+		return epanumberfield;
+	}
+	public WebElement getRegistrationnumber2field() {
+		return registrationnumber2field;
+	}
+	public WebElement getRegistrationnumber1errormessage() {
+		return registrationnumber1errormessage;
+	}
+	public WebElement getRegistrationnumber1field() {
+		return registrationnumber1field;
+	}
+	public WebElement getActivefromstatusdropdownfield() {
+		return activefromstatusdropdownfield;
+	}
+	public WebElement getInactivefromstatusdropdownfield() {
+		return inactivefromstatusdropdownfield;
+	}
+	public WebElement getSatellitelocationstatusdropdownfield() {
+		return satellitelocationstatusdropdownfield;
+	}
+	public WebElement getSatellitelocationstatusdropdown() {
+		return satellitelocationstatusdropdown;
+	}
+	public WebElement getCompanylogopfield() {
+		return companylogopfield;
+	}
+	public WebElement getCompanylogodeletebutton() {
+		return companylogodeletebutton;
+	}
+	public List<WebElement> getSatelliteLocationNameinlist() {
+		return satelliteLocationNameinlist;
+	}
+	public WebElement getGooglereviewlinkerrormessage() {
+		return googlereviewlinkerrormessage;
+	}
+	public WebElement getGooglereviewlinkfield() {
+		return googlereviewlinkfield;
+	}
+	public WebElement getBusinesshoursfield() {
+		return businesshoursfield;
+	}
+	public WebElement getStartoffiscalendaricon() {
+		return startoffiscalendaricon;
+	}
+	public WebElement getStartoffiscalyearfield() {
+		return startoffiscalyearfield;
+	}
+	public WebElement getGeneralwebsitefield() {
+		return generalwebsitefield;
+	}
+	public WebElement getGeneralemailerrormessage() {
+		return generalemailerrormessage;
+	}
+	public WebElement getGeneralemailfield() {
+		return generalemailfield;
+	}
 	public WebElement getGeneralphoneextfield() {
 		return generalphoneextfield;
 	}
@@ -198,4 +682,48 @@ public class SatelliteLocation {
 	 		       .sendKeys(Keys.DELETE)
 	 		       .perform();
 		}
+	public void SaveButton()
+	{
+		webDriverutility wlib = new webDriverutility();
+		wlib.scrollToelement(driver, savebutton);
+		savebutton.click();
+	}
+	
+	public void ClearthevalueUsingBackspace(WebElement element) throws InterruptedException {
+	    element.click();
+	    Thread.sleep(1000);
+	    String value = element.getAttribute("value");
+	    int length = value.length();
+	    for (int i = 0; i < length; i++) {
+	        element.sendKeys(Keys.BACK_SPACE);
+	    }
+	}
+	ExcelUtility elib;
+	HomePage hp ;
+	public void MagicTcfroSatelliteLocation() throws InterruptedException, EncryptedDocumentException, IOException
+	{
+		elib = new ExcelUtility();
+		hp = new HomePage(driver);
+		System.out.println("Home Page is displayed");
+		Thread.sleep(6000);
+		SatelliteLocation sl = new SatelliteLocation(driver);
+		sl.getAssets().click();
+		sl.getSatellite_Locations().click();
+		sl.getSatelliteLocationsList().isDisplayed();
+		 System.out.println("Satellite Location Page is displayed");
+		  List<WebElement> namelists = sl.getSatelliteLocationNameinlist();
+		   //print each value using for loop
+		  for(int i=0; i<namelists.size(); i++) {
+			  String name = namelists.get(i).getText();
+			  ExcelUtility elib1 = new ExcelUtility();
+				 String satellitename = elib1.getDataFromExcel("SatelliteLocation", 35, 7);
+			  if(name.equals(satellitename)) {
+				  namelists.get(i).click();
+				  System.out.println("Clicked on Satellite Location Name in the list: " +name);
+				  break;
+			  }
+			  
+		  }
+	}
+	
 }
