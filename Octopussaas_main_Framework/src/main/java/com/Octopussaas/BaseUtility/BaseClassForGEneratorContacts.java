@@ -1,4 +1,7 @@
 package com.Octopussaas.BaseUtility;
+import java.time.Duration;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 
@@ -9,8 +12,10 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -117,7 +122,59 @@ public class BaseClassForGEneratorContacts {
  		Thread.sleep(3000);
  		LoginPage lp = new LoginPage(driver);
  		lp.LoginToApp(USERNAME, PASSWORD);
- 		
+
+ 		// ── Firebase App Check error auto-recovery ──────────────────────────────────
+ 		try {
+ 			// Short wait for toast to appear
+ 			Thread.sleep(1500);
+
+ 			boolean firebaseErrorPresent = false;
+ 			try {
+ 				java.util.List<WebElement> toasts = driver.findElements(
+ 					By.xpath("//*[contains(text(),'firebase-app-check-token-is-invalid') "
+ 						+ "or contains(text(),'Firebase: Error')]"));
+ 				if (!toasts.isEmpty()) {
+ 					for (WebElement toast : toasts) {
+ 						String msg = toast.getText();
+ 						if (msg != null && msg.toLowerCase().contains("firebase-app-check-token-is-invalid")) {
+ 							firebaseErrorPresent = true;
+ 							System.out.println("[WARN] Firebase App Check error detected: " + msg);
+ 							break;
+ 						}
+ 					}
+ 				}
+ 			} catch (Exception ignored) {}
+
+ 			if (firebaseErrorPresent) {
+ 				System.out.println("[INFO] Refreshing page and re-entering credentials due to Firebase error...");
+
+ 				// Refresh to clear the error
+ 				driver.navigate().refresh();
+ 				Thread.sleep(1000);
+
+ 				// Navigate back to the login URL
+ 				driver.get(URL);
+ 				Thread.sleep(1000);
+
+ 				// Wait until the email field is visible
+ 				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+ 				try {
+ 					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='email']")));
+ 				} catch (Exception e) {
+ 					Thread.sleep(1500);
+ 				}
+
+ 				LoginPage lp2 = new LoginPage(driver);
+ 				lp2.LoginToApp(USERNAME, PASSWORD);
+ 				System.out.println("[INFO] Re-login completed after Firebase App Check error.");
+ 			} else {
+ 				System.out.println("[INFO] No Firebase error detected. Proceeding normally.");
+ 			}
+ 		} catch (Exception e) {
+ 			System.out.println("[WARN] Firebase check encountered an exception: " + e.getMessage());
+ 		}
+ 		// ───────────────────────────────────────────────────────────────────────────
+
  		Robot robot = new Robot();
 
  		robot.keyPress(KeyEvent.VK_CONTROL);
@@ -132,14 +189,6 @@ public class BaseClassForGEneratorContacts {
 	@BeforeMethod(alwaysRun = true)
 	public void Bm() throws IOException, InterruptedException {
 		System.out.println("Before method");
-		
-		 
-
-		
-		
-		
-		
-
 	}
 	@AfterMethod(alwaysRun = true)
 	public void Am() throws InterruptedException {
