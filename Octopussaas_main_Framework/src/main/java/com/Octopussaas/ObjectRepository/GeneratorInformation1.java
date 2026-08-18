@@ -1,11 +1,21 @@
 package com.Octopussaas.ObjectRepository;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import com.Octopussaass.WebdriverUtility.utilityclassobject;
+import com.Octopussaass.WebdriverUtility.webDriverutility;
+import com.aventstack.extentreports.Status;
 
 public class GeneratorInformation1 {
 	WebDriver driver;
@@ -56,7 +66,384 @@ public class GeneratorInformation1 {
 	private WebElement constructionCancel;
 	@FindBy (xpath = "//span[normalize-space()='New Gen']/parent::*//button[@title='Remove tag']")
 	private WebElement newgenCancel;
+	@FindBy (xpath = "(//button[contains (text(),'Cancel')])[1]")
+	private WebElement cancelButton;
+	@FindBy (xpath = "//input[@placeholder='Enter Generator Name']")
+	private WebElement generatornameField;
+	@FindBy (xpath = "//p[contains (text(),'Generator Name is required')]")
+	private WebElement generatornameErmsg;
+	@FindBy (xpath = "//input[@placeholder='Enter OCTO Number']")
+	private WebElement octoNumber;
+	@FindBy (xpath = "//input[@placeholder='Enter Internal Account Number']")
+	private WebElement internalaccountNumber;
+	@FindBy (xpath = "//input[@placeholder='Generator Permit Number']")
+	private WebElement generatorpermitNumber;
+	@FindBy (xpath = "//input[@placeholder='https://example.com']")
+	private WebElement generatorwebsite;
+	@FindBy (xpath = "//div[contains (text(),'Please enter a valid URL.')]")
+	private WebElement websiteErmsg;
+	@FindBy (xpath = "//button[@title='Open link']")
+	private WebElement openlink;
+	@FindBy (xpath = "//textarea[@id='generator-note']")
+	private WebElement generatorNote;
+	@FindBy (xpath = "//button[@id='attach-to service location']")
+	private WebElement serviceLocation;
+	@FindBy (xpath = "//li[@role='option']//div[contains (text(),'BioTrust Medical Disposal')]")
+	private WebElement biotrustLocation;
+	@FindBy (xpath = "//li[@role='option']//div[contains (text(),'(Henry) Premier Med Waste Solution display')]")
+	private WebElement henryLocation;
+	@FindBy (xpath = "//input[@id='parent-account']")
+	private WebElement parentAccount;
+	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'G-101-0624 - Summit Healthcare')]")
+	private WebElement healthsummitGenerator;
+	@FindBy (xpath = "//p[contains (text(),'Unassign')]")
+	private WebElement unassignButton;
+	@FindBy (xpath = "//textarea[@name='unassignNote']")
+	private WebElement noteunassign;
+	@FindBy (xpath = "//button[contains (text(),'Unassign')]")
+	private WebElement noteUnassignbutton;
+	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'G-101-0625 - Coastal Dental Group')]")
+	private WebElement costalgroupGenerator;
+	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'G-107-7136 - PriceBook Test 2.0')]")
+	private WebElement pricebookGenerator;
+	@FindBy (xpath = "//button[contains (text(),'Keep This Assigned')]")
+	private WebElement keeptheAssigendButton;
+	@FindBy (xpath = "(//input[@placeholder='(123) 456-7890'])[1]")
+	private WebElement generatormainphone;
+	@FindBy (xpath = "//input[@id='undefined-ext']")
+	private WebElement extTextfield;
+	@FindBy (xpath = "//p[contains (text(),'Phone number must be 10 digits')]")
+	private WebElement mainphoneErmsg;
+	@FindBy (xpath = "//input[@placeholder='info@example.com']")
+	private WebElement generatorEmail;
+	@FindBy (xpath = "//p[contains (text(),'Please enter a valid email address')]")
+	private WebElement generatoremailErmsg;
+	@FindBy (xpath = "//button[@id='generator-status']")
+	private WebElement generatorStatus;
+	@FindBy (xpath = "(//div[@class='relative inline-block']//button)[2]")
+	private WebElement tooltip;
+	@FindBy (xpath = "//button[@aria-label='Close tooltip']")
+	private WebElement closetooltip;
+	@FindBy (xpath = "//li[@role='option']//div[contains (text(),'Prospect')]")
+	private WebElement prospectStatus;
+	@FindBy (xpath = "//li[@role='option']//div[contains (text(),'Dead File')]")
+	private WebElement deadfielStatus;
+	@FindBy (xpath = "//li[@role='option']//div[contains (text(),'Administrative Account')]")
+	private WebElement administrativeStatus;
+	@FindBy (xpath = "//textarea[@name='cancellationNote']")
+	private WebElement statusNote;
+	@FindBy (xpath = "//button[contains (text(),'Update The Status')]")
+	private WebElement updateStatus;
+	@FindBy (xpath = "//button[contains (text(),'Keep Current Status')]")
+	private WebElement keepCureentstatus;
+	@FindBy (xpath = "(//button[contains (text(),'✕')])[2]")
+	private WebElement statusCancelbutton;
+	@FindBy (xpath = "//input[@id='industry-type']")
+	private WebElement industryType;
+	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'Urgent Care Clinics')]")
+	private WebElement uregentCareType;
+	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'Skilled Nursing')]")
+	private WebElement skillednursingType;
+	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'Non-Medical Professional')]")
+	private WebElement nonmedicalType;
+	@FindBy(xpath = "//div[contains(@class,'cursor-pointer') and contains(@class,'border-2')]")
+	private WebElement checkBox;
+	@FindBy (xpath = "//input[@id='serviceAddress-email']")
+	private WebElement serviceEmail;
+	@FindBy (xpath = "//input[@id='serviceAddress-phone']")
+	private WebElement servicePhone;
+	@FindBy (xpath = "//label[contains (text(),'Copy to Billing Information')]/preceding-sibling::button[@type='button']")
+	private WebElement copyButton;
+	@FindBy (xpath = "//input[@id='billingAddress-street']")
+	private WebElement billingaddressStreet;
+	@FindBy (xpath = "//input[@id='billingAddress-email']")
+	private WebElement billingaddressEmail;
+	@FindBy (xpath = "//input[@id='billingAddress-phone']")
+	private WebElement billinaddressPhone;
+	@FindBy (xpath = "//input[@id='serviceAddress-attention']")
+	private WebElement serviceAttention;
+	@FindBy(xpath = "//span[contains(text(),'Contracted')]")
+	private WebElement contracedsc;
+	@FindBy (xpath = "//input[@id='serviceAddress-city']")
+	private WebElement serviceCity;
+	@FindBy (xpath = "//input[@id='serviceAddress-state']")
+	private WebElement serviceState;
+	@FindBy (xpath = "//input[@id='serviceAddress-zipCode']")
+	private WebElement serviceZipode;
+	@FindBy (xpath = "//input[@id='serviceAddress-suite']")
+	private WebElement serviceSuite;
+	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'AZ')]")
+	private WebElement aZstate;
+	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'FL')]")
+	private WebElement fLstate;
+	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'WV')]")
+	private WebElement wVState;
+	@FindBy (xpath = "//p[contains (text(),'Invalid email format')]")
+	private WebElement emailinvalidErmsg;
+	@FindBy (xpath = "//p[contains (text(),'Phone number must be 10 digits')]")
+	private WebElement phoneErmsg;
+	@FindBy (xpath = "//input[@id='serviceAddress-phone-ext']")
+	private WebElement ext;
+	@FindBy (xpath = "//input[@id='billingAddress-attention']")
+	private WebElement billingattention;
+	@FindBy (xpath = "//input[@id='billingAddress-city']")
+	private WebElement billingcity;
+	@FindBy (xpath = "//input[@id='billingAddress-state']")
+	private WebElement billingstate; 
+	@FindBy (xpath = "//input[@id='billingAddress-zipCode']")
+	private WebElement billingzipcode;
 	
+	
+	
+	
+	
+	
+	
+	public WebElement getBillingzipcode() {
+		return billingzipcode;
+	}
+
+	public WebElement getBillingstate() {
+		return billingstate;
+	}
+
+	public WebElement getBillingcity() {
+		return billingcity;
+	}
+
+	public WebElement getBillingattention() {
+		return billingattention;
+	}
+
+	public WebElement getExt() {
+		return ext;
+	}
+
+	public WebElement getPhoneErmsg() {
+		return phoneErmsg;
+	}
+
+	public WebElement getEmailinvalidErmsg() {
+		return emailinvalidErmsg;
+	}
+
+	public WebElement getwVState() {
+		return wVState;
+	}
+
+	public WebElement getfLstate() {
+		return fLstate;
+	}
+
+	public WebElement getaZstate() {
+		return aZstate;
+	}
+
+	public WebElement getServiceSuite() {
+		return serviceSuite;
+	}
+
+	public WebElement getServiceZipode() {
+		return serviceZipode;
+	}
+
+	public WebElement getServiceState() {
+		return serviceState;
+	}
+
+	public WebElement getServiceCity() {
+		return serviceCity;
+	}
+
+	public WebElement getServiceAttention() {
+		return serviceAttention;
+	}
+
+	public WebElement getBillinaddressPhone() {
+		return billinaddressPhone;
+	}
+
+	public WebElement getBillingaddressEmail() {
+		return billingaddressEmail;
+	}
+
+	public WebElement getBillingaddressStreet() {
+		return billingaddressStreet;
+	}
+
+	public WebElement getCopyButton() {
+		return copyButton;
+	}
+
+	public WebElement getServicePhone() {
+		return servicePhone;
+	}
+
+	public WebElement getServiceEmail() {
+		return serviceEmail;
+	}
+
+	public WebElement getCheckBox() {
+		return checkBox;
+	}
+
+
+	public WebElement getNonmedicalType() {
+		return nonmedicalType;
+	}
+
+	public WebElement getSkillednursingType() {
+		return skillednursingType;
+	}
+
+	public WebElement getUregentCareType() {
+		return uregentCareType;
+	}
+
+	public WebElement getIndustryType() {
+		return industryType;
+	}
+
+	public WebElement getKeepCureentstatus() {
+		return keepCureentstatus;
+	}
+
+	public WebElement getUpdateStatus() {
+		return updateStatus;
+	}
+
+	public WebElement getStatusNote() {
+		return statusNote;
+	}
+
+	public WebElement getAdministrativeStatus() {
+		return administrativeStatus;
+	}
+
+	public WebElement getDeadfielStatus() {
+		return deadfielStatus;
+	}
+
+	public WebElement getProspectStatus() {
+		return prospectStatus;
+	}
+
+	public WebElement getClosetooltip() {
+		return closetooltip;
+	}
+
+	public WebElement getTooltip() {
+		return tooltip;
+	}
+
+	public WebElement getGeneratorStatus() {
+		return generatorStatus;
+	}
+
+	public WebElement getGeneratoremailErmsg() {
+		return generatoremailErmsg;
+	}
+
+	public WebElement getGeneratorEmail() {
+		return generatorEmail;
+	}
+
+	public WebElement getMainphoneErmsg() {
+		return mainphoneErmsg;
+	}
+
+	public WebElement getExtTextfield() {
+		return extTextfield;
+	}
+
+	public WebElement getGeneratormainphone() {
+		return generatormainphone;
+	}
+
+	public WebElement getKeeptheAssigendButton() {
+		return keeptheAssigendButton;
+	}
+
+	public WebElement getPricebookGenerator() {
+		return pricebookGenerator;
+	}
+
+	public WebElement getCostalgroupGenerator() {
+		return costalgroupGenerator;
+	}
+
+	public WebElement getNoteUnassignbutton() {
+		return noteUnassignbutton;
+	}
+
+	public WebElement getNoteunassign() {
+		return noteunassign;
+	}
+
+	public WebElement getUnassignButton() {
+		return unassignButton;
+	}
+
+	public WebElement getHealthsummitGenerator() {
+		return healthsummitGenerator;
+	}
+
+	public WebElement getParentAccount() {
+		return parentAccount;
+	}
+
+	public WebElement getHenryLocation() {
+		return henryLocation;
+	}
+
+	public WebElement getBiotrustLocation() {
+		return biotrustLocation;
+	}
+
+	public WebElement getServiceLocation() {
+		return serviceLocation;
+	}
+
+	public WebElement getGeneratorNote() {
+		return generatorNote;
+	}
+
+	public WebElement getOpenlink() {
+		return openlink;
+	}
+
+	public WebElement getWebsiteErmsg() {
+		return websiteErmsg;
+	}
+
+	public WebElement getGeneratorwebsite() {
+		return generatorwebsite;
+	}
+
+	public WebElement getGeneratorpermitNumber() {
+		return generatorpermitNumber;
+	}
+
+	public WebElement getInternalaccountNumber() {
+		return internalaccountNumber;
+	}
+
+	public WebElement getOctoNumber() {
+		return octoNumber;
+	}
+
+	public WebElement getGeneratornameErmsg() {
+		return generatornameErmsg;
+	}
+
+	public WebElement getGeneratornameField() {
+		return generatornameField;
+	}
+
+	public WebElement getCancelButton() {
+		return cancelButton;
+	}
+
 	public WebElement getNewgenCancel() {
 		return newgenCancel;
 	}
@@ -146,6 +533,7 @@ public class GeneratorInformation1 {
 		street.sendKeys("1237 2");
 	}
 	
+	
 	public void RemoveAddedtags() throws InterruptedException
 	{
 		manufacturingtagCancel.click();
@@ -172,5 +560,220 @@ public class GeneratorInformation1 {
 		Thread.sleep(200);
 		constructionCancel.click();
 	}
+	
+	public void OctonumberwithEdit()
+	{
+		Assert.assertTrue(octoNumber.isDisplayed(),
+	            "Octo number field is not displayed");
 
+	    Assert.assertFalse(octoNumber.isEnabled(),
+	            "Octo number field is editable but should not be editable");
+
+	    utilityclassobject.gettest().log(Status.PASS,
+	            "Octo number field is displayed and non-editable as expected");
+	}
+	
+	public void Servicelocation() throws InterruptedException
+	{
+		serviceLocation.click();
+		serviceLocation.click();
+		Thread.sleep(2000);
+		Actions act = new Actions(driver);
+		act.moveToElement(biotrustLocation).click().perform();
+	}
+	
+	public void ParentaccountwithInput()
+	{
+		Actions act = new Actions(driver);
+		act.moveToElement(parentAccount).click().perform();
+		parentAccount.sendKeys("sdfs#$#123");
+	}
+	
+	public void ParentaccountGenerator()
+	{
+		Actions act = new Actions(driver);
+		act.moveToElement(healthsummitGenerator).click().perform();	
+	}
+	
+	public void Unassignbutton() throws InterruptedException
+	{
+		Actions act = new Actions(driver);
+		act.moveToElement(unassignButton).click().perform();
+		WebElement location = driver.findElement(By.xpath("//div[@class='modal-box']"));
+		Assert.assertTrue(location.isDisplayed(), "Model box is displayed");
+		noteunassign.sendKeys("Done");
+		Thread.sleep(200);
+		noteUnassignbutton.click();
+		Thread.sleep(2000);	
+	}
+	
+	public void ParentAccountwithCostalgroup()
+	{
+		Actions act = new Actions(driver);
+		act.moveToElement(costalgroupGenerator).click().perform();	
+	}
+	
+	public void ParentAccountwithPricebook()
+	{
+		Actions act = new Actions(driver);
+		act.moveToElement(pricebookGenerator).click().perform();	
+	}
+	
+	public void KeeptheAssigned()
+	{
+		parentAccount.click();
+		pricebookGenerator.click();
+		Actions act = new Actions(driver);
+		act.moveToElement(unassignButton).click().perform();
+		WebElement location = driver.findElement(By.xpath("//div[@class='modal-box']"));
+		Assert.assertTrue(location.isDisplayed(), "Model box is displayed");
+		keeptheAssigendButton.click();
+
+	}
+	
+	public void WithoutUnassign() throws InterruptedException
+	{
+
+		Actions act = new Actions(driver);
+		act.moveToElement(unassignButton).click().perform();
+		WebElement location = driver.findElement(By.xpath("//div[@class='modal-box']"));
+		Assert.assertTrue(location.isDisplayed(), "Model box is displayed");
+		noteunassign.sendKeys(Keys.CONTROL + "a");
+		noteunassign.sendKeys(Keys.DELETE);
+		Thread.sleep(200);
+		noteUnassignbutton.click();
+		Thread.sleep(2000);	
+	}
+	
+	public void Updatestatus() throws InterruptedException
+	{
+		WebElement location = driver.findElement(By.xpath("//div[@class='modal-box']"));
+		Assert.assertTrue(location.isDisplayed(), "Model box is displayed");
+		statusNote.sendKeys("Remove");
+		Thread.sleep(200);
+		updateStatus.click();
+		Thread.sleep(2000);
+	}
+	
+	public void KeepCurrentstatus() throws InterruptedException
+	{
+		WebElement location = driver.findElement(By.xpath("//div[@class='modal-box']"));
+		Assert.assertTrue(location.isDisplayed(), "Model box is displayed");
+		statusNote.sendKeys("Remove");
+		Thread.sleep(200);
+		keepCureentstatus.click();
+		Thread.sleep(2000);
+	}
+	
+	public void StatuswithoutNote() throws InterruptedException
+	{
+		WebElement location = driver.findElement(By.xpath("//div[@class='modal-box']"));
+		Assert.assertTrue(location.isDisplayed(), "Model box is displayed");
+		statusNote.sendKeys(Keys.CONTROL + "a");
+		statusNote.sendKeys(Keys.DELETE);
+		updateStatus.click();
+		Thread.sleep(200);
+		statusCancelbutton.click();	
+	}
+	
+	public void IndustrytypeOption() throws InterruptedException
+	{
+		uregentCareType.click();
+		Thread.sleep(200);
+		industryType.click();
+		Actions act = new Actions(driver);
+		act.moveToElement(skillednursingType).click().perform();
+		Thread.sleep(200);
+		industryType.click();
+		Actions act1 = new Actions(driver);
+		act1.moveToElement(nonmedicalType).click().perform();
+		
+	}
+	
+	public void ContractedCheckbox() throws InterruptedException
+	{
+		checkBox.click();
+		WebElement element = driver.findElement(By.xpath("//div[@class='flex items-center rounded-lg  gap-2 w-fit ']"));
+		
+		Thread.sleep(200);
+		String ariaDisabled = element.getAttribute("aria-disabled");
+
+	    if ("true".equals(ariaDisabled)) {
+	        System.out.println("Element is disabled");
+	    } else {
+	        System.out.println("Element is enabled");
+	    }
+	}
+	
+	public void Contracted() throws InterruptedException
+	{
+		Actions act= new Actions(driver);
+          act.scrollToElement(contracedsc).perform();
+          checkBox.click();
+  		Actions act1= new Actions(driver);
+  		webDriverutility wlib = new webDriverutility();
+  		/*
+  		wlib.waitUntilElementClickable(driver, Yesbtn);
+  		act1.doubleClick(Yesbtn).perform();
+  		//cancelbtn.click();
+  		Thread.sleep(4000);*/
+
+         // Yesbtn.click();
+	}
+	
+	public void Servicestate() throws InterruptedException
+	{
+		serviceState.click();
+		aZstate.click();
+		Thread.sleep(200);
+		serviceState.click();
+		Actions act = new Actions(driver);
+		act.moveToElement(fLstate).click().perform();
+		Thread.sleep(200);
+		serviceState.click();
+		Actions act1 = new Actions(driver);
+		act1.moveToElement(wVState).click().perform();
+	}
+	
+	public void GeneratorInformation() throws InterruptedException
+	{
+		WebElement generatormanagment = driver.findElement(By.xpath("//h6[contains (text(),'Generator Management')]"));
+		generatormanagment.click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement generatorlocation = driver.findElement(By.xpath("//h6[contains (text(),'Generator Locations')]"));
+		generatorlocation.click();
+		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+
+		WebElement searchoption = wait.until(
+		        ExpectedConditions.elementToBeClickable(
+		                By.xpath("//input[@placeholder='Search by Name, Phone Number, Email, or Address']")));
+
+		searchoption.click();
+		searchoption.sendKeys("Max_298310");
+		Thread.sleep(20000);
+
+		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+		WebElement generator = wait2.until(
+		    ExpectedConditions.refreshed(
+		        ExpectedConditions.elementToBeClickable(
+		            By.xpath("//div[contains(text(),'OCTO Number')]/following::div[contains(text(),'G-108-3316')]")
+		        )
+		    )
+		);
+
+		generator.click();
+		Thread.sleep(2000);
+		By generatorInfo = By.xpath("//a[contains(text(),'Generator Information')]");
+
+		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+		wait3.until(ExpectedConditions.refreshed(
+		        ExpectedConditions.elementToBeClickable(generatorInfo)));
+
+		driver.findElement(generatorInfo).click();
+		Thread.sleep(20000);
+	}
 }

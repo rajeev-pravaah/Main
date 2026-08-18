@@ -1,7 +1,9 @@
 package com.Octopussaass.WebdriverUtility;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.Alert;
@@ -228,6 +230,25 @@ public class webDriverutility {
 		
 	}
 
+	public List<String> getAllOptionsFromDropdown(WebElement dropdownElement) {
+	    List<String> optionTexts = new ArrayList<>();
+
+	    try {
+	        Select select = new Select(dropdownElement);
+
+	        for (WebElement option : select.getOptions()) {
+	            optionTexts.add(option.getText().trim());
+	        }
+
+	        System.out.println("Total options in dropdown: " + optionTexts.size());
+	        optionTexts.forEach(System.out::println);
+
+	    } catch (Exception e) {
+	        System.out.println("getAllOptionsFromDropdown: Failed - " + e.getMessage());
+	    }
+
+	    return optionTexts;
+	}
 	
 
 

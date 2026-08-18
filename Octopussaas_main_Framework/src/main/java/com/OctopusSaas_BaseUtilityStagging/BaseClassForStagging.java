@@ -1,27 +1,24 @@
-package com.Octopussaas.BaseUtility;
-import java.time.Duration;
-import java.net.URI;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.remote.RemoteWebDriver;
-
+package com.OctopusSaas_BaseUtilityStagging;
 
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
+import java.net.URI;
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -34,7 +31,7 @@ import com.Octopussaass.WebdriverUtility.javautility;
 import com.Octopussaass.WebdriverUtility.utilityclassobject;
 import com.Octopussaass.WebdriverUtility.webDriverutility;
 
-public class BaseClassForGEneratorContacts {
+public class BaseClassForStagging {
 	public FileUtility flib = new FileUtility();
 	public ExcelUtility Elib = new ExcelUtility();	
 	public javautility jlib = new javautility();
@@ -75,7 +72,7 @@ public class BaseClassForGEneratorContacts {
 		
 		
 		
-		String BROWSER = flib.getDataFromPropertiesFile("browser");
+		String BROWSER = flib.getDataFromPropertiesFile("staggingbrowser");
 
 		if (BROWSER.equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
@@ -132,7 +129,7 @@ public class BaseClassForGEneratorContacts {
 		
 		
          wlib.waitForPageLoad(driver);
-         String URL = sanitizeUrl(flib.getDataFromPropertiesFile("url"));
+         String URL = sanitizeUrl(flib.getDataFromPropertiesFile("staggingurl"));
  		Thread.sleep(2000);
  		
 
@@ -142,9 +139,9 @@ public class BaseClassForGEneratorContacts {
  		driver.manage().window().maximize();
  		Thread.sleep(2000);
 
- 		String USERNAME = flib.getDataFromPropertiesFile("username").trim();
+ 		String USERNAME = flib.getDataFromPropertiesFile("staggingusername").trim();
  		System.out.println(USERNAME);
- 		String PASSWORD = flib.getDataFromPropertiesFile("password").trim();
+ 		String PASSWORD = flib.getDataFromPropertiesFile("staggingpassword").trim();
  		//;age lp = new LoginPage(driver);
  		Thread.sleep(3000);
  		LoginPage lp = new LoginPage(driver);
@@ -218,4 +215,5 @@ public class BaseClassForGEneratorContacts {
 		//driver.quit();
 		Thread.sleep(2000);
 	}
+
 }

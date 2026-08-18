@@ -53,12 +53,12 @@ public class TransporterSettings_Tags {
 	private WebElement thirdrdcolorbox;
 	@FindBy(xpath = "(//button[@type='button'])[4]")
 	private WebElement fourthcolorbox;
-	@FindBy(xpath = "//button[text()='Cancel']")
+	@FindBy(xpath = "//h2[text()='Create New Tag']/../..//button[normalize-space(text())='Cancel']")
 	private WebElement cancelbtn;
 	@FindBy(xpath = "//div[@class='truncate w-72 flex items-center gap-2']")
 	private List<WebElement> createdtagnamelist;
 	
-	@FindBy(xpath = "//button[text()='Confirm']")
+	@FindBy(xpath = "(//button[@type='button'])[4]")
 	private WebElement deleteconfirmbtn;
 	@FindBy(xpath = "//button[text()='All Tags']")
 	private WebElement alltagsbtn;

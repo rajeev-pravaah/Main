@@ -69,7 +69,45 @@ public class Satellite_Location_TC extends BaseClassForGEneratorContacts{
 	// Helper: robust name comparison used by TC_230..TC_236
 	
 
-
+	   //-----------------------------To execute TC without using Dependency use this ----------------
+	   //comment it
+		//comment it
+		//comment it
+		/*
+		elib=new ExcelUtility();
+		hp = new HomePage(driver);
+		utilityclassobject.gettest().log(com.aventstack.extentreports.Status.INFO, "Home Page is displayed");
+		System.out.println("Home Page is displayed");
+		Thread.sleep(6000);
+		sl = new SatelliteLocation(driver);
+		sl.getAssets().click();
+		sl.getSatellite_Locations().click();
+		sl.getSatelliteLocationsList().isDisplayed();
+		utilityclassobject.gettest().log(Status.INFO, "Satellite Location Page is displayed");
+		 System.out.println("Satellite Location Page is displayed");
+		  List<WebElement> namelists = sl.getSatelliteLocationNameinlist();
+		   //print each value using for loop
+		  for(int i=0; i<namelists.size(); i++) {
+			  String name = namelists.get(i).getText();
+			  ExcelUtility elib1 = new ExcelUtility();
+				 String satellitename = elib1.getDataFromExcel("SatelliteLocation", 35, 7);
+			  if(name.equals(satellitename)) {
+				  namelists.get(i).click();
+				  utilityclassobject.gettest().log(Status.INFO, "Clicked on Satellite Location Name in the list: " +name);
+				  System.out.println("Clicked on Satellite Location Name in the list: " +name);
+				  break;
+			  }
+			  
+		  }
+		  
+		 */
+		 //comment it
+		//comment it//comment it
+		//comment it
+	   //-----------------------------To execute TC without using Dependency use this ----------------
+	 
+	 
+	 
 	
 	@Test
 	public void TC_001VerifyTheSatelliteLocationPageisDisplayed() throws InterruptedException  {

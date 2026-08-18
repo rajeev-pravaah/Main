@@ -3,21 +3,28 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Assert_Satellite_Location.Satellitelocation_Tc230to236">
+      <class name="Transporter_Tags.Transporter_Tags_TC">
         <methods>
           <include name="Ac"/>
-          <include name="TC_232VerifyAddressoftheSatellteisPresentInsideSatelliteLocationslist"/>
+          <include name="TC_009VerifyCreateTagWithAlreadyExistsTagName"/>
           <include name="Bc"/>
-          <include name="TC_233VerifyDispatchPhoneNumberoftheSatellteisPresentInsideSatelliteLocationslist"/>
-          <include name="TC_231VerifyNameOftheSatelliteisPresentInsideSatelliteLists"/>
+          <include name="TC_014VerifyCancelTag"/>
+          <include name="TC_013SameColorWithDifferentTag"/>
+          <include name="TC_008VerifyCreateTagWithoutTagname"/>
           <include name="Bm"/>
-          <include name="TC_235VerifyStatusoftheSatellteisPresentInsideSatelliteLocationslist"/>
-          <include name="TC_234VerifyEmailoftheSatellteisPresentInsideSatelliteLocationslist"/>
-          <include name="TC_236VerifyUsercanExporttheSatellitelist"/>
+          <include name="TC_011SelectTagColor"/>
+          <include name="TC_002VerifyAddTags"/>
+          <include name="TC_007VerifyTagNameFieldWithSpecialCharacters"/>
           <include name="Am"/>
-          <include name="TC_230VerifySavedSatelliteLocationIspresentInSatelliteLocationLists"/>
+          <include name="TC_006VerifyTagNameFieldWithNumbers"/>
+          <include name="TC_010VerifyColorsBox"/>
+          <include name="TC_005VerifyTagNameFieldWithAlphabets"/>
+          <include name="TC_003VerifySystemTags"/>
+          <include name="TC_004VerifyAddNewTag"/>
+          <include name="TC_001VerifyTagsPage"/>
+          <include name="TC_012CustomizeTagColor"/>
         </methods>
-      </class> <!-- Assert_Satellite_Location.Satellitelocation_Tc230to236 -->
+      </class> <!-- Transporter_Tags.Transporter_Tags_TC -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

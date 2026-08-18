@@ -47,7 +47,7 @@ public class GeneretorInformation {
      private WebElement latitude;
 	@FindBy(xpath = "(//div[@class='flex w-full mt-6'])[2]")
 	private WebElement longitude;
-	@FindBy(xpath = "//button[@class='enabled:hover:text-primary']")
+	@FindBy(xpath = "//span[text()='Copy to Billing Information']")
 	private WebElement copybtn;
 	@FindBy(xpath = "//input[@id='billingAddress-street']")
 	private WebElement billingstreet;
@@ -105,11 +105,14 @@ public class GeneretorInformation {
 	private WebElement cancellationNote;
 	@FindBy(xpath = "//button[text()='Terminate The Contract']")
 	private WebElement terminateContractbtn;
+	@FindBy(xpath = "//a[text()='Generator Billing']")
+	private WebElement generatorBillinglink;
 	
 	
 	
-	
-	
+	public WebElement getGeneratorBillinglink() {
+		return generatorBillinglink;
+	}
 	public WebElement getTerminateContractbtn() {
 		return terminateContractbtn;
 	}
@@ -285,6 +288,8 @@ public class GeneretorInformation {
 		Actions act = new Actions(driver);
 		act.scrollToElement(copybtn).perform();
 		copybtn.click();
+		copybtn.click();
+
 	}
 	public void MondayOpen()
 	{
@@ -353,6 +358,11 @@ public class GeneretorInformation {
 		// wait and click route assignment option
 		wlib.waitUntilElementClickable(driver, route);
 		route.click();
+	}
+	
+	public void GeneratorBillingPage()
+	{
+		getGeneratorBillinglink().click();
 	}
 	
 	

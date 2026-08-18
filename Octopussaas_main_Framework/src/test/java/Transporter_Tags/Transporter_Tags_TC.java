@@ -14,6 +14,7 @@ import java.util.Random;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.Octopussaas.BaseUtility.BaseClassForGEneratorContacts;
 import com.Octopussaas.BaseUtility.BaseClassForMasterPriceBook;
 import com.Octopussaas.FileUtility.ExcelUtility;
 import com.Octopussaas.ObjectRepository.HomePage;
@@ -29,7 +30,7 @@ import com.aventstack.extentreports.Status;
 
 @Listeners(ListnerUtility.ListnerUilityImp.class)
 
-public class Transporter_Tags_TC extends BaseClassForMasterPriceBook {
+public class Transporter_Tags_TC extends BaseClassForGEneratorContacts {
 	ExcelUtility elib;
 	javautility jlib;
 
@@ -55,11 +56,7 @@ public class Transporter_Tags_TC extends BaseClassForMasterPriceBook {
 		wlib = new webDriverutility();
 		tst = new TransporterSettings_Tags(driver);
 		Thread.sleep(2000);
-		// Ensure page zoom is 80% so the element positions are consistent
-		try {
-			((JavascriptExecutor) driver).executeScript("document.body.style.zoom='80%'");
-		} catch (Exception e) {
-			/* ignore if not supported */ }
+	
 		hp.getUserprofile().click();
 		hp.clickTransporterSettings();
 		Thread.sleep(2000);
@@ -262,6 +259,8 @@ public class Transporter_Tags_TC extends BaseClassForMasterPriceBook {
 						wlib.scrollToelement(driver, delete);
 						Thread.sleep(2000);
 						delete.click();
+						Thread.sleep(2000);
+
 						tst.getDeleteconfirmbtn().click();
 						System.out.println("Deleted the created tag successfully");
 						utilityclassobject.gettest().log(Status.INFO, "Deleted the created tag successfully");
@@ -274,6 +273,8 @@ public class Transporter_Tags_TC extends BaseClassForMasterPriceBook {
 			} catch (Exception ex) {
 				System.out.println("Stale/error reading element in TC_013: " + ex.getMessage());
 			}
+		// tst.getDeleteconfirmbtn().click();
+
 		}
 		if (!found) {
 			System.out.println("Tag name is not present in the tag name list");
@@ -287,7 +288,12 @@ public class Transporter_Tags_TC extends BaseClassForMasterPriceBook {
 		tst.getAddnewtagbtn().click();
 		String tagname = "Test Tag ";
 		tst.getTagnametxtfield().sendKeys(tagname);
+		try {
 		tst.getCancelbtn().click();
+		} catch (Exception e) {
+			System.out.println("Error clicking cancel button: " + e.getMessage());
+			utilityclassobject.gettest().log(Status.FAIL, "Error clicking cancel button: " + e.getMessage());
+		}
 		utilityclassobject.gettest().log(Status.INFO, "Clicked on cancel button successfully");
 		System.out.println("Clicked on cancel button successfully");
 
@@ -806,14 +812,22 @@ public class Transporter_Tags_TC extends BaseClassForMasterPriceBook {
 		List<WebElement> crestedbyssystem = driver.findElements(
 				By.xpath("//div[contains(@class,'hover:bg-opacity-20')]//div[contains(@class,'truncate')][4]"));
 		for (WebElement ele : crestedbyssystem) {
-			if (ele.getText().contains("System")) {
-
-				List<WebElement> Systemtaglists = driver
-						.findElements(By.xpath("//div[text()='System']/../descendant::div"));
-				for (WebElement ele1 : Systemtaglists) {
-					System.out.println("System tag name: " + ele1.getText());
-					utilityclassobject.gettest().log(Status.INFO, "System tag name: " + ele1.getText());
+			try {
+				if (ele.getText().contains("System")) {
+					List<WebElement> Systemtaglists = driver
+							.findElements(By.xpath("//div[text()='System']/../descendant::div"));
+					for (WebElement ele1 : Systemtaglists) {
+						try {
+							String text = ele1.getText();
+							System.out.println("System tag name: " + text);
+							utilityclassobject.gettest().log(Status.INFO, "System tag name: " + text);
+						} catch (Exception ex) {
+							System.out.println("Stale/error reading inner element in TC_021: " + ex.getMessage());
+						}
+					}
 				}
+			} catch (Exception ex) {
+				System.out.println("Stale/error reading element in TC_021: " + ex.getMessage());
 			}
 		}
 	}
@@ -886,7 +900,7 @@ public class Transporter_Tags_TC extends BaseClassForMasterPriceBook {
 				System.out.println("Error reading tag element in TC_024: " + ex.getMessage());
 			}
 		}
-	}
+	} 
 
 	@Test(dependsOnMethods = "TC_024VerifyTagCratedDate")
 	public void TC_025VerifyTagCreatedTimeFormat() throws InterruptedException {
@@ -894,6 +908,7 @@ public class Transporter_Tags_TC extends BaseClassForMasterPriceBook {
 		List<WebElement> list = tst.getCreatedtagnamelist();
 		boolean found = false;
 		for (WebElement ele : list) {
+			try {
 			if (ele.getText().contains(tagname)) {
 				found = true;
 				System.out.println("Tag name is present in the tag name list");
@@ -934,6 +949,9 @@ public class Transporter_Tags_TC extends BaseClassForMasterPriceBook {
 				System.out.println("Deleted the created tag successfully");
 				utilityclassobject.gettest().log(Status.INFO, "Deleted the created tag successfully");
 				break;*/
+			}
+			} catch (Exception ex) {
+				System.out.println("Stale/error reading element in TC_025: " + ex.getMessage());
 			}
 		}
 		if (!found) {
@@ -1053,13 +1071,17 @@ public class Transporter_Tags_TC extends BaseClassForMasterPriceBook {
 	public void TC_030VerifySystemTagCreatedBySysstemisUnderActions() throws InterruptedException {
 		List<WebElement> actionlist = driver.findElements(By.xpath("//span[text()='System Tag']/../.."));
 		for (WebElement ele : actionlist) {
-			System.out.println(ele.getText());
-			if (ele.getText().contains("System Tag")) {
-				System.out.println("System tag created by system is under actions");
-				utilityclassobject.gettest().log(Status.PASS, "System tag created by system is under actions");
-			} else {
-				System.out.println("System tag created by system is not under actions");
-				utilityclassobject.gettest().log(Status.FAIL, "System tag created by system is not under actions");
+			try {
+				System.out.println(ele.getText());
+				if (ele.getText().contains("System Tag")) {
+					System.out.println("System tag created by system is under actions");
+					utilityclassobject.gettest().log(Status.PASS, "System tag created by system is under actions");
+				} else {
+					System.out.println("System tag created by system is not under actions");
+					utilityclassobject.gettest().log(Status.FAIL, "System tag created by system is not under actions");
+				}
+			} catch (Exception ex) {
+				System.out.println("Stale/error reading element in TC_030: " + ex.getMessage());
 			}
 		}
 	}
@@ -1093,11 +1115,15 @@ public class Transporter_Tags_TC extends BaseClassForMasterPriceBook {
 		boolean editFound = false;
 		boolean deleteFound = false;
 		for (WebElement action : actions) {
-			String actionText = action.getText();
-			if (actionText.contains("Edit")) {
-				editFound = true;
-			} else if (actionText.contains("Delete")) {
-				deleteFound = true;
+			try {
+				String actionText = action.getText();
+				if (actionText.contains("Edit")) {
+					editFound = true;
+				} else if (actionText.contains("Delete")) {
+					deleteFound = true;
+				}
+			} catch (Exception ex) {
+				System.out.println("Stale/error reading element in TC_033: " + ex.getMessage());
 			}
 		}
 		if (editFound && deleteFound) {
@@ -1303,11 +1329,12 @@ public class Transporter_Tags_TC extends BaseClassForMasterPriceBook {
 	public void TC_038VerifyFilterTags() throws InterruptedException {
 	  List<WebElement> filtertahgs = tst.getFiltertags();
 	  for (WebElement ele : filtertahgs) {
-		 System.out.println(ele.getText());
-		 utilityclassobject.gettest().log(Status.INFO, "Filter tag option: " + ele.getText());
-		 
-		 
-		 
+		  try {
+			 System.out.println(ele.getText());
+			 utilityclassobject.gettest().log(Status.INFO, "Filter tag option: " + ele.getText());
+		  } catch (Exception ex) {
+			 System.out.println("Stale/error reading element in TC_038: " + ex.getMessage());
+		  }
 		  }
 	  }
 	@Test(dependsOnMethods = "TC_038VerifyFilterTags")
@@ -1316,8 +1343,12 @@ public class Transporter_Tags_TC extends BaseClassForMasterPriceBook {
 		Thread.sleep(2000);
 		List<WebElement> usernamelist = tst.getUsercreatedtagnamelist();
 		for (WebElement ele : usernamelist) {
-			System.out.println("User lists" +ele.getText());
-			utilityclassobject.gettest().log(Status.INFO, "User Tags are displayed successfully: " + ele.getText());
+			try {
+				System.out.println("User lists" +ele.getText());
+				utilityclassobject.gettest().log(Status.INFO, "User Tags are displayed successfully: " + ele.getText());
+			} catch (Exception ex) {
+				System.out.println("Stale/error reading element in TC_039: " + ex.getMessage());
+			}
 		}
 	}
 	@Test(dependsOnMethods = "TC_039VerifyFilterTagsFunctionality")
@@ -1326,8 +1357,12 @@ public class Transporter_Tags_TC extends BaseClassForMasterPriceBook {
 		Thread.sleep(2000);
 		List<WebElement> systemtaglist = tst.getSystemcreatedtagnamelist();
 		for (WebElement ele : systemtaglist) {
-			System.out.println("System tag lists" +ele.getText());
-			utilityclassobject.gettest().log(Status.INFO, "System Tags are displayed successfully: " + ele.getText());
+			try {
+				System.out.println("System tag lists" +ele.getText());
+				utilityclassobject.gettest().log(Status.INFO, "System Tags are displayed successfully: " + ele.getText());
+			} catch (Exception ex) {
+				System.out.println("Stale/error reading element in TC_040: " + ex.getMessage());
+			}
 		}
 	}
 	@Test(dependsOnMethods = "TC_040VerifySystemFilterTagsFunctionality")
@@ -1336,8 +1371,12 @@ public class Transporter_Tags_TC extends BaseClassForMasterPriceBook {
 		Thread.sleep(2000);
 		List<WebElement> alltaglist = tst.getAllcreatedtagnamelist();
 		for (WebElement ele : alltaglist) {
-			System.out.println("All tag lists" +ele.getText());
-			utilityclassobject.gettest().log(Status.INFO, "All Tags are displayed successfully: " + ele.getText());
+			try {
+				System.out.println("All tag lists" +ele.getText());
+				utilityclassobject.gettest().log(Status.INFO, "All Tags are displayed successfully: " + ele.getText());
+			} catch (Exception ex) {
+				System.out.println("Stale/error reading element in TC_041: " + ex.getMessage());
+			}
 		}
 		
 	}

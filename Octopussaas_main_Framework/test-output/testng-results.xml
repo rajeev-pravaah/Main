@@ -1,105 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-22T13:08:34 IST" name="Default suite" finished-at="2026-07-22T13:10:53 IST" duration-ms="139069">
+  <suite started-at="2026-08-18T11:37:10 IST" name="Default suite" finished-at="2026-08-18T11:38:45 IST" duration-ms="94276">
     <groups>
     </groups>
-    <test started-at="2026-07-22T13:08:34 IST" name="Default test" finished-at="2026-07-22T13:10:53 IST" duration-ms="139069">
-      <class name="Assert_Satellite_Location.Satellitelocation_Tc230to236">
-        <test-method is-config="true" signature="Bc()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:08:34 IST" name="Bc" finished-at="2026-07-22T13:09:27 IST" duration-ms="53061" status="PASS">
+    <test started-at="2026-08-18T11:37:10 IST" name="Default test" finished-at="2026-08-18T11:38:45 IST" duration-ms="94276">
+      <class name="Transporter_Tags.Transporter_Tags_TC">
+        <test-method is-config="true" signature="Bc()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:37:10 IST" name="Bc" finished-at="2026-08-18T11:37:37 IST" duration-ms="26948" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bc -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:09:27 IST" name="Bm" finished-at="2026-07-22T13:09:27 IST" duration-ms="1" status="PASS">
+        <test-method signature="TC_001VerifyTagsPage()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:37:37 IST" name="TC_001VerifyTagsPage" finished-at="2026-08-18T11:37:47 IST" duration-ms="9603" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_001VerifyTagsPage -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:37:37 IST" name="Bm" finished-at="2026-08-18T11:37:37 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method signature="TC_230VerifySavedSatelliteLocationIspresentInSatelliteLocationLists()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:09:27 IST" name="TC_230VerifySavedSatelliteLocationIspresentInSatelliteLocationLists" finished-at="2026-07-22T13:10:26 IST" duration-ms="59183" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_230VerifySavedSatelliteLocationIspresentInSatelliteLocationLists -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:10:26 IST" name="Am" finished-at="2026-07-22T13:10:28 IST" duration-ms="2007" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:37:47 IST" name="Am" finished-at="2026-08-18T11:37:49 IST" duration-ms="2007" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_231VerifyNameOftheSatelliteisPresentInsideSatelliteLists()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:10:28 IST" name="TC_231VerifyNameOftheSatelliteisPresentInsideSatelliteLists" finished-at="2026-07-22T13:10:29 IST" depends-on-methods="Assert_Satellite_Location.Satellitelocation_Tc230to236.TC_230VerifySavedSatelliteLocationIspresentInSatelliteLocationLists" duration-ms="1095" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_231VerifyNameOftheSatelliteisPresentInsideSatelliteLists -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:10:28 IST" name="Bm" finished-at="2026-07-22T13:10:28 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:37:49 IST" name="Bm" finished-at="2026-08-18T11:37:49 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:10:29 IST" name="Am" finished-at="2026-07-22T13:10:31 IST" duration-ms="2015" status="PASS">
+        <test-method signature="TC_002VerifyAddTags()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:37:49 IST" name="TC_002VerifyAddTags" finished-at="2026-08-18T11:37:51 IST" depends-on-methods="Transporter_Tags.Transporter_Tags_TC.TC_001VerifyTagsPage" duration-ms="2188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_002VerifyAddTags -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:37:51 IST" name="Am" finished-at="2026-08-18T11:37:53 IST" duration-ms="2012" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:10:31 IST" name="Bm" finished-at="2026-07-22T13:10:31 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:37:53 IST" name="Bm" finished-at="2026-08-18T11:37:53 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method signature="TC_232VerifyAddressoftheSatellteisPresentInsideSatelliteLocationslist()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:10:31 IST" name="TC_232VerifyAddressoftheSatellteisPresentInsideSatelliteLocationslist" finished-at="2026-07-22T13:10:33 IST" depends-on-methods="Assert_Satellite_Location.Satellitelocation_Tc230to236.TC_231VerifyNameOftheSatelliteisPresentInsideSatelliteLists" duration-ms="1586" status="PASS">
+        <test-method signature="TC_003VerifySystemTags()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:37:53 IST" name="TC_003VerifySystemTags" finished-at="2026-08-18T11:37:55 IST" depends-on-methods="Transporter_Tags.Transporter_Tags_TC.TC_002VerifyAddTags" duration-ms="2113" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_232VerifyAddressoftheSatellteisPresentInsideSatelliteLocationslist -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:10:33 IST" name="Am" finished-at="2026-07-22T13:10:35 IST" duration-ms="2028" status="PASS">
+        </test-method> <!-- TC_003VerifySystemTags -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:37:55 IST" name="Am" finished-at="2026-08-18T11:37:57 IST" duration-ms="2004" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_233VerifyDispatchPhoneNumberoftheSatellteisPresentInsideSatelliteLocationslist()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:10:35 IST" name="TC_233VerifyDispatchPhoneNumberoftheSatellteisPresentInsideSatelliteLocationslist" finished-at="2026-07-22T13:10:36 IST" depends-on-methods="Assert_Satellite_Location.Satellitelocation_Tc230to236.TC_232VerifyAddressoftheSatellteisPresentInsideSatelliteLocationslist" duration-ms="1384" status="PASS">
+        <test-method signature="TC_004VerifyAddNewTag()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:37:57 IST" name="TC_004VerifyAddNewTag" finished-at="2026-08-18T11:37:59 IST" depends-on-methods="Transporter_Tags.Transporter_Tags_TC.TC_003VerifySystemTags" duration-ms="2105" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_233VerifyDispatchPhoneNumberoftheSatellteisPresentInsideSatelliteLocationslist -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:10:35 IST" name="Bm" finished-at="2026-07-22T13:10:35 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- TC_004VerifyAddNewTag -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:37:57 IST" name="Bm" finished-at="2026-08-18T11:37:57 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:10:36 IST" name="Am" finished-at="2026-07-22T13:10:38 IST" duration-ms="2003" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:37:59 IST" name="Am" finished-at="2026-08-18T11:38:01 IST" duration-ms="2013" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:10:38 IST" name="Bm" finished-at="2026-07-22T13:10:38 IST" duration-ms="2" status="PASS">
+        <test-method signature="TC_005VerifyTagNameFieldWithAlphabets()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:01 IST" name="TC_005VerifyTagNameFieldWithAlphabets" finished-at="2026-08-18T11:38:03 IST" depends-on-methods="Transporter_Tags.Transporter_Tags_TC.TC_004VerifyAddNewTag" duration-ms="2117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_005VerifyTagNameFieldWithAlphabets -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:01 IST" name="Bm" finished-at="2026-08-18T11:38:01 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method signature="TC_234VerifyEmailoftheSatellteisPresentInsideSatelliteLocationslist()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:10:38 IST" name="TC_234VerifyEmailoftheSatellteisPresentInsideSatelliteLocationslist" finished-at="2026-07-22T13:10:40 IST" depends-on-methods="Assert_Satellite_Location.Satellitelocation_Tc230to236.TC_233VerifyDispatchPhoneNumberoftheSatellteisPresentInsideSatelliteLocationslist" duration-ms="1271" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_234VerifyEmailoftheSatellteisPresentInsideSatelliteLocationslist -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:10:40 IST" name="Am" finished-at="2026-07-22T13:10:42 IST" duration-ms="2007" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:03 IST" name="Am" finished-at="2026-08-18T11:38:05 IST" duration-ms="2003" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_235VerifyStatusoftheSatellteisPresentInsideSatelliteLocationslist()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:10:42 IST" name="TC_235VerifyStatusoftheSatellteisPresentInsideSatelliteLocationslist" finished-at="2026-07-22T13:10:43 IST" depends-on-methods="Assert_Satellite_Location.Satellitelocation_Tc230to236.TC_234VerifyEmailoftheSatellteisPresentInsideSatelliteLocationslist" duration-ms="1313" status="PASS">
+        <test-method signature="TC_006VerifyTagNameFieldWithNumbers()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:05 IST" name="TC_006VerifyTagNameFieldWithNumbers" finished-at="2026-08-18T11:38:06 IST" depends-on-methods="Transporter_Tags.Transporter_Tags_TC.TC_005VerifyTagNameFieldWithAlphabets" duration-ms="120" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_235VerifyStatusoftheSatellteisPresentInsideSatelliteLocationslist -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:10:42 IST" name="Bm" finished-at="2026-07-22T13:10:42 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- TC_006VerifyTagNameFieldWithNumbers -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:05 IST" name="Bm" finished-at="2026-08-18T11:38:05 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:10:43 IST" name="Am" finished-at="2026-07-22T13:10:45 IST" duration-ms="2015" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:06 IST" name="Am" finished-at="2026-08-18T11:38:08 IST" duration-ms="2007" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:10:45 IST" name="Bm" finished-at="2026-07-22T13:10:45 IST" duration-ms="2" status="PASS">
+        <test-method signature="TC_007VerifyTagNameFieldWithSpecialCharacters()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:08 IST" name="TC_007VerifyTagNameFieldWithSpecialCharacters" finished-at="2026-08-18T11:38:08 IST" depends-on-methods="Transporter_Tags.Transporter_Tags_TC.TC_006VerifyTagNameFieldWithNumbers" duration-ms="93" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_007VerifyTagNameFieldWithSpecialCharacters -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:08 IST" name="Bm" finished-at="2026-08-18T11:38:08 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method signature="TC_236VerifyUsercanExporttheSatellitelist()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:10:45 IST" name="TC_236VerifyUsercanExporttheSatellitelist" finished-at="2026-07-22T13:10:47 IST" depends-on-methods="Assert_Satellite_Location.Satellitelocation_Tc230to236.TC_235VerifyStatusoftheSatellteisPresentInsideSatelliteLocationslist" duration-ms="1971" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_236VerifyUsercanExporttheSatellitelist -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:10:47 IST" name="Am" finished-at="2026-07-22T13:10:49 IST" duration-ms="2011" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:08 IST" name="Am" finished-at="2026-08-18T11:38:10 IST" duration-ms="2006" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Ac()[pri:0, instance:Assert_Satellite_Location.Satellitelocation_Tc230to236@710636b0]" started-at="2026-07-22T13:10:49 IST" name="Ac" finished-at="2026-07-22T13:10:53 IST" duration-ms="4019" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:10 IST" name="Bm" finished-at="2026-08-18T11:38:10 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_008VerifyCreateTagWithoutTagname()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:10 IST" name="TC_008VerifyCreateTagWithoutTagname" finished-at="2026-08-18T11:38:10 IST" depends-on-methods="Transporter_Tags.Transporter_Tags_TC.TC_007VerifyTagNameFieldWithSpecialCharacters" duration-ms="133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_008VerifyCreateTagWithoutTagname -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:10 IST" name="Am" finished-at="2026-08-18T11:38:12 IST" duration-ms="2001" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_009VerifyCreateTagWithAlreadyExistsTagName()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:12 IST" name="TC_009VerifyCreateTagWithAlreadyExistsTagName" finished-at="2026-08-18T11:38:12 IST" depends-on-methods="Transporter_Tags.Transporter_Tags_TC.TC_008VerifyCreateTagWithoutTagname" duration-ms="695" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_009VerifyCreateTagWithAlreadyExistsTagName -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:12 IST" name="Bm" finished-at="2026-08-18T11:38:12 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:12 IST" name="Am" finished-at="2026-08-18T11:38:15 IST" duration-ms="2016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_010VerifyColorsBox()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:15 IST" name="TC_010VerifyColorsBox" finished-at="2026-08-18T11:38:15 IST" depends-on-methods="Transporter_Tags.Transporter_Tags_TC.TC_009VerifyCreateTagWithAlreadyExistsTagName" duration-ms="243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_010VerifyColorsBox -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:15 IST" name="Bm" finished-at="2026-08-18T11:38:15 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:15 IST" name="Am" finished-at="2026-08-18T11:38:17 IST" duration-ms="2005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_011SelectTagColor()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:17 IST" name="TC_011SelectTagColor" finished-at="2026-08-18T11:38:17 IST" depends-on-methods="Transporter_Tags.Transporter_Tags_TC.TC_010VerifyColorsBox" duration-ms="56" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_011SelectTagColor -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:17 IST" name="Bm" finished-at="2026-08-18T11:38:17 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:17 IST" name="Am" finished-at="2026-08-18T11:38:19 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_012CustomizeTagColor()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:19 IST" name="TC_012CustomizeTagColor" finished-at="2026-08-18T11:38:19 IST" depends-on-methods="Transporter_Tags.Transporter_Tags_TC.TC_011SelectTagColor" duration-ms="62" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_012CustomizeTagColor -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:19 IST" name="Bm" finished-at="2026-08-18T11:38:19 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:19 IST" name="Am" finished-at="2026-08-18T11:38:21 IST" duration-ms="2006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_013SameColorWithDifferentTag()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:21 IST" name="TC_013SameColorWithDifferentTag" finished-at="2026-08-18T11:38:34 IST" depends-on-methods="Transporter_Tags.Transporter_Tags_TC.TC_012CustomizeTagColor" duration-ms="12986" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_013SameColorWithDifferentTag -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:21 IST" name="Bm" finished-at="2026-08-18T11:38:21 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:34 IST" name="Am" finished-at="2026-08-18T11:38:36 IST" duration-ms="2017" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_014VerifyCancelTag()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:36 IST" name="TC_014VerifyCancelTag" finished-at="2026-08-18T11:38:38 IST" depends-on-methods="Transporter_Tags.Transporter_Tags_TC.TC_013SameColorWithDifferentTag" duration-ms="2581" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_014VerifyCancelTag -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:36 IST" name="Bm" finished-at="2026-08-18T11:38:36 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:38 IST" name="Am" finished-at="2026-08-18T11:38:41 IST" duration-ms="2015" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Ac()[pri:0, instance:Transporter_Tags.Transporter_Tags_TC@5e7cd6cc]" started-at="2026-08-18T11:38:41 IST" name="Ac" finished-at="2026-08-18T11:38:45 IST" duration-ms="4030" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Ac -->
-      </class> <!-- Assert_Satellite_Location.Satellitelocation_Tc230to236 -->
+      </class> <!-- Transporter_Tags.Transporter_Tags_TC -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
