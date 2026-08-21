@@ -32,6 +32,7 @@ public class Satellitelocation_Tc230to236 extends BaseClassForGEneratorContacts 
 
 	int randonnum;
 	SatelliteLocation sl;
+	webDriverutility wlib;
 	String satellitename1;
 	String emailaddress1;
 
@@ -87,7 +88,7 @@ public class Satellitelocation_Tc230to236 extends BaseClassForGEneratorContacts 
 		Thread.sleep(2000);
 		sl.getAddnewsastatellitelocationbuttonfrompopup().click();
 		sl.getRegistrationnumber1field().sendKeys("123456789");
-		webDriverutility wlib = new webDriverutility();
+		wlib = new webDriverutility();
 		wlib.scrollToelement(driver, sl.getSatelliteserviceinfonamefield());
 		// add random number to the service info name field
 		randonnum = new Random().nextInt(100000);
@@ -121,6 +122,7 @@ public class Satellitelocation_Tc230to236 extends BaseClassForGEneratorContacts 
 		sl.ClearTextField(sl.getServiceaddressphonefield());
 
 		String PhoneNumber = elib.getDataFromExcel("SatelliteLocation", 74, 5);
+		System.out.println("Phone Number is: " + PhoneNumber);
 		sl.getServiceaddressphonefield().sendKeys(PhoneNumber);
 		Thread.sleep(2000);
 		sl.getCopytobillinginformationbutton().click();
@@ -144,10 +146,13 @@ public class Satellitelocation_Tc230to236 extends BaseClassForGEneratorContacts 
 		// int randomNum1 = rand.nextInt(100000); // Generates a random number between 0
 		// and 99999
 		String email = emailname1 + randonnum + "@gmail.com";
+		System.out.println("Dispatch Email is: " + email);
 		sl.getDispatchemailfield().sendKeys(email);
 		wlib.scrollToelement(driver, sl.getDispatchphonenumberfield());
 		sl.getDispatchphonenumberfield().click();
+		System.out.println("Dispatch Phone field is clicked");
 		String phone = elib.getDataFromExcel("SatelliteLocation", 100, 1);
+		System.out.println("Dispatch Phone is: " + phone);
 		sl.getDispatchphonenumberfield().sendKeys(phone);
 
 		wlib.scrollToelement(driver, sl.getCompanydisplaynamefield());
@@ -156,7 +161,7 @@ public class Satellitelocation_Tc230to236 extends BaseClassForGEneratorContacts 
 		sl.getGeneralphonefield().click();
 		sl.getGeneralphonefield().sendKeys("1234567890");
 		
-	    satellitename1 = sl.getSatelliteLocationName().getAttribute("value");
+	  //  satellitename1 = sl.getSatelliteLocationName().getAttribute("value");
 		System.out.println("Satellite Location Name is: " + satellitename);
 
 		// Fetch street address
@@ -171,6 +176,7 @@ public class Satellitelocation_Tc230to236 extends BaseClassForGEneratorContacts 
 		
 		emailaddress1 = sl.getGeneralemailfield().getAttribute("value");
 		System.out.println("Email Address is: " + emailaddress1);
+		System.out.println("Hi");
 
 		// Status - it is a dropdown rendered as a <span>, use getText() not getAttribute("value")
 		status = sl.getSatellitelocationstatusdropdownfieldtext().getText();

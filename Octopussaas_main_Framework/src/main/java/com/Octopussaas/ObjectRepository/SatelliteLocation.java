@@ -45,17 +45,17 @@ public class SatelliteLocation {
 	private WebElement AddNewSatelliteLocationbutton;
 	@FindBy(xpath = "//h6[text()='Add New Satellite Location']")
 	private WebElement AddNewSatelliteLocationPopUp;
-	@FindBy(xpath = "//input[@type='text']")
+	@FindBy(xpath = "//label[text()='Satellite Location Name*']/../descendant::input"/*"//label[text()='Company Name*']/../descendant::input"*/)
 	private WebElement SatelliteLocationName;
 	@FindBy(xpath = "//button[text()='Add New Satellite Location']")
 	private WebElement AddNewSatelliteLocationButtoninPopup;
 	@FindBy(xpath = "//p[text()='Satellite Location Name is required']")
 	private WebElement SatelliteLocationNameErrorMessage;
-	@FindBy(xpath = "(//input[@type='text'])[2]")
+	@FindBy(xpath = "//label[text()='Email']/../descendant::input")
 	private WebElement addnewsastelliteemailfield;
 	@FindBy(xpath = "//p[text()='Please enter a valid email address']")
 	private WebElement addnewsastelliteemailfielderrormessage;
-	@FindBy(xpath = "(//input[@type='text'])[3]")
+	@FindBy(xpath = "//label[text()='Website']/../descendant::input")
 	private WebElement addnewsastellitewebsitefield;
 	@FindBy(xpath = "//p[text()='Please enter a valid website URL']")
 	private WebElement addnewsastellitewebsitefielderrormessage;
