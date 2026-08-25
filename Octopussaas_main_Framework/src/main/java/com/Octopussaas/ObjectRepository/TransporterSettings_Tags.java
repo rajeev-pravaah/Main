@@ -58,7 +58,7 @@ public class TransporterSettings_Tags {
 	@FindBy(xpath = "//div[@class='truncate w-72 flex items-center gap-2']")
 	private List<WebElement> createdtagnamelist;
 	
-	@FindBy(xpath = "(//button[@type='button'])[4]")
+	@FindBy(xpath = "//div[@class='p-6']/descendant::button[contains(text(),'Confirm')]")
 	private WebElement deleteconfirmbtn;
 	@FindBy(xpath = "//button[text()='All Tags']")
 	private WebElement alltagsbtn;

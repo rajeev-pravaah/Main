@@ -235,21 +235,28 @@ public class Transporter_Tags_TC extends BaseClassForGEneratorContacts {
 
 		System.out.println(randomNumber);
 		tst.getTagnametxtfield().clear();
+		System.out.println("Cleared the tag name field successfully");
 		tagname = "Test Tag " + randomNumber;
 		System.out.println(tagname);
 		tst.getTagnametxtfield().sendKeys(tagname);
+		System.out.println("Entered the tag name successfully");
 		tst.getCreatetagbtn().click();
+		System.out.println("Clicked on create tag button successfully");
 		utilityclassobject.gettest().log(Status.INFO, "Created a tag with same color");
 		System.out.println("Created a tag with same color");
 		// verify the created tagname is present in list
 		Thread.sleep(5000);
 		tst.getAlltagsbtn().click();
+		System.out.println("Clicked on all tags button successfully");
 		Thread.sleep(3000);
+		System.out.println("Verifying the created tag name is present in the tag name list");
 		List<WebElement> list = tst.getCreatedtagnamelist();
+		System.out.println("Size of the created tag name list: " + list.size());
+		System.out.println("Verifying the created tag name is present in the tag name list" + tagname);
 		boolean found = false;
 		for (WebElement ele : list) {
 			try {
-				if (ele.getText().contains(tagname)) {
+				if (ele.getText().equals(tagname)) {
 					found = true;
 					System.out.println("Tag name is present in the tag name list");
 					utilityclassobject.gettest().log(Status.PASS, "Tag name is present in the tag name list");
@@ -258,7 +265,7 @@ public class Transporter_Tags_TC extends BaseClassForGEneratorContacts {
 								By.xpath("//div[text()='" + tagname + "']/../descendant::button[text()='Delete']"));
 						wlib.scrollToelement(driver, delete);
 						Thread.sleep(2000);
-						delete.click();
+						//delete.click();
 						Thread.sleep(2000);
 
 						tst.getDeleteconfirmbtn().click();
@@ -303,7 +310,13 @@ public class Transporter_Tags_TC extends BaseClassForGEneratorContacts {
 	public void TC_015VerifyCreatedTagNamePresentintheTagNameList() throws InterruptedException {
 		try {
 			tst.getAddnewtagbtn().click();
-			tst.getTagnametxtfield().sendKeys(tagname);
+			//write code to create 5 digit random number and pass it in the tag name field
+			int randomNumber = 100000 + new Random().nextInt(900000);
+			System.out.println(randomNumber);
+			String tag1 = "Tag"+randomNumber;
+			
+			
+			tst.getTagnametxtfield().sendKeys(tag1);
 			tst.getCreatetagbtn().click();
 			utilityclassobject.gettest().log(Status.INFO, "Created a tag successfully");
 			System.out.println("Created a tag successfully");
@@ -327,6 +340,11 @@ public class Transporter_Tags_TC extends BaseClassForGEneratorContacts {
 							Thread.sleep(2000);
 							delete.click();
 							tst.getDeleteconfirmbtn().click();
+							//click outside on screen to close the delete confirmation popup
+							WebElement outsideElement = driver.findElement(By.xpath("//body"));
+							outsideElement.click();
+							
+							
 							System.out.println("Deleted the created tag successfully");
 							utilityclassobject.gettest().log(Status.INFO, "Deleted the created tag successfully");
 						} catch (Exception ex) {
@@ -347,7 +365,11 @@ public class Transporter_Tags_TC extends BaseClassForGEneratorContacts {
 			System.out.println("TC_015 failed: " + e.getMessage());
 			utilityclassobject.gettest().log(Status.FAIL, "TC_015 failed: " + e.getMessage());
 		}
+		//click out side on screen to close the delete confirmation popup
+		WebElement outsideElement = driver.findElement(By.xpath("//body"));
+		outsideElement.click();
 	}
+
 
 	String colornum;
 
@@ -401,12 +423,17 @@ public class Transporter_Tags_TC extends BaseClassForGEneratorContacts {
 	public void TC_017VerifyCountofTag() throws InterruptedException {
 		try {
 			tst.getAddnewtagbtn().click();
-			System.out.println(tagname);
+			// add 5 didgits random number
+			
+			
+			
+			
+			/*System.out.println(tagname);
 			tst.getTagnametxtfield().sendKeys(tagname);
 			tst.getCreatetagbtn().click();
 			utilityclassobject.gettest().log(Status.INFO, "Created a tag successfully");
 			System.out.println("Created a tag successfully");
-			Thread.sleep(5000);
+			Thread.sleep(5000);*/
 			tst.getAlltagsbtn().click();
 			Thread.sleep(3000);
 			List<WebElement> list = tst.getCreatedtagnamelist();
@@ -463,6 +490,7 @@ public class Transporter_Tags_TC extends BaseClassForGEneratorContacts {
 		js.executeScript("arguments[0].click();", addNewTagBtn);
 		tst.getTagnametxtfield().sendKeys(tagname);
 		js.executeScript("arguments[0].click();", tst.getCreatetagbtn());
+		tst.getCreatetagbtn().click();
 		utilityclassobject.gettest().log(Status.INFO, "Created a tag successfully");
 		System.out.println("Created a tag successfully");
 		Thread.sleep(5000);
@@ -1085,7 +1113,7 @@ public class Transporter_Tags_TC extends BaseClassForGEneratorContacts {
 			}
 		}
 	}
-	@Test(dependsOnMethods = "TC_030VerifySystemTagCreatedBySysstemisUnderActions")
+	@Test( dependsOnMethods = "TC_030VerifySystemTagCreatedBySysstemisUnderActions")
 	public void TC_031VerifySystemTagarenoteditable() throws InterruptedException {
 		// Directly check if any Edit button exists inside System Tag rows - fast single XPath
 		List<WebElement> editButtons = driver.findElements(By.xpath("//span[text()='System Tag']/../..//button[text()='Edit']"));

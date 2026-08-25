@@ -3,19 +3,55 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Generator_Management_GeneratorContacts.VerifyContacWithoutPhonenumber">
+      <class name="Transporter_Tags.Transporter_Tags_TC">
         <methods>
+          <include name="TC_030VerifySystemTagCreatedBySysstemisUnderActions"/>
           <include name="Ac"/>
-          <include name="Bc"/>
-          <include name="TC_005VerifyPhoneNumberInList"/>
-          <include name="TC_002ClickAddNewContactAndFillAllFieldsExceptPhoneNumber"/>
-          <include name="Bm"/>
-          <include name="TC_001NavigateToGeneratorContactPage"/>
-          <include name="TC_003ClickSaveAndVerifyPhoneValidationError"/>
-          <include name="TC_004EnterPhoneNumberAndSaveContact"/>
+          <include name="TC_036VerifyAbletosaveTagAfterClickingOnDelete"/>
+          <include name="TC_022VerifyNameofthUserInCreatedTag"/>
+          <include name="TC_016VerifyaddedTagcolor"/>
+          <include name="TC_013SameColorWithDifferentTag"/>
+          <include name="TC_008VerifyCreateTagWithoutTagname"/>
+          <include name="TC_007VerifyTagNameFieldWithSpecialCharacters"/>
+          <include name="TC_027VerifyLastUsedTimeWithoutusingtag"/>
           <include name="Am"/>
+          <include name="TC_020VeifyTagsCreatedby"/>
+          <include name="TC_034VerifySystemTagEdit"/>
+          <include name="TC_035VerifyTagDelete"/>
+          <include name="TC_006VerifyTagNameFieldWithNumbers"/>
+          <include name="TC_010VerifyColorsBox"/>
+          <include name="TC_029VerifyLastUsedTimeAfterUsingTag"/>
+          <include name="TC_017VerifyCountofTag"/>
+          <include name="TC_032VerifySystemTagarenotdeletable"/>
+          <include name="TC_004VerifyAddNewTag"/>
+          <include name="TC_015VerifyCreatedTagNamePresentintheTagNameList"/>
+          <include name="TC_018VerifyInscreseCountofTagAfteraddinginGenerator"/>
+          <include name="TC_039VerifyFilterTagsFunctionality"/>
+          <include name="TC_023VerifyTagCreatedTime"/>
+          <include name="TC_009VerifyCreateTagWithAlreadyExistsTagName"/>
+          <include name="TC_040VerifySystemFilterTagsFunctionality"/>
+          <include name="TC_025VerifyTagCreatedTimeFormat"/>
+          <include name="Bc"/>
+          <include name="TC_014VerifyCancelTag"/>
+          <include name="TC_033VerifyCreatedTagHaveBothEditandDeleteOption"/>
+          <include name="TC_028VerifyLastUsedTimeAfterUsingTag"/>
+          <include name="Bm"/>
+          <include name="TC_019VerifyCountofTagAfterRemovedFromGenerator"/>
+          <include name="TC_011SelectTagColor"/>
+          <include name="TC_002VerifyAddTags"/>
+          <include name="TC_024VerifyTagCratedDate"/>
+          <include name="TC_037VerifyAbletoDeleteMultipleTagsat_a_Time"/>
+          <include name="TC_005VerifyTagNameFieldWithAlphabets"/>
+          <include name="TC_003VerifySystemTags"/>
+          <include name="TC_041VerifySearchAllTagFunctionality"/>
+          <include name="TC_026VerifyLastuserDateandTime"/>
+          <include name="TC_031VerifySystemTagarenoteditable"/>
+          <include name="TC_001VerifyTagsPage"/>
+          <include name="TC_021VerifyTagsCreatedBySystem"/>
+          <include name="TC_038VerifyFilterTags"/>
+          <include name="TC_012CustomizeTagColor"/>
         </methods>
-      </class> <!-- Generator_Management_GeneratorContacts.VerifyContacWithoutPhonenumber -->
+      </class> <!-- Transporter_Tags.Transporter_Tags_TC -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
