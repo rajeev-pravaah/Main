@@ -2,6 +2,7 @@ package com.Octopussaas.ObjectRepository;
 
 import java.time.Duration;
 
+import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -107,7 +108,7 @@ public class GeneratorInformation1 {
 	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'G-107-7136 - PriceBook Test 2.0')]")
 	private WebElement pricebookGenerator;
 	@FindBy (xpath = "//button[contains (text(),'Keep This Assigned')]")
-	private WebElement keeptheAssigendButton;
+	public WebElement keeptheAssigendButton;
 	@FindBy (xpath = "(//input[@placeholder='(123) 456-7890'])[1]")
 	private WebElement generatormainphone;
 	@FindBy (xpath = "//input[@id='undefined-ext']")
@@ -136,7 +137,7 @@ public class GeneratorInformation1 {
 	private WebElement updateStatus;
 	@FindBy (xpath = "//button[contains (text(),'Keep Current Status')]")
 	private WebElement keepCureentstatus;
-	@FindBy (xpath = "(//button[contains (text(),'✕')])[2]")
+	@FindBy (xpath = "(//button[contains (text(),'✕')])[4]")
 	private WebElement statusCancelbutton;
 	@FindBy (xpath = "//input[@id='industry-type']")
 	private WebElement industryType;
@@ -152,7 +153,7 @@ public class GeneratorInformation1 {
 	private WebElement serviceEmail;
 	@FindBy (xpath = "//input[@id='serviceAddress-phone']")
 	private WebElement servicePhone;
-	@FindBy (xpath = "//label[contains (text(),'Copy to Billing Information')]/preceding-sibling::button[@type='button']")
+	@FindBy (xpath = "//h6[text()='Generator Service Information']/following-sibling::button[@type='button']")
 	private WebElement copyButton;
 	@FindBy (xpath = "//input[@id='billingAddress-street']")
 	private WebElement billingaddressStreet;
@@ -192,13 +193,315 @@ public class GeneratorInformation1 {
 	private WebElement billingstate; 
 	@FindBy (xpath = "//input[@id='billingAddress-zipCode']")
 	private WebElement billingzipcode;
+	@FindBy (xpath = "//input[@id='billingAddress-suite']")
+	private WebElement billingsuite;
+	@FindBy (xpath = "//input[@id='billingAddress-email']")
+	private WebElement billingEmail;
+	@FindBy (xpath = "//p[contains (text(),'Invalid email format')]")
+	private WebElement billingEmailinvalidmsg;
+	@FindBy (xpath = "//input[@id='billingAddress-phone']")
+	private WebElement billingPhone;
+	@FindBy (xpath = "//p[contains (text(),'Phone number must be 10 digits')]")
+	private WebElement billingPhoneErmsg;
+	@FindBy (xpath = "//input[@id='billingAddress-phone-ext']")
+	private WebElement billingExt;
+	@FindBy (xpath = "//input[@placeholder='Monday Opening Time']")
+	private WebElement mondayopeningtime;
+	@FindBy (xpath = "//input[@placeholder='Monday Lunch Start Time']")
+	private WebElement mondaylunchstart;
+	@FindBy (xpath = "//input[@placeholder='Monday Lunch End Time']")
+	private WebElement mondaylunchend;	
+	@FindBy (xpath = "//input[@placeholder='Monday Closing Time']")
+	private WebElement mondayclosetime;
+	@FindBy (xpath = "//input[@placeholder='Tuesday Opening Time']")
+	private WebElement tuesdayopeningtime;
+	@FindBy (xpath = "//input[@placeholder='Tuesday Lunch Start Time']")
+	private WebElement tuesdaylunchstart;
+	@FindBy (xpath = "//input[@placeholder='Tuesday Lunch End Time']")
+	private WebElement tuesdaylunchend;
+	@FindBy (xpath = "//input[@placeholder='Tuesday Closing Time']")
+	private WebElement tuesdaylunchclosetime;
+	@FindBy (xpath = "//input[@placeholder='Wednesday Opening Time']")
+	private WebElement wednesdayopeningtime;
+	@FindBy (xpath = "//input[@placeholder='Wednesday Lunch Start Time']")
+	private WebElement wendesdaylunchstart;
+	@FindBy (xpath = "//input[@placeholder='Wednesday Lunch End Time']")
+	private WebElement wendesdaylunchend;
+	@FindBy (xpath = "//input[@placeholder='Wednesday Closing Time']")
+	private WebElement wednesdayclosingtime;
+	@FindBy (xpath = "//input[@placeholder='Thursday Opening Time']")
+	private WebElement thursdayopeningtime;
+	@FindBy (xpath = "//input[@placeholder='Thursday Lunch Start Time']")
+	private WebElement thursdaylunchstart;
+	@FindBy (xpath = "//input[@placeholder='Thursday Lunch End Time']")
+	private WebElement thursdaylunchend;
+	@FindBy (xpath = "//input[@placeholder='Thursday Closing Time']")
+	private WebElement thursdayclosingtime;
+	@FindBy (xpath = "//input[@placeholder='Friday Opening Time']")
+	private WebElement fridayopeningtime;
+	@FindBy (xpath = "//input[@placeholder='Friday Lunch Start Time']")
+	private WebElement fridaylunchstart;
+	@FindBy (xpath = "//input[@placeholder='Friday Lunch End Time']")
+	private WebElement fridaylunchend;
+	@FindBy (xpath = "//input[@placeholder='Friday Closing Time']")
+	private WebElement fridayclosingtime;
+	@FindBy (xpath = "//input[@placeholder='Saturday Opening Time']")
+	private WebElement saturdayopeningtime;
+	@FindBy (xpath = "//input[@placeholder='Saturday Lunch Start Time']")
+	private WebElement saturdaylunchstart;
+	@FindBy (xpath = "//input[@placeholder='Saturday Lunch End Time']")
+	private WebElement saturdaylunchend;
+	@FindBy (xpath = "//input[@placeholder='Saturday Closing Time']")
+	private WebElement saturdayclosingtime;
+	@FindBy (xpath = "//input[@placeholder='Sunday Opening Time']")
+	private WebElement sundayopeningtime;
+	@FindBy (xpath = "//input[@placeholder='Sunday Lunch Start Time']")
+	private WebElement sundaylunchstart;
+	@FindBy (xpath = "//input[@placeholder='Sunday Lunch End Time']")
+	private WebElement sundaylunchend;
+	@FindBy (xpath = "//input[@placeholder='Sunday Closing Time']")
+	private WebElement sundayclosingtime;
+	@FindBy (xpath = "//ul[@role='listbox']/descendant::span[text()='8:00 AM']")
+	private WebElement morningtime;
+	@FindBy (xpath = "//ul[@role='listbox']/descendant::span[text()='12:00 PM']")
+	private WebElement lunchsarttiming;
+	@FindBy (xpath = "//ul[@role='listbox']/descendant::span[text()='12:30 PM']")
+	private WebElement lunchendtiming;
+	@FindBy (xpath = "//ul[@role='listbox']/descendant::span[text()='6:00 PM']")
+	private WebElement closetime;
+	@FindBy (xpath = "//li[.//h6[text()='Thursday']]//div[@role='checkbox']")
+	private WebElement thursdayCheckbox;
+	@FindBy (xpath = "//li[.//h6[text()='Friday']]//div[@role='checkbox']")
+	private WebElement fridayCheckbox;
+	@FindBy (xpath = "//li[.//h6[text()='Saturday']]//div[@role='checkbox']")
+	private WebElement saturdayCheckbox;
+	@FindBy (xpath = "//li[.//h6[text()='Sunday']]//div[@role='checkbox']")
+	private WebElement sundayCheckbox;
+	@FindBy (xpath = "(//li[.//h6[text()='Monday']]//span[@class='w-1/4 flex items-center justify-center'])[1]")
+	private WebElement mondaycopybutton;
+	@FindBy (xpath = "(//li[.//h6[text()='Friday']]//span[@class='w-1/4 flex items-center justify-center'])[2]")
+	private WebElement fridaypastebutton;
+	@FindBy (xpath = "(//li[.//h6[text()='Saturday']]//span[@class='w-1/4 flex items-center justify-center'])[2]")
+	private WebElement saturdaypastebutton;
+	@FindBy (xpath = "(//li[.//h6[text()='Sunday']]//span[@class='w-1/4 flex items-center justify-center'])[2]")
+	private WebElement sundaypastebutton;
+	@FindBy (xpath ="(//li[.//h6[text()='Tuesday']]//span[@class='w-1/4 flex items-center justify-center'])[2]")
+	private WebElement tuesdayPastebutton;
+	@FindBy (xpath = "//li[.//h6[text()='Tuesday']]//div[@role='checkbox']")
+	private WebElement tuesdaycheckbox;
+	@FindBy (xpath = "//a[contains (text(),'Generator Billing')]")
+	private WebElement generatorbilling;
+	@FindBy (xpath = "//a[contains (text(),'Generator Information')]")
+	private WebElement generatorInformation;
 	
 	
 	
+	public WebElement getGeneratorInformation() {
+		return generatorInformation;
+	}
+
+	public WebElement getGeneratorbilling() {
+		return generatorbilling;
+	}
+
+	public WebElement getTuesdaycheckbox() {
+		return tuesdaycheckbox;
+	}
+
+	public WebElement getTuesdayPastebutton() {
+		return tuesdayPastebutton;
+	}
+
+	public WebElement getSundaypastebutton() {
+		return sundaypastebutton;
+	}
+
+	public WebElement getSaturdaypastebutton() {
+		return saturdaypastebutton;
+	}
+
+	public WebElement getFridaypastebutton() {
+		return fridaypastebutton;
+	}
+
+	public WebElement getMondaycopybutton() {
+		return mondaycopybutton;
+	}
+
+	public WebElement getSundayCheckbox() {
+		return sundayCheckbox;
+	}
+
+	public WebElement getSaturdayCheckbox() {
+		return saturdayCheckbox;
+	}
+
+	public WebElement getFridayCheckbox() {
+		return fridayCheckbox;
+	}
+
+	public WebElement getThursdayCheckbox() {
+		return thursdayCheckbox;
+	}
+
+	public WebElement getClosetime() {
+		return closetime;
+	}
+
+	public WebElement getLunchendtiming() {
+		return lunchendtiming;
+	}
+
+	public WebElement getLunchsarttiming() {
+		return lunchsarttiming;
+	}
+
+	public WebElement getMorningtime() {
+		return morningtime;
+	}
+
+	public WebElement getSundayclosingtime() {
+		return sundayclosingtime;
+	}
+
+	public WebElement getSundaylunchend() {
+		return sundaylunchend;
+	}
+
+	public WebElement getSundaylunchstart() {
+		return sundaylunchstart;
+	}
+
+	public WebElement getSundayopeningtime() {
+		return sundayopeningtime;
+	}
+
+	public WebElement getSaturdayclosingtime() {
+		return saturdayclosingtime;
+	}
+
+	public WebElement getSaturdaylunchend() {
+		return saturdaylunchend;
+	}
+
+	public WebElement getSaturdaylunchstart() {
+		return saturdaylunchstart;
+	}
+
+	public WebElement getSaturdayopeningtime() {
+		return saturdayopeningtime;
+	}
+
+	public WebElement getFridayclosingtime() {
+		return fridayclosingtime;
+	}
+
+	public WebElement getFridaylunchend() {
+		return fridaylunchend;
+	}
+
+	public WebElement getFridaylunchstart() {
+		return fridaylunchstart;
+	}
+
+	public WebElement getFridayopeningtime() {
+		return fridayopeningtime;
+	}
+
+	public WebElement getThursdayclosingtime() {
+		return thursdayclosingtime;
+	}
+
+	public WebElement getThursdaylunchend() {
+		return thursdaylunchend;
+	}
+
+	public WebElement getThursdaylunchstart() {
+		return thursdaylunchstart;
+	}
+
+	public WebElement getThursdayopeningtime() {
+		return thursdayopeningtime;
+	}
+
+	public WebElement getWednesdayclosingtime() {
+		return wednesdayclosingtime;
+	}
+
+	public WebElement getWendesdaylunchend() {
+		return wendesdaylunchend;
+	}
+
+	public WebElement getWendesdaylunchstart() {
+		return wendesdaylunchstart;
+	}
+
+	public WebElement getWednesdayopeningtime() {
+		return wednesdayopeningtime;
+	}
+
+	public WebElement getTuesdaylunchclosetime() {
+		return tuesdaylunchclosetime;
+	}
+
+	public WebElement getTuesdaylunchend() {
+		return tuesdaylunchend;
+	}
+
+	public WebElement getTuesdaylunchstart() {
+		return tuesdaylunchstart;
+	}
 	
-	
-	
-	
+	public WebElement getTuesdayopeningtime() {
+		return tuesdayopeningtime;
+	}
+
+
+	public WebElement getMondayclosetime() {
+		return mondayclosetime;
+	}
+
+
+	public WebElement getMondaylunchend() {
+		return mondaylunchend;
+	}
+
+
+	public WebElement getMondaylunchstart() {
+		return mondaylunchstart;
+	}
+
+
+	public WebElement getMondayopeningtime() {
+		return mondayopeningtime;
+	}
+
+
+	public WebElement getBillingExt() {
+		return billingExt;
+	}
+
+
+	public WebElement getBillingPhoneErmsg() {
+		return billingPhoneErmsg;
+	}
+
+	public WebElement getBillingPhone() {
+		return billingPhone;
+	}
+
+	public WebElement getBillingEmailinvalidmsg() {
+		return billingEmailinvalidmsg;
+	}
+
+	public WebElement getBillingEmail() {
+		return billingEmail;
+	}
+
+	public WebElement getBillingsuite() {
+		return billingsuite;
+	}
+
 	public WebElement getBillingzipcode() {
 		return billingzipcode;
 	}
@@ -380,6 +683,7 @@ public class GeneratorInformation1 {
 		return noteunassign;
 	}
 
+	
 	public WebElement getUnassignButton() {
 		return unassignButton;
 	}
@@ -673,7 +977,7 @@ public class GeneratorInformation1 {
 		statusNote.sendKeys(Keys.DELETE);
 		updateStatus.click();
 		Thread.sleep(200);
-		statusCancelbutton.click();	
+		keepCureentstatus.click();
 	}
 	
 	public void IndustrytypeOption() throws InterruptedException
@@ -776,4 +1080,68 @@ public class GeneratorInformation1 {
 		driver.findElement(generatorInfo).click();
 		Thread.sleep(20000);
 	}
+	
+	public void billingState() throws InterruptedException
+	{
+		billingstate.click();
+		aZstate.click();
+		Thread.sleep(200);
+		billingstate.click();
+		Actions act = new Actions(driver);
+		act.moveToElement(fLstate).click().perform();
+		Thread.sleep(200);
+		billingstate.click();
+		Actions act1 = new Actions(driver);
+		act1.moveToElement(wVState).click().perform();
+	}
+	
+	public void weekdayswithcheckbox() throws InterruptedException
+	{
+		thursdayCheckbox.click();
+		if (!thursdayCheckbox.getAttribute("aria-checked").equals("true")) {
+			thursdayCheckbox.click();		
+	}
+		
+		Thread.sleep(2000);
+		@Nullable
+		String openingtimeDisabled = thursdayopeningtime.getAttribute("disabled");
+		Assert.assertNotNull(openingtimeDisabled, "Opening Time dropdown is enabled.");
+		System.out.println("Thursday Opening Time dropdown is disabled.");
+		
+		String lunchstartDisabled = thursdaylunchstart.getAttribute("disabled");
+		Assert.assertNotNull(lunchstartDisabled, " lunch start dropdown is enabled.");
+		System.out.println("Thursday lunch start dropdown is disabled.");
+		
+		String lunchendDisabled = thursdaylunchend.getAttribute("disabled");
+		Assert.assertNotNull(lunchendDisabled, " lunch end dropdown is enabled.");
+		System.out.println("Thursday lunch end dropdown is disabled.");
+		
+		String closingtimeDisabled = thursdayclosingtime.getAttribute("disabled");
+		Assert.assertNotNull(closingtimeDisabled, "closing time dropdown is enabled.");
+		System.out.println("Thursday closing time  dropdown is disabled.");			      
+		    
+	}
+	
+	public void TuesdaywithCheckbox() throws InterruptedException
+	{
+	@Nullable
+	String openingtimeDisabled = tuesdayopeningtime.getAttribute("disabled");
+	Assert.assertNotNull(openingtimeDisabled, "Opening Time dropdown is enabled.");
+	System.out.println("Tuesday Opening Time dropdown is disabled.");
+	
+	String lunchstartDisabled = tuesdaylunchstart.getAttribute("disabled");
+	Assert.assertNotNull(lunchstartDisabled, " lunch start dropdown is enabled.");
+	System.out.println("Tuesday lunch start dropdown is disabled.");
+	
+	String lunchendDisabled = tuesdaylunchend.getAttribute("disabled");
+	Assert.assertNotNull(lunchendDisabled, " lunch end dropdown is enabled.");
+	System.out.println("Tuesday lunch end dropdown is disabled.");
+	
+	String closingtimeDisabled = tuesdaylunchclosetime.getAttribute("disabled");
+	Assert.assertNotNull(closingtimeDisabled, "closing time dropdown is enabled.");
+	System.out.println("Tuesday closing time  dropdown is disabled.");			      
+	    
+}
+
+	
 }

@@ -1,15 +1,18 @@
-package Octopus_Assets;
+package Assets_Drivers;
 
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -21,6 +24,7 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.Octopussaas.BaseUtility.BaseClassForGEneratorContacts;
 import com.Octopussaas.BaseUtility.Baseclass;
 import com.Octopussaas.BaseUtility.BaseclassforDrivers;
 import com.Octopussaas.FileUtility.ExcelUtility;
@@ -31,7 +35,7 @@ import com.aventstack.extentreports.Status;
 @Listeners(ListnerUtility.ListnerUilityImp.class)
 
 
-public class OctopusAssests_Drivers extends BaseclassforDrivers{
+public class OctopusAssests_Drivers extends BaseClassForGEneratorContacts{
 	AssestsDrivers ad;
 	ExcelUtility elib;
 	String octoid ;
@@ -165,7 +169,7 @@ public class OctopusAssests_Drivers extends BaseclassforDrivers{
 		utilityclassobject.gettest().log(Status.INFO, "Middle Intial text field without input error message is not dispalyed(not mandataroyfield)");		
 	}
 	
-	@Test(dependsOnMethods = "TC_012AssetsDrivers_MiddleIntialwithoutInput")
+	@Test(dependsOnMethods = "TC_012AssetsDr*/ivers_MiddleIntialwithoutInput")
 	public void TC_013AssetsDrivers_LastnamewithInput() throws EncryptedDocumentException, IOException
 	{
 		ad.getLastnameField().click();
@@ -203,7 +207,7 @@ public class OctopusAssests_Drivers extends BaseclassforDrivers{
 		ad.getLastnameField().sendKeys(Keys.CONTROL + "a");
 		ad.getLastnameField().sendKeys(Keys.DELETE);
 		ad.AddnewDriverSubmit();
-		utilityclassobject.gettest().log(Status.INFO, "Last name text field without input displayed error message");		
+		utilityclassobject.gettest().log(Status.INFO, "Last name text field without input disptlayed error message");		
 	}
 	
 	@Test(dependsOnMethods = "TC_016AssestsDrivers_lastnamewithoutInput")
@@ -252,11 +256,54 @@ public class OctopusAssests_Drivers extends BaseclassforDrivers{
 	}
 	
 	@Test(dependsOnMethods = "TC_020AssestsDrivers_EmialwithoutInput")
-	public void TC_021AssestsDrivers_DriverLocation()
+	public void TC_021AssestsDrivers_DriverLocation() throws InterruptedException
 	{
-		ad.DriverLocation();
-		utilityclassobject.gettest().log(Status.INFO, "Driver Location Assignment dropdown is disaplyed with locations");			
+		ad.getDriverlocation().click();
 
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+
+		WebElement dropdown = wait.until(
+		        ExpectedConditions.visibilityOfElementLocated(
+		                By.xpath("//ul[@role='listbox']")));
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		Set<String> locations = new LinkedHashSet<>();
+
+		int previousCount = -1;
+
+		while (true) {
+
+		    List<WebElement> options = dropdown.findElements(
+		            By.xpath(".//li[@role='option']"));
+
+		    for (WebElement option : options) {
+
+		        String text = option.getText().trim();
+
+		        if (!text.isEmpty() && !text.equalsIgnoreCase("Loc")) {
+		            locations.add(text);
+		        }
+		    }
+
+		    js.executeScript(
+		            "arguments[0].scrollTop = arguments[0].scrollHeight;",
+		            dropdown);
+
+		    Thread.sleep(1000);
+
+		    if (locations.size() == previousCount) {
+		        break;
+		    }
+
+		    previousCount = locations.size();
+		}
+
+		System.out.println("Total Locations : " + locations.size());
+
+		for (String location : locations) {
+		    System.out.println(location);
+		}
 	}
 	
 	@Test(dependsOnMethods = "TC_021AssestsDrivers_DriverLocation")
@@ -278,7 +325,7 @@ public class OctopusAssests_Drivers extends BaseclassforDrivers{
 	@Test(dependsOnMethods = "TC_023AssetsDrivers_LocationCheck")
 	public void TC_024AssetsDrivers_removeLocations()
 	{
-		ad.getDriverLocation().click();
+		ad.getDriverlocation().click();
 		ad.RemoveLocation();
 		utilityclassobject.gettest().log(Status.INFO, "user is able to remove the locations");			
 	}
@@ -773,7 +820,7 @@ public class OctopusAssests_Drivers extends BaseclassforDrivers{
 		utilityclassobject.gettest().log(Status.INFO,"Driver license number textfield will accept numbers");			
 	}
 	
-	@Test(dependsOnMethods = "TC_069AssetsDrivers_DriverlicensewithNumbers")
+	@Test(dependsOnMethods = "TC_069Assets0Drivers_DriverlicensewithNumbers")
 	public void TC_070AssetsDrivers_DriverlicensewithSpecailcharacters() throws EncryptedDocumentException, IOException, InterruptedException
 	{
 		ad.getDriverlicense().click();

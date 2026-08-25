@@ -63,29 +63,19 @@ public class AssestsDrivers {
 	private WebElement emailErmsg;
 	@FindBy (xpath = "//div[@role='combobox']")
 	private WebElement driverLocation;
-	@FindBy (xpath = "//li[contains(text(),'(Henry) Premier Med Waste Solution display')]")
+	@FindBy (xpath = "//li[contains(text(),'(Henry) Premier Med Waste Solution')]")
 	private WebElement henryLocation;
-	@FindBy (xpath = "//li[contains(text(),'hhhh')]")
-	private WebElement hhhLocation;
-	@FindBy (xpath = "(//li[contains(text(),'SafeMed Biohazard Solutions')])[1]")
+	@FindBy (xpath = "//li[contains(text(),'test satelite')]")
+	private WebElement testsatelite;
+	@FindBy (xpath = "//li[contains(text(),'Test Company Display Name85344')]")
 	private WebElement safemedLocation;
-	@FindBy (xpath = "(//li[contains (text(),'Orbital Reach Station')])[1]")
+	@FindBy (xpath = "//li[contains(text(),'Loc')]")
 	private WebElement orbitalReachLocation;
-	@FindBy (xpath = "//li[contains (text(),'SecureCare Medical Disposal')]")
-	private WebElement secureCarelocation;
-	@FindBy (xpath = "//li[contains (text(),'MediTrust Waste Services')]")
-	private WebElement medicalTrustlocation;
-	@FindBy (xpath = "(//li[contains (text(),'NovaSky Satellite Offic')])[1]")
-	private WebElement novaskySatellitelocation;
-	@FindBy (xpath = "(//li[contains (text(),'Zenith Satellite Service')])[1]")
-	private WebElement zenithSatellitelocation;
-	@FindBy (xpath = "//span[contains(text(),'(Henry) Premier Med Waste Solution display')]/following-sibling::button")
+	@FindBy (xpath = "//span[contains(text(),'(Henry) Premier Med Waste Solution')]/following-sibling::button")
 	private WebElement henryCancelbutton;
-	@FindBy (xpath = "//span[contains(text(),'hhhh')]/following-sibling::button")
-	private WebElement hhhCancelbutton;
-	@FindBy (xpath = "(//span[contains(text(),'SafeMed Biohazard Solutions')]/following-sibling::button)[1]")
+	@FindBy (xpath = "//span[contains(text(),'Test Company Display Name85344')]/following-sibling::button")
 	private WebElement safemedCancelbutton;
-	@FindBy (xpath = "(//span[contains(text(),'Orbital Reach Station')]/following-sibling::button)[1]")
+	@FindBy (xpath = "//span[contains(text(),'Loc')]/following-sibling::button")
 	private WebElement orbitalcancelButton;
 	@FindBy (xpath = "//button[@id='driver-status']")
 	private WebElement driverStatus;
@@ -259,9 +249,17 @@ public class AssestsDrivers {
 	private WebElement addeddriverName;
 	@FindBy (xpath = "//input[@placeholder='Enter Hours Scheduled to Work']")
 	private WebElement hoursScheduled;
+	@FindBy (xpath = "//div[@class='relative flex flex flex-col w-full gap-1 mt-2']")
+	private WebElement driverlocation;
 	
 	
-	
+	public WebElement getTestsatelite() {
+		return testsatelite;
+	}
+
+	public WebElement getDriverlocation() {
+		return driverlocation;
+	}
 	public WebElement getHoursScheduled() {
 		return hoursScheduled;
 	}
@@ -593,28 +591,8 @@ public class AssestsDrivers {
 		return safemedCancelbutton;
 	}
 
-	public WebElement getHhhCancelbutton() {
-		return hhhCancelbutton;
-	}
-
 	public WebElement getHenryCancelbutton() {
 		return henryCancelbutton;
-	}
-
-	public WebElement getZenithSatellitelocation() {
-		return zenithSatellitelocation;
-	}
-
-	public WebElement getNovaskySatellitelocation() {
-		return novaskySatellitelocation;
-	}
-
-	public WebElement getMedicalTrustlocation() {
-		return medicalTrustlocation;
-	}
-
-	public WebElement getSecureCarelocation() {
-		return secureCarelocation;
 	}
 
 	public WebElement getOrbitalReachLocation() {
@@ -625,9 +603,6 @@ public class AssestsDrivers {
 		return safemedLocation;
 	}
 
-	public WebElement getHhhLocation() {
-		return hhhLocation;
-	}
 
 	public WebElement getHenryLocation() {
 		return henryLocation;
@@ -718,10 +693,11 @@ public class AssestsDrivers {
 	 
 	public void UnchecktheDriverLocation() throws InterruptedException
 	{
-		driverLocation.click();
+		driverlocation.click();
+		driverlocation.click();
 		henryLocation.click();
 		Thread.sleep(2000);
-		hhhLocation.click();
+		//hhhLocation.click();
 		Thread.sleep(2000);
 		safemedLocation.click();
 		Thread.sleep(2000);
@@ -731,37 +707,28 @@ public class AssestsDrivers {
 	
 	public void DriverLocationCheck() throws InterruptedException
 	{
-		driverLocation.click();
+		driverlocation.click();
+		driverlocation.click();
 		henryLocation.click();
 		Thread.sleep(2000);
-		hhhLocation.click();
+	//	hhhLocation.click();
 		Thread.sleep(2000);
 		safemedLocation.click();
 		Thread.sleep(2000);
 		orbitalReachLocation.click();
 		Thread.sleep(2000);
-		secureCarelocation.click();
-		Thread.sleep(2000);
-		secureCarelocation.click();
-		Actions act = new Actions(driver);
-		act.moveToElement(medicalTrustlocation).click().perform();
-		act.moveToElement(medicalTrustlocation).click().perform();
-		Actions act1 = new Actions(driver);
-		act.moveToElement(novaskySatellitelocation).click().perform();
-		act.moveToElement(novaskySatellitelocation).click().perform();
-		Actions act2 = new Actions(driver);
-		act.moveToElement(zenithSatellitelocation).click().perform();
-		act.moveToElement(zenithSatellitelocation).click().perform();
+		
 	}
 	
 	public void RemoveLocation()
 	{
-		WebElement loction = driver.findElement(By.xpath("//div[@role='combobox']"));
+		WebElement loction = driver.findElement(By.xpath("//div[@class='relative flex flex flex-col w-full gap-1 mt-2']"));
 	    Assert.assertTrue(loction.isDisplayed(), "Driver location assignment is displayed");
 	    henryCancelbutton.click();
-	    hhhCancelbutton.click();
+	    //hhhCancelbutton.click();
 	    safemedCancelbutton.click();
-	    orbitalcancelButton.click();	
+	    Actions act = new Actions(driver);	
+	    act.moveToElement(orbitalcancelButton).click().perform();
 	}
 	
 	public void Driverstatus()
@@ -1045,7 +1012,7 @@ public class AssestsDrivers {
 			cosmobridgeLocation.click();
 			Thread.sleep(2000);
 
-			secureCarelocation.click();
+			//secureCarelocation.click();
 			Thread.sleep(2000);
 
 			Actions act = new Actions(driver);
@@ -1070,7 +1037,7 @@ public class AssestsDrivers {
 			cosmobridgeLocation.click();
 			Thread.sleep(2000);
 
-			secureCarelocation.click();
+			//secureCarelocation.click();
 			Thread.sleep(2000);
 
 			Actions act = new Actions(driver);
