@@ -11,6 +11,7 @@ import com.aventstack.extentreports.Status;
 
 import java.awt.AWTException;
 import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
@@ -27,7 +28,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 @Listeners(ListnerUtility.ListnerUilityImp.class)
-
 public class TC_048to56CompanyLogoTransporterProfile extends BaseclassForSignUpPage{
 	ExcelUtility elib;
 	javautility jlib;
@@ -38,10 +38,18 @@ public class TC_048to56CompanyLogoTransporterProfile extends BaseclassForSignUpP
 	TransporterProfile tp;
 
 	@Test
-	public void TC_048CompanyLogoUpload() throws EncryptedDocumentException, IOException, InterruptedException {
+	public void TC_048CompanyLogoUpload() throws EncryptedDocumentException, IOException, InterruptedException, AWTException {
 		utilityclassobject.gettest().log(Status.INFO, "Signin Page is displayed");
 		elib = new ExcelUtility();
 		jlib = new javautility();
+		Robot robot = new Robot();
+
+ 		robot.keyPress(KeyEvent.VK_CONTROL);
+ 		robot.keyPress(KeyEvent.VK_SUBTRACT);
+ 		robot.keyRelease(KeyEvent.VK_SUBTRACT);
+ 		robot.keyPress(KeyEvent.VK_SUBTRACT);
+ 		robot.keyRelease(KeyEvent.VK_SUBTRACT);
+ 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		String Email = elib.getDataFromExcel("Signup365", 1, 1);
 		String Password = elib.getDataFromExcel("Signup365", 1, 2);
 		String ConfirmPassword = elib.getDataFromExcel("Signup365", 1, 2);

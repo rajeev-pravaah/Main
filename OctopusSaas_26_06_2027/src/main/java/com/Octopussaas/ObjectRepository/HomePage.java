@@ -33,6 +33,8 @@ public class HomePage {
 	private WebElement billingSettings;
 	
 
+	
+	
 	public WebElement getTransporterSettings() {
 		return transporterSettings;
 	}

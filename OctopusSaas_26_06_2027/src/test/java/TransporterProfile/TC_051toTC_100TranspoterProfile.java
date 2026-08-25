@@ -1,5 +1,8 @@
 package TransporterProfile;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.Random;
 
@@ -33,10 +36,19 @@ public class TC_051toTC_100TranspoterProfile extends BaseclassForSignUpPage{
 	
 
 	@Test(priority = 1)
-	public void TC_001VerifySignUpPage() throws EncryptedDocumentException, IOException {
+	public void TC_001VerifySignUpPage() throws EncryptedDocumentException, IOException, AWTException {
 		utilityclassobject.gettest().log(Status.INFO, "Signin Page is displayed");
 		elib = new ExcelUtility();
 		jlib = new javautility();
+		
+		Robot robot = new Robot();
+
+ 		robot.keyPress(KeyEvent.VK_CONTROL);
+ 		robot.keyPress(KeyEvent.VK_SUBTRACT);
+ 		robot.keyRelease(KeyEvent.VK_SUBTRACT);
+ 		robot.keyPress(KeyEvent.VK_SUBTRACT);
+ 		robot.keyRelease(KeyEvent.VK_SUBTRACT);
+ 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		String Email = elib.getDataFromExcel("Signup365", 1, 1);
 		String Password = elib.getDataFromExcel("Signup365", 1, 2);
 		String ConfirmPassword = elib.getDataFromExcel("Signup365", 1, 2);
@@ -140,7 +152,6 @@ public class TC_051toTC_100TranspoterProfile extends BaseclassForSignUpPage{
 	@Test(dependsOnMethods = "TC_57RegistrationNumber1_Textwithinput")
 	public void TC_58RegistrationNumber1_Textwithalphabets()
 	{
-
 		tp.getRegistrationNumber1().click();
 		tp.getRegistrationNumber1().sendKeys(Keys.CONTROL + "a");
 		tp.getRegistrationNumber1().sendKeys(Keys.DELETE);

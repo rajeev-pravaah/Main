@@ -29,15 +29,15 @@ public class GeneratorContacts {
 	private WebElement contactlisticon;
 	@FindBy(xpath = "//strong[text()='Generator Contact List']")
 	private WebElement contactlisttext;
-	@FindBy(xpath = "//button[@class='bg-cardTextBlue text-white rounded-full px-4 py-2 flex']")
+	@FindBy(xpath ="//button[@class='bg-cardTextBlue text-white rounded-full px-4 py-2 flex']")
 	private WebElement addcontactbutton;
 	@FindBy(xpath = "//h6[text()='Add New Contact']")
 	private WebElement addnewcontacdialoguebox;
-	@FindBy(id = "name-input")
+	@FindBy(id = "firstName-input")
 	private WebElement contactnamefield;
-	@FindBy(xpath = "//button[text()='Save']")
+	@FindBy(xpath = "//button[text()='Save and Send Credential']")
 	private WebElement savebutton;
-	@FindBy(xpath = "//p[text()='Contact Name is required']")
+	@FindBy(xpath = "//p[text()='First Name is required']")
 	private WebElement contactnameerror;
 	@FindBy(xpath = "//input[@type='tel']")
 	private WebElement contactnumberfield;
@@ -67,19 +67,19 @@ public class GeneratorContacts {
 	private WebElement generatorportalloginurltextfield;
 	@FindBy(xpath = "//div[text()='Please enter a valid URL.']")
 	private WebElement generatorportalloginurlerror;
-	@FindBy(id = "jobTitle-input")
+	@FindBy(xpath = "//input[@id='jobTitle-input']")
 	private WebElement jobtitletextfield;
-	@FindBy(xpath = "//button[@id='contact-status']/descendant::span")
+	@FindBy(id = "contact-status")
 	private WebElement contactstatusdropdown;
 	@FindBy(xpath = "//div[@role='option'] | //li[@role='option'] | //div[contains(@class,'select__option')] | //div[contains(@class,'dropdown-item')] | //ul[contains(@class,'dropdown-menu')]//li")
 	private List<WebElement> contactstatusdropdownoption;
 	@FindBy(xpath = "//label[@for='access']/../descendant::span[@class='truncate']")
 	private  List<WebElement>  accessfields;
-	@FindBy(xpath = "//label[@for='access']/../descendant::button")
+	@FindBy(xpath = "//label[text()='Roles ']/../descendant::button")
 	private WebElement  cancelfirstelemetfrondd;
 	@FindBy(id = "contact-note")
 	private WebElement contactnotefield;
-	@FindBy(xpath = "//span[text()='Credit Memo Issued']")
+	@FindBy(xpath = "//label[text()='Notification ']/../descendant::span")
 	private WebElement notificationDDbtn;
 	@FindBy(xpath = "//input[@type='checkbox']")
 	private WebElement notification1stcheckbox;
@@ -125,7 +125,7 @@ public class GeneratorContacts {
 	private WebElement retypenewpasswordfield;
 	@FindBy(xpath = "//button[text()='Confirm']")
 	private WebElement confirmbuttonfromsetuppasswordpage;
-	@FindBy(xpath = "//div[text='Passwords don't match!']")
+	@FindBy(xpath = "//div[contains(text(),\"Passwords don\")]")
 	private WebElement passwordsdontmatcherror;
 	@FindBy(xpath = "//h6[text()='Dashboard']")
 	private WebElement dashboardpageofgeneratorportal;
@@ -145,11 +145,22 @@ public class GeneratorContacts {
 	private WebElement generatorportalpasswordfield;
 	@FindBy(xpath = "//button[text()='Login']")
 	private WebElement generatorportalloginbutton;
+	@FindBy(id = "lastName-input")
+    private WebElement lastnametextfield;
+	@FindBy(xpath = "//div[text()='Active']")
+		private WebElement activestatus;
 	
 	
 	
 	
 	
+	
+	public WebElement getActivestatus() {
+		return activestatus;
+	}
+	public WebElement getLastnametextfield() {
+		return lastnametextfield;
+	}
 	public WebElement getGeneratorportalloginbutton() {
 		return generatorportalloginbutton;
 	}

@@ -6,6 +6,7 @@ import org.apache.poi.EncryptedDocumentException;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.Octopussaas.BaseUtility.BaseClassForGEneratorContacts;
 import com.Octopussaas.BaseUtility.Baseclass;
 import com.Octopussaas.FileUtility.ExcelUtility;
 import com.Octopussaas.ObjectRepository.HomePage;
@@ -14,7 +15,7 @@ import com.aventstack.extentreports.Status;
 @Listeners(ListnerUtility.ListnerUilityImp.class)
 
 
-public class TC_025 extends Baseclass{
+public class TC_025 extends BaseClassForGEneratorContacts{
 
 	@Test
 	public void TC_025myProfile_PhonewithSpecialcharacters() throws InterruptedException, EncryptedDocumentException, IOException

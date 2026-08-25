@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -45,6 +46,7 @@ public class VerifyContacWithoutPhonenumber extends BaseClassForGEneratorContact
 		elib = new ExcelUtility();
 		wlib = new webDriverutility();
 		hp.getGeneratoemanag().click();
+		driver.findElement(By.xpath("//h6[text()='Generator Locations']")).click();
 		Thread.sleep(3000);
 		gmp = new GeneratorManagentPage(driver);
 		String gname = elib.getDataFromExcel("Generator", 1, 1);
@@ -99,6 +101,8 @@ public class VerifyContacWithoutPhonenumber extends BaseClassForGEneratorContact
 		emailValue = emailField.getAttribute("value");
 		utilityclassobject.gettest().log(Status.INFO, "Email entered: " + emailValue);
 		System.out.println("Email entered: " + emailValue);
+		//lastname
+		genc.getLastnametextfield().sendKeys("Test Last");
 
 		// Fill Password field (mandatory)
 		WebElement pwdField = genc.getPasswordfield();
@@ -210,7 +214,7 @@ public class VerifyContacWithoutPhonenumber extends BaseClassForGEneratorContact
 		boolean contactFound = false;
 		for (WebElement contact : contactlists)
 		{
-			if (contact.getText().equals("Test Contact No Phone"))
+			if (contact.getText().contains("Test Contact No Phone"))
 			{
 				contactFound = true;
 				System.out.println("Contact saved successfully: '" + contact.getText() + "' and test case is : PASS");
