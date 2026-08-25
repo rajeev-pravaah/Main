@@ -1,95 +1,69 @@
 package OctopussaasBillingSettings;
 
+import java.time.Duration;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-
 import com.Octopussaas.BaseUtility.BaseClass80;
-import com.Octopussaas.FileUtility.ExcelUtility;
 import com.Octopussaas.ObjectRepository.BillingSettings;
 import com.Octopussaas.ObjectRepository.HomePage;
-import com.Octopussaas.ObjectRepository.LoginPage;
-import com.Octopussaas.ObjectRepository.RouteAssignment;
-import com.Octopussaas.ObjectRepository.TransporterProfile;
-import com.Octopussaass.WebdriverUtility.javautility;
 import com.Octopussaass.WebdriverUtility.utilityclassobject;
 import com.aventstack.extentreports.Status;
-import ListnerUtility.SimpleListener;
 
 @Listeners(ListnerUtility.ListnerUilityImp.class)
-
-public class TC_030InvoiceCheckBoxPopUp extends BaseClass80{
-	ExcelUtility elib;
-	javautility jlib;
-
-	LoginPage lp;
+public class TC_030InvoiceCheckBoxPopUp extends BaseClass80 {
 	HomePage hp;
-	RouteAssignment ras;
-	TransporterProfile tp;
 	BillingSettings bs;
-
-
 
 	@Test
 	public void TC_030InvoiceChcekBOxPopup() throws InterruptedException {
-		// Log via utility class and stdout for important events
 		utilityclassobject.gettest().log(Status.INFO, "Home page is displayed successfully");
 		System.out.println("INFO: Home page is displayed successfully");
 
 		hp = new HomePage(driver);
-		elib = new ExcelUtility();
-		// wlib is provided by BaseClass80, no need to reinitialize here
 		Thread.sleep(2000);
-        // Ensure page zoom is 80% so the element positions are consistent
-        ((JavascriptExecutor) driver).executeScript("document.body.style.zoom='80%'");
+		((JavascriptExecutor) driver).executeScript("document.body.style.zoom='80%'");
 		hp.getUserprofile().click();
 		hp.clickTransporterSettings();
 		Thread.sleep(2000);
-		utilityclassobject.gettest().log(Status.INFO, "Transporter setting page is  displayed successfully");
+		utilityclassobject.gettest().log(Status.INFO, "Transporter setting page is displayed successfully");
 		System.out.println("INFO: Transporter setting page is displayed successfully");
 		hp.getBillingSettings().click();
 		Thread.sleep(2000);
-		// Ensure page zoom is 80% after Billing Settings page loads
-		try { ((JavascriptExecutor) driver).executeScript("document.body.style.zoom='80%'"); } catch (Exception e) { /* ignore if not supported */ }
-		bs=new BillingSettings(driver);
-		//scrollTo invoice checkbox
-		WebElement invoiceCheckbox = bs.getInvoiceCheckbox();
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", invoiceCheckbox);
+		((JavascriptExecutor) driver).executeScript("document.body.style.zoom='80%'");
+		bs = new BillingSettings(driver);
 		utilityclassobject.gettest().log(Status.INFO, "Billing setting page is displayed successfully");
 		System.out.println("INFO: Billing setting page is displayed successfully");
+
+		// Scroll to invoice checkbox and click
+		WebElement invoiceCheckbox = bs.getInvoiceCheckbox();
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", invoiceCheckbox);
+		Thread.sleep(1000);
 		invoiceCheckbox.click();
 		utilityclassobject.gettest().log(Status.INFO, "Clicked on Invoice # checkbox");
 		System.out.println("INFO: Clicked on Invoice # checkbox");
-		//verify the confirm popup appears
-		WebElement confirmBtn = bs.getConfirmButton();
-		boolean popupDisplayed = false;
-		if (confirmBtn != null) {
-			try {
-				popupDisplayed = confirmBtn.isDisplayed();
-			} catch (Exception e) {
-				utilityclassobject.gettest().log(Status.WARNING, "Exception while checking confirm popup visibility: " + e.getMessage());
-				System.out.println("WARN: Exception while checking confirm popup visibility: " + e);
-			}
-		}
-		if (popupDisplayed) {
+
+		// Wait for confirm popup to appear
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			wait.until(ExpectedConditions.visibilityOf(bs.getConfirmButton()));
 			utilityclassobject.gettest().log(Status.PASS, "Confirm popup is displayed successfully after clicking Invoice # checkbox");
 			System.out.println("PASS: Confirm popup is displayed successfully after clicking Invoice # checkbox");
-		} else {
-			utilityclassobject.gettest().log(Status.FAIL, "Confirm popup is NOT displayed after clicking Invoice # checkbox");
-			System.out.println("FAIL: Confirm popup is NOT displayed after clicking Invoice # checkbox");
-		}
-		WebElement closeBtn = bs.getCloseButton();
-		if (closeBtn != null) {
+
+			// Close the popup using the ✕ button
+			WebElement closeBtn = wait.until(ExpectedConditions.elementToBeClickable(bs.getCloseButton()));
+			Thread.sleep(1000);
 			closeBtn.click();
-			utilityclassobject.gettest().log(Status.INFO, "Clicked close on popup");
-			System.out.println("INFO: Clicked close on popup");
-		} else {
-			utilityclassobject.gettest().log(Status.WARNING, "Close button not found on popup to click");
-			System.out.println("WARN: Close button not found on popup to click");
+			utilityclassobject.gettest().log(Status.INFO, "Clicked close (✕) on popup");
+			System.out.println("INFO: Clicked close (✕) on popup");
+		} catch (Exception e) {
+			utilityclassobject.gettest().log(Status.FAIL, "Confirm popup did NOT appear after clicking Invoice # checkbox: " + e.getMessage());
+			System.out.println("FAIL: Confirm popup did NOT appear: " + e.getMessage());
 		}
-		
-		
 	}
 }

@@ -32,7 +32,7 @@ import com.aventstack.extentreports.Status;
 public class OctopusAssets_Servicevehicle1  extends BaseclassforServicevehicle{
 	ExcelUtility elib;
 	AssetsServicevehicle as;
-	
+	OctopusAssets_Servicevehicle os;
 	
 	
 	@Test(priority = 1)
@@ -41,6 +41,7 @@ public class OctopusAssets_Servicevehicle1  extends BaseclassforServicevehicle{
 		elib = new ExcelUtility();
 		as = new AssetsServicevehicle(driver);
 		as.Servicevehicle();
+		os = new OctopusAssets_Servicevehicle();
 		Thread.sleep(2000);	
 		utilityclassobject.gettest().log(Status.INFO, "System is redirected the user to the Servicevehicle page");
 	}
@@ -48,7 +49,7 @@ public class OctopusAssets_Servicevehicle1  extends BaseclassforServicevehicle{
 	@Test(dependsOnMethods = "TC_001AssetsServicevehicel_withservicevehiclepage")
 	public void TC_087AssetsServicevehicle_CopyofRegistrationWithInput() throws InterruptedException
 	{
-		WebElement serviceVehicle = driver.findElement(By.xpath("//div[contains (text(),'SV0000246')]"));
+		WebElement serviceVehicle = driver.findElement(By.xpath("//div[contains (text(),'SV0000011')]"));
 		Actions act = new Actions(driver);
 		act.moveToElement(serviceVehicle).click().perform();
 		Thread.sleep(2000);

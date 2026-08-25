@@ -1,4 +1,7 @@
 package com.Octopussaas.BaseUtility;
+import java.time.Duration;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 
@@ -8,9 +11,12 @@ import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -117,7 +123,39 @@ public class BaseClassForGEneratorContacts {
  		Thread.sleep(3000);
  		LoginPage lp = new LoginPage(driver);
  		lp.LoginToApp(USERNAME, PASSWORD);
- 		
+
+ 		// ── Firebase / Login failure auto-recovery ──────────────────────────────────
+ 		// If Firebase App Check error (or any login failure) occurs, the browser stays
+ 		// on the login/auth URL instead of navigating to the dashboard.
+ 		// Check the current URL — if still on login page, refresh and retry once.
+ 		try {
+ 			String currentUrl = driver.getCurrentUrl();
+ 			System.out.println("[INFO] URL after login attempt: " + currentUrl);
+
+ 			boolean loginFailed = currentUrl.contains("/auth")
+ 					|| currentUrl.contains("/login")
+ 					|| currentUrl.contains("/sign-in");
+
+ 			if (loginFailed) {
+ 				System.out.println("[WARN] Login failed (still on login page). Refreshing and retrying...");
+
+ 				driver.navigate().refresh();
+ 				Thread.sleep(2000);
+
+ 				// Wait for email field to be ready
+ 				new WebDriverWait(driver, Duration.ofSeconds(15))
+ 					.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='email']")));
+
+ 				LoginPage lp2 = new LoginPage(driver);
+ 				lp2.LoginToApp(USERNAME, PASSWORD);
+ 				System.out.println("[INFO] Re-login completed successfully.");
+ 			} else {
+ 				System.out.println("[INFO] Login successful. Proceeding normally.");
+ 			}
+ 		} catch (Exception e) {
+ 			System.out.println("[WARN] Login recovery check failed: " + e.getMessage());
+ 		}
+ 		// ───────────────────────────────────────────────────────────────────────────
  		Robot robot = new Robot();
 
  		robot.keyPress(KeyEvent.VK_CONTROL);
@@ -126,20 +164,13 @@ public class BaseClassForGEneratorContacts {
  		robot.keyPress(KeyEvent.VK_SUBTRACT);
  		robot.keyRelease(KeyEvent.VK_SUBTRACT);
  		robot.keyRelease(KeyEvent.VK_CONTROL);
+ 		
 }
 	
 	
 	@BeforeMethod(alwaysRun = true)
 	public void Bm() throws IOException, InterruptedException {
 		System.out.println("Before method");
-		
-		 
-
-		
-		
-		
-		
-
 	}
 	@AfterMethod(alwaysRun = true)
 	public void Am() throws InterruptedException {

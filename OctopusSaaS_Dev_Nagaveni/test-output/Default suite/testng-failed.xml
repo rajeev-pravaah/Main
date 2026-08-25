@@ -3,21 +3,38 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation">
+      <class name="Octopus_Assets.OctopusAssests_Drivers">
         <methods>
-          <include name="TC_165VerifybillingStreetwithsuggestion"/>
-          <include name="Bc"/>
-          <include name="TC_163VerifybillingStreetwithnumbers"/>
-          <include name="TC_166VerifybillingStreetwithAutofills"/>
-          <include name="TC_164VerifybillingStreetwithspecialcharacters"/>
-          <include name="TC_161VerifybillingAttentionwithspecialcharacters"/>
-          <include name="TC_160VerifybillingAttentionwithnumbers"/>
-          <include name="TC_162VerifybillingStreetwithalphabets"/>
-          <include name="Bm"/>
-          <include name="TC_159VerifybillingAttentionwithalphabets"/>
+          <include name="Ac"/>
+          <include name="TC_010AssetsDrivers_MiddleIntialwithSpecialCharacters"/>
+          <include name="TC_006AssetsDrivers_firstnamewithSpecialcharacters"/>
+          <include name="TC_021AssestsDrivers_DriverLocation"/>
+          <include name="TC_003AssetsDrivers_AddnewDriver"/>
+          <include name="TC_013AssetsDrivers_LastnamewithInput"/>
+          <include name="TC_002AssetsDrivers_withTooltip"/>
+          <include name="TC_007AssetsDrivers_firstnamewithoutInput"/>
+          <include name="TC_001AssetsDrivers_withDriverPage"/>
           <include name="Am"/>
+          <include name="TC_023AssetsDrivers_LocationCheck"/>
+          <include name="TC_016AssestsDrivers_lastnamewithoutInput"/>
+          <include name="TC_012AssetsDrivers_MiddleIntialwithoutInput"/>
+          <include name="TC_017AssetsDrivers_EmailwithInput"/>
+          <include name="TC_004AssestsDrivers_FirstnamewithInput"/>
+          <include name="TC_024AssetsDrivers_removeLocations"/>
+          <include name="TC_018AssetsDrivers_EmailwithNumbers"/>
+          <include name="TC_005AssetsDrivers_firstnamewithNumbers"/>
+          <include name="TC_015AssetsDrivers_LastnamewithSpecialcharacters"/>
+          <include name="Bc"/>
+          <include name="Bm"/>
+          <include name="TC_022AssetsDrivers_uncheck"/>
+          <include name="TC_008AssestsDrivers_MiddleIntialwithInput"/>
+          <include name="TC_014AssetsDrivers_LastnamewithNumbers"/>
+          <include name="TC_019AssestsDrivers_Emailwithspecialcharacters"/>
+          <include name="TC_020AssestsDrivers_EmialwithoutInput"/>
+          <include name="TC_009AssetsDrivers_MiddleIntialwithNumbers"/>
+          <include name="TC_011AssetsDrivers_MiddleIntialmorethanonecharacter"/>
         </methods>
-      </class> <!-- Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation -->
+      </class> <!-- Octopus_Assets.OctopusAssests_Drivers -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

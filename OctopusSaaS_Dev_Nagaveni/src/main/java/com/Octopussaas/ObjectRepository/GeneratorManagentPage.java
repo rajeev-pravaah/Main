@@ -54,7 +54,7 @@ public class GeneratorManagentPage {
 		//driver.findElement(By.xpath("//div[@title='Charlie_106893']")).click();
 		for(int i=0;i<3;i++) {
 		    try {
-		        driver.findElement(By.xpath("//div[@title='Charlie_106893']")).click();
+		        driver.findElement(By.xpath("//div[@title='"+accountname+"']")).click();
 		        break;
 		    } 
 		    catch(StaleElementReferenceException e) {
@@ -70,7 +70,7 @@ public class GeneratorManagentPage {
 			
 			for(int i=0;i<3;i++) {
 			    try {
-			        driver.findElement(By.xpath("//div[@title='Charlie_109793']")).click();
+			        driver.findElement(By.xpath("//div[@title='"+accountname+"']")).click();
 			        break;
 			    } 
 			    catch(StaleElementReferenceException e) {

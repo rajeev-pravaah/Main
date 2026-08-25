@@ -42,9 +42,9 @@ public class AssetsServicevehicle {
 	private WebElement addnewServicebutton;
 	@FindBy (xpath = "//button[@id='vehicle-location assignment *']")
 	private WebElement vehiclelocationassignment;
-	@FindBy (xpath = "(//div[contains (text(),'(Henry) Premier Med Waste Solution display')])[1]")
+	@FindBy (xpath = "(//div[contains (text(),'(Henry) Premier Med Waste Solution')])[1]")
 	private WebElement henrylocation;
-	@FindBy (xpath = "(//div[contains (text(),'BioTrust Medical Disposal')])[1]")
+	@FindBy (xpath = "//div[contains (text(),'test satelite')]")
 	private WebElement biotrustmedicallocation;
 	@FindBy (xpath = "//p[contains (text(),'Vehicle Location Assignment is required.')]")
 	private WebElement vehiclelocationErmsg;
@@ -108,9 +108,9 @@ public class AssetsServicevehicle {
 	private WebElement serviceStatus;
 	@FindBy (xpath = "//button[@id='vehicle-location assignment *']")
 	private WebElement serviceLocationassignment; 
-	@FindBy (xpath = "(//li[@role='option']//div[contains (text(),'CleanLife Medical Waste')])[1]")
+	@FindBy (xpath = "//li[@role='option']//div[contains (text(),'Portland')]")
 	private WebElement cleanlifemedicalLocation;
-	@FindBy (xpath = "//li[@role='option']//div[contains (text(),'BioTrust Medical Disposal')]")
+	@FindBy (xpath = "//li[@role='option']//div[contains (text(),'Test Company Display Name79368')]")
 	private WebElement servicebiotrustmedical;
 	@FindBy (xpath = "//input[@placeholder='Enter the DOT#']")
 	private WebElement dotField;
@@ -522,7 +522,7 @@ public class AssetsServicevehicle {
 	{
 		WebElement vehicletype = driver.findElement(By.xpath("//button[@id='vehicle-location assignment *']"));
 	    Assert.assertTrue(vehicletype.isDisplayed(), "vehicle location assignment is displayed");
-	    WebElement  vehicletype1= driver.findElement(By.xpath("//span[contains (text(),'(Henry) Premier Med Waste Solution display')]"));
+	    WebElement  vehicletype1= driver.findElement(By.xpath("//span[contains (text(),'(Henry) Premier Med Waste Solution')]"));
 	    Assert.assertTrue(vehicletype1.isDisplayed(), "Location type is displayed");
 	}
 	
@@ -615,7 +615,7 @@ public class AssetsServicevehicle {
 	{
 		WebElement truckcost = driver.findElement(By.xpath("//div[@data-testid='truck-cost-per-mile-input']"));
 	    Assert.assertTrue(truckcost.isDisplayed(), "turck cost per mile is displayed");
-	    WebElement  value = driver.findElement(By.xpath("//input[@value='2.00']"));
+	    WebElement  value = driver.findElement(By.xpath("//input[@value='2.25']"));
 	    Assert.assertTrue(value.isDisplayed(), "default truck cost is  displayed");
 	}
 	

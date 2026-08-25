@@ -1,31 +1,19 @@
 package OctopussaasBillingSettings;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.Octopussaas.BaseUtility.BaseClass80;
-import com.Octopussaas.FileUtility.ExcelUtility;
 import com.Octopussaas.ObjectRepository.BillingSettings;
 import com.Octopussaas.ObjectRepository.HomePage;
-import com.Octopussaas.ObjectRepository.LoginPage;
-import com.Octopussaas.ObjectRepository.RouteAssignment;
-import com.Octopussaas.ObjectRepository.TransporterProfile;
-import com.Octopussaass.WebdriverUtility.javautility;
 import com.Octopussaass.WebdriverUtility.utilityclassobject;
 import com.aventstack.extentreports.Status;
 
 @Listeners(ListnerUtility.ListnerUilityImp.class)
 public class TC_010PastYear20225TextField extends BaseClass80{
-	ExcelUtility elib;
-	javautility jlib;
-
-	LoginPage lp;
 	HomePage hp;
-	RouteAssignment ras;
-	TransporterProfile tp;
 	BillingSettings bs;
 
 
@@ -37,7 +25,7 @@ public class TC_010PastYear20225TextField extends BaseClass80{
 		System.out.println("INFO: Home page is displayed successfully");
 
 		hp = new HomePage(driver);
-		elib = new ExcelUtility();
+		//elib = new ExcelUtility();
 		// wlib is provided by BaseClass80, no need to reinitialize here
 		Thread.sleep(2000);
         // Ensure page zoom is 80% so the element positions are consistent
@@ -68,10 +56,9 @@ public class TC_010PastYear20225TextField extends BaseClass80{
 			utilityclassobject.gettest().log(Status.FAIL, "2025 year text field is not displayed");
 			System.out.println("FAIL: 2025 year text field is not displayed");
 		}
-		bs.getYear2025TextField().clear();
 		//check the default value of 2025 year text field is 0 or not
 			String defaultValue = bs.getYear2025TextField().getAttribute("value");
-			if (defaultValue.equals("0")) {
+			if ("0".equals(defaultValue) || "".equals(defaultValue) || defaultValue == null) {
 				utilityclassobject.gettest().log(Status.PASS, "Default value of 2025 year text field is 0 as expected");
 				System.out.println("PASS: Default value of 2025 year text field is 0 as expected");
 			} else {

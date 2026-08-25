@@ -3,6 +3,7 @@ package com.Octopussaas.ObjectRepository;
 import java.awt.AWTException;
 import java.time.Duration;
 import java.time.LocalDate;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -130,6 +131,10 @@ public class RouteAssignment {
 	private WebElement AddServicebtn;
 	@FindBy(xpath = "//button[@id='route']")
 	private WebElement Routedropdown;
+	
+	
+	
+	
 	public WebElement getRoutedropdown() {
 		return Routedropdown;
 	}
@@ -345,7 +350,63 @@ public class RouteAssignment {
 	private WebElement servicetxt;
 	@FindBy(xpath = "//button[text()='Send To Subcontractor']/../descendant::button")
 	private WebElement cancelbuttoninSSRbesideSendtosubcontractor;
+	@FindBy(xpath = "(//button[text()='Go Back to Generator Profile'])[3]")
+	private WebElement gobacktorouteassignmentpage;
+	@FindBy(xpath = "(//h3[text()='Generator Profile Not Setup'])[2]")
+	private WebElement generatorprofilenotsetuppopup;
+	@FindBy(xpath = "//a[text()='Generator Information']")
+	private WebElement GeneratorInformationtab;
+	@FindBy(xpath = "//div[@class='flex items-center gap-2 flex-1 min-w-0']")
+	private List<WebElement> Addtagslists;
+	@FindBy(xpath = ".//input[@type='checkbox']")
+	private WebElement checkboxforalladdtsglists;
+	@FindBy(xpath = "//button[@class='popup-close']")
+	private WebElement closepopupfromMap;
+	@FindBy(xpath = "//*[name()='svg' and contains(@class,'starIcon')]")
+	private WebElement stariconinMap;
+	@FindBy(xpath = "//label[text()='Subcontractor *']")
+	private WebElement subcontrctortext;
+	@FindBy(xpath = "//div[@class='flex gap-8 w-full']")
+	private WebElement subcontractorAllFields;
+	@FindBy(xpath = "//h6[text()='Generator Locations']")
+	private WebElement generatorLocations;
 	
+	
+	
+	
+	
+	
+	
+	public WebElement getGeneratorLocations() {
+		return generatorLocations;
+	}
+	public WebElement getSubcontractorAllFields() {
+		return subcontractorAllFields;
+	}
+	public WebElement getSubcontrctortext() {
+		return subcontrctortext;
+	}
+	public WebElement getStariconinMap() {
+		return stariconinMap;
+	}
+	public WebElement getClosepopupfromMap() {
+		return closepopupfromMap;
+	}
+	public WebElement getCheckboxforalladdtsglists() {
+		return checkboxforalladdtsglists;
+	}
+	public List<WebElement> getAddTagsLists() {
+		return Addtagslists;
+	}
+	public WebElement getGeneratorInformationtab() {
+		return GeneratorInformationtab;
+	}
+	public WebElement getGeneratorprofilenotsetuppopup() {
+		return generatorprofilenotsetuppopup;
+	}
+	public WebElement getGobacktorouteassignmentpage() {
+		return gobacktorouteassignmentpage;
+	}
 	public WebElement getCancelbuttoninSSRbesideSendtosubcontractor() {
 		return cancelbuttoninSSRbesideSendtosubcontractor;
 	}

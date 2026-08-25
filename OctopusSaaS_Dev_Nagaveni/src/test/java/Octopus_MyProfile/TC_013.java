@@ -7,6 +7,7 @@ import org.openqa.selenium.Keys;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.Octopussaas.BaseUtility.BaseClassForGEneratorContacts;
 import com.Octopussaas.BaseUtility.Baseclass;
 import com.Octopussaas.FileUtility.ExcelUtility;
 import com.Octopussaas.ObjectRepository.HomePage;
@@ -16,7 +17,7 @@ import com.aventstack.extentreports.Status;
 
 
 
-public class TC_013 extends Baseclass{
+public class TC_013 extends BaseClassForGEneratorContacts{
 	
 	@Test
 	public void TC_013myProfile_FirstnamewithNumbers() throws EncryptedDocumentException, IOException, InterruptedException

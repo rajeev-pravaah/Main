@@ -11,6 +11,7 @@ import com.aventstack.extentreports.Status;
 
 import java.awt.AWTException;
 import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
@@ -27,7 +28,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 @Listeners(ListnerUtility.ListnerUilityImp.class)
-
 public class TC_048to56CompanyLogoTransporterProfile extends BaseclassForSignUpPage{
 	ExcelUtility elib;
 	javautility jlib;
@@ -38,10 +38,18 @@ public class TC_048to56CompanyLogoTransporterProfile extends BaseclassForSignUpP
 	TransporterProfile tp;
 
 	@Test
-	public void TC_048CompanyLogoUpload() throws EncryptedDocumentException, IOException, InterruptedException {
+	public void TC_048CompanyLogoUpload() throws EncryptedDocumentException, IOException, InterruptedException, AWTException {
 		utilityclassobject.gettest().log(Status.INFO, "Signin Page is displayed");
 		elib = new ExcelUtility();
 		jlib = new javautility();
+		Robot robot = new Robot();
+
+ 		robot.keyPress(KeyEvent.VK_CONTROL);
+ 		robot.keyPress(KeyEvent.VK_SUBTRACT);
+ 		robot.keyRelease(KeyEvent.VK_SUBTRACT);
+ 		robot.keyPress(KeyEvent.VK_SUBTRACT);
+ 		robot.keyRelease(KeyEvent.VK_SUBTRACT);
+ 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		String Email = elib.getDataFromExcel("Signup365", 1, 1);
 		String Password = elib.getDataFromExcel("Signup365", 1, 2);
 		String ConfirmPassword = elib.getDataFromExcel("Signup365", 1, 2);
@@ -226,7 +234,6 @@ public class TC_048to56CompanyLogoTransporterProfile extends BaseclassForSignUpP
 		utilityclassobject.gettest().log(Status.INFO, "Clicked on delete icon to verify edited logo name");
 		 //again upload logo
 		tp.getUploadfile().click();
-		Thread.sleep(20000);
 		String projectDir = System.getProperty("user.dir");
 		File file = new File(projectDir + File.separator + "Files_ upload" + File.separator + "companylogo.jpg");
 		if(!file.exists()){
@@ -310,13 +317,10 @@ public class TC_048to56CompanyLogoTransporterProfile extends BaseclassForSignUpP
 		
 	}
 	@Test(dependsOnMethods = "Tc_052deleteEditedLogo")
-	public void TC_053Reuploadlogo() throws InterruptedException
+	public void TC_053Reuploadlogo()
 	{
-		Thread.sleep(20000);
 		//again upload logo and check the uploaded logo is displayed or not
 		tp.getUploadfile().click();
-		Thread.sleep(20000);
-
 		String projectDir = System.getProperty("user.dir");
 		File file = new File(projectDir + File.separator + "Files_ upload" + File.separator + "companylogo.jpg");
 		if(!file.exists()){
@@ -360,7 +364,7 @@ public class TC_048to56CompanyLogoTransporterProfile extends BaseclassForSignUpP
 	public void TC_054VerifyUploadedLogo() throws InterruptedException
 	{
 		//verify the uploaded logo is displayed or not
-		Thread.sleep(20000);
+		Thread.sleep(3000);
 		// Use a generic locator here instead of tp.getCompanylogo() since that method does not exist
 		// Adjust the XPath/CSS selector according to your actual logo element in the DOM
 		WebElement logoElement = driver.findElement(By.xpath("//img[contains(@src,'logo') or contains(@alt,'logo') or contains(@class,'logo')]"));
@@ -377,7 +381,7 @@ public class TC_048to56CompanyLogoTransporterProfile extends BaseclassForSignUpP
 	{
 		System.out.println("Hi");
 		octo365signupPage.getDeleteicon().click();
-		Thread.sleep(20000);
+		Thread.sleep(3000);
 		utilityclassobject.gettest().log(Status.INFO, "Clicked on delete icon to verify upload of logo more than 5MB");
 		//again click on that upload icon and try to upload file more than 5mb and we will get alert popup
 		tp.getUploadfile().click();
@@ -433,7 +437,7 @@ public class TC_048to56CompanyLogoTransporterProfile extends BaseclassForSignUpP
 	{
 		//delete the logo and verify the default logo is displayed or not
 		octo365signupPage.getDeleteicon().click();
-		Thread.sleep(20000);
+		Thread.sleep(3000);
 		utilityclassobject.gettest().log(Status.INFO, "Clicked on delete icon to verify default logo is displayed");
 		 //again upload logo
 		tp.getUploadfile().click();

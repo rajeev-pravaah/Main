@@ -70,5 +70,6 @@ public class TC_032InvoiceDateChcekboxWithpopup extends BaseClass80{
 			utilityclassobject.gettest().log(Status.FAIL, "Confirm popup is not displayed with Confirm and Cancel buttons");
 			System.out.println("FAIL: Confirm popup is not displayed with Confirm and Cancel buttons");
 		}
+		Thread.sleep(2000);
 	}
 }

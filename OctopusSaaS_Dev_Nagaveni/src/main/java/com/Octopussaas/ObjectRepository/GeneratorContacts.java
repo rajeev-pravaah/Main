@@ -150,7 +150,6 @@ public class GeneratorContacts {
 	
 	
 	
-	
 	public WebElement getGeneratorportalloginbutton() {
 		return generatorportalloginbutton;
 	}

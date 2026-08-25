@@ -114,8 +114,8 @@ public class TC_008 extends Baseclass {
 		Assert.assertTrue(ele.isDisplayed(), "Element is visible");
 		ele.click();
 
-		WebElement tagOptionsList = driver.findElement(By.id("tag-options-list"));
-		wlib.waitForElementPresent(driver, tagOptionsList);
+		//WebElement tagOptionsList = driver.findElement(By.id("tag-options-list"));
+		//wlib.waitForElementPresent(driver, tagOptionsList);
 
 		List<WebElement> taglist = driver.findElements(By.xpath("//div[@id='tag-options-list']//label"));
 		for (WebElement tag : taglist) {

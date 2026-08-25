@@ -89,6 +89,11 @@ public class BaseClass80 {
 		
 
 	}
+	@AfterMethod(alwaysRun = true)
+	public void Am() throws InterruptedException {
+		System.out.println("After method");
+		Thread.sleep(2000);
+	}
 	
 	
 
@@ -102,6 +107,7 @@ public class BaseClass80 {
 	
 
 		driver.quit();
+		Thread.sleep(2000);
 	}
 	
 	

@@ -84,5 +84,7 @@ public class TC_073AddnewPaymentTypeWithCheckBox extends BaseClass80{
 		    utilityclassobject.gettest().log(Status.FAIL,
 		            "The check box is not present");
 		}
+		Thread.sleep(2000);
+		 // click on save button
 	}
 }

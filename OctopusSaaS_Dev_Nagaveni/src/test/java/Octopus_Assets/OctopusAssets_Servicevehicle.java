@@ -20,6 +20,7 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.Octopussaas.BaseUtility.BaseClassForGEneratorContacts;
 import com.Octopussaas.BaseUtility.BaseclassforServicevehicle;
 import com.Octopussaas.FileUtility.ExcelUtility;
 import com.Octopussaas.ObjectRepository.AssetsServicevehicle;
@@ -29,7 +30,8 @@ import com.aventstack.extentreports.Status;
 @Listeners(ListnerUtility.ListnerUilityImp.class)
 
 
-public class OctopusAssets_Servicevehicle extends BaseclassforServicevehicle {
+
+public class OctopusAssets_Servicevehicle extends BaseClassForGEneratorContacts {
 	ExcelUtility elib;
 	AssetsServicevehicle as;
 	String nicknameinput;
@@ -1165,9 +1167,9 @@ public class OctopusAssets_Servicevehicle extends BaseclassforServicevehicle {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 		    String[] years = {
-		            "1973",
-		            "1992",
-		            "2010",
+		            "2032",
+		            "2028",
+		            "2030",
 		            "2027",
 		            "2035"
 		    };
@@ -1241,8 +1243,7 @@ public class OctopusAssets_Servicevehicle extends BaseclassforServicevehicle {
 			    for (String month : months)
 			    {
 			        // Open calendar
-			        as.getInsuranceCalendar().click
-			        ();
+			        as.getInsuranceCalendar().click();
 
 			        // Open month dropdown
 			        WebElement dropdown = wait.until(
@@ -1274,8 +1275,8 @@ public class OctopusAssets_Servicevehicle extends BaseclassforServicevehicle {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 		    String[] years = {
-		            "2015",
-		            "2021",
+		            "2026",
+		            "2028",
 		            "2027",
 		            "2035"
 		    };
@@ -1583,7 +1584,7 @@ public class OctopusAssets_Servicevehicle extends BaseclassforServicevehicle {
 		@Test(dependsOnMethods = "TC_124AssetsServicevehicle_WithVehicleID")
 		public void TC_125AssetServicevehicle_withVehiclelocation()
 		{
-			WebElement addedVehiclelocation = driver.findElement(By.xpath("//div[contains(text(),'"+addedvehicleID+"')]/ancestor::a//div[contains(text(),'(Henry) Premier Med Waste Solution display')]"));
+			WebElement addedVehiclelocation = driver.findElement(By.xpath("//div[contains(text(),'"+addedvehicleID+"')]/ancestor::a//div[contains(text(),'(Henry) Premier Med Waste Solution')]"));
 		    Assert.assertTrue(addedVehiclelocation.isDisplayed(), "addedSerivevehicle location is displayed in the list");
 			utilityclassobject.gettest().log(Status.INFO,"Added Servicevehicle location is displayed in the list");				
 		}
@@ -1750,15 +1751,15 @@ public class OctopusAssets_Servicevehicle extends BaseclassforServicevehicle {
 			public void TC_140AssetsServicevhicle_MultipleservicevehiclewithExport() throws InterruptedException
 			{
 				webDriverutility wlib = new webDriverutility();
-				WebElement servicevehicle = driver.findElement(By.xpath("//div[contains (text(),'SV0000244')]"));
+				WebElement servicevehicle = driver.findElement(By.xpath("//div[contains (text(),'SV0000009')]"));
 				wlib.scrollToelement(driver, servicevehicle);
-			    WebElement checkbox = driver.findElement(By.xpath("//div[contains(text(),'SV0000244')]/ancestor::a//input[@type='checkbox']"));
+			    WebElement checkbox = driver.findElement(By.xpath("//div[contains(text(),'SV0000009')]/ancestor::a//input[@type='checkbox']"));
 				JavascriptExecutor js = (JavascriptExecutor) driver;
 		    		js.executeScript("arguments[0].click();", checkbox);			    
 		    		Thread.sleep(2000);
-			    WebElement servicevehicle1 = driver.findElement(By.xpath("//div[contains(text(),'SV0000226')]"));
+			    WebElement servicevehicle1 = driver.findElement(By.xpath("//div[contains(text(),'SV0000008')]"));
 			    	wlib.scrollToelement(driver, servicevehicle1);
-			    	WebElement checkbox1 = driver.findElement(By.xpath("//div[contains(text(),'SV0000226')]/ancestor::a//input[@type='checkbox']"));
+			    	WebElement checkbox1 = driver.findElement(By.xpath("//div[contains(text(),'SV0000008')]/ancestor::a//input[@type='checkbox']"));
 			    	JavascriptExecutor js1 = (JavascriptExecutor) driver;
 			    	js1.executeScript("arguments[0].click();", checkbox1);
 				utilityclassobject.gettest().log(Status.INFO,"The user is able to export the details of the Multiple servicevehicles from selected/list");			
@@ -1773,6 +1774,7 @@ public class OctopusAssets_Servicevehicle extends BaseclassforServicevehicle {
 				utilityclassobject.gettest().log(Status.INFO,"The user is able to export the details of all the service vehicles");			
 
 			}
+			
 			
 			   
 		

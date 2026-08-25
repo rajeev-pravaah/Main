@@ -1,5 +1,8 @@
 package com.Octopussaas.BaseUtility;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.HashMap;
@@ -68,7 +71,7 @@ public class BaseclassForSignUpPage {
          wlib.waitForPageLoad(driver);
 }
 	@BeforeMethod(alwaysRun = true)
-	public void Bm() throws IOException, InterruptedException {
+	public void Bm() throws IOException, InterruptedException, AWTException {
 		System.out.println("Before method");
 		String URL = flib.getDataFromPropertiesFile("url");
 		Thread.sleep(2000);

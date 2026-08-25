@@ -70,5 +70,6 @@ public class TC_033InvoiceDatewithConfirmandCancelBtn extends BaseClass80{
 			utilityclassobject.gettest().log(Status.FAIL, "Confirm and Cancel buttons are not displayed in the popup");
 			System.out.println("FAIL: Confirm and Cancel buttons are not displayed in the popup");
 		}
+		Thread.sleep(2000);
 		}
 }

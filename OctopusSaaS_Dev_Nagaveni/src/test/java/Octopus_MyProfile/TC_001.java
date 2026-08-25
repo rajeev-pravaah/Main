@@ -1,8 +1,10 @@
 package Octopus_MyProfile;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.Octopussaas.BaseUtility.BaseClassForGEneratorContacts;
 import com.Octopussaas.BaseUtility.Baseclass;
 import com.Octopussaas.FileUtility.ExcelUtility;
 import com.Octopussaas.ObjectRepository.HomePage;
@@ -13,12 +15,13 @@ import com.aventstack.extentreports.Status;
 
 	@Listeners(ListnerUtility.ListnerUilityImp.class )
 
-	public class TC_001 extends Baseclass{
+	public class TC_001 extends BaseClassForGEneratorContacts{
 		HomePage hp;
 		
 		@Test
 		public void TC_001myprofile_Dropdown() throws InterruptedException
 		{
+		
 			hp = new HomePage(driver);
 			hp.Myprofile();
 			utilityclassobject.gettest().log(Status.INFO, "My profile is dropdown is displayed with follwing contains");

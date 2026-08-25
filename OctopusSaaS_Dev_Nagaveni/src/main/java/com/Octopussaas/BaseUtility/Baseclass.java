@@ -71,7 +71,7 @@ public class Baseclass {
 	@BeforeMethod(alwaysRun = true)
 	public void Bm() throws IOException, InterruptedException {
 		System.out.println("Before method");
-		String URL = flib.getDataFromPropertiesFile("url");
+		String URL = flib.getDataFromPropertiesFile("url").trim();
 		Thread.sleep(2000);
         
 		driver.get(URL);
@@ -80,10 +80,9 @@ public class Baseclass {
 		driver.manage().window().maximize();
 		Thread.sleep(2000);
 
-		String USERNAME = flib.getDataFromPropertiesFile("username");
+		String USERNAME = flib.getDataFromPropertiesFile("username").trim();
 		System.out.println(USERNAME);
-		String PASSWORD = flib.getDataFromPropertiesFile("password");
-		//;age lp = new LoginPage(driver);
+		String PASSWORD = flib.getDataFromPropertiesFile("password").trim();
 		Thread.sleep(3000);
 		LoginPage lp = new LoginPage(driver);
 		lp.LoginToApp(USERNAME, PASSWORD);
@@ -107,7 +106,7 @@ public class Baseclass {
 		System.out.println("After class");
 		Thread.sleep(2000);
 
-		driver.quit();
+		/*driver.quit();*/
 		Thread.sleep(5000);
 	}
 	

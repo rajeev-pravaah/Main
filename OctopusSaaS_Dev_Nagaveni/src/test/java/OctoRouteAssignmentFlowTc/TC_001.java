@@ -62,7 +62,7 @@ public class TC_001 extends Baseclass {
 		String InternalAcNo = elib.getDataFromExcel("Routeassignment", 1, 2);
 		Thread.sleep(5000);
 		NewGen.NewGeneretor(GeneretorName, InternalAcNo);
-		Thread.sleep(35000);
+		Thread.sleep(25000);
 		GeneretorInformation ginfo = new GeneretorInformation(driver);
 		// wait for Generator Name element to be clickable/present before reading it
 		WebElement genNameElement = ginfo.getGenName();
@@ -101,6 +101,7 @@ public class TC_001 extends Baseclass {
 		ginfo.lunchEnd();
 		ginfo.MondayClose();
 		ginfo.CopyPasteToAllDay();
+		Thread.sleep(2000);
 		ginfo.Contracted();
 		utilityclassobject.gettest().log(Status.INFO, "Generator service information saved successfully");
 		Thread.sleep(30000);

@@ -99,9 +99,26 @@ public class GeneretorInformation {
 	private WebElement calendar;
 	@FindBy(xpath = "//a[text()='Generator Contacts']")
 	private WebElement generatorContacts;
+	@FindBy(xpath = "//span[text()='Contracted']/../../descendant::div")
+	private WebElement contractedcheckbox;
+	@FindBy(xpath = "//textarea[@name='cancellationNote']")
+	private WebElement cancellationNote;
+	@FindBy(xpath = "//button[text()='Terminate The Contract']")
+	private WebElement terminateContractbtn;
 	
 	
-
+	
+	
+	
+	public WebElement getTerminateContractbtn() {
+		return terminateContractbtn;
+	}
+	public WebElement getCancellationNote() {
+		return cancellationNote;
+	}
+	public WebElement getContractedcheckbox() {
+		return contractedcheckbox;
+	}
 	public WebElement getGeneratorContacts() {
 		return generatorContacts;
 	}
@@ -317,11 +334,10 @@ public class GeneretorInformation {
           checkBox.click();
   		Actions act1= new Actions(driver);
   		webDriverutility wlib = new webDriverutility();
-  		/*
   		wlib.waitUntilElementClickable(driver, Yesbtn);
   		act1.doubleClick(Yesbtn).perform();
   		//cancelbtn.click();
-  		Thread.sleep(4000);*/
+  		Thread.sleep(4000);
 
          // Yesbtn.click();
 	}
@@ -338,6 +354,7 @@ public class GeneretorInformation {
 		wlib.waitUntilElementClickable(driver, route);
 		route.click();
 	}
+	
 	
 	
 }

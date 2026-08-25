@@ -4,6 +4,7 @@ import org.openqa.selenium.Keys;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.Octopussaas.BaseUtility.BaseClassForGEneratorContacts;
 import com.Octopussaas.BaseUtility.Baseclass;
 import com.Octopussaas.ObjectRepository.HomePage;
 import com.Octopussaass.WebdriverUtility.utilityclassobject;
@@ -11,7 +12,7 @@ import com.aventstack.extentreports.Status;
 @Listeners(ListnerUtility.ListnerUilityImp.class)
 
 
-public class TC_015 extends Baseclass{
+public class TC_015 extends BaseClassForGEneratorContacts{
 
 	@Test
 	public void TC_015myProfile_lastnamewithEdit() throws InterruptedException

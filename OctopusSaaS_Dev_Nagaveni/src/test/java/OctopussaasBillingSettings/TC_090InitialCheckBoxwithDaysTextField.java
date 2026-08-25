@@ -7,6 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -34,9 +36,9 @@ public class TC_090InitialCheckBoxwithDaysTextField extends BaseClass80 {
 	BillingSettings bs;
 
 	@Test
-	public void TC_089NotificationfrequencyIntialCheckBox()
+	public void TC_090InitialCheckBoxwithDaysTextField()
 			throws InterruptedException, EncryptedDocumentException, IOException {
-		try {
+		
 			utilityclassobject.gettest().log(Status.INFO, "Home page is displayed successfully");
 			System.out.println("INFO: Home page is displayed successfully");
 			hp = new HomePage(driver);
@@ -55,94 +57,33 @@ public class TC_090InitialCheckBoxwithDaysTextField extends BaseClass80 {
 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", bs.getPaymenttermsdropdown());
 			utilityclassobject.gettest().log(Status.INFO, "Billing setting page is displayed successfully");
 			System.out.println("INFO: Billing setting page is displayed successfully");
-			Thread.sleep(2000);
 			wlib.scrollToelement(driver, bs.getNotificationfrequencyinitialCheckBox());
+			Thread.sleep(2000);
+			// Click the checkbox only once to enable the input field
+			bs.getNotificationfrequencyinitialCheckBox().click();
+			bs.getNotificationfrequencyinitialCheckBox().click();
 
-			// Desired value to set
-			String daysValue = "7";
+			Thread.sleep(1500);
 
-			// Use robust checker for the initial notification checkbox
-			boolean initiallyChecked = bs.isNotificationfrequencyinitialChecked();
-			System.out.println("INFO: Detected initial checkbox checked state: " + initiallyChecked);
+			// Re-find the days input field fresh (avoids stale element after DOM re-render)
+			WebElement daysField = driver.findElement(By.xpath("//span[text()='Initial:']/following::input[1]"));
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", daysField);
+			Thread.sleep(500);
 
-			if (initiallyChecked) {
-				utilityclassobject.gettest().log(Status.INFO, "Initial checkbox already checked - setting value " + daysValue);
-				System.out.println("INFO: Initial checkbox already checked - setting value " + daysValue);
-				// ensure textfield is clickable then set value
-				try {
-					wlib.waitUntilElementClickable(driver, bs.getNotificationfrequencyinitialTextfield());
-					bs.getNotificationfrequencyinitialTextfield().clear();
-					bs.getNotificationfrequencyinitialTextfield().sendKeys(daysValue);
-				} catch (Exception e) {
-					JavascriptExecutor js = (JavascriptExecutor) driver;
-					js.executeScript("arguments[0].focus(); arguments[0].value='';", bs.getNotificationfrequencyinitialTextfield());
-					js.executeScript("arguments[0].value='" + daysValue + "';", bs.getNotificationfrequencyinitialTextfield());
-				}
-				utilityclassobject.gettest().log(Status.PASS, "Set initial notification frequency to " + daysValue);
-				System.out.println("PASS: Set initial notification frequency to " + daysValue);
-			} else {
-				utilityclassobject.gettest().log(Status.INFO, "Initial checkbox not checked - attempting to check it and set value " + daysValue);
-				System.out.println("INFO: Initial checkbox not checked - attempting to check it and set value " + daysValue);
-				// attempt to check using the robust ensure helper
-				boolean becameChecked = false;
-				try {
-					becameChecked = bs.ensureNotificationfrequencyinitialChecked(true, 10);
-					System.out.println("INFO: ensureNotificationfrequencyinitialChecked returned: " + becameChecked);
-				} catch (Exception e) {
-					System.out.println("WARN: Exception while trying to ensure initial checkbox: " + e.getMessage());
-				}
+			// Use Actions triple-click to select all existing text, then type the new value
+			Actions actions = new Actions(driver);
+			actions.click(daysField).keyDown(org.openqa.selenium.Keys.CONTROL).sendKeys("a").keyUp(org.openqa.selenium.Keys.CONTROL).perform();
+			daysField.sendKeys(org.openqa.selenium.Keys.DELETE);
+			daysField.sendKeys("5");
 
-				if (!becameChecked) {
-					utilityclassobject.gettest().log(Status.FAIL, "Could not check the Initial checkbox; will still try to set value");
-					System.out.println("FAIL: Could not check the Initial checkbox; will still try to set value");
-				} else {
-					utilityclassobject.gettest().log(Status.PASS, "Initial checkbox is checked");
-					System.out.println("PASS: Initial checkbox is checked");
-				}
+			// Trigger React's synthetic onChange event via native value setter
+			((JavascriptExecutor) driver).executeScript(
+				"var nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;" +
+				"nativeInputValueSetter.call(arguments[0], '5');" +
+				"arguments[0].dispatchEvent(new Event('input', { bubbles: true }));" +
+				"arguments[0].dispatchEvent(new Event('change', { bubbles: true }));", daysField);
+			Thread.sleep(2000);
 
-				// Set the field value regardless of checkbox final state
-				try {
-					wlib.waitUntilElementClickable(driver, bs.getNotificationfrequencyinitialTextfield());
-					bs.getNotificationfrequencyinitialTextfield().clear();
-					bs.getNotificationfrequencyinitialTextfield().sendKeys(daysValue);
-				} catch (Exception e) {
-					JavascriptExecutor js = (JavascriptExecutor) driver;
-					js.executeScript("arguments[0].focus(); arguments[0].value='';", bs.getNotificationfrequencyinitialTextfield());
-					js.executeScript("arguments[0].value='" + daysValue + "';", bs.getNotificationfrequencyinitialTextfield());
-				}
-				utilityclassobject.gettest().log(Status.INFO, "Notification frequency initial text field set to " + daysValue);
-				System.out.println("INFO: Notification frequency initial text field set to " + daysValue);
-			}
-		} catch (Exception e) {
-			// Capture detailed diagnostics to help find root cause
-			System.out.println("ERROR: Exception in test flow: " + e.getClass().getName() + " - " + e.getMessage());
-			utilityclassobject.gettest().log(Status.FAIL, "Exception while handling Initial checkbox: " + e.getMessage());
-			// Try to safely locate the checkbox and textfield and log their attributes
-			try {
-				By chkXpath = By.xpath("//span[text()='Initial:']/ancestor::div[@class='pl-6 flex items-center gap-4']/descendant::div");
-				By txtXpath = By.xpath("//span[text()='Initial:']/following::input[1]");
-				WebElement chk = null;
-				WebElement txt = null;
-				try { chk = driver.findElement(chkXpath); } catch (NoSuchElementException nse) { System.out.println("CHK not found by xpath"); }
-				try { txt = driver.findElement(txtXpath); } catch (NoSuchElementException nse) { System.out.println("TXT not found by xpath"); }
-				if (chk != null) {
-					System.out.println("CHK.tagName=" + chk.getTagName());
-					System.out.println("CHK.text=" + chk.getText());
-					System.out.println("CHK.aria-checked=" + chk.getAttribute("aria-checked"));
-					System.out.println("CHK.class=" + chk.getAttribute("class"));
-					System.out.println("CHK.outerHTML=" + chk.getAttribute("outerHTML"));
-				}
-				if (txt != null) {
-					System.out.println("TXT.tagName=" + txt.getTagName());
-					System.out.println("TXT.value=" + txt.getAttribute("value"));
-					System.out.println("TXT.class=" + txt.getAttribute("class"));
-					System.out.println("TXT.outerHTML=" + txt.getAttribute("outerHTML"));
-				}
-			} catch (Exception ex) {
-				System.out.println("ERROR while gathering diagnostics: " + ex.getMessage());
-			}
-			// Re-throw to mark test as failed after logging
-			throw e;
-		}
+			
 	}
 }

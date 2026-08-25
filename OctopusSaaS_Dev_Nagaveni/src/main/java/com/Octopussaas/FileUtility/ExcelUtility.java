@@ -13,10 +13,15 @@ public class ExcelUtility {
 	{
 		FileInputStream fis= new FileInputStream("./Test data/read.xlsx");
 		Workbook wb = WorkbookFactory.create(fis);
-		String data = wb.getSheet(sheetName).getRow(rowNum).getCell(cellNum).getStringCellValue();
+		org.apache.poi.ss.usermodel.Sheet sheet = wb.getSheet(sheetName);
+		String data = "";
+		if (sheet != null && sheet.getRow(rowNum) != null && sheet.getRow(rowNum).getCell(cellNum) != null) {
+			data = sheet.getRow(rowNum).getCell(cellNum).toString().trim();
+		} else {
+			System.err.println("Warning: Data not found in Excel at Sheet: " + sheetName + ", Row: " + rowNum + ", Cell: " + cellNum);
+		}
 		wb.close();
 		return data;
-		
 	}
 	  public int GetRowcount(String SheetName) throws EncryptedDocumentException, IOException
 	  {
