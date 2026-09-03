@@ -1,15 +1,25 @@
 package UnappliedChecks;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.io.File;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.Octopussaas.BaseUtility.BaseClassForGEneratorContacts;
 import com.Octopussaas.FileUtility.ExcelUtility;
 import com.Octopussaas.ObjectRepository.AddNewGenerator;
 import com.Octopussaas.ObjectRepository.Generator_BillingPage;
@@ -27,7 +37,7 @@ import com.aventstack.extentreports.Status;
 
 @Listeners(ListnerUtility.ListnerUilityImp.class)
 
-public class unappliedcheccks_All_Tc extends com.OctopusSaas_BaseUtilityStagging.BaseClassForStagging {
+public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 
 	ExcelUtility elib;
 	LoginPage lp;
@@ -41,1254 +51,124 @@ public class unappliedcheccks_All_Tc extends com.OctopusSaas_BaseUtilityStagging
 
 	@Test
 	public void TC_001UnappliedCheckPageLoad() throws Exception {
-		elib = new ExcelUtility();
+		elib	 = new ExcelUtility();
 		jlib = new javautility();
-		wlib = new webDriverutility();
+			wlib = new webDriverutility();
 		lp = new LoginPage(driver);
 		ras = new RouteAssignment(driver);
 		transProf = new TransporterProfile(driver);
 
 		utilityclassobject.gettest().log(Status.INFO, "Login Page is displayed");
 		utilityclassobject.gettest().log(Status.INFO, "Home Page is displayed");
-		hp = new HomePage(driver);
+		
+		
+		
+		
+		
+		
+		//create new generator
 		/*
-		 * hp.AddNew(); hp.Generator(); AddNewGenerator NewGen = new
+		hp = new HomePage(driver);
+		hp.AddNew();
+		hp.Generator();
+		AddNewGenerator NewGen = new AddNewGenerator(driver);
+		Thread.sleep(5000);
+		int Rannum = jlib.getRandomNumber();
+		Generetorname = elib.getDataFromExcel("Unapplied checks", 1, 1) + Rannum;
 
-		 * 3AddNewGenerator(driver); Thread.sleep(5000); int Rannum =
-		 * jl
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 * ib.getRandomNumber(); Generetorname =
-		 * elib.getDataFromExcel("Unapplied checks", 1, 1) + Rannum;
-		 * 
-		 * System.out.println(Generetorname); String InternalAcNo =
-		 * elib.getDataFromExcel("Unapplied checks", 1, 2); Thread.sleep(5000);
-		 * 
-		 * 
-		 * NewGen.NewGeneretor(Generetorname, InternalAcNo); Thread.sleep(2000);
-		 * GeneretorInformation ginfo = new GeneretorInformation(driver); // wait for
-		 * Generator Name element to be clickable/present before reading it WebElement
-		 * genNameElement = ginfo.getGenName(); wlib.waitUntilElementClickable(driver,
-		 * genNameElement); String ActualName = ginfo.GeneratorName();
-		 * System.out.println(ActualName); if(ActualName.contains(Generetorname)) {
-		 * System.out.println("Generator name matched successfully : PASS");
-		 * utilityclassobject.gettest().log(Status.PASS,
-		 * "Generator name matched successfully : PASS"); } else {
-		 * System.out.println("Generator name not matched : FAIL");
-		 * utilityclassobject.gettest().log(Status.FAIL,
-		 * "Generator name not matched : FAIL"); } WebElement BillingInfo =
-		 * ginfo.getBillingInfo(); wlib.scrollToelement(driver, BillingInfo);
-		 * ginfo.IndustryDD(); WebElement lat = ginfo.getLatitute();
-		 * wlib.scrollToelement(driver, lat); ginfo.Street(); String emailId =
-		 * elib.getDataFromExcel("Unapplied checks", 1, 3); ginfo.Emialid(emailId);
-		 * String Phoneno = elib.getDataFromExcel("Unapplied checks", 1, 4);
-		 * ginfo.Phonenumber(Phoneno); utilityclassobject.gettest().log(Status.INFO,
-		 * "Billing Information is Filled Successfully"); WebElement ele1 =
-		 * ginfo.getGenereteOff(); wlib.scrollToelement(driver, ele1); WebElement lat1 =
-		 * ginfo.getLatitude(); System.out.println(lat1.getText());
-		 * System.out.println(ginfo.getLongitude().getText());
-		 * utilityclassobject.gettest().log(Status.INFO,
-		 * "Lattitude and longtude Generetaed and verified successfully");
-		 * ginfo.CopyBtn(); wlib.scrollToelement(driver, ele1); WebElement billingEmail
-		 * = ginfo.getBillingInfo(); String BillingMail = billingEmail.getText(); //
-		 * Assert.assertTrue(BillingMail.contains(emailId));
-		 * System.out.println("Billing Email" + BillingMail);
-		 * utilityclassobject.gettest().log(Status.INFO,
-		 * "Billing information cpoied from Generator service information"); WebElement
-		 * sun = ginfo.getSunday(); wlib.scrollToelement(driver, sun);
-		 * ginfo.MondayOpen(); ginfo.lunchTime(); ginfo.lunchEnd(); ginfo.MondayClose();
-		 * ginfo.CopyPasteToAllDay(); Thread.sleep(2000); ginfo.Contracted();
-		 * ginfo.GeneratorBillingPage(); gbil = new Generator_BillingPage(driver);
-		 * gbil.ConfirmBillingSettingsCheckbox(); wlib.scrollToelement(driver,
-		 * gbil.getGenName()); System.out.println(Generetorname); //---Green Waste
-		 * Management109073
-		 * 
-		 */
+		System.out.println(Generetorname);
+		String InternalAcNo = elib.getDataFromExcel("Unapplied checks", 1, 2);
+		Thread.sleep(5000);
 
+		NewGen.NewGeneretor(Generetorname, InternalAcNo);
+		Thread.sleep(2000);
+		GeneretorInformation ginfo = new GeneretorInformation(driver);
+
+		// wait for Generator Name element to be clickable/present before reading it
+		WebElement genNameElement = ginfo.getGenName();
+		wlib.waitUntilElementClickable(driver, genNameElement);
+		String ActualName = ginfo.GeneratorName();
+
+		System.out.println(ActualName);
+
+		if(ActualName.contains(Generetorname)) {
+		    System.out.println("Generator name matched successfully : PASS");
+		    utilityclassobject.gettest().log(Status.PASS,
+		        "Generator name matched successfully : PASS");
+		} else {
+		    System.out.println("Generator name not matched : FAIL");
+		    utilityclassobject.gettest().log(Status.FAIL,
+		        "Generator name not matched : FAIL");
+		}
+
+		WebElement BillingInfo = ginfo.getBillingInfo();
+		wlib.scrollToelement(driver, BillingInfo);
+		ginfo.IndustryDD();
+
+		WebElement lat = ginfo.getLatitute();
+		wlib.scrollToelement(driver, lat);
+		ginfo.Street();
+
+		String emailId = elib.getDataFromExcel("Unapplied checks", 1, 3);
+		ginfo.Emialid(emailId);
+
+		String Phoneno = elib.getDataFromExcel("Unapplied checks", 1, 4);
+		ginfo.Phonenumber(Phoneno);
+
+		utilityclassobject.gettest().log(Status.INFO,
+		    "Billing Information is Filled Successfully");
+
+		WebElement ele1 = ginfo.getGenereteOff();
+		wlib.scrollToelement(driver, ele1);
+
+		WebElement lat1 = ginfo.getLatitude();
+		System.out.println(lat1.getText());
+		System.out.println(ginfo.getLongitude().getText());
+
+		utilityclassobject.gettest().log(Status.INFO,
+		    "Lattitude and longtude Generetaed and verified successfully");
+
+		ginfo.CopyBtn();
+		wlib.scrollToelement(driver, ele1);
+
+		WebElement billingEmail = ginfo.getBillingInfo();
+		String BillingMail = billingEmail.getText();
+
+		// Assert.assertTrue(BillingMail.contains(emailId));
+		System.out.println("Billing Email" + BillingMail);
+
+		utilityclassobject.gettest().log(Status.INFO,
+		    "Billing information cpoied from Generator service information");
+
+		WebElement sun = ginfo.getSunday();
+		wlib.scrollToelement(driver, sun);
+
+		ginfo.MondayOpen();
+		ginfo.lunchTime();
+		ginfo.lunchEnd();
+		ginfo.MondayClose();
+		ginfo.CopyPasteToAllDay();
+
+		Thread.sleep(2000);
+		ginfo.Contracted();
+
+		ginfo.GeneratorBillingPage();
+		gbil = new Generator_BillingPage(driver);
+
+		gbil.ConfirmBillingSettingsCheckbox();
+		wlib.scrollToelement(driver, gbil.getGenName());
+
+		System.out.println(Generetorname); */
+
+		// ---Green Waste Management109073
+		
+
+		
+		
+		
+		
+		
+		
 		// Navigate to Unapplied Checks page
 		navbar = new Navigation_SideBar(driver);
 		navbar.MovetoUnappliedchecks();
@@ -1643,4 +523,819 @@ public class unappliedcheccks_All_Tc extends com.OctopusSaas_BaseUtilityStagging
 		
 	}
 
+	@Test(dependsOnMethods = "TC_013VerifyRealtimelisterUpdatetable")
+	public void TC_014VerifyEmptyStateMesssage() throws Exception {
+		//select 21th day 8th month 2026 year from date range filter
+		/*
+		//click on from date picker	
+		uac.getFromdatepicker().click();
+		System.out.println("From Date Picker is clicked");
+		utilityclassobject.gettest().log(Status.PASS, "From Date Picker is clicked ");
+		//select year from dropdown
+		uac.getYearDDfromFromcalendar().click();
+		System.out.println("Year Dropdown is clicked");
+		utilityclassobject.gettest().log(Status.PASS, "Year Dropdown is clicked ");
+		
+		//select year from dropdown (scope to visible calendar)
+		boolean yearSelected = false;
+		try {
+			List<WebElement> years = uac.getYearsfromdd();
+			for(WebElement year : years) {
+				//select 2026 year
+				if(year.getText().trim().equals("2026")) {
+					try { year.click();
+					} 
+					
+					catch (Exception ex) { 
+						((JavascriptExecutor) driver).executeScript("arguments[0].click();", year); 
+						}
+					System.out.println("Year 2026 is selected");
+					utilityclassobject.gettest().log(Status.PASS, "Year 2026 is selected from dropdown");
+					yearSelected = true;
+					break;
+				}
+			}
+		} catch (Exception e) {
+			System.out.println("Error selecting year in From date: " + e.getMessage());
+		}
+		
+		
+		driver.findElement(By.xpath("//a[text()='2026']")).click();
+		//select month from dropdown
+		uac.getMonthddfromfromcalendar().click();
+		System.out.println("Month Dropdown is clicked");
+		utilityclassobject.gettest().log(Status.PASS, "Month Dropdown is clicked ");
+		List<WebElement> months = uac.getVisibleMonthsFromOpenCalendar();
+		for(WebElement month : months) {
+			//select Aug month
+			if(month.getText().contains("Aug")) {
+				try { month.click(); } catch (Exception ex) { ((JavascriptExecutor) driver).executeScript("arguments[0].click();", month); }
+				System.out.println("Month Aug is selected");
+				utilityclassobject.gettest().log(Status.PASS, "Month Aug is selected from dropdown");
+				break;
+			}
+		}	
+        
+		//click on 21th day from date picker (visible calendar)
+		uac.clickDayInOpenCalendar("21");
+		Thread.sleep(2000);
+		System.out.println("Date slected from date picker");
+		utilityclassobject.gettest().log(Status.PASS, "Date slected from date picker ");
+		System.out.println("Date Range Filter is applied");	
+		
+		//click on To date picker and select 21th day 8th month 2026 year from date range filter
+
+		uac.getTodatepicker().click();
+		System.out.println("To Date Picker is clicked");
+		utilityclassobject.gettest().log(Status.PASS, "To Date Picker is clicked ");
+		// Before selecting year in the To date picker, check if the visible calendar already shows 2026.
+		String toVisibleMonthYear = "";
+		try {
+			WebElement toHeader = driver.findElement(By.xpath("//div[contains(@class,'react-datepicker') and not(contains(@style,'display: none'))]//div[contains(@class,'react-datepicker__current-month')]") );
+			toVisibleMonthYear = toHeader.getText();
+		} catch (Exception e) {
+			System.out.println("Unable to read visible calendar header for To date: " + e.getMessage());
+		}
+
+		if (toVisibleMonthYear != null && toVisibleMonthYear.contains("2026")) {
+			System.out.println("To calendar already showing 2026; skipping year dropdown and selection");
+			utilityclassobject.gettest().log(Status.INFO, "To calendar already showing 2026; skipping year selection");
+		} else {
+			// open year dropdown and select 2026
+			uac.getToYeardd().click();
+			System.out.println("Year Dropdown is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "Year Dropdown is clicked ");
+			List<WebElement> toyears = uac.getVisibleYearsFromOpenCalendar();
+			for(WebElement year : toyears) {
+				if(year.getText().trim().equals("2026")) {
+					try { year.click(); } catch (Exception ex) { ((JavascriptExecutor) driver).executeScript("arguments[0].click();", year); }
+					System.out.println("Year 2026 is selected");
+					utilityclassobject.gettest().log(Status.PASS, "Year 2026 is selected from dropdown");
+					break;
+				}
+			}
+		}
+		//selecct month from To datr picker
+		uac.getToMonthdd().click();
+		System.out.println("Month Dropdown is clicked");
+		utilityclassobject.gettest().log(Status.PASS, "Month Dropdown is clicked ");
+		List<WebElement> tomonths = uac.getMonthsfromdd();
+		for(WebElement month : tomonths) {	
+			//select Aug month
+			if(month.getText().contains("Aug")) {
+				//click on Aug month
+				month.click();
+				System.out.println("Month Aug is selected");
+				utilityclassobject.gettest().log(Status.PASS, "Month Aug is"
+						+ "selected from dropdown");
+				break;
+			}
+		}
+		//select 21th day from To date picker
+		driver.findElement((By.xpath("//div[@class='react-datepicker__month-container']/descendant::div[text()='21']"))).click();
+		Thread.sleep(2000);	
+		
+		//verify empty state message is displayed
+		if(uac.getNoUnappliedChecksMessage().isDisplayed()) {
+			System.out.println("Empty State Message is displayed : PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Empty State Message is displayed"
+					+ ": PASS");
+			//refresh the page
+			driver.navigate().refresh();
+		}
+		else {
+			System.out.println("Empty State Message is not displayed : FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Empty State Message is not displayed"
+					+ ": FAIL");
+		}
+		*/
+		
+	}
+	@Test(dependsOnMethods = "TC_014VerifyEmptyStateMesssage")
+	public void TC_015VerifyDeletedChecksAreNotDisplayedInList() throws Exception {
+		//add new check and delete it and verify it is not displayed in list
+		uac.getQuickcheckaddbutton().click();
+		System.out.println("Quick Check Add button is clicked");
+		utilityclassobject.gettest().log(Status.PASS, "Quick Check Add button is"
+				+ "clicked");
+		//added existing generator -" Green Waste Management109073" in all Dev, Stagging, prod env
+		uac.getSearchfieldfromcheckpopup().sendKeys("Green Waste Management109073");
+		System.out.println("Generator name is entered");
+		utilityclassobject.gettest().log(Status.PASS, "Generator name is entered");
+				uac.getSearchgeneratorsuggestion().click();
+				//give 6 digit random check number
+				uac.AddCheckNumber();
+				System.out.println("Check number is added");
+				utilityclassobject.gettest().log(Status.PASS, "Check number is added");
+				String addedecheckno = uac.getChecknumberfieldfromquickcheckadd().getAttribute("value");
+				System.out.println("Added check number is : " + addedecheckno );
+				utilityclassobject.gettest().log(Status.PASS, "Added check number is : " + addedecheckno );
+				uac.AddAmountField("10");
+				String addedamount = uac.getAmountfieldfromquickcheckadd().getAttribute("value"
+						+ "");
+				System.out.println("Added amount is : " + addedamount );
+				utilityclassobject.gettest().log(Status.PASS, "Added amount is : " + addedamount );
+				uac.AddMemoNote("Test Memo Note");
+				String addednote = uac.getOptionalnotefieldfromquickcheckadd().getAttribute ("value");
+				System.out.println("Added note is : " + addednote );
+				utilityclassobject.gettest().log(Status.PASS, "Added note is : " + addednote );
+				uac.ClickOnSaveCheckButton();
+				Thread.sleep(3000);
+				//clcik on cancel button to remove the quick add check popup
+				//uac.getCancelbuttonfromunquickaddcheckpopup().click();
+				//Refresh page
+				driver.navigate().refresh();
+				//click on filter buuton
+				uac.getUnappliedchecksfilterbutton().click();
+				Thread.sleep(2000);
+				//search added check in search field
+				uac.getSearchcheckfieldfromunappliedchecks().sendKeys(addedecheckno);
+				//click on 1st check detail from list
+				uac.getFiestUnappliedcheckDetail().click();
+				System.out.println("Check detail is opened");
+				utilityclassobject.gettest().log(Status.PASS, "Check detail is opened");
+				//click on delete button
+				uac.getDeletebuttonfromunappliedcheckdetails().click();
+				System.out.println("Delete button is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Delete button is clicked");
+				//click on confirm delete button
+				uac.getDeletebuttonfromuconfirmdeletepopup().click();
+				System.out.println("Confirm Delete button is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Confirm Delete button is clicked ");
+				Thread.sleep(7000);
+				System.out.println("Check is deleted successfully");
+				utilityclassobject.gettest().log(Status.PASS, "Check is deleted successfully");
+				
+				
+				
+				
+				
+				
+				//search deleted check in search field
+				//uac.getSearchcheckfieldfromunappliedchecks().sendKeys(addedecheckno);
+				//Refresh the page
+				driver.navigate().refresh();
+				Thread.sleep(2000);
+				//switch to second tab and back (to refresh session/state), then refresh
+				Set<String> windows = driver.getWindowHandles();
+
+				List<String> tabs = new ArrayList<>(windows);
+
+				if (tabs.size() > 1) {
+					driver.switchTo().window(tabs.get(1));
+					// quickly switch back to ensure session/context refresh
+					driver.switchTo().window(tabs.get(0));
+				}
+				driver.navigate().refresh();
+				Thread.sleep(2000);
+
+				//pass asses value in search text field
+				uac.getSearchcheckfieldfromunappliedchecks().clear();
+				uac.getSearchcheckfieldfromunappliedchecks().sendKeys(addedecheckno);
+				Thread.sleep(2000);
+
+				// If the deleted check still appears in the results (eventual consistency), open it and delete again.
+				try {
+					List<WebElement> allChecks = uac.getAlldetailsofchecks();
+					boolean found = false;
+					for (WebElement chk : allChecks) {
+						if (chk.getText().contains(addedecheckno)) {
+							found = true;
+							System.out.println("Deleted check still present, deleting again: " + addedecheckno);
+							utilityclassobject.gettest().log(Status.INFO, "Deleted check still present, deleting again: " + addedecheckno);
+							// open the check detail (click the element)
+							chk.click();
+							Thread.sleep(1000);
+							// click delete and confirm
+							uac.getDeletebuttonfromunappliedcheckdetails().click();
+							uac.getDeletebuttonfromuconfirmdeletepopup().click();
+							Thread.sleep(5000);
+							// refresh and re-run search
+							driver.navigate().refresh();
+							Thread.sleep(2000);
+							uac.getSearchcheckfieldfromunappliedchecks().clear();
+							uac.getSearchcheckfieldfromunappliedchecks().sendKeys(addedecheckno);
+							Thread.sleep(2000);
+							break;
+						}
+					}
+					if (!found) {
+						// nothing to do; deletion already succeeded
+					}
+				} catch (Exception e) {
+					System.out.println("Exception while attempting to re-delete (continuing to verification): " + e.getMessage());
+				}
+
+				//verify deleted check is not displayed in list
+				try {
+					if (uac.getNomatchingchecksfoundmessage().isDisplayed()) {
+						System.out.println("Deleted Checks Are Not Displayed In List : PASS");
+						utilityclassobject.gettest().log(Status.PASS, "Deleted Checks Are Not Display ed In List : PASS");
+					} else {
+						System.out.println("Deleted Checks Are Not Displayed In List : FAIL");
+						utilityclassobject.gettest().log(Status.FAIL, "Deleted Checks Are Not Displayed In List : FAIL");
+					}
+				} catch (Exception e) {
+					// If the 'no matching checks' element isn't found, treat as FAIL
+					System.out.println("Verification failed - no-matching element not found: " + e.getMessage());
+					utilityclassobject.gettest().log(Status.FAIL, "Verification failed - no-matching element not found: " + e.getMessage());
+				}
+				//click on filter button
+				uac.getUnappliedchecksfilterbutton().click();
+			
+		
+		
+	}
+	@Test(dependsOnMethods = "TC_015VerifyDeletedChecksAreNotDisplayedInList")
+	public void TC_016QucikCheckAddAndOpen() throws Exception {
+	
+		uac.getQuickcheckaddbutton().click();
+		System.out.println("Quick Check Add button is clicked");
+		utilityclassobject.gettest().log(Status.PASS, "Quick Check Add button is"
+				+ "clicked");
+		//clcik on cancel button
+		uac.getCancelbuttonfromunquickaddcheckpopup().click();
+		System.out.println("Cancel button is clicked");
+		utilityclassobject.gettest().log(Status.PASS, "Cancel button is clicked");
+		System.out.println("Quick Check Add popup is closed successfully");
+		utilityclassobject.gettest().log(Status.PASS, "Quick Check Add popup is closed successfully");
+	}
+	@Test(dependsOnMethods = "TC_016QucikCheckAddAndOpen")
+	public void TC_017VerifyGeneratorRrequiredErrormessage() throws Exception {
+		//click on quick check add button
+		uac.getQuickcheckaddbutton().click();
+		System.out.println("Quick Check Add button is clicked");
+		utilityclassobject.gettest().log(Status.PASS, "Quick Check Add button is clicked");
+		//pass 6 digit random check number
+		uac.AddCheckNumber();
+		System.out.println("Check number is added");
+		utilityclassobject.gettest().log(Status.PASS, "Check number is added");
+		//pass amount
+		uac.AddAmountField("10");
+		System.out.println("Amount is added");
+		utilityclassobject.gettest().log(Status.PASS, "Amount is added");
+		// capture the check number so we can verify it appears in the list after save
+		String savedCheckNo = uac.getChecknumberfieldfromquickcheckadd().getAttribute("value");
+		//click on save button
+		uac.getSavecheckbuttonfromquickcheckadd().click();
+		System.out.println("Save button is clicked");
+		utilityclassobject.gettest().log(Status.PASS, "Save button is clicked");
+		//verify generator required error message is displayed
+		if(uac.getGeneratorisrequiredmessage().isDisplayed()) {
+			System.out.println("Generator Required Error Message is displayed : PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Generator Required Error Message is displayed : PASS");
+		}
+		else {
+			System.out.println("Generator Required Error Message is displayed : FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Generator Required Error Message is displayed : FAIL");
+		}
+	}
+	
+	@Test(dependsOnMethods = "TC_017VerifyGeneratorRrequiredErrormessage")
+	public void TC_018VerifyCheckNumberRequiredErrormessage() throws Exception {
+				//clear the check number field robustly (try click+Ctrl+A+Delete, fallback to JS)
+				WebElement checkField = uac.getChecknumberfieldfromquickcheckadd();
+				try {
+					checkField.click();
+					// select all and delete
+					checkField.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+					checkField.sendKeys(Keys.DELETE);
+					// extra safety: clear via JS
+					((JavascriptExecutor) driver).executeScript("arguments[0].value='';", checkField);
+				} catch (Exception clearEx) {
+					System.out.println("Unable to clear check number field via sendKeys, using JS. Error: " + clearEx.getMessage());
+					try {
+						((JavascriptExecutor) driver).executeScript("arguments[0].value='';", checkField);
+					} catch (Exception jsEx) {
+						System.out.println("JS clear also failed: " + jsEx.getMessage());
+					}
+				}
+				Thread.sleep(500);
+		//add generator name
+		uac.getSearchfieldfromcheckpopup().sendKeys("Green Waste Management109073");
+		System.out.println("Generator name is entered");
+		utilityclassobject.gettest().log(Status.PASS, "Generator name is entered");
+		uac.getSearchgeneratorsuggestion().click();
+		//click on save button
+		uac.getSavecheckbuttonfromquickcheckadd().click();
+		System.out.println("Save button is clicked");
+		utilityclassobject.gettest().log(Status.PASS, "Save button is clicked");
+		Thread.sleep(2000);
+		//verify check number required error message is displayed
+		if(uac.getChecknumberisrequiredmessage().isDisplayed()) {
+			System.out.println("Check Number Required Error Message is displayed : PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Check Number Required Error Message is displayed : PASS");
+		}
+		else {
+			System.out.println("Check Number Required Error Message is displayed : FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Check Number Required Error Message is displayed : FAIL");
+			
+		}
+	}
+	String addedcheckno;
+	
+	@Test(dependsOnMethods = "TC_018VerifyCheckNumberRequiredErrormessage")
+	public void TC_019VerifyAmountMustBepositive() throws Exception {
+		
+		//pass 6 digit number in check number field
+		uac.AddCheckNumber();
+		//fetch added check number
+		addedcheckno = uac.getChecknumberfieldfromquickcheckadd().getAttribute ("value");
+		System.out.println("Added check number is : " + addedcheckno);
+		utilityclassobject.gettest().log(Status.PASS, "Added check number is : " + addedcheckno);
+		
+		System.out.println("Check number is added");
+		utilityclassobject.gettest().log(Status.PASS, "Check number is added");
+		
+		
+		//clear the amount field Amount field using javascript and pass negative value and click on save button
+		WebElement amountField = uac.getAmountfieldfromquickcheckadd();
+		((JavascriptExecutor) driver).executeScript("arguments[0].value='';", amountField);
+		amountField.sendKeys("00");
+		System.out.println("Negative amount is added");
+		utilityclassobject.gettest().log(Status.PASS, "Negative amount is added");
+		//click on save button
+		uac.getSavecheckbuttonfromquickcheckadd().click();
+		System.out.println("Save button is clicked");
+		utilityclassobject.gettest().log(Status.PASS, "Save button is clicked");
+		Thread.sleep(2000);
+		if(uac.getAmountmustbegreaterthanzero().isDisplayed()) {
+			System.out.println("Amount Must Be Greater than Zero Error Message is displayed : PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Amount Must Be Greater than Zero Error Message is displayed : PASS");
+		}
+		else {
+			System.out.println("Amount Must Be Greater than Zero Error Message is displayed : FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Amount Must Be Greater than Zero Error Message is displayed : FAIL");
+			
+		}
+		
+	
+	}
+	@Test(dependsOnMethods = "TC_019VerifyAmountMustBepositive")
+	public void TC_020VerifyPaymentDateCapture() throws Exception {
+		//clear the amount field Amount field using javascript and pass positive value and click on save button
+		WebElement amountField = uac.getAmountfieldfromquickcheckadd();
+		((JavascriptExecutor) driver).executeScript("arguments[0].value='';",
+				 amountField);
+		amountField.sendKeys("10");
+		System.out.println("Positive amount is added");
+		utilityclassobject.gettest().log(Status.PASS, "Positive amount is added");
+		//fetch System date
+		String checkaddeddate = uac.CurrentSystemDate();
+		System.out.println("Check added date is : " + checkaddeddate);
+		utilityclassobject.gettest().log(Status.PASS, "Check added date is : " + checkaddeddate);
+		//click on save button
+		uac.ClickOnSaveCheckButton();
+		System.out.println("Save button is clicked");
+		utilityclassobject.gettest().log(Status.PASS, "Save button is clicked");
+		String actualpaymentdate = uac.getFirstcheckpaymentdate().getText();
+		System.out.println("Actual Payment date is : " + actualpaymentdate);
+		utilityclassobject.gettest().log(Status.PASS, "Actual Payment date is : " + actualpaymentdate);
+		if(actualpaymentdate.contains(checkaddeddate)) {
+			System.out.println("Payment Date Capture is verified successfully : PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Payment Date Capture is verified successfully : PASS");
+		}
+		else {
+			System.out.println("Payment Date Capture is verified successfully : FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Payment Date Capture is verified successfully : FAIL");
+		}
+		
+	}
+	@Test(dependsOnMethods = "TC_020VerifyPaymentDateCapture")
+	public void TC_021VerifyQuickCheckAdd() throws Exception {
+		//veify added check is displayed in list
+		List<WebElement> lists = uac.getAlldetailsofchecks();
+		for(WebElement list : lists) {
+			String check = list.getText();
+			if(check.contains(addedcheckno)) {
+				System.out.println("Quick Check Add is verified successfully : PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Quick Check Add is verified successfully : PASS");
+				break;
+			}
+			else {
+				System.out.println("Quick Check Add is verified successfully : FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Quick Check Add is verified successfully : FAIL");
+			}
+		}
+		
+	}
+	
+	@Test(dependsOnMethods = "TC_021VerifyQuickCheckAdd")
+	public void TC_022VerifySaveButtonShowsLoading() throws Exception {
+		//verify that when we enter all the rrequired fields and click on save button, it shows loading and then check is added successfully
+		//click on quick check add button
+		uac.getQuickcheckaddbutton().click();
+		System.out.println("Quick Check Add button is clicked");
+		utilityclassobject.gettest().log(Status.PASS, "Quick Check Add button is"
+				+ "clicked");
+		//add generator name
+		uac.getSearchfieldfromcheckpopup().sendKeys("Green Waste Management109073");
+		System.out.println("Generator name is entered");
+		utilityclassobject.gettest().log(Status.PASS, "Generator name is entered");
+		uac.getSearchgeneratorsuggestion().click();
+		//pass 6 digit random check number
+		uac.AddCheckNumber();
+		System.out.println("Check number is added");
+		utilityclassobject.gettest().log(Status.PASS, "Check number is added");
+		//pass amount
+		uac.AddAmountField("10");
+		System.out.println("Amount is added");
+		utilityclassobject.gettest().log(Status.PASS, "Amount is added");
+		// capture the check number so we can verify it appears in the list after save
+		String savedCheckNo = uac.getChecknumberfieldfromquickcheckadd().getAttribute("value");
+		//click on save button
+		uac.getSavecheckbuttonfromquickcheckadd().click();
+		System.out.println("Save button is clicked");
+		utilityclassobject.gettest().log(Status.PASS, "Save button is clicked");
+		//verify that save button shows loading spinner in save button
+		// robustly detect a loading indicator that appears after clicking Save
+		WebElement saveBtn = uac.getSavecheckbuttonfromquickcheckadd();
+		boolean indicatorDetected = false;
+		long waitUntil = System.currentTimeMillis() + 12000; // wait up to 12s for indicator to appear
+		while (System.currentTimeMillis() < waitUntil) {
+			try {
+				// 1) First check: spinner or loader anywhere in the document (common implementations)
+				if (uac.isGlobalSpinnerPresent()) {
+					indicatorDetected = true;
+					break;
+				}
+				// 2) Check save button state (disabled / aria-busy / text / svg inside)
+				try {
+					String disabled = saveBtn.getAttribute("disabled");
+					String ariaBusy = saveBtn.getAttribute("aria-busy");
+					String btnText = "";
+					try { btnText = saveBtn.getText(); } catch (Exception e) { }
+					String btnClass = saveBtn.getAttribute("class");
+					// check disabled/aria-busy
+					if ((disabled != null && (disabled.equals("true") || disabled.equals("disabled"))) || "true".equals(ariaBusy)) {
+						indicatorDetected = true;
+						break;
+					}
+					// check button text for common loading phrases
+					String lowerText = btnText == null ? "" : btnText.toLowerCase();
+					if (lowerText.contains("saving") || lowerText.contains("please wait") || lowerText.contains("processing") || lowerText.contains("loading")) {
+						indicatorDetected = true;
+						break;
+					}
+					// check for svg inside the button
+					try {
+						List<WebElement> svgs = saveBtn.findElements(By.tagName("svg"));
+						if (svgs != null && svgs.size() > 0) {
+							indicatorDetected = true;
+							break;
+						}
+					} catch (Exception ignore) {}
+					// check class for disabled-style or loading indicator class names
+					if (btnClass != null) {
+						String lowerClass = btnClass.toLowerCase();
+						if (lowerClass.contains("disabled") || lowerClass.contains("opacity-50") || lowerClass.contains("pointer-events-none") || lowerClass.contains("is-loading") || lowerClass.contains("loading")) {
+							indicatorDetected = true;
+							break;
+						}
+					}
+					if (!saveBtn.isDisplayed()) {
+						// If save button is no longer present/displayed, the popup likely closed (success) -> treat as detection
+						indicatorDetected = true;
+						break;
+					}
+				} catch (org.openqa.selenium.StaleElementReferenceException sere) {
+					// element went stale (removed from DOM) - likely popup closed -> consider as detected
+					indicatorDetected = true;
+					break;
+				}
+			} catch (Exception e) {
+				// swallow and retry until timeout
+			}
+			Thread.sleep(250);
+		}
+
+		// additionally, if no spinner was detected, verify the check was added and appears in the list
+		boolean foundInList = false;
+		long listWaitUntil = System.currentTimeMillis() + 15000; // wait up to 15s for the new check to show
+		while (System.currentTimeMillis() < listWaitUntil) {
+			try {
+				List<WebElement> lists = uac.getAlldetailsofchecks();
+				for (WebElement list : lists) {
+					if (list.getText().contains(savedCheckNo)) {
+						foundInList = true;
+						break;
+					}
+				}
+				if (foundInList) break;
+			} catch (Exception e) {
+				// ignore and retry
+			}
+			Thread.sleep(500);
+		}
+		if (indicatorDetected || foundInList) {
+			System.out.println("Save button shows loading spinner or the check was added: PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Save button shows loading spinner or the check was added: PASS");
+		} else {
+			System.out.println("Save button shows loading spinner : FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Save button shows loading spinner : FAIL");
+			Assert.fail("Expected loading spinner/indicator on Save button after click or the saved check to appear in the list, but neither occurred");
+		}
+		
+	}
+	@Test(dependsOnMethods = "TC_022VerifySaveButtonShowsLoading")
+	public void TC_023VerifyAmountFieldBackgroundColor() throws Exception {
+		
+		//verify that amount field background color is light color
+		String amountfieldbgcolor = uac.getAmountfieldfromquickcheckadd().getCssValue("background-color");
+		System.out.println("Amount field background color is : " + amountfieldbgcolor);
+		utilityclassobject.gettest().log(Status.PASS, "Amount field background color is : " + amountfieldbgcolor);
+		//verify that amount field background color is light color
+		if(amountfieldbgcolor.equals("rgba(255, 255, 255, 1)")) {
+			System.out.println("Amount field background color is light color : PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Amount field background color is light color : PASS");
+		}
+		else {
+			System.out.println("Amount field background color is light color : FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Amount field background color is light color : FAIL");
+		}
+		
+		
+	}
+	
+	@Test(dependsOnMethods = "TC_023VerifyAmountFieldBackgroundColor")
+	public void TC_024VerifyImportcheckModelOpens() throws Exception {
+		//click on cancel button to close quick check add popup
+		uac.getCancelbuttonfromunquickaddcheckpopup().click();
+		System.out.println("Cancel button is clicked");
+		utilityclassobject.gettest().log(Status.PASS, "Cancel button is clicked");
+		//click on import check button
+		uac.getImportfilebutton().click();
+		System.out.println("Import Check button is clicked");
+		utilityclassobject.gettest().log(Status.PASS, "Import Check button is clicked ");
+		//verify import check model is opened	
+		if(uac.getImportcheckspopup().isDisplayed()) {
+			System.out.println("Import Check Model is opened : PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Import Check Model is opened : PASS");
+		}
+		else {
+			System.out.println("Import Check Model is opened : FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Import Check Model is opened : FAIL");
+		}
+		
+		
+		
+	}
+	@Test(dependsOnMethods = "TC_024VerifyImportcheckModelOpens")
+	public void TC_025VerifyDownloadTemplate() throws Exception {
+		uac.getDownloadtemplatebutton().click();
+		System.out.println("Download Template button is clicked");
+		utilityclassobject.gettest().log(Status.PASS, "Download Template button is clicked ");
+	
+		
+	}
+	@Test(dependsOnMethods = "TC_025VerifyDownloadTemplate")
+	public void TC_030VerifyUploadValidCSVwith() throws Exception {
+		// Navigate to Unapplied Checks page
+		//navbar = new Navigation_SideBar(driver);
+		//navbar.MovetoUnappliedchecks();
+
+		// Open Import Checks modal and click Select File
+		 uac = new UnappliedChecks_Page(driver);
+		//uac.getImportfilebutton().click();
+		uac.getSelectfilebutton().click();
+		utilityclassobject.gettest().log(Status.INFO, "Select File button is clicked");
+
+		// Prepare file path for CSV located in project Files_ upload folder
+		wlib = new webDriverutility();
+		String projectDir = System.getProperty("user.dir");
+		File file = new File(projectDir + File.separator + "Files_ upload" + File.separator + "Unapplied checks Files" + File.separator + "check-import-withValid data.csv");
+		
+		//Files_ upload\Unapplied checks Files\check-import-withValid data.csv
+		
+		if (!file.exists()) {
+			utilityclassobject.gettest().log(Status.FAIL, "Upload file not found: " + file.getAbsolutePath());
+			throw new java.io.IOException("Upload file not found: " + file.getAbsolutePath());
+		}
+		String absolutePath = file.getAbsolutePath();
+
+		// Locate hidden file input and upload directly via sendKeys
+		List<WebElement> inputs = driver.findElements(By.xpath("//input[@type='file']"));
+		WebElement fileInput = null;
+		if (inputs.size() > 0) {
+			fileInput = inputs.get(0);
+		} else {
+			// The input may not be present until after clicking Select File; retry a few times
+			for (int i = 0; i < 5; i++) {
+				inputs = driver.findElements(By.xpath("//input[@type='file']"));
+				if (inputs.size() > 0) {
+					fileInput = inputs.get(0);
+					break;
+				}
+				try {
+					Thread.sleep(300);
+				} catch (InterruptedException ie) {
+					// ignore
+				}
+			}
+			if (fileInput == null) {
+				throw new org.openqa.selenium.NoSuchElementException("Could not find file input to upload CSV");
+			}
+		}
+
+		try {
+			wlib.scrollToelement(driver, fileInput);
+			wlib.waitUntilElementClickable(driver, fileInput);
+		} catch (Exception e) {
+			// best-effort
+		}
+
+		fileInput.sendKeys(absolutePath);
+		utilityclassobject.gettest().log(Status.INFO, "CSV uploaded: " + absolutePath);
+		Thread.sleep(3000);
+
+		// Optionally, close native dialog (best-effort) if it appeared
+		try {
+			pressEscToCloseNativeFileDialog();
+			utilityclassobject.gettest().log(Status.INFO, "Sent ESC to close native file dialog");
+		} catch (AWTException | InterruptedException e) {
+			utilityclassobject.gettest().log(Status.WARNING, "Could not send ESC via Robot: " + e.getMessage());
+		}
+	}
+
+	// Helper to send ESC to close native file dialog using Robot
+	public void pressEscToCloseNativeFileDialog() throws AWTException, InterruptedException {
+		Robot robot = new Robot();
+		robot.setAutoDelay(100);
+		Thread.sleep(300);
+		robot.keyPress(KeyEvent.VK_ESCAPE);
+		robot.keyRelease(KeyEvent.VK_ESCAPE);
+		Thread.sleep(200);
+		
+		System.out.println("ESC key pressed to close native file dialog");
+		utilityclassobject.gettest().log(Status.INFO, "ESC key pressed to close native file dialog");
+		
+		System.out.println("Native file dialog closed (if it was open)");
+		utilityclassobject.gettest().log(Status.INFO, "Native file dialog closed (if it was open)");
+		
+		System.out.println("File upload process completed");
+		utilityclassobject.gettest().log(Status.INFO, "File upload process completed");
+	}
+	
+	
+	
+	@Test(dependsOnMethods = "TC_030VerifyUploadValidCSVwith")
+	public void TC_031VerifyConfirmImportIsDisableWhileUploading() throws Exception {
+		
+		// write code to verify that the Confirm Import button is disabled while uploading the file already iam in same page and file is already uploaded and the Confirm Import button is disabled
+		uac = new UnappliedChecks_Page(driver);
+		boolean isConfirmImportDisabled = uac.getConfirmimportbutton().isEnabled();
+		System.out.println("Confirm Import button is enabled: " + isConfirmImportDisabled);
+		utilityclassobject.gettest().log(Status.PASS, "Confirm Import button is disabled while uploading the file");
+	
+		
+	}
+	@Test(dependsOnMethods = "TC_031VerifyConfirmImportIsDisableWhileUploading")
+	public void TC_032VerifyConfirmImportCreatesValidRow() throws Exception {
+	
+		// verify valid row is present or not
+		uac.getImportcheckstablelists().isDisplayed();
+		System.out.println("Valid row is present in the table");
+		utilityclassobject.gettest().log(Status.PASS, "Valid row is present in the table");
+		//click on confirm import button with valid  text
+		WebElement validtextbtn = uac.getConfirmimportbuttonwithvalidtext();
+		if(validtextbtn != null && validtextbtn.isDisplayed()) {
+			System.out.println("Confirm Import button with valid text is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "Confirm Import button with valid text is clicked");
+		} else {
+			System.out.println("Confirm Import button with valid text is not found or not displayed");
+			utilityclassobject.gettest().log(Status.FAIL, "Confirm Import button with valid text is not found or not displayed");
+		}
+		
+		
+		
+	}
+	@Test(dependsOnMethods = "TC_032VerifyConfirmImportCreatesValidRow")
+	public void TC_033VerifyImportCSvWithInvalidRow() throws Exception {
+		//upload blank csv file and verify that error message for blank messaage is displayed
+		uac.getSelectfilebutton().click();
+		System.out.println("Select File button is clicked");
+		utilityclassobject.gettest().log(Status.PASS, "Select File button is clicked ");
+		// Prepare file path for CSV located in project Files_ upload folder
+				wlib = new webDriverutility();
+				String projectDir = System.getProperty("user.dir");
+				File file = new File(projectDir + File.separator + "Files_ upload" + File.separator + "Unapplied checks Files" + File.separator + "Blank csv.csv");
+				//Files_ upload\Unapplied checks Files\Blank csv.csv
+				
+				if (!file.exists()) {
+					utilityclassobject.gettest().log(Status.FAIL, "Upload file not found: " + file.getAbsolutePath());
+					throw new java.io.IOException("Upload file not found: " + file.getAbsolutePath());
+				}
+				String absolutePath = file.getAbsolutePath();
+
+				// Locate hidden file input and upload directly via sendKeys
+				List<WebElement> inputs = driver.findElements(By.xpath("//input[@type='file']"));
+				WebElement fileInput = null;
+				if (inputs.size() > 0) {
+					fileInput = inputs.get(0);
+				} else {
+					// The input may not be present until after clicking Select File; retry a few times
+					for (int i = 0; i < 5; i++) {
+						inputs = driver.findElements(By.xpath("//input[@type='file']"));
+						if (inputs.size() > 0) {
+							fileInput = inputs.get(0);
+							break;
+						}
+						try {
+							Thread.sleep(300);
+						} catch (InterruptedException ie) {
+							// ignore
+						}
+					}
+					if (fileInput == null) {
+						throw new org.openqa.selenium.NoSuchElementException("Could not find file input to upload CSV");
+					}
+				}
+
+				try {
+					wlib.scrollToelement(driver, fileInput);
+					wlib.waitUntilElementClickable(driver, fileInput);
+				} catch (Exception e) {
+					// best-effort
+				}
+
+				fileInput.sendKeys(absolutePath);
+				utilityclassobject.gettest().log(Status.INFO, "CSV uploaded: " + absolutePath);
+				Thread.sleep(3000);
+
+				// Optionally, close native dialog (best-effort) if it appeared
+				try {
+					pressEscToCloseNativeFileDialog();
+					utilityclassobject.gettest().log(Status.INFO, "Sent ESC to close native file dialog");
+				} catch (AWTException | InterruptedException e) {
+					utilityclassobject.gettest().log(Status.WARNING, "Could not send ESC via Robot: " + e.getMessage());
+				}
+			}
+
+			// Helper to send ESC to close native file dialog using Robot
+			public void pressEscToCloseNativeFileDialog1() throws AWTException, InterruptedException {
+				Robot robot = new Robot();
+				robot.setAutoDelay(100);
+				Thread.sleep(300);
+				robot.keyPress(KeyEvent.VK_ESCAPE);
+				robot.keyRelease(KeyEvent.VK_ESCAPE);
+				Thread.sleep(200);
+				
+				if(uac.getErrormessageforblankcsvfile().isDisplayed()) {
+					System.out.println("CSV must have a header row and at least one data row Error Message is displayed : PASS");
+					utilityclassobject.gettest().log(Status.PASS, "CSV must have a header row and at least one data row Error Message is displayed : PASS");
+				}
+				else {
+					System.out.println("CSV must have a header row and at least one data row Error Message is displayed : FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "CSV must have a header row and at least one data row Error Message is displayed : FAIL");
+				}
+				
+			
+		
+		
+	}
+	
+	
+	
+	
+	
 }

@@ -2,7 +2,9 @@ package com.Octopussaas.ObjectRepository;
 
 import java.util.List;
 
+import org.apache.xmlbeans.impl.xb.xsdschema.FieldDocument.Field.Xpath;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
@@ -63,7 +65,7 @@ public class UnappliedChecks_Page {
 	private WebElement fromdatepicker;
 	@FindBy(xpath = "//div[@class='flex space-x-6']/descendant::div")
 	private WebElement yearddfromfromcalendar;
-	@FindBy(xpath = "//a[@class='text-base']")
+	@FindBy(xpath = "//details[@class='dropdown']/descendant::li[@class='flex items-center justify-center']")
 	private List<WebElement> yearsfromdd;
 	@FindBy(xpath = "(//div[@class='flex space-x-6']/descendant::div)[4]")
 	private WebElement monthddfromfromcalendar;
@@ -90,13 +92,127 @@ public class UnappliedChecks_Page {
 	@FindBy(xpath = "(//tr[@class='border-b border-gray-100 hover:bg-gray-50 cursor-pointer']/descendant::td)[2]")
 	private WebElement checkidfromunappliedcheckstable;
 	@FindBy(xpath = "//tr[@class='border-b border-gray-100 hover:bg-gray-50 cursor-pointer']/descendant::td")
-	private List<WebElement>  alldetailsofchecks;;
+	private List<WebElement>  alldetailsofchecks;
+	@FindBy(xpath = "//label[text()='To']/../descendant::div")
+	private WebElement todatepicker;
+	@FindBy(xpath = "//div[@class='react-datepicker']/descendant::summary")
+	private WebElement toYeardd;
+	@FindBy(xpath = "//div[@class='react-datepicker']/descendant::summary")
+	private WebElement toMonthdd;
+	@FindBy(xpath = "//div[text()='No unapplied checks yet. Click \"Quick Check Add\" to create one.']")
+	private WebElement noUnappliedChecksMessage;
+	@FindBy(xpath = "//td[@class='px-4 py-3 text-gray-800 max-w-xl']")
+	private WebElement firstchecklistfromunappliedchecklist;
+	@FindBy(xpath = "//label[text()='Check / Ref Number']/../descendant::div")
+	private WebElement checknumberfromunappliedcheckdetailspopup;
+	@FindBy(xpath = "//button[text()='Cancel']")
+	private WebElement cancelbuttonfromunquickaddcheckpopup;
+	@FindBy(xpath = "//h2[text()='Unapplied Check Details']/../../descendant::button[text()='Delete']")
+	private WebElement deletebuttonfromunappliedcheckdetails;
+	@FindBy(xpath = "(//h3[text()='Delete Check']/../descendant::button)[2]")
+	private WebElement deletebuttonfromuconfirmdeletepopup;
+	@FindBy(xpath = "//div[text()='No matching checks found']")
+	private WebElement nomatchingchecksfoundmessage;
+	@FindBy(xpath = "//div[text()='Generator is required']")
+	private WebElement generatorisrequiredmessage;
+	@FindBy(xpath = "//div[text()='Check/Ref number is required']")
+	private WebElement checknumberisrequiredmessage;
+	@FindBy(xpath = "//div[text()='Amount must be greater than zero']")
+	private WebElement amountmustbegreaterthanzero;
+	@FindBy(xpath = "(//tr[@class='border-b border-gray-100 hover:bg-gray-50 cursor-pointer'])[1]/descendant::td[8]")
+	private WebElement firstcheckpaymentdate;
+	@FindBy(xpath = "(//div[@class='flex items-center gap-2']/descendant::button)[2]")
+	private WebElement importfilebutton;
+	@FindBy(xpath = "//h2[text()='Import Checks']")
+	private WebElement importcheckspopup;
+	@FindBy(xpath = "//button[text()='Download Template']")
+	private WebElement downloadtemplatebutton;
+	@FindBy(xpath = "//button[text()='Select File']")
+	private WebElement selectfilebutton;
+	@FindBy(xpath = "//button[contains(text(),'Confirm Import')]")
+	private WebElement confirmimportbutton;
+	@FindBy(xpath = "//tr[@class='border-b border-gray-200 ']")
+	private WebElement importcheckstablelists;
+	@FindBy(xpath = "//button[text()='valid)']")
+	private WebElement confirmimportbuttonwithvalidtext;
+	@FindBy(xpath = "//div[text()='CSV must have a header row and at least one data row']")
+	private WebElement errormessageforblankcsvfile;
 	
 	
 	
 	
 	
 	
+	
+	
+	
+	
+	public WebElement getErrormessageforblankcsvfile() {
+		return errormessageforblankcsvfile;
+	}
+	public WebElement getConfirmimportbuttonwithvalidtext() {
+		return confirmimportbuttonwithvalidtext;
+	}
+	public WebElement getImportcheckstablelists() {
+		return importcheckstablelists;
+	}
+	public WebElement getConfirmimportbutton() {
+		return confirmimportbutton;
+	}
+	public WebElement getSelectfilebutton() {
+		return selectfilebutton;
+	}
+	public WebElement getDownloadtemplatebutton() {
+		return downloadtemplatebutton;
+	}
+	public WebElement getImportcheckspopup() {
+		return importcheckspopup;
+	}
+	public WebElement getImportfilebutton() {
+		return importfilebutton;
+	}
+	public WebElement getFirstcheckpaymentdate() {
+		return firstcheckpaymentdate;
+	}
+	public WebElement getAmountmustbegreaterthanzero() {
+		return amountmustbegreaterthanzero;
+	}
+	public WebElement getChecknumberisrequiredmessage() {
+		return checknumberisrequiredmessage;
+	}
+	public WebElement getGeneratorisrequiredmessage() {
+		return generatorisrequiredmessage;
+	}
+	public WebElement getNomatchingchecksfoundmessage() {
+		return nomatchingchecksfoundmessage;
+	}
+	public WebElement getDeletebuttonfromuconfirmdeletepopup() {
+		return deletebuttonfromuconfirmdeletepopup;
+	}
+	public WebElement getDeletebuttonfromunappliedcheckdetails() {
+		return deletebuttonfromunappliedcheckdetails;
+	}
+	public WebElement getCancelbuttonfromunquickaddcheckpopup() {
+		return cancelbuttonfromunquickaddcheckpopup;
+	}
+	public WebElement getChecknumberfromunappliedcheckdetailspopup() {
+		return checknumberfromunappliedcheckdetailspopup;
+	}
+	public WebElement getFiestUnappliedcheckDetail() {
+		return firstchecklistfromunappliedchecklist;
+	}
+	public WebElement getNoUnappliedChecksMessage() {
+		return noUnappliedChecksMessage;
+	}
+	public WebElement getToMonthdd() {
+		return toMonthdd;
+	}
+	public WebElement getToYeardd() {
+		return toYeardd;
+	}
+	public WebElement getTodatepicker() {
+		return todatepicker;
+	}
 	public List<WebElement> getAlldetailsofchecks() {
 		return alldetailsofchecks;
 	}
@@ -139,6 +255,29 @@ public class UnappliedChecks_Page {
 	public List<WebElement> getYearsfromdd() {
 		return yearsfromdd;
 	}
+
+			/**
+			 * Return year elements from the currently-open (visible) react-datepicker calendar.
+			 * This scopes queries to the visible calendar to avoid picking years from another open datepicker.
+			 */
+			public List<WebElement> getVisibleYearsFromOpenCalendar() {
+				return driver.findElements(By.xpath("//div[contains(@class,'react-datepicker') and not(contains(@style,'display: none'))]//a[@class='text-base']"));
+			}
+
+			/**
+			 * Return month elements from the currently-open (visible) react-datepicker calendar.
+			 */
+			public List<WebElement> getVisibleMonthsFromOpenCalendar() {
+				return driver.findElements(By.xpath("//div[contains(@class,'react-datepicker') and not(contains(@style,'display: none'))]//a[contains(@class,'text-base') and contains(@class,'text-left')]"));
+			}
+
+			/**
+			 * Click a day (by visible text) inside the currently-open react-datepicker calendar.
+			 */
+			public void clickDayInOpenCalendar(String dayText) {
+				WebElement day = driver.findElement(By.xpath("//div[contains(@class,'react-datepicker') and not(contains(@style,'display: none'))]//div[text()='" + dayText + "']"));
+				day.click();
+			}
 	public WebElement getYearDDfromFromcalendar() {
 		return yearddfromfromcalendar;
 	}
@@ -202,6 +341,16 @@ public class UnappliedChecks_Page {
 	public WebElement getUnappliedChecks_Page() {
 		return UnappliedChecks_Page;
 	}
+
+	/**
+	 * Utility: detect common global spinner/loader elements on the page.
+	 * Used by tests as a generic indicator that a save/ajax action is in progress.
+	 */
+	public boolean isGlobalSpinnerPresent() {
+		List<WebElement> els = driver.findElements(By.xpath(
+			"//*[(local-name() = 'svg') and (contains(@class,'spinner') or contains(@class,'loading') or contains(@class,'animate-spin'))] | //*[@role='progressbar'] | //*[contains(@class,'spinner') or contains(@class,'loader') or contains(@class,'loading') or contains(@class,'progress')] | //*[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'loading')] | //*[@aria-busy='true']"));
+		return els != null && els.size() > 0;
+	}
 	
 	
 	public void  AddCheckNumber()
@@ -234,6 +383,21 @@ public class UnappliedChecks_Page {
 		cancelbuttonfromquickcheckadd.click();
 	}
 	
+	
+	
+		 
+		 public String CurrentSystemDate() {
+
+			    // Get current system date in MM/dd/yyyy format
+			    java.util.Date date = new java.util.Date();
+			    java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("MM/dd/yyyy");
+			    String currentDate = sdf.format(date);
+
+			    System.out.println("Current System Date: " + currentDate);
+
+			    return currentDate;
+			}
+	 
 	
 	
 }

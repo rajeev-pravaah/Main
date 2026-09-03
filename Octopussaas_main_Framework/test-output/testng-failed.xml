@@ -5,23 +5,38 @@
     <classes>
       <class name="UnappliedChecks.unappliedcheccks_All_Tc">
         <methods>
-          <include name="TC_001UnappliedCheckPageLoad"/>
-          <include name="Bm"/>
-          <include name="TC_008VerifyDateRangeFilter"/>
-          <include name="Am"/>
-          <include name="TC_007VerifyStatusFilter"/>
-          <include name="Bc"/>
-          <include name="TC_009VerifyClearFilterResetDefaultvalues"/>
-          <include name="TC_002UnappliedCheckPageSideBar_Menu"/>
-          <include name="TC_010VerifyTableColumLists"/>
-          <include name="TC_012VerifySummaryFootertotalMatchRows"/>
-          <include name="TC_003VerifytheDefaultDateRange"/>
-          <include name="TC_011VerifySingleclickAndDoubleClick"/>
-          <include name="TC_004SearchUnappliedCheckRequires5Char"/>
           <include name="Ac"/>
+          <include name="TC_016QucikCheckAddAndOpen"/>
+          <include name="TC_008VerifyDateRangeFilter"/>
+          <include name="TC_031VerifyConfirmImportIsDisableWhileUploading"/>
+          <include name="TC_007VerifyStatusFilter"/>
+          <include name="TC_015VerifyDeletedChecksAreNotDisplayedInList"/>
+          <include name="TC_010VerifyTableColumLists"/>
+          <include name="TC_020VerifyPaymentDateCapture"/>
+          <include name="Am"/>
+          <include name="TC_012VerifySummaryFootertotalMatchRows"/>
+          <include name="TC_030VerifyUploadValidCSVwith"/>
           <include name="TC_005VerifySearchUnappliedCheckWithMorethan5digits"/>
           <include name="TC_006VerifySearchHighlightedMatchingField"/>
           <include name="TC_013VerifyRealtimelisterUpdatetable"/>
+          <include name="TC_021VerifyQuickCheckAdd"/>
+          <include name="TC_019VerifyAmountMustBepositive"/>
+          <include name="TC_001UnappliedCheckPageLoad"/>
+          <include name="TC_023VerifyAmountFieldBackgroundColor"/>
+          <include name="Bc"/>
+          <include name="TC_017VerifyGeneratorRrequiredErrormessage"/>
+          <include name="TC_024VerifyImportcheckModelOpens"/>
+          <include name="TC_018VerifyCheckNumberRequiredErrormessage"/>
+          <include name="Bm"/>
+          <include name="TC_014VerifyEmptyStateMesssage"/>
+          <include name="TC_009VerifyClearFilterResetDefaultvalues"/>
+          <include name="TC_002UnappliedCheckPageSideBar_Menu"/>
+          <include name="TC_032VerifyConfirmImportCreatesValidRow"/>
+          <include name="TC_022VerifySaveButtonShowsLoading"/>
+          <include name="TC_025VerifyDownloadTemplate"/>
+          <include name="TC_003VerifytheDefaultDateRange"/>
+          <include name="TC_011VerifySingleclickAndDoubleClick"/>
+          <include name="TC_004SearchUnappliedCheckRequires5Char"/>
         </methods>
       </class> <!-- UnappliedChecks.unappliedcheccks_All_Tc -->
     </classes>
