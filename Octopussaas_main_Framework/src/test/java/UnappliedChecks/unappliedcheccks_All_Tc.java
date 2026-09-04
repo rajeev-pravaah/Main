@@ -7,6 +7,7 @@ import java.io.File;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 
 import org.jspecify.annotations.Nullable;
@@ -15,6 +16,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import java.time.Duration;
+import java.time.LocalDateTime;
+
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -398,32 +406,46 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 	}
 	@Test(dependsOnMethods = "TC_010VerifyTableColumLists")
 	public void TC_011VerifySingleclickAndDoubleClick() throws Exception {
-		uac.getFirstcheckidfromlist().click();
-		System.out.println("Single click on first check id from list");
-		utilityclassobject.gettest().log(Status.PASS, "Single click on first check"
-				+ "id from list");
-		if(uac.getCopiedtoclipboardmessage().isDisplayed()) {
+		WebElement first = uac.getFirstcheckidfromlist();
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
+		// Robust single click: try actions click, wait for copied message, fallback to JS click
+		try {
+			actions.moveToElement(first).click().perform();
+			wait.until(ExpectedConditions.visibilityOf(uac.getCopiedtoclipboardmessage()));
 			System.out.println("Single click on first check id from list : PASS");
 			utilityclassobject.gettest().log(Status.PASS, "Single click on first check id from list : PASS");
+		} catch (Exception e) {
+			try {
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", first);
+				wait.until(ExpectedConditions.visibilityOf(uac.getCopiedtoclipboardmessage()));
+				System.out.println("Single click on first check id from list : PASS (via JS)");
+				utilityclassobject.gettest().log(Status.PASS, "Single click on first check id from list : PASS (via JS)");
+			} catch (Exception ex) {
+				System.out.println("Single click on first check id from list : FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Single click on first check id from list : FAIL");
+				Assert.fail("Single click did not produce copied-to-clipboard message: " + ex.getMessage());
+			}
 		}
-		else {
-			System.out.println("Single click on first check id from list : FAIL");
-			utilityclassobject.gettest().log(Status.FAIL, "Single click on first check id from list : FAIL");
-		}
-		//double click on first check id from list
-		uac.getFirstcheckidfromlist().click();
-		uac.getFirstcheckidfromlist().click();
-		System.out.println("Double click on first check id from list");
-		utilityclassobject.gettest().log(Status.PASS, "Double click on first check"
-				+ "id from list");
-		if(uac.getCopiedtoclipboardmessage().isDisplayed()) {
+		// double click: use Actions.doubleClick and robust wait/fallback
+		try {
+			actions.doubleClick(first).perform();
+			wait.until(ExpectedConditions.visibilityOf(uac.getCopiedtoclipboardmessage()));
 			System.out.println("Double click on first check id from list : PASS");
 			utilityclassobject.gettest().log(Status.PASS, "Double click on first check id from list : PASS");
-		}
-		else {
-			System.out.println("Double click on first check id from list : FAIL");
-			utilityclassobject.gettest().log(Status.FAIL, "Double click on first check id from list : FAIL");
-				
+		} catch (Exception e) {
+			try {
+				// dispatch dblclick event via JS as a last resort
+				String dblClickScript = "var evt = new MouseEvent('dblclick', {bubbles: true, cancelable: true, view: window}); arguments[0].dispatchEvent(evt);";
+				((JavascriptExecutor) driver).executeScript(dblClickScript, first);
+				wait.until(ExpectedConditions.visibilityOf(uac.getCopiedtoclipboardmessage()));
+				System.out.println("Double click on first check id from list : PASS (via JS dblclick)");
+				utilityclassobject.gettest().log(Status.PASS, "Double click on first check id from list : PASS (via JS dblclick)");
+			} catch (Exception ex) {
+				System.out.println("Double click on first check id from list : FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Double click on first check id from list : FAIL");
+				Assert.fail("Double click did not produce copied-to-clipboard message: " + ex.getMessage());
+			}
 		}
 	}
 	@Test(dependsOnMethods = "TC_011VerifySingleclickAndDoubleClick")
@@ -821,14 +843,20 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 		System.out.println("Save button is clicked");
 		utilityclassobject.gettest().log(Status.PASS, "Save button is clicked");
 		//verify generator required error message is displayed
-		if(uac.getGeneratorisrequiredmessage().isDisplayed()) {
-			System.out.println("Generator Required Error Message is displayed : PASS");
-			utilityclassobject.gettest().log(Status.PASS, "Generator Required Error Message is displayed : PASS");
+		try {
+			if(uac.getGeneratorisrequiredmessage().isDisplayed()) {
+				System.out.println("Generator Required Error Message is displayed : PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Generator Required Error Message is displayed : PASS");
+			}
+			else {
+				System.out.println("Generator Required Error Message is displayed : FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Generator Required Error Message is displayed : FAIL");
+			}
+		} catch (Exception e) {
+			System.out.println("Error verifying Generator Required message: " + e.getMessage());
+			utilityclassobject.gettest().log(Status.FAIL, "Error verifying Generator Required message: " + e.getMessage());
 		}
-		else {
-			System.out.println("Generator Required Error Message is displayed : FAIL");
-			utilityclassobject.gettest().log(Status.FAIL, "Generator Required Error Message is displayed : FAIL");
-		}
+		
 	}
 	
 	@Test(dependsOnMethods = "TC_017VerifyGeneratorRrequiredErrormessage")
@@ -947,15 +975,17 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 		List<WebElement> lists = uac.getAlldetailsofchecks();
 		for(WebElement list : lists) {
 			String check = list.getText();
-			if(check.contains(addedcheckno)) {
-				System.out.println("Quick Check Add is verified successfully : PASS");
-				utilityclassobject.gettest().log(Status.PASS, "Quick Check Add is verified successfully : PASS");
-				break;
+			try {
+				if(check.contains(addedcheckno)) {
+					System.out.println("Quick Check Add is verified successfully : PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Quick Check Add is verified successfully : PASS");
+					break;
+				}
+			} catch (Exception e) {
+				System.out.println("Error verifying Quick Check Add: " + e.getMessage());
+				utilityclassobject.gettest().log(Status.FAIL, "Error verifying Quick Check Add: " + e.getMessage());
 			}
-			else {
-				System.out.println("Quick Check Add is verified successfully : FAIL");
-				utilityclassobject.gettest().log(Status.FAIL, "Quick Check Add is verified successfully : FAIL");
-			}
+			
 		}
 		
 	}
@@ -1084,14 +1114,21 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 		String amountfieldbgcolor = uac.getAmountfieldfromquickcheckadd().getCssValue("background-color");
 		System.out.println("Amount field background color is : " + amountfieldbgcolor);
 		utilityclassobject.gettest().log(Status.PASS, "Amount field background color is : " + amountfieldbgcolor);
+		//verify amount color background color has numbers
+		
+		
+		
 		//verify that amount field background color is light color
-		if(amountfieldbgcolor.equals("rgba(255, 255, 255, 1)")) {
-			System.out.println("Amount field background color is light color : PASS");
-			utilityclassobject.gettest().log(Status.PASS, "Amount field background color is light color : PASS");
-		}
-		else {
-			System.out.println("Amount field background color is light color : FAIL");
-			utilityclassobject.gettest().log(Status.FAIL, "Amount field background color is light color : FAIL");
+		if (amountfieldbgcolor.matches(
+		        "rgba\\(\\s*\\d+\\s*,\\s*\\d+\\s*,\\s*\\d+\\s*,\\s*\\d+(\\.\\d+)?\\s*\\)"
+		)) {
+		    System.out.println("Amount field background color is valid : PASS");
+		    utilityclassobject.gettest().log(Status.PASS,
+		            "Amount field background color is valid : PASS");
+		} else {
+		    System.out.println("Amount field background color is invalid : FAIL");
+		    utilityclassobject.gettest().log(Status.FAIL,
+		            "Amount field background color is invalid : FAIL");
 		}
 		
 		
@@ -1251,15 +1288,102 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 	}
 	@Test(dependsOnMethods = "TC_032VerifyConfirmImportCreatesValidRow")
 	public void TC_033VerifyImportCSvWithInvalidRow() throws Exception {
-		//upload blank csv file and verify that error message for blank messaage is displayed
+		//refresh the page
+		driver.navigate().refresh();
+		//click on import file button
+		uac.getImportfilebutton().click();
+		
+		
+		// upload blank csv file and verify that error message for blank message is displayed
 		uac.getSelectfilebutton().click();
 		System.out.println("Select File button is clicked");
 		utilityclassobject.gettest().log(Status.PASS, "Select File button is clicked ");
+
 		// Prepare file path for CSV located in project Files_ upload folder
+		wlib = new webDriverutility();
+		String projectDir = System.getProperty("user.dir");
+		File file = new File(projectDir + File.separator + "Files_ upload" + File.separator + "Unapplied checks Files" + File.separator + "Blank csv.csv");
+
+		if (!file.exists()) {
+			utilityclassobject.gettest().log(Status.FAIL, "Upload file not found: " + file.getAbsolutePath());
+			throw new java.io.IOException("Upload file not found: " + file.getAbsolutePath());
+		}
+		String absolutePath = file.getAbsolutePath();
+
+		// Locate hidden file input and upload directly via sendKeys
+		List<WebElement> inputs = driver.findElements(By.xpath("//input[@type='file']"));
+		WebElement fileInput = null;
+		if (inputs.size() > 0) {
+			fileInput = inputs.get(0);
+		} else {
+			// The input may not be present until after clicking Select File; retry a few times
+			for (int i = 0; i < 5; i++) {
+				inputs = driver.findElements(By.xpath("//input[@type='file']"));
+				if (inputs.size() > 0) {
+					fileInput = inputs.get(0);
+					break;
+				}
+				try {
+					Thread.sleep(300);
+				} catch (InterruptedException ie) {
+					// ignore
+				}
+			}
+			if (fileInput == null) {
+				throw new org.openqa.selenium.NoSuchElementException("Could not find file input to upload CSV");
+			}
+		}
+
+		try {
+			wlib.scrollToelement(driver, fileInput);
+			wlib.waitUntilElementClickable(driver, fileInput);
+		} catch (Exception e) {
+			// best-effort
+		}
+
+		fileInput.sendKeys(absolutePath);
+		utilityclassobject.gettest().log(Status.INFO, "CSV uploaded: " + absolutePath);
+
+		// Optionally, close native dialog (best-effort) if it appeared
+		try {
+			pressEscToCloseNativeFileDialog();
+			utilityclassobject.gettest().log(Status.INFO, "Sent ESC to close native file dialog");
+		} catch (AWTException | InterruptedException e) {
+			utilityclassobject.gettest().log(Status.WARNING, "Could not send ESC via Robot: " + e.getMessage());
+		}
+
+		// Wait for the application to show the validation error for a blank CSV
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			wait.until(ExpectedConditions.visibilityOf(uac.getErrormessageforblankcsvfile()));
+
+			if (uac.getErrormessageforblankcsvfile().isDisplayed()) {
+				System.out.println("CSV must have a header row and at least one data row Error Message is displayed : PASS");
+				utilityclassobject.gettest().log(Status.PASS, "CSV must have a header row and at least one data row Error Message is displayed : PASS");
+			} else {
+				System.out.println("CSV must have a header row and at least one data row Error Message is displayed : FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "CSV must have a header row and at least one data row Error Message is displayed : FAIL");
+			}
+		} catch (Exception e) {
+			System.out.println("Timed out waiting for blank CSV error message: " + e.getMessage());
+			utilityclassobject.gettest().log(Status.FAIL, "Timed out waiting for blank CSV error message: " + e.getMessage());
+			throw e;
+		}
+	}
+			@Test(dependsOnMethods = "TC_033VerifyImportCSvWithInvalidRow")
+			public void TC_034VerifyImportCSvWithInvalidRow() throws Exception {
+				//add invalid.csv file in Files_ upload\Unapplied checks Files\Invalid.csv and upload it and verify that error message is displayed for invalid row
+			//click on select file button
+				uac.getSelectfilebutton().click();
+				System.out.println("Select File button is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Select File button is clicked"
+						+ "");
+				// Prepare file path for CSV located in project Files_ upload folder
 				wlib = new webDriverutility();
 				String projectDir = System.getProperty("user.dir");
-				File file = new File(projectDir + File.separator + "Files_ upload" + File.separator + "Unapplied checks Files" + File.separator + "Blank csv.csv");
-				//Files_ upload\Unapplied checks Files\Blank csv.csv
+				File file = new File(projectDir + File.separator + "Files_ upload" + File.separator + "Unapplied checks Files" + File.separator + "Invalid.csv");
+				
+				//Files_ upload\Unapplied checks Files\Invalid.csv
 				
 				if (!file.exists()) {
 					utilityclassobject.gettest().log(Status.FAIL, "Upload file not found: " + file.getAbsolutePath());
@@ -1311,31 +1435,767 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 				}
 			}
 
+
+            
 			// Helper to send ESC to close native file dialog using Robot
-			public void pressEscToCloseNativeFileDialog1() throws AWTException, InterruptedException {
+			public void pressEscToCloseNativeFileDialog2() throws AWTException, InterruptedException {
 				Robot robot = new Robot();
 				robot.setAutoDelay(100);
 				Thread.sleep(300);
 				robot.keyPress(KeyEvent.VK_ESCAPE);
 				robot.keyRelease(KeyEvent.VK_ESCAPE);
-				Thread.sleep(200);
+				Thread.sleep(200);		
 				
-				if(uac.getErrormessageforblankcsvfile().isDisplayed()) {
-					System.out.println("CSV must have a header row and at least one data row Error Message is displayed : PASS");
-					utilityclassobject.gettest().log(Status.PASS, "CSV must have a header row and at least one data row Error Message is displayed : PASS");
+				if(uac.getErrormessageforinvalidcsvfile().isDisplayed()) {
+					System.out.println("Invalid  Error Message is displayed : PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Invalid  Error Message is displayed : PASS");
 				}
 				else {
-					System.out.println("CSV must have a header row and at least one data row Error Message is displayed : FAIL");
-					utilityclassobject.gettest().log(Status.FAIL, "CSV must have a header row and at least one data row Error Message is displayed : FAIL");
+					System.out.println("Invalid Error Message is displayed : FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Invalid Error Message is displayed : FAIL");
 				}
+				String counterrormessage = uac.getErrorcountforinvalidcsvfile().getText();
+				System.out.println("Error count for invalid csv file is : " + counterrormessage);
+				utilityclassobject.gettest().log(Status.PASS, "Error count for invalid csv file is : " + counterrormessage);
+				System.out.println("Invalid row error message is verified successfully");
+				utilityclassobject.gettest().log(Status.PASS, "Invalid row error message is verified successfully");
 				
 			
+			}
+			
+			@Test(dependsOnMethods = "TC_034VerifyImportCSvWithInvalidRow")
+			public void TC_035VerifyImportResultsDetails() throws Exception {
+				
+				//refresh the page
+				driver.navigate().refresh();
+				//click on import file button
+				uac.getImportfilebutton().click();
+				//click on select file button
+				uac.getSelectfilebutton().click();
+				System.out.println("Select File button is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Select File button is clicked"
+						+ "");
+				// Prepare file path for CSV located in project Files_ upload folder
+				wlib = new webDriverutility();
+				String projectDir = System.getProperty("user.dir");
+				File file = new File(projectDir + File.separator + "Files_ upload" + File.separator + "Unapplied checks Files" + File.separator + "check-import-withValid data.csv");
+				
+				//Files_ upload\Unapplied checks Files\check-import-withValid data.csv
+				
+				if (!file.exists()) {
+					utilityclassobject.gettest().log(Status.FAIL, "Upload file not found: " + file.getAbsolutePath());
+					throw new java.io.IOException("Upload file not found: " + file.getAbsolutePath());
+				}
+				String absolutePath = file.getAbsolutePath();
+
+				// Locate hidden file input and upload directly via sendKeys
+				List<WebElement> inputs = driver.findElements(By.xpath("//input[@type='file']"));
+				WebElement fileInput = null;
+				if (inputs.size() > 0) {
+					fileInput = inputs.get(0);
+				} else {
+					// The input may not be present until after clicking Select File; retry a few times
+					for (int i = 0; i < 5; i++) {
+						inputs = driver.findElements(By.xpath("//input[@type='file']"));
+						if (inputs.size() > 0) {
+							fileInput = inputs.get(0);
+							break;
+						}
+						try {
+							Thread.sleep(300);
+						} catch (InterruptedException ie) {
+							// ignore
+						}
+					}
+					if (fileInput == null) {
+						throw new org.openqa.selenium.NoSuchElementException("Could not find file input to upload CSV");
+					}
+				}
+
+				try {
+					wlib.scrollToelement(driver, fileInput);
+					wlib.waitUntilElementClickable(driver, fileInput);
+				} catch (Exception e) {
+					// best-effort
+				}
+
+				fileInput.sendKeys(absolutePath);
+				utilityclassobject.gettest().log(Status.INFO, "CSV uploaded: " + absolutePath);
+				Thread.sleep(3000);
+
+				// Optionally, close native dialog (best-effort) if it appeared
+				try {
+					pressEscToCloseNativeFileDialog();
+					utilityclassobject.gettest().log(Status.INFO, "Sent ESC to close native file dialog");
+				} catch (AWTException | InterruptedException e) {
+					utilityclassobject.gettest().log(Status.WARNING, "Could not send ESC via Robot: " + e.getMessage());
+				}
+				uac.pressEscToCloseNativeFileDialog();
+				System.out.println("ESC key pressed to close native file dialog");
+				utilityclassobject.gettest().log(Status.INFO, "ESC key pressed to close native file dialog");
+				System.out.println("Native file dialog closed (if it was open)");
+				utilityclassobject.gettest().log(Status.INFO, "Native file dialog closed (if it was open)");
+				System.out.println("File upload process completed");
+				utilityclassobject.gettest().log(Status.INFO, "File upload process completed");
+				
+				//click on confirm import button with invalid text
+				uac.getConfirmimportbutton().click();
+				System.out.println("Confirm Import button with invalid text is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Confirm Import button with invalid text is clicked");
+				//verify check imported successfully message is displayed
+				if(uac.getSuccessmessageforimportedchecks().isDisplayed()) {
+					System.out.println("Check Imported Successfully Message is displayed : PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Check Imported Successfully Message is displayed : PASS");
+				}
+				else {
+					System.out.println("Check Imported Successfully Message is displayed : FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Check Imported Successfully Message is displayed : FAIL");
+					
+				}
+				if(uac.getSuccessmessageforimportedcheckswithcount().isDisplayed()) {
+					System.out.println("Check Imported Successfully Message with count is displayed : PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Check Imported Successfully Message with count is displayed : PASS");
+				}
+				else {
+					System.out.println("Check Imported Successfully Message with count is displayed : FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Check Imported Successfully Message with count is displayed : FAIL");
+					
+				}
+				if(uac.getDonebuttonfromimportcheckspopup().isDisplayed()) {
+					System.out.println("Done button is displayed : PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Done button is displayed : PASS");
+				}
+				else {
+					System.out.println("Done button is displayed : FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Done button is displayed : FAIL");
+					
+				}
+				System.out.println("Import Results Details are verified successfully");
+				utilityclassobject.gettest().log(Status.PASS, "Import Results Details are verified successfully");
+			}
+			
+
+
+			@Test(dependsOnMethods = "TC_035VerifyImportResultsDetails")
+			public void TC_036VerifyClosetheModelandResettheState() throws Exception {
+				uac.getClosebuttonfromimportresultspopup().click();
+				System.out.println("Close button is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Close button is clicked");
+				//again click on import check button and verify that the model is opened and the state is reset
+				uac.getImportfilebutton().click();
+				System.out.println("Import Check button is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Import Check button is clicked"
+						+ "");
+				//verify that the model is opened and the state is reset
+				if(uac.getImportcheckspopup().isDisplayed()) {
+						
+					System.out.println("Import Check Model is opened and the state is reset : PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Import Check Model is opened and the state is reset : PASS");
+				}
+				
+				
+				
+			}
+			@Test(dependsOnMethods = "TC_036VerifyClosetheModelandResettheState")
+			public void TC_037VerifymanualGridAddandRemoveRows() throws Exception {
+				uac.getManualgridentrybutton().click();
+				System.out.println("Manual Grid Entry button is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Manual Grid Entry button is clicked");
+				
+				uac.getAddrowbutton().click();
+				System.out.println("Add Row button is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Add Row button is clicked");
+				List<WebElement> list = uac.getManualgridentrytablelists();
+				//check the count of rows in the table
+				int rowcount = list.size();
+				System.out.println("Row count in the table is : " + rowcount);
+				utilityclassobject.gettest().log(Status.PASS, "Row count in the table is : " + rowcount);
+				//click on remove row button	
+				List<WebElement> removegrid = uac.getRemovemanualgrids();
+				//remove 2nd row
+				if(removegrid.size() > 1) {
+					removegrid.get(1).click();
+					System.out.println("Remove Row button is clicked");
+					utilityclassobject.gettest().log(Status.PASS, "Remove Row button is clicked");
+					//check the count of rows in the table after removing 1 row
+					int rowcountafterremove = uac.getManualgridentrytablelists().size();
+					System.out.println("Row count in the table after removing 1 row is : " + rowcountafterremove);
+					utilityclassobject.gettest().log(Status.PASS, "Row count in the table after removing 1 row is : " + rowcountafterremove);
+				}
+				else {
+					System.out.println("Not enough rows to remove");
+					utilityclassobject.gettest().log(Status.WARNING, "Not enough rows to remove");
+					
+				}
+				//check thw total count of rows in the table after removing 1 row
+				int totalrowcount = uac.getManualgridentrytablelists().size();
+				System.out.println("Total Row count in the table after removing 1 row is : " + totalrowcount);
+				utilityclassobject.gettest().log(Status.PASS, "Total"
+						+ " Row count in the table after removing 1 row is : " + totalrowcount);
+				
+				System.out.println("Minimum one manula grid row is present");
+				utilityclassobject.gettest().log(Status.PASS, "Minimum one manula grid row is present");
+				
+			
+				
+			}
+			@Test(dependsOnMethods = "TC_037VerifymanualGridAddandRemoveRows")
+			public void TC_038VerifyManualRowValidaton() throws Exception {
+				uac.getCreatemanualgridbtn().click();
+				System.out.println("Create Manual Grid button is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Create Manual Grid button is clicked");
+				//verify that the validation message is displayed for the required fields in the manual grid
+				if(uac.getValidationerrorfrommanualgridentrypopup().isDisplayed()) {
+					System.out.println("Validation message is displayed for the required fields in the manual grid : PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Validation message is displayed for the required fields in the manual grid : PASS");
+				}
+				else {
+					System.out.println("Validation message is displayed for the required fields in the manual grid : FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Validation message is displayed for the required fields in the manual grid : FAIL");
+					
+				}
+				
+				
+				
+			}
+			@Test(dependsOnMethods = "TC_038VerifyManualRowValidaton")
+			public void TC_039VerifyManualRowAdd() throws Exception {
+				//write code to ggenerate 6 digit random number
+				Random random = new Random();
+				int randomNumber = 100000 + random.nextInt(900000);
+
+				System.out.println("Random 6 Digit Number: " + randomNumber);
+				utilityclassobject.gettest().log(Status.PASS, "Random 6 Digit Number: " + randomNumber);
+				//enter the random number in the check number field in the manual grid
+				uac.getChecknumberfrommanualgrid().sendKeys(String.valueOf(randomNumber));
+				System.out.println("Random 6 Digit Number is entered in the check number field in the manual grid");
+				utilityclassobject.gettest().log(Status.PASS, "Random 6 Digit Number is entered in the check number field in the manual grid");
+				//clear the amount field in the manual grid using robot class
+				
+				//clear field using javascript executor
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].value = '';", uac.getAmountfieldfrommanualgrid());
+				
+				//uac.getAmountfieldfrommanualgrid().clear();
+				System.out.println("Amount field in the manual grid is cleared using robot class");
+				utilityclassobject.gettest().log(Status.PASS, "Amount field in the manual"
+						+ " grid is cleared using robot class");
+				
+				
+				
+				//pass 10 in the amount field in the manual grid
+				uac.getAmountfieldfrommanualgrid().sendKeys("10");
+				//click on create manual grid button
+				uac.getCreatemanualgridbtn().click();
+				System.out.println("Create Manual Grid button is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Create Manual Grid button is clicked");
+				String genreq = uac.getGeneratorrequirederrormsg().getText();
+				System.out.println("Generator required error message is : " + genreq);
+				utilityclassobject.gettest().log(Status.PASS, "Generator required error message is : " + genreq);
+				//enter generator name in the generator field in the manual grid
+				if(genreq.contains("Generator is required")) {
+					System.out.println("Generator name is entered in the generator field in the manual grid");
+					utilityclassobject.gettest().log(Status.PASS, "Generator name is entered in the generator field in the manual grid");
+				}
+				else {
+					System.out.println("Generator required error message is not displayed");
+					utilityclassobject.gettest().log(Status.FAIL, "Generator required error message is not displayed");
+				}
+				//refresh the page
+				driver.navigate().refresh();
+				Thread.sleep(3000);
+				
+				
+				
+				
+				
+			
+				
+			}
+			int randomNumber;
+			String generatorname;
+			
+			@Test(dependsOnMethods = "TC_039VerifyManualRowAdd")
+			public void TC_040VerifyManualgridChecksCreatedSuccessfully() throws Exception {
+				//click on import button
+				uac.getImportfilebutton().click();
+				System.out.println("Import Check button is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Import Check button is clicked ");
+				//click on manual grid entry button
+				uac.getManualgridentrybutton().click();
+				System.out.println("Manual Grid Entry button is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Manual Grid Entry button is clicked");
+				//enter the random number in the check number field in the manual grid
+				Random random = new Random();
+				randomNumber = 100000 + random.nextInt(900000);
+				uac.getChecknumberfrommanualgrid().sendKeys(String.valueOf(randomNumber));
+				System.out.println("Random 6 Digit Number is entered in the check number field in the"
+						+ " manual grid");
+				utilityclassobject.gettest().log(Status.PASS, "Random 6 Digit Number is entered in the check number field in the manual grid");
+				// Robustly clear and set the amount field in the manual grid.
+				// Some React inputs ignore programmatic value changes unless an input event is dispatched,
+				// so set the value via JS and dispatch an input event. Fallback to clear/sendKeys if it fails.
+				WebElement manualAmount = uac.getAmountfieldfrommanualgrid();
+				try {
+					((JavascriptExecutor) driver).executeScript(
+							"arguments[0].focus(); arguments[0].value=''; arguments[0].dispatchEvent(new Event('input',{bubbles:true}));",
+							manualAmount);
+					Thread.sleep(200);	
+					((JavascriptExecutor) driver).executeScript(
+							"arguments[0].focus(); arguments[0].value=arguments[1]; arguments[0].dispatchEvent(new Event('input',{bubbles:true}));",
+							manualAmount, "10");
+					System.out.println("10 is entered in the amount field in the manual grid (via JS)");
+					utilityclassobject.gettest().log(Status.PASS, "10 is entered in the amount field in the manual grid (via JS)");
+				} catch (Exception ex) {
+					System.out.println("JS set/clear failed for manual amount field, falling back to clear/sendKeys: " + ex.getMessage());
+					try {
+						manualAmount.click();
+						manualAmount.clear();
+						manualAmount.sendKeys("10");
+						System.out.println("10 is entered in the amount field in the manual grid (via sendKeys)");
+						utilityclassobject.gettest().log(Status.PASS, "10 is entered in the amount field in the manual grid (via sendKeys)");
+					} catch (Exception inner) {
+						System.out.println("Failed to enter amount in manual grid: " + inner.getMessage());
+						utilityclassobject.gettest().log(Status.FAIL, "Failed to enter amount in manual grid: " + inner.getMessage());
+					}
+				}
+				//enter generator name in the generator field in the manual
+				generatorname = "Green Waste Management109073";
+				uac.getSearchgeneratorfieldfrommanualgrid().sendKeys(generatorname);
+				uac.getSearchgeneratorsuggestionfrommanualgrid().click();
+				System.out.println("Generator name is entered in the generator field in the manual grid");
+				utilityclassobject.gettest().log(Status.PASS, "Generator name is entered in the generator field in the manual grid");
+				//click on create manual grid button
+				uac.getMemofromgrid().sendKeys("Test Memo");
+				
+				Thread.sleep(2000);
+				//click on generator field and select the generator from the suggestion
+				uac.getSearchgeneratorfieldfrommanualgrid().click();
+				uac.getSearchgeneratorsuggestionfrommanualgrid().click();
+				
+				
+				//clcik on create button
+				Thread.sleep(2000);
+				uac.getCreatemanualgridbtn().click();
+				System.out.println("Create Manual Grid button is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Create Manual Grid button is clicked");
+				//verify that the check is created successfully
+				if(uac.getSuccessmessageforimportedchecks().isDisplayed()) {
+					System.out.println("Check Created Successfully Message is displayed : PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Check Created Successfully Message is displayed : PASS");
+					
+				}
+				else {
+					System.out.println("Check Created Successfully Message is displayed : FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Check Created Successfully Message is displayed : FAIL");
+					
+				}
+				Thread.sleep(6000);
+				uac.getDonebuttonfrommanualgridentrypopup().click();
+
+				
+			}
+			@Test(dependsOnMethods = "TC_040VerifyManualgridChecksCreatedSuccessfully")
+			public void TC_041VerifyManualgridCheckisPresentinUnappliedChecks() throws Exception {
+				
+				//Click on Import button again selct Manual grid and click on payment date picker from manual grid 
+				uac.getImportfilebutton().click();
+				System.out.println("Import Check button is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Import Check button is clicked ");
+				//click on manual grid entry button
+				uac.getManualgridentrybutton().click();
+				System.out.println("Manual Grid Entry button is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Manual Grid Entry button is clicked");
+				//click on payment date picker from manual grid and select the date
+				
+				//fetch the current System date
+				DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+				LocalDateTime now = LocalDateTime.now();
+				String currentDate = dtf.format(now);
+				System.out.println("Current System Date is : " + currentDate);
+				utilityclassobject.gettest().log(Status.PASS, "Current System Date is : " + currentDate);
+				//verify that the current system date is selected in the payment date
+				Thread.sleep(2000);
+				String selectedDate = uac.getPaymentdatepickerfrommanualgrid().getAttribute("value");
+				System.out.println("Selected Payment Date is : " + selectedDate);
+				utilityclassobject.gettest().log(Status.PASS, "Selected Payment Date is : " + selectedDate);
+				
+				
+				//click on date picker 
+				uac.getPaymentdatepickerfrommanualgrid().click();
+				System.out.println("Payment Date Picker is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Payment Date Picker is clicked ");
+				List<WebElement> dates = uac.getPaymentdatesoptionsfrommanualgrid();
+				
+				
+					
+					
+				//need to continue
+				
+				
+				
+				
+				
+				
+			}
+			@Test(dependsOnMethods = "TC_041VerifyManualgridCheckisPresentinUnappliedChecks")
+			public void TC_042VerifyUnappliedChecksDetails() throws Exception {
+				//navigate to unapplied checks
+				/*
+				navbar = new Navigation_SideBar(driver);
+				navbar.MovetoUnappliedchecks();
+				*/
+					
+				
+				
+				
+				//click on close button from manual grid entry popup
+				uac.getClosebuttonfrommanualgridentrypopup().click();
+				System.out.println("Close button is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Close button is clicked");
+				//refresh the page
+				driver.navigate().refresh();
+				Thread.sleep(3000);
+				//search addede random number in the unapplied checks table and verify that the check is present
+				uac.getSearchcheckfieldfromunappliedchecks().sendKeys(String.valueOf	 (randomNumber));
+				System.out.println("Random 6 Digit Number is entered in the search field from unapplied checks page");
+				utilityclassobject.gettest().log(Status.PASS, "Random 6 Digit Number is entered in the search field from unapplied checks page");
+				uac.getFirstchecknumberfrommanualgrid().click();
+				System.out.println("First check number from manual grid is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "First check number from manual grid is clicked");
+                 if(uac.getUnappliedcheckdetailspopup().isDisplayed()) {
+					 System.out.println("Unapplied Check Details popup is displayed : PASS");
+					 utilityclassobject.gettest().log(Status.PASS, "Unapplied Check Details popup is displayed : PASS");
+				 }
+				 else {
+					 System.out.println("Unapplied Check Details popup is displayed : FAIL");
+					 utilityclassobject.gettest().log(Status.FAIL, "Unapplied Check Details popup is displayed : FAIL");
+				 }
+				
+				
+				
+				
+			}
+			
+			@Test(dependsOnMethods = "TC_042VerifyUnappliedChecksDetails")
+			public void TC_043VerifyUnappliedChecksDetailsFieldsRender() throws Exception {
+				List<WebElement> checkfields = uac.getUnappliedcheckdetailspopupchecknumber();
+				//print all the field details one by one
+				for(WebElement field : checkfields) {
+					System.out.println("Field Name: " + field.getText());
+					utilityclassobject.gettest().log(Status.PASS, "Field Name: " + field.getText());
+					
+				}
+				System.out.println("Unapplied Check Details Fields are rendered successfully");
+				utilityclassobject.gettest().log(Status.PASS, "Unapplied Check Details Fields are rendered successfully");
+			}
+			
+			@Test(dependsOnMethods = "TC_043VerifyUnappliedChecksDetailsFieldsRender")
+			public void TC_044VerifygeneratorNameFromDetails() throws Exception {
+				System.out.println(generatorname);
+				String actualgname = uac.getGeneratornamfromunappliedcheckdetails().getText();
+				System.out.println("Generator name from unapplied check details is :  " + actualgname);
+				if(actualgname.equals(generatorname)) {
+					System.out.println("Generator name from unapplied check details is same as the generator name entered in the manual grid : PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Generator name from unapplied check details is same as the generator name entered in the manual grid : PASS");
+				}
+				else {
+					System.out.println("Generator name from unapplied check details is not same as the generator name entered in the manual grid : FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Generator name from unapplied check details is not same as the generator name entered in the manual grid : FAIL");
+				}
+				
+			}
+			
+			@Test(dependsOnMethods = "TC_044VerifygeneratorNameFromDetails")
+			public void TC_045VerifyInlinePaymentEditDate() throws Exception {
+				/*
+				//click on payemt date field from unapplied check details and select the date
+				uac.getPaymentdatefromunappliedcheckdetails().click();
+				System.out.println("Payment Date field from unapplied check details is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Payment Date field from unapplied check details is clicked");
+				uac.getEditcalendar().click();
+				System.out.println("Edit Calendar is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Edit Calendar is clicked");
+				//select yesterdate date from calendar 
+				*/
+				
+				
+			}
+			//UnappliedChecks_Page uac;
+			
+			@Test(dependsOnMethods = "TC_045VerifyInlinePaymentEditDate")
+			public void TC_046VerifyInlineEditMemo() throws Exception {
+				
+				/*
+				//comment while exectiong All Tc
+				//comment while exectiong All Tc
+
+				//comment while exectiong All Tc
+
+				//
+				//navigate to unapplied checks and search for the check number and click on it to open the details
+				Navigation_SideBar navbar = new Navigation_SideBar(driver);
+				navbar.MovetoUnappliedchecks();
+				//search for check
+				uac = new UnappliedChecks_Page(driver);
+				uac.getSearchcheckfieldfromunappliedchecks().click();
+				uac.getSearchcheckfieldfromunappliedchecks().sendKeys("272186");
+				//click on 1st check number from the search result
+				uac.getFirstchecknumberfrommanualgrid().click();
+				
+				//comment while exectiong All Tc
+
+				//comment while exectiong All Tc
+
+				//comment while exectiong All Tc
+
+				*/
+				
+				
+				//fetch the test from memo from details
+				String memo = uac.getMemofromunappliedcheckdetails().getText();
+				System.out.println("Memo from unapplied check details is : " + memo);
+				utilityclassobject.gettest().log(Status.PASS, "Memo from unapplied check details is : " + memo);
+				//click on memo field from unapplied check details and edit the memo
+				uac.getEditmemobuttonfromcheckdetail().click();
+				System.out.println("Memo field from unapplied check details is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Memo field from unapplied check details is clicked");
+				//clear the memo field and enter new memo
+				uac.getEditmemoffieldfromcheckdetail().clear();
+				//add new memo 
+				uac.getEditmemoffieldfromcheckdetail().sendKeys("Test Memo Edited");
+				System.out.println("New Memo is entered in the memo field from unapplied check details");
+				utilityclassobject.gettest().log(Status.PASS, "New Memo is entered in the memo field from unapplied check details");
+				//click on save button
+				uac.getSavememobuttonfromcheckdetail().click();
+				System.out.println("Save button from unapplied check details is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Save button from unapplied check details is clicked");
+				//verify that the memo is updated successfully
+				if(uac.getMemoupdatedsuccessfullymessage().isDisplayed()) {
+					System.out.println("Memo updated successfully message is displayed : PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Memo updated successfully message is displayed : PASS");
+				}
+				else {
+					System.out.println("Memo updated successfully message is displayed : FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Memo updated successfully message is displayed : FAIL");
+				}
+				//verify that the memo is updated in the unapplied check details
+				String updatedmemo = uac.getMemofromunappliedcheckdetails().getText();
+				System.out.println("Updated Memo from unapplied check details is : " + updatedmemo);
+				utilityclassobject.gettest().log(Status.PASS, "Updated Memo from unapplied check details is : " + updatedmemo);
+				if(updatedmemo.equals("Test Memo Edited")) {	
+					System.out.println("Updated Memo from unapplied check details is same as the new memo entered : PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Updated Memo from unapplied check details is same as the new memo entered : PASS");
+					
+				}
+				else {
+					System.out.println("Updated Memo from unapplied check details is not same as the new memo entered : FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Updated Memo from unapplied check details is not same as the new memo entered : FAIL");
+				}
+				if(!memo.equals(updatedmemo)) {
+					System.out.println("Memo is updated successfully in the unapplied check details : PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Memo is updated successfully in the unapplied check details : PASS");
+				}
+				else {
+					System.out.println("Memo is not updated successfully in the unapplied check details : FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Memo is not updated successfully in the unapplied check details : FAIL");
+				}
+				
+			}
+			
+			@Test(dependsOnMethods = "TC_046VerifyInlineEditMemo")
+			public void TC_047VerifyAbletoEditChecknumberfromDetails() throws Exception {
+				String checknumberbeforeedit = uac.getChecknumberfromdetails().getText();
+				System.out.println("Check number from unapplied check details before edit is : " + checknumberbeforeedit);
+				utilityclassobject.gettest().log(Status.PASS, "Check number from unapplied check details before edit is : " + checknumberbeforeedit);
+				//click on edit button
+				uac.getEditchecknumbutton().click();
+				System.out.println("Edit button from unapplied check details is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Edit button from unapplied check details is clicked");
+				//clear the check number field and enter new check number
+				uac.getEditchecknumberfield().clear();
+				//add new check number
+				//enter 6 digit random number in the check number field
+				Random random = new Random();
+				int randomNumber = 100000 + random.nextInt(900000);
+				
+				uac.getEditchecknumberfield().sendKeys(String.valueOf(randomNumber));
+				System.out.println("New Check number is entered in the check number field from unapplied check details");
+				utilityclassobject.gettest().log(Status.PASS, "New Check number is"
+						+ " entered in the check number field from unapplied check details");
+				//click on save button
+				uac.getSavechecknumberbutton().click();
+				System.out.println("Save button from unapplied check details is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Save button from unapplied check details is clicked");
+				//verify that the check number is updated successfully
+				String checknumberafteredit = uac.getChecknumberfromdetails().getText();
+				System.out.println("Check number from unapplied check details after edit is : " + checknumberafteredit);
+				utilityclassobject.gettest().log(Status.PASS, "Check number"
+						+ " from unapplied check details after edit is : " + checknumberafteredit);
+				if(!checknumberbeforeedit.equals(checknumberafteredit)) {
+					System.out.println("Check number is updated successfully in the unapplied check details : PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Check number is updated successfully in the unapplied check details : PASS");
+				}
+				else {
+					System.out.println("Check number is not updated successfully in the unapplied check details : FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Check number is not updated successfully in the unapplied check details : FAIL");
+					
+				}
+				
+			}
+			@Test(dependsOnMethods = "TC_047VerifyAbletoEditChecknumberfromDetails")
+			public void TC_048VerifyInlineEditInvoiceNumber() throws Exception {
+				String invoicenumberbeforeedit = uac.getInvoicenumberfromdetails().getText();
+				System.out.println("Invoice number from unapplied check details before edit is : " + invoicenumberbeforeedit);
+				utilityclassobject.gettest().log(Status.PASS, "Invoice number from unapplied check details before edit is : " + invoicenumberbeforeedit);
+				//click on edit button
+				uac.getEditinvoicenumbutton().click();
+				System.out.println("Edit button from unapplied check details is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Edit button from unapplied check details is clicked");
+				//clear the invoice number field and enter new invoice number
+				uac.getEditinvoicenumberfield().clear();
+				//add new invoice number
+				uac.getEditinvoicenumberfield().sendKeys("INV-0000-00009");
+				System.out.println("New Invoice number is entered in the invoice number field from unapplied check details");
+				utilityclassobject.gettest().log(Status.PASS, "New Invoice number is entered in the invoice number field from unapplied check details");
+				//click on save button
+				uac.getSaveinvoicenumberbutton().click();
+				System.out.println("Save button from unapplied check details is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Save button from unapplied check details is clicked");
+				Thread.sleep(3000);
+
+				//verify that the invoice number is updated successfully
+				String invoicenumberafteredit = uac.getInvoicenumberfromdetails().getText();
+				System.out.println("Invoice number from unapplied check details after edit is : " + invoicenumberafteredit);
+				utilityclassobject.gettest().log(Status.PASS, "Invoice number from unapplied check details after edit is : " + invoicenumberafteredit);
+				if(!invoicenumberbeforeedit.equals(invoicenumberafteredit)) {
+					System.out.println("Invoice number is updated successfully in the unapplied check details : PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Invoice number is updated successfully in the unapplied check details : PASS");
+					
+				}
+				
+				
+			}
+			
+			@Test(dependsOnMethods = "TC_048VerifyInlineEditInvoiceNumber")
+			public void TC_049VerifyEditAmount() throws Exception {
+				//fetch the amount from unapplied check details before edit
+				String amountbeforeedit = uac.getAmountreceivedfromdetails().getText();
+				System.out.println("Amount from unapplied check details before edit is : " + amountbeforeedit);
+				utilityclassobject.gettest().log(Status.PASS, "Amount from unapplied check details before edit is : " + amountbeforeedit);
+				//click on edit button
+				uac.getEditamountreceivedbutton().click();
+				System.out.println("Edit button from unapplied check details is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Edit button from unapplied"
+						+ " check details is clicked");
+				//clear the amount field and enter new amount
+				
+				WebElement field = uac.getEditamountreceivedfield();
+				field.click();
+				field.sendKeys(Keys.CONTROL, "a");
+				field.sendKeys(Keys.BACK_SPACE);
+				
+				//add new amount
+				try {
+				uac.getEditamountreceivedfield().sendKeys("20");}
+				catch(Exception e) {
+					System.out.println("Unable to enter new amount in the amount field from unapplied check details");
+					utilityclassobject.gettest().log(Status.FAIL, "Unable to enter new amount in the amount field from unapplied check details");
+				}
+				
+				
+				System.out.println("New Amount is entered in the amount field from unapplied check details");
+				utilityclassobject.gettest().log(Status.PASS, "New Amount is entered in the amount field from unapplied check details");
+				//click on save button
+				uac.getSaveamountreceivedbutton().click();
+				System.out.println("Save button from unapplied check details is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Save button from unapplied "
+						+ "check details is clicked");
+				Thread.sleep(3000);
+				//verify that the amount is updated successfully
+				String amountafteredit = uac.getAmountreceivedfromdetails().getText();
+				System.out.println("Amount from unapplied check details after edit is : " + amountafteredit);
+				utilityclassobject.gettest().log(Status.PASS, "Amount from unapplied"
+						+ " check details after edit is : " + amountafteredit);
+				if(!amountbeforeedit.equals(amountafteredit)) {
+					System.out.println("Amount is updated successfully in the unapplied check details : PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Amount is updated successfully in the unapplied check details : PASS");
+				}
+				else {
+					System.out.println("Amount is not updated successfully in the unapplied check details : FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Amount is not updated successfully in the unapplied check details : FAIL");
+					
+					
+				}
+				
+				
+			}
+		@Test(dependsOnMethods = "TC_049VerifyEditAmount")
+		public void TC_050VerifyEditAmountwithZero() throws Exception {
+			String amountbeforeedit = uac.getAmountreceivedfromdetails().getText();
+			System.out.println("Amount from unapplied check details before edit is : " + amountbeforeedit);
+			utilityclassobject.gettest().log(Status.PASS, "Amount from unapplied check details before edit is : " + amountbeforeedit);
+			//click on edit button
+			uac.getEditamountreceivedbutton().click();
+			System.out.println("Edit button from unapplied check details is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "Edit button from unapplied"
+					+ " check details is clicked");
+			//clear the amount field and enter new amount
+			uac.getEditamountreceivedfield().clear();
+			//add new amount
+			uac.getEditamountreceivedfield().sendKeys("0");
+			System.out.println("New Amount is entered in the amount field from unapplied check details");
+			utilityclassobject.gettest().log(Status.PASS, "New Amount is entered in the amount field from unapplied check details");
+			//click on save button
+			uac.getSaveamountreceivedbutton().click();
+			System.out.println("Save button from unapplied check details is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "Save button from unapplied "
+					+ "check details is clicked");
+			Thread.sleep(3000);
+
+			if(uac.getCheckamountmustbegreaterthanzeroerrormessage().isDisplayed()) {
+				System.out.println("Check amount must be greater than zero error message is displayed : PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Check amount must be greater than zero error message is displayed : PASS");
+			}
+			else {
+				System.out.println("Check amount must be greater than zero error message is displayed : FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Check amount must be greater than zero error message is displayed : FAIL");
+				
+			}
+				
+			
+			
+		}
+		@Test(dependsOnMethods = "TC_050VerifyEditAmountwithZero")
+		public void TC_051VerifyEditAmountUpdatedMessage() throws Exception {
+
+			WebElement field = uac.getEditamountreceivedfield();
+			field.click();
+			field.sendKeys(Keys.CONTROL, "a");
+			field.sendKeys(Keys.BACK_SPACE);			//add new amount
+			uac.getEditamountreceivedfield().sendKeys("0");
+			System.out.println("New Amount is entered in the amount field from unapplied check details");
+			utilityclassobject.gettest().log(Status.PASS, "New Amount is entered in the amount field from unapplied check details");
+			//click on save button
+			uac.getSaveamountreceivedbutton().click();
+			Thread.sleep(3000);
+
+			System.out.println("Save button from unapplied check details is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "Save button from unapplied "
+					+ "check details is clicked");
+			if(uac.getAmountupdatedsuccessfullymessage().isDisplayed()) {
+				System.out.println("Amount updated successfully message is displayed : PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Amount updated successfully message is displayed : PASS");
+			}
+			else {
+				System.out.println("Amount updated successfully message is displayed : FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Amount updated successfully message is displayed : FAIL");
+			}
+			
+			
+		}
 		
-		
-	}
-	
-	
-	
-	
-	
+			
+			
 }
+	

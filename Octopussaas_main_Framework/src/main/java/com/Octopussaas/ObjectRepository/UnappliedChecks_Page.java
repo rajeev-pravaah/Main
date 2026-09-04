@@ -1,5 +1,8 @@
 package com.Octopussaas.ObjectRepository;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.util.List;
 
 import org.apache.xmlbeans.impl.xb.xsdschema.FieldDocument.Field.Xpath;
@@ -77,7 +80,7 @@ public class UnappliedChecks_Page {
 	private List<WebElement> unappliedcheckstableheaderlists;
 	@FindBy(xpath = "//td[@class='px-4 py-3 text-xs text-gray-500']")
 	private WebElement firstcheckidfromlist;
-	@FindBy(xpath = "//div[text()='Copied to clipboard!']")
+	@FindBy(xpath = "//div[contains(text(),'Copied to clipboard!')]")
 	private WebElement copiedtoclipboardmessage;
 	@FindBy(xpath = "//div[@class='flex justify-between items-center pt-3 text-sm text-gray-500 border-t border-gray-100 mt-2']/descendant::span")
 	private List<WebElement> summaryfooter;
@@ -137,6 +140,100 @@ public class UnappliedChecks_Page {
 	private WebElement confirmimportbuttonwithvalidtext;
 	@FindBy(xpath = "//div[text()='CSV must have a header row and at least one data row']")
 	private WebElement errormessageforblankcsvfile;
+	@FindBy(xpath = "//p[@class='text-green-800 font-medium']")
+	private WebElement successmessageforimportedchecks;
+	@FindBy(xpath = "//div[@class='bg-red-50 border border-red-200 rounded-lg p-3 mb-3']")
+	private WebElement errormessageforinvalidcsvfile;
+	@FindBy(xpath = "//ul[@class='list-disc list-inside text-xs text-red-600 space-y-0.5']")
+	private WebElement errorcountforinvalidcsvfile;
+	@FindBy(xpath = "//p[text()=' checks created successfully']")
+	private WebElement successmessageforimportedcheckswithcount;
+	@FindBy(xpath = "//button[text()='Done']")
+	private WebElement donebuttonfromimportcheckspopup;
+	@FindBy(xpath = "//h2[text()='Import Checks']/../descendant::button")
+	private WebElement closebuttonfromimportresultspopup;
+	@FindBy(xpath = "//button[text()='Manual Grid Entry']")
+	private WebElement manualgridentrybuttonfromimportcheckspopup;
+	@FindBy(xpath = "//button[text()='+ Add Row']")
+	private WebElement addrowbuttonfrommanualgridentrypopup;
+	@FindBy(xpath = "//tr[@class='border-b border-gray-200']")
+	private List<WebElement> manualgridentrytablelists;
+	@FindBy(xpath = "//td[@class='px-3 py-2']")
+	private List<WebElement> removemanualgrids;
+	@FindBy(xpath = "//p[text()='Validation errors:']")
+	private WebElement validationerrorfrommanualgridentrypopup;
+	@FindBy(xpath = "//button[contains(text(),'Create ')]")
+	private WebElement createmanualgridbtn;
+	@FindBy(xpath = "//input[@placeholder='e.g. 12345']")
+	private WebElement checknumberfrommanualgrid;
+	@FindBy(xpath = "//input[@type='number']")
+	private WebElement amountfieldfrommanualgrid;
+	@FindBy(xpath = "//p[text()='Validation errors:']/../descendant::li")
+	private WebElement generatorrequirederrormsg;
+	@FindBy(xpath = "//input[@placeholder='Search generator...']")
+	private WebElement searchgeneratorfieldfrommanualgrid;
+	@FindBy(xpath = "//ul[@class='max-h-48 overflow-y-auto']")
+	private WebElement searchgeneratorsuggestionfrommanualgrid;
+	@FindBy(xpath = "//input[@placeholder='Optional']")
+	private WebElement memofromgrid;
+	@FindBy(xpath = "//button[text()='Done']")
+	private WebElement donebuttonfrommanualgridentrypopup;
+	@FindBy(xpath = "//input[@type='number']/ancestor::tr/descendant::span[@class='text-cardTextGray truncate text-nowrap text-base']")
+	private WebElement paymentdatepickerfrommanualgrid;
+	@FindBy(xpath = "//div[@role='option']")
+	private List<WebElement> paymentdatesoptionsfrommanualgrid;
+	@FindBy(xpath = "//h2[text()='Import Checks']/../descendant::button")
+	private WebElement closebuttonfrommanualgridentrypopup;
+	@FindBy(xpath = "//td[@class='px-4 py-3 font-medium text-gray-800']")
+	private WebElement firstchecknumberfrommanualgrid;
+	@FindBy(xpath = "//h2[text()='Unapplied Check Details']")
+	private WebElement unappliedcheckdetailspopup;
+	@FindBy(xpath = "//label[@class='block text-sm text-gray-500']")
+	private List<WebElement> unappliedcheckdetailspopupchecknumber;
+	@FindBy(xpath = "//label[text()='Generator / Contractor']/../descendant::p")
+	private WebElement generatornamfromunappliedcheckdetails;
+	@FindBy(xpath = "//label[text()='Payment Date']/../descendant::button")
+	private WebElement paymentdatefromunappliedcheckdetails;
+	@FindBy(xpath = "//div[@class='flex gap-2']/../descendant::span")
+	private WebElement editcalendar;
+	@FindBy(xpath = "//label[text()='Memo']/../descendant::p")
+	private WebElement memofromunappliedcheckdetails;
+	@FindBy(xpath = "//label[text()='Memo']/../descendant::button")
+	private WebElement editmemobuttonfromcheckdetail;
+	@FindBy(xpath = "//label[text()='Memo']/../descendant::input")
+	private WebElement editmemoffieldfromcheckdetail;
+	@FindBy(xpath = "//button[text()='Save']")
+	private WebElement savememobuttonfromcheckdetail;
+	@FindBy(xpath = "//div[text()='Memo updated successfully']")
+	private WebElement memoupdatedsuccessfullymessage;
+	@FindBy(xpath = "//label[text()='Check / Ref Number']/../descendant::p")
+	private WebElement checknumberfromdetails;
+	@FindBy(xpath = "//label[text()='Check / Ref Number']/../descendant::button")
+	private WebElement editchecknumbutton;
+	@FindBy(xpath = "//label[text()='Check / Ref Number']/../descendant::input")
+	private WebElement editchecknumberfield;
+	@FindBy(xpath = "//label[text()='Check / Ref Number']/../descendant::button")
+	private WebElement savechecknumberbutton;
+	@FindBy(xpath = "//label[text()='Invoice Number']/../descendant::button")
+	private WebElement editinvoicenumbutton;
+	@FindBy(xpath = "//label[text()='Invoice Number']/../descendant::p")
+	private WebElement invoicenumberfromdetails;
+	@FindBy(xpath = "//label[text()='Invoice Number']/../descendant::input")
+	private WebElement editinvoicenumberfield;
+	@FindBy(xpath = "//label[text()='Invoice Number']/../descendant::button")
+	private WebElement saveinvoicenumberbutton;
+	@FindBy(xpath = "//label[text()='Amount Received']/../descendant::p")
+	private WebElement amountreceivedfromdetails;
+	@FindBy(xpath = "//label[text()='Amount Received']/../descendant::button")
+	private WebElement editamountreceivedbutton;
+	@FindBy(xpath = "//label[text()='Amount Received']/../descendant::input")
+	private WebElement editamountreceivedfield;
+	@FindBy(xpath = "//label[text()='Amount Received']/../descendant::button")
+	private WebElement saveamountreceivedbutton;
+	@FindBy(xpath = "//div[text()='Check amount must be greater than zero. To zero out a check, delete it instead.']")
+	private WebElement checkamountmustbegreaterthanzeroerrormessage;
+	@FindBy(xpath = "//div[text()='Amount updated successfully']")
+	private WebElement amountupdatedsuccessfullymessage;
 	
 	
 	
@@ -147,6 +244,152 @@ public class UnappliedChecks_Page {
 	
 	
 	
+	
+	
+	
+	
+	public WebElement getAmountupdatedsuccessfullymessage() {
+		return amountupdatedsuccessfullymessage;
+	}
+	public WebElement getCheckamountmustbegreaterthanzeroerrormessage() {
+		return checkamountmustbegreaterthanzeroerrormessage;
+	}
+	public WebElement getSaveamountreceivedbutton() {
+		return saveamountreceivedbutton;
+	}
+	public WebElement getEditamountreceivedfield() {
+		return editamountreceivedfield;
+	}
+	public WebElement getEditamountreceivedbutton() {
+		return editamountreceivedbutton;
+	}
+	public WebElement getAmountreceivedfromdetails() {
+		return amountreceivedfromdetails;
+	}
+	public WebElement getSaveinvoicenumberbutton() {
+		return saveinvoicenumberbutton;
+	}
+	public WebElement getEditinvoicenumberfield() {
+		return editinvoicenumberfield;
+	}
+	public WebElement getInvoicenumberfromdetails() {
+		return invoicenumberfromdetails;
+	}
+	public WebElement getEditinvoicenumbutton() {
+		return editinvoicenumbutton;
+	}
+	public WebElement getSavechecknumberbutton() {
+		return savechecknumberbutton;
+	}
+	public WebElement getEditchecknumberfield() {
+		return editchecknumberfield;
+	}
+	public WebElement getEditchecknumbutton() {
+		return editchecknumbutton;
+	}
+	public WebElement getChecknumberfromdetails() {
+		return checknumberfromdetails;
+	}
+	public WebElement getMemoupdatedsuccessfullymessage() {
+		return memoupdatedsuccessfullymessage;
+	}
+	public WebElement getSavememobuttonfromcheckdetail() {
+		return savememobuttonfromcheckdetail;
+	}
+	public WebElement getEditmemoffieldfromcheckdetail() {
+		return editmemoffieldfromcheckdetail;
+	}
+	public WebElement getEditmemobuttonfromcheckdetail() {
+		return editmemobuttonfromcheckdetail;
+	}
+	public WebElement getMemofromunappliedcheckdetails() {
+		return memofromunappliedcheckdetails;
+	}
+	public WebElement getEditcalendar() {
+		return editcalendar;
+	}
+	public WebElement getPaymentdatefromunappliedcheckdetails() {
+		return paymentdatefromunappliedcheckdetails;
+	}
+	public WebElement getGeneratornamfromunappliedcheckdetails() {
+		return generatornamfromunappliedcheckdetails;
+	}
+	public List<WebElement> getUnappliedcheckdetailspopupchecknumber() {
+		return unappliedcheckdetailspopupchecknumber;
+	}
+	public WebElement getUnappliedcheckdetailspopup() {
+		return unappliedcheckdetailspopup;
+	}
+	public WebElement getFirstchecknumberfrommanualgrid() {
+		return firstchecknumberfrommanualgrid;
+	}
+	public WebElement getClosebuttonfrommanualgridentrypopup() {
+		return closebuttonfrommanualgridentrypopup;
+	}
+	public List<WebElement> getPaymentdatesoptionsfrommanualgrid() {
+		return paymentdatesoptionsfrommanualgrid;
+	}
+	public WebElement getPaymentdatepickerfrommanualgrid() {
+		return paymentdatepickerfrommanualgrid;
+	}
+	public WebElement getDonebuttonfrommanualgridentrypopup() {
+		return donebuttonfrommanualgridentrypopup;
+	}
+	
+	public WebElement getMemofromgrid() {
+		return memofromgrid;
+	}
+	public WebElement getSearchgeneratorsuggestionfrommanualgrid() {
+		return searchgeneratorsuggestionfrommanualgrid;
+	}
+	public WebElement getSearchgeneratorfieldfrommanualgrid() {
+		return searchgeneratorfieldfrommanualgrid;
+	}
+	public WebElement getGeneratorrequirederrormsg() {
+		return generatorrequirederrormsg;
+	}
+	public WebElement getAmountfieldfrommanualgrid() {
+		return amountfieldfrommanualgrid;
+	}
+	public WebElement getChecknumberfrommanualgrid() {
+		return checknumberfrommanualgrid;
+	}
+	public WebElement getCreatemanualgridbtn() {
+		return createmanualgridbtn;
+	}
+	public WebElement getValidationerrorfrommanualgridentrypopup() {
+		return validationerrorfrommanualgridentrypopup;
+	}
+	public List<WebElement> getRemovemanualgrids() {
+		return removemanualgrids;
+	}
+	public List<WebElement> getManualgridentrytablelists() {
+		return manualgridentrytablelists;
+	}
+	public WebElement getAddrowbutton() {
+		return addrowbuttonfrommanualgridentrypopup;
+	}
+	public WebElement getManualgridentrybutton() {
+		return manualgridentrybuttonfromimportcheckspopup;
+	}
+	public WebElement getClosebuttonfromimportresultspopup() {
+		return closebuttonfromimportresultspopup;
+	}
+	public WebElement getDonebuttonfromimportcheckspopup() {
+		return donebuttonfromimportcheckspopup;
+	}
+	public WebElement getSuccessmessageforimportedcheckswithcount() {
+		return successmessageforimportedcheckswithcount;
+	}
+	public WebElement getErrorcountforinvalidcsvfile() {
+		return errorcountforinvalidcsvfile;
+	}
+	public WebElement getErrormessageforinvalidcsvfile() {
+		return errormessageforinvalidcsvfile;
+	}
+	public WebElement getSuccessmessageforimportedchecks() {
+		return successmessageforimportedchecks;
+	}
 	public WebElement getErrormessageforblankcsvfile() {
 		return errormessageforblankcsvfile;
 	}
@@ -397,7 +640,17 @@ public class UnappliedChecks_Page {
 
 			    return currentDate;
 			}
-	 
+		 
+		 
+		 
+		 public void pressEscToCloseNativeFileDialog() throws AWTException, InterruptedException {
+				Robot robot = new Robot();
+				robot.setAutoDelay(100);
+				Thread.sleep(300);
+				robot.keyPress(KeyEvent.VK_ESCAPE);
+				robot.keyRelease(KeyEvent.VK_ESCAPE);
+				Thread.sleep(200);
+		 }
 	
 	
 }
