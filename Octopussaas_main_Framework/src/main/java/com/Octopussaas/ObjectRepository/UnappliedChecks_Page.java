@@ -224,16 +224,22 @@ public class UnappliedChecks_Page {
 	private WebElement saveinvoicenumberbutton;
 	@FindBy(xpath = "//label[text()='Amount Received']/../descendant::p")
 	private WebElement amountreceivedfromdetails;
-	@FindBy(xpath = "//label[text()='Amount Received']/../descendant::button")
+	// Distinguish the edit and save buttons within the Amount Received field.
+	// The first button is the edit button and the second is the save button.
+	@FindBy(xpath = "(//label[text()='Amount Received']/../descendant::button)[1]")
 	private WebElement editamountreceivedbutton;
 	@FindBy(xpath = "//label[text()='Amount Received']/../descendant::input")
 	private WebElement editamountreceivedfield;
-	@FindBy(xpath = "//label[text()='Amount Received']/../descendant::button")
+	@FindBy(xpath = "(//label[text()='Amount Received']/../descendant::button)[1]")
 	private WebElement saveamountreceivedbutton;
 	@FindBy(xpath = "//div[text()='Check amount must be greater than zero. To zero out a check, delete it instead.']")
 	private WebElement checkamountmustbegreaterthanzeroerrormessage;
 	@FindBy(xpath = "//div[text()='Amount updated successfully']")
 	private WebElement amountupdatedsuccessfullymessage;
+	@FindBy(xpath = "//label[text()='Amount Received']/../descendant::div[@class='relative inline-block w-full']")
+	private WebElement amountreceivededitfieldfromdetails;
+	@FindBy(xpath = "//h2[text()='Unapplied Check Details']/../descendant::button")
+	private WebElement closebuttonfromunappliedcheckdetailspopup;
 	
 	
 	
@@ -246,8 +252,12 @@ public class UnappliedChecks_Page {
 	
 	
 	
-	
-	
+	public WebElement getClosebuttonfromunappliedcheckdetailspopup() {
+		return closebuttonfromunappliedcheckdetailspopup;
+	}
+	public WebElement getAmountreceivedEditFieldfromdetails() {
+		return amountreceivededitfieldfromdetails;
+	}
 	public WebElement getAmountupdatedsuccessfullymessage() {
 		return amountupdatedsuccessfullymessage;
 	}
