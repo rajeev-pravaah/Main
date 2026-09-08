@@ -282,7 +282,7 @@ public class TransporterProfile {
 	private WebElement optInButton;
 	@FindBy (xpath = "(//div[@type='button'])[1]")
 	private WebElement categoriesDropdown;
-	@FindBy (xpath = "//input[@class='h-4 w-4 rounded border-gray-300']//following-sibling::span[contains(text(),'E-Waste Recycling Services')]")
+	@FindBy (xpath = "//input[contains(@class,'h-4 w-4')]//following::span[contains(text(),'E-Waste Recycling Services')]")
 	private WebElement categoryEwaste;
 	@FindBy (xpath = "//input[@class='h-4 w-4 rounded border-gray-300']//following-sibling::span[contains(text(),'Container Supplier (Medical Waste)')]")
 	private WebElement containerMedicalwaste;
@@ -320,9 +320,24 @@ public class TransporterProfile {
 	private WebElement transistAddButton;
 	@FindBy (xpath = "//p[text()='Added State Transit IDs']/following::button[1]")
 	private WebElement transistDeletebutton;
+	@FindBy (xpath = "//span[normalize-space()='E-Waste Recycling Services']/button")
+	private WebElement ewasteCancelation;
+	@FindBy (xpath = "//span[normalize-space()='Online OSHA Training']/button")
+	private WebElement onlinceCancelation;
+	@FindBy (xpath = "//span[normalize-space()='Consulting Services']/button")
+	private WebElement consultingCancelation;
 	
 	
 
+	public WebElement getConsultingCancelation() {
+		return consultingCancelation;
+	}
+	public WebElement getOnlinceCancelation() {
+		return onlinceCancelation;
+	}
+	public WebElement getEwasteCancelation() {
+		return ewasteCancelation;
+	}
 	public WebElement getTransistDeletebutton() {
 		return transistDeletebutton;
 	}
@@ -1111,6 +1126,9 @@ public class TransporterProfile {
 	public void CategorySelection()
 	{
 		categoriesDropdown.click();
+		categoryEwaste.click();
+		onlineCategory.click();
+		consultingService.click();
 		containerMedicalwaste.click();
 		consultingService.click();
 		onlineCategory.click();
@@ -1154,7 +1172,18 @@ public class TransporterProfile {
 	
 	public void CategoryDropdown()
 	{
-		categoriesDropdown.click();
+		 Actions act = new Actions(driver);
+
+		    WebElement dropdown = driver.findElement(
+		        By.xpath("(//div[@type='button'])[1]"));
+
+		    act.scrollToElement(dropdown).perform();
+		    dropdown.click();
+
+		    categoryEwaste.click();
+			onlineCategory.click();
+			consultingService.click();
+		    
 	}
 	
 	public void ServicedeleteButton()

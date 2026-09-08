@@ -109,6 +109,9 @@ public class SignUpTransporterpage1 extends BaseclassForSignUpPage {
 		utilityclassobject.gettest().log(Status.INFO, "User is able select state from the state dropdown");
 	}
 	
+	
+	
+	
 	@Test(dependsOnMethods = "TC_312stateTransist_State")
 	public void TC_313stateTransist_TransistIDwithInput() throws EncryptedDocumentException, IOException
 	{

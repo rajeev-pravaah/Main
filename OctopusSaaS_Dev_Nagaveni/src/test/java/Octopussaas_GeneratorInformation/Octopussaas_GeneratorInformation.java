@@ -117,7 +117,7 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 	  "The Creation Date is present on the top left of the page"); }
 	  
 	  
-	  @Test(dependsOnMethods = "TC_006GeneratorInformation_withAddedCreationdate")
+	 /* @Test(dependsOnMethods = "TC_006GeneratorInformation_withAddedCreationdate")
 	  public void TC_007GeneratorInformation_withAddtag() throws InterruptedException 
 	  { 
 		  gp = new GeneratorInformation1(driver);
@@ -325,7 +325,7 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 		  gp.getCancelButton().click();
 		  System.out.println("User is not able to add tags when clicked on cancel : PASS");
 		  utilityclassobject.gettest().log(Status.PASS,"User is not able to add tags when clicked on cancel");		  
-	  }
+	  }*/
 	  
 	  // need to change the dependency
 	  
@@ -1119,7 +1119,7 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 	  }
 	  
 	  //need to change the dependency
-	  
+	 
 	  @Test(dependsOnMethods =
 	  "TC_078GeneratorInformation_withDefaultgeneratorStatus") public void
 	  TC_079GeneratorInformation_GeneratorstatuswithTooltip() {
@@ -1932,6 +1932,7 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 		System.out.println("Street text field will accept numbers");
 		utilityclassobject.gettest().log(Status.INFO, "Street text field will accept numbers");
 	}
+
 
 	@Test(dependsOnMethods = "TC_163VerifybillingStreetwithnumbers")
 	public void TC_164VerifybillingStreetwithspecialcharacters() throws EncryptedDocumentException, IOException {

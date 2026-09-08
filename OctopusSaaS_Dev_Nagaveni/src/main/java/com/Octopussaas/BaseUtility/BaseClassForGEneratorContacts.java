@@ -189,7 +189,7 @@ public class BaseClassForGEneratorContacts {
 
 	
 
-		//driver.quit();
+		driver.quit();
 		Thread.sleep(2000);
 	}
 }

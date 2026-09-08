@@ -612,7 +612,8 @@ public class TC_201toTc_250TransporterProfile extends BaseclassForSignUpPage{
 	{
 		TransporterProfile tp = new TransporterProfile(driver);
 		tp.getBusinessMondaytime().click();
-		tp.getBusinessMondaytime().sendKeys(Keys.CONTROL + "a");
+		tp.getBusinessMondaytime().sendKeys
+		(Keys.CONTROL + "a");
 		tp.getBusinessMondaytime().sendKeys(Keys.DELETE);
 		String input = elib.getDataFromExcel("TransporterProfile", 52, 3);
 		tp.getBusinessMondaytime().sendKeys(input);
@@ -681,7 +682,7 @@ public class TC_201toTc_250TransporterProfile extends BaseclassForSignUpPage{
 	{
 		TransporterProfile tp = new TransporterProfile(driver);
 		tp.CheckBox();
-		Thread.sleep(2000);
+		Thread.sleep(200);
 		tp.MondayTime();
 		tp.Mondaylunchtime();
 		tp.MondaylunchEnd();
@@ -705,7 +706,7 @@ public class TC_201toTc_250TransporterProfile extends BaseclassForSignUpPage{
 		TransporterProfile tp = new TransporterProfile(driver);
 		tp.MultipleCheckbox();
 		tp.MultipleCheckbox();
-		Thread.sleep(2000);
+		Thread.sleep(200);
 		tp.MondayTime();
 		tp.Mondaylunchtime();
 		tp.MondaylunchEnd();

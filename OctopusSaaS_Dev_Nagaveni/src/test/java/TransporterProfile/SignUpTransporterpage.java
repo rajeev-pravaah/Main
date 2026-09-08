@@ -421,7 +421,8 @@ public class SignUpTransporterpage extends BaseclassForSignUpPage {
 		utilityclassobject.gettest().log(Status.INFO, "Reading data from excel ");
 		String input = elib.getDataFromExcel("TransporterProfile", 13, 1);
 		tp.WebSiteURLwithValiInput(input);
-		String txt = tp.getWebsiteUrl().getText();
+		String txt = tp
+				.getWebsiteUrl().getText();
 		Assert.assertTrue(input.contains(txt));
 		utilityclassobject.gettest().log(Status.INFO, "Website Url accepts valid input ");
 	}

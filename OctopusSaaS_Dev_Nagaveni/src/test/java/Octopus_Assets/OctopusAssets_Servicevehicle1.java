@@ -20,6 +20,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.Octopussaas.BaseUtility.BaseClassForGEneratorContacts;
 import com.Octopussaas.BaseUtility.BaseclassforServicevehicle;
 import com.Octopussaas.FileUtility.ExcelUtility;
 import com.Octopussaas.ObjectRepository.AssetsServicevehicle;
@@ -29,7 +30,7 @@ import com.aventstack.extentreports.Status;
 @Listeners(ListnerUtility.ListnerUilityImp.class)
 
 
-public class OctopusAssets_Servicevehicle1  extends BaseclassforServicevehicle{
+public class OctopusAssets_Servicevehicle1  extends BaseClassForGEneratorContacts{
 	ExcelUtility elib;
 	AssetsServicevehicle as;
 	OctopusAssets_Servicevehicle os;

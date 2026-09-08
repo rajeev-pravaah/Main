@@ -3,8 +3,9 @@
   <groupId>Octoframe_01</groupId>
   <artifactId>Octoframe_01</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <dependencies>
+ <dependencies>
   <!--https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<!--https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -73,10 +74,12 @@
     <artifactId>webdrivermanager</artifactId>
     <version>5.9.2</version>
 </dependency>
-
+  
+  
   
   </dependencies>
-<build>
+   
+     <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -111,4 +114,5 @@
 </plugin>
     </plugins>
   </build>
+
 </project>

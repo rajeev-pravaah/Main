@@ -63,7 +63,7 @@ public class AssestsDrivers {
 	private WebElement emailErmsg;
 	@FindBy (xpath = "//div[@role='combobox']")
 	private WebElement driverLocation;
-	@FindBy (xpath = "//li[contains(text(),'(Henry) Premier Med Waste Solution')]")
+	@FindBy (xpath = "//li[contains (text(),'(Henry) Premier Med Waste Solution')]")
 	private WebElement henryLocation;
 	@FindBy (xpath = "//li[contains(text(),'test satelite')]")
 	private WebElement testsatelite;
@@ -151,23 +151,21 @@ public class AssestsDrivers {
 	private WebElement medicalDateCalendar;
 	@FindBy (xpath = "//div[@data-testid='driverLocation']")
 	private WebElement driverlistLocation;
-	@FindBy (xpath = "(//li[contains (text(),'NovaOrbit Satellite Offic')])[1]")
+	@FindBy (xpath = "(//li[contains (text(),'Test Company Display Name63401')])[1]")
 	private WebElement novaorbitLocation;
-	@FindBy (xpath = "(//li[contains (text(),'AstroLink Control Cente')])[1]")
+	@FindBy (xpath = "(//li[contains (text(),'Test Company Display Name66632')])[1]")
 	private WebElement astrolinkLocation;
-	@FindBy (xpath = "(//li[contains (text(),'BioTrust Medical Disposal')])[1]")
+	@FindBy (xpath = "(//li[contains (text(),'4562626')])[1]")
 	private WebElement biotrustLocation;
-	@FindBy (xpath = "(//li[contains (text(),'CosmoBridge Satellite Hu')])[1]")
+	@FindBy (xpath = "(//li[contains (text(),'charlie78363')])[1]")
 	private WebElement cosmobridgeLocation;
-	@FindBy (xpath = "(//li[contains (text(),'SecureCare Medical Disposal')])[1]")
-	private WebElement secureCareLocation;
-	@FindBy (xpath = "//span[contains(text(),'BioTrust Medical Disposal')]/following-sibling::button")
+	@FindBy (xpath = "(//input[@type='checkbox']/parent::li[contains (text(),'4562626')])[1]")
 	private WebElement biotrustCancelation;
-	@FindBy (xpath = "(//span[contains(text(),'CosmoBridge Satellite Hu')]/following-sibling::button)[1]")
+	@FindBy (xpath = "//input[@type='checkbox']/parent::li[contains (text(),'charlie78363')]")
 	private WebElement cosmoBridgeCancelation;
-	@FindBy (xpath = "(//span[contains(text(),'SecureCare Medical Disposal')]/following-sibling::button)[1]")
-	private WebElement secureCarecancelation;
-	@FindBy (xpath = "(//span[contains(text(),'AstroNet Statio')]/following-sibling::button)[1]")
+	@FindBy (xpath = "//input[@type='checkbox']/parent::li[contains (text(),'Test Company Display Name63401')]")
+	private WebElement novarbitcancelation;
+	@FindBy (xpath = "//input[@type='checkbox']/parent::li[contains (text(),'Test Company Display Name66632')]")
 	private WebElement astronetCancelation;
 	@FindBy (xpath = "//div[@data-testid='startDate']")
 	private WebElement stardateCalendar;
@@ -403,9 +401,6 @@ public class AssestsDrivers {
 		return astronetCancelation;
 	}
 
-	public WebElement getSecureCarecancelation() {
-		return secureCarecancelation;
-	}
 
 	public WebElement getCosmoBridgeCancelation() {
 		return cosmoBridgeCancelation;
@@ -415,9 +410,6 @@ public class AssestsDrivers {
 		return biotrustCancelation;
 	}
 
-	public WebElement getSecureCareLocation() {
-		return secureCareLocation;
-	}
 
 	public WebElement getCosmobridgeLocation() {
 		return cosmobridgeLocation;
@@ -979,14 +971,12 @@ public class AssestsDrivers {
 		{
 			WebElement loction = driver.findElement(By.xpath("//div[@data-testid='driverLocation']"));
 		    Assert.assertTrue(loction.isDisplayed(), "Driver location assignment is displayed");
-		    WebElement henrylocation = driver.findElement(By.xpath("//span[contains(text(),'BioTrust Medical Disposal')]"));
-		    Assert.assertTrue(henrylocation.isDisplayed(), "BioTrust Medical Disposal is displayed");
-		    WebElement hhhlocation =  driver.findElement(By.xpath("(//span[contains (text(),'CosmoBridge Satellite Hu')])[1]"));
-		    Assert.assertTrue(hhhlocation.isDisplayed(), "CosmoBridge Satellite Hu is displayed");
-		    WebElement safemedlocation = driver.findElement(By.xpath("(//span[contains (text(),'SecureCare Medical Disposal')])[1]"));
-		    	Assert.assertTrue(safemedlocation.isDisplayed(), "SecureCare Medical Disposal is displayed");
-		    	WebElement orbitallocation = driver.findElement(By.xpath("(//span[contains (text(),'AstroNet Statio')])[1]"));
-		    	Assert.assertTrue(orbitallocation.isDisplayed(), "AstroNet Statio is displayed");
+		    WebElement henrylocation = driver.findElement(By.xpath("//span[contains (text(),'(Henry) Premier Med Waste Solution')]"));
+		    Assert.assertTrue(henrylocation.isDisplayed(), "SecureCare Medical Disposal is displayed");
+		    WebElement safemedlocation = driver.findElement(By.xpath("//span[contains (text(),'Test Company Display Name85344')]"));
+		    Assert.assertTrue(safemedlocation.isDisplayed(), "SecureCare Medical Disposal is displayed");
+		    WebElement orbitallocation = driver.findElement(By.xpath("(//span[contains (text(),'Loc')])[2]"));
+		    Assert.assertTrue(orbitallocation.isDisplayed(), "AstroNet Statio is displayed");
 		}
 		
 		public void DriverlistLocationInput()
@@ -1001,6 +991,11 @@ public class AssestsDrivers {
 
 			action.sendKeys("sdh#$$76").perform();
 			element.click();
+			element.click();
+			element.click();
+			Actions act = new Actions(driver);
+			act.moveToElement(orbitalReachLocation).click().perform();
+			
 		}
 		
 		public void DriverListlocationUncheck() throws InterruptedException
@@ -1057,11 +1052,13 @@ public class AssestsDrivers {
 			Thread.sleep(2000);
 			WebElement loction = driver.findElement(By.xpath("//div[@data-testid='driverLocation']"));
 		    Assert.assertTrue(loction.isDisplayed(), "Driver location assignment is displayed");
+		    loction.click();
 		    Actions act = new Actions(driver);
 		    act.moveToElement(biotrustCancelation).click().perform();
 		    Thread.sleep(2000);
 		    Actions act1 = new Actions(driver);
 		    act1.moveToElement(cosmoBridgeCancelation).click().perform();
+		    loction.click();
 		    
 		}
 		

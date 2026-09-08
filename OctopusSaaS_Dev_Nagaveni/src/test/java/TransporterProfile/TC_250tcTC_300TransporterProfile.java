@@ -257,8 +257,7 @@ public class TC_250tcTC_300TransporterProfile extends BaseclassForSignUpPage{
 		utilityclassobject.gettest().log(Status.INFO, "Bio text filed accepted numbers");
 	}
 	
-	
-	@Test(dependsOnMethods = "TC_260Bio_withNumbers"/*"TC_006CompanynameTextFieldwithInput"*/)
+	@Test(dependsOnMethods = "TC_260Bio_withNumbers")
 	public void TC_261Bio_withSpecialcharacters() throws EncryptedDocumentException, IOException
 	{
 		TransporterProfile tp = new TransporterProfile(driver);
@@ -283,7 +282,7 @@ public class TC_250tcTC_300TransporterProfile extends BaseclassForSignUpPage{
 	}
 	
 	
-	@Test(dependsOnMethods = /*"TC_262ShortDescription_withAutosave"*/"TC_006CompanynameTextFieldwithInput")
+	@Test(dependsOnMethods = "TC_262ShortDescription_withAutosave")
 	public void TC_263serviceoffered_Tooltip()
 	{
 		TransporterProfile tp = new TransporterProfile(driver);
@@ -400,7 +399,7 @@ public class TC_250tcTC_300TransporterProfile extends BaseclassForSignUpPage{
 	}
 	
 	
-	@Test(dependsOnMethods = "TC_270serviceoffered_Autosave"/*"TC_006CompanynameTextFieldwithInput"*/)
+	@Test(dependsOnMethods = "TC_270serviceoffered_Autosave")
 	public void TC_271DispatchEmail_withInput() throws EncryptedDocumentException, IOException
 	{
 		TransporterProfile tp = new TransporterProfile(driver);
@@ -429,6 +428,7 @@ public class TC_250tcTC_300TransporterProfile extends BaseclassForSignUpPage{
 	{
 		TransporterProfile tp = new TransporterProfile(driver);
 		tp.getDispatchEmail().click();
+		
 		tp.getDispatchEmail().sendKeys(Keys.CONTROL + "a");
 		tp.getDispatchEmail().sendKeys(Keys.DELETE);
 		String input = elib.getDataFromExcel("TransporterProfile", 43, 3);
@@ -526,7 +526,7 @@ public class TC_250tcTC_300TransporterProfile extends BaseclassForSignUpPage{
 	}
 	
 	
-	@Test(dependsOnMethods = "TC_280dispatchPhone_Withnumbers"/*"TC_006CompanynameTextFieldwithInput"*/)
+	@Test(dependsOnMethods = "TC_280dispatchPhone_Withnumbers")
 	public void TC_281dispatchPhone_withspecialcharacters() throws EncryptedDocumentException, IOException
 	{
 		TransporterProfile tp = new TransporterProfile(driver);
@@ -648,7 +648,7 @@ public class TC_250tcTC_300TransporterProfile extends BaseclassForSignUpPage{
 	}
 	
 
-	@Test(dependsOnMethods = "TC_290dispatchExt_withoutInput"/*"TC_006CompanynameTextFieldwithInput"*/)
+	@Test(dependsOnMethods = "TC_290dispatchExt_withoutInput")
 	public void TC_291dispatchExt_withAutosave() throws EncryptedDocumentException, IOException
 	{
 		TransporterProfile tp = new TransporterProfile(driver);
