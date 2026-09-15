@@ -13,6 +13,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
 
 public class UnappliedChecks_Page {
 	WebDriver driver;
@@ -240,18 +243,42 @@ public class UnappliedChecks_Page {
 	private WebElement amountreceivededitfieldfromdetails;
 	@FindBy(xpath = "//h2[text()='Unapplied Check Details']/../descendant::button")
 	private WebElement closebuttonfromunappliedcheckdetailspopup;
+	@FindBy(xpath = "//h6[text()='Transaction History Report']")
+	private WebElement transactionhistoryreportpage;
+	@FindBy(xpath = "//h3[text()='Application History']/../descendant::button")
+	private WebElement removebuttonfromapplicationhistory;
+	@FindBy(xpath = "//textarea[@placeholder='Explain why this payment is being removed...']")
+	private WebElement reasonfieldf;
+	@FindBy(xpath = "//button[text()='Confirm Remove']")
+	private WebElement confirmremovebuttonfromremovepaymentinvoice;
+	@FindBy(xpath = "//div[text()='Payment removed from invoice successfully']")
+	private WebElement paymentremovedfrominvoicesuccessfullymessage;
+	@FindBy(xpath = "//td[@class='px-4 py-3 text-gray-800 max-w-xl']")
+	private WebElement fkrstsuggestionfromlist;
 	
 	
 	
 	
 	
 	
-	
-	
-	
-	
-	
-	
+	public WebElement getFkrstsuggestionfromlist() {
+		return fkrstsuggestionfromlist;
+	}
+	public WebElement getPaymentremovedfrominvoicesuccessfullymessage() {
+		return paymentremovedfrominvoicesuccessfullymessage;
+	}
+	public WebElement getConfirRemoveButtonFromremovepaymentinvoice() {
+		return confirmremovebuttonfromremovepaymentinvoice;
+	}
+	public WebElement getReasonfieldf() {
+		return reasonfieldf;
+	}
+	public WebElement getRemovebuttonfromapplicationhistory() {
+		return removebuttonfromapplicationhistory;
+	}
+	public WebElement getTransactionhistoryreportpage() {
+		return transactionhistoryreportpage;
+	}
 	public WebElement getClosebuttonfromunappliedcheckdetailspopup() {
 		return closebuttonfromunappliedcheckdetailspopup;
 	}
@@ -593,6 +620,75 @@ public class UnappliedChecks_Page {
 	}
 	public WebElement getUnappliedChecks_Page() {
 		return UnappliedChecks_Page;
+	}
+
+	/**
+	 * Robustly select a generator in the Quick Check Add popup by typing the name and
+	 * clicking the visible suggestion. Waits for the suggestion to appear and then
+	 * waits until the input reflects the selected value or the suggestion disappears.
+	 */
+	public void selectGeneratorInQuickAdd(String name) {
+		try {
+			searchgeneratorfieldfromunappliedchecks.clear();
+		} catch (Exception ignore) {}
+		searchgeneratorfieldfromunappliedchecks.sendKeys(name);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
+		try {
+			wait.until(ExpectedConditions.visibilityOf(searchgeneratorsuggestion));
+		} catch (Exception e) {
+			// suggestion might appear slightly later; continue and attempt click
+		}
+		try {
+			searchgeneratorsuggestion.click();
+		} catch (Exception e) {
+			try {
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", searchgeneratorsuggestion);
+			} catch (Exception ex) {
+				// last resort: send ENTER to input to accept first suggestion
+				try { searchgeneratorfieldfromunappliedchecks.sendKeys(org.openqa.selenium.Keys.ENTER); } catch (Exception ign) {}
+			}
+		}
+
+		// Wait until either the input contains the name or the suggestion becomes invisible
+		try {
+			wait.until(d -> {
+				try {
+					String val = searchgeneratorfieldfromunappliedchecks.getAttribute("value");
+					if (val != null && val.contains(name)) return true;
+					return !searchgeneratorsuggestion.isDisplayed();
+				} catch (Exception ex) {
+					return true;
+				}
+			});
+		} catch (Exception ignore) {}
+	}
+
+	/**
+	 * Robustly select a generator inside the Manual Grid entry popup.
+	 */
+	public void selectGeneratorInManualGrid(String name) {
+		try { searchgeneratorfieldfrommanualgrid.clear(); } catch (Exception ignore) {}
+		searchgeneratorfieldfrommanualgrid.sendKeys(name);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
+		try { wait.until(ExpectedConditions.visibilityOf(searchgeneratorsuggestionfrommanualgrid)); } catch (Exception e) {}
+		try {
+			searchgeneratorsuggestionfrommanualgrid.click();
+		} catch (Exception e) {
+			try {
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", searchgeneratorsuggestionfrommanualgrid);
+			} catch (Exception ex) {
+				try { searchgeneratorfieldfrommanualgrid.sendKeys(org.openqa.selenium.Keys.ENTER); } catch (Exception ign) {}
+			}
+		}
+		try {
+			wait.until(d -> {
+				try {
+					String val = searchgeneratorfieldfrommanualgrid.getAttribute("value");
+					if (val != null && val.contains(name)) return true;
+					return !searchgeneratorsuggestionfrommanualgrid.isDisplayed();
+				} catch (Exception ex) { return true; }
+			});
+		} catch (Exception ignore) {}
 	}
 
 	/**
