@@ -1180,9 +1180,10 @@ public class TransporterProfile {
 		    act.scrollToElement(dropdown).perform();
 		    dropdown.click();
 
+		    consultingService.click();
 		    categoryEwaste.click();
 			onlineCategory.click();
-			consultingService.click();
+			
 		    
 	}
 	

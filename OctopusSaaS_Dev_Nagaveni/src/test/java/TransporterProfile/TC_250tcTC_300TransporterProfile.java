@@ -686,11 +686,13 @@ public class TC_250tcTC_300TransporterProfile extends BaseclassForSignUpPage{
 	}
 
 	@Test(dependsOnMethods = "TC_294subcontractor_categoriesMorethan3")
-	public void TC_295subcontractor_withoutCategory()
+	public void TC_295subcontractor_withoutCategory() throws InterruptedException
 	{
 		TransporterProfile tp = new TransporterProfile(driver);
 		tp.CategoryDropdown();
+		Thread.sleep(200);
 		tp.SubmitBtn();
+		Thread.sleep(200);
 		String errormsg = tp.getCategoryErmsg().getText();
 		System.out.println(errormsg);
 		utilityclassobject.gettest().log(Status.INFO, "Category dropdown without categories error message is displayed");

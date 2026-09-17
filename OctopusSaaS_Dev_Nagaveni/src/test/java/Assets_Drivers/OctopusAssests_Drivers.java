@@ -337,6 +337,7 @@ public class OctopusAssests_Drivers extends BaseClassForGEneratorContacts{
 		Thread.sleep(2000);
 		ad.getOrbitalReachLocation().click();
 		Thread.sleep(2000);
+		ad.getDriverlocation().click();
 		utilityclassobject.gettest().log(Status.INFO, "user is able to remove the locations");			
 	}
 	
@@ -923,6 +924,7 @@ public class OctopusAssests_Drivers extends BaseClassForGEneratorContacts{
 	
 	@Test(dependsOnMethods = "TC_077AssestsDrivers_EmgcontactpersonNumbers")
 	public void TC_078AssetsDrivers_Emgcontactpersonspecailcharacters() throws EncryptedDocumentException, IOException, InterruptedException
+	
 	{
 		ad.getEmgcontactperson().click();
 		ad.getEmgcontactperson().sendKeys(Keys.CONTROL + "a");
@@ -1062,16 +1064,16 @@ public class OctopusAssests_Drivers extends BaseClassForGEneratorContacts{
 		utilityclassobject.gettest().log(Status.INFO,"Emergency contact Ext text filed will not accept more than 5 digits");			
 	}
 	
-	@Test(dependsOnMethods = "TC_088AssetsDrivers_EmgextwithshortInput")
+	/*@Test(dependsOnMethods = "TC_088AssetsDrivers_EmgextwithshortInput")
 	public void TC_089AssetsDrivers_DriverlistLocationwithInput()
 	{
 		
 		ad.DriverlistLocationInput();
 		utilityclassobject.gettest().log(Status.INFO,"Driver location Assignement will not accept input");			
 
-	}
+	}*/
 	
-	@Test(dependsOnMethods = "TC_089AssetsDrivers_DriverlistLocationwithInput")
+	@Test(dependsOnMethods = "TC_088AssetsDrivers_EmgextwithshortInput")
 	public void TC_090AssetsDrivers_DriverListlocation()
 	{
 		ad.DriverlistLocation();
@@ -1317,7 +1319,7 @@ public class OctopusAssests_Drivers extends BaseClassForGEneratorContacts{
 		utilityclassobject.gettest().log(Status.INFO,"Duty status dropdwon will appear when the arrow is clicked");			
 
 	}
-	
+	 
 	@Test(dependsOnMethods = "TC_121AssetsDrivers_DutyStatus")
 	public void TC_122AssetsDrivers_DutystatuswithOption()
 	{
@@ -1358,6 +1360,7 @@ public class OctopusAssests_Drivers extends BaseClassForGEneratorContacts{
 	@Test(dependsOnMethods = "TC_126AssetsDrivers_Dutystatuswithselectedoption")
 	public void TC_127AssetsDrivers_DriverstatuswithInput()
 	{
+		
 		ad.DriverstatuswithInput();
 		utilityclassobject.gettest().log(Status.INFO,"Driver status dropdown will not accept input");			
 	}

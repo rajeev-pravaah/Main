@@ -43,30 +43,20 @@ public class GeneratorInformation1 {
 	private WebElement addtagButton;
 	@FindBy (xpath = "//button[contains (text(),'Apply')]")
 	private WebElement applyButton;
-	@FindBy (xpath = "//span[normalize-space()='Manufacturing']/parent::*//button[@title='Remove tag']")
+	@FindBy (xpath = "//span[contains (text(),'After Care')]/parent::*//button[@title='Remove tag']")
 	private WebElement manufacturingtagCancel;
-	@FindBy (xpath = "//span[normalize-space()='Summary']/parent::*//button[@title='Remove tag']")
+	@FindBy (xpath = "//span[contains (text(),'Tag779017')]/parent::*//button[@title='Remove tag']")
 	private WebElement summaryCancel;
-	@FindBy (xpath = "//span[normalize-space()='Medical Waste']/parent::*//button[@title='Remove tag']")
+	@FindBy (xpath = "//span[contains (text(),'Test Tag 98066')]/parent::*//button[@title='Remove tag']")
 	private WebElement medicalwasteCancel;
-	@FindBy (xpath = "//span[normalize-space()='Urgent']/parent::*//button[@title='Remove tag']")
+	@FindBy (xpath = "//span[contains (text(),'Med Waste')]/parent::*//button[@title='Remove tag']")
 	private WebElement urgentCancel;
-	@FindBy (xpath = "//span[normalize-space()='Newwwwww']/parent::*//button[@title='Remove tag']")
+	@FindBy (xpath = "//span[contains (text(),'BBg')]/parent::*//button[@title='Remove tag']")
 	private WebElement newCancel;
-	@FindBy (xpath = "//span[normalize-space()='Test Tag 63093']/parent::*//button[@title='Remove tag']")
+	@FindBy (xpath = "//span[contains (text(),'Tag647650')]/parent::*//button[@title='Remove tag']")
 	private WebElement testCancel;
-	@FindBy (xpath = "//span[normalize-space()='School']/parent::*//button[@title='Remove tag']")
+	@FindBy (xpath = "//span[contains (text(),'Test Tag 99850')]/parent::*//button[@title='Remove tag']")
 	private WebElement schoolCancel;
-	@FindBy (xpath = "//span[normalize-space()='Less Priority']/parent::*//button[@title='Remove tag']")
-	private WebElement lesspriorityCancel;
-	@FindBy (xpath = "//span[normalize-space()='Regular tag']/parent::*//button[@title='Remove tag']")
-	private WebElement regularTagcancel;
-	@FindBy (xpath = "//span[normalize-space()='Hospital']/parent::*//button[@title='Remove tag']")
-	private WebElement hospitalCancel;
-	@FindBy (xpath = "//span[normalize-space()='Construction']/parent::*//button[@title='Remove tag']")
-	private WebElement constructionCancel;
-	@FindBy (xpath = "//span[normalize-space()='New Gen']/parent::*//button[@title='Remove tag']")
-	private WebElement newgenCancel;
 	@FindBy (xpath = "(//button[contains (text(),'Cancel')])[1]")
 	private WebElement cancelButton;
 	@FindBy (xpath = "//input[@placeholder='Enter Generator Name']")
@@ -89,13 +79,13 @@ public class GeneratorInformation1 {
 	private WebElement generatorNote;
 	@FindBy (xpath = "//button[@id='attach-to service location']")
 	private WebElement serviceLocation;
-	@FindBy (xpath = "//li[@role='option']//div[contains (text(),'BioTrust Medical Disposal')]")
+	@FindBy (xpath = "//div[contains (text(),'test satelite')]")
 	private WebElement biotrustLocation;
-	@FindBy (xpath = "//li[@role='option']//div[contains (text(),'(Henry) Premier Med Waste Solution display')]")
+	@FindBy (xpath = "//li[@role='option']//div[contains (text(),'(Henry) Premier Med Waste Solution')]")
 	private WebElement henryLocation;
 	@FindBy (xpath = "//input[@id='parent-account']")
 	private WebElement parentAccount;
-	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'G-101-0624 - Summit Healthcare')]")
+	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'G-100-0050 - Parent Account')]")
 	private WebElement healthsummitGenerator;
 	@FindBy (xpath = "//p[contains (text(),'Unassign')]")
 	private WebElement unassignButton;
@@ -748,25 +738,6 @@ public class GeneratorInformation1 {
 		return cancelButton;
 	}
 
-	public WebElement getNewgenCancel() {
-		return newgenCancel;
-	}
-
-	public WebElement getConstructionCancel() {
-		return constructionCancel;
-	}
-
-	public WebElement getHospitalCancel() {
-		return hospitalCancel;
-	}
-
-	public WebElement getRegularTagcancel() {
-		return regularTagcancel;
-	}
-
-	public WebElement getLesspriorityCancel() {
-		return lesspriorityCancel;
-	}
 
 	public WebElement getSchoolCancel() {
 		return schoolCancel;
@@ -854,15 +825,6 @@ public class GeneratorInformation1 {
 		Thread.sleep(200);
 		schoolCancel.click();
 		Thread.sleep(200);
-		lesspriorityCancel.click();
-		Thread.sleep(200);
-		regularTagcancel.click();
-		Thread.sleep(200);
-		hospitalCancel.click();
-		Thread.sleep(200);
-		newgenCancel.click();
-		Thread.sleep(200);
-		constructionCancel.click();
 	}
 	
 	public void OctonumberwithEdit()
@@ -920,13 +882,13 @@ public class GeneratorInformation1 {
 	public void ParentAccountwithPricebook()
 	{
 		Actions act = new Actions(driver);
-		act.moveToElement(pricebookGenerator).click().perform();	
+		act.moveToElement(healthsummitGenerator).click().perform();	
 	}
 	
 	public void KeeptheAssigned()
 	{
 		parentAccount.click();
-		pricebookGenerator.click();
+		healthsummitGenerator.click();
 		Actions act = new Actions(driver);
 		act.moveToElement(unassignButton).click().perform();
 		WebElement location = driver.findElement(By.xpath("//div[@class='modal-box']"));

@@ -117,7 +117,7 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 	  "The Creation Date is present on the top left of the page"); }
 	  
 	  
-	 /* @Test(dependsOnMethods = "TC_006GeneratorInformation_withAddedCreationdate")
+	  @Test(dependsOnMethods = "TC_006GeneratorInformation_withAddedCreationdate")
 	  public void TC_007GeneratorInformation_withAddtag() throws InterruptedException 
 	  { 
 		  gp = new GeneratorInformation1(driver);
@@ -128,19 +128,13 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 		  gp.getAddtagButton().click();
 
 		  String[] tags = {
-		      "Manufacturing",
-		      "Urgent",
-		      "Summary",
-		      "Newwwwww",
-		      "Medical Waste",
-		      "Test Tag 63093",
-		      "School",
-		      "Less Priority",
-		      "Priority",
-		      "Regular tag",
-		      "Hospital",
-		      "Construction",
-		      "New Gen"
+		      "After Care",
+		      "Tag779017",
+		      "Test Tag 98066",
+		      "Med Waste",
+		      "BBg",
+		      "Tag647650",
+		      "Test Tag 99850",
 		  };
 
 		  Actions actions = new Actions(driver);
@@ -208,11 +202,11 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 		  gp.getAddtagButton().click();
 
 		  String[] tags = {
-		      "Manufacturing",
-		      "Urgent",
-		      "Summary",
-		      "Newwwwww",
-		      "Medical Waste",
+				  "After Care",
+			      "Tag779017",
+			      "Test Tag 98066",
+			      "Med Waste",
+			      "BBg",
 		  };
 
 		  Actions actions = new Actions(driver);
@@ -277,11 +271,11 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 		  gp.getAddtagButton().click();
 
 		  String[] tags = {
-		      "Manufacturing",
-		      "Urgent",
-		      "Summary",
-		      "Newwwwww",
-		      "Medical Waste",
+				  "After Care",
+			      "Tag779017",
+			      "Test Tag 98066",
+			      "Med Waste",
+			      "BBg",
 		  };
 
 		  Actions actions = new Actions(driver);
@@ -325,7 +319,7 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 		  gp.getCancelButton().click();
 		  System.out.println("User is not able to add tags when clicked on cancel : PASS");
 		  utilityclassobject.gettest().log(Status.PASS,"User is not able to add tags when clicked on cancel");		  
-	  }*/
+	  }
 	  
 	  // need to change the dependency
 	  
@@ -625,7 +619,7 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 	  public void TC_044GeneratorInformation_Attachtoservicelocation() { 
 	  WebElement servicelocation = driver.findElement(By.xpath("//button[@id='attach-to service location']"));
 	  Assert.assertTrue(servicelocation.isDisplayed(),"Servicelocation is displayed");
-	  WebElement location = driver.findElement(By.xpath("//span[contains (text(),'(Henry) Premier Med Waste Solution display')]")); 
+	  WebElement location = driver.findElement(By.xpath("//span[contains (text(),'(Henry) Premier Med Waste Solution')]")); 
 	  Assert.assertTrue(location.isDisplayed(), "Loaction is displayed");
 	  utilityclassobject.gettest().log(Status.PASS,"The main location of the generator is present in the field");
 	  
@@ -638,53 +632,50 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 	  public void TC_045GeneratorInformation_Servicelocationwithotherlocation() throws InterruptedException 
 	  { 
 		  gp.getServiceLocation().click();
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-		  WebElement dropdown = driver.findElement(By.xpath("//ul[@role='listbox']"));
+			WebElement dropdown = wait.until(
+			        ExpectedConditions.visibilityOfElementLocated(
+			                By.xpath("//ul[@role='listbox']")));
 
-		  JavascriptExecutor js = (JavascriptExecutor) driver;
+			JavascriptExecutor js = (JavascriptExecutor) driver;
 
-		  Set<String> locations = new LinkedHashSet<>();
+			Set<String> locations = new LinkedHashSet<>();
 
-		  int previousCount = 0;
+			int previousCount = -1;
 
-		  while (true) {
+			while (true) {
 
-		      List<WebElement> options = dropdown.findElements(
-		              By.xpath(".//li[@role='option']"));
+			    List<WebElement> options = dropdown.findElements(
+			            By.xpath(".//li[@role='option']"));
 
-		      for (WebElement option : options) {
+			    for (WebElement option : options) {
 
-		          String text = option.getText().trim();
+			        String text = option.getText().trim();
 
-		          if (!text.isEmpty() && !text.equals("Satellite Locations")) {
-		              locations.add(text);
-		          }
-		      }
+			        if (!text.isEmpty() && !text.equalsIgnoreCase("Test Company Display Name22755")) {
+			            locations.add(text);
+			        }
+			    }
 
-		      // Scroll dropdown to bottom
-		      js.executeScript(
-		              "arguments[0].scrollTop = arguments[0].scrollHeight;",
-		              dropdown);
+			    js.executeScript(
+			            "arguments[0].scrollTop = arguments[0].scrollHeight;",
+			            dropdown);
 
-		      Thread.sleep(1000);
+			    Thread.sleep(1000);
 
-		      // Stop when no new locations are added
-		      if (locations.size() == previousCount) {
-		          break;
-		      }
+			    if (locations.size() == previousCount) {
+			        break;
+			    }
 
-		      previousCount = locations.size();
-		  }
+			    previousCount = locations.size();
+			}
 
-		  System.out.println("Total Locations Found: " + locations.size());
+			System.out.println("Total Locations : " + locations.size());
 
-		  for (String location : locations) {
-		      System.out.println(location);
-		  }
-
-		  utilityclassobject.gettest().log(
-		          Status.PASS,
-		          "Apart from the main location, satellite locations are available in the dropdown to select from.");
+			for (String location : locations) {
+			    System.out.println(location);
+			}
 		  }
 	  
 	  
@@ -732,8 +723,7 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 	  gp.getParentAccount().click();
 	  gp.getParentAccount().sendKeys(Keys.CONTROL + "a"); 
 	  gp.getParentAccount().sendKeys(Keys.DELETE); 
-	  String[] types = {"G-101-0625 - Coastal Dental Group", "G-107-7136 - PriceBook Test 2.0",
-	  "G-101-0624 - Summit Healthcare", };
+	  String[] types = {"G-100-0050 - Parent Account", };
 	  
 	  Actions actions = new Actions(driver);
 	  
@@ -776,7 +766,7 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 	  public void TC_053GeneratorInformation_ParentaccontwithUnassign() throws InterruptedException { 
 	  gp.Unassignbutton(); 
 	  gp.getParentAccount().click();
-	  gp.ParentAccountwithCostalgroup();
+	  gp.ParentaccountGenerator();
 	  System.out.println("A pop up appeared- asking reason to unassign");
 	  utilityclassobject.gettest().log(Status.INFO,"A pop up appeared- asking reason to unassign");
 	  
@@ -813,8 +803,10 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 	  public void TC_057GeneratorInformtion_Withanotherparentaccount() throws
 	  InterruptedException { 
 	  gp.Unassignbutton(); Thread.sleep(200);
-	  gp.getParentAccount().click(); gp.ParentAccountwithPricebook();
-	  gp.Unassignbutton(); Thread.sleep(200); gp.getParentAccount().click();
+	  gp.getParentAccount().click(); 
+	  gp.ParentAccountwithPricebook();
+	  gp.Unassignbutton(); Thread.sleep(200); 
+	  gp.getParentAccount().click();
 	  gp.ParentaccountGenerator(); System.out.
 	  println("The user is able to assign another generator as its parent account"
 	  ); utilityclassobject.gettest().log(Status.INFO,
@@ -926,8 +918,7 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 	  gp.getGeneratormainphone().click();
 	  gp.getGeneratormainphone().sendKeys(Keys.CONTROL + "a");
 	  gp.getGeneratormainphone().sendKeys(Keys.DELETE);
-	  utilityclassobject.gettest().log(Status.
-	  PASS,"The user is able to save the details as it is not a mandatory field");
+	  utilityclassobject.gettest().log(Status. PASS,"The user is able to save the details as it is not a mandatory field");
 	  
 	  }
 	  
