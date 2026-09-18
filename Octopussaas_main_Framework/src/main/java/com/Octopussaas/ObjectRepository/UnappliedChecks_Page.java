@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.apache.xmlbeans.impl.xb.xsdschema.FieldDocument.Field.Xpath;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -255,12 +256,30 @@ public class UnappliedChecks_Page {
 	private WebElement paymentremovedfrominvoicesuccessfullymessage;
 	@FindBy(xpath = "//td[@class='px-4 py-3 text-gray-800 max-w-xl']")
 	private WebElement fkrstsuggestionfromlist;
+	@FindBy(xpath = "//label[text()='Remaining Amount']/../descendant::p")
+	private WebElement remainingamountfromcheckdetailspopup;
+	@FindBy(xpath = "(//div[@class='flex justify-between items-center text-sm ']/descendant::div)[3]")
+	private WebElement amountfromaddedinvoicefromcheckdetailspopup;
 	
 	
 	
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	public WebElement getAmountfromaddedinvoicefromcheckdetailspopup() {
+		return amountfromaddedinvoicefromcheckdetailspopup;
+	}
+	public WebElement getRemainingamountfromcheckdetailspopup() {
+		return remainingamountfromcheckdetailspopup;
+	}
 	public WebElement getFkrstsuggestionfromlist() {
 		return fkrstsuggestionfromlist;
 	}
@@ -712,12 +731,14 @@ public class UnappliedChecks_Page {
 	
 	public void  AddAmountField(String txt)
 	{
-		amountfieldfromquickcheckadd.click();
-		//write code to clear the field using robot class
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+		 JavascriptExecutor js = (JavascriptExecutor) driver;
 
-		js.executeScript("arguments[0].value='';", amountfieldfromquickcheckadd);
-		amountfieldfromquickcheckadd.sendKeys(txt);
+		    js.executeScript("arguments[0].focus();", amountfieldfromquickcheckadd);
+
+		    amountfieldfromquickcheckadd.sendKeys(Keys.CONTROL, "a");
+		    amountfieldfromquickcheckadd.sendKeys(Keys.BACK_SPACE);
+
+		    amountfieldfromquickcheckadd.sendKeys(txt);
 		
 	}
 	public void  AddMemoNote(String txt)

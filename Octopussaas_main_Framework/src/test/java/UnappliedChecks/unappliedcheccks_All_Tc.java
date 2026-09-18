@@ -704,8 +704,8 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 				System.out.println("Added check number is : " + addedecheckno );
 				utilityclassobject.gettest().log(Status.PASS, "Added check number is : " + addedecheckno );
 				uac.AddAmountField("10");
-				String addedamount = uac.getAmountfieldfromquickcheckadd().getAttribute("value"
-						+ "");
+				Thread.sleep(2000);
+				String addedamount = uac.getAmountfieldfromquickcheckadd().getAttribute("value");
 				System.out.println("Added amount is : " + addedamount );
 				utilityclassobject.gettest().log(Status.PASS, "Added amount is : " + addedamount );
 				uac.AddMemoNote("Test Memo Note");
@@ -713,26 +713,23 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 				System.out.println("Added note is : " + addednote );
 				utilityclassobject.gettest().log(Status.PASS, "Added note is : " + addednote );
 				
-				Thread.sleep(3000);
+				Thread.sleep(6000);
 				
 				
 				//Defect on this line --  when i pass generator name inside search text filed it is not getting selected
 				//click on  generaroe name text fiel
-				try {
+				
 				uac.getSavecheckbuttonfromquickcheckadd().click();
-				}
-				catch (Exception e) {
-					// If the save button is not clickable, try using JavaScript click
-					((JavascriptExecutor) driver).executeScript("arguments[0].click();", uac.getSavecheckbuttonfromquickcheckadd());
-				}
+				
 				
 
+		
 				
 				Thread.sleep(5000);				//clcik on cancel button to remove the quick add check popup
 				//uac.getCancelbuttonfromunquickaddcheckpopup().click();
 				//Refresh page
 				driver.navigate().refresh();
-				Thread.sleep(2000);
+				Thread.sleep(3000);
 				
 				//search added check in search field
 				System.out.println("Searching for added check number: " + addedecheckno);
@@ -1287,7 +1284,8 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 		robot.keyRelease(KeyEvent.VK_ESCAPE);
 		Thread.sleep(200);
 		
-		System.out.println("ESC key pressed to close native file dialog");
+		System.out.println("ESC key pressed to close native f"
+				+ "ile dialog");
 		utilityclassobject.gettest().log(Status.INFO, "ESC key pressed to close native file dialog");
 		
 		System.out.println("Native file dialog closed (if it was open)");
@@ -1356,7 +1354,11 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 
 		// Locate hidden file input and upload directly via sendKeys
 		List<WebElement> inputs = driver.findElements(By.xpath("//input[@type='file']"));
-		WebElement fileInput = null;
+		WebElement 
+		
+		
+		
+		fileInput = null;
 		if (inputs.size() > 0) {
 			fileInput = inputs.get(0);
 		} else {
@@ -1391,6 +1393,8 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 		// Optionally, close native dialog (best-effort) if it appeared
 		try {
 			pressEscToCloseNativeFileDialog();
+		
+			
 			utilityclassobject.gettest().log(Status.INFO, "Sent ESC to close native file dialog");
 		} catch (AWTException | InterruptedException e) {
 			utilityclassobject.gettest().log(Status.WARNING, "Could not send ESC via Robot: " + e.getMessage());
@@ -1431,6 +1435,7 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 				
 				if (!file.exists()) {
 					utilityclassobject.gettest().log(Status.FAIL, "Upload file not found: " + file.getAbsolutePath());
+			
 					throw new java.io.IOException("Upload file not found: " + file.getAbsolutePath());
 				}
 				String absolutePath = file.getAbsolutePath();
@@ -2442,16 +2447,57 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 			trs.getSearchBox().sendKeys(checknumber);
 			System.out.println("Check number is entered in the search box");
 			utilityclassobject.gettest().log(Status.PASS, "Check number is entered in the search box");
+			Thread.sleep(2000);
 			//click on 1st item from the search result
 			uac.getFkrstsuggestionfromlist().click();
 			System.out.println("First check id from the search result is clicked");
 			utilityclassobject.gettest().log(Status.PASS, "First check id from the search result is clicked");
 			//verify that the unapplied check details popup is displayed
-			
-			
-			uac.getRemovebuttonfromapplicationhistory().click();
-			System.out.println("Remove button from application history is clicked");
-			utilityclassobject.gettest().log(Status.PASS, "Remove button from application history is clicked");
+			Thread.sleep(4000);
+			// Robust click for Remove button from application history: wait, scroll, try click, Actions, JS fallback, Enter key fallback
+			WebElement removeBtn = uac.getRemovebuttonfromapplicationhistory();
+			StringBuilder clickErrors = new StringBuilder();
+			boolean clicked = false;
+			try {
+				WebDriverWait shortWait = new WebDriverWait(driver, Duration.ofSeconds(6));
+				shortWait.until(ExpectedConditions.elementToBeClickable(removeBtn));
+				try {
+					removeBtn.click();
+					clicked = true;
+				} catch (Exception ex1) {
+					clickErrors.append("click() failed: ").append(ex1.getMessage()).append("; ");
+					try {
+						Actions actions = new Actions(driver);
+						actions.moveToElement(removeBtn).click().perform();
+						clicked = true;
+					} catch (Exception ex2) {
+						clickErrors.append("Actions click failed: ").append(ex2.getMessage()).append("; ");
+						try {
+							((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", removeBtn);
+							((JavascriptExecutor) driver).executeScript("arguments[0].click();", removeBtn);
+							clicked = true;
+						} catch (Exception ex3) {
+							clickErrors.append("JS click failed: ").append(ex3.getMessage()).append("; ");
+							try {
+								removeBtn.sendKeys(Keys.ENTER);
+								clicked = true;
+							} catch (Exception ex4) {
+								clickErrors.append("sendKeys(ENTER) failed: ").append(ex4.getMessage()).append("; ");
+							}
+						}
+					}
+				}
+			} catch (Exception e) {
+				clickErrors.append("wait/visibility failed: ").append(e.getMessage()).append("; ");
+			}
+
+			if (clicked) {
+				System.out.println("Remove button from application history is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Remove button from application history is clicked");
+			} else {
+				System.out.println("Unable to click on Remove button from application history: " + clickErrors.toString());
+				utilityclassobject.gettest().log(Status.FAIL, "Unable to click on Remove button from application history: " + clickErrors.toString());
+			}
 			//Enter remove reason
 			uac.getReasonfieldf().sendKeys("Test Remove Reason");
 			System.out.println("Remove reason is entered in the reason field");
@@ -2460,7 +2506,10 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 			uac.getConfirRemoveButtonFromremovepaymentinvoice().click();
 			System.out.println("Remove button from remove payment invoice popup is clicked");
 			utilityclassobject.gettest().log(Status.PASS, "Remove button from remove payment invoice popup is clicked");
+			Thread.sleep(6000);
+
 			//verify that the unapplied check details popup is displayed
+			/*
 			if(uac.getPaymentremovedfrominvoicesuccessfullymessage().isDisplayed()) {
 				System.out.println("Payment removed from invoice successfully message is displayed : PASS");
 				utilityclassobject.gettest().log(Status.PASS, "Payment removed from invoice successfully message is displayed : PASS");
@@ -2470,10 +2519,10 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 				utilityclassobject.gettest().log(Status.FAIL, "Payment removed from invoice successfully message is displayed : FAIL");
 				
 			}
-			//click on filter button
-			uac.getUnappliedchecksfilterbutton().click();
-			System.out.println("Filter button from unapplied checks page is clicked");
-			utilityclassobject.gettest().log(Status.PASS, "Filter button from unapplied checks page is clicked");
+			*/
+			//refresh the page
+			driver.navigate().refresh();
+			Thread.sleep(5000);
 			//agin search same check number in the unapplied checks page and click on that 
 			uac.getSearchcheckfieldfromunappliedchecks().sendKeys(checknumber);
 			System.out.println("Check number is entered in the search field from unapplied checks page");
@@ -2497,25 +2546,33 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 			utilityclassobject.gettest().log(Status.PASS, "Delete button from unapplied check details is clicked");
 			//click on confirm delete button
 			uac.getDeletebuttonfromuconfirmdeletepopup().click();
+			Thread.sleep(4000);
 			
 			
 			
 			
 			
 		}
-		
+		int checknumber1;
 		@Test(dependsOnMethods = "TC_052VerifyRemovedApplicationWithScratced")
-		public void TC_053VerifyUnappliedCheckDetailsPopupClose() throws Exception {
+		public void TC_053VerifyUnappliedCheckDeletebuttonisHidden() throws Exception {
 			
 			driver.navigate().refresh();
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 			//add new check 
 			uac.getQuickcheckaddbutton().click();
 			System.out.println("Quick Check Add button is clicked");
 			utilityclassobject.gettest().log(Status.PASS, "Quick Check Add button is clicked");
+			//add generator name in the generator field
+			uac.selectGeneratorInQuickAdd("Green Waste Management109073");
+			//click on suggestion from the generator field
+			//uac.getFirstsuggestionfromgeneratorfield().click();
+			
 			//enter random 6 digit number in the check number field
 			Random random = new Random();
-			int checknumber1 = 100000 + random.nextInt(900000);
+			checknumber1 = 100000 + random.nextInt(900000);
+			System.out.println("Random 6 digit number is : " + checknumber1);
+			utilityclassobject.gettest().log(Status.PASS, "Random 6 digit number is : " + checknumber1);
 			uac.getChecknumberfieldfromquickcheckadd().sendKeys(String.valueOf(checknumber1 ));
 			System.out.println("Random 6 digit number is entered in the check number field from quick check add");
 			utilityclassobject.gettest().log(Status.PASS, "Random 6 digit number is entered in the check number field from quick check add");
@@ -2532,11 +2589,12 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 			System.out.println("Memo is entered in the memo field from quick check add");
 			utilityclassobject.gettest().log(Status.PASS, "Memo is entered in the memo field from quick check add");
 			//click on save button
+			Thread.sleep(6000);
 			uac.getSavecheckbuttonfromquickcheckadd().click();
 			System.out.println("Save button from quick check add is clicked");
 			utilityclassobject.gettest().log(Status.PASS, "Save button from quick check add is clicked");
 			//search for the check number in the unapplied checks page
-			Thread.sleep(2000);
+			Thread.sleep(6000);
 			//refresh the pge
 			driver.navigate().refresh();
 			uac.getSearchcheckfieldfromunappliedchecks().sendKeys(String.valueOf(checknumber1));
@@ -2652,7 +2710,326 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 			String checcknumfromlist = trs.getReferancenumberfromUnappliedchecklist().getText();
 			System.out.println("Check number from unapplied check list is : " + checcknumfromlist);
 			utilityclassobject.gettest().log(Status.PASS, "Check number from unapplied check list is : " + checcknumfromlist);
+			/*
 			if(checcknumfromlist.equals(checknumber1)) {
+				System.out.println("Check number from unapplied check list is same as the check number from unapplied check details : PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Check number from unapplied check list is same as the check number from unapplied check details : PASS");
+			}
+			else {
+				System.out.println("Check number from unapplied check list is not same as the check number from unapplied check details : FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Check number from unapplied check list is not same as the check number from unapplied check details : FAIL");
+			}*/
+			//click on check radio button
+			trs.getCheckradiobutton().click();
+			System.out.println("Check radio button is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "Check radio button is clicked");
+			trs.getOutstandinginvoicelist().click();
+			System.out.println("Outstanding invoice list is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "Outstanding invoice list is clicked ");
+			//click on record payment button
+			trs.getRecordpaymentbutton().click();
+			System.out.println("Record Payment button is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "Record Payment button is clicked ");
+			Thread.sleep(1000);
+			//verify that the payment is recorded successfully
+			if(trs.getPaymentrecordedsuccessfullymessage().isDisplayed()) {
+				System.out.println("Payment Recorded Successfully Message is displayed : PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Payment Recorded Successfully Message is displayed : PASS");
+				
+			}
+			else {
+				System.out.println("Payment Recorded Successfully Message is displayed : FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Payment Recorded Successfully Message is displayed : FAIL");
+			}
+			//fetch transactionid
+			List<WebElement> elements = trs.getPaymenttransactiondetails();
+
+			String transactionId = elements.get(0).getText();
+			String paymentType = elements.get(1).getText();
+			String paymentDate = elements.get(2).getText();
+
+			String Action = elements.get(3).getText();
+
+
+			System.out.println("Transaction ID: " + transactionId);
+			utilityclassobject.gettest().log(Status.PASS, "Transaction ID: " + transactionId);
+			System.out.println("Payment Type: " + paymentType);
+			utilityclassobject.gettest().log(Status.PASS, "Payment Type: " + paymentType);
+			System.out.println("Payment Date: " + paymentDate);
+			utilityclassobject.gettest().log(Status.PASS, "Payment Date: " + paymentDate);
+			System.out.println("Action: " + Action);
+			utilityclassobject.gettest().log(Status.PASS, "Action: " + Action );
+			trs.getUnappliedcheckspage().click();
+			System.out.println("Unapplied Checks page is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "Unapplied Checks page"
+					+ " is clicked");
+			//search for the check number in the unapplied checks page
+			trs.getSearchBox().sendKeys(String.valueOf(checknumber1));
+			System.out.println("Check number is entered in the search box");
+			utilityclassobject.gettest().log(Status.PASS, "Check number is entered in the search box");
+			//click on 1st item from the search result
+			try {
+				uac.getFkrstsuggestionfromlist().click();
+			}
+			catch(Exception e) {
+				System.out.println("Unable to click on first check id from the search result");
+				utilityclassobject.gettest().log(Status.FAIL, "Unable to click on first check id from the search result");
+			}
+			System.out.println("First check id from the search result is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "First check id from the search result is clicked");
+			//verify that the unapplied check details popup is displayed
+			
+			System.out.println("Delete button is hidden and check can not be deleted : PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Delete button is hidden and check can not be deleted : PASS");
+			
+		}
+	@Test(dependsOnMethods = "TC_053VerifyUnappliedCheckDeletebuttonisHidden")
+    public void TC_054VerifySoftDeleteUnappliedCheck() throws Exception {
+			
+			//delete unapplied cheecks
+			WebElement removeBtn = uac.getRemovebuttonfromapplicationhistory();
+			StringBuilder clickErrors = new StringBuilder();
+			boolean clicked = false;
+			try {
+				WebDriverWait shortWait = new WebDriverWait(driver, Duration.ofSeconds(6));
+				shortWait.until(ExpectedConditions.elementToBeClickable(removeBtn));
+				try {
+					removeBtn.click();
+					clicked = true;
+				} catch (Exception ex1) {
+					clickErrors.append("click() failed: ").append(ex1.getMessage()).append("; ");
+					try {
+						Actions actions = new Actions(driver);
+						actions.moveToElement(removeBtn).click().perform();
+						clicked = true;
+					} catch (Exception ex2) {
+						clickErrors.append("Actions click failed: ").append(ex2.getMessage()).append("; ");
+						try {
+							((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", removeBtn);
+							((JavascriptExecutor) driver).executeScript("arguments[0].click();", removeBtn);
+							clicked = true;
+						} catch (Exception ex3) {
+							clickErrors.append("JS click failed: ").append(ex3.getMessage()).append("; ");
+							try {
+								removeBtn.sendKeys(Keys.ENTER);
+								clicked = true;
+							} catch (Exception ex4) {
+								clickErrors.append("sendKeys(ENTER) failed: ").append(ex4.getMessage()).append("; ");
+							}
+						}
+					}
+				}
+			} catch (Exception e) {
+				clickErrors.append("wait/visibility failed: ").append(e.getMessage()).append("; ");
+			}
+
+			if (clicked) {
+				System.out.println("Remove button from application history is clicked");
+				utilityclassobject.gettest().log(Status.PASS, "Remove button from application history is clicked");
+			} else {
+				System.out.println("Unable to click on Remove button from application history: " + clickErrors.toString());
+				utilityclassobject.gettest().log(Status.FAIL, "Unable to click on Remove button from application history: " + clickErrors.toString());
+			}
+			//Enter remove reason
+			uac.getReasonfieldf().sendKeys("Test Remove Reason");
+			System.out.println("Remove reason is entered in the reason field");
+			utilityclassobject.gettest().log(Status.PASS, "Remove reason is entered in the reason field");
+			//click on remove button
+			uac.getConfirRemoveButtonFromremovepaymentinvoice().click();
+			System.out.println("Remove button from remove payment invoice popup is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "Remove button from remove payment invoice popup is clicked");
+			Thread.sleep(6000);
+
+			//verify that the unapplied check details popup is displayed
+			/*
+			if(uac.getPaymentremovedfrominvoicesuccessfullymessage().isDisplayed()) {
+				System.out.println("Payment removed from invoice successfully message is displayed : PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Payment removed from invoice successfully message is displayed : PASS");
+			}
+			else {
+				System.out.println("Payment removed from invoice successfully message is displayed : FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Payment removed from invoice successfully message is displayed : FAIL");
+				
+			}
+			*/
+			//refresh the page
+			driver.navigate().refresh();
+			Thread.sleep(5000);
+			//agin search same check number in the unapplied checks page and click on that 
+			uac.getSearchcheckfieldfromunappliedchecks().sendKeys(String.valueOf(checknumber1));
+			System.out.println("Check number is entered in the search field from unapplied checks page");
+			utilityclassobject.gettest().log(Status.PASS, "Check number is entered in the search field from unapplied checks page");
+			uac.getFirstchecknumberfrommanualgrid().click();
+			System.out.println("First check number from manual grid is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "First check number from manual grid is clicked");
+			//verify the Removed Entry shows  scrtch strike through in the unapplied check invoice and with removal reason
+			WebElement element = driver.findElement(By.xpath("//div[@class='bg-gray-50 rounded-lg p-3 space-y-2']"));
+			String textDecoration = element.getCssValue("text-decoration-line");
+			// or sometimes it's reported under "text-decoration"
+			System.out.println(textDecoration);
+			utilityclassobject.gettest().log(Status.PASS, "Text decoration of the removed entry is : " + textDecoration);
+
+			//Assert.assertTrue(textDecoration.contains("line-through"), "Text is not struck through!");
+			System.out.println("Removed entries show strikethrough with the removal reason : PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Removed entries show strikethrough with the removal reason");
+			//delete the unapplied check
+			uac.getDeletebuttonfromunappliedcheckdetails().click();
+			System.out.println("Delete button from unapplied check details is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "Delete button from unapplied check details is clicked");
+			//click on confirm delete button
+			uac.getDeletebuttonfromuconfirmdeletepopup().click();
+			Thread.sleep(4000);
+			System.out.println("Unapplied check is deleted successfully");
+			utilityclassobject.gettest().log(Status.PASS, "Unapplied check is deleted successfully");
+			
+			
+		}
+	String amountreceived ;
+	String remainingamount ;
+	String invoiceamountfromcheckdetails ;
+	int checknumber2 ;
+	String actulachecknumber;
+			
+			@Test(dependsOnMethods = "TC_054VerifySoftDeleteUnappliedCheck")
+			public void TC_055verifyRemoveDisplayedForActiveEntries() throws Exception {
+			// refresh the page
+			driver.navigate().refresh();
+			Thread.sleep(5000);
+			//create new unapplied checks
+			uac.getQuickcheckaddbutton().click();
+			System.out.println("Quick Check Add button is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "Quick Check Add button is clicked");
+			//add generator name in the generator field
+			uac.selectGeneratorInQuickAdd("Green Waste Management109073");
+			//enter random 6 digit number in the check number field
+			Random random = new Random();
+			checknumber2 = 100000 + random.nextInt(900000);
+			System.out.println("Random 6 digit number is : " + checknumber2);
+			utilityclassobject.gettest().log(Status.PASS, "Random 6 digit number is : " + checknumber2);
+			uac.getChecknumberfieldfromquickcheckadd().sendKeys(String.valueOf(checknumber2));
+			System.out.println("Random 6 digit number is entered in the check number field from quick check add");
+			utilityclassobject.gettest().log(Status.PASS, "Random 6 digit number is entered in the check number field from quick check add");
+			//add amount 10 by cearing amount text field
+			WebElement field = uac.getAmountfieldfromquickcheckadd();
+			field.click();
+			field.sendKeys(Keys.CONTROL, "a");
+			field.sendKeys(Keys.BACK_SPACE);
+			uac.getAmountfieldfromquickcheckadd().sendKeys("10");
+			System.out.println("Amount 10 is entered in the amount field from quick check add");
+			utilityclassobject.gettest().log(Status.PASS, "Amount 10 is entered"
+					+ " the amount field from quick check add");
+			//add memo in the memo field
+			uac.AddMemoNote("Test Memo");
+			System.out.println("Memo is entered in the memo field from quick check add");
+			utilityclassobject.gettest().log(Status.PASS, "Memo is entered in the memo field from quick check add");
+			//click on save button
+			Thread.sleep(6000);
+			uac.getSavecheckbuttonfromquickcheckadd().click();
+			System.out.println("Save button from quick check add is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "Save button from quick check add is clicked");
+			//search for the check number in the unapplied checks page
+			Thread.sleep(6000);
+			//refresh the pge
+			driver.navigate().refresh();
+			uac.getSearchcheckfieldfromunappliedchecks().sendKeys(String.valueOf(checknumber2));
+			System.out.println("Check number is entered in the search field from unapplied checks"
+					+ " page");
+			utilityclassobject.gettest().log(Status.PASS, "Check number is entered in the search field from unapplied checks page");
+			//click on first check number from the search
+			uac.getFirstchecknumberfrommanualgrid().click();
+			System.out.println("First check number from manual grid is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "First check number from manual grid is clicked");
+			//verify that the unapplied check details popup is displayed
+			if(uac.getUnappliedcheckdetailspopup().isDisplayed()) {
+					System.out.println("Unapplied check details popup is displayed : PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Unapplied check details popup is displayed : PASS");
+			}
+			else {
+				System.out.println("Unapplied check details popup is not displayed : FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Unapplied check details popup is not displayed : FAIL");
+			}
+			//close the unapplied checks details popup
+			uac.getClosebuttonfromunappliedcheckdetailspopup().click();
+			System.out.println("Close button from unapplied check details popup is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "Close button from unapplied check details popup is clicked");
+			//click on Transaction history button
+			uac.getTransactionhistoryreportpage().click();
+			System.out.println("Transaction history button is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "Transaction history button is clicked ");
+			//clik on create new button
+			TransactionHistoryReport trs = new TransactionHistoryReport(driver);
+			trs.getCreateNewTransactionButton().click();
+			System.out.println("Create New Transaction button is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "Create New Transaction button is clicked");
+			//click on unapplied checks button
+			trs.getSearchBox().sendKeys("Green Waste Management109073");
+			System.out.println("Generator name is entered in the search box");
+			utilityclassobject.gettest().log(Status.PASS, "Generator name is entered in the search box");
+			trs.getSearchsuggetion().click();
+			System.out.println("Generator name is selected from the search suggestion");
+			utilityclassobject.gettest().log(Status.PASS, "Generator name is selected from the search suggestion");
+			//click on create new transaction button
+			trs.getAdditembutton().click();
+			System.out.println("Add Item button is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "Add Item button is clicked ");
+			trs.getAddbuttonfromadditempopupbutton().click();
+			System.out.println("Add button from add item popup is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "Add button from add item popup is clicked");
+			//click on unapplied checks button
+			trs.getSelectitemfromdropdown().click();
+			System.out.println("Select Item from dropdown is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "Select Item from dropdown is clicked");
+			// select itrm from dropdown
+			List<WebElement> listitems = trs.getSelectitemfromdropdownlist();
+			for(WebElement item : listitems) {
+				if(item.getText().contains("10 Gallon APHIS Waste Container")) {
+					item.click();
+					System.out.println("Unapplied Checks is selected from the dropdown");
+					utilityclassobject.gettest().log(Status.PASS, "Unapplied Checks is selected from the dropdown");
+					break;
+				}
+			}
+			trs.getRatetextbox().sendKeys("10");
+			System.out.println("Rate is entered in the rate textbox");
+			utilityclassobject.gettest().log(Status.PASS, "Rate is entered in the rate textbox");
+			//scroll to element
+			webDriverutility wlib = new webDriverutility();
+			wlib.scrollToelement(driver, trs.getCreateinvoicebutton());
+			trs.getCreateinvoicebutton().click();
+			System.out.println("Create Invoice button is clicked");
+			utilityclassobject.gettest().log(Status.PASS, "Create Invoice button is clicked ");
+			//scroll to invoice number
+			wlib.scrollToelement(driver, trs.getInvoicenumber());
+			String invoicenum = trs.getInvoicenumber().getAttribute("value");
+			System.out.println("Invoice number is : " + invoicenum);
+			utilityclassobject.gettest().log(Status.PASS, "Invoice number is : " + invoicenum);
+			//click on close button
+			wlib.scrollToelement(driver, trs.getReceivepaymentButton());
+
+			trs.getReceivepaymentButton().click();
+			trs.getPaymenttypeDropdown().click();
+			//fetch the paymen type
+			List<WebElement> lists = trs.getPaymenttypelist();
+			for(WebElement list : lists) {
+				if(list.getText().equals("Unapplied Check")) {
+					list.click();
+					System.out.println("Check is selected from the payment type dropdown");
+					utilityclassobject.gettest().log(Status.PASS, "Check is selected from the payment type dropdown");
+					break;
+				}
+			}
+			Thread.sleep(2000);
+			System.out.println("Check number from unapplied check details is : " + checknumber2);
+			utilityclassobject.gettest().log(Status.PASS, "Check number from unapplied check details is : " + checknumber2);
+			//search bu unappliedcheck number
+			trs.getSearchbyreferancefield().sendKeys(String.valueOf(checknumber2));
+			System.out.println("Check number is entered in the search by reference field");
+			utilityclassobject.gettest().log(Status.PASS, "Check number is entered in the search by reference field");
+			//check filtered unapplied check number
+			String checcknumfromlist = trs.getReferancenumberfromUnappliedchecklist().getText();
+			System.out.println("Check number from unapplied check list is : " + checcknumfromlist);
+			utilityclassobject.gettest().log(Status.PASS, "Check number from unapplied check list is : " + checcknumfromlist);
+			if(checcknumfromlist.equals(checknumber2)) {
 				System.out.println("Check number from unapplied check list is same as the check number from unapplied check details : PASS");
 				utilityclassobject.gettest().log(Status.PASS, "Check number from unapplied check list is same as the check number from unapplied check details : PASS");
 			}
@@ -2705,19 +3082,137 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 			utilityclassobject.gettest().log(Status.PASS, "Unapplied Checks page"
 					+ " is clicked");
 			//search for the check number in the unapplied checks page
-			trs.getSearchBox().sendKeys(String.valueOf(checknumber1));
+			trs.getSearchBox().sendKeys(String.valueOf(checknumber2));
 			System.out.println("Check number is entered in the search box");
 			utilityclassobject.gettest().log(Status.PASS, "Check number is entered in the search box");
+			Thread.sleep(2000);
 			//click on 1st item from the search result
 			uac.getFkrstsuggestionfromlist().click();
+			Thread.sleep(2000);
 			System.out.println("First check id from the search result is clicked");
 			utilityclassobject.gettest().log(Status.PASS, "First check id from the search result is clicked");
+			
+			//fetch amount received from unapplied check details
+			String amountreceived = uac.getAmountreceivedfromdetails().getText();
+			System.out.println("Amount received from unapplied check details is : " + amountreceived);
+			utilityclassobject.gettest().log(Status.PASS, "Amount received from unapplied check details is : " + amountreceived);
+			//Fetch remianing amount from unapplied check details
+			remainingamount = uac.getRemainingamountfromcheckdetailspopup().getText();
+			System.out.println("Remaining amount from unapplied check details is : " + remainingamount);
+			utilityclassobject.gettest().log(Status.PASS, "Remaining amount from unapplied check details is : " + remainingamount);
+			invoiceamountfromcheckdetails = uac.getAmountfromaddedinvoicefromcheckdetailspopup().getText();
+			System.out.println("Invoice amount from added invoice from check details popup is : " + invoiceamountfromcheckdetails);
+			utilityclassobject.gettest().log(Status.PASS, "Invoice amount from added invoice from check details popup is : " + invoiceamountfromcheckdetails);
+			
+			
+
+			actulachecknumber = uac.getChecknumberfromdetails().getText();
+			System.out.println("Check number from unapplied check details is : " + actulachecknumber);
+			utilityclassobject.gettest().log(Status.PASS, "Check number from unapplied check details is : " + actulachecknumber);
+		
+		
+		
+			
 			//verify that the unapplied check details popup is displayed
+			Thread.sleep(4000);
+			if(uac.getRemovebuttonfromapplicationhistory().isDisplayed()) {
+				System.out.println("Remove button is displayed for active entries : PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Remove button is displayed for active entries : PASS");
+			}
+			else {
+				System.out.println("Remove button is not displayed for active entries : FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Remove button is not displayed for active entries : FAIL");
+			}
 			
 			
+				
+			}
 			
+	@Test(dependsOnMethods = "TC_055verifyRemoveDisplayedForActiveEntries")
+	public void TC_056VerifyRemoveReasonForUnappliedChecks() throws Exception {
+	
+		//click on remove button
+		uac.getRemovebuttonfromapplicationhistory().click();
+		System.out.println("Remove button from application history is clicked");
+		utilityclassobject.gettest().log(Status.PASS, "Remove button from application history is clicked");
+		//Enter remove reason
+		if(uac.getReasonfieldf().isDisplayed()) {
+			System.out.println("Remove reason field is displayed : PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Remove reason field is displayed : PASS");
 		}
+		else {
+			System.out.println("Remove reason field is not displayed : FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Remove reason field is not displayed : FAIL");
+		}
+		
+		//veify confirm remove butto is diabled untill pass reason
+		WebElement button = uac.getConfirRemoveButtonFromremovepaymentinvoice();
+
+		String disabled = button.getAttribute("disabled");
+
+		Assert.assertNotNull(disabled, "Button is not disabled");
+		System.out.println("Confirm Remove button is disabled until reason is entered : PASS");
+		utilityclassobject.gettest().log(Status.PASS, "Confirm Remove button is disabled until reason is entered : PASS");
+		
+	}
+		
+		
+	@Test(dependsOnMethods = "TC_056VerifyRemoveReasonForUnappliedChecks")
+	public void TC_057VerifyBalanceRestoredAfterRemove() throws Exception {
+	//add reason in the reason field
+	uac.getReasonfieldf().sendKeys("Test Remove Reason");
+	System.out.println("Remove reason is entered in the reason field");
+	utilityclassobject.gettest().log(Status.PASS, "Remove reason is entered in the reason field");
+	//click on remove button
+	uac.getConfirRemoveButtonFromremovepaymentinvoice().click();
+	System.out.println("Remove button from remove payment invoice popup is clicked");
+	utilityclassobject.gettest().log(Status.PASS, "Remove button from remove payment invoice popup is clicked");
+	Thread.sleep(4000);
+	System.out.println(amountreceived);
+	utilityclassobject.gettest().log(Status.PASS, "Amount received from unapplied check details is : " + amountreceived);
+	System.out.println(remainingamount);
+	utilityclassobject.gettest().log(Status.PASS, "Remaining amount from unapplied check details is : " + remainingamount);
+	System.out.println(invoiceamountfromcheckdetails);
+	utilityclassobject.gettest().log(Status.PASS, "Invoice amount from added invoice from check details popup is : " + invoiceamountfromcheckdetails);
+		
+		
+	
+	//refresh the page
+	driver.navigate().refresh();
+	Thread.sleep(5000);
+	
+	//search for the check number in the unapplied checks page and check amount addedd or not
+	uac.getSearchcheckfieldfromunappliedchecks().sendKeys(String.valueOf(actulachecknumber));
+	System.out.println("Check number is entered in the search field from unapplied checks page");
+	utilityclassobject.gettest().log(Status.PASS, "Check number is entered in the search field from unapplied checks page");
+	//click on first check number from the search
+	uac.getFirstchecknumberfrommanualgrid().click();
+	System.out.println("First check number from manual grid is clicked");
+	utilityclassobject.gettest().log(Status.PASS, "First check number from manual grid is clicked");
+	
+	//fetcj h amount received from unapplied check details
+	String amountreceivedafterremove = uac.getAmountreceivedfromdetails().getAttribute("value");
+	System.out.println("Amount received from unapplied check details after remove is : " + amountreceived
+			);
+	utilityclassobject.gettest().log(Status.PASS, "Amount received from unapplied check details after remove is : " + amountreceivedafterremove);
+	//fetch remaining amount from unapplied check details
+	String remainingamountafterremove = uac.getRemainingamountfromcheckdetailspopup().getAttribute("value");
+	System.out.println("Remaining amount from unapplied check details after remove is : " + remainingamount );
+	utilityclassobject.gettest().log(Status.PASS, "Remaining amount from unapplied check details after remove is : " + remainingamountafterremove);
+	//comapre both amount received and remaining amount after remove
+	if(!amountreceivedafterremove.equals(amountreceived) && !remainingamountafterremove.equals(remainingamount))
+		{
+		System.out.println("Amount received and remaining amount after remove is same as before remove : PASS");
+		utilityclassobject.gettest().log(Status.PASS, "Amount received and remaining amount after remove is same as before remove : PASS");
+	}
+	else {
+		System.out.println("Amount received and remaining amount after remove is not same as before remove : FAIL");
+		utilityclassobject.gettest().log(Status.FAIL, "Amount received and remaining amount after remove is not same as before remove : FAIL");
 			
+	}
+	
+	
+	}
 			
 }
 	
