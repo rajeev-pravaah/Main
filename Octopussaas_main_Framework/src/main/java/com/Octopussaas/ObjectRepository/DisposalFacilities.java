@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
 
 public class DisposalFacilities {
 
@@ -131,6 +133,43 @@ public class DisposalFacilities {
 	private WebElement email1text;
 	@FindBy(xpath = "//p[text()='Email 1 is required']")
 	private WebElement email1fielderrormsg;
+	@FindBy(xpath = "//label[text()='Email 2']")
+	private WebElement email2text;
+	@FindBy(xpath = "//div[text()='Autosaved treatment details']")
+	private WebElement treatmentAutoSaveMessage;
+	@FindBy(xpath = "//label[text()='Email 2']/../descendant::input")
+	private WebElement email2field;
+	@FindBy(xpath = "//label[text()='Email 3']/../descendant::input")
+	private WebElement email3field;
+	@FindBy(xpath = "//p[text()='Notification Type* ']")
+	private WebElement notificationTypefieldtext;
+	@FindBy(xpath = "//p[text()='Notification Type* ']/../../descendant::button")
+	private WebElement notificationTypedropdownfield;
+	@FindBy(xpath = "//div[@class='flex items-center gap-2']")
+	private List<WebElement>  notifiactiontypeslists;
+	@FindBy(xpath = "//label[text()='State Registration Number 1*']/../descendant::input")
+	private WebElement stateRegistrationNumber1field;
+	@FindBy(xpath = "//p[text()='State Registration Number 1 is required']")
+	private WebElement stateRegistrationNumber1fielderrormsg;
+	@FindBy(xpath = "//label[text()='State Registration Number 2']/../descendant::input")
+	private WebElement stateRegistrationNumber2field;
+	@FindBy(xpath = "//label[text()='State Registration Number 3']/../descendant::input")
+	private WebElement stateRegistrationNumber3field;
+	@FindBy(xpath = "//div[@class='w-[33%] pl-2 text-sm text-gray-800 font-medium']")
+	private List<WebElement> wasteprocessingfeelists;
+	@FindBy(xpath = "//label[text()='Email 2']")
+	private WebElement email2fieldtext;
+	@FindBy(xpath = "//label[text()='Email 3']")
+	private WebElement email3fieldtext;
+	@FindBy(xpath = "//div[@class='w-[33%] pl-2 text-sm text-gray-800 font-medium']/../descendant::div[@class='w-[15%]']")
+	private List<WebElement> wasteprocessingeachunits;
+	@FindBy(id = "wasteProcessingFees.Bio/Sharps.active")
+	private WebElement wasteProcessingFeesBioSharpsactivecheckbox;
+	
+	@FindBy(xpath = "//span[text()='Treatment']")
+	private WebElement treatmenttab;
+	@FindBy(xpath = "//div[@class='flex items-center rounded-full bg-gray-100  w-full p-2']")
+	private WebElement biosharpcostfield;
 	
 	
 	
@@ -141,10 +180,61 @@ public class DisposalFacilities {
 	
 	
 	
+	public WebElement getBiosharpcostfield() {
+		return biosharpcostfield;
+	}
+	public WebElement getTreatmenttab() {
+		return treatmenttab;
+	}
+	public WebElement getWasteProcessingFeesBioSharpsactivecheckbox() {
+		return wasteProcessingFeesBioSharpsactivecheckbox;
+	}
+	public WebElement getWasteprocessingeachunits() {
+		return wasteprocessingeachunits.get(0);
+	}
+	public WebElement getEmail3fieldtext() {
+		return email3fieldtext;
+	}
+	public WebElement getEmail2fieldtext() {
+		return email2fieldtext;
+	}
+	public List<WebElement> getWasteprocessingfeelists() {
+		return wasteprocessingfeelists;
+	}
+	public WebElement getStateRegistrationNumber3field() {
+		return stateRegistrationNumber3field;
+	}
+	public WebElement getStateRegistrationNumber2field() {
+		return stateRegistrationNumber2field;
+	}
 	
-	
-	
-	
+	public WebElement getStateRegistrationNumber1fielderrormsg() {
+		return stateRegistrationNumber1fielderrormsg;
+	}
+	public WebElement getStateRegistrationNumber1field() {
+		return stateRegistrationNumber1field;
+	}
+	public List<WebElement> getNotifiactiontypeslists() {
+		return notifiactiontypeslists;
+	}
+	public WebElement getNotificationTypedropdownfield() {
+		return notificationTypedropdownfield;
+	}
+	public WebElement getNotificationTypefieldtext() {
+		return notificationTypefieldtext;
+	}
+	public WebElement getEmail3field() {
+		return email3field;
+	}
+	public WebElement getEmail2field() {
+		return email2field;
+	}
+	public WebElement getTreatmentAutoSaveMessage() {
+		return treatmentAutoSaveMessage;
+	}
+	public WebElement getEmail2text() {
+		return email2text;
+	}
 	public WebElement getEmail1fielderrormsg() {
 		return email1fielderrormsg;
 	}
@@ -310,6 +400,70 @@ public class DisposalFacilities {
 		field.sendKeys(Keys.CONTROL + "a");
 		field.sendKeys(Keys.DELETE);
 		
+	}
+
+	// ------------------ Treatment tab helpers ------------------
+
+	/**
+	 * Returns true if the Treatment tab appears disabled/inactive.
+	 * Checks common indicators: aria-disabled, CSS class hints and WebElement.isEnabled()
+	 */
+	public boolean isTreatmentTabDisabled() {
+		try {
+			String aria = treatmenttab.getAttribute("aria-disabled");
+			if (aria != null) {
+				return aria.equalsIgnoreCase("true");
+			}
+			String cls = treatmenttab.getAttribute("class");
+			if (cls != null) {
+				if (cls.contains("disabled") || cls.contains("opacity-50") || cls.contains("cursor-not-allowed"))
+					return true;
+			}
+			// fallback to Selenium enabled state
+			try {
+				return !treatmenttab.isEnabled();
+			} catch (Exception e) {
+				return true;
+			}
+		} catch (Exception e) {
+			// if element not found or other issue, treat as disabled to make checks conservative
+			return true;
+		}
+	}
+
+	public boolean isTreatmentTabEnabled() {
+		return !isTreatmentTabDisabled();
+	}
+
+	/** Clicks the Waste Processing Fees Bio/Sharps active checkbox. Uses JS click as a fallback. */
+	public void clickWasteProcessingFeesBioSharpsactivecheckbox() {
+		try {
+			((JavascriptExecutor) driver).executeScript("arguments[0].click();", wasteProcessingFeesBioSharpsactivecheckbox);
+		} catch (Exception e) {
+			wasteProcessingFeesBioSharpsactivecheckbox.click();
+		}
+	}
+
+	/** Waits until the Treatment tab becomes enabled (or timeout). Returns true if enabled within timeout. */
+	public boolean waitForTreatmentTabToBeEnabled(long timeoutSeconds) {
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
+			return wait.until(d -> {
+				try {
+					String aria = treatmenttab.getAttribute("aria-disabled");
+					if (aria != null)
+						return aria.equalsIgnoreCase("false");
+					String cls = treatmenttab.getAttribute("class");
+					if (cls != null)
+						return !(cls.contains("disabled") || cls.contains("opacity-50") || cls.contains("cursor-not-allowed"));
+					return treatmenttab.isEnabled();
+				} catch (Exception ex) {
+					return false;
+				}
+			});
+		} catch (Exception e) {
+			return false;
+		}
 	}
 	
 }
