@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -111,7 +112,7 @@ public class GeneratorInformation1 {
 	private WebElement generatoremailErmsg;
 	@FindBy (xpath = "//button[@id='generator-status']")
 	private WebElement generatorStatus;
-	@FindBy (xpath = "(//div[@class='relative inline-block']//button)[2]")
+	@FindBy (xpath = "//button[@aria-label='Information']")
 	private WebElement tooltip;
 	@FindBy (xpath = "//button[@aria-label='Close tooltip']")
 	private WebElement closetooltip;
@@ -286,6 +287,60 @@ public class GeneratorInformation1 {
 	
 	
 	
+	//UPDATE ADDRESS
+	
+	@FindBy (xpath = "(//button[contains (text(),'Update Address')])[1]")
+	private WebElement updateAddressButton;
+	@FindBy (xpath = "//div[@class='modal-box min-w-[50vw] w-[50vw] relative']")
+	private WebElement updateaddressModal;
+	@FindBy (xpath = "//input[@id='editable-service-address-attention']")
+	private WebElement updateAttentionfield;
+	@FindBy (xpath = "//input[@id='editable-service-address-street']")
+	private WebElement updateStreetfield;
+	@FindBy (xpath = "//input[@id='editable-service-address-city']")
+	private WebElement updateCityfiled;
+	@FindBy (xpath = "//input[@id='editable-service-address-state']")
+	private WebElement updateStatefiled;
+	@FindBy (xpath = "//input[@id='editable-service-address-zipCode']")
+	private WebElement updateZipcodefield;
+	@FindBy (xpath = "//input[@id='editable-service-address-suite']")
+	private WebElement updateSuitefield;
+	
+	
+	
+	
+	public WebElement getUpdateSuitefield() {
+		return updateSuitefield;
+	}
+
+	public WebElement getUpdateZipcodefield() {
+		return updateZipcodefield;
+	}
+
+	public WebElement getUpdateStatefiled() {
+		return updateStatefiled;
+	}
+
+	public WebElement getUpdateCityfiled() {
+		return updateCityfiled;
+	}
+
+	public WebElement getUpdateStreetfield() {
+		return updateStreetfield;
+	}
+
+	public WebElement getUpdateAttentionfield() {
+		return updateAttentionfield;
+	}
+
+	public WebElement getUpdateaddressModal() {
+		return updateaddressModal;
+	}
+
+	public WebElement getUpdateAddressButton() {
+		return updateAddressButton;
+	}
+
 	public WebElement getGeneratorInformation() {
 		return generatorInformation;
 	}
@@ -1017,7 +1072,7 @@ public class GeneratorInformation1 {
 		                By.xpath("//input[@placeholder='Search by Name, Phone Number, Email, or Address']")));
 
 		searchoption.click();
-		searchoption.sendKeys("Max_298310");
+		searchoption.sendKeys("Max_486561");
 		Thread.sleep(20000);
 
 		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -1025,7 +1080,7 @@ public class GeneratorInformation1 {
 		WebElement generator = wait2.until(
 		    ExpectedConditions.refreshed(
 		        ExpectedConditions.elementToBeClickable(
-		            By.xpath("//div[contains(text(),'OCTO Number')]/following::div[contains(text(),'G-108-3316')]")
+		            By.xpath("//div[contains(text(),'OCTO Number')]/following::div[contains(text(),'G-103-5542')]")
 		        )
 		    )
 		);
@@ -1104,6 +1159,14 @@ public class GeneratorInformation1 {
 	System.out.println("Tuesday closing time  dropdown is disabled.");			      
 	    
 }
+	
+	 public void scrollToElement(WebElement element) {
+		    JavascriptExecutor js = (JavascriptExecutor) driver;
+		    js.executeScript(
+		        "arguments[0].scrollIntoView({behavior:'smooth', block:'center'});",
+		        element
+		    );
+		}
 
 	
 }

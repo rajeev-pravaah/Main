@@ -17,6 +17,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
+
 import org.testng.annotations.Test;
 
 import com.Octopussaas.BaseUtility.BaseClassForGEneratorContacts;
@@ -708,8 +709,11 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 	  
 	  //need to add the dependency
 	  
-	  @Test(dependsOnMethods ="TC_048GeneratorInformation_ServicelocationwithAutosave") 
-	  public void TC_049GeneratorInformation_ParentaccountwithInput() throws InterruptedException { 
+	  @Test(dependsOnMethods = "TC_048GeneratorInformation_ServicelocationwithAutosave")
+	  public void TC_049GeneratorInformation_ParentaccountwithInput() throws InterruptedException 
+	  { 
+	  gp = new GeneratorInformation1(driver);
+	  //gp.GeneratorInformation();
 	  gp.ParentaccountwithInput();
 	  System.out.println("The user is able to enter manual input");
 	  utilityclassobject.gettest().log(Status.INFO,"The user is able to enter manual input");
@@ -1098,12 +1102,10 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 	  
 	  @Test(dependsOnMethods =
 	  "TC_077GeneratorInformation_GeneratorEmailwithAutosave") public void
-	  TC_078GeneratorInformation_withDefaultgeneratorStatus() throws
-	  InterruptedException { WebElement generatorstatus =
-	  driver.findElement(By.xpath("//button[@id='generator-status']"));
-	  Assert.assertTrue(generatorstatus.isDisplayed(),
-	  "Generator status is displayed"); WebElement status =
-	  driver.findElement(By.xpath("(//span[contains (text(),'Prospect')])[2]"));
+	  TC_078GeneratorInformation_withDefaultgeneratorStatus() throws InterruptedException { 
+	 WebElement generatorstatus = driver.findElement(By.xpath("//button[@id='generator-status']"));
+	  Assert.assertTrue(generatorstatus.isDisplayed(), "Generator status is displayed"); 
+	  WebElement status = driver.findElement(By.xpath("(//span[contains (text(),'Prospect')])[2]"));
 	  Assert.assertTrue(status.isDisplayed(), "Status is displayed");
 	  utilityclassobject.gettest().log(Status.
 	  PASS,"The Generator status is present and it is having Prospect as default");
@@ -1111,24 +1113,22 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 	  
 	  //need to change the dependency
 	 
-	  @Test(dependsOnMethods =
-	  "TC_078GeneratorInformation_withDefaultgeneratorStatus") public void
-	  TC_079GeneratorInformation_GeneratorstatuswithTooltip() {
-	  gp.getTooltip().click(); WebElement tooltip =
-	  driver.findElement(By.xpath("//div[@class='w-full h-full p-2 bg-white']"));
-	  Assert.assertTrue(tooltip.isDisplayed(),
-	  "Generator status tooltip is displayed"); gp.getClosetooltip().click();
-	  utilityclassobject.gettest().log(Status.
-	  PASS,"The tooltip is present and when clicked upon, it opens the octo info");
+	  @Test(dependsOnMethods ="TC_078GeneratorInformation_withDefaultgeneratorStatus")
+	  public void TC_079GeneratorInformation_GeneratorstatuswithTooltip() {
+	  gp.getTooltip().click(); 
+	  WebElement tooltip = driver.findElement(By.xpath("//button[@aria-label='Information']"));
+	  
+	  Assert.assertTrue(tooltip.isDisplayed(), "Generator status tooltip is displayed"); 
+	  gp.getClosetooltip().click();
+	  utilityclassobject.gettest().log(Status.PASS,"The tooltip is present and when clicked upon, it opens the octo info");
 	  
 	  }
 	  
-	  @Test(dependsOnMethods =
-	  "TC_079GeneratorInformation_GeneratorstatuswithTooltip") public void
-	  TC_080GeneratorInformation_Generatorwithchangewithnote() throws
-	  InterruptedException { gp.getGeneratorStatus().click();
-	  gp.getDeadfielStatus().click(); gp.Updatestatus();
-	  
+	  @Test(dependsOnMethods = "TC_079GeneratorInformation_GeneratorstatuswithTooltip") 
+	  public void TC_080GeneratorInformation_Generatorwithchangewithnote() throws InterruptedException { 
+	  gp.getGeneratorStatus().click();
+	  gp.getDeadfielStatus().click();
+	  gp.Updatestatus();	
 	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	  wait.until(ExpectedConditions.invisibilityOfElementLocated(
 	  By.xpath("//div[contains(@class,'fixed') and contains(@class,'inset-0')]")));
@@ -1192,7 +1192,7 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 	  
 	  String[] types = { "Urgent Care Clinics", "Dental Clinics",
 	  "Surgery Centers", "Pharmacies & Biotech", "Veterinary Clinics",
-	  "Skilled Nursing", "Fire, Police & EMS", "Doctor Offices", "Hospitals",
+	  "Skilled Nursing", "Fire, Police & EMS", "Doctor Offices", "After Care","Hospitals",
 	  "Medical Spas", "Schools", "Manufacturing", "Retail and Wholesale Trade",
 	  "Construction and Engineering", "Hospitality and Recreation",
 	  "Professional and Technical Services", "Laboratory", "Dialysis",
@@ -1250,9 +1250,7 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 	  // gp.ContractedCheckbox();
 	  System.out.println("contracted checkbox is not clickable as expected");
 	  utilityclassobject.gettest().log(Status.INFO,
-	  "contracted checkbox is not clickable as expected");
-	  
-	  
+	  "contracted checkbox is not clickable as expected");	  
 	  }
 	  
 	  @Test(dependsOnMethods = "TC_088VerifyContractedcheckboxwithClick") public
@@ -1328,11 +1326,11 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 	  Thread.sleep(2000); utilityclassobject.gettest().log(Status.INFO,
 	  "The user is not be able to check the checkbox");
 	  
-	  }
+	  }*/
 	  
 	   //need to complete the contracted checkbox testcase
 	  
-	  @Test(dependsOnMethods = "TC_085VerifySelecttheIndustrytype") public void
+	  @Test(dependsOnMethods = "TC_086VerifySelectmorethanIndustrytype") public void
 	  TC_104VerifyAttentionwithAlphabets() throws EncryptedDocumentException,
 	  IOException { 
 		  
@@ -1673,9 +1671,12 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 	  gp.getServiceEmail().sendKeys(Keys.CONTROL + "a");
 	  gp.getServiceEmail().sendKeys(Keys.DELETE); 
 	  String input = elib.getDataFromExcel("GeneratorInformation", 40, 4);
-	  gp.getServiceEmail().sendKeys(input); //Thread.sleep(200); 
-	  String errormsg = gp.getEmailinvalidErmsg().getText(); System.out.println(errormsg);
-	  System.out.println("Email text filed will not accept invalid format and it will propmt Error message"); 
+	  gp.getServiceEmail().sendKeys(input); 
+	  Thread.sleep(2000);
+	  gp.getServicePhone().click();
+	  String errormsg = gp.getEmailinvalidErmsg().getText(); 
+	  System.out.println(errormsg);
+	  System.out.println("Email text filed will not accept invalid format and 0it will propmt Error message"); 
 	  utilityclassobject.gettest().log(Status.INFO,"Email text filed will not accept invalid format and it will propmt Error messag"); 
 	  
 	  gp.getServiceEmail().click();
@@ -1760,8 +1761,11 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 	  gp.getServicePhone().sendKeys(Keys.CONTROL + "a");
 	  gp.getServicePhone().sendKeys(Keys.DELETE); 
 	  String input = elib.getDataFromExcel("GeneratorInformation", 43, 5);
-	  gp.getServicePhone().sendKeys(input); //Thread.sleep(2000); 
-	  String errormsg = gp.getPhoneErmsg().getText(); System.out.println(errormsg);
+	  gp.getServicePhone().sendKeys(input); 
+	  Thread.sleep(2000); 
+	  gp.getExt().click(); 
+	  String errormsg = gp.getPhoneErmsg().getText(); 
+	  System.out.println(errormsg);
 	  System.out.println("Phone text field will not accept short input");
 	  utilityclassobject.gettest().log(Status.INFO,"Phone text field will not accept short input");
 	  
@@ -2095,7 +2099,7 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 
 	}
 
-	
+	/*
 	 * @Test public void TC_179VerifybillingstatewithInput() throws
 	 * EncryptedDocumentException, IOException { gp.getBillingstate().click();
 	 * gp.getBillingstate().sendKeys(Keys.CONTROL + "a");
@@ -2108,7 +2112,7 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 	 * "City text field will accept input and autosave");
 	 * 
 	 * }
-	 *
+	 */
 
 	@Test(dependsOnMethods = "TC_178Verifybillingcitywithautosave")
 	public void TC_180Verifybillingstatewithoption() {
@@ -2216,18 +2220,21 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 		gp.getBillingEmail().sendKeys(Keys.CONTROL + "a");
 		gp.getBillingEmail().sendKeys(Keys.DELETE);
 		String input = elib.getDataFromExcel("GeneratorInformation", 40, 3);
-		gp.getBillingEmail().sendKeys(input);
+		gp.getBillingEmail
+		().sendKeys(input);
 		System.out.println("Email text field will accept specialcharacters");
 		utilityclassobject.gettest().log(Status.INFO, "Email text field will accept specialcharacters");
 	}
 
 	@Test(dependsOnMethods = "TC_190VerifybillingEmailwithspecialcharacters")
-	public void TC_191VerifybillingEmailwithInvalidinput() throws EncryptedDocumentException, IOException {
+	public void TC_191VerifybillingEmailwithInvalidinput() throws EncryptedDocumentException, IOException, InterruptedException {
 		gp.getBillingEmail().click();
 		gp.getBillingEmail().sendKeys(Keys.CONTROL + "a");
 		gp.getBillingEmail().sendKeys(Keys.DELETE);
 		String input = elib.getDataFromExcel("GeneratorInformation", 40, 4);
 		gp.getBillingEmail().sendKeys(input);
+		Thread.sleep(2000);
+		gp.getBillingPhone().click();
 		String errormsg = gp.getBillingEmailinvalidmsg().getText();
 		System.out.println(errormsg);
 		System.out.println("Email text field will not accept invalid input and it will prompt Error message");
@@ -2324,12 +2331,14 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 	}
 
 	@Test(dependsOnMethods = "TC_197VerifybillinPhonewithmorethan10digits")
-	public void TC_198VerifybillingPhonewithshortInput() throws EncryptedDocumentException, IOException {
+	public void TC_198VerifybillingPhonewithshortInput() throws EncryptedDocumentException, IOException, InterruptedException {
 		gp.getBillingPhone().click();
 		gp.getBillingPhone().sendKeys(Keys.CONTROL + "a");
 		gp.getBillingPhone().sendKeys(Keys.DELETE);
 		String input = elib.getDataFromExcel("GeneratorInformation", 43, 5);
 		gp.getBillingPhone().sendKeys(input);
+		Thread.sleep(2000);
+		gp.getBillingExt().click();
 		String phoneErmsg = gp.getBillingPhoneErmsg().getText();
 		System.out.println(phoneErmsg);
 		System.out.println("Phone text field will not accept short input and prompt error message ");
@@ -2490,10 +2499,10 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 		System.out.println("The user should be able to edit the data");
 		utilityclassobject.gettest().log(Status.INFO, "The user should be able to edit the data");
 
-	}*/
+	}
 	
 	//need to change the dependency 
-	@Test(dependsOnMethods = "TC_086VerifySelectmorethanIndustrytype")
+	@Test(dependsOnMethods = "TC_207VerifyCopywithEditbillingInformation")
 	public void TC_208Verifyweekdayswithtimings() throws InterruptedException
 	{
 		gp = new GeneratorInformation1(driver);
@@ -2512,7 +2521,8 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 		gp.getClosetime().click();
 		System.out.println("The user is able to select time for the weekdays");
 		utilityclassobject.gettest().log(Status.INFO, "The user is able to select time for the weekdays");		
-	
+
+		
 	}
 	
 	//need to write TC_209 and 210
@@ -2604,7 +2614,8 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 	}
 	
 	@Test(dependsOnMethods = "TC_216Verifyweekdayswithcheckbox")
-	public void TC_217Verifyweekdaystimingswithenabledcheckbox() throws InterruptedException
+	public void TC_217Verifyweekdaystimingswithenabledcheckbox() throws  InterruptedException
+ 
 	{
 		gp.weekdayswithcheckbox();
 		System.out.println("The user is not able to add timings for that particular day as it is marked 'closed'");

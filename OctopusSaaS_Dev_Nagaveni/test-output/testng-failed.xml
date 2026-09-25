@@ -3,60 +3,20 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation">
+      <class name="Octopussaas_GeneratorInformation.UpdateAdrress">
         <methods>
+          <include name="TC_001VerifyUpdateAddress"/>
+          <include name="TC_005VerifyAttentionwithSpecialcharacters"/>
+          <include name="TC_002VerifyAttentionfieldwithInput"/>
           <include name="Ac"/>
-          <include name="TC_028GeneratorInformation_GeneratorpermitwithAutosave"/>
-          <include name="TC_052GeneratorInformation_ParentaccountwithAutosave"/>
-          <include name="TC_045GeneratorInformation_Servicelocationwithotherlocation"/>
-          <include name="TC_014GeneratorInformation_Generatornamewithspecialcharacters"/>
-          <include name="TC_001GeneratorInformation_withNewGenerator"/>
-          <include name="TC_031GeneratorInformation_GeneratorWebsitewithSpecialcharacters"/>
-          <include name="Am"/>
-          <include name="TC_026GeneratorInformation_GeneratorpermitwithNumbers"/>
-          <include name="TC_029GeneratorInformation_GeneratorWebsitewithAlphabets"/>
-          <include name="TC_002GeneratorInformation_withAddedgeneratorname"/>
-          <include name="TC_053GeneratorInformation_ParentaccontwithUnassign"/>
-          <include name="TC_054GeneratorInformation_ParentaccountwithUnassignButton"/>
-          <include name="TC_013GeneratorInformation_GeneratornamewithNumbers"/>
-          <include name="TC_023GeneratorInformation_InternalaccountnumberwithAutosave"/>
-          <include name="TC_019GeneratorInformation_InternalaccountNumber"/>
-          <include name="TC_042GeneratorInformation_GeneratorNotewithspecialcharacters"/>
-          <include name="TC_050GeneratorInformation_ParentaccontwithGenerators"/>
-          <include name="TC_049GeneratorInformation_ParentaccountwithInput"/>
-          <include name="TC_006GeneratorInformation_withAddedCreationdate"/>
-          <include name="TC_020GeneratorInformation_Internalaccountnumberwithalphabets"/>
-          <include name="TC_024GeneratorInformation_InternalaccountnumberwithDisplay"/>
-          <include name="TC_033GeneratorInformation_GeneratorwithValidURL"/>
-          <include name="TC_012GeneratorInformation_EditedGeneratorName"/>
-          <include name="TC_040GeneratorInformation_GeneratorNotewithalphabets"/>
-          <include name="TC_016GeneratorInformation_GeneratornamewithoutInput"/>
-          <include name="TC_004AssetsServicevehicle_withserviceaddress"/>
-          <include name="TC_057GeneratorInformtion_Withanotherparentaccount"/>
-          <include name="TC_041GeneratorInformation_GeneratorNotewithnumbers"/>
-          <include name="TC_027GeneratorInformation_Generatoepermitwithspecialcharacters"/>
-          <include name="TC_021GeneratorInformation_InternalaccountnumberwithNumbers"/>
-          <include name="TC_055GeneratorInformation_ParentaccountwithKeeptheAssigned"/>
-          <include name="TC_034GeneratorInformation_GeneratorwebsitewithAutosave"/>
-          <include name="TC_046GeneratorInformation_ServicelocationwithontherLocation"/>
-          <include name="TC_044GeneratorInformation_Attachtoservicelocation"/>
-          <include name="TC_047GeneratorInformation_MorethanoneServicelocation"/>
-          <include name="TC_051GeneratorInformation_ParentaccountwithGenerator"/>
-          <include name="TC_035GeneratorInformation_GeneratorwebsitewithLink"/>
-          <include name="TC_018GenratorInformation_OctoNumberwithEdit"/>
           <include name="Bc"/>
-          <include name="TC_017GeneratorInformation_Octonumber"/>
+          <include name="TC_006AttentionwithoutInput"/>
           <include name="Bm"/>
-          <include name="TC_048GeneratorInformation_ServicelocationwithAutosave"/>
-          <include name="TC_022GeneratorInformation_InternalaccountnumberwithSpecialcharacters"/>
-          <include name="TC_025GeneratorInformation_GeneratorpermitwithAlphabets"/>
-          <include name="TC_056GeneratorInformation_unassignwithoutReason"/>
-          <include name="TC_030GeneratorInformation_GeneratorWebsitewithNumbers"/>
-          <include name="TC_032GeneratorInformation_GeneratorWebsitewithinvalidURL"/>
-          <include name="TC_005GeneratorInformation_withAddedServiceaddress"/>
-          <include name="TC_015GeneratorInformation_GeneratornamewithAutosave"/>
+          <include name="TC_004VerifyAttentionwithNumbers"/>
+          <include name="TC_003VerifyAttentionwithAlphbets"/>
+          <include name="Am"/>
         </methods>
-      </class> <!-- Octopussaas_GeneratorInformation.Octopussaas_GeneratorInformation -->
+      </class> <!-- Octopussaas_GeneratorInformation.UpdateAdrress -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
