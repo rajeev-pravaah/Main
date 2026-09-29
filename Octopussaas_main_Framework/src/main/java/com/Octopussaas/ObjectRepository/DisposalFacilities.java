@@ -121,7 +121,7 @@ public class DisposalFacilities {
 	private WebElement phonefielderrormsg;
 	@FindBy(id = "phone-ext")
 	private WebElement phoneextfield;
-	@FindBy(css = "[id*='disposal-facility']")
+	@FindBy(id="disposal-facility status*")
 	private WebElement disposalFacilityStatusdropdown;
 	@FindBy(xpath = "//li[@role='option']")
 	private List<WebElement> disposalFacilityStatusoptions;
@@ -163,23 +163,128 @@ public class DisposalFacilities {
 	private WebElement email3fieldtext;
 	@FindBy(xpath = "//div[@class='w-[33%] pl-2 text-sm text-gray-800 font-medium']/../descendant::div[@class='w-[15%]']")
 	private List<WebElement> wasteprocessingeachunits;
-	@FindBy(id = "wasteProcessingFees.Bio/Sharps.active")
+	@FindBy(xpath = "//div[text()='Bio/Sharps']/../descendant::div[@class='flex items-center rounded-lg  gap-3 ']")
 	private WebElement wasteProcessingFeesBioSharpsactivecheckbox;
-	
 	@FindBy(xpath = "//span[text()='Treatment']")
 	private WebElement treatmenttab;
 	@FindBy(xpath = "//div[@class='flex items-center rounded-full bg-gray-100  w-full p-2']")
 	private WebElement biosharpcostfield;
+	@FindBy(xpath = "//div[@class='flex justify-end gap-8 py-10']")
+	private WebElement bottomoftgepage;
+	@FindBy(xpath = "//input[@type='number']")
+	private WebElement biosharpcostinputfield;
+	@FindBy(xpath = "//div[text()='Non-RCRA Pharmaceutical']/../descendant::div[@id]")
+	private WebElement secondwastecheckbox;
+	@FindBy(xpath = "//span[text()='Transfer']/../descendant::div")
+	private WebElement biosharpstransferradiobtn;
+	@FindBy(xpath = "//span[text()='Treatment']/../descendant::div")
+	private WebElement biosharpstreatmentradiobtn;
+	@FindBy(xpath = "//div[text()='Chemotherapy']/../descendant::div[@class='w-2 h-2 bg-gray-400 rounded-full']")
+	private WebElement chemotherapyradiobtn;
+	@FindBy(xpath = "(//span[text()='Transfer'])[2]/../div")
+	private WebElement secondtransferradiobtn;
+	@FindBy(xpath = "//button[text()='View Disposal Facility List']")
+	private WebElement viewDisposalFacilityListbtn;
+	@FindBy(xpath = "//div[text()='Active']")
+	private WebElement activeStatus;
+	@FindBy(xpath = "//a/descendant::div[@class='truncate w-80']")
+	private WebElement disposalFacilityNamefromlist;
+	@FindBy(xpath = "//a/descendant::div[@class='truncate w-[22rem]']")
+	private WebElement disposalFacilityAddressfromlist;
+	@FindBy(xpath = "//a/descendant::div[@class='truncate w-44']")
+	private WebElement disposalFacilitemailfromlist;
+	@FindBy(xpath = "//a/descendant::span")
+	private WebElement disposalFacilityPhonenumberfromlist;
+	@FindBy(xpath = "(//a/descendant::span)[2]")
+	private WebElement disposalFacilitytypefromlist;
+	@FindBy(xpath = "//a/descendant::div[@class='truncate w-32']")
+	private WebElement disposalFacilityStatusfromlist;
+	@FindBy(xpath = "//div[@class='w-36 truncate']")
+	private WebElement disposalFacilityFilterdropdown;
+	@FindBy(xpath = "//span[text()='Active']")
+	private WebElement disposalFacilityFilterActivebtn;
+	@FindBy(xpath = "//span[text()='Inactive']")
+	private WebElement disposalFacilityFilterInactivebtn;
+	@FindBy(xpath = "//div[@class='min-w-8 mx-6 flex justify-center hover:cursor-pointer']")
+	private List<WebElement> disposalFacilitycheckboxbtn;
+	@FindBy(xpath = "//button[text()='Export']")
+	private WebElement disposalFacilityExportbtn;
+	@FindBy(xpath = "(//span[text()='Active'])[2]")
+	private WebElement disposalFacilityactiveoptionwhentheActivebuttonisonclicked;
+	@FindBy(xpath = "(//div[@class='relative flex items-center gap-2 w-full'])[2]")	
+	private WebElement disposalFacilityinactiveoptionwhentheInactivebuttonisonclicked;
 	
 	
 	
 	
 	
 	
-	
-	
-	
-	
+	public WebElement getDisposalFacilityinactiveoptionwhentheInactivebuttonisonclicked() {
+		return disposalFacilityinactiveoptionwhentheInactivebuttonisonclicked;
+	}
+	public WebElement getDisposalFacilityactiveoptionwhentheActivebuttonisonclicked() {
+		return disposalFacilityactiveoptionwhentheActivebuttonisonclicked;
+	}
+	public WebElement getDisposalFacilityExportbtn() {
+		return disposalFacilityExportbtn;
+	}
+	public List<WebElement> getDisposalFacilitycheckboxbtn() {
+		return disposalFacilitycheckboxbtn;
+	}
+	public WebElement getDisposalFacilityFilterInactivebtn() {
+		return disposalFacilityFilterInactivebtn;
+	}
+	public WebElement getDisposalFacilityFilterActivebtn() {
+		return disposalFacilityFilterActivebtn;
+	}
+	public WebElement getDisposalFacilityFilterdropdown() {
+		return disposalFacilityFilterdropdown;
+	}
+	public WebElement getDisposalFacilityStatusfromlist() {
+		return disposalFacilityStatusfromlist;
+	}
+	public WebElement getDisposalFacilityTypefromlist() {
+		return disposalFacilitytypefromlist;
+	}
+	public WebElement getDisposalFacilityPhonenumberfromlist() {
+		return disposalFacilityPhonenumberfromlist;
+	}
+	public WebElement getDisposalFacilitemailfromlist() {
+		return disposalFacilitemailfromlist;
+	}
+	public WebElement getDisposalFacilityAddressfromlist() {
+		return disposalFacilityAddressfromlist;
+	}
+	public WebElement getDisposalFacilityNamefromlist() {
+		return disposalFacilityNamefromlist;
+	}
+	public WebElement getActiveStatus() {
+		return activeStatus;
+	}
+	public WebElement getViewDisposalFacilityListbtn() {
+		return viewDisposalFacilityListbtn;
+	}
+	public WebElement getSecondtransferradiobtn() {
+		return secondtransferradiobtn;
+	}
+	public WebElement getChemotherapyradiobtn() {
+		return chemotherapyradiobtn;
+	}
+	public WebElement getBiosharpstreatmentradiobtn() {
+		return biosharpstreatmentradiobtn;
+	}
+	public WebElement getBiosharpstransferradiobtn() {
+		return biosharpstransferradiobtn;
+	}
+	public WebElement getSecondwastecheckbox() {
+		return secondwastecheckbox;
+	}
+	public WebElement getBiosharpcostinputField() {
+		return biosharpcostinputfield;
+	}
+	public WebElement getBottomoftgepage() {
+		return bottomoftgepage;
+	}
 	public WebElement getBiosharpcostfield() {
 		return biosharpcostfield;
 	}

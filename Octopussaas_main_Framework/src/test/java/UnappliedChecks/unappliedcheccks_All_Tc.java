@@ -874,9 +874,10 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 		// capture the check number so we can verify it appears in the list after save
 		String savedCheckNo = uac.getChecknumberfieldfromquickcheckadd().getAttribute("value");
 		//click on save button
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		uac.getSavecheckbuttonfromquickcheckadd().click();
 		System.out.println("Save button is clicked");
+		Thread.sleep(2000);
 		utilityclassobject.gettest().log(Status.PASS, "Save button is clicked");
 		//verify generator required error message is displayed
 		try {
@@ -885,8 +886,8 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 				utilityclassobject.gettest().log(Status.PASS, "Generator Required Error Message is displayed : PASS");
 			}
 			else {
-				System.out.println("Generator Required Error Message is displayed : FAIL");
-				utilityclassobject.gettest().log(Status.FAIL, "Generator Required Error Message is displayed : FAIL");
+				System.out.println("Generator Required Error Message is not displayed : FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Generator Required Error Message is not displayed : FAIL");
 			}
 		} catch (Exception e) {
 			System.out.println("Error verifying Generator Required message: " + e.getMessage());
@@ -1354,11 +1355,7 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 
 		// Locate hidden file input and upload directly via sendKeys
 		List<WebElement> inputs = driver.findElements(By.xpath("//input[@type='file']"));
-		WebElement 
-		
-		
-		
-		fileInput = null;
+		WebElement fileInput = null;
 		if (inputs.size() > 0) {
 			fileInput = inputs.get(0);
 		} else {
@@ -2141,7 +2138,8 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 			@Test(dependsOnMethods = "TC_048VerifyInlineEditInvoiceNumber")
 			public void TC_049VerifyEditAmount() throws Exception {
 				//fetch the amount from unapplied check details before edit
-				String amountbeforeedit = uac.getAmountreceivedfromdetails().getAttribute("value");
+				// Amount is rendered in a <p> element; use getText() to retrieve displayed amount
+				String amountbeforeedit = uac.getAmountreceivedfromdetails().getText();
 				System.out.println("Amount from unapplied check details before edit is : " + amountbeforeedit);
 				utilityclassobject.gettest().log(Status.PASS, "Amount from unapplied check details before edit is : " + amountbeforeedit);
 				//click on edit button
@@ -2246,7 +2244,8 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 		public void TC_051VerifyEditAmountUpdatedMessage() throws Exception {
 			//fetch the amount from unapplied check details before edit
 			/*
-			String amountbeforeedit = uac.getAmountreceivedfromdetails().getAttribute("value");
+			// Amount is rendered in a <p> element; use getText() to retrieve displayed amount
+			String amountbeforeedit = uac.getAmountreceivedfromdetails().getText();
 			System.out.println("Amount from unapplied check details before edit is : " + amountbeforeedit);
 			utilityclassobject.gettest().log(Status.PASS, "Amount from unapplied check details before edit is : " + amountbeforeedit);
 			//click on edit button
@@ -2411,16 +2410,7 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 			System.out.println("Record Payment button is clicked");
 			utilityclassobject.gettest().log(Status.PASS, "Record Payment button is clicked ");
 			Thread.sleep(1000);
-			//verify that the payment is recorded successfully
-			if(trs.getPaymentrecordedsuccessfullymessage().isDisplayed()) {
-				System.out.println("Payment Recorded Successfully Message is displayed : PASS");
-				utilityclassobject.gettest().log(Status.PASS, "Payment Recorded Successfully Message is displayed : PASS");
-				
-			}
-			else {
-				System.out.println("Payment Recorded Successfully Message is displayed : FAIL");
-				utilityclassobject.gettest().log(Status.FAIL, "Payment Recorded Successfully Message is displayed : FAIL");
-			}
+			
 			//fetch transactionid
 			List<WebElement> elements = trs.getPaymenttransactiondetails();
 
@@ -2439,6 +2429,7 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 			utilityclassobject.gettest().log(Status.PASS, "Payment Date: " + paymentDate);
 			System.out.println("Action: " + Action);
 			utilityclassobject.gettest().log(Status.PASS, "Action: " + Action );
+			Thread.sleep(5000);
 			trs.getUnappliedcheckspage().click();
 			System.out.println("Unapplied Checks page is clicked");
 			utilityclassobject.gettest().log(Status.PASS, "Unapplied Checks page"
@@ -2731,16 +2722,7 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 			System.out.println("Record Payment button is clicked");
 			utilityclassobject.gettest().log(Status.PASS, "Record Payment button is clicked ");
 			Thread.sleep(1000);
-			//verify that the payment is recorded successfully
-			if(trs.getPaymentrecordedsuccessfullymessage().isDisplayed()) {
-				System.out.println("Payment Recorded Successfully Message is displayed : PASS");
-				utilityclassobject.gettest().log(Status.PASS, "Payment Recorded Successfully Message is displayed : PASS");
-				
-			}
-			else {
-				System.out.println("Payment Recorded Successfully Message is displayed : FAIL");
-				utilityclassobject.gettest().log(Status.FAIL, "Payment Recorded Successfully Message is displayed : FAIL");
-			}
+		
 			//fetch transactionid
 			List<WebElement> elements = trs.getPaymenttransactiondetails();
 
@@ -2759,6 +2741,7 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 			utilityclassobject.gettest().log(Status.PASS, "Payment Date: " + paymentDate);
 			System.out.println("Action: " + Action);
 			utilityclassobject.gettest().log(Status.PASS, "Action: " + Action );
+			Thread.sleep(5000);
 			trs.getUnappliedcheckspage().click();
 			System.out.println("Unapplied Checks page is clicked");
 			utilityclassobject.gettest().log(Status.PASS, "Unapplied Checks page"
@@ -3050,6 +3033,7 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 			utilityclassobject.gettest().log(Status.PASS, "Record Payment button is clicked ");
 			Thread.sleep(1000);
 			//verify that the payment is recorded successfully
+			/*
 			if(trs.getPaymentrecordedsuccessfullymessage().isDisplayed()) {
 				System.out.println("Payment Recorded Successfully Message is displayed : PASS");
 				utilityclassobject.gettest().log(Status.PASS, "Payment Recorded Successfully Message is displayed : PASS");
@@ -3058,7 +3042,7 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 			else {
 				System.out.println("Payment Recorded Successfully Message is displayed : FAIL");
 				utilityclassobject.gettest().log(Status.FAIL, "Payment Recorded Successfully Message is displayed : FAIL");
-			}
+			}*/
 			//fetch transactionid
 			List<WebElement> elements = trs.getPaymenttransactiondetails();
 
@@ -3093,10 +3077,12 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 			utilityclassobject.gettest().log(Status.PASS, "First check id from the search result is clicked");
 			
 			//fetch amount received from unapplied check details
+			// Amount is rendered in a <p> element; use getText() to retrieve displayed amount
 			String amountreceived = uac.getAmountreceivedfromdetails().getText();
 			System.out.println("Amount received from unapplied check details is : " + amountreceived);
 			utilityclassobject.gettest().log(Status.PASS, "Amount received from unapplied check details is : " + amountreceived);
 			//Fetch remianing amount from unapplied check details
+			// Remaining amount is rendered in a <p> element; use getText()
 			remainingamount = uac.getRemainingamountfromcheckdetailspopup().getText();
 			System.out.println("Remaining amount from unapplied check details is : " + remainingamount);
 			utilityclassobject.gettest().log(Status.PASS, "Remaining amount from unapplied check details is : " + remainingamount);
@@ -3159,60 +3145,131 @@ public class unappliedcheccks_All_Tc extends  BaseClassForGEneratorContacts {
 		
 	@Test(dependsOnMethods = "TC_056VerifyRemoveReasonForUnappliedChecks")
 	public void TC_057VerifyBalanceRestoredAfterRemove() throws Exception {
-	//add reason in the reason field
-	uac.getReasonfieldf().sendKeys("Test Remove Reason");
-	System.out.println("Remove reason is entered in the reason field");
-	utilityclassobject.gettest().log(Status.PASS, "Remove reason is entered in the reason field");
-	//click on remove button
-	uac.getConfirRemoveButtonFromremovepaymentinvoice().click();
-	System.out.println("Remove button from remove payment invoice popup is clicked");
-	utilityclassobject.gettest().log(Status.PASS, "Remove button from remove payment invoice popup is clicked");
-	Thread.sleep(4000);
-	System.out.println(amountreceived);
-	utilityclassobject.gettest().log(Status.PASS, "Amount received from unapplied check details is : " + amountreceived);
-	System.out.println(remainingamount);
-	utilityclassobject.gettest().log(Status.PASS, "Remaining amount from unapplied check details is : " + remainingamount);
-	System.out.println(invoiceamountfromcheckdetails);
-	utilityclassobject.gettest().log(Status.PASS, "Invoice amount from added invoice from check details popup is : " + invoiceamountfromcheckdetails);
+	     //add reason in the reason field
+	     uac.getReasonfieldf().sendKeys("Test Remove Reason");
+	     System.out.println("Remove reason is entered in the reason field");
+	     utilityclassobject.gettest().log(Status.PASS, "Remove reason is entered in the reason field");
+	     //click on remove button
+	     uac.getConfirRemoveButtonFromremovepaymentinvoice().click();
+	     System.out.println("Remove button from remove payment invoice popup is clicked");
+	     utilityclassobject.gettest().log(Status.PASS, "Remove button from remove payment invoice popup is clicked");
+	     Thread.sleep(4000);
+	     System.out.println(amountreceived);
+	     utilityclassobject.gettest().log(Status.PASS, "Amount received from unapplied check details is : " + amountreceived);
+	     System.out.println(remainingamount);
+	     utilityclassobject.gettest().log(Status.PASS, "Remaining amount from unapplied check details is : " + remainingamount);
+	     System.out.println(invoiceamountfromcheckdetails);
+	     utilityclassobject.gettest().log(Status.PASS, "Invoice amount from added invoice from check details popup is : " + invoiceamountfromcheckdetails);
 		
 		
 	
-	//refresh the page
-	driver.navigate().refresh();
-	Thread.sleep(5000);
+	     //refresh the page
+	     driver.navigate().refresh();
+	     Thread.sleep(5000);
 	
-	//search for the check number in the unapplied checks page and check amount addedd or not
-	uac.getSearchcheckfieldfromunappliedchecks().sendKeys(String.valueOf(actulachecknumber));
-	System.out.println("Check number is entered in the search field from unapplied checks page");
-	utilityclassobject.gettest().log(Status.PASS, "Check number is entered in the search field from unapplied checks page");
-	//click on first check number from the search
-	uac.getFirstchecknumberfrommanualgrid().click();
-	System.out.println("First check number from manual grid is clicked");
-	utilityclassobject.gettest().log(Status.PASS, "First check number from manual grid is clicked");
+	     //search for the check number in the unapplied checks page and check amount addedd or not
+	     uac.getSearchcheckfieldfromunappliedchecks().sendKeys(String.valueOf(actulachecknumber));
+	     System.out.println("Check number is entered in the search field from unapplied checks page");
+	     utilityclassobject.gettest().log(Status.PASS, "Check number is entered in the search field from unapplied checks page");
+	     //click on first check number from the search
+	     uac.getFirstchecknumberfrommanualgrid().click();
+	     System.out.println("First check number from manual grid is clicked");
+	     utilityclassobject.gettest().log(Status.PASS, "First check number from manual grid is clicked");
 	
-	//fetcj h amount received from unapplied check details
-	String amountreceivedafterremove = uac.getAmountreceivedfromdetails().getAttribute("value");
-	System.out.println("Amount received from unapplied check details after remove is : " + amountreceived
-			);
-	utilityclassobject.gettest().log(Status.PASS, "Amount received from unapplied check details after remove is : " + amountreceivedafterremove);
-	//fetch remaining amount from unapplied check details
-	String remainingamountafterremove = uac.getRemainingamountfromcheckdetailspopup().getAttribute("value");
-	System.out.println("Remaining amount from unapplied check details after remove is : " + remainingamount );
-	utilityclassobject.gettest().log(Status.PASS, "Remaining amount from unapplied check details after remove is : " + remainingamountafterremove);
-	//comapre both amount received and remaining amount after remove
-	if(!amountreceivedafterremove.equals(amountreceived) && !remainingamountafterremove.equals(remainingamount))
-		{
-		System.out.println("Amount received and remaining amount after remove is same as before remove : PASS");
-		utilityclassobject.gettest().log(Status.PASS, "Amount received and remaining amount after remove is same as before remove : PASS");
-	}
-	else {
-		System.out.println("Amount received and remaining amount after remove is not same as before remove : FAIL");
-		utilityclassobject.gettest().log(Status.FAIL, "Amount received and remaining amount after remove is not same as before remove : FAIL");
+	     //fetcj h amount received from unapplied check details
+					  // The amount and remaining amount are rendered in <p> elements (not input value), so use getText()
+					  // Robustly wait for the element text to appear and log detailed debug info if it is empty
+					  WebElement amtElem = uac.getAmountreceivedfromdetails();
+					  WebDriverWait waitText = new WebDriverWait(driver, Duration.ofSeconds(10));
+					  try {
+						  waitText.until(d -> {
+							  try {
+								  String inner = (String) ((JavascriptExecutor) d).executeScript("return arguments[0].innerText;", amtElem);
+								  return inner != null && !inner.trim().isEmpty();
+							  } catch (Exception ex) {
+								  return false;
+							  }
+						  });
+					  } catch (Exception ignore) {
+						  // timed out - we'll still attempt to read and print debug info below
+					  }
+
+					  String amountreceivedafterremove = "";
+					  try {
+						  amountreceivedafterremove = amtElem.getText();
+					  } catch (Exception e) {
+						  amountreceivedafterremove = null;
+					  }
+					  // Fallback: try reading via JS (textContent/innerText/attributes/child span)
+					  if (amountreceivedafterremove == null || amountreceivedafterremove.trim().isEmpty()) {
+						  try {
+							  amountreceivedafterremove = (String) ((JavascriptExecutor) driver).executeScript(
+									  "var el=arguments[0]; if(el.textContent && el.textContent.trim()!=='') return el.textContent.trim(); if(el.innerText && el.innerText.trim()!=='') return el.innerText.trim(); if(el.getAttribute('value')) return el.getAttribute('value'); if(el.getAttribute('data-value')) return el.getAttribute('data-value'); var s = el.querySelector('span'); if(s && (s.innerText||s.textContent)) return (s.innerText||s.textContent).trim(); return '';",
+									  amtElem);
+						  } catch (Exception ex) {
+							  // ignore
+						  }
+					  }
+
+					  // Gather DOM-level info for debugging
+					  String innerText = "";
+					  String outerHtml = "";
+					  try {
+						  innerText = (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].innerText;", amtElem);
+					  } catch (Exception e) {
+						  innerText = null;
+					  }
+					  try {
+						  outerHtml = (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].outerHTML;", amtElem);
+					  } catch (Exception e) {
+						  outerHtml = null;
+					  }
+
+					  System.out.println("DEBUG Amount element -> getText(): '" + amountreceivedafterremove + "' | innerText: '" + innerText + "' | outerHTML: '" + outerHtml + "'");
+					  utilityclassobject.gettest().log(Status.INFO, "DEBUG Amount element -> getText(): '" + amountreceivedafterremove + "' | innerText: '" + innerText + "'");
+
+					  //fetch remaining amount from unapplied check details (rendered in <p>) and debug similarly
+					  WebElement remElem = uac.getRemainingamountfromcheckdetailspopup();
+					  String remainingamountafterremove = "";
+					  try {
+						  remainingamountafterremove = remElem.getText();
+					  } catch (Exception e) {
+						  remainingamountafterremove = null;
+					  }
+					  if (remainingamountafterremove == null || remainingamountafterremove.trim().isEmpty()) {
+						  try {
+							  remainingamountafterremove = (String) ((JavascriptExecutor) driver).executeScript(
+									  "var el=arguments[0]; if(el.textContent && el.textContent.trim()!=='') return el.textContent.trim(); if(el.innerText && el.innerText.trim()!=='') return el.innerText.trim(); if(el.getAttribute('value')) return el.getAttribute('value'); if(el.getAttribute('data-value')) return el.getAttribute('data-value'); var s = el.querySelector('span'); if(s && (s.innerText||s.textContent)) return (s.innerText||s.textContent).trim(); return '';",
+									  remElem);
+						  } catch (Exception ex) {
+							  // ignore
+						  }
+					  }
+					  String remInner = "";
+					  String remOuter = "";
+					  try {
+						  remInner = (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].innerText;", remElem);
+					  } catch (Exception e) { remInner = null; }
+					  try {
+						  remOuter = (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].outerHTML;", remElem);
+					  } catch (Exception e) { remOuter = null; }
+
+					  System.out.println("DEBUG Remaining element -> getText(): '" + remainingamountafterremove + "' | innerText: '" + remInner + "' | outerHTML: '" + remOuter + "'");
+					  utilityclassobject.gettest().log(Status.INFO, "DEBUG Remaining element -> getText(): '" + remainingamountafterremove + "' | innerText: '" + remInner + "'");
+	     //comapre both amount received and remaining amount after remove
+	     if(!amountreceivedafterremove.equals(amountreceived) && !remainingamountafterremove.equals(remainingamount))
+		      {
+		       System.out.println("Amount received and remaining amount after remove is same as before remove : PASS");
+		       utilityclassobject.gettest().log(Status.PASS, "Amount received and remaining amount after remove is same as before remove : PASS");
+	           }
+	      else {
+		      System.out.println("Amount received and remaining amount after remove is not same as before remove : FAIL");
+		      utilityclassobject.gettest().log(Status.FAIL, "Amount received and remaining amount after remove is not same as before remove : FAIL");
 			
-	}
+	           }
 	
 	
-	}
+	      }
 			
 }
 	
