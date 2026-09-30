@@ -2518,6 +2518,7 @@ public class Octopussaas_GeneratorInformation extends BaseClassForGEneratorConta
 		gp.getLunchendtiming().click();
 		Thread.sleep(200);
 		gp.getMondayclosetime().click();
+		
 		gp.getClosetime().click();
 		System.out.println("The user is able to select time for the weekdays");
 		utilityclassobject.gettest().log(Status.INFO, "The user is able to select time for the weekdays");		

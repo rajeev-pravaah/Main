@@ -1,15 +1,19 @@
 package Octopussaas_GeneratorInformation;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Random;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -62,7 +66,7 @@ public class UpdateAdrress  extends BaseClassForGEneratorContacts{
 		 
 	}
 	
-	@Test(dependsOnMethods = "TC_001VerifyUpdateAddress")
+	/*@Test(dependsOnMethods = "TC_001VerifyUpdateAddress")
 	public void TC_002VerifyAttentionfieldwithInput() throws EncryptedDocumentException, IOException
 	{
 		  gp.getUpdateAttentionfield().click();
@@ -169,7 +173,7 @@ public class UpdateAdrress  extends BaseClassForGEneratorContacts{
 		gp.getUpdateStreetfield().sendKeys(input); 
 		System.out.println("Street text filed will accept specialcharacters");
 		utilityclassobject.gettest().log(Status.INFO,"Street text filed will accept specialcharacters");
-	}
+	}*/
 	
 	/*@Test
 	public void TC_011VerifyStreetwithoutInput()
@@ -182,8 +186,8 @@ public class UpdateAdrress  extends BaseClassForGEneratorContacts{
 		utilityclassobject.gettest().log(Status.INFO,"Street text filed will accept specialcharacters");
 	}*/
 	
-	@Test(dependsOnMethods = "TC_010VerifyStreetwithSpecialcharacters")
-	public void TC_011VerifyStreetwithAddresssuggestion() throws InterruptedException
+	/*@Test(dependsOnMethods = "TC_010VerifyStreetwithSpecialcharacters")
+	public void TC_012VerifyStreetwithAddresssuggestion() throws InterruptedException
 	{
 		 gp.getUpdateStreetfield().click(); 
 		 gp.getUpdateStreetfield().sendKeys(Keys.CONTROL + "a");
@@ -196,8 +200,8 @@ public class UpdateAdrress  extends BaseClassForGEneratorContacts{
 		 utilityclassobject.gettest().log(Status.INFO,"The street field will show related suggestions");
 	}
 	
-	@Test(dependsOnMethods = "TC_011VerifyStreetwithAddresssuggestion")
-	public void TC_012VerifyStreetwithAutofills() throws InterruptedException
+	@Test(dependsOnMethods = "TC_012VerifyStreetwithAddresssuggestion")
+	public void TC_013VerifyStreetwithAutofills() throws InterruptedException
 	{
 		WebElement street1 = driver.findElement(By.xpath("//div[contains (text(),'1245 6th Street Southwest, Warren, Ohio 44485, United States')]")); 
 		street1.click(); 
@@ -212,8 +216,8 @@ public class UpdateAdrress  extends BaseClassForGEneratorContacts{
 		utilityclassobject.gettest().log(Status.INFO,"The city, state and zip code will get autofilled");
 	}
 	
-	@Test(dependsOnMethods = "TC_012VerifyStreetwithAutofills")
-	public void TC_013VerifySuitewithInput() throws EncryptedDocumentException, IOException
+	@Test(dependsOnMethods = "TC_013VerifyStreetwithAutofills")
+	public void TC_014VerifySuitewithInput() throws EncryptedDocumentException, IOException
 	{
 		gp.getUpdateSuitefield().click();
 		gp.getUpdateSuitefield().sendKeys(Keys.CONTROL + "a");
@@ -224,8 +228,8 @@ public class UpdateAdrress  extends BaseClassForGEneratorContacts{
 		utilityclassobject.gettest().log(Status.INFO,"Suite text filed will accepts alphabets");
 	}
 	
-	@Test(dependsOnMethods = "TC_013VerifySuitewithInput")
-	public void TC_014VerifySuitewithalphabets() throws EncryptedDocumentException, IOException
+	@Test(dependsOnMethods = "TC_014VerifySuitewithInput")
+	public void TC_015VerifySuitewithalphabets() throws EncryptedDocumentException, IOException
 	{
 		gp.getUpdateSuitefield().click();
 		gp.getUpdateSuitefield().sendKeys(Keys.CONTROL + "a");
@@ -236,8 +240,8 @@ public class UpdateAdrress  extends BaseClassForGEneratorContacts{
 		utilityclassobject.gettest().log(Status.INFO,"Suite text filed will accepts alphabets");
 	}
 	
-	@Test(dependsOnMethods = "TC_014VerifySuitewithalphabets")
-	public void TC_015VerifySuitewithNumbers() throws EncryptedDocumentException, IOException
+	@Test(dependsOnMethods = "TC_015VerifySuitewithalphabets")
+	public void TC_016VerifySuitewithNumbers() throws EncryptedDocumentException, IOException
 	{
 		gp.getUpdateSuitefield().click();
 		gp.getUpdateSuitefield().sendKeys(Keys.CONTROL + "a");
@@ -248,8 +252,8 @@ public class UpdateAdrress  extends BaseClassForGEneratorContacts{
 		utilityclassobject.gettest().log(Status.INFO,"Suite text filed will accepts Numbers");
 	}
 	
-	@Test(dependsOnMethods = "TC_015VerifySuitewithNumbers")
-	public void TC_016VerifySuitewithspecialcharacters() throws EncryptedDocumentException, IOException
+	@Test(dependsOnMethods = "TC_016VerifySuitewithNumbers")
+	public void TC_017VerifySuitewithspecialcharacters() throws EncryptedDocumentException, IOException
 	{
 		gp.getUpdateSuitefield().click();
 		gp.getUpdateSuitefield().sendKeys(Keys.CONTROL + "a");
@@ -260,8 +264,8 @@ public class UpdateAdrress  extends BaseClassForGEneratorContacts{
 		utilityclassobject.gettest().log(Status.INFO,"Suite text filed will accepts specialcharacters");
 	}
 	
-	@Test(dependsOnMethods = "TC_016VerifySuitewithspecialcharacters")
-	public void TC_017VerifyCitywithInput() throws EncryptedDocumentException, IOException
+	@Test(dependsOnMethods = "TC_017VerifySuitewithspecialcharacters")
+	public void TC_019VerifyCitywithInput() throws EncryptedDocumentException, IOException
 	{
 		gp.getUpdateCityfiled().click();
 		gp.getUpdateCityfiled().sendKeys(Keys.CONTROL + "a");
@@ -272,8 +276,8 @@ public class UpdateAdrress  extends BaseClassForGEneratorContacts{
 		utilityclassobject.gettest().log(Status.INFO,"City text filed will accepts input");
 	}
 	
-	@Test(dependsOnMethods = "TC_017VerifyCitywithInput")
-	public void TC_018VerifyCitywithalphabets() throws EncryptedDocumentException, IOException
+	@Test(dependsOnMethods = "TC_019VerifyCitywithInput")
+	public void TC_020VerifyCitywithalphabets() throws EncryptedDocumentException, IOException
 	{
 		gp.getUpdateCityfiled().click();
 		gp.getUpdateCityfiled().sendKeys(Keys.CONTROL + "a");
@@ -284,8 +288,8 @@ public class UpdateAdrress  extends BaseClassForGEneratorContacts{
 		utilityclassobject.gettest().log(Status.INFO,"City text filed will accepts alphabets");
 	}
 	
-	@Test(dependsOnMethods = "TC_018VerifyCitywithalphabets")
-	public void TC_019VeriyfCitywithNumbers() throws EncryptedDocumentException, IOException
+	@Test(dependsOnMethods = "TC_020VerifyCitywithalphabets")
+	public void TC_021VeriyfCitywithNumbers() throws EncryptedDocumentException, IOException
 	{
 		gp.getUpdateCityfiled().click();
 		gp.getUpdateCityfiled().sendKeys(Keys.CONTROL + "a");
@@ -296,8 +300,9 @@ public class UpdateAdrress  extends BaseClassForGEneratorContacts{
 		utilityclassobject.gettest().log(Status.INFO,"City text filed will accepts numbers");
 	}
 	
-	@Test(dependsOnMethods = "TC_019VeriyfCitywithNumbers")
-	public void TC_020VerifyCitywithspecialcharacters() throws EncryptedDocumentException, IOException
+	@Test(dependsOnMethods = "TC_021VeriyfCitywithNumbers")
+	
+	public void TC_022VerifyCitywithspecialcharacters() throws EncryptedDocumentException, IOException
 	{
 		gp.getUpdateCityfiled().click();
 		gp.getUpdateCityfiled().sendKeys(Keys.CONTROL + "a");
@@ -308,7 +313,7 @@ public class UpdateAdrress  extends BaseClassForGEneratorContacts{
 		utilityclassobject.gettest().log(Status.INFO,"City text filed will accepts specialcharacters");
 	}
 	
-	@Test(dependsOnMethods = "TC_020VerifyCitywithspecialcharacters")
+	@Test(dependsOnMethods = "TC_022VerifyCitywithspecialcharacters")
 	public void TC_024VerifytheStatefield()
 	{
 		WebElement suite = gp.getUpdateStatefiled();
@@ -318,7 +323,7 @@ public class UpdateAdrress  extends BaseClassForGEneratorContacts{
 		
 	}
 	
-	@Test
+	@Test(dependsOnMethods = "TC_024VerifytheStatefield")
 	public void TC_025VerifyStatewithInput()
 	{
 		gp.getUpdateStatefiled().click();
@@ -326,14 +331,517 @@ public class UpdateAdrress  extends BaseClassForGEneratorContacts{
 		gp.getUpdateStatefiled().sendKeys(Keys.DELETE); 
 		gp.getUpdateStatefiled().sendKeys("Sfshj");
 		System.out.println("Suite field is present");
-		utilityclassobject.gettest().log(Status.INFO,"Suite field is present");
+		utilityclassobject.gettest().log(Status.INFO,"Suite field is present");		
+	}
+	
+	@Test(dependsOnMethods = "TC_025VerifyStatewithInput")
+	public void TC_026VerifyStatewithOptions()
+	{
+		gp.getUpdateStatefiled().click();
+		gp.getUpdateStatefiled().sendKeys(Keys.CONTROL + "a");
+		gp.getUpdateStatefiled().sendKeys(Keys.DELETE); 
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); 
+		gp.getUpdateStatefiled().click();
+		WebElement dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//ul[@role='listbox']")));
+		Assert.assertTrue(dropdown.isDisplayed(), "state dropdown is displayed");
+		 String[] types = { "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL",
+		 "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI",
+		 "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH",
+		 "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"};
+		  Actions actions = new Actions(driver);
+		  for (String type : types) {
+				  
+				  WebElement typeElement = wait.until(
+				  ExpectedConditions.presenceOfElementLocated(
+				  By.xpath("//li[@role='option']//span[contains (text(),'"+type+"')]")));
+				  
+				  actions.moveToElement(typeElement).perform();
+				  
+				  Assert.assertTrue(typeElement.isDisplayed(), type + " is displayed");
+				  utilityclassobject.gettest().log(Status.INFO,"State options are present in the dropdown");
+				  
+				  }
+	}
+	
+	@Test(dependsOnMethods = "TC_026VerifyStatewithOptions")
+	public void TC_027VerifyStatewithselectedoption() throws InterruptedException
+	{
+		gp.UpdateState();
+		System.out.println("User is able to select the options from the dropdown");
+		utilityclassobject.gettest().log(Status.INFO,"User is able to select the options from the dropdown");
 		
 	}
 	
 	
+	@Test(dependsOnMethods = "TC_027VerifyStatewithselectedoption")
+	public void TC_029VerifyZipcodewithInput() throws EncryptedDocumentException, IOException
+	{
+		  gp.getUpdateZipcodefield().click();
+		  gp.getUpdateZipcodefield().sendKeys(Keys.CONTROL + "a");
+		  gp.getUpdateZipcodefield().sendKeys(Keys.DELETE); 
+		  String input = elib.getDataFromExcel("GeneratorInformation", 37, 1);
+		  gp.getUpdateZipcodefield().sendKeys(input);
+		  System.out.println("zipcode text filed will accepts Input");
+		  utilityclassobject.gettest().log(Status.INFO,"zipcode text filed will accepts input");
+	}
+	
+	@Test(dependsOnMethods = "TC_029VerifyZipcodewithInput")
+	public void TC_030VerifyZipcodewithalphabets() throws EncryptedDocumentException, IOException
+	{
+		  gp.getUpdateZipcodefield().click();
+		  gp.getUpdateZipcodefield().sendKeys(Keys.CONTROL + "a");
+		  gp.getUpdateZipcodefield().sendKeys(Keys.DELETE); 
+		  String input = elib.getDataFromExcel("GeneratorInformation", 37, 1);
+		  gp.getUpdateZipcodefield().sendKeys(input);
+		  System.out.println("zipcode text filed will accepts alphabets");
+		  utilityclassobject.gettest().log(Status.INFO,"zipcode text filed will accepts alphabets");
+	}
+	
+	@Test(dependsOnMethods = "TC_030VerifyZipcodewithalphabets")
+	public void TC_031VerifyZipcodewithNumbers() throws EncryptedDocumentException, IOException
+	{
+		  gp.getUpdateZipcodefield().click();
+		  gp.getUpdateZipcodefield().sendKeys(Keys.CONTROL + "a");
+		  gp.getUpdateZipcodefield().sendKeys(Keys.DELETE); 
+		  String input = elib.getDataFromExcel("GeneratorInformation", 37, 2);
+		  gp.getUpdateZipcodefield().sendKeys(input);
+		  System.out.println("zipcode text filed will accepts numbers");
+		  utilityclassobject.gettest().log(Status.INFO,"zipcode text filed will accepts numbers");
+
+	}
+	
+	@Test(dependsOnMethods = "TC_031VerifyZipcodewithNumbers")
+	public void TC_032VerifyZipcodewithSpecialcharacters() throws EncryptedDocumentException, IOException
+	{
+		  gp.getUpdateZipcodefield().click();
+		  gp.getUpdateZipcodefield().sendKeys(Keys.CONTROL + "a");
+		  gp.getUpdateZipcodefield().sendKeys(Keys.DELETE); 
+		  String input = elib.getDataFromExcel("GeneratorInformation", 37, 3);
+		  gp.getUpdateZipcodefield().sendKeys(input);
+		  System.out.println("zipcode text filed will accepts specialcharacters");
+		  utilityclassobject.gettest().log(Status.INFO,"zipcode text filed will accepts specialcharacters");
+	}
+	
+	@Test(dependsOnMethods = "TC_032VerifyZipcodewithSpecialcharacters")
+	public void TC_034VerifyEmailwithInput() throws EncryptedDocumentException, IOException
+	{
+		  gp.getUpdateEmailaddress().click();
+		  gp.getUpdateEmailaddress().sendKeys(Keys.CONTROL + "a");
+		  gp.getUpdateEmailaddress().sendKeys(Keys.DELETE); 
+		  String input = elib.getDataFromExcel("GeneratorInformation", 40, 1);
+		  gp.getUpdateEmailaddress().sendKeys(input);
+		  System.out.println("Email text filed will accepts input");
+		  utilityclassobject.gettest().log(Status.INFO,"Email text filed will accepts input");
+	}
+	
+	@Test(dependsOnMethods = "TC_034VerifyEmailwithInput")
+	public void TC_035VerifyEmailwithAlphabets() throws EncryptedDocumentException, IOException
+	{
+		  gp.getUpdateEmailaddress().click();
+		  gp.getUpdateEmailaddress().sendKeys(Keys.CONTROL + "a");
+		  gp.getUpdateEmailaddress().sendKeys(Keys.DELETE); 
+		  String input = elib.getDataFromExcel("GeneratorInformation", 40, 1);
+		  gp.getUpdateEmailaddress().sendKeys(input);
+		  System.out.println("Email text filed will accepts alphabets");
+		  utilityclassobject.gettest().log(Status.INFO,"Email text filed will accepts alphabets");	
+	}
+	
+	@Test(dependsOnMethods = "TC_035VerifyEmailwithAlphabets")
+	public void TC_036VerifyEmailwithNumbers() throws EncryptedDocumentException, IOException
+	{
+		  gp.getUpdateEmailaddress().click();
+		  gp.getUpdateEmailaddress().sendKeys(Keys.CONTROL + "a");
+		  gp.getUpdateEmailaddress().sendKeys(Keys.DELETE); 
+		  String input = elib.getDataFromExcel("GeneratorInformation", 40, 2);
+		  gp.getUpdateEmailaddress().sendKeys(input);
+		  System.out.println("Email text filed will accepts numbers");
+		  utilityclassobject.gettest().log(Status.INFO,"Email text filed will accepts numbers");	
+	}
+	
+	@Test(dependsOnMethods = "TC_036VerifyEmailwithNumbers")
+	public void TC_037VerifyEmailwithSpecialcharacters() throws EncryptedDocumentException, IOException
+	{
+		  gp.getUpdateEmailaddress().click();
+		  gp.getUpdateEmailaddress().sendKeys(Keys.CONTROL + "a");
+		  gp.getUpdateEmailaddress().sendKeys(Keys.DELETE); 
+		  String input = elib.getDataFromExcel("GeneratorInformation", 40, 3);
+		  gp.getUpdateEmailaddress().sendKeys(input);
+		  System.out.println("Email text filed will accepts specialcharacters");
+		  utilityclassobject.gettest().log(Status.INFO,"Email text filed will accepts specialcharacters");	
+	}
+	
+	//need to write TC_038
+	
+	@Test(dependsOnMethods = "TC_037VerifyEmailwithSpecialcharacters")
+	public void TC_039VerifyEmailwithValidInput() throws EncryptedDocumentException, IOException
+	{
+		  gp.getUpdateEmailaddress().click();
+		  gp.getUpdateEmailaddress().sendKeys(Keys.CONTROL + "a");
+		  gp.getUpdateEmailaddress().sendKeys(Keys.DELETE); 
+		  String input = elib.getDataFromExcel("GeneratorInformation", 40, 5);
+		  gp.getUpdateEmailaddress().sendKeys(input);
+		  System.out.println("Email text filed will accepts valid email");
+		  utilityclassobject.gettest().log(Status.INFO,"Email text filed will accepts valid email");	
+		
+	}
+	
+	//need to write TC_040
+	
+	@Test(dependsOnMethods = "TC_039VerifyEmailwithValidInput")
+	public void TC_041VerifyPhonewithInput() throws EncryptedDocumentException, IOException
+	{
+		gp.getUpdatePhonetextfield().click(); 
+		gp.getUpdatePhonetextfield().sendKeys(Keys.CONTROL +"a"); 
+		gp.getUpdatePhonetextfield().sendKeys(Keys.DELETE); 
+		String input = elib.getDataFromExcel("GeneratorInformation", 43, 2);
+		gp.getUpdatePhonetextfield().sendKeys(input);
+		System.out.println("Phone text filed will accepts input");
+		utilityclassobject.gettest().log(Status.INFO,"Phone text filed will accepts input");
+	}
+	
+	@Test(dependsOnMethods = "TC_041VerifyPhonewithInput")
+	public void TC_042VerifyPhonewithAlphabets() throws EncryptedDocumentException, IOException
+	{
+		  gp.getUpdatePhonetextfield().click();
+		  gp.getUpdatePhonetextfield().sendKeys(Keys.CONTROL + "a");
+		  gp.getUpdatePhonetextfield().sendKeys(Keys.DELETE); 
+		  String input = elib.getDataFromExcel("GeneratorInformation", 43, 1);
+		  gp.getUpdatePhonetextfield().sendKeys(input); 
+		  String actualValue = gp.getUpdatePhonetextfield().getAttribute("value");
+		  
+		  // Verify that alphabets are not accepted 
+		  if(actualValue.matches(".*[a-zA-Z].*"))
+		  { 
+		   System.out. println("Generator Main Phone text field accepted alphabets. :PASS");
+		  utilityclassobject.gettest().log(Status.FAIL, "Phone text field accepted alphabets."); 
+		  }
+		  else {
+		  System.out.println("Phone text field does not accept alphabets. : PASS");
+		  utilityclassobject.gettest().log(Status.PASS,"Phone text field does not accept alphabets.");
+		  }  
+		  System.out.println("Phone text field will not accept alphabets");
+		  utilityclassobject.gettest().log(Status.INFO,"Phone text field will not accept alphabets");
+	}
+	
+	@Test(dependsOnMethods = "TC_042VerifyPhonewithAlphabets")
+	public void TC_043VerifyPhonewithNumbers() throws EncryptedDocumentException, IOException
+	{
+		gp.getUpdatePhonetextfield().click(); 
+		gp.getUpdatePhonetextfield().sendKeys(Keys.CONTROL +"a"); 
+		gp.getUpdatePhonetextfield().sendKeys(Keys.DELETE); 
+		String input = elib.getDataFromExcel("GeneratorInformation", 43, 2);
+		gp.getUpdatePhonetextfield().sendKeys(input);
+		System.out.println("Phone text filed will accepts numbers");
+		utilityclassobject.gettest().log(Status.INFO,"Phone text filed will accepts numbers");
+		
+	}
+	
+	@Test(dependsOnMethods = "TC_043VerifyPhonewithNumbers")
+	public void TC_044VerifyPhonewithspecialcharacters() throws EncryptedDocumentException, IOException
+	{
+		  gp.getUpdatePhonetextfield().click();
+		  gp.getUpdatePhonetextfield().sendKeys(Keys.CONTROL + "a");
+		  gp.getUpdatePhonetextfield().sendKeys(Keys.DELETE); 
+		  String input = elib.getDataFromExcel("GeneratorInformation", 43, 3);
+		  gp.getUpdatePhonetextfield().sendKeys(input); 
+		  String actualValue = gp.getUpdatePhonetextfield().getAttribute("value");
+		  
+		  // Verify that alphabets are not accepted 
+		  if(actualValue.matches(".*[#$^&].*")) 
+		  {
+		  System.out.println("Phone text field accepted specialcharacters. :PASS");
+		  utilityclassobject.gettest().log(Status.FAIL, "Phone text field accepted alphabets."); 
+		  } 
+		  else { 
+		 System.out.println("Phone text field does not accept specialcharacters. : PASS");
+		  utilityclassobject.gettest().log(Status.PASS, "Phone text field does not accept specialcharacters."); 
+		  }
+		  System.out.println("Phone text field does not accept specialcharacters.");
+		  utilityclassobject.gettest().log(Status.INFO,"Phone text field does not accept specialcharacters");
+
+	}
+	
+	@Test(dependsOnMethods = "TC_044VerifyPhonewithspecialcharacters")
+	public void TC_045VerifyPhonewithMorethan10digits()
+	{
+		  gp.getUpdatePhonetextfield().click();
+		  gp.getUpdatePhonetextfield().sendKeys(Keys.CONTROL + "a");
+		  gp.getUpdatePhonetextfield().sendKeys(Keys.DELETE); long txt = 475638476587346783L;
+		  gp.getUpdatePhonetextfield().sendKeys(String.valueOf(txt));
+		  String actualValue = gp.getUpdatePhonetextfield().getAttribute("value");
+		  
+		  // Verify the field accepts only 10 digits 
+		  if (actualValue.length() == 10) 
+		  {
+		  utilityclassobject.gettest().log(Status.FAIL, "Phone text field accepted more than 10 digits:"+ actualValue); 
+		  } 
+		  else {/
+		  utilityclassobject.gettest().log(Status.PASS,"Phone text field does not accept more than 10 didgits: " + actualValue); 
+		  }
+		  System.out.println("Phone text field will not accept more than 10 digits");
+		  utilityclassobject.gettest().log(Status.INFO,"Phone text field will not accept more than 10 digits");
+pp
+	}
+	
+	//need to write TC_046 and TC_047
+	
+	@Test(dependsOnMethods = "TC_045VerifyPhonewithMorethan10digits")
+	public void TC_048VerifyExtwithInput() throws EncryptedDocumentException, IOException
+	{
+		 gp.getUpdateExtfield().click(); 
+		 gp.getUpdateExtfield().sendKeys(Keys.CONTROL + "a");
+		 gp.getUpdateExtfield().sendKeys(Keys.DELETE); 
+		 String input = elib.getDataFromExcel("GeneratorInformation", 46, 2 );
+		 gp.getUpdateExtfield().sendKeys(input);
+		 System.out.println("Ext text field will accepts Input");
+		 utilityclassobject.gettest().log(Status.INFO, "Ext text field will accepts Input");
+	}
+	
+	@Test(dependsOnMethods = "TC_048VerifyExtwithInput")
+	public void TC_049VerifyExtwithAlphabets() throws EncryptedDocumentException, IOException
+	{
+		 gp.getUpdateExtfield().click(); 
+		 gp.getUpdateExtfield().sendKeys(Keys.CONTROL + "a");
+	     gp.getUpdateExtfield().sendKeys(Keys.DELETE); 
+	     String input/ = elib.getDataFromExcel("GeneratorInformation", 46, 1);
+	     gp.getUpdateE/xtfield().sendKeys(input); 
+	     String actualValue = gp.getUpdateExtfield().getAttribute("value");
+	     // Verify that alphabets are not accepted 
+	     if(actualValue.matches(".*[a-zA-Z].*")) 
+	    {
+	     System.out.println("Ext text field accepted alphabets. :PASS");
+	     utilityclassobject.gettest().log(Status.FAIL,  "Ext text field accepted alphabets."); 
+	     } 
+	     else {
+	    System.out.println("Ext text field does not accept alphabets. : PASS");
+	    utilityclassobject.gettest().log(Status.PASS, "Ext text field does not accept alphabets.");
+	    }
+	    System.out.println("Ext text field will not accept alphabets");
+	 }
+	
+	@Test(dependsOnMethods = "TC_049VerifyExtwithAlphabets")
+	public void TC_050VerifyExtwithNumbers() throws EncryptedDocumentException, IOException
+	{
+		 gp.getUpdateExtfield().click(); 
+		 gp.getUpdateExtfield().sendKeys(Keys.CONTROL + "a");
+		 gp.getUpdateExtfield().sendKeys(Keys.DELETE); 
+		 String input = elib.getDataFromExcel("GeneratorInformation", 46, 2);
+		 gp.getUpdateExtfield().sendKeys(input);
+		 System.out.println("Ext text field will accepts Input");
+		 utilityclassobject.gettest().log(Status.INFO, "Ext text field will accepts Input");
+	}
+	
+	@Test(dependsOnMethods = "TC_050VerifyExtwithNumbers")
+	public void TC_051VerifyExtwithspecialcharacters() throws EncryptedDocumentException, IOException
+	{
+		 gp.getUpdateExtfield().click(); 
+		 gp.getUpdateExtfield().sendKeys(Keys.CONTROL + "a");
+		 gp.getUpdateExtfield().sendKeys(Keys.DELETE); 
+		 String input = elib.getDataFromExcel("GeneratorInformation", 46, 3);
+		 gp.getUpdateExtfield().sendKeys(input);
+		  
+		  String actualValue = gp.getUpdateExtfield().getAttribute("value");
+		  
+		  // Verify that alphabets are not accepted 
+		  if(actualValue.matches(".*[#$^&].*")) 
+		  {
+		  System.out.println("Ext text field accepted specialcharacters. :PASS");
+		  utilityclassobject.gettest().log(Status.FAIL, "Ext text field accepted alphabets."); 
+		  } 
+		  else {
+		  System.out.println("Ext text field does not accept specialcharacters. : PASS"); 
+		  utilityclassobject.gettest().log(Status.PASS,"Ext text field does not accept specialcharacters."); 
+		  }
+		  System.out.println("Ext text field does not accept specialcharacters.");
+	}
+	
+	@Test(dependsOnMethods = "TC_051VerifyExtwithspecialcharacters")
+	public void TC_052VerifyExtwithmorethan5digits() throws EncryptedDocumentException, IOException
+	{
+		gp.getUpdateExtfield().click(); 
+		gp.getUpdateExtfield().sendKeys(Keys.CONTROL + "a");
+		gp.getUpdateExtfield().sendKeys(Keys.DELETE); 
+	    String input = elib.getDataFromExcel("GeneratorInformation", 46, 4);
+	    gp.getUpdateExtfield().sendKeys(String.valueOf(input)); 
+	    String actualValue = gp.getUpdateExtfield().getAttribute("value");
+		 // Verify the field accepts only 10 digits 33
+		  if (actualValue.length() == 5)
+		  {
+		  utilityclassobject.gettest().log(Status.FAIL, "Ext text field accepted more than 5 digits:"+ actualValue); 
+		  } 
+		  else {
+		  utilityclassobject.gettest().log(Status.PASS, "Ext text field does not accept more than 5 didgits: " + actualValue); 
+		  }
+		  System.out.println("Ext text field will not accept more than 5 digits");
+	}
+	
+	@Test(dependsOnMethods = "TC_052VerifyExtwithmorethan5digits")
+	public void TC_053VerifyEXtwithShortInput() throws EncryptedDocumentException, IOException
+	{
+		gp.getUpdateExtfield().click(); 
+		gp.getUpdateExtfield().sendKeys(Keys.CONTROL + "a");
+		gp.getUpdateExtfield().sendKeys(Keys.DELETE); 
+		String input = elib.getDataFromExcel("GeneratorInformation", 46, 5);
+		gp.getUpdateExtfield().sendKeys(input);
+		System.out.println("Ext text field will accept short input");
+		utilityclassobject.gettest().log(Status.INFO, "Ext text field will accept short input");
+	}*/
+	
+	//need to write TC_054
+		 //need to change the dependency
+	
+	@Test(dependsOnMethods = "TC_001VerifyUpdateAddress")
+	public void TC_054VeifywithValidlatitude() throws InterruptedException
+	{
+		 gp.getUpdateStreetfield().click(); 
+		 gp.getUpdateStreetfield().sendKeys(Keys.CONTROL + "a");
+		 gp.getUpdateStreetfield().sendKeys(Keys.DELETE); 
+		 gp.getUpdateStreetfield().sendKeys("1245 6");
+		 Thread.sleep(2000);
+		 WebElement street1 = driver.findElement(By.xpath("//div[contains (text(),'1245 6th Street Southwest, Warren, Ohio 44485, United States')]")); 
+		 street1.click(); 
+		 Thread.sleep(2000);
+		 String latitude = gp.getCordinates().getText();
+		 System.out.println("latitudes: " + latitude);
+		 System.out.println(latitude);
+		 System.out.println("The latitude populate afeter entering valid address");
+		 utilityclassobject.gettest().log(Status.INFO, "The latitude populate afeter entering valid address");
+				 
+	}
+	
+	@Test(dependsOnMethods = "TC_054VeifywithValidlatitude")
+	public void TC_055VerifywithoutLatitude() throws InterruptedException
+	{
+		 gp.getUpdateStreetfield().click(); 
+		 gp.getUpdateStreetfield().sendKeys(Keys.CONTROL + "a");
+		 gp.getUpdateStreetfield().sendKeys(Keys.DELETE); 
+		 Thread.sleep(2000);
+		 String latitude = gp.getUnabletoResolve().getText();
+		 System.out.println("latitudes: " + latitude);
+		 System.out.println(latitude);
+		 System.out.println("The system populates to unable to resolve");
+		 utilityclassobject.gettest().log(Status.INFO, "The system populates to unable to resolve");
+				 
+	}
+	
+	@Test(dependsOnMethods = "TC_055VerifywithoutLatitude")
+	public void TC_056VerifywithLangitude() throws InterruptedException
+	{
+		 gp.getUpdateStreetfield().click(); 
+		 gp.getUpdateStreetfield().sendKeys(Keys.CONTROL + "a");
+		 gp.getUpdateStreetfield().sendKeys(Keys.DELETE); 
+		 gp.getUpdateStreetfield().sendKeys("1245 6");
+		 Thread.sleep(2000);
+		 WebElement street1 = driver.findElement(By.xpath("//div[contains (text(),'1245 6th Street Southwest, Warren, Ohio 44485, United States')]")); 
+		 street1.click(); 
+		 Thread.sleep(2000);
+		 String langitude = gp.getCordinates().getText();
+		 System.out.println("langitudes: " + langitude);
+		 System.out.println(langitude);
+		 System.out.println("The langitude populate afeter entering valid address");
+		 utilityclassobject.gettest().log(Status.INFO, "The langitude populate afeter entering valid address");			 
+	}
+	
+	@Test(dependsOnMethods = "TC_056VerifywithLangitude")
+	public void TC_057VerifywithoutLangitude() throws InterruptedException
+	{
+		 gp.getUpdateStreetfield().click(); 
+		 gp.getUpdateStreetfield().sendKeys(Keys.CONTROL + "a");
+		 gp.getUpdateStreetfield().sendKeys(Keys.DELETE); 
+		 Thread.sleep(2000);
+		 String latitude = gp.getUnabletoResolve().getText();
+		 System.out.println("latitudes: " + latitude);
+		 System.out.println(latitude);
+		 System.out.println("The system populates to unable to resolve");
+		 utilityclassobject.gettest().log(Status.INFO, "The system populates to unable to resolve");
+	}
+	
+	@Test(dependsOnMethods = "TC_057VerifywithoutLangitude")
+	public void TC_058VerifyEnableUpdateAddress() throws EncryptedDocumentException, IOException, InterruptedException
+	{
+		  gp.getUpdateAttentionfield().click();
+		  gp.getUpdateAttentionfield().sendKeys(Keys.CONTROL + "a");
+		  gp.getUpdateAttentionfield().sendKeys(Keys.DELETE); 
+		  String input = elib.getDataFromExcel("GeneratorInformation", 25, 1);
+		  gp.getUpdateAttentionfield().sendKeys(input);
+		  
+		  gp.getUpdateStreetfield().sendKeys("1245 6");
+		  Thread.sleep(2000);
+		  WebElement street1 = driver.findElement(By.xpath("//div[contains (text(),'1245 6th Street Southwest, Warren, Ohio 44485, United States')]")); 
+		  street1.click();
+		  
+		  gp.getUpdateEmailaddress().click();
+		  gp.getUpdateEmailaddress().sendKeys(Keys.CONTROL + "a");
+		  gp.getUpdateEmailaddress().sendKeys(Keys.DELETE); 
+		  String input1 = elib.getDataFromExcel("GeneratorInformation", 40, 5);
+		  gp.getUpdateEmailaddress().sendKeys(input1);
+		  
+		  gp.getUpdatePhonetextfield().click(); 
+		  gp.getUpdatePhonetextfield().sendKeys(Keys.CONTROL +"a"); 
+		  gp.getUpdatePhonetextfield().sendKeys(Keys.DELETE); 
+		  String input2 = elib.getDataFromExcel("GeneratorInformation", 43, 2);
+		  gp.getUpdatePhonetextfield().sendKeys(input2);
+		  
+		  Thread.sleep(2000);
+		  if (gp.getUpdateAddressmodalButton().isEnabled())
+		  {
+			  System.out.println("Update Address button is enabled after entering all the mandatory fields");
+			  utilityclassobject.gettest().log(Status.INFO, "Update Address button is enabled after entering all the mandatory fields");
+		  }
+		  
+		  else
+		  {
+			  System.out.println("Update Address button is disabled after entering all the mandatory fields");
+			  utilityclassobject.gettest().log(Status.INFO, "Update Address button is disabled after entering all the mandatory fields");
+		  }	  
+		  
+	}
 	
 	
-	
+	@Test(dependsOnMethods = "TC_058VerifyEnableUpdateAddress")
+	public void TC_059VerifyDisabledUpdateAddress() throws InterruptedException
+	{
+		 gp.getUpdateAttentionfield().click();
+		 gp.getUpdateAttentionfield().sendKeys(Keys.CONTROL + "a");
+	     gp.getUpdateAttentionfield().sendKeys(Keys.DELETE);
+	     
+	     gp.getUpdateStreetfield().click();
+		 gp.getUpdateStreetfield().sendKeys(Keys.CONTROL + "a");
+	     gp.getUpdateStreetfield().sendKeys(Keys.DELETE);
+		
+		  gp.getUpdateEmailaddress().click();
+		  gp.getUpdateEmailaddress().sendKeys(Keys.CONTROL + "a");
+		  gp.getUpdateEmailaddress().sendKeys(Keys.DELETE); 
+		  
+		  gp.getUpdatePhonetextfield().click(); 
+		  gp.getUpdatePhonetextfield().sendKeys(Keys.CONTROL +"a"); 
+		  gp.getUpdatePhonetextfield().sendKeys(Keys.DELETE); 
+		  
+		  gp.getUpdateAddressmodalButton().click();
+		  
+		  Alert alert = driver.switchTo().alert();
+
+	        // Capture alert message
+	        String alertMessage = alert.getText();
+
+	        System.out.println( "Popup Message : " + alertMessage);
+
+	        // Validation
+	  
+	        if (alertMessage.contains("Please fix the highlighted fields before proceeding")) {
+
+	            System.out.println("PASSED : Update Address button is disabled");
+
+	            utilityclassobject.gettest().log(Status.PASS, "Update Address button is disabled");
+
+	        } else {
+
+	            System.out.println("FAILED : Update Address button is enable");
+
+	            utilityclassobject.gettest().log(Status.FAIL, "Update Address button is enable: "+ alertMessage);
+	        }
+	  
+	}
 	
 	
 

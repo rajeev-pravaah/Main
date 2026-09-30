@@ -6,14 +6,15 @@
       <class name="Octopussaas_GeneratorInformation.UpdateAdrress">
         <methods>
           <include name="TC_001VerifyUpdateAddress"/>
-          <include name="TC_005VerifyAttentionwithSpecialcharacters"/>
-          <include name="TC_002VerifyAttentionfieldwithInput"/>
           <include name="Ac"/>
           <include name="Bc"/>
-          <include name="TC_006AttentionwithoutInput"/>
+          <include name="TC_055VerifywithoutLatitude"/>
+          <include name="TC_054VeifywithValidlatitude"/>
+          <include name="TC_056VerifywithLangitude"/>
+          <include name="TC_058VerifyEnableUpdateAddress"/>
+          <include name="TC_059VerifyDisabledUpdateAddress"/>
+          <include name="TC_057VerifywithoutLangitude"/>
           <include name="Bm"/>
-          <include name="TC_004VerifyAttentionwithNumbers"/>
-          <include name="TC_003VerifyAttentionwithAlphbets"/>
           <include name="Am"/>
         </methods>
       </class> <!-- Octopussaas_GeneratorInformation.UpdateAdrress -->

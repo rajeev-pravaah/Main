@@ -305,10 +305,51 @@ public class GeneratorInformation1 {
 	private WebElement updateZipcodefield;
 	@FindBy (xpath = "//input[@id='editable-service-address-suite']")
 	private WebElement updateSuitefield;
+	@FindBy (xpath = "//input[@id='editable-service-address-email']")
+	private WebElement updateEmailaddress;
+	@FindBy (xpath = "//input[@id='editable-service-address-phone']")
+	private WebElement updatePhonetextfield;
+	@FindBy (xpath = "//input[@id='editable-service-address-phone-ext']")
+	private WebElement updateExtfield;
+	@FindBy (xpath = "//span[contains (text(),'Coordinates:')]//following-sibling::span[contains (text(),'')]")
+	private WebElement cordinates; 
+	@FindBy (xpath = "//span[contains (text(),'Unable to resolve')]")
+	private WebElement unabletoResolve;
+	@FindBy (xpath = "(//button[contains (text(),'Update Address')])[2]")
+	private WebElement updateAddressmodalButton;
+    @FindBy (xpath = "//button[contains (text(),'Save New Address')]")
+	private WebElement savenewAddressbutton;
 	
 	
 	
-	
+	public WebElement getSavenewAddressbutton() {
+		return savenewAddressbutton;
+	}
+
+	public WebElement getUpdateAddressmodalButton() {
+		return updateAddressmodalButton;
+	}
+
+	public WebElement getUnabletoResolve() {
+		return unabletoResolve;
+	}
+
+	public WebElement getCordinates() {
+		return cordinates;
+	}
+
+	public WebElement getUpdateExtfield() {
+		return updateExtfield;
+	}
+
+	public WebElement getUpdatePhonetextfield() {
+		return updatePhonetextfield;
+	}
+
+	public WebElement getUpdateEmailaddress() {
+		return updateEmailaddress;
+	}
+
 	public WebElement getUpdateSuitefield() {
 		return updateSuitefield;
 	}
@@ -1167,6 +1208,20 @@ public class GeneratorInformation1 {
 		        element
 		    );
 		}
+	 
+	 public void UpdateState() throws InterruptedException
+	 {
+	        updateStatefiled.click();
+			aZstate.click();
+			Thread.sleep(200);
+			updateStatefiled.click();
+			Actions act = new Actions(driver);
+			act.moveToElement(fLstate).click().perform();
+			Thread.sleep(200);
+			updateStatefiled.click();
+			Actions act1 = new Actions(driver);
+			act1.moveToElement(wVState).click().perform();
+	 }
 
 	
 }
