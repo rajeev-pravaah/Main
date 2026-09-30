@@ -1,4 +1,4 @@
-package GeneratorDashboard;
+package Generator_Dashboard;
 
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Listeners;
@@ -13,11 +13,6 @@ import com.aventstack.extentreports.Status;
 
 public class Generator_Dashboard_TC extends BaseClassForGEneratorContacts{
 	Generator_Dashboard gd;
-	
-	
-	
-	
-	
 	
 	
 	@Test
@@ -41,6 +36,18 @@ public class Generator_Dashboard_TC extends BaseClassForGEneratorContacts{
 			System.out.println("generator information page displayed sucessfully");
 			utilityclassobject.gettest().log(Status.FAIL, "generator information not page displayed ");
 		}
-	}}
+	}
+	
+
+
+
+
+
+
+
+
+
+
+}
 	
 

@@ -38,6 +38,13 @@ public class Generator_Dashboard {
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
 
 	public WebElement getGeneratornametxt() {
 		return generatornametxt;
