@@ -3,67 +3,55 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="UnappliedChecks.unappliedcheccks_All_Tc">
+      <class name="GeneratorPricBook.Generator_priceBook_AllTC">
         <methods>
-          <include name="TC_056VerifyRemoveReasonForUnappliedChecks"/>
+          <include name="TC_030verifyNumberofContainerForPathologyare12andvisibleWithoutduplicates"/>
           <include name="Ac"/>
-          <include name="TC_036VerifyClosetheModelandResettheState"/>
-          <include name="TC_047VerifyAbletoEditChecknumberfromDetails"/>
-          <include name="TC_007VerifyStatusFilter"/>
-          <include name="TC_037VerifymanualGridAddandRemoveRows"/>
-          <include name="TC_045VerifyInlinePaymentEditDate"/>
-          <include name="TC_015VerifyDeletedChecksAreNotDisplayedInList"/>
-          <include name="TC_010VerifyTableColumLists"/>
+          <include name="TC_005verifyViewToggleButtonandEnabledandDisabledOption"/>
+          <include name="TC_032verifyNumberofContainerForCanbissWasteare12andvisibleWithoutDupicate"/>
+          <include name="TC_026verifyNumberofContainerForProductDestructionare07andvisible"/>
+          <include name="TC_037VerifyYellowDotAppearsForConfiguredservices"/>
           <include name="Am"/>
-          <include name="TC_051VerifyEditAmountUpdatedMessage"/>
-          <include name="TC_038VerifyManualRowValidaton"/>
-          <include name="TC_005VerifySearchUnappliedCheckWithMorethan5digits"/>
-          <include name="TC_030VerifyUploadValidCSVwith"/>
-          <include name="TC_054VerifySoftDeleteUnappliedCheck"/>
-          <include name="TC_006VerifySearchHighlightedMatchingField"/>
-          <include name="TC_013VerifyRealtimelisterUpdatetable"/>
-          <include name="TC_019VerifyAmountMustBepositive"/>
-          <include name="TC_017VerifyGeneratorRrequiredErrormessage"/>
-          <include name="TC_018VerifyCheckNumberRequiredErrormessage"/>
-          <include name="TC_024VerifyImportcheckModelOpens"/>
-          <include name="TC_050VerifyEditAmountwithZero"/>
-          <include name="TC_002UnappliedCheckPageSideBar_Menu"/>
-          <include name="TC_041VerifyManualgridCheckisPresentinUnappliedChecks"/>
-          <include name="TC_033VerifyImportCSvWithInvalidRow"/>
-          <include name="TC_044VerifygeneratorNameFromDetails"/>
-          <include name="TC_025VerifyDownloadTemplate"/>
-          <include name="TC_011VerifySingleclickAndDoubleClick"/>
-          <include name="TC_048VerifyInlineEditInvoiceNumber"/>
-          <include name="TC_046VerifyInlineEditMemo"/>
-          <include name="TC_016QucikCheckAddAndOpen"/>
-          <include name="TC_008VerifyDateRangeFilter"/>
-          <include name="TC_057VerifyBalanceRestoredAfterRemove"/>
-          <include name="TC_031VerifyConfirmImportIsDisableWhileUploading"/>
-          <include name="TC_043VerifyUnappliedChecksDetailsFieldsRender"/>
-          <include name="TC_020VerifyPaymentDateCapture"/>
-          <include name="TC_012VerifySummaryFootertotalMatchRows"/>
-          <include name="TC_052VerifyRemovedApplicationWithScratced"/>
-          <include name="TC_042VerifyUnappliedChecksDetails"/>
-          <include name="TC_055verifyRemoveDisplayedForActiveEntries"/>
-          <include name="TC_021VerifyQuickCheckAdd"/>
-          <include name="TC_001UnappliedCheckPageLoad"/>
-          <include name="TC_023VerifyAmountFieldBackgroundColor"/>
+          <include name="TC_031verfySytemShoulddisplayCanbissWasteContainersInstantly"/>
+          <include name="TC_013verifyNumberOfContainerBesideServices"/>
+          <include name="TC_020verifyNumberofContainerForChemotherapyare09"/>
+          <include name="TC_004verifyFlatMonthlychargeOption"/>
+          <include name="TC_014verifyBiosharpNumberofContainersare20"/>
+          <include name="TC_003verifySOwbuttonIsClickableandOpensPopUp"/>
+          <include name="TC_008verifyUserIsAbleApplyDifferentTemplate"/>
+          <include name="TC_039VerifyIncludeInFaltMonthlyColumnisAppear"/>
+          <include name="TC_036verifyMasterItemNameColumnWithDifferentnames"/>
+          <include name="TC_024verifyNumberofContainerForAPHISWasteare07andvisible"/>
+          <include name="TC_009verifyServiceisDisplayedUnderTags"/>
+          <include name="TC_027verifySystemShouldDisplayUniversalWasteContainersInstantly"/>
+          <include name="TC_015verifyContainerChangesServices"/>
+          <include name="TC_034verifyCopyfromMasterButtonAppearsforAllItemsandClickable"/>
+          <include name="TC_018verifyNumberofContainerForRCRAPharmaceuticalare15"/>
+          <include name="TC_022verifyNumberofContainerForPaperShreddingare07andvisible"/>
+          <include name="TC_012verifyBioSharpInfoIconIsDisplayed"/>
+          <include name="TC_029verifySystemShouldDisplayPathologyContainersInstantly"/>
           <include name="Bc"/>
-          <include name="TC_035VerifyImportResultsDetails"/>
-          <include name="TC_039VerifyManualRowAdd"/>
+          <include name="TC_041VerifyFlatmonthlyCheckBoxisClickable"/>
+          <include name="TC_019verifySystemShouldDisplayChemotherapyContainers"/>
+          <include name="TC_033verifyCopyfromMasterColumnAppearsforALlSeervices"/>
           <include name="Bm"/>
-          <include name="TC_009VerifyClearFilterResetDefaultvalues"/>
-          <include name="TC_014VerifyEmptyStateMesssage"/>
-          <include name="TC_032VerifyConfirmImportCreatesValidRow"/>
-          <include name="TC_022VerifySaveButtonShowsLoading"/>
-          <include name="TC_049VerifyEditAmount"/>
-          <include name="TC_003VerifytheDefaultDateRange"/>
-          <include name="TC_034VerifyImportCSvWithInvalidRow"/>
-          <include name="TC_004SearchUnappliedCheckRequires5Char"/>
-          <include name="TC_040VerifyManualgridChecksCreatedSuccessfully"/>
-          <include name="TC_053VerifyUnappliedCheckDeletebuttonisHidden"/>
+          <include name="TC_010verifyAllServiceShouldSelectItbIndividually"/>
+          <include name="TC_035verifyMasterITemnamecolumnAppears"/>
+          <include name="TC_017verifyContainerChangesServicesForRCRAPharmaceutical"/>
+          <include name="TC_011verifyBioSharpHeaderIsDisplayedBelowtheService"/>
+          <include name="TC_040VerifyCheckBoxisPresentunderFlatmonthlyColumn"/>
+          <include name="TC_007verifySelectedTemplateDropdown_DefaultValue_options_AbleToSeeTheDifferntTemplate"/>
+          <include name="TC_016verifyNumberofContainerForNonRCRAPharmaceuticalare15"/>
+          <include name="TC_021verifySystemShouldDisplayPaperShreddingContainers"/>
+          <include name="TC_023verifySystemShouldDisplayAPHISWasteContainers"/>
+          <include name="TC_025verifySystemShouldDisplayProductDestructionContainers"/>
+          <include name="TC_038VerifyCopyFromMasterIndividualContainerandRaateGettingAddedAndGreenDotappear"/>
+          <include name="TC_002verifyScopofWorkButtonIsPresent"/>
+          <include name="TC_028verifyNumberofContainerForUniversalWasteare07andvisible"/>
+          <include name="TC_001verifyMenuButtonFromGeneratorPri"/>
+          <include name="TC_006verifyInactiveToggleButtonandEnabledandDisabledOption"/>
         </methods>
-      </class> <!-- UnappliedChecks.unappliedcheccks_All_Tc -->
+      </class> <!-- GeneratorPricBook.Generator_priceBook_AllTC -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
