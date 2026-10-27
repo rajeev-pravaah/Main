@@ -1,33 +1,2403 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="67" passed="0" failed="0" skipped="67">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-09-29T09:24:42 GMT-07:00" name="Default suite" finished-at="2026-09-29T09:25:40 GMT-07:00" duration-ms="58222">
+  <suite started-at="2026-10-27T07:22:45 GMT-07:00" name="Default suite" finished-at="2026-10-27T07:23:51 GMT-07:00" duration-ms="66430">
     <groups>
     </groups>
-    <test started-at="2026-09-29T09:24:42 GMT-07:00" name="Default test" finished-at="2026-09-29T09:25:40 GMT-07:00" duration-ms="58222">
-      <class name="GeneratorDashboard.Generator_Dashboard_TC">
-        <test-method is-config="true" signature="Bc()[pri:0, instance:GeneratorDashboard.Generator_Dashboard_TC@44c03695]" started-at="2026-09-29T09:24:42 GMT-07:00" name="Bc" finished-at="2026-09-29T09:25:24 GMT-07:00" duration-ms="41491" status="PASS">
+    <test started-at="2026-10-27T07:22:45 GMT-07:00" name="Default test" finished-at="2026-10-27T07:23:51 GMT-07:00" duration-ms="66430">
+      <class name="Asserts_Routes.Routes_TC">
+        <test-method is-config="true" signature="Bc()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:22:45 GMT-07:00" name="Bc" finished-at="2026-10-27T07:23:45 GMT-07:00" duration-ms="59488" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=155.0.8059.86)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b5423b119e0a37467e6318db51e46bc7, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.86, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\Dinesh\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55944}, goog:processID: 24360, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55944/devtoo..., se:cdpVersion: 155.0.8059.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b5423b119e0a37467e6318db51e46bc7]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=155.0.8059.86)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b5423b119e0a37467e6318db51e46bc7, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.86, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\Dinesh\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55944}, goog:processID: 24360, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55944/devtoo..., se:cdpVersion: 155.0.8059.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b5423b119e0a37467e6318db51e46bc7
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:617)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:621)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1047)
+at com.Octopussaas.BaseUtility.BaseClassForGEneratorContacts.Bc(BaseClassForGEneratorContacts.java:110)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bc -->
-        <test-method signature="TC_001_verify_Generator_Dashboard()[pri:0, instance:GeneratorDashboard.Generator_Dashboard_TC@44c03695]" started-at="2026-09-29T09:25:24 GMT-07:00" name="TC_001_verify_Generator_Dashboard" finished-at="2026-09-29T09:25:34 GMT-07:00" duration-ms="10606" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_001_verify_Generator_Dashboard -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorDashboard.Generator_Dashboard_TC@44c03695]" started-at="2026-09-29T09:25:24 GMT-07:00" name="Bm" finished-at="2026-09-29T09:25:24 GMT-07:00" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:45 GMT-07:00" name="Bm" finished-at="2026-10-27T07:23:45 GMT-07:00" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorDashboard.Generator_Dashboard_TC@44c03695]" started-at="2026-09-29T09:25:34 GMT-07:00" name="Am" finished-at="2026-09-29T09:25:36 GMT-07:00" duration-ms="2013" status="PASS">
+        <test-method signature="TC_001_verifyUserCanAccessRoutesPage()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:45 GMT-07:00" name="TC_001_verifyUserCanAccessRoutesPage" finished-at="2026-10-27T07:23:45 GMT-07:00" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=155.0.8059.86)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b5423b119e0a37467e6318db51e46bc7, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.86, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\Dinesh\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55944}, goog:processID: 24360, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55944/devtoo..., se:cdpVersion: 155.0.8059.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b5423b119e0a37467e6318db51e46bc7]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=155.0.8059.86)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b5423b119e0a37467e6318db51e46bc7, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.86, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\Dinesh\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55944}, goog:processID: 24360, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55944/devtoo..., se:cdpVersion: 155.0.8059.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b5423b119e0a37467e6318db51e46bc7
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:617)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:621)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1047)
+at com.Octopussaas.BaseUtility.BaseClassForGEneratorContacts.Bc(BaseClassForGEneratorContacts.java:110)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_001_verifyUserCanAccessRoutesPage -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:45 GMT-07:00" name="Am" finished-at="2026-10-27T07:23:47 GMT-07:00" duration-ms="2007" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Ac()[pri:0, instance:GeneratorDashboard.Generator_Dashboard_TC@44c03695]" started-at="2026-09-29T09:25:36 GMT-07:00" name="Ac" finished-at="2026-09-29T09:25:40 GMT-07:00" duration-ms="4026" status="PASS">
+        <test-method signature="TC_002_verifyExistingRoutesAppearOrEmptyStateIsShown()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_002_verifyExistingRoutesAppearOrEmptyStateIsShown" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_001_verifyUserCanAccessRoutesPage" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_002_verifyExistingRoutesAppearOrEmptyStateIsShown() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_001_verifyUserCanAccessRoutesPage() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_002_verifyExistingRoutesAppearOrEmptyStateIsShown() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_001_verifyUserCanAccessRoutesPage() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_002_verifyExistingRoutesAppearOrEmptyStateIsShown -->
+        <test-method signature="TC_003_verifyNewRouteCanBeAdded()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_003_verifyNewRouteCanBeAdded" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_002_verifyExistingRoutesAppearOrEmptyStateIsShown" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_003_verifyNewRouteCanBeAdded() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_002_verifyExistingRoutesAppearOrEmptyStateIsShown() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_003_verifyNewRouteCanBeAdded() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_002_verifyExistingRoutesAppearOrEmptyStateIsShown() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_003_verifyNewRouteCanBeAdded -->
+        <test-method signature="TC_004_verifyRouteDetailsTooltipAppearsWhenClicked()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_004_verifyRouteDetailsTooltipAppearsWhenClicked" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_003_verifyNewRouteCanBeAdded" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_004_verifyRouteDetailsTooltipAppearsWhenClicked() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_003_verifyNewRouteCanBeAdded() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_004_verifyRouteDetailsTooltipAppearsWhenClicked() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_003_verifyNewRouteCanBeAdded() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_004_verifyRouteDetailsTooltipAppearsWhenClicked -->
+        <test-method signature="TC_005_verifyMapAppearsCorrectly()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_005_verifyMapAppearsCorrectly" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_004_verifyRouteDetailsTooltipAppearsWhenClicked" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_005_verifyMapAppearsCorrectly() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_004_verifyRouteDetailsTooltipAppearsWhenClicked() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_005_verifyMapAppearsCorrectly() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_004_verifyRouteDetailsTooltipAppearsWhenClicked() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_005_verifyMapAppearsCorrectly -->
+        <test-method signature="TC_006_verifyUserCanZoomInOutMapWithoutLag()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_006_verifyUserCanZoomInOutMapWithoutLag" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_005_verifyMapAppearsCorrectly" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_006_verifyUserCanZoomInOutMapWithoutLag() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_005_verifyMapAppearsCorrectly() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_006_verifyUserCanZoomInOutMapWithoutLag() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_005_verifyMapAppearsCorrectly() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_006_verifyUserCanZoomInOutMapWithoutLag -->
+        <test-method signature="TC_007_verifyRouteNameFieldAcceptsInput()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_007_verifyRouteNameFieldAcceptsInput" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_006_verifyUserCanZoomInOutMapWithoutLag" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_007_verifyRouteNameFieldAcceptsInput() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_006_verifyUserCanZoomInOutMapWithoutLag() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_007_verifyRouteNameFieldAcceptsInput() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_006_verifyUserCanZoomInOutMapWithoutLag() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_007_verifyRouteNameFieldAcceptsInput -->
+        <test-method signature="TC_008_verifyRouteNameFieldAcceptsNumbers()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_008_verifyRouteNameFieldAcceptsNumbers" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_007_verifyRouteNameFieldAcceptsInput" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_008_verifyRouteNameFieldAcceptsNumbers() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_007_verifyRouteNameFieldAcceptsInput() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_008_verifyRouteNameFieldAcceptsNumbers() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_007_verifyRouteNameFieldAcceptsInput() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_008_verifyRouteNameFieldAcceptsNumbers -->
+        <test-method signature="TC_009_verifyRouteNameFieldAcceptsSpecialCharacters()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_009_verifyRouteNameFieldAcceptsSpecialCharacters" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_008_verifyRouteNameFieldAcceptsNumbers" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_009_verifyRouteNameFieldAcceptsSpecialCharacters() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_008_verifyRouteNameFieldAcceptsNumbers() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_009_verifyRouteNameFieldAcceptsSpecialCharacters() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_008_verifyRouteNameFieldAcceptsNumbers() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_009_verifyRouteNameFieldAcceptsSpecialCharacters -->
+        <test-method signature="TC_010_verifyRouteNameFieldAcceptsLongerInput()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_010_verifyRouteNameFieldAcceptsLongerInput" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_009_verifyRouteNameFieldAcceptsSpecialCharacters" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_010_verifyRouteNameFieldAcceptsLongerInput() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_009_verifyRouteNameFieldAcceptsSpecialCharacters() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_010_verifyRouteNameFieldAcceptsLongerInput() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_009_verifyRouteNameFieldAcceptsSpecialCharacters() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_010_verifyRouteNameFieldAcceptsLongerInput -->
+        <test-method signature="TC_011_verifyUserCannotEnterInputInDefaultStartLocationField()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_011_verifyUserCannotEnterInputInDefaultStartLocationField" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_010_verifyRouteNameFieldAcceptsLongerInput" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_011_verifyUserCannotEnterInputInDefaultStartLocationField() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_010_verifyRouteNameFieldAcceptsLongerInput() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_011_verifyUserCannotEnterInputInDefaultStartLocationField() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_010_verifyRouteNameFieldAcceptsLongerInput() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_011_verifyUserCannotEnterInputInDefaultStartLocationField -->
+        <test-method signature="TC_012_verifyDefaultStartLocationDropdownHasMainLocations()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_012_verifyDefaultStartLocationDropdownHasMainLocations" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_011_verifyUserCannotEnterInputInDefaultStartLocationField" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_012_verifyDefaultStartLocationDropdownHasMainLocations() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_011_verifyUserCannotEnterInputInDefaultStartLocationField() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_012_verifyDefaultStartLocationDropdownHasMainLocations() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_011_verifyUserCannotEnterInputInDefaultStartLocationField() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_012_verifyDefaultStartLocationDropdownHasMainLocations -->
+        <test-method signature="TC_013_verifySatelliteLocationsAreVisibleInDefaultStartLocationDropdown()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_013_verifySatelliteLocationsAreVisibleInDefaultStartLocationDropdown" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_012_verifyDefaultStartLocationDropdownHasMainLocations" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_013_verifySatelliteLocationsAreVisibleInDefaultStartLocationDropdown() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_012_verifyDefaultStartLocationDropdownHasMainLocations() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_013_verifySatelliteLocationsAreVisibleInDefaultStartLocationDropdown() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_012_verifyDefaultStartLocationDropdownHasMainLocations() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_013_verifySatelliteLocationsAreVisibleInDefaultStartLocationDropdown -->
+        <test-method signature="TC_014_verifySatelliteLocationCanBeSelected()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_014_verifySatelliteLocationCanBeSelected" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_013_verifySatelliteLocationsAreVisibleInDefaultStartLocationDropdown" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_014_verifySatelliteLocationCanBeSelected() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_013_verifySatelliteLocationsAreVisibleInDefaultStartLocationDropdown() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_014_verifySatelliteLocationCanBeSelected() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_013_verifySatelliteLocationsAreVisibleInDefaultStartLocationDropdown() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_014_verifySatelliteLocationCanBeSelected -->
+        <test-method signature="TC_015_verifyDisposalFacilitiesAreVisibleInDefaultStartLocationDropdown()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_015_verifyDisposalFacilitiesAreVisibleInDefaultStartLocationDropdown" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_014_verifySatelliteLocationCanBeSelected" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_015_verifyDisposalFacilitiesAreVisibleInDefaultStartLocationDropdown() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_014_verifySatelliteLocationCanBeSelected() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_015_verifyDisposalFacilitiesAreVisibleInDefaultStartLocationDropdown() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_014_verifySatelliteLocationCanBeSelected() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_015_verifyDisposalFacilitiesAreVisibleInDefaultStartLocationDropdown -->
+        <test-method signature="TC_016_verifyDisposalFacilityCanBeSelected()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_016_verifyDisposalFacilityCanBeSelected" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_015_verifyDisposalFacilitiesAreVisibleInDefaultStartLocationDropdown" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_016_verifyDisposalFacilityCanBeSelected() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_015_verifyDisposalFacilitiesAreVisibleInDefaultStartLocationDropdown() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_016_verifyDisposalFacilityCanBeSelected() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_015_verifyDisposalFacilitiesAreVisibleInDefaultStartLocationDropdown() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_016_verifyDisposalFacilityCanBeSelected -->
+        <test-method signature="TC_017_verifyAreYouSurePopupAppearsUponSelectingDefaultStartLocation()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_017_verifyAreYouSurePopupAppearsUponSelectingDefaultStartLocation" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_016_verifyDisposalFacilityCanBeSelected" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_017_verifyAreYouSurePopupAppearsUponSelectingDefaultStartLocation() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_016_verifyDisposalFacilityCanBeSelected() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_017_verifyAreYouSurePopupAppearsUponSelectingDefaultStartLocation() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_016_verifyDisposalFacilityCanBeSelected() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_017_verifyAreYouSurePopupAppearsUponSelectingDefaultStartLocation -->
+        <test-method signature="TC_018_verifyLocationDoesNotGetSelectedWhenClickedOnCancel()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_018_verifyLocationDoesNotGetSelectedWhenClickedOnCancel" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_017_verifyAreYouSurePopupAppearsUponSelectingDefaultStartLocation" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_018_verifyLocationDoesNotGetSelectedWhenClickedOnCancel() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_017_verifyAreYouSurePopupAppearsUponSelectingDefaultStartLocation() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_018_verifyLocationDoesNotGetSelectedWhenClickedOnCancel() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_017_verifyAreYouSurePopupAppearsUponSelectingDefaultStartLocation() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_018_verifyLocationDoesNotGetSelectedWhenClickedOnCancel -->
+        <test-method signature="TC_019_verifyLocationGetsSelectedWhenClickedOnYes()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_019_verifyLocationGetsSelectedWhenClickedOnYes" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_018_verifyLocationDoesNotGetSelectedWhenClickedOnCancel" duration-ms="2" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_019_verifyLocationGetsSelectedWhenClickedOnYes() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_018_verifyLocationDoesNotGetSelectedWhenClickedOnCancel() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_019_verifyLocationGetsSelectedWhenClickedOnYes() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_018_verifyLocationDoesNotGetSelectedWhenClickedOnCancel() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_019_verifyLocationGetsSelectedWhenClickedOnYes -->
+        <test-method signature="TC_020_verifyRouteColorFieldAcceptsInput()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_020_verifyRouteColorFieldAcceptsInput" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_019_verifyLocationGetsSelectedWhenClickedOnYes" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_020_verifyRouteColorFieldAcceptsInput() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_019_verifyLocationGetsSelectedWhenClickedOnYes() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_020_verifyRouteColorFieldAcceptsInput() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_019_verifyLocationGetsSelectedWhenClickedOnYes() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_020_verifyRouteColorFieldAcceptsInput -->
+        <test-method signature="TC_021_verifyRouteColorFieldAcceptsAlphabets()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_021_verifyRouteColorFieldAcceptsAlphabets" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_020_verifyRouteColorFieldAcceptsInput" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_021_verifyRouteColorFieldAcceptsAlphabets() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_020_verifyRouteColorFieldAcceptsInput() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_021_verifyRouteColorFieldAcceptsAlphabets() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_020_verifyRouteColorFieldAcceptsInput() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_021_verifyRouteColorFieldAcceptsAlphabets -->
+        <test-method signature="TC_022_verifyRouteColorFieldAcceptsNumbers()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_022_verifyRouteColorFieldAcceptsNumbers" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_021_verifyRouteColorFieldAcceptsAlphabets" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_022_verifyRouteColorFieldAcceptsNumbers() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_021_verifyRouteColorFieldAcceptsAlphabets() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_022_verifyRouteColorFieldAcceptsNumbers() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_021_verifyRouteColorFieldAcceptsAlphabets() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_022_verifyRouteColorFieldAcceptsNumbers -->
+        <test-method signature="TC_023_verifyRouteColorFieldAcceptsSpecialCharacters()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_023_verifyRouteColorFieldAcceptsSpecialCharacters" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_022_verifyRouteColorFieldAcceptsNumbers" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_023_verifyRouteColorFieldAcceptsSpecialCharacters() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_022_verifyRouteColorFieldAcceptsNumbers() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_023_verifyRouteColorFieldAcceptsSpecialCharacters() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_022_verifyRouteColorFieldAcceptsNumbers() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_023_verifyRouteColorFieldAcceptsSpecialCharacters -->
+        <test-method signature="TC_024_verifyUserCanSelectRouteColorFromColorBox()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_024_verifyUserCanSelectRouteColorFromColorBox" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_023_verifyRouteColorFieldAcceptsSpecialCharacters" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_024_verifyUserCanSelectRouteColorFromColorBox() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_023_verifyRouteColorFieldAcceptsSpecialCharacters() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_024_verifyUserCanSelectRouteColorFromColorBox() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_023_verifyRouteColorFieldAcceptsSpecialCharacters() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_024_verifyUserCanSelectRouteColorFromColorBox -->
+        <test-method signature="TC_025_verifyRouteColorFieldGetsUpdatedWhenColorIsSelected()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_025_verifyRouteColorFieldGetsUpdatedWhenColorIsSelected" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_024_verifyUserCanSelectRouteColorFromColorBox" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_025_verifyRouteColorFieldGetsUpdatedWhenColorIsSelected() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_024_verifyUserCanSelectRouteColorFromColorBox() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_025_verifyRouteColorFieldGetsUpdatedWhenColorIsSelected() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_024_verifyUserCanSelectRouteColorFromColorBox() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_025_verifyRouteColorFieldGetsUpdatedWhenColorIsSelected -->
+        <test-method signature="TC_026_verifyRouteTypeFieldDoesNotAcceptInput()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_026_verifyRouteTypeFieldDoesNotAcceptInput" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_025_verifyRouteColorFieldGetsUpdatedWhenColorIsSelected" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_026_verifyRouteTypeFieldDoesNotAcceptInput() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_025_verifyRouteColorFieldGetsUpdatedWhenColorIsSelected() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_026_verifyRouteTypeFieldDoesNotAcceptInput() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_025_verifyRouteColorFieldGetsUpdatedWhenColorIsSelected() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_026_verifyRouteTypeFieldDoesNotAcceptInput -->
+        <test-method signature="TC_027_verifyRouteTypeOptionsShowUpWhenClicked()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_027_verifyRouteTypeOptionsShowUpWhenClicked" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_026_verifyRouteTypeFieldDoesNotAcceptInput" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_027_verifyRouteTypeOptionsShowUpWhenClicked() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_026_verifyRouteTypeFieldDoesNotAcceptInput() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_027_verifyRouteTypeOptionsShowUpWhenClicked() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_026_verifyRouteTypeFieldDoesNotAcceptInput() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_027_verifyRouteTypeOptionsShowUpWhenClicked -->
+        <test-method signature="TC_028_verifyRouteTypeOptionsCanBeSelectedAndUnselected()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_028_verifyRouteTypeOptionsCanBeSelectedAndUnselected" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_027_verifyRouteTypeOptionsShowUpWhenClicked" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_028_verifyRouteTypeOptionsCanBeSelectedAndUnselected() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_027_verifyRouteTypeOptionsShowUpWhenClicked() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_028_verifyRouteTypeOptionsCanBeSelectedAndUnselected() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_027_verifyRouteTypeOptionsShowUpWhenClicked() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_028_verifyRouteTypeOptionsCanBeSelectedAndUnselected -->
+        <test-method signature="TC_029_verifyUserCanLeaveRouteTypeBlank()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_029_verifyUserCanLeaveRouteTypeBlank" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_028_verifyRouteTypeOptionsCanBeSelectedAndUnselected" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_029_verifyUserCanLeaveRouteTypeBlank() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_028_verifyRouteTypeOptionsCanBeSelectedAndUnselected() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_029_verifyUserCanLeaveRouteTypeBlank() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_028_verifyRouteTypeOptionsCanBeSelectedAndUnselected() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_029_verifyUserCanLeaveRouteTypeBlank -->
+        <test-method signature="TC_030_verifyUserCanSelectOneRouteTypeOption()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_030_verifyUserCanSelectOneRouteTypeOption" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_029_verifyUserCanLeaveRouteTypeBlank" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_030_verifyUserCanSelectOneRouteTypeOption() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_029_verifyUserCanLeaveRouteTypeBlank() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_030_verifyUserCanSelectOneRouteTypeOption() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_029_verifyUserCanLeaveRouteTypeBlank() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_030_verifyUserCanSelectOneRouteTypeOption -->
+        <test-method signature="TC_031_verifyUserCanSelectMoreThanOneRouteTypeOption()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_031_verifyUserCanSelectMoreThanOneRouteTypeOption" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_030_verifyUserCanSelectOneRouteTypeOption" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_031_verifyUserCanSelectMoreThanOneRouteTypeOption() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_030_verifyUserCanSelectOneRouteTypeOption() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_031_verifyUserCanSelectMoreThanOneRouteTypeOption() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_030_verifyUserCanSelectOneRouteTypeOption() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_031_verifyUserCanSelectMoreThanOneRouteTypeOption -->
+        <test-method signature="TC_032_verifyUserCannotEnterInputInDefaultEndLocationField()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_032_verifyUserCannotEnterInputInDefaultEndLocationField" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_031_verifyUserCanSelectMoreThanOneRouteTypeOption" duration-ms="4" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_032_verifyUserCannotEnterInputInDefaultEndLocationField() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_031_verifyUserCanSelectMoreThanOneRouteTypeOption() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_032_verifyUserCannotEnterInputInDefaultEndLocationField() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_031_verifyUserCanSelectMoreThanOneRouteTypeOption() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_032_verifyUserCannotEnterInputInDefaultEndLocationField -->
+        <test-method signature="TC_033_verifyDefaultEndLocationDropdownHasMainLocations()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_033_verifyDefaultEndLocationDropdownHasMainLocations" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_032_verifyUserCannotEnterInputInDefaultEndLocationField" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_033_verifyDefaultEndLocationDropdownHasMainLocations() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_032_verifyUserCannotEnterInputInDefaultEndLocationField() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_033_verifyDefaultEndLocationDropdownHasMainLocations() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_032_verifyUserCannotEnterInputInDefaultEndLocationField() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_033_verifyDefaultEndLocationDropdownHasMainLocations -->
+        <test-method signature="TC_034_verifySatelliteLocationsAreVisibleInDefaultEndLocationDropdown()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_034_verifySatelliteLocationsAreVisibleInDefaultEndLocationDropdown" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_033_verifyDefaultEndLocationDropdownHasMainLocations" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_034_verifySatelliteLocationsAreVisibleInDefaultEndLocationDropdown() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_033_verifyDefaultEndLocationDropdownHasMainLocations() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_034_verifySatelliteLocationsAreVisibleInDefaultEndLocationDropdown() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_033_verifyDefaultEndLocationDropdownHasMainLocations() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_034_verifySatelliteLocationsAreVisibleInDefaultEndLocationDropdown -->
+        <test-method signature="TC_035_verifySatelliteLocationCanBeSelectedInDefaultEndLocation()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_035_verifySatelliteLocationCanBeSelectedInDefaultEndLocation" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_034_verifySatelliteLocationsAreVisibleInDefaultEndLocationDropdown" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_035_verifySatelliteLocationCanBeSelectedInDefaultEndLocation() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_034_verifySatelliteLocationsAreVisibleInDefaultEndLocationDropdown() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_035_verifySatelliteLocationCanBeSelectedInDefaultEndLocation() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_034_verifySatelliteLocationsAreVisibleInDefaultEndLocationDropdown() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_035_verifySatelliteLocationCanBeSelectedInDefaultEndLocation -->
+        <test-method signature="TC_036_verifyDisposalFacilitiesAreVisibleInDefaultEndLocationDropdown()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_036_verifyDisposalFacilitiesAreVisibleInDefaultEndLocationDropdown" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_035_verifySatelliteLocationCanBeSelectedInDefaultEndLocation" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_036_verifyDisposalFacilitiesAreVisibleInDefaultEndLocationDropdown() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_035_verifySatelliteLocationCanBeSelectedInDefaultEndLocation() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_036_verifyDisposalFacilitiesAreVisibleInDefaultEndLocationDropdown() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_035_verifySatelliteLocationCanBeSelectedInDefaultEndLocation() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_036_verifyDisposalFacilitiesAreVisibleInDefaultEndLocationDropdown -->
+        <test-method signature="TC_037_verifyDisposalFacilityCanBeSelectedInDefaultEndLocation()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_037_verifyDisposalFacilityCanBeSelectedInDefaultEndLocation" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_036_verifyDisposalFacilitiesAreVisibleInDefaultEndLocationDropdown" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_037_verifyDisposalFacilityCanBeSelectedInDefaultEndLocation() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_036_verifyDisposalFacilitiesAreVisibleInDefaultEndLocationDropdown() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_037_verifyDisposalFacilityCanBeSelectedInDefaultEndLocation() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_036_verifyDisposalFacilitiesAreVisibleInDefaultEndLocationDropdown() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_037_verifyDisposalFacilityCanBeSelectedInDefaultEndLocation -->
+        <test-method signature="TC_038_verifyAreYouSurePopupAppearsUponSelectingDefaultEndLocation()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_038_verifyAreYouSurePopupAppearsUponSelectingDefaultEndLocation" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_037_verifyDisposalFacilityCanBeSelectedInDefaultEndLocation" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_038_verifyAreYouSurePopupAppearsUponSelectingDefaultEndLocation() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_037_verifyDisposalFacilityCanBeSelectedInDefaultEndLocation() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_038_verifyAreYouSurePopupAppearsUponSelectingDefaultEndLocation() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_037_verifyDisposalFacilityCanBeSelectedInDefaultEndLocation() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_038_verifyAreYouSurePopupAppearsUponSelectingDefaultEndLocation -->
+        <test-method signature="TC_039_verifyLocationDoesNotGetSelectedWhenClickedOnCancelInDefaultEndLocation()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_039_verifyLocationDoesNotGetSelectedWhenClickedOnCancelInDefaultEndLocation" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_038_verifyAreYouSurePopupAppearsUponSelectingDefaultEndLocation" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_039_verifyLocationDoesNotGetSelectedWhenClickedOnCancelInDefaultEndLocation() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_038_verifyAreYouSurePopupAppearsUponSelectingDefaultEndLocation() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_039_verifyLocationDoesNotGetSelectedWhenClickedOnCancelInDefaultEndLocation() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_038_verifyAreYouSurePopupAppearsUponSelectingDefaultEndLocation() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_039_verifyLocationDoesNotGetSelectedWhenClickedOnCancelInDefaultEndLocation -->
+        <test-method signature="TC_040_verifyLocationGetsSelectedWhenClickedOnYesInDefaultEndLocation()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_040_verifyLocationGetsSelectedWhenClickedOnYesInDefaultEndLocation" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_039_verifyLocationDoesNotGetSelectedWhenClickedOnCancelInDefaultEndLocation" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_040_verifyLocationGetsSelectedWhenClickedOnYesInDefaultEndLocation() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_039_verifyLocationDoesNotGetSelectedWhenClickedOnCancelInDefaultEndLocation() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_040_verifyLocationGetsSelectedWhenClickedOnYesInDefaultEndLocation() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_039_verifyLocationDoesNotGetSelectedWhenClickedOnCancelInDefaultEndLocation() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_040_verifyLocationGetsSelectedWhenClickedOnYesInDefaultEndLocation -->
+        <test-method signature="TC_041_verifyUserCannotEnterInputInStatusField()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_041_verifyUserCannotEnterInputInStatusField" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_040_verifyLocationGetsSelectedWhenClickedOnYesInDefaultEndLocation" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_041_verifyUserCannotEnterInputInStatusField() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_040_verifyLocationGetsSelectedWhenClickedOnYesInDefaultEndLocation() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_041_verifyUserCannotEnterInputInStatusField() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_040_verifyLocationGetsSelectedWhenClickedOnYesInDefaultEndLocation() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_041_verifyUserCannotEnterInputInStatusField -->
+        <test-method signature="TC_042_verifyStatusDropdownShowsOptions()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_042_verifyStatusDropdownShowsOptions" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_041_verifyUserCannotEnterInputInStatusField" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_042_verifyStatusDropdownShowsOptions() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_041_verifyUserCannotEnterInputInStatusField() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_042_verifyStatusDropdownShowsOptions() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_041_verifyUserCannotEnterInputInStatusField() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_042_verifyStatusDropdownShowsOptions -->
+        <test-method signature="TC_043_verifyUserCanSelectStatusType()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_043_verifyUserCanSelectStatusType" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_042_verifyStatusDropdownShowsOptions" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_043_verifyUserCanSelectStatusType() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_042_verifyStatusDropdownShowsOptions() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_043_verifyUserCanSelectStatusType() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_042_verifyStatusDropdownShowsOptions() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_043_verifyUserCanSelectStatusType -->
+        <test-method signature="TC_044_verifyUserCannotSelectMultipleStatusTypes()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_044_verifyUserCannotSelectMultipleStatusTypes" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_043_verifyUserCanSelectStatusType" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_044_verifyUserCannotSelectMultipleStatusTypes() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_043_verifyUserCanSelectStatusType() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_044_verifyUserCannotSelectMultipleStatusTypes() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_043_verifyUserCanSelectStatusType() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_044_verifyUserCannotSelectMultipleStatusTypes -->
+        <test-method signature="TC_045_verifySelectedStatusAppearsInField()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_045_verifySelectedStatusAppearsInField" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_044_verifyUserCannotSelectMultipleStatusTypes" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_045_verifySelectedStatusAppearsInField() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_044_verifyUserCannotSelectMultipleStatusTypes() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_045_verifySelectedStatusAppearsInField() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_044_verifyUserCannotSelectMultipleStatusTypes() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_045_verifySelectedStatusAppearsInField -->
+        <test-method signature="TC_046_verifyNoteFieldAcceptsInput()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_046_verifyNoteFieldAcceptsInput" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_045_verifySelectedStatusAppearsInField" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_046_verifyNoteFieldAcceptsInput() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_045_verifySelectedStatusAppearsInField() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_046_verifyNoteFieldAcceptsInput() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_045_verifySelectedStatusAppearsInField() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_046_verifyNoteFieldAcceptsInput -->
+        <test-method signature="TC_047_verifyNoteFieldAcceptsNumbers()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_047_verifyNoteFieldAcceptsNumbers" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_046_verifyNoteFieldAcceptsInput" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_047_verifyNoteFieldAcceptsNumbers() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_046_verifyNoteFieldAcceptsInput() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_047_verifyNoteFieldAcceptsNumbers() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_046_verifyNoteFieldAcceptsInput() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_047_verifyNoteFieldAcceptsNumbers -->
+        <test-method signature="TC_048_verifyNoteFieldAcceptsSpecialCharacters()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_048_verifyNoteFieldAcceptsSpecialCharacters" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_047_verifyNoteFieldAcceptsNumbers" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_048_verifyNoteFieldAcceptsSpecialCharacters() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_047_verifyNoteFieldAcceptsNumbers() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_048_verifyNoteFieldAcceptsSpecialCharacters() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_047_verifyNoteFieldAcceptsNumbers() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_048_verifyNoteFieldAcceptsSpecialCharacters -->
+        <test-method signature="TC_050_verifyStatsForNerdsSection()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_050_verifyStatsForNerdsSection" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_049_verifyNoteFieldCanBeExpanded" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_050_verifyStatsForNerdsSection() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_049_verifyNoteFieldCanBeExpanded() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_050_verifyStatsForNerdsSection() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_049_verifyNoteFieldCanBeExpanded() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_050_verifyStatsForNerdsSection -->
+        <test-method signature="TC_049_verifyNoteFieldCanBeExpanded()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_049_verifyNoteFieldCanBeExpanded" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_048_verifyNoteFieldAcceptsSpecialCharacters" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_049_verifyNoteFieldCanBeExpanded() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_048_verifyNoteFieldAcceptsSpecialCharacters() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_049_verifyNoteFieldCanBeExpanded() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_048_verifyNoteFieldAcceptsSpecialCharacters() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_049_verifyNoteFieldCanBeExpanded -->
+        <test-method signature="TC_051_verifyStatsForNerdsShowsZeroForNewRoute()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_051_verifyStatsForNerdsShowsZeroForNewRoute" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_050_verifyStatsForNerdsSection" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_051_verifyStatsForNerdsShowsZeroForNewRoute() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_050_verifyStatsForNerdsSection() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_051_verifyStatsForNerdsShowsZeroForNewRoute() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_050_verifyStatsForNerdsSection() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_051_verifyStatsForNerdsShowsZeroForNewRoute -->
+        <test-method signature="TC_052_verifyRouteCannotBeAddedWithoutMandatoryFields()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_052_verifyRouteCannotBeAddedWithoutMandatoryFields" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_051_verifyStatsForNerdsShowsZeroForNewRoute" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_052_verifyRouteCannotBeAddedWithoutMandatoryFields() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_051_verifyStatsForNerdsShowsZeroForNewRoute() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_052_verifyRouteCannotBeAddedWithoutMandatoryFields() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_051_verifyStatsForNerdsShowsZeroForNewRoute() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_052_verifyRouteCannotBeAddedWithoutMandatoryFields -->
+        <test-method signature="TC_053_verifyRouteCannotBeAddedByFillingOnlyOneMandatoryField()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_053_verifyRouteCannotBeAddedByFillingOnlyOneMandatoryField" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_052_verifyRouteCannotBeAddedWithoutMandatoryFields" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_053_verifyRouteCannotBeAddedByFillingOnlyOneMandatoryField() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_052_verifyRouteCannotBeAddedWithoutMandatoryFields() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_053_verifyRouteCannotBeAddedByFillingOnlyOneMandatoryField() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_052_verifyRouteCannotBeAddedWithoutMandatoryFields() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_053_verifyRouteCannotBeAddedByFillingOnlyOneMandatoryField -->
+        <test-method signature="TC_054_verifyRouteGetsAddedWithAllMandatoryFields()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_054_verifyRouteGetsAddedWithAllMandatoryFields" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_053_verifyRouteCannotBeAddedByFillingOnlyOneMandatoryField" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_054_verifyRouteGetsAddedWithAllMandatoryFields() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_053_verifyRouteCannotBeAddedByFillingOnlyOneMandatoryField() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_054_verifyRouteGetsAddedWithAllMandatoryFields() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_053_verifyRouteCannotBeAddedByFillingOnlyOneMandatoryField() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_054_verifyRouteGetsAddedWithAllMandatoryFields -->
+        <test-method signature="TC_055_TC_056_verifyRouteListAndTooltip()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_055_TC_056_verifyRouteListAndTooltip" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_054_verifyRouteGetsAddedWithAllMandatoryFields" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_055_TC_056_verifyRouteListAndTooltip() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_054_verifyRouteGetsAddedWithAllMandatoryFields() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_055_TC_056_verifyRouteListAndTooltip() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_054_verifyRouteGetsAddedWithAllMandatoryFields() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_055_TC_056_verifyRouteListAndTooltip -->
+        <test-method signature="TC_057_verifyRouteIDIsPresentInRouteList()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_057_verifyRouteIDIsPresentInRouteList" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_055_TC_056_verifyRouteListAndTooltip" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_057_verifyRouteIDIsPresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_055_TC_056_verifyRouteListAndTooltip() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_057_verifyRouteIDIsPresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_055_TC_056_verifyRouteListAndTooltip() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_057_verifyRouteIDIsPresentInRouteList -->
+        <test-method signature="TC_058_verifyStartLocationIsPresentInRouteList()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_058_verifyStartLocationIsPresentInRouteList" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_057_verifyRouteIDIsPresentInRouteList" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_058_verifyStartLocationIsPresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_057_verifyRouteIDIsPresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_058_verifyStartLocationIsPresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_057_verifyRouteIDIsPresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_058_verifyStartLocationIsPresentInRouteList -->
+        <test-method signature="TC_059_verifyEndLocationIsPresentInRouteList()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_059_verifyEndLocationIsPresentInRouteList" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_058_verifyStartLocationIsPresentInRouteList" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_059_verifyEndLocationIsPresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_058_verifyStartLocationIsPresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_059_verifyEndLocationIsPresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_058_verifyStartLocationIsPresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_059_verifyEndLocationIsPresentInRouteList -->
+        <test-method signature="TC_060_verifyTotalNumberOfServicesIsPresentInRouteList()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_060_verifyTotalNumberOfServicesIsPresentInRouteList" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_059_verifyEndLocationIsPresentInRouteList" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_060_verifyTotalNumberOfServicesIsPresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_059_verifyEndLocationIsPresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_060_verifyTotalNumberOfServicesIsPresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_059_verifyEndLocationIsPresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_060_verifyTotalNumberOfServicesIsPresentInRouteList -->
+        <test-method signature="TC_061_verifyServicesOfLast30DaysArePresentInRouteList()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_061_verifyServicesOfLast30DaysArePresentInRouteList" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_060_verifyTotalNumberOfServicesIsPresentInRouteList" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_061_verifyServicesOfLast30DaysArePresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_060_verifyTotalNumberOfServicesIsPresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_061_verifyServicesOfLast30DaysArePresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_060_verifyTotalNumberOfServicesIsPresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_061_verifyServicesOfLast30DaysArePresentInRouteList -->
+        <test-method signature="TC_062_verifyServicesOfNext30DaysArePresentInRouteList()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_062_verifyServicesOfNext30DaysArePresentInRouteList" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_061_verifyServicesOfLast30DaysArePresentInRouteList" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_062_verifyServicesOfNext30DaysArePresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_061_verifyServicesOfLast30DaysArePresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_062_verifyServicesOfNext30DaysArePresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_061_verifyServicesOfLast30DaysArePresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_062_verifyServicesOfNext30DaysArePresentInRouteList -->
+        <test-method signature="TC_063_verifyRouteStatusIsPresentInRouteList()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_063_verifyRouteStatusIsPresentInRouteList" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_062_verifyServicesOfNext30DaysArePresentInRouteList" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_063_verifyRouteStatusIsPresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_062_verifyServicesOfNext30DaysArePresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_063_verifyRouteStatusIsPresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_062_verifyServicesOfNext30DaysArePresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_063_verifyRouteStatusIsPresentInRouteList -->
+        <test-method signature="TC_064_verifyExistingRouteDetailsCanBeUpdated()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_064_verifyExistingRouteDetailsCanBeUpdated" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_063_verifyRouteStatusIsPresentInRouteList" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_064_verifyExistingRouteDetailsCanBeUpdated() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_063_verifyRouteStatusIsPresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_064_verifyExistingRouteDetailsCanBeUpdated() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_063_verifyRouteStatusIsPresentInRouteList() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_064_verifyExistingRouteDetailsCanBeUpdated -->
+        <test-method signature="TC_065_verifyRouteStatusFiltersAreUnselectedByDefault()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_065_verifyRouteStatusFiltersAreUnselectedByDefault" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_064_verifyExistingRouteDetailsCanBeUpdated" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_065_verifyRouteStatusFiltersAreUnselectedByDefault() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_064_verifyExistingRouteDetailsCanBeUpdated() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_065_verifyRouteStatusFiltersAreUnselectedByDefault() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_064_verifyExistingRouteDetailsCanBeUpdated() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_065_verifyRouteStatusFiltersAreUnselectedByDefault -->
+        <test-method signature="TC_066_verifyActiveRoutesAreDisplayed()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_066_verifyActiveRoutesAreDisplayed" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_065_verifyRouteStatusFiltersAreUnselectedByDefault" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_066_verifyActiveRoutesAreDisplayed() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_065_verifyRouteStatusFiltersAreUnselectedByDefault() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_066_verifyActiveRoutesAreDisplayed() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_065_verifyRouteStatusFiltersAreUnselectedByDefault() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_066_verifyActiveRoutesAreDisplayed -->
+        <test-method signature="TC_067_verifyInactiveRoutesAppearWhenInactiveFilterIsSelected()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_067_verifyInactiveRoutesAppearWhenInactiveFilterIsSelected" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_066_verifyActiveRoutesAreDisplayed" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_067_verifyInactiveRoutesAppearWhenInactiveFilterIsSelected() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_066_verifyActiveRoutesAreDisplayed() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_067_verifyInactiveRoutesAppearWhenInactiveFilterIsSelected() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_066_verifyActiveRoutesAreDisplayed() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_067_verifyInactiveRoutesAppearWhenInactiveFilterIsSelected -->
+        <test-method signature="TC_068_verifyOutOfNetworkRoutesAppearWhenFilterIsSelected()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="TC_068_verifyOutOfNetworkRoutesAppearWhenFilterIsSelected" finished-at="2026-10-27T07:23:47 GMT-07:00" depends-on-methods="Asserts_Routes.Routes_TC.TC_067_verifyInactiveRoutesAppearWhenInactiveFilterIsSelected" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Asserts_Routes.Routes_TC.TC_068_verifyOutOfNetworkRoutesAppearWhenFilterIsSelected() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_067_verifyInactiveRoutesAppearWhenInactiveFilterIsSelected() on instance Asserts_Routes.Routes_TC@752325ad]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Asserts_Routes.Routes_TC.TC_068_verifyOutOfNetworkRoutesAppearWhenFilterIsSelected() on instance Asserts_Routes.Routes_TC@752325ad depends on not successfully finished methods 
+[Asserts_Routes.Routes_TC.TC_067_verifyInactiveRoutesAppearWhenInactiveFilterIsSelected() on instance Asserts_Routes.Routes_TC@752325ad]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_068_verifyOutOfNetworkRoutesAppearWhenFilterIsSelected -->
+        <test-method is-config="true" signature="Ac()[pri:0, instance:Asserts_Routes.Routes_TC@752325ad]" started-at="2026-10-27T07:23:47 GMT-07:00" name="Ac" finished-at="2026-10-27T07:23:51 GMT-07:00" duration-ms="4016" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Ac -->
-      </class> <!-- GeneratorDashboard.Generator_Dashboard_TC -->
+      </class> <!-- Asserts_Routes.Routes_TC -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
