@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="Asserts_Routes.Routes_TC">
+        <methods>
+          <include name="TC_061_verifyServicesOfLast30DaysArePresentInRouteList"/>
+          <include name="Ac"/>
+          <include name="TC_050_verifyStatsForNerdsSection"/>
+          <include name="TC_008_verifyRouteNameFieldAcceptsNumbers"/>
+          <include name="TC_016_verifyDisposalFacilityCanBeSelected"/>
+          <include name="TC_048_verifyNoteFieldAcceptsSpecialCharacters"/>
+          <include name="TC_009_verifyRouteNameFieldAcceptsSpecialCharacters"/>
+          <include name="TC_041_verifyUserCannotEnterInputInStatusField"/>
+          <include name="TC_035_verifySatelliteLocationCanBeSelectedInDefaultEndLocation"/>
+          <include name="Am"/>
+          <include name="TC_037_verifyDisposalFacilityCanBeSelectedInDefaultEndLocation"/>
+          <include name="TC_063_verifyRouteStatusIsPresentInRouteList"/>
+          <include name="TC_055_TC_056_verifyRouteListAndTooltip"/>
+          <include name="TC_057_verifyRouteIDIsPresentInRouteList"/>
+          <include name="TC_018_verifyLocationDoesNotGetSelectedWhenClickedOnCancel"/>
+          <include name="TC_024_verifyUserCanSelectRouteColorFromColorBox"/>
+          <include name="TC_062_verifyServicesOfNext30DaysArePresentInRouteList"/>
+          <include name="TC_004_verifyRouteDetailsTooltipAppearsWhenClicked"/>
+          <include name="TC_007_verifyRouteNameFieldAcceptsInput"/>
+          <include name="TC_015_verifyDisposalFacilitiesAreVisibleInDefaultStartLocationDropdown"/>
+          <include name="TC_049_verifyNoteFieldCanBeExpanded"/>
+          <include name="TC_012_verifyDefaultStartLocationDropdownHasMainLocations"/>
+          <include name="TC_047_verifyNoteFieldAcceptsNumbers"/>
+          <include name="TC_067_verifyInactiveRoutesAppearWhenInactiveFilterIsSelected"/>
+          <include name="TC_046_verifyNoteFieldAcceptsInput"/>
+          <include name="TC_053_verifyRouteCannotBeAddedByFillingOnlyOneMandatoryField"/>
+          <include name="TC_010_verifyRouteNameFieldAcceptsLongerInput"/>
+          <include name="TC_054_verifyRouteGetsAddedWithAllMandatoryFields"/>
+          <include name="TC_027_verifyRouteTypeOptionsShowUpWhenClicked"/>
+          <include name="TC_066_verifyActiveRoutesAreDisplayed"/>
+          <include name="TC_051_verifyStatsForNerdsShowsZeroForNewRoute"/>
+          <include name="TC_036_verifyDisposalFacilitiesAreVisibleInDefaultEndLocationDropdown"/>
+          <include name="TC_044_verifyUserCannotSelectMultipleStatusTypes"/>
+          <include name="TC_039_verifyLocationDoesNotGetSelectedWhenClickedOnCancelInDefaultEndLocation"/>
+          <include name="TC_006_verifyUserCanZoomInOutMapWithoutLag"/>
+          <include name="TC_068_verifyOutOfNetworkRoutesAppearWhenFilterIsSelected"/>
+          <include name="TC_014_verifySatelliteLocationCanBeSelected"/>
+          <include name="TC_028_verifyRouteTypeOptionsCanBeSelectedAndUnselected"/>
+          <include name="TC_020_verifyRouteColorFieldAcceptsInput"/>
+          <include name="TC_022_verifyRouteColorFieldAcceptsNumbers"/>
+          <include name="TC_034_verifySatelliteLocationsAreVisibleInDefaultEndLocationDropdown"/>
+          <include name="TC_059_verifyEndLocationIsPresentInRouteList"/>
+          <include name="TC_058_verifyStartLocationIsPresentInRouteList"/>
+          <include name="TC_026_verifyRouteTypeFieldDoesNotAcceptInput"/>
+          <include name="TC_045_verifySelectedStatusAppearsInField"/>
+          <include name="TC_065_verifyRouteStatusFiltersAreUnselectedByDefault"/>
+          <include name="TC_003_verifyNewRouteCanBeAdded"/>
+          <include name="TC_013_verifySatelliteLocationsAreVisibleInDefaultStartLocationDropdown"/>
+          <include name="TC_042_verifyStatusDropdownShowsOptions"/>
+          <include name="TC_052_verifyRouteCannotBeAddedWithoutMandatoryFields"/>
+          <include name="TC_021_verifyRouteColorFieldAcceptsAlphabets"/>
+          <include name="TC_043_verifyUserCanSelectStatusType"/>
+          <include name="TC_038_verifyAreYouSurePopupAppearsUponSelectingDefaultEndLocation"/>
+          <include name="TC_025_verifyRouteColorFieldGetsUpdatedWhenColorIsSelected"/>
+          <include name="TC_029_verifyUserCanLeaveRouteTypeBlank"/>
+          <include name="TC_032_verifyUserCannotEnterInputInDefaultEndLocationField"/>
+          <include name="TC_019_verifyLocationGetsSelectedWhenClickedOnYes"/>
+          <include name="TC_005_verifyMapAppearsCorrectly"/>
+          <include name="Bc"/>
+          <include name="TC_011_verifyUserCannotEnterInputInDefaultStartLocationField"/>
+          <include name="Bm"/>
+          <include name="TC_060_verifyTotalNumberOfServicesIsPresentInRouteList"/>
+          <include name="TC_031_verifyUserCanSelectMoreThanOneRouteTypeOption"/>
+          <include name="TC_001_verifyUserCanAccessRoutesPage"/>
+          <include name="TC_033_verifyDefaultEndLocationDropdownHasMainLocations"/>
+          <include name="TC_030_verifyUserCanSelectOneRouteTypeOption"/>
+          <include name="TC_040_verifyLocationGetsSelectedWhenClickedOnYesInDefaultEndLocation"/>
+          <include name="TC_017_verifyAreYouSurePopupAppearsUponSelectingDefaultStartLocation"/>
+          <include name="TC_064_verifyExistingRouteDetailsCanBeUpdated"/>
+          <include name="TC_023_verifyRouteColorFieldAcceptsSpecialCharacters"/>
+          <include name="TC_002_verifyExistingRoutesAppearOrEmptyStateIsShown"/>
+        </methods>
+      </class> <!-- Asserts_Routes.Routes_TC -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
