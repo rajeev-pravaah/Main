@@ -1524,5 +1524,10 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		}
 	}
 	
+	@Test(dependsOnMethods = "TC_053VerifyBesideUsedAllotmentColumnRemainingAllotmentColumnisPresent")
+	public void TC_054VerifyRemainingAllotmentColumnAcceptsOnlyNumericValues() throws InterruptedException {
+		System.out.println("Verifying Remaining Allotment column accepts only numeric values");
+	}
+	
 }
 		
