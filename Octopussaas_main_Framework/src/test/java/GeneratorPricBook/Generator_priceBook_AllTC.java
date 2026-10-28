@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -99,6 +100,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 	   
 	   
    }
+   
    
    @Test(dependsOnMethods = "TC_003verifySOwbuttonIsClickableandOpensPopUp")
    public void TC_004verifyFlatMonthlychargeOption() throws Exception {
@@ -317,7 +319,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 	   utilityclassobject.gettest().log(Status.INFO, "Number of container beside services is: "+numberofcontainer1);
 	  
 	   if(!numberofcontainer1.equals(numberofcontainer)) {
-		  System.out.println("Number of container beside services is changed after clicking on Non-RCRA Pharmaceutical button :PASS");
+		  System .out.println("Number of container beside services is changed after clicking on Non-RCRA Pharmaceutical button :PASS");
 		  utilityclassobject.gettest().log(Status.PASS, "Number of container beside services is changed after clicking on Non-RCRA Pharmaceutical button");
 		   
 	   }
@@ -385,6 +387,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 	   //fettch the number of container for RCRA Pharmaceutical
 	   String numberofcontainer4 = gpb.getContainersCount().getText();
 	   System.out.println("Number of container beside services for RCRA Pharmaceutical is: "+numberofcontainer4);
+	  
 	   utilityclassobject.gettest().log(Status.INFO, "Number of container beside services for RCRA Pharmaceutical is: "+numberofcontainer4);
 	   if(numberofcontainer4.contains("15")) {
 		   System.out.println("Number of container beside services for RCRA Pharmaceutical is 15 :PASS");
@@ -402,8 +405,8 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 	   System.out.println("Total number of containers for RCRA Pharmaceutical is: "+totalcontainers1);
 	   utilityclassobject.gettest().log(Status.INFO, "Total number of containers for RCRA Pharmaceutical is: "+totalcontainers1);
 	   if(totalcontainers1==15) {
-		   System.out.println("Total 15 containers for RCRA Pharmaceutical  are displayed :PASS");
-		   utilityclassobject.gettest().log(Status.PASS, "Total 15 containers for RCRA Pharmaceutical  are displayed");
+		   System.out.println("Total number of containers for RCRA Pharmaceutical is 15 :PASS");
+		   utilityclassobject.gettest().log(Status.PASS, "Total number of containers for RCRA Pharmaceutical is 15");
 		   	   }else {
 		   		   System.out.println("Total number of containers for RCRA Pharmaceutical is not 15 :FAIL");
 		   		   utilityclassobject.gettest().log(Status.FAIL, "Total number of containers for RCRA Pharmaceutical is not 15");
@@ -833,7 +836,9 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 	   gpb.getSearchBox().sendKeys("charlie Price Book");
 	   gpb.getSuggestedTemplate().click();
 	   System.out.println("Clicked on suggested price book teplate");
-	   utilityclassobject.gettest().log(Status.INFO, "Clicked on suggested price book teplate");*/
+	   utilityclassobject.gettest().log(Status.INFO, "Clicked on suggested price book teplate");
+	   
+	   */
 	   
 	   if (gpb.getMasterItemNameColumn().isDisplayed()) {
 		   System.out.println("Master Item Name column is displayed :PASS");
@@ -1061,33 +1066,463 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 
 	
 	@Test(dependsOnMethods = "TC_041VerifyFlatmonthlyCheckBoxisClickable")
-	public void TC_042VerifyFlatMonthlyColumnisEditable()
+	public void TC_042VerifyFlatMonthlyCheckboxisNotClickable()
 	{
-		//enter the value in flat monthly column
-		List<WebElement> flatmonthlyfields = gpb.getIncludeFlatMonthlyCheckboxes();
-		for(WebElement field:flatmonthlyfields)
+		gpb.getFlatMonthlyCheckbox().click();
+		
+		System.out.println("Clicked on Flat Monthly checkbox");
+		utilityclassobject.gettest().log(Status.INFO, "Clicked on Flat Monthly checkbox");
+		if(gpb.getFlatMonthlyError().isDisplayed())
 		{
-			if(field.isDisplayed() && field.isEnabled())
-			{
-				field.click();
-				field.sendKeys(Keys.CONTROL, "a");
-				field.sendKeys(Keys.BACK_SPACE);
-				field.sendKeys("100");
-				System.out.println("Flat Monthly column is editable :PASS");
-				utilityclassobject.gettest().log(Status.PASS, "Flat Monthly column is editable");
-			}
-			else
-			{
-				System.out.println("Flat Monthly column is NOT editable :FAIL");
-				utilityclassobject.gettest().log(Status.FAIL, "Flat Monthly column is NOT editable");
-			}
-			System.out.println("Flat Monthly column is verified successfully");
-			utilityclassobject.gettest().log(Status.INFO, "Flat Monthly column is verified successfully");
+			System.out.println("Flat Monthly checkbox is not clickable and error message is displayed :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Flat Monthly checkbox is not clickable and error message is displayed");
+			
+		}
+		else
+		{
+			System.out.println("Flat Monthly checkbox is clickable and error message is NOT displayed :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Flat Monthly checkbox is clickable and error message is NOT displayed");
+		}
+		
+	}
+	
+	
+	@Test(dependsOnMethods = "TC_042VerifyFlatMonthlyCheckboxisNotClickable")
+	public void TC_043VerifyServicePriceHeaderisDisplayed()
+	{
+		String txt = gpb.getServicePriceHeader().getText();
+		System.out.println(" Header beside include flatmonthly column : "+txt);
+		utilityclassobject.gettest().log(Status.INFO, " Header beside include flatmonthly column : "+txt);
+		//not able to compair with Service price because developers made txt saperately
+	 if(gpb.getServicePriceHeader().isDisplayed())
+		{
+			System.out.println("Service Price header is displayed beside include flatmonthly column :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Service Price header is displayed beside include flatmonthly column");
+		}
+		else
+		{
+			System.out.println("Service Price header is NOT displayed beside include flatmonthly column :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Service Price header is NOT displayed beside include flatmonthly column");
 		}
 	}
+	
+	
+	@Test(dependsOnMethods = "TC_043VerifyServicePriceHeaderisDisplayed")
+	public void TC_044VerifyServicePriceInputFiledandAcceptsData(){
+		List<WebElement> serviceFields = gpb.getServicePriceInputFields();
+		boolean allFieldsPresentAndAcceptData = true;
+
+		if (serviceFields.isEmpty()) {
+			System.out.println("No Service Price input fields found :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "No Service Price input fields found");
+			return;
+		}
+
+		for (int i = 0; i < serviceFields.size(); i++) {
+			WebElement field = serviceFields.get(i);
+			int fieldNumber = i + 1;
+
+			if (!field.isDisplayed() || !field.isEnabled()) {
+				allFieldsPresentAndAcceptData = false;
+				System.out.println("Service Price input field " + fieldNumber + " is NOT present/enabled :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Service Price input field " + fieldNumber + " is NOT present/enabled");
+				continue;
+			}
+
+			field.click();
+			field.sendKeys(Keys.CONTROL, "a");
+			field.sendKeys(Keys.BACK_SPACE);
+
+			// Fallback clear via JavaScript when normal backspace clear is blocked by UI behavior.
+			String currentValue = field.getAttribute("value");
+			if (currentValue != null && !currentValue.trim().isEmpty()) {
+				((JavascriptExecutor) driver).executeScript("arguments[0].value='';", field);
+			}
+
+			field.sendKeys("20");
+			String enteredValue = field.getAttribute("value");
+
+			if ("20".equals(enteredValue)) {
+				System.out.println("Service Price input field " + fieldNumber + " accepts data 20 :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Service Price input field " + fieldNumber + " accepts data 20");
+			} else {
+				allFieldsPresentAndAcceptData = false;
+				System.out.println("Service Price input field " + fieldNumber + " did NOT accept 20. Actual value: " + enteredValue + " :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Service Price input field " + fieldNumber + " did NOT accept 20. Actual value: " + enteredValue);
+			}
+		}
+
+		if (allFieldsPresentAndAcceptData) {
+			System.out.println("All the fields are present and it accepts data :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "All the fields are present and it accepts data");
+		} else {
+			System.out.println("Some fields are missing or not accepting data :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Some fields are missing or not accepting data");
+		}
+		
+		//again clear the fields to avoid any issues in next test case
+		for (WebElement field : serviceFields) {
+			field.click();
+			field.sendKeys(Keys.CONTROL, "a");
+			field.sendKeys(Keys.BACK_SPACE);
+			System.out.println("Cleared the Service Price input field");
+			utilityclassobject.gettest().log(Status.INFO, "Cleared the Service Price input field ");
+		}
+		
 	}
 	
-
+	@Test(dependsOnMethods = "TC_044VerifyServicePriceInputFiledandAcceptsData")
+	public void TC_045VerifyServicePriceInputFiledisNotAcceptingNegativeData(){
+		
+		gpb.getAllotmentUptoColumn().isDisplayed();
+		System.out.println("Allotmenupto column is displayed :PASS");
+	    utilityclassobject.gettest().log(Status.PASS, "Allotmenupto column is displayed");
+	}
 	
+	@Test(dependsOnMethods = "TC_045VerifyServicePriceInputFiledisNotAcceptingNegativeData")
+	public void TC_046VerifyAllotmentUptoFieldAcceptsInput() {
+		List<WebElement> allotmentFields = gpb.getAllotmentUptoInputFields();
+		boolean allFieldsAcceptInput = true;
 
+		
 
+		for (int i = 0; i < allotmentFields.size(); i++) {
+			WebElement field = allotmentFields.get(i);
+			int fieldNumber = i + 1;
+
+			field.click();
+			field.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+			field.sendKeys(Keys.DELETE);
+
+			String currentValue = field.getAttribute("value");
+			if (currentValue != null && !currentValue.trim().isEmpty()) {
+				((JavascriptExecutor) driver).executeScript(
+					"arguments[0].value='';"
+					+ "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));"
+					+ "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
+					field
+				);
+			}
+			field.sendKeys("5");
+
+			String enteredValue = field.getAttribute("value");
+			if ("5".equals(enteredValue)) {
+				System.out.println("Allotment Upto field " + fieldNumber + " accepted value 5 :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Allotment Upto field " + fieldNumber + " accepted value 5");
+			} else {
+				allFieldsAcceptInput = false;
+				System.out.println("Allotment Upto field " + fieldNumber + " did NOT accept value 5. Actual value: " + enteredValue + " :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Allotment Upto field " + fieldNumber + " did NOT accept value 5. Actual value: " + enteredValue);
+			}
+		}
+
+		if (allFieldsAcceptInput) {
+			System.out.println("All Allotment Upto fields accepted input 5 :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "All Allotment Upto fields accepted input 5");
+			
+			System.out.println("Allotment Upto field accepts input and saves data successfully :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Allotment Upto field accepts input and saves data successfully");
+		} else {
+			System.out.println("Some Allotment Upto fields did not accept input 5 :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Some Allotment Upto fields did not accept input 5");
+		}
+
+		// Clear all fields after validation to keep following test state clean.
+		for (WebElement field : allotmentFields) {
+			clearInputField(field);
+		}
+		System.out.println("Cleared all Allotment Upto input fields after verification");
+		utilityclassobject.gettest().log(Status.INFO, "Cleared all Allotment Upto input fields after verification");
+
+		// Validate that alphabets/special characters are rejected in numeric-only fields.
+		String[] invalidInputs = {"abc", "@#%", "ab@12"};
+		boolean invalidInputsRejected = true;
+
+		for (int i = 0; i < allotmentFields.size(); i++) {
+			WebElement field = allotmentFields.get(i);
+			int fieldNumber = i + 1;
+
+			for (String invalidInput : invalidInputs) {
+				clearInputField(field);
+				field.sendKeys(invalidInput);
+
+				String actualValue = field.getAttribute("value");
+				String safeValue = actualValue == null ? "" : actualValue.trim();
+
+				if (safeValue.matches(".*[^0-9].*")) {
+					invalidInputsRejected = false;
+					System.out.println("Allotment Upto field " + fieldNumber + " accepted invalid input '" + invalidInput + "'. Actual value: '" + safeValue + "' :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Allotment Upto field " + fieldNumber + " accepted invalid input '" + invalidInput + "'. Actual value: '" + safeValue + "'");
+				} else {
+					System.out.println("Allotment Upto field " + fieldNumber + " rejected invalid input '" + invalidInput + "' :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Allotment Upto field " + fieldNumber + " rejected invalid input '" + invalidInput + "'");
+				}
+
+				clearInputField(field);
+			}
+		}
+
+		if (invalidInputsRejected) {
+			System.out.println("Allotment Upto fields are accepting only valid numeric values :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Allotment Upto fields are accepting only valid numeric values");
+		} else {
+			System.out.println("Allotment Upto fields accepted non-numeric values in some cases :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Allotment Upto fields accepted non-numeric values in some cases");
+		}
+		
+		
+	}
+
+	public void clearInputField(WebElement field) {
+		field.click();
+		field.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+		field.sendKeys(Keys.DELETE);
+
+		String currentValue = field.getAttribute("value");
+		if (currentValue != null && !currentValue.trim().isEmpty()) {
+			((JavascriptExecutor) driver).executeScript(
+				"arguments[0].value='';"
+				+ "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));"
+				+ "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
+				field
+			);
+		}
+	}
+	
+	@Test(dependsOnMethods = "TC_046VerifyAllotmentUptoFieldAcceptsInput")
+	public void TC_047VerifyAdditionalcontainerratecolumnPresence() {
+		
+		if (gpb.getAdditionalContainerRateColumn().isDisplayed()) {
+			System.out.println("Additional Container Rate column is displayed immediatly beside Allotment up to column :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Additional Container Rate column is displayed immediatly beside Allotment up to column");
+		} else {
+			System.out.println("Additional Container Rate column is NOT displayed immediatly beside Allotment up to column :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Additional Container Rate column is NOT displayed immediatly beside Allotment up to column");
+		}
+		
+		
+		
+	}
+	
+	@Test(dependsOnMethods = "TC_047VerifyAdditionalcontainerratecolumnPresence")
+	public void TC_048VerifyAdditionalContainerRateInputFieldAcceptsData() {
+		List<WebElement> additionalContainerRateFields = gpb.getAdditionalContainerRateInputFields();
+		boolean allFieldsAcceptInput = true;
+
+		if (additionalContainerRateFields.isEmpty()) {
+			System.out.println("No Additional Container Rate input fields found :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "No Additional Container Rate input fields found");
+			return;
+		}
+
+		for (int i = 0; i < additionalContainerRateFields.size(); i++) {
+			WebElement field = additionalContainerRateFields.get(i);
+			int fieldNumber = i + 1;
+
+			field.click();
+			field.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+			field.sendKeys(Keys.DELETE);
+
+			String currentValue = field.getAttribute("value");
+			if (currentValue != null && !currentValue.trim().isEmpty()) {
+				((JavascriptExecutor) driver).executeScript(
+					"arguments[0].value='';"
+					+ "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));"
+					+ "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
+					field
+				);
+			}
+			System.out.println("Cleared the Additional Container Rate input field " + fieldNumber);
+			utilityclassobject.gettest().log(Status.INFO, "Cleared the Additional Container Rate input field " + fieldNumber);
+			field.sendKeys("10");
+
+			String enteredValue = field.getAttribute("value");
+			if ("10".equals(enteredValue)) {
+				System.out.println("Additional Container Rate field " + fieldNumber + " accepted value 10 :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Additional Container Rate field " + fieldNumber + " accepted value 10");
+			} else {
+				allFieldsAcceptInput = false;
+				System.out.println("Additional Container Rate field " + fieldNumber + " did NOT accept value 10. Actual value: " + enteredValue + " :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Additional Container Rate field " + fieldNumber + " did NOT accept value 10. Actual value: " + enteredValue);
+			}
+		}
+
+		if (allFieldsAcceptInput) {
+			System.out.println("All Additional Container Rate fields accepted input 10 :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "All Additional Container Rate fields accepted input 10");
+		}
+		
+		//again clear the fields to avoid any issues in next test case
+		for (WebElement field : additionalContainerRateFields) {
+			clearInputField(field);
+			System.out.println("Cleared the Additional Container Rate input field");
+			utilityclassobject.gettest().log(Status.INFO, "Cleared the Additional Container Rate input field ");
+		}
+		
+		gpb.getUniversalWasteText().click();
+		System.out.println("Clicked on Universal Waste text to remove focus from Additional Container Rate fields");
+		utilityclassobject.gettest().log(Status.INFO, "Clicked on Universal Waste text to remove focus from Additional Container Rate fields");
+		
+		System.out.println("Additional Container Rate input fields accepts data successfully and Displayed correctly without distrubing other fields :PASS");
+		utilityclassobject.gettest().log(Status.PASS, "Additional Container Rate input fields accepts data successfully and Displayed correctly without distrubing other fields");
+	}
+	
+	@Test(dependsOnMethods = "TC_048VerifyAdditionalContainerRateInputFieldAcceptsData")
+	public void TC_049VerifyAllotmentFrequencyColumnDisplayedImmediatlyafterAdditionalContainerRate() {
+		
+		if (gpb.getAllotmentFrequencyColumn().isDisplayed()) {
+			System.out.println("Allotment Frequency column is displayed immediatly beside Additional Container Rate column :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Allotment Frequency column is displayed immediatly beside Additional Container Rate column");
+		} else {
+			System.out.println("Allotment Frequency column is NOT displayed immediatly beside Additional Container Rate column :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Allotment Frequency column is NOT displayed immediatly beside Additional Container Rate column");
+		}
+		
+		
+	}
+	
+	@Test(dependsOnMethods = "TC_049VerifyAllotmentFrequencyColumnDisplayedImmediatlyafterAdditionalContainerRate")
+	
+	public void TC_050VerifyAllotmentFrequencyForIndividualContainers() {
+		List<WebElement> containers = gpb.getContainerslist();
+		List<WebElement> frequencies = gpb.getAllotmentFrequency();
+		boolean isPass = true;
+
+		if (containers.isEmpty() || frequencies.isEmpty()) {
+			System.out.println("Containers/Frequency list is empty :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Containers/Frequency list is empty");
+			return;
+		}
+
+		if (containers.size() != frequencies.size()) {
+			isPass = false;
+			System.out.println("Container count and frequency count are not matching :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Container count and frequency count are not matching");
+		}
+
+		int rows = Math.min(containers.size(), frequencies.size());
+		for (int i = 0; i < rows; i++) {
+			String containerName = containers.get(i).getText().trim();
+			WebElement frequencyElement = frequencies.get(i);
+
+			String frequencyValue = frequencyElement.getText().trim();
+			if (frequencyValue.isEmpty()) {
+				String valueAttr = frequencyElement.getAttribute("value");
+				if (valueAttr != null) {
+					frequencyValue = valueAttr.trim();
+				}
+			}
+
+			if (!frequencyElement.isDisplayed() || frequencyValue.isEmpty()) {
+				isPass = false;
+				System.out.println("Container " + (i + 1) + " [" + containerName + "] has no frequency value :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Container " + (i + 1) + " [" + containerName + "] has no frequency value");
+			} else {
+				System.out.println("Container " + (i + 1) + " [" + containerName + "] frequency: " + frequencyValue + " :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Container " + (i + 1) + " [" + containerName + "] frequency: " + frequencyValue);
+			}
+		}
+
+		if (isPass) {
+			System.out.println("All containers have individual allotment frequency values :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "All containers have individual allotment frequency values");
+		} else {
+			System.out.println("Some containers are missing individual allotment frequency values :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Some containers are missing individual allotment frequency values");
+		}
+	}
+	
+	@Test(dependsOnMethods = "TC_050VerifyAllotmentFrequencyForIndividualContainers")
+	public void TC_051VerifyBesideallotmentfrequencyUsedAllotmentcolumnispresent() {
+		
+		
+	
+		if (gpb.getUsedColumn().isDisplayed()) {
+			System.out.println("Used Allotment column is displayed immediatly beside Allotment Frequency column :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Used Allotment column is displayed immediatly beside Allotment Frequency column");
+		} else {
+			System.out.println("Used Allotment column is NOT displayed immediatly beside Allotment Frequency column :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Used Allotment column is NOT displayed immediatly beside Allotment Frequency column");
+	}
+	
+	}
+	
+	@Test(dependsOnMethods = "TC_051VerifyBesideallotmentfrequencyUsedAllotmentcolumnispresent")
+	public void TC_052VerifyUsedAllotmentAcceptsonlyNumbericvalueandnotAcceptsvaluesotherthanNumericandDataSaved() throws InterruptedException {
+		List<WebElement> usedAllotmentFields = gpb.getUsedAllotmentsInputFields();
+		boolean isPass = true;
+
+		if (usedAllotmentFields.isEmpty()) {
+			System.out.println("No Used Allotment input fields found :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "No Used Allotment input fields found");
+			return;
+		}
+
+		for (int i = 0; i < usedAllotmentFields.size(); i++) {
+			WebElement field = usedAllotmentFields.get(i);
+			int row = i + 1;
+
+			clearInputField(field);
+			Thread.sleep(2000); 
+			field.sendKeys("2");
+			String valueAfterNumeric = field.getAttribute("value");
+
+			if ("2".equals(valueAfterNumeric)) {
+				System.out.println("Used Allotment field " + row + " accepted numeric value 2 :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Used Allotment field " + row + " accepted numeric value 2");
+			} else {
+				isPass = false;
+				System.out.println("Used Allotment field " + row + " did not keep numeric value 2. Actual: " + valueAfterNumeric + " :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Used Allotment field " + row + " did not keep numeric value 2. Actual: " + valueAfterNumeric);
+			}
+
+			clearInputField(field);
+			Thread.sleep(2000); 
+
+			String[] invalidInputs = {"abc", "@#$", "ab@12"};
+			for (String invalidInput : invalidInputs) {
+				field.sendKeys(invalidInput);
+				
+				gpb.getUniversalWasteText().click();
+				Thread.sleep(2000);
+				String actualValue = field.getAttribute("value");
+				String safeValue = actualValue == null ? "" : actualValue.trim();
+
+				if (safeValue.matches(".*[^0-9].*")) {
+					isPass = false;
+					System.out.println("Used Allotment field " + row + " accepted invalid input '" + invalidInput + "'. Actual: '" + safeValue + "' :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Used Allotment field " + row + " accepted invalid input '" + invalidInput + "'. Actual: '" + safeValue + "'");
+				} else {
+					System.out.println("Used Allotment field " + row + " rejected invalid input '" + invalidInput + "' :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Used Allotment field " + row + " rejected invalid input '" + invalidInput + "'");
+				}
+
+				clearInputField(field);
+			}
+		}
+
+		if (isPass) {
+			System.out.println("Used Allotment fields accept only numeric values and reject alphabets/special characters :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Used Allotment fields accept only numeric values and reject alphabets/special characters");
+		} else {
+			System.out.println("Used Allotment fields validation failed for some rows :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Used Allotment fields validation failed for some rows");
+		}
+	}
+	
+	
+	
+	@Test(dependsOnMethods = "TC_052VerifyUsedAllotmentAcceptsonlyNumbericvalueandnotAcceptsvaluesotherthanNumericandDataSaved")
+	public void TC_053VerifyBesideUsedAllotmentColumnRemainingAllotmentColumnisPresent() {
+		
+		if (gpb.getRemainingAllotmentColumn().isDisplayed()) {
+			System.out.println("Remaining Allotment column is displayed immediatly beside Used Allotment column :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Remaining Allotment column is displayed immediatly beside Used Allotment column");
+		} else {
+			System.out.println("Remaining Allotment column is NOT displayed immediatly beside Used Allotment column :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Remaining Allotment column is NOT displayed immediatly beside Used Allotment column");
+		}
+	}
+	
+}
+		

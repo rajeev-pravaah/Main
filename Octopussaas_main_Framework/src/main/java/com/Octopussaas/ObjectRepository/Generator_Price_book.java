@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -416,6 +417,126 @@ public class Generator_Price_book {
 	
 	public WebElement getConfirmButton() {
 		return confirmbutton;
+	}
+	
+	
+	@FindBy(xpath = "//div[@role='checkbox']")
+	private WebElement flatmonthlycheckbox;
+	
+	public WebElement getFlatMonthlyCheckbox() {
+		return flatmonthlycheckbox;
+	}
+	
+	@FindBy(xpath = "//div[text()='Flat Monthly Charge must be greater than 0 to include this container.']")
+	private WebElement flatmonthlyerror;
+	
+	public WebElement getFlatMonthlyError() {
+		return flatmonthlyerror;
+	}
+	
+	@FindBy(xpath = "//div[@class='w-20 flex-none overflow-hidden pr-1 leading-tight']")
+	private WebElement servicepriceheader;
+	
+	
+	
+	public WebElement getServicePriceHeader() {
+		return servicepriceheader;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[6]//input")
+	private List<WebElement> servicepriceinputfields;
+	
+	public List<WebElement> getServicePriceInputFields() {
+		return servicepriceinputfields;
+	}
+	
+	@FindBy(xpath = "//span[text()='Allotment']")
+	private WebElement allotmentuptocolumn;
+	
+	public WebElement getAllotmentUptoColumn() {
+		return allotmentuptocolumn;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[7]//input")
+	private List<WebElement> allotmentuptoinputfields;
+	
+	public List<WebElement> getAllotmentUptoInputFields() {
+		return allotmentuptoinputfields;
+	}
+	
+	@FindBy(xpath = "//div[@class='w-20 flex-none overflow-hidden pr-1 leading-tight']/descendant::span[text()='Additional']")
+	private WebElement additionalcontainerratecolumn;
+	
+	public WebElement getAdditionalContainerRateColumn() {
+		return additionalcontainerratecolumn;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[8]//input")
+	private List<WebElement> additionalcontainerrateinputfields;
+	
+	public List<WebElement> getAdditionalContainerRateInputFields() {
+		return additionalcontainerrateinputfields;
+	}
+	
+	@FindBy(xpath = "//h3[text()='Universal Waste']")
+	private WebElement universalwastetext;
+	
+	public WebElement getUniversalWasteText() {
+		return universalwastetext;
+	}
+	
+	@FindBy(xpath = "//div[@class='w-32 flex-none overflow-hidden pr-1 leading-tight']/descendant::span")
+	private WebElement allotmentfrequencycolumn;
+	
+	public WebElement getAllotmentFrequencyColumn() {
+		return allotmentfrequencycolumn;
+	}
+	
+	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[9]/descendant::button")
+	private List<WebElement> allotmentfrequency;
+	
+	public List<WebElement> getAllotmentFrequency() {
+		return allotmentfrequency;
+	}
+	
+	@FindBy(xpath = "//span[text()='Used']/..")
+	private WebElement usedcolumn;
+	
+	public WebElement getUsedColumn() {
+		return usedcolumn;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[10]//input")
+	private List<WebElement> usedallotmentsinputfields;
+	
+	public List<WebElement> getUsedAllotmentsInputFields() {
+		return usedallotmentsinputfields;
+	}
+	
+	@FindBy(xpath = "//span[text()='Remaining']/..")
+	private WebElement remainingallotmentcolumn;
+	
+	public WebElement getRemainingAllotmentColumn() {
+		return remainingallotmentcolumn;
+	} 
+	
+	
+	
+	public void clearInputField(WebElement field) {
+		field.click();
+		field.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+		field.sendKeys(Keys.DELETE);
+
+		String currentValue = field.getAttribute("value");
+		if (currentValue != null && !currentValue.trim().isEmpty()) {
+			((JavascriptExecutor) driver).executeScript(
+				"arguments[0].value='';"
+				+ "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));"
+				+ "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
+				field
+			);
+		}
 	}
 
 }

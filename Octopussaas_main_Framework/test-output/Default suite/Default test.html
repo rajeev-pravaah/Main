@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>40/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>53/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Oct 14 15:13:15 IST 2026</td>
+<td>Started on:</td><td>Tue Oct 27 15:04:28 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>180 seconds (180629 ms)</td>
+<tr><td>Total time:</td><td>299 seconds (299992 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,125 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_041VerifyFlatmonthlyCheckBoxisClickable()'><b>TC_041VerifyFlatmonthlyCheckBoxisClickable</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;btn btn-error btn-sm&quot;&gt;...&lt;/button&gt; is not clickable at point (1063, 725). Other element would receive the click: &lt;div class=&quot;min-h-0 flex-1 overflow-hidden&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=155.0.8059.40)
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;26.0.2.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [028947359609c38d796a077be893d47e, clickElement {id=f.2A93A3866FF9A7FAC794366E27D87327.d.888DA3866E734190DDA1145D472891ED.e.99881}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.40, chrome: {chromedriverVersion: 155.0.8059.79 (a49e2e3d4add..., userDataDir: C:\Users\Rajeev\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64132}, goog:processID: 130788, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64132/devtoo..., se:cdpVersion: 155.0.8059.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (028947359609c38d796a077be893d47e)] -&gt; xpath: //button[text()=&apos;Confirm&apos;]]
-Session ID: 028947359609c38d796a077be893d47e
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
-	at GeneratorPricBook.Generator_priceBook_AllTC.TC_041VerifyFlatmonthlyCheckBoxisClickable(Generator_priceBook_AllTC.java:1040)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1574347976", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1574347976'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;btn btn-error btn-sm&quot;&gt;...&lt;/button&gt; is not clickable at point (1063, 725). Other element would receive the click: &lt;div class=&quot;min-h-0 flex-1 overflow-hidden&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=155.0.8059.40)
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;26.0.2.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [028947359609c38d796a077be893d47e, clickElement {id=f.2A93A3866FF9A7FAC794366E27D87327.d.888DA3866E734190DDA1145D472891ED.e.99881}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.40, chrome: {chromedriverVersion: 155.0.8059.79 (a49e2e3d4add..., userDataDir: C:\Users\Rajeev\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64132}, goog:processID: 130788, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64132/devtoo..., se:cdpVersion: 155.0.8059.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (028947359609c38d796a077be893d47e)] -&gt; xpath: //button[text()=&apos;Confirm&apos;]]
-Session ID: 028947359609c38d796a077be893d47e
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
-	at GeneratorPricBook.Generator_priceBook_AllTC.TC_041VerifyFlatmonthlyCheckBoxisClickable(Generator_priceBook_AllTC.java:1040)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>1</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -195,205 +76,270 @@ Session ID: 028947359609c38d796a077be893d47e
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_024verifyNumberofContainerForAPHISWasteare07andvisible()'><b>TC_024verifyNumberofContainerForAPHISWasteare07andvisible</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_030verifyNumberofContainerForPathologyare12andvisibleWithoutduplicates()'><b>TC_030verifyNumberofContainerForPathologyare12andvisibleWithoutduplicates</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_027verifySystemShouldDisplayUniversalWasteContainersInstantly()'><b>TC_027verifySystemShouldDisplayUniversalWasteContainersInstantly</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_015verifyContainerChangesServices()'><b>TC_015verifyContainerChangesServices</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_040VerifyCheckBoxisPresentunderFlatmonthlyColumn()'><b>TC_040VerifyCheckBoxisPresentunderFlatmonthlyColumn</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_020verifyNumberofContainerForChemotherapyare09()'><b>TC_020verifyNumberofContainerForChemotherapyare09</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_033verifyCopyfromMasterColumnAppearsforALlSeervices()'><b>TC_033verifyCopyfromMasterColumnAppearsforALlSeervices</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>21</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_034verifyCopyfromMasterButtonAppearsforAllItemsandClickable()'><b>TC_034verifyCopyfromMasterButtonAppearsforAllItemsandClickable</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_021verifySystemShouldDisplayPaperShreddingContainers()'><b>TC_021verifySystemShouldDisplayPaperShreddingContainers</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_007verifySelectedTemplateDropdown_DefaultValue_options_AbleToSeeTheDifferntTemplate()'><b>TC_007verifySelectedTemplateDropdown_DefaultValue_options_AbleToSeeTheDifferntTemplate</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>5</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_008verifyUserIsAbleApplyDifferentTemplate()'><b>TC_008verifyUserIsAbleApplyDifferentTemplate</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_041VerifyFlatmonthlyCheckBoxisClickable()'><b>TC_041VerifyFlatmonthlyCheckBoxisClickable</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
 <td></td>
 <td>1</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
 <tr>
 <td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_009verifyServiceisDisplayedUnderTags()'><b>TC_009verifyServiceisDisplayedUnderTags</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
 <td></td>
 <td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_016verifyNumberofContainerForNonRCRAPharmaceuticalare15()'><b>TC_016verifyNumberofContainerForNonRCRAPharmaceuticalare15</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_013verifyNumberOfContainerBesideServices()'><b>TC_013verifyNumberOfContainerBesideServices</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_014verifyBiosharpNumberofContainersare20()'><b>TC_014verifyBiosharpNumberofContainersare20</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_012verifyBioSharpInfoIconIsDisplayed()'><b>TC_012verifyBioSharpInfoIconIsDisplayed</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_017verifyContainerChangesServicesForRCRAPharmaceutical()'><b>TC_017verifyContainerChangesServicesForRCRAPharmaceutical</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_022verifyNumberofContainerForPaperShreddingare07andvisible()'><b>TC_022verifyNumberofContainerForPaperShreddingare07andvisible</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_006verifyInactiveToggleButtonandEnabledandDisabledOption()'><b>TC_006verifyInactiveToggleButtonandEnabledandDisabledOption</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_003verifySOwbuttonIsClickableandOpensPopUp()'><b>TC_003verifySOwbuttonIsClickableandOpensPopUp</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>2</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_023verifySystemShouldDisplayAPHISWasteContainers()'><b>TC_023verifySystemShouldDisplayAPHISWasteContainers</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_028verifyNumberofContainerForUniversalWasteare07andvisible()'><b>TC_028verifyNumberofContainerForUniversalWasteare07andvisible</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_011verifyBioSharpHeaderIsDisplayedBelowtheService()'><b>TC_011verifyBioSharpHeaderIsDisplayedBelowtheService</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_002verifyScopofWorkButtonIsPresent()'><b>TC_002verifyScopofWorkButtonIsPresent</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
 <tr>
 <td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_005verifyViewToggleButtonandEnabledandDisabledOption()'><b>TC_005verifyViewToggleButtonandEnabledandDisabledOption</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
 <td></td>
 <td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_038VerifyCopyFromMasterIndividualContainerandRaateGettingAddedAndGreenDotappear()'><b>TC_038VerifyCopyFromMasterIndividualContainerandRaateGettingAddedAndGreenDotappear</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>2</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_010verifyAllServiceShouldSelectItbIndividually()'><b>TC_010verifyAllServiceShouldSelectItbIndividually</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>21</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_029verifySystemShouldDisplayPathologyContainersInstantly()'><b>TC_029verifySystemShouldDisplayPathologyContainersInstantly</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_039VerifyIncludeInFaltMonthlyColumnisAppear()'><b>TC_039VerifyIncludeInFaltMonthlyColumnisAppear</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_026verifyNumberofContainerForProductDestructionare07andvisible()'><b>TC_026verifyNumberofContainerForProductDestructionare07andvisible</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_035verifyMasterITemnamecolumnAppears()'><b>TC_035verifyMasterITemnamecolumnAppears</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_036verifyMasterItemNameColumnWithDifferentnames()'><b>TC_036verifyMasterItemNameColumnWithDifferentnames</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
-<tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_001verifyMenuButtonFromGeneratorPri()'><b>TC_001verifyMenuButtonFromGeneratorPri</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
-<td></td>
-<td>9</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
 <tr>
 <td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_031verfySytemShoulddisplayCanbissWasteContainersInstantly()'><b>TC_031verfySytemShoulddisplayCanbissWasteContainersInstantly</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
 <td></td>
 <td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
 <tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_018verifyNumberofContainerForRCRAPharmaceuticalare15()'><b>TC_018verifyNumberofContainerForRCRAPharmaceuticalare15</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_021verifySystemShouldDisplayPaperShreddingContainers()'><b>TC_021verifySystemShouldDisplayPaperShreddingContainers</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
 <td></td>
 <td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
 <tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_037VerifyYellowDotAppearsForConfiguredservices()'><b>TC_037VerifyYellowDotAppearsForConfiguredservices</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_007verifySelectedTemplateDropdown_DefaultValue_options_AbleToSeeTheDifferntTemplate()'><b>TC_007verifySelectedTemplateDropdown_DefaultValue_options_AbleToSeeTheDifferntTemplate</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>14</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_023verifySystemShouldDisplayAPHISWasteContainers()'><b>TC_023verifySystemShouldDisplayAPHISWasteContainers</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
 <td></td>
 <td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
 <tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_032verifyNumberofContainerForCanbissWasteare12andvisibleWithoutDupicate()'><b>TC_032verifyNumberofContainerForCanbissWasteare12andvisibleWithoutDupicate</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_047VerifyAdditionalcontainerratecolumnPresence()'><b>TC_047VerifyAdditionalcontainerratecolumnPresence</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
 <td></td>
 <td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
 <tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_004verifyFlatMonthlychargeOption()'><b>TC_004verifyFlatMonthlychargeOption</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_010verifyAllServiceShouldSelectItbIndividually()'><b>TC_010verifyAllServiceShouldSelectItbIndividually</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>22</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_017verifyContainerChangesServicesForRCRAPharmaceutical()'><b>TC_017verifyContainerChangesServicesForRCRAPharmaceutical</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
 <td></td>
 <td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
 <tr>
-<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_019verifySystemShouldDisplayChemotherapyContainers()'><b>TC_019verifySystemShouldDisplayChemotherapyContainers</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_050VerifyAllotmentFrequencyForIndividualContainers()'><b>TC_050VerifyAllotmentFrequencyForIndividualContainers</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
 <td></td>
 <td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_015verifyContainerChangesServices()'><b>TC_015verifyContainerChangesServices</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_024verifyNumberofContainerForAPHISWasteare07andvisible()'><b>TC_024verifyNumberofContainerForAPHISWasteare07andvisible</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
 <tr>
 <td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_025verifySystemShouldDisplayProductDestructionContainers()'><b>TC_025verifySystemShouldDisplayProductDestructionContainers</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
 <td></td>
 <td>0</td>
-<td>GeneratorPricBook.Generator_priceBook_AllTC@7ec7ffd3</td></tr>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_019verifySystemShouldDisplayChemotherapyContainers()'><b>TC_019verifySystemShouldDisplayChemotherapyContainers</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_004verifyFlatMonthlychargeOption()'><b>TC_004verifyFlatMonthlychargeOption</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_013verifyNumberOfContainerBesideServices()'><b>TC_013verifyNumberOfContainerBesideServices</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_028verifyNumberofContainerForUniversalWasteare07andvisible()'><b>TC_028verifyNumberofContainerForUniversalWasteare07andvisible</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_037VerifyYellowDotAppearsForConfiguredservices()'><b>TC_037VerifyYellowDotAppearsForConfiguredservices</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_022verifyNumberofContainerForPaperShreddingare07andvisible()'><b>TC_022verifyNumberofContainerForPaperShreddingare07andvisible</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_014verifyBiosharpNumberofContainersare20()'><b>TC_014verifyBiosharpNumberofContainersare20</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_038VerifyCopyFromMasterIndividualContainerandRaateGettingAddedAndGreenDotappear()'><b>TC_038VerifyCopyFromMasterIndividualContainerandRaateGettingAddedAndGreenDotappear</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>4</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_030verifyNumberofContainerForPathologyare12andvisibleWithoutduplicates()'><b>TC_030verifyNumberofContainerForPathologyare12andvisibleWithoutduplicates</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_046VerifyAllotmentUptoFieldAcceptsInput()'><b>TC_046VerifyAllotmentUptoFieldAcceptsInput</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>10</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_053VerifyBesideUsedAllotmentColumnRemainingAllotmentColumnisPresent()'><b>TC_053VerifyBesideUsedAllotmentColumnRemainingAllotmentColumnisPresent</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_012verifyBioSharpInfoIconIsDisplayed()'><b>TC_012verifyBioSharpInfoIconIsDisplayed</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_016verifyNumberofContainerForNonRCRAPharmaceuticalare15()'><b>TC_016verifyNumberofContainerForNonRCRAPharmaceuticalare15</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_034verifyCopyfromMasterButtonAppearsforAllItemsandClickable()'><b>TC_034verifyCopyfromMasterButtonAppearsforAllItemsandClickable</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>1</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_029verifySystemShouldDisplayPathologyContainersInstantly()'><b>TC_029verifySystemShouldDisplayPathologyContainersInstantly</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_042VerifyFlatMonthlyCheckboxisNotClickable()'><b>TC_042VerifyFlatMonthlyCheckboxisNotClickable</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_032verifyNumberofContainerForCanbissWasteare12andvisibleWithoutDupicate()'><b>TC_032verifyNumberofContainerForCanbissWasteare12andvisibleWithoutDupicate</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_018verifyNumberofContainerForRCRAPharmaceuticalare15()'><b>TC_018verifyNumberofContainerForRCRAPharmaceuticalare15</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_002verifyScopofWorkButtonIsPresent()'><b>TC_002verifyScopofWorkButtonIsPresent</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_036verifyMasterItemNameColumnWithDifferentnames()'><b>TC_036verifyMasterItemNameColumnWithDifferentnames</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_049VerifyAllotmentFrequencyColumnDisplayedImmediatlyafterAdditionalContainerRate()'><b>TC_049VerifyAllotmentFrequencyColumnDisplayedImmediatlyafterAdditionalContainerRate</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_001verifyMenuButtonFromGeneratorPri()'><b>TC_001verifyMenuButtonFromGeneratorPri</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>10</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_020verifyNumberofContainerForChemotherapyare09()'><b>TC_020verifyNumberofContainerForChemotherapyare09</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_011verifyBioSharpHeaderIsDisplayedBelowtheService()'><b>TC_011verifyBioSharpHeaderIsDisplayedBelowtheService</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_003verifySOwbuttonIsClickableandOpensPopUp()'><b>TC_003verifySOwbuttonIsClickableandOpensPopUp</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>2</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_035verifyMasterITemnamecolumnAppears()'><b>TC_035verifyMasterITemnamecolumnAppears</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_045VerifyServicePriceInputFiledisNotAcceptingNegativeData()'><b>TC_045VerifyServicePriceInputFiledisNotAcceptingNegativeData</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_051VerifyBesideallotmentfrequencyUsedAllotmentcolumnispresent()'><b>TC_051VerifyBesideallotmentfrequencyUsedAllotmentcolumnispresent</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_026verifyNumberofContainerForProductDestructionare07andvisible()'><b>TC_026verifyNumberofContainerForProductDestructionare07andvisible</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_039VerifyIncludeInFaltMonthlyColumnisAppear()'><b>TC_039VerifyIncludeInFaltMonthlyColumnisAppear</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_027verifySystemShouldDisplayUniversalWasteContainersInstantly()'><b>TC_027verifySystemShouldDisplayUniversalWasteContainersInstantly</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_006verifyInactiveToggleButtonandEnabledandDisabledOption()'><b>TC_006verifyInactiveToggleButtonandEnabledandDisabledOption</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_033verifyCopyfromMasterColumnAppearsforALlSeervices()'><b>TC_033verifyCopyfromMasterColumnAppearsforALlSeervices</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>22</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_008verifyUserIsAbleApplyDifferentTemplate()'><b>TC_008verifyUserIsAbleApplyDifferentTemplate</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>1</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_052VerifyUsedAllotmentAcceptsonlyNumbericvalueandnotAcceptsvaluesotherthanNumericandDataSaved()'><b>TC_052VerifyUsedAllotmentAcceptsonlyNumbericvalueandnotAcceptsvaluesotherthanNumericandDataSaved</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>57</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_040VerifyCheckBoxisPresentunderFlatmonthlyColumn()'><b>TC_040VerifyCheckBoxisPresentunderFlatmonthlyColumn</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_043VerifyServicePriceHeaderisDisplayed()'><b>TC_043VerifyServicePriceHeaderisDisplayed</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>0</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_048VerifyAdditionalContainerRateInputFieldAcceptsData()'><b>TC_048VerifyAdditionalContainerRateInputFieldAcceptsData</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>4</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
+<tr>
+<td title='GeneratorPricBook.Generator_priceBook_AllTC.TC_044VerifyServicePriceInputFiledandAcceptsData()'><b>TC_044VerifyServicePriceInputFiledandAcceptsData</b><br>Test class: GeneratorPricBook.Generator_priceBook_AllTC</td>
+<td></td>
+<td>3</td>
+<td>GeneratorPricBook.Generator_priceBook_AllTC@72d1ad2e</td></tr>
 </table><p>
 </body>
 </html>
