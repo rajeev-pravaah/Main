@@ -1077,6 +1077,13 @@ public class GeneratorPortal_login extends BaseClassForGEneratorContacts{
 		}
 		
 		
+		@Test
+		public void Tc_088()
+		{
+			System.out.println("HI");
+		}
+		
+		
 		
 		
 		
