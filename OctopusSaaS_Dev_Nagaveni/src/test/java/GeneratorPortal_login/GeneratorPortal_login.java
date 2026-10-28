@@ -1082,6 +1082,12 @@ public class GeneratorPortal_login extends BaseClassForGEneratorContacts{
 			System.out.println("fhwbfhwbkj");
 		}
 		
+		@Test
+		public void TC_879()
+		{
+			System.out.println("fhwbfhwbkj");
+		}
+		
 		
 		
 		
