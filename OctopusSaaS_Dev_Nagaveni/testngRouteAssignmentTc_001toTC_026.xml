@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="RouteAssignmentFlowTest">
+    <classes>
+      <class name="OctoRouteAssignmentFlowTc.TC_001"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_002"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_003"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_004"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_005"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_006"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_007"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_008"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_009"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_010"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_011"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_012MapwithotherLocation"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_013SSRbtn"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_014SSRtextfields"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_015SubContractorWithValidName"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_016SSRErrorMsg"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_017SSRwithAddService"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_018SSRwithALLValidInputandsend"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_019subcontarctorfromDubcontractordd"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_020ListofNameinSubcontractor"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_021SubcontractorserviceFrequency"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_022RequestStartdateInSuncontractor"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_023SharedServiceNote"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_024ServiceTypeInSSR"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_025ServiceDurationInSSR"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_026ScopeOfworkInSSR"/>
+    </classes>
+  </test> <!-- RouteAssignmentFlowTest -->
+</suite> <!-- Suite -->

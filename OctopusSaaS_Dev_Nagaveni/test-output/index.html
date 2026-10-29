@@ -1,0 +1,2358 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
+              <span class="suite-name border-failed">Default suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
+                    <span>C:\Users\nagav\AppData\Local\Temp\testng-eclipse--807670914\testng-customsuite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">71 methods, 1 failed,   70 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_086VerifyGeneatorPortal_Alreadyhaveanaccount">TC_086VerifyGeneatorPortal_Alreadyhaveanaccount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_001VerifyGeneratorportalloginlink">TC_001VerifyGeneratorportalloginlink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_002VerifyGeneratorportalloginisClickable">TC_002VerifyGeneratorportalloginisClickable</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_003Generatorportallogin_Newtab">TC_003Generatorportallogin_Newtab</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_004VerifyGeneratorContacts_welcomepage">TC_004VerifyGeneratorContacts_welcomepage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_005VerifyGeneratorPortal_textfields">TC_005VerifyGeneratorPortal_textfields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_006VerifyGeneratorPortal_URLlink">TC_006VerifyGeneratorPortal_URLlink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_007VerifyGeneratorcontacts_EmailwithAlphabets">TC_007VerifyGeneratorcontacts_EmailwithAlphabets</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_008VerifyGeneratorPortal_EmailwithNumbers">TC_008VerifyGeneratorPortal_EmailwithNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_009VerifyGeneratorPortal_Emailwithspecialcharacters">TC_009VerifyGeneratorPortal_Emailwithspecialcharacters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_010VerfiyGeneratorPortal_EmailwithCombinationCharacters">TC_010VerfiyGeneratorPortal_EmailwithCombinationCharacters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_011VerifyGeneratorPortal_EmailwithoutInput">TC_011VerifyGeneratorPortal_EmailwithoutInput</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_012VerifyGeneratorPortal_EmailwithInvalidinput">TC_012VerifyGeneratorPortal_EmailwithInvalidinput</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_013VerifyGeneratorPortal_EmailwithValidInput">TC_013VerifyGeneratorPortal_EmailwithValidInput</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_014VerifyGeneratorPortal_Passwordtextfield">TC_014VerifyGeneratorPortal_Passwordtextfield</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_015VerifyGeneratorPortal_Passwordwithoutinput">TC_015VerifyGeneratorPortal_Passwordwithoutinput</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_016VerifyGeneratorPortal_Passwordwithalphabets">TC_016VerifyGeneratorPortal_Passwordwithalphabets</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_017VerifyGeneratorPortal_Passwordwithnumbers">TC_017VerifyGeneratorPortal_Passwordwithnumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_018VerifyGeneratorPortal_Passwordwithspecialcharacters">TC_018VerifyGeneratorPortal_Passwordwithspecialcharacters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_019VerifyGeneratorPortal_Passwordwithcombinationofchar">TC_019VerifyGeneratorPortal_Passwordwithcombinationofchar</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_025VerifyGeneratorPortal_Passwordwithspaces">TC_025VerifyGeneratorPortal_Passwordwithspaces</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_033VerifyGeneratorPortal_withValidpassword">TC_033VerifyGeneratorPortal_withValidpassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_035VerifyGeneratorPortal_PasswordwithVisibility">TC_035VerifyGeneratorPortal_PasswordwithVisibility</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_036VerifyGeneratorPortal_Forgotpasswordlink">TC_036VerifyGeneratorPortal_Forgotpasswordlink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_037VerifyGeneratorPortal_Forgotpasswordpage">TC_037VerifyGeneratorPortal_Forgotpasswordpage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_038VerifyGeneratorPortal_ForgotpasswordwithEmail">TC_038VerifyGeneratorPortal_ForgotpasswordwithEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_039VerifyGeneratorPortal_ForgotpasswordwithValidemail">TC_039VerifyGeneratorPortal_ForgotpasswordwithValidemail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_040VerifyGeneratorPortal_ForgotPasswordwithInvalidemail">TC_040VerifyGeneratorPortal_ForgotPasswordwithInvalidemail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_041VerifyGeneratorPortal_SubmitButton">TC_041VerifyGeneratorPortal_SubmitButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_043VerifyGeneratorPortal_Backtologin">TC_043VerifyGeneratorPortal_Backtologin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_045VerifyGenratorPortal_WelcomepageIncognitomode">TC_045VerifyGenratorPortal_WelcomepageIncognitomode</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_046VerifyGeneratorPortal_HomepageIncognitmode">TC_046VerifyGeneratorPortal_HomepageIncognitmode</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_047VerifyGeneratorPortal_NewuserRegisrationButton">TC_047VerifyGeneratorPortal_NewuserRegisrationButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_048VerifyGeneratorPortal_NewuserRegistration">TC_048VerifyGeneratorPortal_NewuserRegistration</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_049VerifyGeneratorPortal_UserRegistrationpage">TC_049VerifyGeneratorPortal_UserRegistrationpage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_050VerifyGeneratorPortal_FirstnamewithAlphabets">TC_050VerifyGeneratorPortal_FirstnamewithAlphabets</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_051VerifyGeneratorPortal_FirstnamewithNumbers">TC_051VerifyGeneratorPortal_FirstnamewithNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_052VerifyGeneratorPortal_FirstnameWithSpecialcharacters">TC_052VerifyGeneratorPortal_FirstnameWithSpecialcharacters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_053VerifyGeneratorPortal_FirstnamewithcombinationofCharacters">TC_053VerifyGeneratorPortal_FirstnamewithcombinationofCharacters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_054VerifyGeneratorPortal_FirstnamewithvalidName">TC_054VerifyGeneratorPortal_FirstnamewithvalidName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_055VerifyGeneratorPortal_FirstnamewithoutInput">TC_055VerifyGeneratorPortal_FirstnamewithoutInput</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_056VerifyGenratorPortal_LastnamewithAlphabets">TC_056VerifyGenratorPortal_LastnamewithAlphabets</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_057VerifyGneratorPortal_LastnamewithNumbers">TC_057VerifyGneratorPortal_LastnamewithNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_058VerifyGeneratorPortal_Lastnamewithspecialcharacters">TC_058VerifyGeneratorPortal_Lastnamewithspecialcharacters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_059VerifyGeneratorPortal_LastnamewithCombinationofChar">TC_059VerifyGeneratorPortal_LastnamewithCombinationofChar</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_060VerifyGeneratorPortal_LastnamewithValidInput">TC_060VerifyGeneratorPortal_LastnamewithValidInput</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_061VerifyGeneratorPortal_LastnamewithoutInput">TC_061VerifyGeneratorPortal_LastnamewithoutInput</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_062VerifyGeneratorPortal_RegEmailwithAlphabets">TC_062VerifyGeneratorPortal_RegEmailwithAlphabets</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_063VerifyGeneratorPortal_RegEmailwithNumbers">TC_063VerifyGeneratorPortal_RegEmailwithNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_064VerifyGeneratorPortal_RegEmailwithSpecialcharacters">TC_064VerifyGeneratorPortal_RegEmailwithSpecialcharacters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_065VerifyGeneratorPortal_RegEmailwithoutInput">TC_065VerifyGeneratorPortal_RegEmailwithoutInput</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_066VerifyGneratorPortal_RegEmailwithInvalidInput">TC_066VerifyGneratorPortal_RegEmailwithInvalidInput</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_068VerifyGeneratorPortal_PhonenumberwithAlphabets">TC_068VerifyGeneratorPortal_PhonenumberwithAlphabets</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_069VerifyGeneratorPortal_PhonenumberwithNumbers">TC_069VerifyGeneratorPortal_PhonenumberwithNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_070VerifyGeneratorPortal_Phonenumberwithspecialcharacters">TC_070VerifyGeneratorPortal_Phonenumberwithspecialcharacters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_071VerifyGeneratorPortal_PhonenumberwithMorethan10digits">TC_071VerifyGeneratorPortal_PhonenumberwithMorethan10digits</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_072VerifyGeneratorPortal_PhonenumberwithShortInput">TC_072VerifyGeneratorPortal_PhonenumberwithShortInput</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_073VerifyGeneratorPortal_PhonenumberwithoutInput">TC_073VerifyGeneratorPortal_PhonenumberwithoutInput</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_074VerifyGeneratorPortal_CompanynamewithAlphabets">TC_074VerifyGeneratorPortal_CompanynamewithAlphabets</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_075VerifyGeneratorPortal_CompanynamewithNumbers">TC_075VerifyGeneratorPortal_CompanynamewithNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_076VerifyGeneratorPortal_CompanynamewithSpecialcharacters">TC_076VerifyGeneratorPortal_CompanynamewithSpecialcharacters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_077VerifyGeneratorPortal_CompanynamewithoutInput">TC_077VerifyGeneratorPortal_CompanynamewithoutInput</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_078VerifyGeneratorPortal_SerivcelocationwithAlphabets">TC_078VerifyGeneratorPortal_SerivcelocationwithAlphabets</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_079VerifyGeneratorPortal_ServicelocationwithNumbers">TC_079VerifyGeneratorPortal_ServicelocationwithNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_080VerifyGeneratorPortal_ServicelocationwithSpecialcharacters">TC_080VerifyGeneratorPortal_ServicelocationwithSpecialcharacters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_081VerifyGeneratorPortal_SerivcelocationwihtoutInput">TC_081VerifyGeneratorPortal_SerivcelocationwihtoutInput</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_082VerifyGeneratorPortal_AccountnumberwithAlphabets">TC_082VerifyGeneratorPortal_AccountnumberwithAlphabets</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_083VerifyGeneratorPortal_AccountnumberwithNumbers">TC_083VerifyGeneratorPortal_AccountnumberwithNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_084VeriyGeneratorPortal_AccountnumberwithSpecialcharacters">TC_084VeriyGeneratorPortal_AccountnumberwithSpecialcharacters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_085VerifyGeneratorPortal_AccountnumberwithoutInput">TC_085VerifyGeneratorPortal_AccountnumberwithoutInput</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="GeneratorPortal_login.GeneratorPortal_login" class="method navigator-link" hash-for-method="TC_67VerifyGeneratorPortal_RegEmailwithValidInput">TC_67VerifyGeneratorPortal_RegEmailwithValidInput</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">GeneratorPortal_login.GeneratorPortal_login</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_086VerifyGeneatorPortal_Alreadyhaveanaccount">
+                  </a> <!-- TC_086VerifyGeneatorPortal_Alreadyhaveanaccount -->
+                  <span class="method-name">TC_086VerifyGeneatorPortal_Alreadyhaveanaccount</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains (text(),&apos;Already have an account? Login&apos;)]&quot;}
+  (Session info: chrome=155.0.8059.86)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3363650c4b1c69d8873653623d71f84f, findElement {value=//div[contains (text(),&apos;Already have an account? Login&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.86, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\nagav\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50868}, goog:processID: 31592, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50868/devtoo..., se:cdpVersion: 155.0.8059.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3363650c4b1c69d8873653623d71f84f
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+	at GeneratorPortal_login.GeneratorPortal_login.TC_086VerifyGeneatorPortal_Alreadyhaveanaccount(GeneratorPortal_login.java:1065)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">GeneratorPortal_login.GeneratorPortal_login</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_001VerifyGeneratorportalloginlink">
+                  </a> <!-- TC_001VerifyGeneratorportalloginlink -->
+                  <span class="method-name">TC_001VerifyGeneratorportalloginlink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_002VerifyGeneratorportalloginisClickable">
+                  </a> <!-- TC_002VerifyGeneratorportalloginisClickable -->
+                  <span class="method-name">TC_002VerifyGeneratorportalloginisClickable</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_003Generatorportallogin_Newtab">
+                  </a> <!-- TC_003Generatorportallogin_Newtab -->
+                  <span class="method-name">TC_003Generatorportallogin_Newtab</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_004VerifyGeneratorContacts_welcomepage">
+                  </a> <!-- TC_004VerifyGeneratorContacts_welcomepage -->
+                  <span class="method-name">TC_004VerifyGeneratorContacts_welcomepage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_005VerifyGeneratorPortal_textfields">
+                  </a> <!-- TC_005VerifyGeneratorPortal_textfields -->
+                  <span class="method-name">TC_005VerifyGeneratorPortal_textfields</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_006VerifyGeneratorPortal_URLlink">
+                  </a> <!-- TC_006VerifyGeneratorPortal_URLlink -->
+                  <span class="method-name">TC_006VerifyGeneratorPortal_URLlink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_007VerifyGeneratorcontacts_EmailwithAlphabets">
+                  </a> <!-- TC_007VerifyGeneratorcontacts_EmailwithAlphabets -->
+                  <span class="method-name">TC_007VerifyGeneratorcontacts_EmailwithAlphabets</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_008VerifyGeneratorPortal_EmailwithNumbers">
+                  </a> <!-- TC_008VerifyGeneratorPortal_EmailwithNumbers -->
+                  <span class="method-name">TC_008VerifyGeneratorPortal_EmailwithNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_009VerifyGeneratorPortal_Emailwithspecialcharacters">
+                  </a> <!-- TC_009VerifyGeneratorPortal_Emailwithspecialcharacters -->
+                  <span class="method-name">TC_009VerifyGeneratorPortal_Emailwithspecialcharacters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_010VerfiyGeneratorPortal_EmailwithCombinationCharacters">
+                  </a> <!-- TC_010VerfiyGeneratorPortal_EmailwithCombinationCharacters -->
+                  <span class="method-name">TC_010VerfiyGeneratorPortal_EmailwithCombinationCharacters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_011VerifyGeneratorPortal_EmailwithoutInput">
+                  </a> <!-- TC_011VerifyGeneratorPortal_EmailwithoutInput -->
+                  <span class="method-name">TC_011VerifyGeneratorPortal_EmailwithoutInput</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_012VerifyGeneratorPortal_EmailwithInvalidinput">
+                  </a> <!-- TC_012VerifyGeneratorPortal_EmailwithInvalidinput -->
+                  <span class="method-name">TC_012VerifyGeneratorPortal_EmailwithInvalidinput</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_013VerifyGeneratorPortal_EmailwithValidInput">
+                  </a> <!-- TC_013VerifyGeneratorPortal_EmailwithValidInput -->
+                  <span class="method-name">TC_013VerifyGeneratorPortal_EmailwithValidInput</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_014VerifyGeneratorPortal_Passwordtextfield">
+                  </a> <!-- TC_014VerifyGeneratorPortal_Passwordtextfield -->
+                  <span class="method-name">TC_014VerifyGeneratorPortal_Passwordtextfield</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_015VerifyGeneratorPortal_Passwordwithoutinput">
+                  </a> <!-- TC_015VerifyGeneratorPortal_Passwordwithoutinput -->
+                  <span class="method-name">TC_015VerifyGeneratorPortal_Passwordwithoutinput</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_016VerifyGeneratorPortal_Passwordwithalphabets">
+                  </a> <!-- TC_016VerifyGeneratorPortal_Passwordwithalphabets -->
+                  <span class="method-name">TC_016VerifyGeneratorPortal_Passwordwithalphabets</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_017VerifyGeneratorPortal_Passwordwithnumbers">
+                  </a> <!-- TC_017VerifyGeneratorPortal_Passwordwithnumbers -->
+                  <span class="method-name">TC_017VerifyGeneratorPortal_Passwordwithnumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_018VerifyGeneratorPortal_Passwordwithspecialcharacters">
+                  </a> <!-- TC_018VerifyGeneratorPortal_Passwordwithspecialcharacters -->
+                  <span class="method-name">TC_018VerifyGeneratorPortal_Passwordwithspecialcharacters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_019VerifyGeneratorPortal_Passwordwithcombinationofchar">
+                  </a> <!-- TC_019VerifyGeneratorPortal_Passwordwithcombinationofchar -->
+                  <span class="method-name">TC_019VerifyGeneratorPortal_Passwordwithcombinationofchar</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_025VerifyGeneratorPortal_Passwordwithspaces">
+                  </a> <!-- TC_025VerifyGeneratorPortal_Passwordwithspaces -->
+                  <span class="method-name">TC_025VerifyGeneratorPortal_Passwordwithspaces</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_033VerifyGeneratorPortal_withValidpassword">
+                  </a> <!-- TC_033VerifyGeneratorPortal_withValidpassword -->
+                  <span class="method-name">TC_033VerifyGeneratorPortal_withValidpassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_035VerifyGeneratorPortal_PasswordwithVisibility">
+                  </a> <!-- TC_035VerifyGeneratorPortal_PasswordwithVisibility -->
+                  <span class="method-name">TC_035VerifyGeneratorPortal_PasswordwithVisibility</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_036VerifyGeneratorPortal_Forgotpasswordlink">
+                  </a> <!-- TC_036VerifyGeneratorPortal_Forgotpasswordlink -->
+                  <span class="method-name">TC_036VerifyGeneratorPortal_Forgotpasswordlink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_037VerifyGeneratorPortal_Forgotpasswordpage">
+                  </a> <!-- TC_037VerifyGeneratorPortal_Forgotpasswordpage -->
+                  <span class="method-name">TC_037VerifyGeneratorPortal_Forgotpasswordpage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_038VerifyGeneratorPortal_ForgotpasswordwithEmail">
+                  </a> <!-- TC_038VerifyGeneratorPortal_ForgotpasswordwithEmail -->
+                  <span class="method-name">TC_038VerifyGeneratorPortal_ForgotpasswordwithEmail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_039VerifyGeneratorPortal_ForgotpasswordwithValidemail">
+                  </a> <!-- TC_039VerifyGeneratorPortal_ForgotpasswordwithValidemail -->
+                  <span class="method-name">TC_039VerifyGeneratorPortal_ForgotpasswordwithValidemail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_040VerifyGeneratorPortal_ForgotPasswordwithInvalidemail">
+                  </a> <!-- TC_040VerifyGeneratorPortal_ForgotPasswordwithInvalidemail -->
+                  <span class="method-name">TC_040VerifyGeneratorPortal_ForgotPasswordwithInvalidemail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_041VerifyGeneratorPortal_SubmitButton">
+                  </a> <!-- TC_041VerifyGeneratorPortal_SubmitButton -->
+                  <span class="method-name">TC_041VerifyGeneratorPortal_SubmitButton</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_043VerifyGeneratorPortal_Backtologin">
+                  </a> <!-- TC_043VerifyGeneratorPortal_Backtologin -->
+                  <span class="method-name">TC_043VerifyGeneratorPortal_Backtologin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_045VerifyGenratorPortal_WelcomepageIncognitomode">
+                  </a> <!-- TC_045VerifyGenratorPortal_WelcomepageIncognitomode -->
+                  <span class="method-name">TC_045VerifyGenratorPortal_WelcomepageIncognitomode</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_046VerifyGeneratorPortal_HomepageIncognitmode">
+                  </a> <!-- TC_046VerifyGeneratorPortal_HomepageIncognitmode -->
+                  <span class="method-name">TC_046VerifyGeneratorPortal_HomepageIncognitmode</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_047VerifyGeneratorPortal_NewuserRegisrationButton">
+                  </a> <!-- TC_047VerifyGeneratorPortal_NewuserRegisrationButton -->
+                  <span class="method-name">TC_047VerifyGeneratorPortal_NewuserRegisrationButton</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_048VerifyGeneratorPortal_NewuserRegistration">
+                  </a> <!-- TC_048VerifyGeneratorPortal_NewuserRegistration -->
+                  <span class="method-name">TC_048VerifyGeneratorPortal_NewuserRegistration</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_049VerifyGeneratorPortal_UserRegistrationpage">
+                  </a> <!-- TC_049VerifyGeneratorPortal_UserRegistrationpage -->
+                  <span class="method-name">TC_049VerifyGeneratorPortal_UserRegistrationpage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_050VerifyGeneratorPortal_FirstnamewithAlphabets">
+                  </a> <!-- TC_050VerifyGeneratorPortal_FirstnamewithAlphabets -->
+                  <span class="method-name">TC_050VerifyGeneratorPortal_FirstnamewithAlphabets</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_051VerifyGeneratorPortal_FirstnamewithNumbers">
+                  </a> <!-- TC_051VerifyGeneratorPortal_FirstnamewithNumbers -->
+                  <span class="method-name">TC_051VerifyGeneratorPortal_FirstnamewithNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_052VerifyGeneratorPortal_FirstnameWithSpecialcharacters">
+                  </a> <!-- TC_052VerifyGeneratorPortal_FirstnameWithSpecialcharacters -->
+                  <span class="method-name">TC_052VerifyGeneratorPortal_FirstnameWithSpecialcharacters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_053VerifyGeneratorPortal_FirstnamewithcombinationofCharacters">
+                  </a> <!-- TC_053VerifyGeneratorPortal_FirstnamewithcombinationofCharacters -->
+                  <span class="method-name">TC_053VerifyGeneratorPortal_FirstnamewithcombinationofCharacters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_054VerifyGeneratorPortal_FirstnamewithvalidName">
+                  </a> <!-- TC_054VerifyGeneratorPortal_FirstnamewithvalidName -->
+                  <span class="method-name">TC_054VerifyGeneratorPortal_FirstnamewithvalidName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_055VerifyGeneratorPortal_FirstnamewithoutInput">
+                  </a> <!-- TC_055VerifyGeneratorPortal_FirstnamewithoutInput -->
+                  <span class="method-name">TC_055VerifyGeneratorPortal_FirstnamewithoutInput</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_056VerifyGenratorPortal_LastnamewithAlphabets">
+                  </a> <!-- TC_056VerifyGenratorPortal_LastnamewithAlphabets -->
+                  <span class="method-name">TC_056VerifyGenratorPortal_LastnamewithAlphabets</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_057VerifyGneratorPortal_LastnamewithNumbers">
+                  </a> <!-- TC_057VerifyGneratorPortal_LastnamewithNumbers -->
+                  <span class="method-name">TC_057VerifyGneratorPortal_LastnamewithNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_058VerifyGeneratorPortal_Lastnamewithspecialcharacters">
+                  </a> <!-- TC_058VerifyGeneratorPortal_Lastnamewithspecialcharacters -->
+                  <span class="method-name">TC_058VerifyGeneratorPortal_Lastnamewithspecialcharacters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_059VerifyGeneratorPortal_LastnamewithCombinationofChar">
+                  </a> <!-- TC_059VerifyGeneratorPortal_LastnamewithCombinationofChar -->
+                  <span class="method-name">TC_059VerifyGeneratorPortal_LastnamewithCombinationofChar</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_060VerifyGeneratorPortal_LastnamewithValidInput">
+                  </a> <!-- TC_060VerifyGeneratorPortal_LastnamewithValidInput -->
+                  <span class="method-name">TC_060VerifyGeneratorPortal_LastnamewithValidInput</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_061VerifyGeneratorPortal_LastnamewithoutInput">
+                  </a> <!-- TC_061VerifyGeneratorPortal_LastnamewithoutInput -->
+                  <span class="method-name">TC_061VerifyGeneratorPortal_LastnamewithoutInput</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_062VerifyGeneratorPortal_RegEmailwithAlphabets">
+                  </a> <!-- TC_062VerifyGeneratorPortal_RegEmailwithAlphabets -->
+                  <span class="method-name">TC_062VerifyGeneratorPortal_RegEmailwithAlphabets</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_063VerifyGeneratorPortal_RegEmailwithNumbers">
+                  </a> <!-- TC_063VerifyGeneratorPortal_RegEmailwithNumbers -->
+                  <span class="method-name">TC_063VerifyGeneratorPortal_RegEmailwithNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_064VerifyGeneratorPortal_RegEmailwithSpecialcharacters">
+                  </a> <!-- TC_064VerifyGeneratorPortal_RegEmailwithSpecialcharacters -->
+                  <span class="method-name">TC_064VerifyGeneratorPortal_RegEmailwithSpecialcharacters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_065VerifyGeneratorPortal_RegEmailwithoutInput">
+                  </a> <!-- TC_065VerifyGeneratorPortal_RegEmailwithoutInput -->
+                  <span class="method-name">TC_065VerifyGeneratorPortal_RegEmailwithoutInput</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_066VerifyGneratorPortal_RegEmailwithInvalidInput">
+                  </a> <!-- TC_066VerifyGneratorPortal_RegEmailwithInvalidInput -->
+                  <span class="method-name">TC_066VerifyGneratorPortal_RegEmailwithInvalidInput</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_068VerifyGeneratorPortal_PhonenumberwithAlphabets">
+                  </a> <!-- TC_068VerifyGeneratorPortal_PhonenumberwithAlphabets -->
+                  <span class="method-name">TC_068VerifyGeneratorPortal_PhonenumberwithAlphabets</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_069VerifyGeneratorPortal_PhonenumberwithNumbers">
+                  </a> <!-- TC_069VerifyGeneratorPortal_PhonenumberwithNumbers -->
+                  <span class="method-name">TC_069VerifyGeneratorPortal_PhonenumberwithNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_070VerifyGeneratorPortal_Phonenumberwithspecialcharacters">
+                  </a> <!-- TC_070VerifyGeneratorPortal_Phonenumberwithspecialcharacters -->
+                  <span class="method-name">TC_070VerifyGeneratorPortal_Phonenumberwithspecialcharacters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_071VerifyGeneratorPortal_PhonenumberwithMorethan10digits">
+                  </a> <!-- TC_071VerifyGeneratorPortal_PhonenumberwithMorethan10digits -->
+                  <span class="method-name">TC_071VerifyGeneratorPortal_PhonenumberwithMorethan10digits</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_072VerifyGeneratorPortal_PhonenumberwithShortInput">
+                  </a> <!-- TC_072VerifyGeneratorPortal_PhonenumberwithShortInput -->
+                  <span class="method-name">TC_072VerifyGeneratorPortal_PhonenumberwithShortInput</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_073VerifyGeneratorPortal_PhonenumberwithoutInput">
+                  </a> <!-- TC_073VerifyGeneratorPortal_PhonenumberwithoutInput -->
+                  <span class="method-name">TC_073VerifyGeneratorPortal_PhonenumberwithoutInput</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_074VerifyGeneratorPortal_CompanynamewithAlphabets">
+                  </a> <!-- TC_074VerifyGeneratorPortal_CompanynamewithAlphabets -->
+                  <span class="method-name">TC_074VerifyGeneratorPortal_CompanynamewithAlphabets</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_075VerifyGeneratorPortal_CompanynamewithNumbers">
+                  </a> <!-- TC_075VerifyGeneratorPortal_CompanynamewithNumbers -->
+                  <span class="method-name">TC_075VerifyGeneratorPortal_CompanynamewithNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_076VerifyGeneratorPortal_CompanynamewithSpecialcharacters">
+                  </a> <!-- TC_076VerifyGeneratorPortal_CompanynamewithSpecialcharacters -->
+                  <span class="method-name">TC_076VerifyGeneratorPortal_CompanynamewithSpecialcharacters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_077VerifyGeneratorPortal_CompanynamewithoutInput">
+                  </a> <!-- TC_077VerifyGeneratorPortal_CompanynamewithoutInput -->
+                  <span class="method-name">TC_077VerifyGeneratorPortal_CompanynamewithoutInput</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_078VerifyGeneratorPortal_SerivcelocationwithAlphabets">
+                  </a> <!-- TC_078VerifyGeneratorPortal_SerivcelocationwithAlphabets -->
+                  <span class="method-name">TC_078VerifyGeneratorPortal_SerivcelocationwithAlphabets</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_079VerifyGeneratorPortal_ServicelocationwithNumbers">
+                  </a> <!-- TC_079VerifyGeneratorPortal_ServicelocationwithNumbers -->
+                  <span class="method-name">TC_079VerifyGeneratorPortal_ServicelocationwithNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_080VerifyGeneratorPortal_ServicelocationwithSpecialcharacters">
+                  </a> <!-- TC_080VerifyGeneratorPortal_ServicelocationwithSpecialcharacters -->
+                  <span class="method-name">TC_080VerifyGeneratorPortal_ServicelocationwithSpecialcharacters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_081VerifyGeneratorPortal_SerivcelocationwihtoutInput">
+                  </a> <!-- TC_081VerifyGeneratorPortal_SerivcelocationwihtoutInput -->
+                  <span class="method-name">TC_081VerifyGeneratorPortal_SerivcelocationwihtoutInput</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_082VerifyGeneratorPortal_AccountnumberwithAlphabets">
+                  </a> <!-- TC_082VerifyGeneratorPortal_AccountnumberwithAlphabets -->
+                  <span class="method-name">TC_082VerifyGeneratorPortal_AccountnumberwithAlphabets</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_083VerifyGeneratorPortal_AccountnumberwithNumbers">
+                  </a> <!-- TC_083VerifyGeneratorPortal_AccountnumberwithNumbers -->
+                  <span class="method-name">TC_083VerifyGeneratorPortal_AccountnumberwithNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_084VeriyGeneratorPortal_AccountnumberwithSpecialcharacters">
+                  </a> <!-- TC_084VeriyGeneratorPortal_AccountnumberwithSpecialcharacters -->
+                  <span class="method-name">TC_084VeriyGeneratorPortal_AccountnumberwithSpecialcharacters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_085VerifyGeneratorPortal_AccountnumberwithoutInput">
+                  </a> <!-- TC_085VerifyGeneratorPortal_AccountnumberwithoutInput -->
+                  <span class="method-name">TC_085VerifyGeneratorPortal_AccountnumberwithoutInput</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_67VerifyGeneratorPortal_RegEmailwithValidInput">
+                  </a> <!-- TC_67VerifyGeneratorPortal_RegEmailwithValidInput -->
+                  <span class="method-name">TC_67VerifyGeneratorPortal_RegEmailwithValidInput</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+        </div> <!-- panel Default_suite -->
+        <div panel-name="test-xml-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\nagav\AppData\Local\Temp\testng-eclipse--807670914\testng-customsuite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;GeneratorPortal_login.GeneratorPortal_login&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;TC_010VerfiyGeneratorPortal_EmailwithCombinationCharacters&quot;/&gt;
+          &lt;include name=&quot;TC_048VerifyGeneratorPortal_NewuserRegistration&quot;/&gt;
+          &lt;include name=&quot;TC_036VerifyGeneratorPortal_Forgotpasswordlink&quot;/&gt;
+          &lt;include name=&quot;TC_013VerifyGeneratorPortal_EmailwithValidInput&quot;/&gt;
+          &lt;include name=&quot;TC_046VerifyGeneratorPortal_HomepageIncognitmode&quot;/&gt;
+          &lt;include name=&quot;TC_018VerifyGeneratorPortal_Passwordwithspecialcharacters&quot;/&gt;
+          &lt;include name=&quot;TC_002VerifyGeneratorportalloginisClickable&quot;/&gt;
+          &lt;include name=&quot;TC_076VerifyGeneratorPortal_CompanynamewithSpecialcharacters&quot;/&gt;
+          &lt;include name=&quot;TC_007VerifyGeneratorcontacts_EmailwithAlphabets&quot;/&gt;
+          &lt;include name=&quot;TC_033VerifyGeneratorPortal_withValidpassword&quot;/&gt;
+          &lt;include name=&quot;TC_004VerifyGeneratorContacts_welcomepage&quot;/&gt;
+          &lt;include name=&quot;TC_009VerifyGeneratorPortal_Emailwithspecialcharacters&quot;/&gt;
+          &lt;include name=&quot;TC_043VerifyGeneratorPortal_Backtologin&quot;/&gt;
+          &lt;include name=&quot;TC_011VerifyGeneratorPortal_EmailwithoutInput&quot;/&gt;
+          &lt;include name=&quot;TC_057VerifyGneratorPortal_LastnamewithNumbers&quot;/&gt;
+          &lt;include name=&quot;TC_041VerifyGeneratorPortal_SubmitButton&quot;/&gt;
+          &lt;include name=&quot;TC_012VerifyGeneratorPortal_EmailwithInvalidinput&quot;/&gt;
+          &lt;include name=&quot;TC_003Generatorportallogin_Newtab&quot;/&gt;
+          &lt;include name=&quot;TC_060VerifyGeneratorPortal_LastnamewithValidInput&quot;/&gt;
+          &lt;include name=&quot;TC_063VerifyGeneratorPortal_RegEmailwithNumbers&quot;/&gt;
+          &lt;include name=&quot;TC_062VerifyGeneratorPortal_RegEmailwithAlphabets&quot;/&gt;
+          &lt;include name=&quot;TC_066VerifyGneratorPortal_RegEmailwithInvalidInput&quot;/&gt;
+          &lt;include name=&quot;TC_005VerifyGeneratorPortal_textfields&quot;/&gt;
+          &lt;include name=&quot;TC_080VerifyGeneratorPortal_ServicelocationwithSpecialcharacters&quot;/&gt;
+          &lt;include name=&quot;TC_071VerifyGeneratorPortal_PhonenumberwithMorethan10digits&quot;/&gt;
+          &lt;include name=&quot;TC_008VerifyGeneratorPortal_EmailwithNumbers&quot;/&gt;
+          &lt;include name=&quot;TC_069VerifyGeneratorPortal_PhonenumberwithNumbers&quot;/&gt;
+          &lt;include name=&quot;TC_059VerifyGeneratorPortal_LastnamewithCombinationofChar&quot;/&gt;
+          &lt;include name=&quot;TC_077VerifyGeneratorPortal_CompanynamewithoutInput&quot;/&gt;
+          &lt;include name=&quot;TC_014VerifyGeneratorPortal_Passwordtextfield&quot;/&gt;
+          &lt;include name=&quot;TC_064VerifyGeneratorPortal_RegEmailwithSpecialcharacters&quot;/&gt;
+          &lt;include name=&quot;TC_055VerifyGeneratorPortal_FirstnamewithoutInput&quot;/&gt;
+          &lt;include name=&quot;TC_061VerifyGeneratorPortal_LastnamewithoutInput&quot;/&gt;
+          &lt;include name=&quot;TC_015VerifyGeneratorPortal_Passwordwithoutinput&quot;/&gt;
+          &lt;include name=&quot;TC_049VerifyGeneratorPortal_UserRegistrationpage&quot;/&gt;
+          &lt;include name=&quot;TC_065VerifyGeneratorPortal_RegEmailwithoutInput&quot;/&gt;
+          &lt;include name=&quot;TC_073VerifyGeneratorPortal_PhonenumberwithoutInput&quot;/&gt;
+          &lt;include name=&quot;TC_058VerifyGeneratorPortal_Lastnamewithspecialcharacters&quot;/&gt;
+          &lt;include name=&quot;TC_054VerifyGeneratorPortal_FirstnamewithvalidName&quot;/&gt;
+          &lt;include name=&quot;TC_053VerifyGeneratorPortal_FirstnamewithcombinationofCharacters&quot;/&gt;
+          &lt;include name=&quot;TC_025VerifyGeneratorPortal_Passwordwithspaces&quot;/&gt;
+          &lt;include name=&quot;TC_050VerifyGeneratorPortal_FirstnamewithAlphabets&quot;/&gt;
+          &lt;include name=&quot;TC_037VerifyGeneratorPortal_Forgotpasswordpage&quot;/&gt;
+          &lt;include name=&quot;TC_072VerifyGeneratorPortal_PhonenumberwithShortInput&quot;/&gt;
+          &lt;include name=&quot;TC_051VerifyGeneratorPortal_FirstnamewithNumbers&quot;/&gt;
+          &lt;include name=&quot;TC_079VerifyGeneratorPortal_ServicelocationwithNumbers&quot;/&gt;
+          &lt;include name=&quot;TC_086VerifyGeneatorPortal_Alreadyhaveanaccount&quot;/&gt;
+          &lt;include name=&quot;TC_085VerifyGeneratorPortal_AccountnumberwithoutInput&quot;/&gt;
+          &lt;include name=&quot;TC_068VerifyGeneratorPortal_PhonenumberwithAlphabets&quot;/&gt;
+          &lt;include name=&quot;TC_035VerifyGeneratorPortal_PasswordwithVisibility&quot;/&gt;
+          &lt;include name=&quot;TC_045VerifyGenratorPortal_WelcomepageIncognitomode&quot;/&gt;
+          &lt;include name=&quot;TC_017VerifyGeneratorPortal_Passwordwithnumbers&quot;/&gt;
+          &lt;include name=&quot;TC_084VeriyGeneratorPortal_AccountnumberwithSpecialcharacters&quot;/&gt;
+          &lt;include name=&quot;TC_67VerifyGeneratorPortal_RegEmailwithValidInput&quot;/&gt;
+          &lt;include name=&quot;TC_070VerifyGeneratorPortal_Phonenumberwithspecialcharacters&quot;/&gt;
+          &lt;include name=&quot;TC_052VerifyGeneratorPortal_FirstnameWithSpecialcharacters&quot;/&gt;
+          &lt;include name=&quot;TC_056VerifyGenratorPortal_LastnamewithAlphabets&quot;/&gt;
+          &lt;include name=&quot;TC_019VerifyGeneratorPortal_Passwordwithcombinationofchar&quot;/&gt;
+          &lt;include name=&quot;TC_082VerifyGeneratorPortal_AccountnumberwithAlphabets&quot;/&gt;
+          &lt;include name=&quot;TC_078VerifyGeneratorPortal_SerivcelocationwithAlphabets&quot;/&gt;
+          &lt;include name=&quot;TC_016VerifyGeneratorPortal_Passwordwithalphabets&quot;/&gt;
+          &lt;include name=&quot;TC_001VerifyGeneratorportalloginlink&quot;/&gt;
+          &lt;include name=&quot;TC_038VerifyGeneratorPortal_ForgotpasswordwithEmail&quot;/&gt;
+          &lt;include name=&quot;TC_006VerifyGeneratorPortal_URLlink&quot;/&gt;
+          &lt;include name=&quot;TC_047VerifyGeneratorPortal_NewuserRegisrationButton&quot;/&gt;
+          &lt;include name=&quot;TC_074VerifyGeneratorPortal_CompanynamewithAlphabets&quot;/&gt;
+          &lt;include name=&quot;TC_039VerifyGeneratorPortal_ForgotpasswordwithValidemail&quot;/&gt;
+          &lt;include name=&quot;TC_040VerifyGeneratorPortal_ForgotPasswordwithInvalidemail&quot;/&gt;
+          &lt;include name=&quot;TC_081VerifyGeneratorPortal_SerivcelocationwihtoutInput&quot;/&gt;
+          &lt;include name=&quot;TC_075VerifyGeneratorPortal_CompanynamewithNumbers&quot;/&gt;
+          &lt;include name=&quot;TC_083VerifyGeneratorPortal_AccountnumberwithNumbers&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- GeneratorPortal_login.GeneratorPortal_login --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Default test --&gt;
+&lt;/suite&gt; &lt;!-- Default suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Default test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Default_suite');
+function tableData_Default_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(71);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'TC_086VerifyGeneatorPortal_Alreadyhaveanaccount')
+data.setCell(0, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(0, 3, 30027);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TC_046VerifyGeneratorPortal_HomepageIncognitmode')
+data.setCell(1, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(1, 3, 14680);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TC_045VerifyGenratorPortal_WelcomepageIncognitomode')
+data.setCell(2, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(2, 3, 9750);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'TC_001VerifyGeneratorportalloginlink')
+data.setCell(3, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(3, 3, 6750);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'TC_003Generatorportallogin_Newtab')
+data.setCell(4, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(4, 3, 4510);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'TC_007VerifyGeneratorcontacts_EmailwithAlphabets')
+data.setCell(5, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(5, 3, 4058);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'TC_033VerifyGeneratorPortal_withValidpassword')
+data.setCell(6, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(6, 3, 2881);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'TC_002VerifyGeneratorportalloginisClickable')
+data.setCell(7, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(7, 3, 2377);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'TC_006VerifyGeneratorPortal_URLlink')
+data.setCell(8, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(8, 3, 2214);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'TC_012VerifyGeneratorPortal_EmailwithInvalidinput')
+data.setCell(9, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(9, 3, 1587);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'TC_066VerifyGneratorPortal_RegEmailwithInvalidInput')
+data.setCell(10, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(10, 3, 1498);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'TC_008VerifyGeneratorPortal_EmailwithNumbers')
+data.setCell(11, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(11, 3, 1293);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'TC_073VerifyGeneratorPortal_PhonenumberwithoutInput')
+data.setCell(12, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(12, 3, 1242);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'TC_67VerifyGeneratorPortal_RegEmailwithValidInput')
+data.setCell(13, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(13, 3, 1214);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'TC_013VerifyGeneratorPortal_EmailwithValidInput')
+data.setCell(14, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(14, 3, 1180);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'TC_009VerifyGeneratorPortal_Emailwithspecialcharacters')
+data.setCell(15, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(15, 3, 1151);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'TC_065VerifyGeneratorPortal_RegEmailwithoutInput')
+data.setCell(16, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(16, 3, 1059);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'TC_077VerifyGeneratorPortal_CompanynamewithoutInput')
+data.setCell(17, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(17, 3, 1049);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'TC_081VerifyGeneratorPortal_SerivcelocationwihtoutInput')
+data.setCell(18, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(18, 3, 1020);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'TC_010VerfiyGeneratorPortal_EmailwithCombinationCharacters')
+data.setCell(19, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(19, 3, 980);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'TC_083VerifyGeneratorPortal_AccountnumberwithNumbers')
+data.setCell(20, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(20, 3, 922);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'TC_017VerifyGeneratorPortal_Passwordwithnumbers')
+data.setCell(21, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(21, 3, 912);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'TC_039VerifyGeneratorPortal_ForgotpasswordwithValidemail')
+data.setCell(22, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(22, 3, 888);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'TC_016VerifyGeneratorPortal_Passwordwithalphabets')
+data.setCell(23, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(23, 3, 847);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'TC_040VerifyGeneratorPortal_ForgotPasswordwithInvalidemail')
+data.setCell(24, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(24, 3, 819);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'TC_025VerifyGeneratorPortal_Passwordwithspaces')
+data.setCell(25, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(25, 3, 776);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'TC_062VerifyGeneratorPortal_RegEmailwithAlphabets')
+data.setCell(26, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(26, 3, 773);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'TC_082VerifyGeneratorPortal_AccountnumberwithAlphabets')
+data.setCell(27, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(27, 3, 766);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'TC_050VerifyGeneratorPortal_FirstnamewithAlphabets')
+data.setCell(28, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(28, 3, 763);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'TC_084VeriyGeneratorPortal_AccountnumberwithSpecialcharacters')
+data.setCell(29, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(29, 3, 743);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'TC_018VerifyGeneratorPortal_Passwordwithspecialcharacters')
+data.setCell(30, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(30, 3, 739);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'TC_075VerifyGeneratorPortal_CompanynamewithNumbers')
+data.setCell(31, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(31, 3, 725);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'TC_079VerifyGeneratorPortal_ServicelocationwithNumbers')
+data.setCell(32, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(32, 3, 724);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'TC_074VerifyGeneratorPortal_CompanynamewithAlphabets')
+data.setCell(33, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(33, 3, 709);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'TC_019VerifyGeneratorPortal_Passwordwithcombinationofchar')
+data.setCell(34, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(34, 3, 696);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'TC_056VerifyGenratorPortal_LastnamewithAlphabets')
+data.setCell(35, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(35, 3, 695);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'TC_080VerifyGeneratorPortal_ServicelocationwithSpecialcharacters')
+data.setCell(36, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(36, 3, 677);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'TC_035VerifyGeneratorPortal_PasswordwithVisibility')
+data.setCell(37, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(37, 3, 675);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'TC_061VerifyGeneratorPortal_LastnamewithoutInput')
+data.setCell(38, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(38, 3, 673);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'TC_085VerifyGeneratorPortal_AccountnumberwithoutInput')
+data.setCell(39, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(39, 3, 663);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'TC_072VerifyGeneratorPortal_PhonenumberwithShortInput')
+data.setCell(40, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(40, 3, 640);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'TC_076VerifyGeneratorPortal_CompanynamewithSpecialcharacters')
+data.setCell(41, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(41, 3, 634);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'TC_064VerifyGeneratorPortal_RegEmailwithSpecialcharacters')
+data.setCell(42, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(42, 3, 631);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'TC_011VerifyGeneratorPortal_EmailwithoutInput')
+data.setCell(43, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(43, 3, 620);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'TC_063VerifyGeneratorPortal_RegEmailwithNumbers')
+data.setCell(44, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(44, 3, 609);
+data.setCell(45, 0, 45)
+data.setCell(45, 1, 'TC_068VerifyGeneratorPortal_PhonenumberwithAlphabets')
+data.setCell(45, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(45, 3, 576);
+data.setCell(46, 0, 46)
+data.setCell(46, 1, 'TC_054VerifyGeneratorPortal_FirstnamewithvalidName')
+data.setCell(46, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(46, 3, 576);
+data.setCell(47, 0, 47)
+data.setCell(47, 1, 'TC_052VerifyGeneratorPortal_FirstnameWithSpecialcharacters')
+data.setCell(47, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(47, 3, 574);
+data.setCell(48, 0, 48)
+data.setCell(48, 1, 'TC_057VerifyGneratorPortal_LastnamewithNumbers')
+data.setCell(48, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(48, 3, 573);
+data.setCell(49, 0, 49)
+data.setCell(49, 1, 'TC_078VerifyGeneratorPortal_SerivcelocationwithAlphabets')
+data.setCell(49, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(49, 3, 569);
+data.setCell(50, 0, 50)
+data.setCell(50, 1, 'TC_070VerifyGeneratorPortal_Phonenumberwithspecialcharacters')
+data.setCell(50, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(50, 3, 564);
+data.setCell(51, 0, 51)
+data.setCell(51, 1, 'TC_071VerifyGeneratorPortal_PhonenumberwithMorethan10digits')
+data.setCell(51, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(51, 3, 557);
+data.setCell(52, 0, 52)
+data.setCell(52, 1, 'TC_053VerifyGeneratorPortal_FirstnamewithcombinationofCharacters')
+data.setCell(52, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(52, 3, 551);
+data.setCell(53, 0, 53)
+data.setCell(53, 1, 'TC_051VerifyGeneratorPortal_FirstnamewithNumbers')
+data.setCell(53, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(53, 3, 550);
+data.setCell(54, 0, 54)
+data.setCell(54, 1, 'TC_059VerifyGeneratorPortal_LastnamewithCombinationofChar')
+data.setCell(54, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(54, 3, 542);
+data.setCell(55, 0, 55)
+data.setCell(55, 1, 'TC_060VerifyGeneratorPortal_LastnamewithValidInput')
+data.setCell(55, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(55, 3, 535);
+data.setCell(56, 0, 56)
+data.setCell(56, 1, 'TC_058VerifyGeneratorPortal_Lastnamewithspecialcharacters')
+data.setCell(56, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(56, 3, 521);
+data.setCell(57, 0, 57)
+data.setCell(57, 1, 'TC_069VerifyGeneratorPortal_PhonenumberwithNumbers')
+data.setCell(57, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(57, 3, 520);
+data.setCell(58, 0, 58)
+data.setCell(58, 1, 'TC_055VerifyGeneratorPortal_FirstnamewithoutInput')
+data.setCell(58, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(58, 3, 461);
+data.setCell(59, 0, 59)
+data.setCell(59, 1, 'TC_015VerifyGeneratorPortal_Passwordwithoutinput')
+data.setCell(59, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(59, 3, 412);
+data.setCell(60, 0, 60)
+data.setCell(60, 1, 'TC_036VerifyGeneratorPortal_Forgotpasswordlink')
+data.setCell(60, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(60, 3, 353);
+data.setCell(61, 0, 61)
+data.setCell(61, 1, 'TC_048VerifyGeneratorPortal_NewuserRegistration')
+data.setCell(61, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(61, 3, 267);
+data.setCell(62, 0, 62)
+data.setCell(62, 1, 'TC_043VerifyGeneratorPortal_Backtologin')
+data.setCell(62, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(62, 3, 250);
+data.setCell(63, 0, 63)
+data.setCell(63, 1, 'TC_005VerifyGeneratorPortal_textfields')
+data.setCell(63, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(63, 3, 194);
+data.setCell(64, 0, 64)
+data.setCell(64, 1, 'TC_004VerifyGeneratorContacts_welcomepage')
+data.setCell(64, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(64, 3, 94);
+data.setCell(65, 0, 65)
+data.setCell(65, 1, 'TC_041VerifyGeneratorPortal_SubmitButton')
+data.setCell(65, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(65, 3, 75);
+data.setCell(66, 0, 66)
+data.setCell(66, 1, 'TC_014VerifyGeneratorPortal_Passwordtextfield')
+data.setCell(66, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(66, 3, 74);
+data.setCell(67, 0, 67)
+data.setCell(67, 1, 'TC_038VerifyGeneratorPortal_ForgotpasswordwithEmail')
+data.setCell(67, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(67, 3, 66);
+data.setCell(68, 0, 68)
+data.setCell(68, 1, 'TC_047VerifyGeneratorPortal_NewuserRegisrationButton')
+data.setCell(68, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(68, 3, 65);
+data.setCell(69, 0, 69)
+data.setCell(69, 1, 'TC_037VerifyGeneratorPortal_Forgotpasswordpage')
+data.setCell(69, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(69, 3, 58);
+data.setCell(70, 0, 70)
+data.setCell(70, 1, 'TC_049VerifyGeneratorPortal_UserRegistrationpage')
+data.setCell(70, 2, 'GeneratorPortal_login.GeneratorPortal_login')
+data.setCell(70, 3, 45);
+window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-Default_suite">
+              </div> <!-- times-div-Default_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">GeneratorPortal_login.GeneratorPortal_login</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">Bc</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">30794 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_001VerifyGeneratorportalloginlink</span>
+                <span class="method-start">30801 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">37565 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">39588 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_002VerifyGeneratorportalloginisClickable</span>
+                <span class="method-start">39594 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">41974 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_003Generatorportallogin_Newtab</span>
+                <span class="method-start">43984 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">43984 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">48501 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">50511 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_004VerifyGeneratorContacts_welcomepage</span>
+                <span class="method-start">50514 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">50611 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">52627 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_005VerifyGeneratorPortal_textfields</span>
+                <span class="method-start">52634 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">52835 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_006VerifyGeneratorPortal_URLlink</span>
+                <span class="method-start">54844 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">54844 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">57060 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">59084 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_007VerifyGeneratorcontacts_EmailwithAlphabets</span>
+                <span class="method-start">59086 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">63156 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_008VerifyGeneratorPortal_EmailwithNumbers</span>
+                <span class="method-start">65171 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">65171 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">66468 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">68480 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_009VerifyGeneratorPortal_Emailwithspecialcharacters</span>
+                <span class="method-start">68484 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">69635 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">71654 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_010VerfiyGeneratorPortal_EmailwithCombinationCharacters</span>
+                <span class="method-start">71656 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">72641 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">74655 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_011VerifyGeneratorPortal_EmailwithoutInput</span>
+                <span class="method-start">74661 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">75287 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">77295 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_012VerifyGeneratorPortal_EmailwithInvalidinput</span>
+                <span class="method-start">77295 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">78894 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">80911 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_013VerifyGeneratorPortal_EmailwithValidInput</span>
+                <span class="method-start">80918 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">82113 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_014VerifyGeneratorPortal_Passwordtextfield</span>
+                <span class="method-start">84124 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">84124 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">84198 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_015VerifyGeneratorPortal_Passwordwithoutinput</span>
+                <span class="method-start">86206 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">86206 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">86624 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_016VerifyGeneratorPortal_Passwordwithalphabets</span>
+                <span class="method-start">88634 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">88634 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">89485 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">91504 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_017VerifyGeneratorPortal_Passwordwithnumbers</span>
+                <span class="method-start">91507 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">92428 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">94435 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_018VerifyGeneratorPortal_Passwordwithspecialcharacters</span>
+                <span class="method-start">94435 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">95181 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">97188 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_019VerifyGeneratorPortal_Passwordwithcombinationofchar</span>
+                <span class="method-start">97190 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">97891 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_025VerifyGeneratorPortal_Passwordwithspaces</span>
+                <span class="method-start">99899 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">99899 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">100682 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">102691 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_033VerifyGeneratorPortal_withValidpassword</span>
+                <span class="method-start">102694 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">105597 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_035VerifyGeneratorPortal_PasswordwithVisibility</span>
+                <span class="method-start">107611 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">107611 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">108286 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">110298 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_036VerifyGeneratorPortal_Forgotpasswordlink</span>
+                <span class="method-start">110298 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">110654 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">112658 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_037VerifyGeneratorPortal_Forgotpasswordpage</span>
+                <span class="method-start">112661 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">112721 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_038VerifyGeneratorPortal_ForgotpasswordwithEmail</span>
+                <span class="method-start">114728 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">114728 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">114794 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">116806 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_039VerifyGeneratorPortal_ForgotpasswordwithValidemail</span>
+                <span class="method-start">116806 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">117694 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">119704 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_040VerifyGeneratorPortal_ForgotPasswordwithInvalidemail</span>
+                <span class="method-start">119704 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">120526 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_041VerifyGeneratorPortal_SubmitButton</span>
+                <span class="method-start">122536 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">122536 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">122614 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">124632 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_043VerifyGeneratorPortal_Backtologin</span>
+                <span class="method-start">124634 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">124888 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">126892 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_045VerifyGenratorPortal_WelcomepageIncognitomode</span>
+                <span class="method-start">126894 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">136651 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">138668 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_046VerifyGeneratorPortal_HomepageIncognitmode</span>
+                <span class="method-start">138672 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">153356 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">155361 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_047VerifyGeneratorPortal_NewuserRegisrationButton</span>
+                <span class="method-start">155361 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">155428 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">157436 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_048VerifyGeneratorPortal_NewuserRegistration</span>
+                <span class="method-start">157437 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">157706 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_049VerifyGeneratorPortal_UserRegistrationpage</span>
+                <span class="method-start">159711 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">159711 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">159757 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">161773 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_050VerifyGeneratorPortal_FirstnamewithAlphabets</span>
+                <span class="method-start">161774 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">162537 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">164554 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_051VerifyGeneratorPortal_FirstnamewithNumbers</span>
+                <span class="method-start">164554 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">165104 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_052VerifyGeneratorPortal_FirstnameWithSpecialcharacters</span>
+                <span class="method-start">167121 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">167121 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">167695 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">169712 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_053VerifyGeneratorPortal_FirstnamewithcombinationofCharacters</span>
+                <span class="method-start">169712 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">170264 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">172272 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_054VerifyGeneratorPortal_FirstnamewithvalidName</span>
+                <span class="method-start">172272 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">172848 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_055VerifyGeneratorPortal_FirstnamewithoutInput</span>
+                <span class="method-start">174859 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">174859 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">175324 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">177337 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_056VerifyGenratorPortal_LastnamewithAlphabets</span>
+                <span class="method-start">177341 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">178040 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">180049 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_057VerifyGneratorPortal_LastnamewithNumbers</span>
+                <span class="method-start">180051 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">180628 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">182637 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_058VerifyGeneratorPortal_Lastnamewithspecialcharacters</span>
+                <span class="method-start">182641 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">183164 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">185184 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_059VerifyGeneratorPortal_LastnamewithCombinationofChar</span>
+                <span class="method-start">185184 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">185728 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_060VerifyGeneratorPortal_LastnamewithValidInput</span>
+                <span class="method-start">187755 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">187755 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">188292 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_061VerifyGeneratorPortal_LastnamewithoutInput</span>
+                <span class="method-start">190296 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">190296 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">190974 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_062VerifyGeneratorPortal_RegEmailwithAlphabets</span>
+                <span class="method-start">192981 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">192981 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">193754 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">195774 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_063VerifyGeneratorPortal_RegEmailwithNumbers</span>
+                <span class="method-start">195777 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">196388 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">198399 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_064VerifyGeneratorPortal_RegEmailwithSpecialcharacters</span>
+                <span class="method-start">198399 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">199031 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">201035 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_065VerifyGeneratorPortal_RegEmailwithoutInput</span>
+                <span class="method-start">201035 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">202106 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">204115 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_066VerifyGneratorPortal_RegEmailwithInvalidInput</span>
+                <span class="method-start">204121 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">205626 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_67VerifyGeneratorPortal_RegEmailwithValidInput</span>
+                <span class="method-start">207651 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">207651 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">208868 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_068VerifyGeneratorPortal_PhonenumberwithAlphabets</span>
+                <span class="method-start">210874 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">210874 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">211454 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_069VerifyGeneratorPortal_PhonenumberwithNumbers</span>
+                <span class="method-start">213474 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">213474 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">213998 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">216004 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_070VerifyGeneratorPortal_Phonenumberwithspecialcharacters</span>
+                <span class="method-start">216004 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">216571 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">218581 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_071VerifyGeneratorPortal_PhonenumberwithMorethan10digits</span>
+                <span class="method-start">218584 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">219144 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">221165 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_072VerifyGeneratorPortal_PhonenumberwithShortInput</span>
+                <span class="method-start">221165 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">221809 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">223819 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_073VerifyGeneratorPortal_PhonenumberwithoutInput</span>
+                <span class="method-start">223819 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">225078 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_074VerifyGeneratorPortal_CompanynamewithAlphabets</span>
+                <span class="method-start">227086 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">227086 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">227799 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_075VerifyGeneratorPortal_CompanynamewithNumbers</span>
+                <span class="method-start">229809 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">229809 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">230538 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_076VerifyGeneratorPortal_CompanynamewithSpecialcharacters</span>
+                <span class="method-start">232544 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">232544 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">233181 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_077VerifyGeneratorPortal_CompanynamewithoutInput</span>
+                <span class="method-start">235185 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">235185 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">236234 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">238249 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_078VerifyGeneratorPortal_SerivcelocationwithAlphabets</span>
+                <span class="method-start">238251 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">238822 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">240838 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_079VerifyGeneratorPortal_ServicelocationwithNumbers</span>
+                <span class="method-start">240840 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">241588 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">243604 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_080VerifyGeneratorPortal_ServicelocationwithSpecialcharacters</span>
+                <span class="method-start">243604 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">244284 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">246294 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_081VerifyGeneratorPortal_SerivcelocationwihtoutInput</span>
+                <span class="method-start">246294 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">247314 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_082VerifyGeneratorPortal_AccountnumberwithAlphabets</span>
+                <span class="method-start">249331 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">249331 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">250104 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_083VerifyGeneratorPortal_AccountnumberwithNumbers</span>
+                <span class="method-start">252124 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">252124 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">253046 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_084VeriyGeneratorPortal_AccountnumberwithSpecialcharacters</span>
+                <span class="method-start">255058 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">255058 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">255805 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_085VerifyGeneratorPortal_AccountnumberwithoutInput</span>
+                <span class="method-start">257825 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">257825 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">258505 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Bm</span>
+                <span class="method-start">260514 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_086VerifyGeneatorPortal_Alreadyhaveanaccount</span>
+                <span class="method-start">260514 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Am</span>
+                <span class="method-start">290801 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">Ac</span>
+                <span class="method-start">292814 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

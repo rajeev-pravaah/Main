@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="OctoRouteAssignmentFlowTc.TC_041SelectserviceDuration"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_064ServiceScheduleName"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_071TempuraryServiceInstruction"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_055DeliveryNoteWithValidData"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_061AutosaveGeneratorServiceInstruction"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_058accesscode"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_047Addroute"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_066ServicedateMatch"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_042ScopeofworkasperServiceType"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_043NoofContainersIncrese_anddecrese"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_051AddMoresrevices"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_080DeliverySummary"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_044RequirePictureCheckbox"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_054GenSerInstructionwithoutInput"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_070RoteInfoMatch"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_076CopyServiceDateToclipBoard"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_074CancelService"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_050UpdateButton"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_079ServiceSummaryTable"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_045nextServices"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_073cancelBtnpresent"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_068HighPriorityForAll"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_057LOCtextAreaFieldwithValidInpu"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_048EstablishedDate"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_060SaveServiceInstructions"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_062EditgeneratorServiceInstruction"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_078ServiceHistoryReportDetails"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_059ServiceInstruction"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_056ServiceInstructionTextAreaField"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_072ServicetypeInschedule"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_065ServiceTypename"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_053GeneratorServiceInstruction"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_077ServiceHistoryName"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_049Removeservice"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_046Next6servicewithofficehours"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_067PriorityFirPerticularService"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_081"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_075ReinitiateCancelService"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

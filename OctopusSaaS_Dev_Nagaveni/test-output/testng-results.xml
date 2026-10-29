@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="71" passed="70" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-10-27T20:31:34 IST" name="Default suite" finished-at="2026-10-27T20:36:31 IST" duration-ms="296897">
+    <groups>
+    </groups>
+    <test started-at="2026-10-27T20:31:34 IST" name="Default test" finished-at="2026-10-27T20:36:31 IST" duration-ms="296897">
+      <class name="GeneratorPortal_login.GeneratorPortal_login">
+        <test-method is-config="true" signature="Bc()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:31:34 IST" name="Bc" finished-at="2026-10-27T20:32:05 IST" duration-ms="30736" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bc -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:05 IST" name="Bm" finished-at="2026-10-27T20:32:05 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_001VerifyGeneratorportalloginlink()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:05 IST" name="TC_001VerifyGeneratorportalloginlink" finished-at="2026-10-27T20:32:12 IST" duration-ms="6750" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_001VerifyGeneratorportalloginlink -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:12 IST" name="Am" finished-at="2026-10-27T20:32:14 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:14 IST" name="Bm" finished-at="2026-10-27T20:32:14 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_002VerifyGeneratorportalloginisClickable()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:14 IST" name="TC_002VerifyGeneratorportalloginisClickable" finished-at="2026-10-27T20:32:16 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_001VerifyGeneratorportalloginlink" duration-ms="2377" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_002VerifyGeneratorportalloginisClickable -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:16 IST" name="Am" finished-at="2026-10-27T20:32:18 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_003Generatorportallogin_Newtab()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:18 IST" name="TC_003Generatorportallogin_Newtab" finished-at="2026-10-27T20:32:22 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_002VerifyGeneratorportalloginisClickable" duration-ms="4510" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_003Generatorportallogin_Newtab -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:18 IST" name="Bm" finished-at="2026-10-27T20:32:18 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:22 IST" name="Am" finished-at="2026-10-27T20:32:24 IST" duration-ms="2008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:24 IST" name="Bm" finished-at="2026-10-27T20:32:25 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_004VerifyGeneratorContacts_welcomepage()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:25 IST" name="TC_004VerifyGeneratorContacts_welcomepage" finished-at="2026-10-27T20:32:25 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_003Generatorportallogin_Newtab" duration-ms="94" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_004VerifyGeneratorContacts_welcomepage -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:25 IST" name="Am" finished-at="2026-10-27T20:32:27 IST" duration-ms="2016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:27 IST" name="Bm" finished-at="2026-10-27T20:32:27 IST" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_005VerifyGeneratorPortal_textfields()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:27 IST" name="TC_005VerifyGeneratorPortal_textfields" finished-at="2026-10-27T20:32:27 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_004VerifyGeneratorContacts_welcomepage" duration-ms="194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_005VerifyGeneratorPortal_textfields -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:27 IST" name="Am" finished-at="2026-10-27T20:32:29 IST" duration-ms="2005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_006VerifyGeneratorPortal_URLlink()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:29 IST" name="TC_006VerifyGeneratorPortal_URLlink" finished-at="2026-10-27T20:32:31 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_005VerifyGeneratorPortal_textfields" duration-ms="2214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_006VerifyGeneratorPortal_URLlink -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:29 IST" name="Bm" finished-at="2026-10-27T20:32:29 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:31 IST" name="Am" finished-at="2026-10-27T20:32:33 IST" duration-ms="2018" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:33 IST" name="Bm" finished-at="2026-10-27T20:32:33 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_007VerifyGeneratorcontacts_EmailwithAlphabets()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:33 IST" name="TC_007VerifyGeneratorcontacts_EmailwithAlphabets" finished-at="2026-10-27T20:32:37 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_006VerifyGeneratorPortal_URLlink" duration-ms="4058" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_007VerifyGeneratorcontacts_EmailwithAlphabets -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:37 IST" name="Am" finished-at="2026-10-27T20:32:39 IST" duration-ms="2012" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_008VerifyGeneratorPortal_EmailwithNumbers()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:39 IST" name="TC_008VerifyGeneratorPortal_EmailwithNumbers" finished-at="2026-10-27T20:32:40 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_007VerifyGeneratorcontacts_EmailwithAlphabets" duration-ms="1293" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_008VerifyGeneratorPortal_EmailwithNumbers -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:39 IST" name="Bm" finished-at="2026-10-27T20:32:39 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:40 IST" name="Am" finished-at="2026-10-27T20:32:42 IST" duration-ms="2012" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:42 IST" name="Bm" finished-at="2026-10-27T20:32:42 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_009VerifyGeneratorPortal_Emailwithspecialcharacters()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:42 IST" name="TC_009VerifyGeneratorPortal_Emailwithspecialcharacters" finished-at="2026-10-27T20:32:44 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_008VerifyGeneratorPortal_EmailwithNumbers" duration-ms="1151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_009VerifyGeneratorPortal_Emailwithspecialcharacters -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:44 IST" name="Am" finished-at="2026-10-27T20:32:46 IST" duration-ms="2016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:46 IST" name="Bm" finished-at="2026-10-27T20:32:46 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_010VerfiyGeneratorPortal_EmailwithCombinationCharacters()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:46 IST" name="TC_010VerfiyGeneratorPortal_EmailwithCombinationCharacters" finished-at="2026-10-27T20:32:47 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_009VerifyGeneratorPortal_Emailwithspecialcharacters" duration-ms="980" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_010VerfiyGeneratorPortal_EmailwithCombinationCharacters -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:47 IST" name="Am" finished-at="2026-10-27T20:32:49 IST" duration-ms="2012" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:49 IST" name="Bm" finished-at="2026-10-27T20:32:49 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_011VerifyGeneratorPortal_EmailwithoutInput()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:49 IST" name="TC_011VerifyGeneratorPortal_EmailwithoutInput" finished-at="2026-10-27T20:32:49 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_010VerfiyGeneratorPortal_EmailwithCombinationCharacters" duration-ms="620" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_011VerifyGeneratorPortal_EmailwithoutInput -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:49 IST" name="Am" finished-at="2026-10-27T20:32:51 IST" duration-ms="2008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_012VerifyGeneratorPortal_EmailwithInvalidinput()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:51 IST" name="TC_012VerifyGeneratorPortal_EmailwithInvalidinput" finished-at="2026-10-27T20:32:53 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_011VerifyGeneratorPortal_EmailwithoutInput" duration-ms="1587" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_012VerifyGeneratorPortal_EmailwithInvalidinput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:51 IST" name="Bm" finished-at="2026-10-27T20:32:51 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:53 IST" name="Am" finished-at="2026-10-27T20:32:55 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:55 IST" name="Bm" finished-at="2026-10-27T20:32:55 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_013VerifyGeneratorPortal_EmailwithValidInput()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:55 IST" name="TC_013VerifyGeneratorPortal_EmailwithValidInput" finished-at="2026-10-27T20:32:56 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_012VerifyGeneratorPortal_EmailwithInvalidinput" duration-ms="1180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_013VerifyGeneratorPortal_EmailwithValidInput -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:56 IST" name="Am" finished-at="2026-10-27T20:32:58 IST" duration-ms="2011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_014VerifyGeneratorPortal_Passwordtextfield()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:58 IST" name="TC_014VerifyGeneratorPortal_Passwordtextfield" finished-at="2026-10-27T20:32:58 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_013VerifyGeneratorPortal_EmailwithValidInput" duration-ms="74" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_014VerifyGeneratorPortal_Passwordtextfield -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:58 IST" name="Bm" finished-at="2026-10-27T20:32:58 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:32:58 IST" name="Am" finished-at="2026-10-27T20:33:00 IST" duration-ms="2008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_015VerifyGeneratorPortal_Passwordwithoutinput()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:00 IST" name="TC_015VerifyGeneratorPortal_Passwordwithoutinput" finished-at="2026-10-27T20:33:01 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_014VerifyGeneratorPortal_Passwordtextfield" duration-ms="412" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_015VerifyGeneratorPortal_Passwordwithoutinput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:00 IST" name="Bm" finished-at="2026-10-27T20:33:00 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:01 IST" name="Am" finished-at="2026-10-27T20:33:03 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_016VerifyGeneratorPortal_Passwordwithalphabets()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:03 IST" name="TC_016VerifyGeneratorPortal_Passwordwithalphabets" finished-at="2026-10-27T20:33:03 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_015VerifyGeneratorPortal_Passwordwithoutinput" duration-ms="847" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_016VerifyGeneratorPortal_Passwordwithalphabets -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:03 IST" name="Bm" finished-at="2026-10-27T20:33:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:03 IST" name="Am" finished-at="2026-10-27T20:33:05 IST" duration-ms="2016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:05 IST" name="Bm" finished-at="2026-10-27T20:33:05 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_017VerifyGeneratorPortal_Passwordwithnumbers()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:05 IST" name="TC_017VerifyGeneratorPortal_Passwordwithnumbers" finished-at="2026-10-27T20:33:06 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_016VerifyGeneratorPortal_Passwordwithalphabets" duration-ms="912" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_017VerifyGeneratorPortal_Passwordwithnumbers -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:06 IST" name="Am" finished-at="2026-10-27T20:33:08 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_018VerifyGeneratorPortal_Passwordwithspecialcharacters()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:08 IST" name="TC_018VerifyGeneratorPortal_Passwordwithspecialcharacters" finished-at="2026-10-27T20:33:09 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_017VerifyGeneratorPortal_Passwordwithnumbers" duration-ms="739" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_018VerifyGeneratorPortal_Passwordwithspecialcharacters -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:08 IST" name="Bm" finished-at="2026-10-27T20:33:08 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:09 IST" name="Am" finished-at="2026-10-27T20:33:11 IST" duration-ms="2002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:11 IST" name="Bm" finished-at="2026-10-27T20:33:11 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_019VerifyGeneratorPortal_Passwordwithcombinationofchar()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:11 IST" name="TC_019VerifyGeneratorPortal_Passwordwithcombinationofchar" finished-at="2026-10-27T20:33:12 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_018VerifyGeneratorPortal_Passwordwithspecialcharacters" duration-ms="696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_019VerifyGeneratorPortal_Passwordwithcombinationofchar -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:12 IST" name="Am" finished-at="2026-10-27T20:33:14 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_025VerifyGeneratorPortal_Passwordwithspaces()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:14 IST" name="TC_025VerifyGeneratorPortal_Passwordwithspaces" finished-at="2026-10-27T20:33:15 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_019VerifyGeneratorPortal_Passwordwithcombinationofchar" duration-ms="776" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_025VerifyGeneratorPortal_Passwordwithspaces -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:14 IST" name="Bm" finished-at="2026-10-27T20:33:14 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:15 IST" name="Am" finished-at="2026-10-27T20:33:17 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:17 IST" name="Bm" finished-at="2026-10-27T20:33:17 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_033VerifyGeneratorPortal_withValidpassword()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:17 IST" name="TC_033VerifyGeneratorPortal_withValidpassword" finished-at="2026-10-27T20:33:20 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_025VerifyGeneratorPortal_Passwordwithspaces" duration-ms="2881" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_033VerifyGeneratorPortal_withValidpassword -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:20 IST" name="Am" finished-at="2026-10-27T20:33:22 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_035VerifyGeneratorPortal_PasswordwithVisibility()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:22 IST" name="TC_035VerifyGeneratorPortal_PasswordwithVisibility" finished-at="2026-10-27T20:33:22 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_033VerifyGeneratorPortal_withValidpassword" duration-ms="675" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_035VerifyGeneratorPortal_PasswordwithVisibility -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:22 IST" name="Bm" finished-at="2026-10-27T20:33:22 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:22 IST" name="Am" finished-at="2026-10-27T20:33:24 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_036VerifyGeneratorPortal_Forgotpasswordlink()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:24 IST" name="TC_036VerifyGeneratorPortal_Forgotpasswordlink" finished-at="2026-10-27T20:33:25 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_035VerifyGeneratorPortal_PasswordwithVisibility" duration-ms="353" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_036VerifyGeneratorPortal_Forgotpasswordlink -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:24 IST" name="Bm" finished-at="2026-10-27T20:33:24 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:25 IST" name="Am" finished-at="2026-10-27T20:33:27 IST" duration-ms="2004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:27 IST" name="Bm" finished-at="2026-10-27T20:33:27 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_037VerifyGeneratorPortal_Forgotpasswordpage()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:27 IST" name="TC_037VerifyGeneratorPortal_Forgotpasswordpage" finished-at="2026-10-27T20:33:27 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_036VerifyGeneratorPortal_Forgotpasswordlink" duration-ms="58" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_037VerifyGeneratorPortal_Forgotpasswordpage -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:27 IST" name="Am" finished-at="2026-10-27T20:33:29 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_038VerifyGeneratorPortal_ForgotpasswordwithEmail()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:29 IST" name="TC_038VerifyGeneratorPortal_ForgotpasswordwithEmail" finished-at="2026-10-27T20:33:29 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_037VerifyGeneratorPortal_Forgotpasswordpage" duration-ms="66" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_038VerifyGeneratorPortal_ForgotpasswordwithEmail -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:29 IST" name="Bm" finished-at="2026-10-27T20:33:29 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:29 IST" name="Am" finished-at="2026-10-27T20:33:31 IST" duration-ms="2010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_039VerifyGeneratorPortal_ForgotpasswordwithValidemail()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:31 IST" name="TC_039VerifyGeneratorPortal_ForgotpasswordwithValidemail" finished-at="2026-10-27T20:33:32 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_038VerifyGeneratorPortal_ForgotpasswordwithEmail" duration-ms="888" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_039VerifyGeneratorPortal_ForgotpasswordwithValidemail -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:31 IST" name="Bm" finished-at="2026-10-27T20:33:31 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:32 IST" name="Am" finished-at="2026-10-27T20:33:34 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_040VerifyGeneratorPortal_ForgotPasswordwithInvalidemail()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:34 IST" name="TC_040VerifyGeneratorPortal_ForgotPasswordwithInvalidemail" finished-at="2026-10-27T20:33:35 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_039VerifyGeneratorPortal_ForgotpasswordwithValidemail" duration-ms="819" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_040VerifyGeneratorPortal_ForgotPasswordwithInvalidemail -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:34 IST" name="Bm" finished-at="2026-10-27T20:33:34 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:35 IST" name="Am" finished-at="2026-10-27T20:33:37 IST" duration-ms="2010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_041VerifyGeneratorPortal_SubmitButton()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:37 IST" name="TC_041VerifyGeneratorPortal_SubmitButton" finished-at="2026-10-27T20:33:37 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_040VerifyGeneratorPortal_ForgotPasswordwithInvalidemail" duration-ms="75" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_041VerifyGeneratorPortal_SubmitButton -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:37 IST" name="Bm" finished-at="2026-10-27T20:33:37 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:37 IST" name="Am" finished-at="2026-10-27T20:33:39 IST" duration-ms="2018" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:39 IST" name="Bm" finished-at="2026-10-27T20:33:39 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_043VerifyGeneratorPortal_Backtologin()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:39 IST" name="TC_043VerifyGeneratorPortal_Backtologin" finished-at="2026-10-27T20:33:39 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_041VerifyGeneratorPortal_SubmitButton" duration-ms="250" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_043VerifyGeneratorPortal_Backtologin -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:39 IST" name="Am" finished-at="2026-10-27T20:33:41 IST" duration-ms="2004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:41 IST" name="Bm" finished-at="2026-10-27T20:33:41 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_045VerifyGenratorPortal_WelcomepageIncognitomode()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:41 IST" name="TC_045VerifyGenratorPortal_WelcomepageIncognitomode" finished-at="2026-10-27T20:33:51 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_043VerifyGeneratorPortal_Backtologin" duration-ms="9750" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_045VerifyGenratorPortal_WelcomepageIncognitomode -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:51 IST" name="Am" finished-at="2026-10-27T20:33:53 IST" duration-ms="2017" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:53 IST" name="Bm" finished-at="2026-10-27T20:33:53 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_046VerifyGeneratorPortal_HomepageIncognitmode()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:33:53 IST" name="TC_046VerifyGeneratorPortal_HomepageIncognitmode" finished-at="2026-10-27T20:34:07 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_045VerifyGenratorPortal_WelcomepageIncognitomode" duration-ms="14680" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_046VerifyGeneratorPortal_HomepageIncognitmode -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:07 IST" name="Am" finished-at="2026-10-27T20:34:09 IST" duration-ms="2002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_047VerifyGeneratorPortal_NewuserRegisrationButton()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:09 IST" name="TC_047VerifyGeneratorPortal_NewuserRegisrationButton" finished-at="2026-10-27T20:34:09 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_046VerifyGeneratorPortal_HomepageIncognitmode" duration-ms="65" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_047VerifyGeneratorPortal_NewuserRegisrationButton -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:09 IST" name="Bm" finished-at="2026-10-27T20:34:09 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:09 IST" name="Am" finished-at="2026-10-27T20:34:11 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:11 IST" name="Bm" finished-at="2026-10-27T20:34:11 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_048VerifyGeneratorPortal_NewuserRegistration()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:11 IST" name="TC_048VerifyGeneratorPortal_NewuserRegistration" finished-at="2026-10-27T20:34:12 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_047VerifyGeneratorPortal_NewuserRegisrationButton" duration-ms="267" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_048VerifyGeneratorPortal_NewuserRegistration -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:12 IST" name="Am" finished-at="2026-10-27T20:34:14 IST" duration-ms="2005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_049VerifyGeneratorPortal_UserRegistrationpage()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:14 IST" name="TC_049VerifyGeneratorPortal_UserRegistrationpage" finished-at="2026-10-27T20:34:14 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_048VerifyGeneratorPortal_NewuserRegistration" duration-ms="45" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_049VerifyGeneratorPortal_UserRegistrationpage -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:14 IST" name="Bm" finished-at="2026-10-27T20:34:14 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:14 IST" name="Am" finished-at="2026-10-27T20:34:16 IST" duration-ms="2014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:16 IST" name="Bm" finished-at="2026-10-27T20:34:16 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_050VerifyGeneratorPortal_FirstnamewithAlphabets()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:16 IST" name="TC_050VerifyGeneratorPortal_FirstnamewithAlphabets" finished-at="2026-10-27T20:34:17 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_049VerifyGeneratorPortal_UserRegistrationpage" duration-ms="763" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_050VerifyGeneratorPortal_FirstnamewithAlphabets -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:17 IST" name="Am" finished-at="2026-10-27T20:34:19 IST" duration-ms="2017" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_051VerifyGeneratorPortal_FirstnamewithNumbers()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:19 IST" name="TC_051VerifyGeneratorPortal_FirstnamewithNumbers" finished-at="2026-10-27T20:34:19 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_050VerifyGeneratorPortal_FirstnamewithAlphabets" duration-ms="550" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_051VerifyGeneratorPortal_FirstnamewithNumbers -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:19 IST" name="Bm" finished-at="2026-10-27T20:34:19 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:19 IST" name="Am" finished-at="2026-10-27T20:34:21 IST" duration-ms="2013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_052VerifyGeneratorPortal_FirstnameWithSpecialcharacters()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:21 IST" name="TC_052VerifyGeneratorPortal_FirstnameWithSpecialcharacters" finished-at="2026-10-27T20:34:22 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_051VerifyGeneratorPortal_FirstnamewithNumbers" duration-ms="574" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_052VerifyGeneratorPortal_FirstnameWithSpecialcharacters -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:21 IST" name="Bm" finished-at="2026-10-27T20:34:21 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:22 IST" name="Am" finished-at="2026-10-27T20:34:24 IST" duration-ms="2015" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_053VerifyGeneratorPortal_FirstnamewithcombinationofCharacters()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:24 IST" name="TC_053VerifyGeneratorPortal_FirstnamewithcombinationofCharacters" finished-at="2026-10-27T20:34:24 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_052VerifyGeneratorPortal_FirstnameWithSpecialcharacters" duration-ms="551" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_053VerifyGeneratorPortal_FirstnamewithcombinationofCharacters -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:24 IST" name="Bm" finished-at="2026-10-27T20:34:24 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:24 IST" name="Am" finished-at="2026-10-27T20:34:26 IST" duration-ms="2006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_054VerifyGeneratorPortal_FirstnamewithvalidName()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:26 IST" name="TC_054VerifyGeneratorPortal_FirstnamewithvalidName" finished-at="2026-10-27T20:34:27 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_053VerifyGeneratorPortal_FirstnamewithcombinationofCharacters" duration-ms="576" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_054VerifyGeneratorPortal_FirstnamewithvalidName -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:26 IST" name="Bm" finished-at="2026-10-27T20:34:26 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:27 IST" name="Am" finished-at="2026-10-27T20:34:29 IST" duration-ms="2011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_055VerifyGeneratorPortal_FirstnamewithoutInput()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:29 IST" name="TC_055VerifyGeneratorPortal_FirstnamewithoutInput" finished-at="2026-10-27T20:34:29 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_054VerifyGeneratorPortal_FirstnamewithvalidName" duration-ms="461" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_055VerifyGeneratorPortal_FirstnamewithoutInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:29 IST" name="Bm" finished-at="2026-10-27T20:34:29 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:29 IST" name="Am" finished-at="2026-10-27T20:34:31 IST" duration-ms="2006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:31 IST" name="Bm" finished-at="2026-10-27T20:34:31 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_056VerifyGenratorPortal_LastnamewithAlphabets()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:31 IST" name="TC_056VerifyGenratorPortal_LastnamewithAlphabets" finished-at="2026-10-27T20:34:32 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_055VerifyGeneratorPortal_FirstnamewithoutInput" duration-ms="695" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_056VerifyGenratorPortal_LastnamewithAlphabets -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:32 IST" name="Am" finished-at="2026-10-27T20:34:34 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:34 IST" name="Bm" finished-at="2026-10-27T20:34:34 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_057VerifyGneratorPortal_LastnamewithNumbers()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:34 IST" name="TC_057VerifyGneratorPortal_LastnamewithNumbers" finished-at="2026-10-27T20:34:35 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_056VerifyGenratorPortal_LastnamewithAlphabets" duration-ms="573" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_057VerifyGneratorPortal_LastnamewithNumbers -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:35 IST" name="Am" finished-at="2026-10-27T20:34:37 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:37 IST" name="Bm" finished-at="2026-10-27T20:34:37 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_058VerifyGeneratorPortal_Lastnamewithspecialcharacters()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:37 IST" name="TC_058VerifyGeneratorPortal_Lastnamewithspecialcharacters" finished-at="2026-10-27T20:34:37 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_057VerifyGneratorPortal_LastnamewithNumbers" duration-ms="521" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_058VerifyGeneratorPortal_Lastnamewithspecialcharacters -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:37 IST" name="Am" finished-at="2026-10-27T20:34:39 IST" duration-ms="2017" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_059VerifyGeneratorPortal_LastnamewithCombinationofChar()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:39 IST" name="TC_059VerifyGeneratorPortal_LastnamewithCombinationofChar" finished-at="2026-10-27T20:34:40 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_058VerifyGeneratorPortal_Lastnamewithspecialcharacters" duration-ms="542" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_059VerifyGeneratorPortal_LastnamewithCombinationofChar -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:39 IST" name="Bm" finished-at="2026-10-27T20:34:39 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:40 IST" name="Am" finished-at="2026-10-27T20:34:42 IST" duration-ms="2022" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_060VerifyGeneratorPortal_LastnamewithValidInput()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:42 IST" name="TC_060VerifyGeneratorPortal_LastnamewithValidInput" finished-at="2026-10-27T20:34:42 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_059VerifyGeneratorPortal_LastnamewithCombinationofChar" duration-ms="535" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_060VerifyGeneratorPortal_LastnamewithValidInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:42 IST" name="Bm" finished-at="2026-10-27T20:34:42 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:42 IST" name="Am" finished-at="2026-10-27T20:34:44 IST" duration-ms="2004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_061VerifyGeneratorPortal_LastnamewithoutInput()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:44 IST" name="TC_061VerifyGeneratorPortal_LastnamewithoutInput" finished-at="2026-10-27T20:34:45 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_060VerifyGeneratorPortal_LastnamewithValidInput" duration-ms="673" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_061VerifyGeneratorPortal_LastnamewithoutInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:44 IST" name="Bm" finished-at="2026-10-27T20:34:44 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:45 IST" name="Am" finished-at="2026-10-27T20:34:47 IST" duration-ms="2006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_062VerifyGeneratorPortal_RegEmailwithAlphabets()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:47 IST" name="TC_062VerifyGeneratorPortal_RegEmailwithAlphabets" finished-at="2026-10-27T20:34:48 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_061VerifyGeneratorPortal_LastnamewithoutInput" duration-ms="773" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_062VerifyGeneratorPortal_RegEmailwithAlphabets -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:47 IST" name="Bm" finished-at="2026-10-27T20:34:47 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:48 IST" name="Am" finished-at="2026-10-27T20:34:50 IST" duration-ms="2017" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:50 IST" name="Bm" finished-at="2026-10-27T20:34:50 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_063VerifyGeneratorPortal_RegEmailwithNumbers()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:50 IST" name="TC_063VerifyGeneratorPortal_RegEmailwithNumbers" finished-at="2026-10-27T20:34:50 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_062VerifyGeneratorPortal_RegEmailwithAlphabets" duration-ms="609" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_063VerifyGeneratorPortal_RegEmailwithNumbers -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:50 IST" name="Am" finished-at="2026-10-27T20:34:52 IST" duration-ms="2008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_064VerifyGeneratorPortal_RegEmailwithSpecialcharacters()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:52 IST" name="TC_064VerifyGeneratorPortal_RegEmailwithSpecialcharacters" finished-at="2026-10-27T20:34:53 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_063VerifyGeneratorPortal_RegEmailwithNumbers" duration-ms="631" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_064VerifyGeneratorPortal_RegEmailwithSpecialcharacters -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:52 IST" name="Bm" finished-at="2026-10-27T20:34:52 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:53 IST" name="Am" finished-at="2026-10-27T20:34:55 IST" duration-ms="2004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_065VerifyGeneratorPortal_RegEmailwithoutInput()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:55 IST" name="TC_065VerifyGeneratorPortal_RegEmailwithoutInput" finished-at="2026-10-27T20:34:56 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_064VerifyGeneratorPortal_RegEmailwithSpecialcharacters" duration-ms="1059" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_065VerifyGeneratorPortal_RegEmailwithoutInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:55 IST" name="Bm" finished-at="2026-10-27T20:34:55 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:56 IST" name="Am" finished-at="2026-10-27T20:34:58 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:58 IST" name="Bm" finished-at="2026-10-27T20:34:58 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_066VerifyGneratorPortal_RegEmailwithInvalidInput()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:34:58 IST" name="TC_066VerifyGneratorPortal_RegEmailwithInvalidInput" finished-at="2026-10-27T20:35:00 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_065VerifyGeneratorPortal_RegEmailwithoutInput" duration-ms="1498" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_066VerifyGneratorPortal_RegEmailwithInvalidInput -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:00 IST" name="Am" finished-at="2026-10-27T20:35:02 IST" duration-ms="2020" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_67VerifyGeneratorPortal_RegEmailwithValidInput()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:02 IST" name="TC_67VerifyGeneratorPortal_RegEmailwithValidInput" finished-at="2026-10-27T20:35:03 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_066VerifyGneratorPortal_RegEmailwithInvalidInput" duration-ms="1214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_67VerifyGeneratorPortal_RegEmailwithValidInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:02 IST" name="Bm" finished-at="2026-10-27T20:35:02 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:03 IST" name="Am" finished-at="2026-10-27T20:35:05 IST" duration-ms="2005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_068VerifyGeneratorPortal_PhonenumberwithAlphabets()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:05 IST" name="TC_068VerifyGeneratorPortal_PhonenumberwithAlphabets" finished-at="2026-10-27T20:35:05 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_67VerifyGeneratorPortal_RegEmailwithValidInput" duration-ms="576" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_068VerifyGeneratorPortal_PhonenumberwithAlphabets -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:05 IST" name="Bm" finished-at="2026-10-27T20:35:05 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:05 IST" name="Am" finished-at="2026-10-27T20:35:07 IST" duration-ms="2019" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_069VerifyGeneratorPortal_PhonenumberwithNumbers()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:07 IST" name="TC_069VerifyGeneratorPortal_PhonenumberwithNumbers" finished-at="2026-10-27T20:35:08 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_068VerifyGeneratorPortal_PhonenumberwithAlphabets" duration-ms="520" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_069VerifyGeneratorPortal_PhonenumberwithNumbers -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:07 IST" name="Bm" finished-at="2026-10-27T20:35:07 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:08 IST" name="Am" finished-at="2026-10-27T20:35:10 IST" duration-ms="2006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_070VerifyGeneratorPortal_Phonenumberwithspecialcharacters()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:10 IST" name="TC_070VerifyGeneratorPortal_Phonenumberwithspecialcharacters" finished-at="2026-10-27T20:35:11 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_069VerifyGeneratorPortal_PhonenumberwithNumbers" duration-ms="564" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_070VerifyGeneratorPortal_Phonenumberwithspecialcharacters -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:10 IST" name="Bm" finished-at="2026-10-27T20:35:10 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:11 IST" name="Am" finished-at="2026-10-27T20:35:13 IST" duration-ms="2010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:13 IST" name="Bm" finished-at="2026-10-27T20:35:13 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_071VerifyGeneratorPortal_PhonenumberwithMorethan10digits()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:13 IST" name="TC_071VerifyGeneratorPortal_PhonenumberwithMorethan10digits" finished-at="2026-10-27T20:35:13 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_070VerifyGeneratorPortal_Phonenumberwithspecialcharacters" duration-ms="557" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_071VerifyGeneratorPortal_PhonenumberwithMorethan10digits -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:13 IST" name="Am" finished-at="2026-10-27T20:35:15 IST" duration-ms="2021" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_072VerifyGeneratorPortal_PhonenumberwithShortInput()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:15 IST" name="TC_072VerifyGeneratorPortal_PhonenumberwithShortInput" finished-at="2026-10-27T20:35:16 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_071VerifyGeneratorPortal_PhonenumberwithMorethan10digits" duration-ms="640" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_072VerifyGeneratorPortal_PhonenumberwithShortInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:15 IST" name="Bm" finished-at="2026-10-27T20:35:15 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:16 IST" name="Am" finished-at="2026-10-27T20:35:18 IST" duration-ms="2010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_073VerifyGeneratorPortal_PhonenumberwithoutInput()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:18 IST" name="TC_073VerifyGeneratorPortal_PhonenumberwithoutInput" finished-at="2026-10-27T20:35:19 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_072VerifyGeneratorPortal_PhonenumberwithShortInput" duration-ms="1242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_073VerifyGeneratorPortal_PhonenumberwithoutInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:18 IST" name="Bm" finished-at="2026-10-27T20:35:18 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:19 IST" name="Am" finished-at="2026-10-27T20:35:21 IST" duration-ms="2008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_074VerifyGeneratorPortal_CompanynamewithAlphabets()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:21 IST" name="TC_074VerifyGeneratorPortal_CompanynamewithAlphabets" finished-at="2026-10-27T20:35:22 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_073VerifyGeneratorPortal_PhonenumberwithoutInput" duration-ms="709" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_074VerifyGeneratorPortal_CompanynamewithAlphabets -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:21 IST" name="Bm" finished-at="2026-10-27T20:35:21 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:22 IST" name="Am" finished-at="2026-10-27T20:35:24 IST" duration-ms="2009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_075VerifyGeneratorPortal_CompanynamewithNumbers()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:24 IST" name="TC_075VerifyGeneratorPortal_CompanynamewithNumbers" finished-at="2026-10-27T20:35:25 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_074VerifyGeneratorPortal_CompanynamewithAlphabets" duration-ms="725" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_075VerifyGeneratorPortal_CompanynamewithNumbers -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:24 IST" name="Bm" finished-at="2026-10-27T20:35:24 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:25 IST" name="Am" finished-at="2026-10-27T20:35:27 IST" duration-ms="2005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_076VerifyGeneratorPortal_CompanynamewithSpecialcharacters()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:27 IST" name="TC_076VerifyGeneratorPortal_CompanynamewithSpecialcharacters" finished-at="2026-10-27T20:35:27 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_075VerifyGeneratorPortal_CompanynamewithNumbers" duration-ms="634" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_076VerifyGeneratorPortal_CompanynamewithSpecialcharacters -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:27 IST" name="Bm" finished-at="2026-10-27T20:35:27 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:27 IST" name="Am" finished-at="2026-10-27T20:35:29 IST" duration-ms="2004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_077VerifyGeneratorPortal_CompanynamewithoutInput()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:29 IST" name="TC_077VerifyGeneratorPortal_CompanynamewithoutInput" finished-at="2026-10-27T20:35:30 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_076VerifyGeneratorPortal_CompanynamewithSpecialcharacters" duration-ms="1049" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_077VerifyGeneratorPortal_CompanynamewithoutInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:29 IST" name="Bm" finished-at="2026-10-27T20:35:29 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:30 IST" name="Am" finished-at="2026-10-27T20:35:32 IST" duration-ms="2015" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:32 IST" name="Bm" finished-at="2026-10-27T20:35:32 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_078VerifyGeneratorPortal_SerivcelocationwithAlphabets()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:32 IST" name="TC_078VerifyGeneratorPortal_SerivcelocationwithAlphabets" finished-at="2026-10-27T20:35:33 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_077VerifyGeneratorPortal_CompanynamewithoutInput" duration-ms="569" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_078VerifyGeneratorPortal_SerivcelocationwithAlphabets -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:33 IST" name="Am" finished-at="2026-10-27T20:35:35 IST" duration-ms="2015" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:35 IST" name="Bm" finished-at="2026-10-27T20:35:35 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_079VerifyGeneratorPortal_ServicelocationwithNumbers()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:35 IST" name="TC_079VerifyGeneratorPortal_ServicelocationwithNumbers" finished-at="2026-10-27T20:35:36 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_078VerifyGeneratorPortal_SerivcelocationwithAlphabets" duration-ms="724" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_079VerifyGeneratorPortal_ServicelocationwithNumbers -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:36 IST" name="Am" finished-at="2026-10-27T20:35:38 IST" duration-ms="2015" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_080VerifyGeneratorPortal_ServicelocationwithSpecialcharacters()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:38 IST" name="TC_080VerifyGeneratorPortal_ServicelocationwithSpecialcharacters" finished-at="2026-10-27T20:35:38 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_079VerifyGeneratorPortal_ServicelocationwithNumbers" duration-ms="677" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_080VerifyGeneratorPortal_ServicelocationwithSpecialcharacters -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:38 IST" name="Bm" finished-at="2026-10-27T20:35:38 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:38 IST" name="Am" finished-at="2026-10-27T20:35:40 IST" duration-ms="2010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_081VerifyGeneratorPortal_SerivcelocationwihtoutInput()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:40 IST" name="TC_081VerifyGeneratorPortal_SerivcelocationwihtoutInput" finished-at="2026-10-27T20:35:41 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_080VerifyGeneratorPortal_ServicelocationwithSpecialcharacters" duration-ms="1020" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_081VerifyGeneratorPortal_SerivcelocationwihtoutInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:40 IST" name="Bm" finished-at="2026-10-27T20:35:40 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:41 IST" name="Am" finished-at="2026-10-27T20:35:43 IST" duration-ms="2015" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_082VerifyGeneratorPortal_AccountnumberwithAlphabets()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:43 IST" name="TC_082VerifyGeneratorPortal_AccountnumberwithAlphabets" finished-at="2026-10-27T20:35:44 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_081VerifyGeneratorPortal_SerivcelocationwihtoutInput" duration-ms="766" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_082VerifyGeneratorPortal_AccountnumberwithAlphabets -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:43 IST" name="Bm" finished-at="2026-10-27T20:35:43 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:44 IST" name="Am" finished-at="2026-10-27T20:35:46 IST" duration-ms="2018" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_083VerifyGeneratorPortal_AccountnumberwithNumbers()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:46 IST" name="TC_083VerifyGeneratorPortal_AccountnumberwithNumbers" finished-at="2026-10-27T20:35:47 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_082VerifyGeneratorPortal_AccountnumberwithAlphabets" duration-ms="922" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_083VerifyGeneratorPortal_AccountnumberwithNumbers -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:46 IST" name="Bm" finished-at="2026-10-27T20:35:46 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:47 IST" name="Am" finished-at="2026-10-27T20:35:49 IST" duration-ms="2011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_084VeriyGeneratorPortal_AccountnumberwithSpecialcharacters()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:49 IST" name="TC_084VeriyGeneratorPortal_AccountnumberwithSpecialcharacters" finished-at="2026-10-27T20:35:50 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_083VerifyGeneratorPortal_AccountnumberwithNumbers" duration-ms="743" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_084VeriyGeneratorPortal_AccountnumberwithSpecialcharacters -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:49 IST" name="Bm" finished-at="2026-10-27T20:35:49 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:50 IST" name="Am" finished-at="2026-10-27T20:35:52 IST" duration-ms="2020" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_085VerifyGeneratorPortal_AccountnumberwithoutInput()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:52 IST" name="TC_085VerifyGeneratorPortal_AccountnumberwithoutInput" finished-at="2026-10-27T20:35:52 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_084VeriyGeneratorPortal_AccountnumberwithSpecialcharacters" duration-ms="663" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_085VerifyGeneratorPortal_AccountnumberwithoutInput -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:52 IST" name="Bm" finished-at="2026-10-27T20:35:52 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:52 IST" name="Am" finished-at="2026-10-27T20:35:55 IST" duration-ms="2008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method signature="TC_086VerifyGeneatorPortal_Alreadyhaveanaccount()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:55 IST" name="TC_086VerifyGeneatorPortal_Alreadyhaveanaccount" finished-at="2026-10-27T20:36:25 IST" depends-on-methods="GeneratorPortal_login.GeneratorPortal_login.TC_085VerifyGeneratorPortal_AccountnumberwithoutInput" duration-ms="30027" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains (text(),'Already have an account? Login')]"}
+  (Session info: chrome=155.0.8059.86)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3363650c4b1c69d8873653623d71f84f, findElement {value=//div[contains (text(),'Already have an account? Login')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.86, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\nagav\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50868}, goog:processID: 31592, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50868/devtoo..., se:cdpVersion: 155.0.8059.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3363650c4b1c69d8873653623d71f84f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains (text(),'Already have an account? Login')]"}
+  (Session info: chrome=155.0.8059.86)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3363650c4b1c69d8873653623d71f84f, findElement {value=//div[contains (text(),'Already have an account? Login')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.86, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\nagav\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50868}, goog:processID: 31592, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50868/devtoo..., se:cdpVersion: 155.0.8059.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3363650c4b1c69d8873653623d71f84f
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+at GeneratorPortal_login.GeneratorPortal_login.TC_086VerifyGeneatorPortal_Alreadyhaveanaccount(GeneratorPortal_login.java:1065)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_086VerifyGeneatorPortal_Alreadyhaveanaccount -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:35:55 IST" name="Bm" finished-at="2026-10-27T20:35:55 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:36:25 IST" name="Am" finished-at="2026-10-27T20:36:27 IST" duration-ms="2012" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Ac()[pri:0, instance:GeneratorPortal_login.GeneratorPortal_login@247bddad]" started-at="2026-10-27T20:36:27 IST" name="Ac" finished-at="2026-10-27T20:36:31 IST" duration-ms="4025" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Ac -->
+      </class> <!-- GeneratorPortal_login.GeneratorPortal_login -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

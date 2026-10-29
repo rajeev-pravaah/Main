@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="OctoRouteAssignmentFlowTc.TC_037Anchordate"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_14SSRtextfields"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_005"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_13SSRbtn"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_004"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_007"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_036Weekdaydropdown"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_006"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_009"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_008"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_020ListofNameinSubcontractor"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_033AddServiceallFields"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_034Routedropdown"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_035ServiceFrequencydropdown"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_010"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_001"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_012MapwithotherLocation"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_011"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_003"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_019subcontarctorfromDubcontractordd"/>
+      <class name="OctoRouteAssignmentFlowTc.TC_002"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
