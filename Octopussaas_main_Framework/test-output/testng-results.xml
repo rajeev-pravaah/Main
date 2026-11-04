@@ -2,712 +2,712 @@
 <testng-results ignored="0" total="58" passed="58" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-10-30T18:10:47 IST" name="Default suite" finished-at="2026-10-30T18:15:21 IST" duration-ms="274039">
+  <suite started-at="2026-11-04T15:05:42 IST" name="Default suite" finished-at="2026-11-04T15:10:49 IST" duration-ms="306973">
     <groups>
     </groups>
-    <test started-at="2026-10-30T18:10:47 IST" name="Default test" finished-at="2026-10-30T18:15:21 IST" duration-ms="274039">
+    <test started-at="2026-11-04T15:05:42 IST" name="Default test" finished-at="2026-11-04T15:10:49 IST" duration-ms="306973">
       <class name="GeneratorPricBook.Generator_priceBook_AllTC">
-        <test-method is-config="true" signature="Bc()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:10:47 IST" name="Bc" finished-at="2026-10-30T18:11:12 IST" duration-ms="24956" status="PASS">
+        <test-method is-config="true" signature="Bc()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:05:42 IST" name="Bc" finished-at="2026-11-04T15:06:09 IST" duration-ms="26642" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bc -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:12 IST" name="Bm" finished-at="2026-10-30T18:11:12 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:09 IST" name="Bm" finished-at="2026-11-04T15:06:09 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method signature="TC_001verifyMenuButtonFromGeneratorPri()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:12 IST" name="TC_001verifyMenuButtonFromGeneratorPri" finished-at="2026-10-30T18:11:22 IST" duration-ms="9815" status="PASS">
+        <test-method signature="TC_001verifyMenuButtonFromGeneratorPri()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:09 IST" name="TC_001verifyMenuButtonFromGeneratorPri" finished-at="2026-11-04T15:06:20 IST" duration-ms="11088" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_001verifyMenuButtonFromGeneratorPri -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:22 IST" name="Am" finished-at="2026-10-30T18:11:24 IST" duration-ms="2008" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:20 IST" name="Am" finished-at="2026-11-04T15:06:22 IST" duration-ms="2010" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_002verifyScopofWorkButtonIsPresent()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:24 IST" name="TC_002verifyScopofWorkButtonIsPresent" finished-at="2026-10-30T18:11:24 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_001verifyMenuButtonFromGeneratorPri" duration-ms="13" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:22 IST" name="Bm" finished-at="2026-11-04T15:06:22 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_002verifyScopofWorkButtonIsPresent()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:22 IST" name="TC_002verifyScopofWorkButtonIsPresent" finished-at="2026-11-04T15:06:22 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_001verifyMenuButtonFromGeneratorPri" duration-ms="36" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_002verifyScopofWorkButtonIsPresent -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:24 IST" name="Bm" finished-at="2026-10-30T18:11:24 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:24 IST" name="Am" finished-at="2026-10-30T18:11:26 IST" duration-ms="2003" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:22 IST" name="Am" finished-at="2026-11-04T15:06:24 IST" duration-ms="2009" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_003verifySOwbuttonIsClickableandOpensPopUp()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:26 IST" name="TC_003verifySOwbuttonIsClickableandOpensPopUp" finished-at="2026-10-30T18:11:28 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_002verifyScopofWorkButtonIsPresent" duration-ms="2106" status="PASS">
+        <test-method signature="TC_003verifySOwbuttonIsClickableandOpensPopUp()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:24 IST" name="TC_003verifySOwbuttonIsClickableandOpensPopUp" finished-at="2026-11-04T15:06:26 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_002verifyScopofWorkButtonIsPresent" duration-ms="2265" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_003verifySOwbuttonIsClickableandOpensPopUp -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:26 IST" name="Bm" finished-at="2026-10-30T18:11:26 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:24 IST" name="Bm" finished-at="2026-11-04T15:06:24 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:28 IST" name="Am" finished-at="2026-10-30T18:11:30 IST" duration-ms="2016" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:26 IST" name="Am" finished-at="2026-11-04T15:06:28 IST" duration-ms="2012" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_004verifyFlatMonthlychargeOption()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:30 IST" name="TC_004verifyFlatMonthlychargeOption" finished-at="2026-10-30T18:11:30 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_003verifySOwbuttonIsClickableandOpensPopUp" duration-ms="26" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:28 IST" name="Bm" finished-at="2026-11-04T15:06:28 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_004verifyFlatMonthlychargeOption()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:28 IST" name="TC_004verifyFlatMonthlychargeOption" finished-at="2026-11-04T15:06:29 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_003verifySOwbuttonIsClickableandOpensPopUp" duration-ms="54" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_004verifyFlatMonthlychargeOption -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:30 IST" name="Bm" finished-at="2026-10-30T18:11:30 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:30 IST" name="Am" finished-at="2026-10-30T18:11:32 IST" duration-ms="2004" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:29 IST" name="Am" finished-at="2026-11-04T15:06:31 IST" duration-ms="2003" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_005verifyViewToggleButtonandEnabledandDisabledOption()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:32 IST" name="TC_005verifyViewToggleButtonandEnabledandDisabledOption" finished-at="2026-10-30T18:11:32 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_004verifyFlatMonthlychargeOption" duration-ms="174" status="PASS">
+        <test-method signature="TC_005verifyViewToggleButtonandEnabledandDisabledOption()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:31 IST" name="TC_005verifyViewToggleButtonandEnabledandDisabledOption" finished-at="2026-11-04T15:06:31 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_004verifyFlatMonthlychargeOption" duration-ms="619" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_005verifyViewToggleButtonandEnabledandDisabledOption -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:32 IST" name="Bm" finished-at="2026-10-30T18:11:32 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:31 IST" name="Bm" finished-at="2026-11-04T15:06:31 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:32 IST" name="Am" finished-at="2026-10-30T18:11:34 IST" duration-ms="2014" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:31 IST" name="Am" finished-at="2026-11-04T15:06:33 IST" duration-ms="2003" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_006verifyInactiveToggleButtonandEnabledandDisabledOption()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:34 IST" name="TC_006verifyInactiveToggleButtonandEnabledandDisabledOption" finished-at="2026-10-30T18:11:34 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_005verifyViewToggleButtonandEnabledandDisabledOption" duration-ms="115" status="PASS">
+        <test-method signature="TC_006verifyInactiveToggleButtonandEnabledandDisabledOption()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:33 IST" name="TC_006verifyInactiveToggleButtonandEnabledandDisabledOption" finished-at="2026-11-04T15:06:34 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_005verifyViewToggleButtonandEnabledandDisabledOption" duration-ms="343" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_006verifyInactiveToggleButtonandEnabledandDisabledOption -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:34 IST" name="Bm" finished-at="2026-10-30T18:11:34 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:33 IST" name="Bm" finished-at="2026-11-04T15:06:33 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:34 IST" name="Am" finished-at="2026-10-30T18:11:36 IST" duration-ms="2014" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:34 IST" name="Am" finished-at="2026-11-04T15:06:36 IST" duration-ms="2002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:36 IST" name="Bm" finished-at="2026-10-30T18:11:36 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:36 IST" name="Bm" finished-at="2026-11-04T15:06:36 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method signature="TC_007verifySelectedTemplateDropdown_DefaultValue_options_AbleToSeeTheDifferntTemplate()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:36 IST" name="TC_007verifySelectedTemplateDropdown_DefaultValue_options_AbleToSeeTheDifferntTemplate" finished-at="2026-10-30T18:11:41 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_006verifyInactiveToggleButtonandEnabledandDisabledOption" duration-ms="5232" status="PASS">
+        <test-method signature="TC_007verifySelectedTemplateDropdown_DefaultValue_options_AbleToSeeTheDifferntTemplate()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:36 IST" name="TC_007verifySelectedTemplateDropdown_DefaultValue_options_AbleToSeeTheDifferntTemplate" finished-at="2026-11-04T15:06:48 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_006verifyInactiveToggleButtonandEnabledandDisabledOption" duration-ms="12983" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_007verifySelectedTemplateDropdown_DefaultValue_options_AbleToSeeTheDifferntTemplate -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:41 IST" name="Am" finished-at="2026-10-30T18:11:43 IST" duration-ms="2013" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:48 IST" name="Am" finished-at="2026-11-04T15:06:50 IST" duration-ms="2001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_008verifyUserIsAbleApplyDifferentTemplate()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:43 IST" name="TC_008verifyUserIsAbleApplyDifferentTemplate" finished-at="2026-10-30T18:11:45 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_007verifySelectedTemplateDropdown_DefaultValue_options_AbleToSeeTheDifferntTemplate" duration-ms="1221" status="PASS">
+        <test-method signature="TC_008verifyUserIsAbleApplyDifferentTemplate()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:51 IST" name="TC_008verifyUserIsAbleApplyDifferentTemplate" finished-at="2026-11-04T15:06:52 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_007verifySelectedTemplateDropdown_DefaultValue_options_AbleToSeeTheDifferntTemplate" duration-ms="1674" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_008verifyUserIsAbleApplyDifferentTemplate -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:43 IST" name="Bm" finished-at="2026-10-30T18:11:43 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:51 IST" name="Bm" finished-at="2026-11-04T15:06:51 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:45 IST" name="Am" finished-at="2026-10-30T18:11:47 IST" duration-ms="2008" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:52 IST" name="Am" finished-at="2026-11-04T15:06:54 IST" duration-ms="2001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_009verifyServiceisDisplayedUnderTags()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:47 IST" name="TC_009verifyServiceisDisplayedUnderTags" finished-at="2026-10-30T18:11:47 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_008verifyUserIsAbleApplyDifferentTemplate" duration-ms="21" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:54 IST" name="Bm" finished-at="2026-11-04T15:06:54 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_009verifyServiceisDisplayedUnderTags()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:54 IST" name="TC_009verifyServiceisDisplayedUnderTags" finished-at="2026-11-04T15:06:54 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_008verifyUserIsAbleApplyDifferentTemplate" duration-ms="38" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_009verifyServiceisDisplayedUnderTags -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:47 IST" name="Bm" finished-at="2026-10-30T18:11:47 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:47 IST" name="Am" finished-at="2026-10-30T18:11:49 IST" duration-ms="2008" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:54 IST" name="Am" finished-at="2026-11-04T15:06:56 IST" duration-ms="2002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:49 IST" name="Bm" finished-at="2026-10-30T18:11:49 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:56 IST" name="Bm" finished-at="2026-11-04T15:06:56 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method signature="TC_010verifyAllServiceShouldSelectItbIndividually()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:11:49 IST" name="TC_010verifyAllServiceShouldSelectItbIndividually" finished-at="2026-10-30T18:12:10 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_009verifyServiceisDisplayedUnderTags" duration-ms="21147" status="PASS">
+        <test-method signature="TC_010verifyAllServiceShouldSelectItbIndividually()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:06:56 IST" name="TC_010verifyAllServiceShouldSelectItbIndividually" finished-at="2026-11-04T15:07:20 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_009verifyServiceisDisplayedUnderTags" duration-ms="23392" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_010verifyAllServiceShouldSelectItbIndividually -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:10 IST" name="Am" finished-at="2026-10-30T18:12:12 IST" duration-ms="2012" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:20 IST" name="Am" finished-at="2026-11-04T15:07:22 IST" duration-ms="2003" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_011verifyBioSharpHeaderIsDisplayedBelowtheService()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:12 IST" name="TC_011verifyBioSharpHeaderIsDisplayedBelowtheService" finished-at="2026-10-30T18:12:12 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_010verifyAllServiceShouldSelectItbIndividually" duration-ms="12" status="PASS">
+        <test-method signature="TC_011verifyBioSharpHeaderIsDisplayedBelowtheService()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:22 IST" name="TC_011verifyBioSharpHeaderIsDisplayedBelowtheService" finished-at="2026-11-04T15:07:22 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_010verifyAllServiceShouldSelectItbIndividually" duration-ms="25" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_011verifyBioSharpHeaderIsDisplayedBelowtheService -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:12 IST" name="Bm" finished-at="2026-10-30T18:12:12 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:22 IST" name="Bm" finished-at="2026-11-04T15:07:22 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:12 IST" name="Am" finished-at="2026-10-30T18:12:14 IST" duration-ms="2006" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:22 IST" name="Am" finished-at="2026-11-04T15:07:24 IST" duration-ms="2001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_012verifyBioSharpInfoIconIsDisplayed()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:14 IST" name="TC_012verifyBioSharpInfoIconIsDisplayed" finished-at="2026-10-30T18:12:14 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_011verifyBioSharpHeaderIsDisplayedBelowtheService" duration-ms="12" status="PASS">
+        <test-method signature="TC_012verifyBioSharpInfoIconIsDisplayed()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:24 IST" name="TC_012verifyBioSharpInfoIconIsDisplayed" finished-at="2026-11-04T15:07:24 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_011verifyBioSharpHeaderIsDisplayedBelowtheService" duration-ms="31" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_012verifyBioSharpInfoIconIsDisplayed -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:14 IST" name="Bm" finished-at="2026-10-30T18:12:14 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:24 IST" name="Bm" finished-at="2026-11-04T15:07:24 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:14 IST" name="Am" finished-at="2026-10-30T18:12:16 IST" duration-ms="2006" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:24 IST" name="Am" finished-at="2026-11-04T15:07:26 IST" duration-ms="2002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:16 IST" name="Bm" finished-at="2026-10-30T18:12:16 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:26 IST" name="Bm" finished-at="2026-11-04T15:07:26 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method signature="TC_013verifyNumberOfContainerBesideServices()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:16 IST" name="TC_013verifyNumberOfContainerBesideServices" finished-at="2026-10-30T18:12:16 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_012verifyBioSharpInfoIconIsDisplayed" duration-ms="17" status="PASS">
+        <test-method signature="TC_013verifyNumberOfContainerBesideServices()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:26 IST" name="TC_013verifyNumberOfContainerBesideServices" finished-at="2026-11-04T15:07:26 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_012verifyBioSharpInfoIconIsDisplayed" duration-ms="58" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_013verifyNumberOfContainerBesideServices -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:16 IST" name="Am" finished-at="2026-10-30T18:12:18 IST" duration-ms="2004" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:26 IST" name="Am" finished-at="2026-11-04T15:07:28 IST" duration-ms="2002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:18 IST" name="Bm" finished-at="2026-10-30T18:12:18 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:28 IST" name="Bm" finished-at="2026-11-04T15:07:28 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method signature="TC_014verifyBiosharpNumberofContainersare20()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:18 IST" name="TC_014verifyBiosharpNumberofContainersare20" finished-at="2026-10-30T18:12:18 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_013verifyNumberOfContainerBesideServices" duration-ms="10" status="PASS">
+        <test-method signature="TC_014verifyBiosharpNumberofContainersare20()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:28 IST" name="TC_014verifyBiosharpNumberofContainersare20" finished-at="2026-11-04T15:07:28 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_013verifyNumberOfContainerBesideServices" duration-ms="28" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_014verifyBiosharpNumberofContainersare20 -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:18 IST" name="Am" finished-at="2026-10-30T18:12:20 IST" duration-ms="2010" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:28 IST" name="Am" finished-at="2026-11-04T15:07:30 IST" duration-ms="2001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:20 IST" name="Bm" finished-at="2026-10-30T18:12:20 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method signature="TC_015verifyContainerChangesServices()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:20 IST" name="TC_015verifyContainerChangesServices" finished-at="2026-10-30T18:12:20 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_014verifyBiosharpNumberofContainersare20" duration-ms="109" status="PASS">
+        <test-method signature="TC_015verifyContainerChangesServices()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:30 IST" name="TC_015verifyContainerChangesServices" finished-at="2026-11-04T15:07:30 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_014verifyBiosharpNumberofContainersare20" duration-ms="451" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_015verifyContainerChangesServices -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:20 IST" name="Am" finished-at="2026-10-30T18:12:22 IST" duration-ms="2010" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:30 IST" name="Bm" finished-at="2026-11-04T15:07:30 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:30 IST" name="Am" finished-at="2026-11-04T15:07:32 IST" duration-ms="2001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_016verifyNumberofContainerForNonRCRAPharmaceuticalare15()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:22 IST" name="TC_016verifyNumberofContainerForNonRCRAPharmaceuticalare15" finished-at="2026-10-30T18:12:22 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_015verifyContainerChangesServices" duration-ms="18" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:32 IST" name="Bm" finished-at="2026-11-04T15:07:32 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_016verifyNumberofContainerForNonRCRAPharmaceuticalare15()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:32 IST" name="TC_016verifyNumberofContainerForNonRCRAPharmaceuticalare15" finished-at="2026-11-04T15:07:32 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_015verifyContainerChangesServices" duration-ms="42" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_016verifyNumberofContainerForNonRCRAPharmaceuticalare15 -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:22 IST" name="Bm" finished-at="2026-10-30T18:12:22 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:22 IST" name="Am" finished-at="2026-10-30T18:12:24 IST" duration-ms="2009" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:32 IST" name="Am" finished-at="2026-11-04T15:07:34 IST" duration-ms="2001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:24 IST" name="Bm" finished-at="2026-10-30T18:12:24 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method signature="TC_017verifyContainerChangesServicesForRCRAPharmaceutical()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:24 IST" name="TC_017verifyContainerChangesServicesForRCRAPharmaceutical" finished-at="2026-10-30T18:12:24 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_016verifyNumberofContainerForNonRCRAPharmaceuticalare15" duration-ms="112" status="PASS">
+        <test-method signature="TC_017verifyContainerChangesServicesForRCRAPharmaceutical()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:34 IST" name="TC_017verifyContainerChangesServicesForRCRAPharmaceutical" finished-at="2026-11-04T15:07:35 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_016verifyNumberofContainerForNonRCRAPharmaceuticalare15" duration-ms="356" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_017verifyContainerChangesServicesForRCRAPharmaceutical -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:24 IST" name="Am" finished-at="2026-10-30T18:12:26 IST" duration-ms="2014" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:34 IST" name="Bm" finished-at="2026-11-04T15:07:34 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:35 IST" name="Am" finished-at="2026-11-04T15:07:37 IST" duration-ms="2003" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_018verifyNumberofContainerForRCRAPharmaceuticalare15()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:26 IST" name="TC_018verifyNumberofContainerForRCRAPharmaceuticalare15" finished-at="2026-10-30T18:12:26 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_017verifyContainerChangesServicesForRCRAPharmaceutical" duration-ms="14" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:37 IST" name="Bm" finished-at="2026-11-04T15:07:37 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_018verifyNumberofContainerForRCRAPharmaceuticalare15()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:37 IST" name="TC_018verifyNumberofContainerForRCRAPharmaceuticalare15" finished-at="2026-11-04T15:07:37 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_017verifyContainerChangesServicesForRCRAPharmaceutical" duration-ms="28" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_018verifyNumberofContainerForRCRAPharmaceuticalare15 -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:26 IST" name="Bm" finished-at="2026-10-30T18:12:26 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:26 IST" name="Am" finished-at="2026-10-30T18:12:28 IST" duration-ms="2006" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:37 IST" name="Am" finished-at="2026-11-04T15:07:39 IST" duration-ms="2002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:28 IST" name="Bm" finished-at="2026-10-30T18:12:28 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:39 IST" name="Bm" finished-at="2026-11-04T15:07:39 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method signature="TC_019verifySystemShouldDisplayChemotherapyContainers()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:28 IST" name="TC_019verifySystemShouldDisplayChemotherapyContainers" finished-at="2026-10-30T18:12:28 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_018verifyNumberofContainerForRCRAPharmaceuticalare15" duration-ms="87" status="PASS">
+        <test-method signature="TC_019verifySystemShouldDisplayChemotherapyContainers()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:39 IST" name="TC_019verifySystemShouldDisplayChemotherapyContainers" finished-at="2026-11-04T15:07:39 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_018verifyNumberofContainerForRCRAPharmaceuticalare15" duration-ms="288" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_019verifySystemShouldDisplayChemotherapyContainers -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:28 IST" name="Am" finished-at="2026-10-30T18:12:30 IST" duration-ms="2005" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:39 IST" name="Am" finished-at="2026-11-04T15:07:41 IST" duration-ms="2002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_020verifyNumberofContainerForChemotherapyare09()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:30 IST" name="TC_020verifyNumberofContainerForChemotherapyare09" finished-at="2026-10-30T18:12:30 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_019verifySystemShouldDisplayChemotherapyContainers" duration-ms="14" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:41 IST" name="Bm" finished-at="2026-11-04T15:07:41 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_020verifyNumberofContainerForChemotherapyare09()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:41 IST" name="TC_020verifyNumberofContainerForChemotherapyare09" finished-at="2026-11-04T15:07:41 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_019verifySystemShouldDisplayChemotherapyContainers" duration-ms="36" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_020verifyNumberofContainerForChemotherapyare09 -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:30 IST" name="Bm" finished-at="2026-10-30T18:12:30 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:30 IST" name="Am" finished-at="2026-10-30T18:12:32 IST" duration-ms="2006" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:41 IST" name="Am" finished-at="2026-11-04T15:07:43 IST" duration-ms="2001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_021verifySystemShouldDisplayPaperShreddingContainers()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:32 IST" name="TC_021verifySystemShouldDisplayPaperShreddingContainers" finished-at="2026-10-30T18:12:32 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_020verifyNumberofContainerForChemotherapyare09" duration-ms="73" status="PASS">
+        <test-method signature="TC_021verifySystemShouldDisplayPaperShreddingContainers()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:43 IST" name="TC_021verifySystemShouldDisplayPaperShreddingContainers" finished-at="2026-11-04T15:07:43 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_020verifyNumberofContainerForChemotherapyare09" duration-ms="299" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_021verifySystemShouldDisplayPaperShreddingContainers -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:32 IST" name="Bm" finished-at="2026-10-30T18:12:32 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:43 IST" name="Bm" finished-at="2026-11-04T15:07:43 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:32 IST" name="Am" finished-at="2026-10-30T18:12:34 IST" duration-ms="2007" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:43 IST" name="Am" finished-at="2026-11-04T15:07:45 IST" duration-ms="2002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:34 IST" name="Bm" finished-at="2026-10-30T18:12:34 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:45 IST" name="Bm" finished-at="2026-11-04T15:07:45 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method signature="TC_022verifyNumberofContainerForPaperShreddingare07andvisible()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:34 IST" name="TC_022verifyNumberofContainerForPaperShreddingare07andvisible" finished-at="2026-10-30T18:12:34 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_021verifySystemShouldDisplayPaperShreddingContainers" duration-ms="16" status="PASS">
+        <test-method signature="TC_022verifyNumberofContainerForPaperShreddingare07andvisible()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:45 IST" name="TC_022verifyNumberofContainerForPaperShreddingare07andvisible" finished-at="2026-11-04T15:07:45 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_021verifySystemShouldDisplayPaperShreddingContainers" duration-ms="35" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_022verifyNumberofContainerForPaperShreddingare07andvisible -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:34 IST" name="Am" finished-at="2026-10-30T18:12:36 IST" duration-ms="2003" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:45 IST" name="Am" finished-at="2026-11-04T15:07:47 IST" duration-ms="2001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:36 IST" name="Bm" finished-at="2026-10-30T18:12:36 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method signature="TC_023verifySystemShouldDisplayAPHISWasteContainers()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:36 IST" name="TC_023verifySystemShouldDisplayAPHISWasteContainers" finished-at="2026-10-30T18:12:36 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_022verifyNumberofContainerForPaperShreddingare07andvisible" duration-ms="88" status="PASS">
+        <test-method signature="TC_023verifySystemShouldDisplayAPHISWasteContainers()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:47 IST" name="TC_023verifySystemShouldDisplayAPHISWasteContainers" finished-at="2026-11-04T15:07:48 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_022verifyNumberofContainerForPaperShreddingare07andvisible" duration-ms="190" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_023verifySystemShouldDisplayAPHISWasteContainers -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:36 IST" name="Am" finished-at="2026-10-30T18:12:38 IST" duration-ms="2004" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:47 IST" name="Bm" finished-at="2026-11-04T15:07:47 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:48 IST" name="Am" finished-at="2026-11-04T15:07:50 IST" duration-ms="2002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_024verifyNumberofContainerForAPHISWasteare07andvisible()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:38 IST" name="TC_024verifyNumberofContainerForAPHISWasteare07andvisible" finished-at="2026-10-30T18:12:38 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_023verifySystemShouldDisplayAPHISWasteContainers" duration-ms="15" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:50 IST" name="Bm" finished-at="2026-11-04T15:07:50 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_024verifyNumberofContainerForAPHISWasteare07andvisible()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:50 IST" name="TC_024verifyNumberofContainerForAPHISWasteare07andvisible" finished-at="2026-11-04T15:07:50 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_023verifySystemShouldDisplayAPHISWasteContainers" duration-ms="31" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_024verifyNumberofContainerForAPHISWasteare07andvisible -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:38 IST" name="Bm" finished-at="2026-10-30T18:12:38 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:38 IST" name="Am" finished-at="2026-10-30T18:12:40 IST" duration-ms="2007" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:50 IST" name="Am" finished-at="2026-11-04T15:07:52 IST" duration-ms="2002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:40 IST" name="Bm" finished-at="2026-10-30T18:12:40 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:52 IST" name="Bm" finished-at="2026-11-04T15:07:52 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method signature="TC_025verifySystemShouldDisplayProductDestructionContainers()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:40 IST" name="TC_025verifySystemShouldDisplayProductDestructionContainers" finished-at="2026-10-30T18:12:41 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_024verifyNumberofContainerForAPHISWasteare07andvisible" duration-ms="104" status="PASS">
+        <test-method signature="TC_025verifySystemShouldDisplayProductDestructionContainers()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:52 IST" name="TC_025verifySystemShouldDisplayProductDestructionContainers" finished-at="2026-11-04T15:07:52 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_024verifyNumberofContainerForAPHISWasteare07andvisible" duration-ms="354" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_025verifySystemShouldDisplayProductDestructionContainers -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:41 IST" name="Am" finished-at="2026-10-30T18:12:43 IST" duration-ms="2011" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:52 IST" name="Am" finished-at="2026-11-04T15:07:54 IST" duration-ms="2001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:43 IST" name="Bm" finished-at="2026-10-30T18:12:43 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method signature="TC_026verifyNumberofContainerForProductDestructionare07andvisible()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:43 IST" name="TC_026verifyNumberofContainerForProductDestructionare07andvisible" finished-at="2026-10-30T18:12:43 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_025verifySystemShouldDisplayProductDestructionContainers" duration-ms="16" status="PASS">
+        <test-method signature="TC_026verifyNumberofContainerForProductDestructionare07andvisible()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:54 IST" name="TC_026verifyNumberofContainerForProductDestructionare07andvisible" finished-at="2026-11-04T15:07:54 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_025verifySystemShouldDisplayProductDestructionContainers" duration-ms="44" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_026verifyNumberofContainerForProductDestructionare07andvisible -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:43 IST" name="Am" finished-at="2026-10-30T18:12:45 IST" duration-ms="2005" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:45 IST" name="Bm" finished-at="2026-10-30T18:12:45 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:54 IST" name="Bm" finished-at="2026-11-04T15:07:54 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method signature="TC_027verifySystemShouldDisplayUniversalWasteContainersInstantly()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:45 IST" name="TC_027verifySystemShouldDisplayUniversalWasteContainersInstantly" finished-at="2026-10-30T18:12:45 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_026verifyNumberofContainerForProductDestructionare07andvisible" duration-ms="74" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:54 IST" name="Am" finished-at="2026-11-04T15:07:56 IST" duration-ms="2001" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Am -->
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:56 IST" name="Bm" finished-at="2026-11-04T15:07:56 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_027verifySystemShouldDisplayUniversalWasteContainersInstantly()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:56 IST" name="TC_027verifySystemShouldDisplayUniversalWasteContainersInstantly" finished-at="2026-11-04T15:07:56 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_026verifyNumberofContainerForProductDestructionare07andvisible" duration-ms="286" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_027verifySystemShouldDisplayUniversalWasteContainersInstantly -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:45 IST" name="Am" finished-at="2026-10-30T18:12:47 IST" duration-ms="2002" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:56 IST" name="Am" finished-at="2026-11-04T15:07:58 IST" duration-ms="2002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_028verifyNumberofContainerForUniversalWasteare07andvisible()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:47 IST" name="TC_028verifyNumberofContainerForUniversalWasteare07andvisible" finished-at="2026-10-30T18:12:47 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_027verifySystemShouldDisplayUniversalWasteContainersInstantly" duration-ms="16" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:58 IST" name="Bm" finished-at="2026-11-04T15:07:58 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_028verifyNumberofContainerForUniversalWasteare07andvisible()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:58 IST" name="TC_028verifyNumberofContainerForUniversalWasteare07andvisible" finished-at="2026-11-04T15:07:58 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_027verifySystemShouldDisplayUniversalWasteContainersInstantly" duration-ms="48" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_028verifyNumberofContainerForUniversalWasteare07andvisible -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:47 IST" name="Bm" finished-at="2026-10-30T18:12:47 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:47 IST" name="Am" finished-at="2026-10-30T18:12:49 IST" duration-ms="2003" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:07:58 IST" name="Am" finished-at="2026-11-04T15:08:00 IST" duration-ms="2001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:49 IST" name="Bm" finished-at="2026-10-30T18:12:49 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method signature="TC_029verifySystemShouldDisplayPathologyContainersInstantly()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:49 IST" name="TC_029verifySystemShouldDisplayPathologyContainersInstantly" finished-at="2026-10-30T18:12:49 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_028verifyNumberofContainerForUniversalWasteare07andvisible" duration-ms="90" status="PASS">
+        <test-method signature="TC_029verifySystemShouldDisplayPathologyContainersInstantly()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:00 IST" name="TC_029verifySystemShouldDisplayPathologyContainersInstantly" finished-at="2026-11-04T15:08:01 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_028verifyNumberofContainerForUniversalWasteare07andvisible" duration-ms="382" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_029verifySystemShouldDisplayPathologyContainersInstantly -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:49 IST" name="Am" finished-at="2026-10-30T18:12:51 IST" duration-ms="2002" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:00 IST" name="Bm" finished-at="2026-11-04T15:08:00 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:01 IST" name="Am" finished-at="2026-11-04T15:08:03 IST" duration-ms="2000" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_030verifyNumberofContainerForPathologyare12andvisibleWithoutduplicates()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:51 IST" name="TC_030verifyNumberofContainerForPathologyare12andvisibleWithoutduplicates" finished-at="2026-10-30T18:12:51 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_029verifySystemShouldDisplayPathologyContainersInstantly" duration-ms="56" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:03 IST" name="Bm" finished-at="2026-11-04T15:08:03 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_030verifyNumberofContainerForPathologyare12andvisibleWithoutduplicates()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:03 IST" name="TC_030verifyNumberofContainerForPathologyare12andvisibleWithoutduplicates" finished-at="2026-11-04T15:08:03 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_029verifySystemShouldDisplayPathologyContainersInstantly" duration-ms="154" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_030verifyNumberofContainerForPathologyare12andvisibleWithoutduplicates -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:51 IST" name="Bm" finished-at="2026-10-30T18:12:51 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:51 IST" name="Am" finished-at="2026-10-30T18:12:53 IST" duration-ms="2012" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:03 IST" name="Am" finished-at="2026-11-04T15:08:05 IST" duration-ms="2012" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_031verfySytemShoulddisplayCanbissWasteContainersInstantly()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:53 IST" name="TC_031verfySytemShoulddisplayCanbissWasteContainersInstantly" finished-at="2026-10-30T18:12:53 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_030verifyNumberofContainerForPathologyare12andvisibleWithoutduplicates" duration-ms="94" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:05 IST" name="Bm" finished-at="2026-11-04T15:08:05 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_031verfySytemShoulddisplayCanbissWasteContainersInstantly()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:05 IST" name="TC_031verfySytemShoulddisplayCanbissWasteContainersInstantly" finished-at="2026-11-04T15:08:05 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_030verifyNumberofContainerForPathologyare12andvisibleWithoutduplicates" duration-ms="207" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_031verfySytemShoulddisplayCanbissWasteContainersInstantly -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:53 IST" name="Bm" finished-at="2026-10-30T18:12:53 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:53 IST" name="Am" finished-at="2026-10-30T18:12:55 IST" duration-ms="2016" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:05 IST" name="Am" finished-at="2026-11-04T15:08:07 IST" duration-ms="2008" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_032verifyNumberofContainerForCanbissWasteare12andvisibleWithoutDupicate()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:55 IST" name="TC_032verifyNumberofContainerForCanbissWasteare12andvisibleWithoutDupicate" finished-at="2026-10-30T18:12:55 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_031verfySytemShoulddisplayCanbissWasteContainersInstantly" duration-ms="52" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:07 IST" name="Bm" finished-at="2026-11-04T15:08:07 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_032verifyNumberofContainerForCanbissWasteare12andvisibleWithoutDupicate()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:07 IST" name="TC_032verifyNumberofContainerForCanbissWasteare12andvisibleWithoutDupicate" finished-at="2026-11-04T15:08:07 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_031verfySytemShoulddisplayCanbissWasteContainersInstantly" duration-ms="219" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_032verifyNumberofContainerForCanbissWasteare12andvisibleWithoutDupicate -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:55 IST" name="Bm" finished-at="2026-10-30T18:12:55 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:55 IST" name="Am" finished-at="2026-10-30T18:12:57 IST" duration-ms="2010" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:07 IST" name="Am" finished-at="2026-11-04T15:08:09 IST" duration-ms="2002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:57 IST" name="Bm" finished-at="2026-10-30T18:12:57 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:09 IST" name="Bm" finished-at="2026-11-04T15:08:09 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method signature="TC_033verifyCopyfromMasterColumnAppearsforALlSeervices()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:12:57 IST" name="TC_033verifyCopyfromMasterColumnAppearsforALlSeervices" finished-at="2026-10-30T18:13:18 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_032verifyNumberofContainerForCanbissWasteare12andvisibleWithoutDupicate" duration-ms="20949" status="PASS">
+        <test-method signature="TC_033verifyCopyfromMasterColumnAppearsforALlSeervices()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:09 IST" name="TC_033verifyCopyfromMasterColumnAppearsforALlSeervices" finished-at="2026-11-04T15:08:31 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_032verifyNumberofContainerForCanbissWasteare12andvisibleWithoutDupicate" duration-ms="22024" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_033verifyCopyfromMasterColumnAppearsforALlSeervices -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:18 IST" name="Am" finished-at="2026-10-30T18:13:20 IST" duration-ms="2008" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:31 IST" name="Am" finished-at="2026-11-04T15:08:33 IST" duration-ms="2002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_034verifyCopyfromMasterButtonAppearsforAllItemsandClickable()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:20 IST" name="TC_034verifyCopyfromMasterButtonAppearsforAllItemsandClickable" finished-at="2026-10-30T18:13:20 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_033verifyCopyfromMasterColumnAppearsforALlSeervices" duration-ms="481" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:33 IST" name="Bm" finished-at="2026-11-04T15:08:33 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_034verifyCopyfromMasterButtonAppearsforAllItemsandClickable()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:33 IST" name="TC_034verifyCopyfromMasterButtonAppearsforAllItemsandClickable" finished-at="2026-11-04T15:08:35 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_033verifyCopyfromMasterColumnAppearsforALlSeervices" duration-ms="1454" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_034verifyCopyfromMasterButtonAppearsforAllItemsandClickable -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:20 IST" name="Bm" finished-at="2026-10-30T18:13:20 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:20 IST" name="Am" finished-at="2026-10-30T18:13:22 IST" duration-ms="2003" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:35 IST" name="Am" finished-at="2026-11-04T15:08:37 IST" duration-ms="2007" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:22 IST" name="Bm" finished-at="2026-10-30T18:13:22 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method signature="TC_035verifyMasterITemnamecolumnAppears()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:22 IST" name="TC_035verifyMasterITemnamecolumnAppears" finished-at="2026-10-30T18:13:22 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_034verifyCopyfromMasterButtonAppearsforAllItemsandClickable" duration-ms="14" status="PASS">
+        <test-method signature="TC_035verifyMasterITemnamecolumnAppears()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:37 IST" name="TC_035verifyMasterITemnamecolumnAppears" finished-at="2026-11-04T15:08:37 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_034verifyCopyfromMasterButtonAppearsforAllItemsandClickable" duration-ms="37" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_035verifyMasterITemnamecolumnAppears -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:22 IST" name="Am" finished-at="2026-10-30T18:13:24 IST" duration-ms="2001" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:37 IST" name="Bm" finished-at="2026-11-04T15:08:37 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:37 IST" name="Am" finished-at="2026-11-04T15:08:39 IST" duration-ms="2013" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_036verifyMasterItemNameColumnWithDifferentnames()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:24 IST" name="TC_036verifyMasterItemNameColumnWithDifferentnames" finished-at="2026-10-30T18:13:25 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_035verifyMasterITemnamecolumnAppears" duration-ms="111" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:39 IST" name="Bm" finished-at="2026-11-04T15:08:39 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_036verifyMasterItemNameColumnWithDifferentnames()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:39 IST" name="TC_036verifyMasterItemNameColumnWithDifferentnames" finished-at="2026-11-04T15:08:39 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_035verifyMasterITemnamecolumnAppears" duration-ms="319" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_036verifyMasterItemNameColumnWithDifferentnames -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:24 IST" name="Bm" finished-at="2026-10-30T18:13:24 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:25 IST" name="Am" finished-at="2026-10-30T18:13:27 IST" duration-ms="2013" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:39 IST" name="Am" finished-at="2026-11-04T15:08:41 IST" duration-ms="2002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_037VerifyYellowDotAppearsForConfiguredservices()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:27 IST" name="TC_037VerifyYellowDotAppearsForConfiguredservices" finished-at="2026-10-30T18:13:27 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_036verifyMasterItemNameColumnWithDifferentnames" duration-ms="338" status="PASS">
+        <test-method signature="TC_037VerifyYellowDotAppearsForConfiguredservices()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:41 IST" name="TC_037VerifyYellowDotAppearsForConfiguredservices" finished-at="2026-11-04T15:08:42 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_036verifyMasterItemNameColumnWithDifferentnames" duration-ms="686" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_037VerifyYellowDotAppearsForConfiguredservices -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:27 IST" name="Bm" finished-at="2026-10-30T18:13:27 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:41 IST" name="Bm" finished-at="2026-11-04T15:08:41 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:27 IST" name="Am" finished-at="2026-10-30T18:13:29 IST" duration-ms="2007" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:42 IST" name="Am" finished-at="2026-11-04T15:08:44 IST" duration-ms="2006" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_038VerifyCopyFromMasterIndividualContainerandRaateGettingAddedAndGreenDotappear()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:29 IST" name="TC_038VerifyCopyFromMasterIndividualContainerandRaateGettingAddedAndGreenDotappear" finished-at="2026-10-30T18:13:34 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_037VerifyYellowDotAppearsForConfiguredservices" duration-ms="5091" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:44 IST" name="Bm" finished-at="2026-11-04T15:08:44 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_038VerifyCopyFromMasterIndividualContainerandRaateGettingAddedAndGreenDotappear()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:44 IST" name="TC_038VerifyCopyFromMasterIndividualContainerandRaateGettingAddedAndGreenDotappear" finished-at="2026-11-04T15:08:51 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_037VerifyYellowDotAppearsForConfiguredservices" duration-ms="6742" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_038VerifyCopyFromMasterIndividualContainerandRaateGettingAddedAndGreenDotappear -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:29 IST" name="Bm" finished-at="2026-10-30T18:13:29 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:34 IST" name="Am" finished-at="2026-10-30T18:13:36 IST" duration-ms="2004" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:51 IST" name="Am" finished-at="2026-11-04T15:08:53 IST" duration-ms="2005" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_039VerifyIncludeInFaltMonthlyColumnisAppear()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:36 IST" name="TC_039VerifyIncludeInFaltMonthlyColumnisAppear" finished-at="2026-10-30T18:13:36 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_038VerifyCopyFromMasterIndividualContainerandRaateGettingAddedAndGreenDotappear" duration-ms="15" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:53 IST" name="Bm" finished-at="2026-11-04T15:08:53 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_039VerifyIncludeInFaltMonthlyColumnisAppear()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:53 IST" name="TC_039VerifyIncludeInFaltMonthlyColumnisAppear" finished-at="2026-11-04T15:08:53 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_038VerifyCopyFromMasterIndividualContainerandRaateGettingAddedAndGreenDotappear" duration-ms="32" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_039VerifyIncludeInFaltMonthlyColumnisAppear -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:36 IST" name="Bm" finished-at="2026-10-30T18:13:36 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:36 IST" name="Am" finished-at="2026-10-30T18:13:38 IST" duration-ms="2005" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:53 IST" name="Am" finished-at="2026-11-04T15:08:55 IST" duration-ms="2010" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_040VerifyCheckBoxisPresentunderFlatmonthlyColumn()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:38 IST" name="TC_040VerifyCheckBoxisPresentunderFlatmonthlyColumn" finished-at="2026-10-30T18:13:38 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_039VerifyIncludeInFaltMonthlyColumnisAppear" duration-ms="36" status="PASS">
+        <test-method signature="TC_040VerifyCheckBoxisPresentunderFlatmonthlyColumn()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:55 IST" name="TC_040VerifyCheckBoxisPresentunderFlatmonthlyColumn" finished-at="2026-11-04T15:08:55 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_039VerifyIncludeInFaltMonthlyColumnisAppear" duration-ms="116" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_040VerifyCheckBoxisPresentunderFlatmonthlyColumn -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:38 IST" name="Bm" finished-at="2026-10-30T18:13:38 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:55 IST" name="Bm" finished-at="2026-11-04T15:08:55 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:38 IST" name="Am" finished-at="2026-10-30T18:13:40 IST" duration-ms="2010" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:55 IST" name="Am" finished-at="2026-11-04T15:08:57 IST" duration-ms="2008" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_041VerifyFlatmonthlyCheckBoxisClickable()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:40 IST" name="TC_041VerifyFlatmonthlyCheckBoxisClickable" finished-at="2026-10-30T18:13:40 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_040VerifyCheckBoxisPresentunderFlatmonthlyColumn" duration-ms="316" status="PASS">
+        <test-method signature="TC_041VerifyFlatmonthlyCheckBoxisClickable()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:57 IST" name="TC_041VerifyFlatmonthlyCheckBoxisClickable" finished-at="2026-11-04T15:08:58 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_040VerifyCheckBoxisPresentunderFlatmonthlyColumn" duration-ms="829" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_041VerifyFlatmonthlyCheckBoxisClickable -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:40 IST" name="Bm" finished-at="2026-10-30T18:13:40 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:57 IST" name="Bm" finished-at="2026-11-04T15:08:57 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:40 IST" name="Am" finished-at="2026-10-30T18:13:42 IST" duration-ms="2011" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:08:58 IST" name="Am" finished-at="2026-11-04T15:09:00 IST" duration-ms="2012" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_042VerifyFlatMonthlyCheckboxisNotClickable()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:42 IST" name="TC_042VerifyFlatMonthlyCheckboxisNotClickable" finished-at="2026-10-30T18:13:42 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_041VerifyFlatmonthlyCheckBoxisClickable" duration-ms="36" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:00 IST" name="Bm" finished-at="2026-11-04T15:09:00 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_042VerifyFlatMonthlyCheckboxisNotClickable()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:00 IST" name="TC_042VerifyFlatMonthlyCheckboxisNotClickable" finished-at="2026-11-04T15:09:00 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_041VerifyFlatmonthlyCheckBoxisClickable" duration-ms="93" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_042VerifyFlatMonthlyCheckboxisNotClickable -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:42 IST" name="Bm" finished-at="2026-10-30T18:13:42 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:42 IST" name="Am" finished-at="2026-10-30T18:13:44 IST" duration-ms="2013" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:00 IST" name="Am" finished-at="2026-11-04T15:09:02 IST" duration-ms="2007" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:45 IST" name="Bm" finished-at="2026-10-30T18:13:45 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method signature="TC_043VerifyServicePriceHeaderisDisplayed()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:45 IST" name="TC_043VerifyServicePriceHeaderisDisplayed" finished-at="2026-10-30T18:13:45 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_042VerifyFlatMonthlyCheckboxisNotClickable" duration-ms="23" status="PASS">
+        <test-method signature="TC_043VerifyServicePriceHeaderisDisplayed()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:02 IST" name="TC_043VerifyServicePriceHeaderisDisplayed" finished-at="2026-11-04T15:09:02 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_042VerifyFlatMonthlyCheckboxisNotClickable" duration-ms="51" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_043VerifyServicePriceHeaderisDisplayed -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:45 IST" name="Am" finished-at="2026-10-30T18:13:47 IST" duration-ms="2008" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:02 IST" name="Bm" finished-at="2026-11-04T15:09:02 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:02 IST" name="Am" finished-at="2026-11-04T15:09:04 IST" duration-ms="2005" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_044VerifyServicePriceInputFiledandAcceptsData()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:47 IST" name="TC_044VerifyServicePriceInputFiledandAcceptsData" finished-at="2026-10-30T18:13:48 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_043VerifyServicePriceHeaderisDisplayed" duration-ms="1300" status="PASS">
+        <test-method signature="TC_044VerifyServicePriceInputFiledandAcceptsData()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:04 IST" name="TC_044VerifyServicePriceInputFiledandAcceptsData" finished-at="2026-11-04T15:09:07 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_043VerifyServicePriceHeaderisDisplayed" duration-ms="2753" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_044VerifyServicePriceInputFiledandAcceptsData -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:47 IST" name="Bm" finished-at="2026-10-30T18:13:47 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:04 IST" name="Bm" finished-at="2026-11-04T15:09:04 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:48 IST" name="Am" finished-at="2026-10-30T18:13:50 IST" duration-ms="2008" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:07 IST" name="Am" finished-at="2026-11-04T15:09:09 IST" duration-ms="2003" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_045VerifyServicePriceInputFiledisNotAcceptingNegativeData()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:50 IST" name="TC_045VerifyServicePriceInputFiledisNotAcceptingNegativeData" finished-at="2026-10-30T18:13:50 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_044VerifyServicePriceInputFiledandAcceptsData" duration-ms="39" status="PASS">
+        <test-method signature="TC_045VerifyServicePriceInputFiledisNotAcceptingNegativeData()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:09 IST" name="TC_045VerifyServicePriceInputFiledisNotAcceptingNegativeData" finished-at="2026-11-04T15:09:09 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_044VerifyServicePriceInputFiledandAcceptsData" duration-ms="27" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_045VerifyServicePriceInputFiledisNotAcceptingNegativeData -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:50 IST" name="Bm" finished-at="2026-10-30T18:13:50 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:09 IST" name="Bm" finished-at="2026-11-04T15:09:09 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:50 IST" name="Am" finished-at="2026-10-30T18:13:52 IST" duration-ms="2015" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:09 IST" name="Am" finished-at="2026-11-04T15:09:11 IST" duration-ms="2012" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_046VerifyAllotmentUptoFieldAcceptsInput()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:52 IST" name="TC_046VerifyAllotmentUptoFieldAcceptsInput" finished-at="2026-10-30T18:13:56 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_045VerifyServicePriceInputFiledisNotAcceptingNegativeData" duration-ms="3892" status="PASS">
+        <test-method signature="TC_046VerifyAllotmentUptoFieldAcceptsInput()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:11 IST" name="TC_046VerifyAllotmentUptoFieldAcceptsInput" finished-at="2026-11-04T15:09:18 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_045VerifyServicePriceInputFiledisNotAcceptingNegativeData" duration-ms="7591" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_046VerifyAllotmentUptoFieldAcceptsInput -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:52 IST" name="Bm" finished-at="2026-10-30T18:13:52 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:11 IST" name="Bm" finished-at="2026-11-04T15:09:11 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:56 IST" name="Am" finished-at="2026-10-30T18:13:58 IST" duration-ms="2010" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:18 IST" name="Am" finished-at="2026-11-04T15:09:20 IST" duration-ms="2002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_047VerifyAdditionalcontainerratecolumnPresence()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:58 IST" name="TC_047VerifyAdditionalcontainerratecolumnPresence" finished-at="2026-10-30T18:13:58 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_046VerifyAllotmentUptoFieldAcceptsInput" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:20 IST" name="Bm" finished-at="2026-11-04T15:09:20 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_047VerifyAdditionalcontainerratecolumnPresence()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:20 IST" name="TC_047VerifyAdditionalcontainerratecolumnPresence" finished-at="2026-11-04T15:09:20 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_046VerifyAllotmentUptoFieldAcceptsInput" duration-ms="26" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_047VerifyAdditionalcontainerratecolumnPresence -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:58 IST" name="Bm" finished-at="2026-10-30T18:13:58 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:13:58 IST" name="Am" finished-at="2026-10-30T18:14:00 IST" duration-ms="2010" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:20 IST" name="Am" finished-at="2026-11-04T15:09:22 IST" duration-ms="2013" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_048VerifyAdditionalContainerRateInputFieldAcceptsData()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:14:00 IST" name="TC_048VerifyAdditionalContainerRateInputFieldAcceptsData" finished-at="2026-10-30T18:14:01 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_047VerifyAdditionalcontainerratecolumnPresence" duration-ms="1236" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:22 IST" name="Bm" finished-at="2026-11-04T15:09:22 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_048VerifyAdditionalContainerRateInputFieldAcceptsData()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:22 IST" name="TC_048VerifyAdditionalContainerRateInputFieldAcceptsData" finished-at="2026-11-04T15:09:24 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_047VerifyAdditionalcontainerratecolumnPresence" duration-ms="2186" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_048VerifyAdditionalContainerRateInputFieldAcceptsData -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:14:00 IST" name="Bm" finished-at="2026-10-30T18:14:00 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:14:01 IST" name="Am" finished-at="2026-10-30T18:14:03 IST" duration-ms="2005" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:24 IST" name="Am" finished-at="2026-11-04T15:09:26 IST" duration-ms="2001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_049VerifyAllotmentFrequencyColumnDisplayedImmediatlyafterAdditionalContainerRate()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:14:03 IST" name="TC_049VerifyAllotmentFrequencyColumnDisplayedImmediatlyafterAdditionalContainerRate" finished-at="2026-10-30T18:14:03 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_048VerifyAdditionalContainerRateInputFieldAcceptsData" duration-ms="10" status="PASS">
+        <test-method signature="TC_049VerifyAllotmentFrequencyColumnDisplayedImmediatlyafterAdditionalContainerRate()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:26 IST" name="TC_049VerifyAllotmentFrequencyColumnDisplayedImmediatlyafterAdditionalContainerRate" finished-at="2026-11-04T15:09:27 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_048VerifyAdditionalContainerRateInputFieldAcceptsData" duration-ms="24" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_049VerifyAllotmentFrequencyColumnDisplayedImmediatlyafterAdditionalContainerRate -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:14:03 IST" name="Bm" finished-at="2026-10-30T18:14:03 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:26 IST" name="Bm" finished-at="2026-11-04T15:09:26 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:14:03 IST" name="Am" finished-at="2026-10-30T18:14:05 IST" duration-ms="2009" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:27 IST" name="Am" finished-at="2026-11-04T15:09:29 IST" duration-ms="2005" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_050VerifyAllotmentFrequencyForIndividualContainers()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:14:05 IST" name="TC_050VerifyAllotmentFrequencyForIndividualContainers" finished-at="2026-10-30T18:14:05 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_049VerifyAllotmentFrequencyColumnDisplayedImmediatlyafterAdditionalContainerRate" duration-ms="111" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:29 IST" name="Bm" finished-at="2026-11-04T15:09:29 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_050VerifyAllotmentFrequencyForIndividualContainers()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:29 IST" name="TC_050VerifyAllotmentFrequencyForIndividualContainers" finished-at="2026-11-04T15:09:29 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_049VerifyAllotmentFrequencyColumnDisplayedImmediatlyafterAdditionalContainerRate" duration-ms="279" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_050VerifyAllotmentFrequencyForIndividualContainers -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:14:05 IST" name="Bm" finished-at="2026-10-30T18:14:05 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:14:05 IST" name="Am" finished-at="2026-10-30T18:14:07 IST" duration-ms="2002" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:29 IST" name="Am" finished-at="2026-11-04T15:09:31 IST" duration-ms="2004" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_051VerifyBesideallotmentfrequencyUsedAllotmentcolumnispresent()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:14:07 IST" name="TC_051VerifyBesideallotmentfrequencyUsedAllotmentcolumnispresent" finished-at="2026-10-30T18:14:07 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_050VerifyAllotmentFrequencyForIndividualContainers" duration-ms="12" status="PASS">
+        <test-method signature="TC_051VerifyBesideallotmentfrequencyUsedAllotmentcolumnispresent()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:31 IST" name="TC_051VerifyBesideallotmentfrequencyUsedAllotmentcolumnispresent" finished-at="2026-11-04T15:09:31 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_050VerifyAllotmentFrequencyForIndividualContainers" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_051VerifyBesideallotmentfrequencyUsedAllotmentcolumnispresent -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:14:07 IST" name="Bm" finished-at="2026-10-30T18:14:07 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:31 IST" name="Bm" finished-at="2026-11-04T15:09:31 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:14:07 IST" name="Am" finished-at="2026-10-30T18:14:09 IST" duration-ms="2004" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:31 IST" name="Am" finished-at="2026-11-04T15:09:33 IST" duration-ms="2008" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_052VerifyUsedAllotmentAcceptsonlyNumbericvalueandnotAcceptsvaluesotherthanNumericandDataSaved()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:14:09 IST" name="TC_052VerifyUsedAllotmentAcceptsonlyNumbericvalueandnotAcceptsvaluesotherthanNumericandDataSaved" finished-at="2026-10-30T18:15:02 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_051VerifyBesideallotmentfrequencyUsedAllotmentcolumnispresent" duration-ms="52388" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:33 IST" name="Bm" finished-at="2026-11-04T15:09:33 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_052VerifyUsedAllotmentAcceptsonlyNumbericvalueandnotAcceptsvaluesotherthanNumericandDataSaved()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:09:33 IST" name="TC_052VerifyUsedAllotmentAcceptsonlyNumbericvalueandnotAcceptsvaluesotherthanNumericandDataSaved" finished-at="2026-11-04T15:10:29 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_051VerifyBesideallotmentfrequencyUsedAllotmentcolumnispresent" duration-ms="56106" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_052VerifyUsedAllotmentAcceptsonlyNumbericvalueandnotAcceptsvaluesotherthanNumericandDataSaved -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:14:09 IST" name="Bm" finished-at="2026-10-30T18:14:09 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:15:02 IST" name="Am" finished-at="2026-10-30T18:15:04 IST" duration-ms="2010" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:10:29 IST" name="Am" finished-at="2026-11-04T15:10:31 IST" duration-ms="2008" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_053VerifyBesideUsedAllotmentColumnRemainingAllotmentColumnisPresent()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:15:04 IST" name="TC_053VerifyBesideUsedAllotmentColumnRemainingAllotmentColumnisPresent" finished-at="2026-10-30T18:15:04 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_052VerifyUsedAllotmentAcceptsonlyNumbericvalueandnotAcceptsvaluesotherthanNumericandDataSaved" duration-ms="17" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:10:31 IST" name="Bm" finished-at="2026-11-04T15:10:31 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_053VerifyBesideUsedAllotmentColumnRemainingAllotmentColumnisPresent()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:10:31 IST" name="TC_053VerifyBesideUsedAllotmentColumnRemainingAllotmentColumnisPresent" finished-at="2026-11-04T15:10:31 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_052VerifyUsedAllotmentAcceptsonlyNumbericvalueandnotAcceptsvaluesotherthanNumericandDataSaved" duration-ms="25" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_053VerifyBesideUsedAllotmentColumnRemainingAllotmentColumnisPresent -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:15:04 IST" name="Bm" finished-at="2026-10-30T18:15:04 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:15:04 IST" name="Am" finished-at="2026-10-30T18:15:06 IST" duration-ms="2005" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:10:31 IST" name="Am" finished-at="2026-11-04T15:10:33 IST" duration-ms="2002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_054VerifyRemainingAllotmentColumnAcceptsOnlyNumericValues()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:15:06 IST" name="TC_054VerifyRemainingAllotmentColumnAcceptsOnlyNumericValues" finished-at="2026-10-30T18:15:06 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_053VerifyBesideUsedAllotmentColumnRemainingAllotmentColumnisPresent" duration-ms="1" status="PASS">
+        <test-method signature="TC_054VerifyRemainingAllotmentColumnAcceptsOnlyNumericValues()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:10:33 IST" name="TC_054VerifyRemainingAllotmentColumnAcceptsOnlyNumericValues" finished-at="2026-11-04T15:10:33 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_053VerifyBesideUsedAllotmentColumnRemainingAllotmentColumnisPresent" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_054VerifyRemainingAllotmentColumnAcceptsOnlyNumericValues -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:15:06 IST" name="Bm" finished-at="2026-10-30T18:15:06 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:10:33 IST" name="Bm" finished-at="2026-11-04T15:10:33 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:15:06 IST" name="Am" finished-at="2026-10-30T18:15:08 IST" duration-ms="2001" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:10:33 IST" name="Am" finished-at="2026-11-04T15:10:35 IST" duration-ms="2012" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_055VerifyChargeperpoundcolumn()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:15:08 IST" name="TC_055VerifyChargeperpoundcolumn" finished-at="2026-10-30T18:15:08 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_054VerifyRemainingAllotmentColumnAcceptsOnlyNumericValues" duration-ms="11" status="PASS">
+        <test-method signature="TC_055VerifyChargeperpoundcolumn()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:10:35 IST" name="TC_055VerifyChargeperpoundcolumn" finished-at="2026-11-04T15:10:35 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_054VerifyRemainingAllotmentColumnAcceptsOnlyNumericValues" duration-ms="28" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_055VerifyChargeperpoundcolumn -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:15:08 IST" name="Bm" finished-at="2026-10-30T18:15:08 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:10:35 IST" name="Bm" finished-at="2026-11-04T15:10:35 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:15:08 IST" name="Am" finished-at="2026-10-30T18:15:10 IST" duration-ms="2004" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:10:35 IST" name="Am" finished-at="2026-11-04T15:10:37 IST" duration-ms="2001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_056VerifyChargeperpoundPresentforEachContainerandAbletoclick()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:15:10 IST" name="TC_056VerifyChargeperpoundPresentforEachContainerandAbletoclick" finished-at="2026-10-30T18:15:10 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_055VerifyChargeperpoundcolumn" duration-ms="159" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:10:37 IST" name="Bm" finished-at="2026-11-04T15:10:37 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_056VerifyChargeperpoundPresentforEachContainerandAbletoclick()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:10:37 IST" name="TC_056VerifyChargeperpoundPresentforEachContainerandAbletoclick" finished-at="2026-11-04T15:10:37 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_055VerifyChargeperpoundcolumn" duration-ms="443" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_056VerifyChargeperpoundPresentforEachContainerandAbletoclick -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:15:10 IST" name="Bm" finished-at="2026-10-30T18:15:10 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:15:10 IST" name="Am" finished-at="2026-10-30T18:15:12 IST" duration-ms="2011" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:10:37 IST" name="Am" finished-at="2026-11-04T15:10:40 IST" duration-ms="2013" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_057VerifypriceperpondColumnispresent()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:15:12 IST" name="TC_057VerifypriceperpondColumnispresent" finished-at="2026-10-30T18:15:12 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_056VerifyChargeperpoundPresentforEachContainerandAbletoclick" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:10:40 IST" name="Bm" finished-at="2026-11-04T15:10:40 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_057VerifypriceperpondColumnispresent()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:10:40 IST" name="TC_057VerifypriceperpondColumnispresent" finished-at="2026-11-04T15:10:40 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_056VerifyChargeperpoundPresentforEachContainerandAbletoclick" duration-ms="36" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_057VerifypriceperpondColumnispresent -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:15:12 IST" name="Bm" finished-at="2026-10-30T18:15:12 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:15:12 IST" name="Am" finished-at="2026-10-30T18:15:14 IST" duration-ms="2006" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:10:40 IST" name="Am" finished-at="2026-11-04T15:10:42 IST" duration-ms="2002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method signature="TC_058VerifyPriceperpoundInputFieldAcceptsDataandEachContainerShouldhavePriceperPound()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:15:14 IST" name="TC_058VerifyPriceperpoundInputFieldAcceptsDataandEachContainerShouldhavePriceperPound" finished-at="2026-10-30T18:15:15 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_057VerifypriceperpondColumnispresent" duration-ms="901" status="PASS">
+        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:10:42 IST" name="Bm" finished-at="2026-11-04T15:10:42 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bm -->
+        <test-method signature="TC_058VerifyPriceperpoundInputFieldAcceptsDataandEachContainerShouldhavePriceperPound()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:10:42 IST" name="TC_058VerifyPriceperpoundInputFieldAcceptsDataandEachContainerShouldhavePriceperPound" finished-at="2026-11-04T15:10:43 IST" depends-on-methods="GeneratorPricBook.Generator_priceBook_AllTC.TC_057VerifypriceperpondColumnispresent" duration-ms="1714" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_058VerifyPriceperpoundInputFieldAcceptsDataandEachContainerShouldhavePriceperPound -->
-        <test-method is-config="true" signature="Bm()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:15:14 IST" name="Bm" finished-at="2026-10-30T18:15:14 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Bm -->
-        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:15:15 IST" name="Am" finished-at="2026-10-30T18:15:17 IST" duration-ms="2001" status="PASS">
+        <test-method is-config="true" signature="Am()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:10:43 IST" name="Am" finished-at="2026-11-04T15:10:45 IST" duration-ms="2005" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Am -->
-        <test-method is-config="true" signature="Ac()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@79e2c065]" started-at="2026-10-30T18:15:17 IST" name="Ac" finished-at="2026-10-30T18:15:21 IST" duration-ms="4004" status="PASS">
+        <test-method is-config="true" signature="Ac()[pri:0, instance:GeneratorPricBook.Generator_priceBook_AllTC@2d7275fc]" started-at="2026-11-04T15:10:45 IST" name="Ac" finished-at="2026-11-04T15:10:49 IST" duration-ms="4017" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Ac -->

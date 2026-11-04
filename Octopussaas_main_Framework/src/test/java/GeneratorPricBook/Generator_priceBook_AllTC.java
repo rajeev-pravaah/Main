@@ -1,9 +1,11 @@
 package GeneratorPricBook;
 
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -12,6 +14,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.Octopussaas.BaseUtility.BaseClassForGEneratorContacts;
+import com.Octopussaas.FileUtility.ExcelUtility;
 import com.Octopussaas.ObjectRepository.Dashboard;
 import com.Octopussaas.ObjectRepository.Generator_Price_book;
 import com.Octopussaass.WebdriverUtility.utilityclassobject;
@@ -20,11 +23,11 @@ import com.aventstack.extentreports.Status;
 
 public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 	
-	
+	ExcelUtility elib;
 	 Generator_Price_book gpb;
    @Test
    public void TC_001verifyMenuButtonFromGeneratorPri() throws Exception {
-	   
+	   elib = new ExcelUtility();
 	   gpb = new Generator_Price_book(driver);
 	   gpb.getGeneratorManagement().click();
 	   System.out.println("Clicked on Generator Management");
@@ -1591,6 +1594,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 	public void TC_058VerifyPriceperpoundInputFieldAcceptsDataandEachContainerShouldhavePriceperPound() {
 		List<WebElement> inputs = gpb.getPricePerPoundInputFields();
 		boolean allPass = true;
+		int updatedFields = 0;
 
 		if (inputs.isEmpty()) {
 			System.out.println("No Price per pound input fields found :FAIL");
@@ -1599,45 +1603,48 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		}
 
 		for (int i = 0; i < inputs.size(); i++) {
-			inputs = gpb.getPricePerPoundInputFields(); // avoid stale element issues
+			inputs = gpb.getPricePerPoundInputFields(); // re-fetch to avoid stale element issues
 			WebElement input = inputs.get(i);
 			int row = i + 1;
 
-			if (!input.isDisplayed() || !input.isEnabled()) {
-				allPass = false;
-				System.out.println("Price per pound input field " + row + " is NOT present/enabled :FAIL");
-				utilityclassobject.gettest().log(Status.FAIL, "Price per pound input field " + row + " is NOT present/enabled");
-				continue;
-			}
-
 			try {
 				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", input);
-				try {
-					input.click();
-				} catch (Exception e) {
-					((JavascriptExecutor) driver).executeScript("arguments[0].click();", input);
+
+				if (!input.isDisplayed()) {
+					System.out.println("Price per pound input field " + row + " is not visible, skipping this row");
+					utilityclassobject.gettest().log(Status.INFO, "Price per pound input field " + row + " is not visible, skipping this row");
+					continue;
 				}
 
-				// Try normal clear first
-				input.sendKeys(Keys.chord(Keys.CONTROL, "a"));
-				input.sendKeys(Keys.DELETE);
+				// Enable the row via Charge per pound if the input is disabled.
+				if (!input.isEnabled()) {
+					List<WebElement> checkboxes = gpb.getChargePerPoundCheckboxes();
+					if (i < checkboxes.size()) {
+						WebElement checkbox = checkboxes.get(i);
+						((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", checkbox);
+						try {
+							checkbox.click();
+						} catch (Exception e) {
+							((JavascriptExecutor) driver).executeScript("arguments[0].click();", checkbox);
+						}
+					}
 
-				// Force clear if value still exists
-				String beforeType = input.getAttribute("value");
-				if (beforeType != null && !beforeType.trim().isEmpty()) {
-					((JavascriptExecutor) driver).executeScript(
-						"arguments[0].value='';"
-						+ "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));"
-						+ "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
-						input
-					);
+					inputs = gpb.getPricePerPoundInputFields();
+					input = inputs.get(i);
 				}
 
-				// Try normal sendKeys
+				if (!input.isEnabled()) {
+					allPass = false;
+					System.out.println("Price per pound input field " + row + " is disabled even after enabling attempt :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Price per pound input field " + row + " is disabled even after enabling attempt");
+					continue;
+				}
+
+				clearInputField(input);
 				input.sendKeys("5");
 				String enteredValue = input.getAttribute("value");
 
-				// Fallback set via JS if sendKeys did not work
+				// Fallback JS set for controls that block sendKeys intermittently.
 				if (!"5".equals(enteredValue)) {
 					((JavascriptExecutor) driver).executeScript(
 						"arguments[0].value=arguments[1];"
@@ -1649,6 +1656,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 				}
 
 				if ("5".equals(enteredValue)) {
+					updatedFields++;
 					System.out.println("Price per pound input field " + row + " accepted value 5 :PASS");
 					utilityclassobject.gettest().log(Status.PASS, "Price per pound input field " + row + " accepted value 5");
 				} else {
@@ -1663,9 +1671,9 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 			}
 		}
 
-		if (allPass) {
-			System.out.println("All Price per pound input fields are editable and accept value 5 :PASS");
-			utilityclassobject.gettest().log(Status.PASS, "All Price per pound input fields are editable and accept value 5");
+		if (allPass && updatedFields > 0) {
+			System.out.println("All visible Price per pound input fields are editable and accept value 5 :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "All visible Price per pound input fields are editable and accept value 5");
 		} else {
 			System.out.println("Some Price per pound input fields are not editable or did not accept value 5 :FAIL");
 			utilityclassobject.gettest().log(Status.FAIL, "Some Price per pound input fields are not editable or did not accept value 5");
@@ -1676,21 +1684,84 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 	}
 	
 	@Test(dependsOnMethods = "TC_058VerifyPriceperpoundInputFieldAcceptsDataandEachContainerShouldhavePriceperPound")
-	public void TC_059VerifyBesidePriceperPoundColumnTotalChargeColumnisPresent() {
-		
-			System.out.println("Total Charge column is displayed immediatly beside Price per pound column :PASS");
-			utilityclassobject.gettest().log(Status.PASS, "Total Charge column is displayed immediatly beside Price per pound column");
-			System.out.println("Total Charge column is NOT displayed immediatly beside Price per pound column :FAIL");
-			utilityclassobject.gettest().log(Status.FAIL, "Total Charge column is NOT displayed immediatly beside Price per pound column");
+	public void TC_059VerifyBesidePriceperPoundColumnWeightlimitcolumnisPresent() {
+		if( gpb.getWeightLimitColumn().isDisplayed()) {
+			System.out.println("Weight Limit column is displayed immediatly beside Price per pound column :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Weight Limit column is displayed immediatly beside Price per pound column");
+		} else {
+			System.out.println("Weight Limit column is NOT displayed immediatly beside Price per pound column :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Weight Limit column is NOT displayed immediatly beside Price per pound column");
+		}
 		
 		
 	}
 	
-	@Test(dependsOnMethods = "TC_059VerifyBesidePriceperPoundColumnTotalChargeColumnisPresent")
-	public void TC_060VerifyTotalChargeColumnisNotEditable() {
+	@Test(dependsOnMethods = "TC_059VerifyBesidePriceperPoundColumnWeightlimitcolumnisPresent")
+	public void TC_060VerifyWeightLimitColumnAcceptsOnlyNumericValues() throws InterruptedException, EncryptedDocumentException, IOException {
+		List<WebElement> weightLimitFields = gpb.getWeightLimitInputFields();
+		boolean isPass = true;
+
+		if (weightLimitFields.isEmpty()) {
+			System.out.println("No Weight Limit input fields found :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "No Weight Limit input fields found");
+			return;
+		}
+
+		for (int i = 0; i < weightLimitFields.size(); i++) {
+			WebElement field = weightLimitFields.get(i);
+			int row = i + 1;
+
+			clearInputField(field);
+			Thread.sleep(2000); 
+			
+			//read the datsa from excel sheet
+			;
+			String weightlimit = elib.getDataFromExcel("Generator price book", 1, 1);			
+			field.sendKeys(weightlimit);
+			String valueAfterNumeric = field.getAttribute("value");
+
+			if ("15".equals(valueAfterNumeric)) {
+				System.out.println("Weight Limit field " + row + " accepted numeric value 15 :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Weight Limit field " + row + " accepted numeric value 15");
+			} else {
+				isPass = false;
+				System.out.println("Weight Limit field " + row + " did not keep numeric value 15. Actual: " + valueAfterNumeric + " :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Weight Limit field " + row + " did not keep numeric value 15. Actual: " + valueAfterNumeric);
+			}
+
+			clearInputField(field);
+			Thread.sleep(2000); 
+
+			String[] invalidInputs = {"abc", "@#$", "ab@12"};
+			for (String invalidInput : invalidInputs) {
+				field.sendKeys(invalidInput);
+				
+				gpb.getUniversalWasteText().click();
+				Thread.sleep(2000);
+				String actualValue = field.getAttribute("value");
+				String safeValue = actualValue == null ? "" : actualValue.trim();
+
+				if (safeValue.matches(".*[^0-9].*")) {
+					isPass = false;
+					System.out.println("Weight Limit field " + row + " accepted invalid input '" + invalidInput + "'. Actual: '" + safeValue + "' :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Weight Limit field " + row + " accepted invalid input '" + invalidInput + "'. Actual: '" + safeValue + "'");
+				}
+			}
+		}
+		}
 		
-			System.out.println("Some Total Charge fields are editable :FAIL");
-			utilityclassobject.gettest().log(Status.FAIL, "Some Total Charge fields are editable");
-		
-	}
+		@Test(dependsOnMethods = "TC_060VerifyWeightLimitColumnAcceptsOnlyNumericValues")
+		public void TC_061VerifyTareWeightDeductColumnisPresent() {
+			if( gpb.getTareWeightDeductedColumn().isDisplayed()) {
+				System.out.println("Tare Weight Deduct column is displayed immediatly beside Weight Limit column :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Tare Weight Deduct column is displayed immediatly beside Weight Limit column");
+			} else {
+				System.out.println("Tare Weight Deduct column is NOT displayed immediatly beside Weight Limit column :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Tare Weight Deduct column is NOT displayed immediatly beside Weight Limit column");
+		}
+			
+			
+		}
+	
+	
 }

@@ -549,12 +549,34 @@ public class Generator_Price_book {
 		return priceperpoundcolumn;
 	}
 	
-	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[13]/descendant::div")
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[13]//input")
 	private List<WebElement> priceperpoundinputfields;
 	
 	public List<WebElement> getPricePerPoundInputFields() {
 		return priceperpoundinputfields;
 	}
+	
+	@FindBy(xpath = "//span[text()='Weight']")
+	private WebElement weightlimitcolumn;
+	
+	public WebElement getWeightLimitColumn() {
+		return weightlimitcolumn;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[14]//input")
+	private List<WebElement> weightlimitinputfields;
+	
+	public List<WebElement> getWeightLimitInputFields() {
+		return weightlimitinputfields;
+	}
+	
+	@FindBy(xpath = "//span[text()='Deducted']")
+	private WebElement tareweightdeductedcolumn;
+	
+	public WebElement getTareWeightDeductedColumn() {
+		return tareweightdeductedcolumn;
+	}
+	
 	
 	
 	
