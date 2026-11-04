@@ -1670,5 +1670,19 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 			System.out.println("Some Price per pound input fields are not editable or did not accept value 5 :FAIL");
 			utilityclassobject.gettest().log(Status.FAIL, "Some Price per pound input fields are not editable or did not accept value 5");
 		}
+		
+		
+		
+	}
+	
+	@Test(dependsOnMethods = "TC_058VerifyPriceperpoundInputFieldAcceptsDataandEachContainerShouldhavePriceperPound")
+	public void TC_059VerifyBesidePriceperPoundColumnTotalChargeColumnisPresent() {
+		
+			System.out.println("Total Charge column is displayed immediatly beside Price per pound column :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Total Charge column is displayed immediatly beside Price per pound column");
+			System.out.println("Total Charge column is NOT displayed immediatly beside Price per pound column :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Total Charge column is NOT displayed immediatly beside Price per pound column");
+		
+		
 	}
 }
