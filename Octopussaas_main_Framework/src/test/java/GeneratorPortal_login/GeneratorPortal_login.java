@@ -1371,6 +1371,21 @@ public class GeneratorPortal_login extends BaseClassForGEneratorContacts{
 		
 		
 		
+		@Test(dependsOnMethods = "TC_090VerifyGeneratorPortal_Welcomepagewithnewuaser")
+		public void TC_091()
+		{
+			System.out.println("HI");
+		}
+		
+		@Test(dependsOnMethods = "TC_091")
+		
+		public void TC_092()
+		{
+			System.out.println("HEllor");
+		}
+		
+		
+		
 		
 		
 	
