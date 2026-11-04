@@ -1392,9 +1392,20 @@ public class GeneratorPortal_login extends BaseClassForGEneratorContacts{
 			System.out.println("HEllor");
 		}
 		
+@Test(dependsOnMethods = "TC_093")
+
+public void TC_094()
+{
+	System.out.println("HEllor");
+}
 		
-		
-		
+
+@Test(dependsOnMethods = "TC_094")
+
+public void TC_095()
+{
+System.out.println("HEllor");
+}	
 	
 	
 	
