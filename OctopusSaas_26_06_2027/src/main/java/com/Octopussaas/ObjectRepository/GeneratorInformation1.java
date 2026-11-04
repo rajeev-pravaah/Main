@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -43,30 +44,20 @@ public class GeneratorInformation1 {
 	private WebElement addtagButton;
 	@FindBy (xpath = "//button[contains (text(),'Apply')]")
 	private WebElement applyButton;
-	@FindBy (xpath = "//span[normalize-space()='Manufacturing']/parent::*//button[@title='Remove tag']")
+	@FindBy (xpath = "//span[contains (text(),'After Care')]/parent::*//button[@title='Remove tag']")
 	private WebElement manufacturingtagCancel;
-	@FindBy (xpath = "//span[normalize-space()='Summary']/parent::*//button[@title='Remove tag']")
+	@FindBy (xpath = "//span[contains (text(),'Tag779017')]/parent::*//button[@title='Remove tag']")
 	private WebElement summaryCancel;
-	@FindBy (xpath = "//span[normalize-space()='Medical Waste']/parent::*//button[@title='Remove tag']")
+	@FindBy (xpath = "//span[contains (text(),'Test Tag 98066')]/parent::*//button[@title='Remove tag']")
 	private WebElement medicalwasteCancel;
-	@FindBy (xpath = "//span[normalize-space()='Urgent']/parent::*//button[@title='Remove tag']")
+	@FindBy (xpath = "//span[contains (text(),'Med Waste')]/parent::*//button[@title='Remove tag']")
 	private WebElement urgentCancel;
-	@FindBy (xpath = "//span[normalize-space()='Newwwwww']/parent::*//button[@title='Remove tag']")
+	@FindBy (xpath = "//span[contains (text(),'BBg')]/parent::*//button[@title='Remove tag']")
 	private WebElement newCancel;
-	@FindBy (xpath = "//span[normalize-space()='Test Tag 63093']/parent::*//button[@title='Remove tag']")
+	@FindBy (xpath = "//span[contains (text(),'Tag647650')]/parent::*//button[@title='Remove tag']")
 	private WebElement testCancel;
-	@FindBy (xpath = "//span[normalize-space()='School']/parent::*//button[@title='Remove tag']")
+	@FindBy (xpath = "//span[contains (text(),'Test Tag 99850')]/parent::*//button[@title='Remove tag']")
 	private WebElement schoolCancel;
-	@FindBy (xpath = "//span[normalize-space()='Less Priority']/parent::*//button[@title='Remove tag']")
-	private WebElement lesspriorityCancel;
-	@FindBy (xpath = "//span[normalize-space()='Regular tag']/parent::*//button[@title='Remove tag']")
-	private WebElement regularTagcancel;
-	@FindBy (xpath = "//span[normalize-space()='Hospital']/parent::*//button[@title='Remove tag']")
-	private WebElement hospitalCancel;
-	@FindBy (xpath = "//span[normalize-space()='Construction']/parent::*//button[@title='Remove tag']")
-	private WebElement constructionCancel;
-	@FindBy (xpath = "//span[normalize-space()='New Gen']/parent::*//button[@title='Remove tag']")
-	private WebElement newgenCancel;
 	@FindBy (xpath = "(//button[contains (text(),'Cancel')])[1]")
 	private WebElement cancelButton;
 	@FindBy (xpath = "//input[@placeholder='Enter Generator Name']")
@@ -89,13 +80,13 @@ public class GeneratorInformation1 {
 	private WebElement generatorNote;
 	@FindBy (xpath = "//button[@id='attach-to service location']")
 	private WebElement serviceLocation;
-	@FindBy (xpath = "//li[@role='option']//div[contains (text(),'BioTrust Medical Disposal')]")
+	@FindBy (xpath = "//div[contains (text(),'test satelite')]")
 	private WebElement biotrustLocation;
-	@FindBy (xpath = "//li[@role='option']//div[contains (text(),'(Henry) Premier Med Waste Solution display')]")
+	@FindBy (xpath = "//li[@role='option']//div[contains (text(),'(Henry) Premier Med Waste Solution')]")
 	private WebElement henryLocation;
 	@FindBy (xpath = "//input[@id='parent-account']")
 	private WebElement parentAccount;
-	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'G-101-0624 - Summit Healthcare')]")
+	@FindBy (xpath = "//li[@role='option']//span[contains (text(),'G-100-0050 - Parent Account')]")
 	private WebElement healthsummitGenerator;
 	@FindBy (xpath = "//p[contains (text(),'Unassign')]")
 	private WebElement unassignButton;
@@ -121,7 +112,7 @@ public class GeneratorInformation1 {
 	private WebElement generatoremailErmsg;
 	@FindBy (xpath = "//button[@id='generator-status']")
 	private WebElement generatorStatus;
-	@FindBy (xpath = "(//div[@class='relative inline-block']//button)[2]")
+	@FindBy (xpath = "//button[@aria-label='Information']")
 	private WebElement tooltip;
 	@FindBy (xpath = "//button[@aria-label='Close tooltip']")
 	private WebElement closetooltip;
@@ -296,6 +287,101 @@ public class GeneratorInformation1 {
 	
 	
 	
+	//UPDATE ADDRESS
+	
+	@FindBy (xpath = "(//button[contains (text(),'Update Address')])[1]")
+	private WebElement updateAddressButton;
+	@FindBy (xpath = "//div[@class='modal-box min-w-[50vw] w-[50vw] relative']")
+	private WebElement updateaddressModal;
+	@FindBy (xpath = "//input[@id='editable-service-address-attention']")
+	private WebElement updateAttentionfield;
+	@FindBy (xpath = "//input[@id='editable-service-address-street']")
+	private WebElement updateStreetfield;
+	@FindBy (xpath = "//input[@id='editable-service-address-city']")
+	private WebElement updateCityfiled;
+	@FindBy (xpath = "//input[@id='editable-service-address-state']")
+	private WebElement updateStatefiled;
+	@FindBy (xpath = "//input[@id='editable-service-address-zipCode']")
+	private WebElement updateZipcodefield;
+	@FindBy (xpath = "//input[@id='editable-service-address-suite']")
+	private WebElement updateSuitefield;
+	@FindBy (xpath = "//input[@id='editable-service-address-email']")
+	private WebElement updateEmailaddress;
+	@FindBy (xpath = "//input[@id='editable-service-address-phone']")
+	private WebElement updatePhonetextfield;
+	@FindBy (xpath = "//input[@id='editable-service-address-phone-ext']")
+	private WebElement updateExtfield;
+	@FindBy (xpath = "//span[contains (text(),'Coordinates:')]//following-sibling::span[contains (text(),'')]")
+	private WebElement cordinates; 
+	@FindBy (xpath = "//span[contains (text(),'Unable to resolve')]")
+	private WebElement unabletoResolve;
+	@FindBy (xpath = "(//button[contains (text(),'Update Address')])[2]")
+	private WebElement updateAddressmodalButton;
+    @FindBy (xpath = "//button[contains (text(),'Save New Address')]")
+	private WebElement savenewAddressbutton;
+	
+	
+	
+	public WebElement getSavenewAddressbutton() {
+		return savenewAddressbutton;
+	}
+
+	public WebElement getUpdateAddressmodalButton() {
+		return updateAddressmodalButton;
+	}
+
+	public WebElement getUnabletoResolve() {
+		return unabletoResolve;
+	}
+
+	public WebElement getCordinates() {
+		return cordinates;
+	}
+
+	public WebElement getUpdateExtfield() {
+		return updateExtfield;
+	}
+
+	public WebElement getUpdatePhonetextfield() {
+		return updatePhonetextfield;
+	}
+
+	public WebElement getUpdateEmailaddress() {
+		return updateEmailaddress;
+	}
+
+	public WebElement getUpdateSuitefield() {
+		return updateSuitefield;
+	}
+
+	public WebElement getUpdateZipcodefield() {
+		return updateZipcodefield;
+	}
+
+	public WebElement getUpdateStatefiled() {
+		return updateStatefiled;
+	}
+
+	public WebElement getUpdateCityfiled() {
+		return updateCityfiled;
+	}
+
+	public WebElement getUpdateStreetfield() {
+		return updateStreetfield;
+	}
+
+	public WebElement getUpdateAttentionfield() {
+		return updateAttentionfield;
+	}
+
+	public WebElement getUpdateaddressModal() {
+		return updateaddressModal;
+	}
+
+	public WebElement getUpdateAddressButton() {
+		return updateAddressButton;
+	}
+
 	public WebElement getGeneratorInformation() {
 		return generatorInformation;
 	}
@@ -748,25 +834,6 @@ public class GeneratorInformation1 {
 		return cancelButton;
 	}
 
-	public WebElement getNewgenCancel() {
-		return newgenCancel;
-	}
-
-	public WebElement getConstructionCancel() {
-		return constructionCancel;
-	}
-
-	public WebElement getHospitalCancel() {
-		return hospitalCancel;
-	}
-
-	public WebElement getRegularTagcancel() {
-		return regularTagcancel;
-	}
-
-	public WebElement getLesspriorityCancel() {
-		return lesspriorityCancel;
-	}
 
 	public WebElement getSchoolCancel() {
 		return schoolCancel;
@@ -854,15 +921,6 @@ public class GeneratorInformation1 {
 		Thread.sleep(200);
 		schoolCancel.click();
 		Thread.sleep(200);
-		lesspriorityCancel.click();
-		Thread.sleep(200);
-		regularTagcancel.click();
-		Thread.sleep(200);
-		hospitalCancel.click();
-		Thread.sleep(200);
-		newgenCancel.click();
-		Thread.sleep(200);
-		constructionCancel.click();
 	}
 	
 	public void OctonumberwithEdit()
@@ -920,13 +978,13 @@ public class GeneratorInformation1 {
 	public void ParentAccountwithPricebook()
 	{
 		Actions act = new Actions(driver);
-		act.moveToElement(pricebookGenerator).click().perform();	
+		act.moveToElement(healthsummitGenerator).click().perform();	
 	}
 	
 	public void KeeptheAssigned()
 	{
 		parentAccount.click();
-		pricebookGenerator.click();
+		healthsummitGenerator.click();
 		Actions act = new Actions(driver);
 		act.moveToElement(unassignButton).click().perform();
 		WebElement location = driver.findElement(By.xpath("//div[@class='modal-box']"));
@@ -1055,7 +1113,7 @@ public class GeneratorInformation1 {
 		                By.xpath("//input[@placeholder='Search by Name, Phone Number, Email, or Address']")));
 
 		searchoption.click();
-		searchoption.sendKeys("Max_298310");
+		searchoption.sendKeys("Max_486561");
 		Thread.sleep(20000);
 
 		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -1063,7 +1121,7 @@ public class GeneratorInformation1 {
 		WebElement generator = wait2.until(
 		    ExpectedConditions.refreshed(
 		        ExpectedConditions.elementToBeClickable(
-		            By.xpath("//div[contains(text(),'OCTO Number')]/following::div[contains(text(),'G-108-3316')]")
+		            By.xpath("//div[contains(text(),'OCTO Number')]/following::div[contains(text(),'G-103-5542')]")
 		        )
 		    )
 		);
@@ -1142,6 +1200,28 @@ public class GeneratorInformation1 {
 	System.out.println("Tuesday closing time  dropdown is disabled.");			      
 	    
 }
+	
+	 public void scrollToElement(WebElement element) {
+		    JavascriptExecutor js = (JavascriptExecutor) driver;
+		    js.executeScript(
+		        "arguments[0].scrollIntoView({behavior:'smooth', block:'center'});",
+		        element
+		    );
+		}
+	 
+	 public void UpdateState() throws InterruptedException
+	 {
+	        updateStatefiled.click();
+			aZstate.click();
+			Thread.sleep(200);
+			updateStatefiled.click();
+			Actions act = new Actions(driver);
+			act.moveToElement(fLstate).click().perform();
+			Thread.sleep(200);
+			updateStatefiled.click();
+			Actions act1 = new Actions(driver);
+			act1.moveToElement(wVState).click().perform();
+	 }
 
 	
 }

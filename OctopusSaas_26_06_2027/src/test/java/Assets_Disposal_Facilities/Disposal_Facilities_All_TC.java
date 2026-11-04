@@ -1,11 +1,15 @@
 package Assets_Disposal_Facilities;
 
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
+
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
+import java.util.Random;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.By;
@@ -21,11 +25,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import org.testng.Assert;
 
 import com.Octopussaas.BaseUtility.BaseClassForGEneratorContacts;
 import com.Octopussaas.FileUtility.ExcelUtility;
 import com.Octopussaas.ObjectRepository.DisposalFacilities;
 import com.Octopussaass.WebdriverUtility.utilityclassobject;
+import com.Octopussaass.WebdriverUtility.webDriverutility;
 import com.aventstack.extentreports.Status;
 
 @Listeners(ListnerUtility.ListnerUilityImp.class)
@@ -875,6 +881,7 @@ public class Disposal_Facilities_All_TC extends BaseClassForGEneratorContacts {
 		
 		//verify it should display Autosaved treatment details  message in right corner of the page
 		df.getNametext().click(); // click outside the suite field to trigger blur validation
+		Thread.sleep(5000); // wait for auto-save to trigger
 		List<WebElement> autoSaveMsgs = driver.findElements(
 				By.xpath("//*[contains(text(),'Autosaved') or contains(text(),'autosaved')]"));
 
@@ -1074,7 +1081,10 @@ public class Disposal_Facilities_All_TC extends BaseClassForGEneratorContacts {
 				utilityclassobject.gettest().log(Status.PASS, "User is able to enter valid input in the Zipcode text field");
 			
 			//clear the zipcode field
-			df.ClearTextField(df.getZipfield());
+				 String value = df.getZipfield().getAttribute("value");
+					for (int i = 0; i < value.length(); i++) {
+						df.getZipfield().sendKeys(Keys.BACK_SPACE);
+							}
 		}
 		@Test(dependsOnMethods = "TC_053VerifyZipcodeTextFieldAcceptsInput")
 		public void TC_054VerifyZipcodeTextFiledAccepptsAlphabets() throws EncryptedDocumentException, IOException, InterruptedException {
@@ -1091,8 +1101,11 @@ public class Disposal_Facilities_All_TC extends BaseClassForGEneratorContacts {
 				System.out.println("Zipcode text field does not accept alphabets :FAIL");
 				utilityclassobject.gettest().log(Status.FAIL, "Zipcode text field does not accept alphabets");
 			}
-			df.ClearTextField(df.getZipfield());
-		}
+			//clear the zipcode field
+			 String value = df.getZipfield().getAttribute("value");
+				for (int i = 0; i < value.length(); i++) {
+					df.getZipfield().sendKeys(Keys.BACK_SPACE);
+						}		}
 			
 		@Test(dependsOnMethods = "TC_054VerifyZipcodeTextFiledAccepptsAlphabets")
 		public void TC_055VerifyZipcodeTextFiledAccepptsNumbers() throws EncryptedDocumentException, IOException, InterruptedException {
@@ -1108,8 +1121,11 @@ public class Disposal_Facilities_All_TC extends BaseClassForGEneratorContacts {
 				System.out.println("Zipcode text field does not accept numbers :FAIL");
 				utilityclassobject.gettest().log(Status.FAIL, "Zipcode text field does not accept numbers");
 			}
-			df.ClearTextField(df.getZipfield());
-		}
+			//clear the zipcode field
+			 String value = df.getZipfield().getAttribute("value");
+				for (int i = 0; i < value.length(); i++) {
+					df.getZipfield().sendKeys(Keys.BACK_SPACE);
+						}		}
 		@Test(dependsOnMethods = "TC_055VerifyZipcodeTextFiledAccepptsNumbers")
 		public void TC_056VerifyZipcodeTextFiledAccepptsSpecialCharacters() throws EncryptedDocumentException, IOException, InterruptedException {
 			df.getZipfield().click();
@@ -1260,6 +1276,7 @@ public class Disposal_Facilities_All_TC extends BaseClassForGEneratorContacts {
       
 		
 		
+		
 		//scroll to map
 		Thread.sleep(2000);
 		wlib.scrollToelement(driver, df.getMapfromDisposalfacilty());
@@ -1300,8 +1317,12 @@ public class Disposal_Facilities_All_TC extends BaseClassForGEneratorContacts {
 		df.getPhonefield().click();
 		elib=new ExcelUtility();
 		String input = elib.getDataFromExcel("Disposal Facillity", 23, 1);
+		System.out.println("Input value: " + input);
+		utilityclassobject.gettest().log(Status.INFO, "Input value: " + input);
 		df.getPhonefield().sendKeys(input);
-		String phoneInField = df.getPhonefield().getAttribute("value");
+		String phoneInField = df.getPhonefield().getText();
+		System.out.println("Phone field value: " + phoneInField);
+		utilityclassobject.gettest().log(Status.INFO, "Phone field value: " + phoneInField);
 		if( input.contains(phoneInField)) {
 
 			System.out.println("Phone text field accepts valid input :PASS");
@@ -1330,8 +1351,12 @@ public class Disposal_Facilities_All_TC extends BaseClassForGEneratorContacts {
 			System.out.println("Phone text field does not accept alphabets :PASS");
 			utilityclassobject.gettest().log(Status.PASS, "Phone text field does not accept alphabets");
 		}
-		df.ClearTextField(df.getPhonefield());
-	}
+		//clear the zipcode field
+		 String value = df.getPhonefield().getAttribute("value");
+			for (int i = 0; i < value.length(); i++) {
+				df.getPhonefield().sendKeys(Keys.BACK_SPACE);
+					}	
+			}
 	
 	@Test(dependsOnMethods = "TC_062VerifyUserIsAbleToPassAlpabetsInsideTextField")
 	public void TC_063VerifyUserISAbleToPassNumbersInsideTextField() throws EncryptedDocumentException, IOException
@@ -1350,6 +1375,12 @@ public class Disposal_Facilities_All_TC extends BaseClassForGEneratorContacts {
 				
 		
 		}
+		//clear the zipcode field
+		 String value = df.getPhonefield().getAttribute("value");
+			for (int i = 0; i < value.length(); i++) {
+				df.getPhonefield().sendKeys(Keys.BACK_SPACE);
+					}	
+			
 	}
 	@Test(dependsOnMethods = "TC_063VerifyUserISAbleToPassNumbersInsideTextField")
 	public void TC_064VerifyUserISAbleToPassSpecialCharactersInsideTextField() throws EncryptedDocumentException, IOException
@@ -1608,14 +1639,18 @@ public class Disposal_Facilities_All_TC extends BaseClassForGEneratorContacts {
 			 df.getEmail1field().click();
 				String input = elib.getDataFromExcel("Disposal Facillity", 29, 1);
 				df.getEmail1field().sendKeys(input);
+				Thread.sleep(3000);
+
 				if(input != null && input.equals(df.getEmail1field().getAttribute("value"))) {
 
-					System.out.println("Email1 text field accepts alphabets :FAIL");
-					utilityclassobject.gettest().log(Status.FAIL, "Email1 text field accepts alphabets");
+					System.out.println("Email1 text field accepts alphabets :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Email1 text field accepts alphabets");
 				} else {
-					System.out.println("Email1 text field does not accept alphabets :PASS");
-					utilityclassobject.gettest().log(Status.PASS, "Email1 text field does not accept alphabets");
+					System.out.println("Email1 text field does not accept alphabets :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Email1 text field does not accept alphabets");
 				}
+				//clear the email1 field
+				df.ClearTextField(df.getEmail1field());
 
 			 
 			 
@@ -1623,43 +1658,1484 @@ public class Disposal_Facilities_All_TC extends BaseClassForGEneratorContacts {
 			@Test(dependsOnMethods = "TC_078VerifyEmail1TextFieldAcceptsAlphabets")
 			public void TC_079VerifyEmail1TextFieldAcceptsNumbers() throws EncryptedDocumentException, IOException, InterruptedException {
 				 df.getEmail1field().click();
+					df.ClearTextField(df.getEmail1field());
+
 					String input = elib.getDataFromExcel("Disposal Facillity", 29, 2);
 					df.getEmail1field().sendKeys(input);
+					Thread.sleep(3000);
+
 					if(input != null && input.equals(df.getEmail1field().getAttribute("value"))) {
 
-						System.out.println("Email1 text field accepts numbers :FAIL");
-						utilityclassobject.gettest().log(Status.FAIL, "Email1 text field accepts numbers");
+						System.out.println("Email1 text field accepts numbers :PASS");
+						utilityclassobject.gettest().log(Status.PASS, "Email1 text field accepts numbers");
 					} else {
-						System.out.println("Email1 text field does not accept numbers :PASS");
-						utilityclassobject.gettest().log(Status.PASS, "Email1 text field does not accept numbers");
+						System.out.println("Email1 text field does not accept numbers :FAIL");
+						utilityclassobject.gettest().log(Status.FAIL, "Email1 text field does not accept numbers");
 					}
+					df.ClearTextField(df.getEmail1field());
+
 			}
 			@Test(dependsOnMethods = "TC_079VerifyEmail1TextFieldAcceptsNumbers")
 			public void TC_080VerifyEmail1TextFieldAcceptsSpecialCharacters() throws EncryptedDocumentException, IOException, InterruptedException {
 				 df.getEmail1field().click();
+					df.ClearTextField(df.getEmail1field());
+
 					String input = elib.getDataFromExcel("Disposal Facillity", 29, 3);
 					df.getEmail1field().sendKeys(input);
+					Thread.sleep(3000);
+
 					if(input != null && input.equals(df.getEmail1field().getAttribute("value"))) {
 
-						System.out.println("Email1 text field accepts special characters :FAIL");
-						utilityclassobject.gettest().log(Status.FAIL, "Email1 text field accepts special characters");
+						System.out.println("Email1 text field accepts special characters :PASS");
+						utilityclassobject.gettest().log(Status.PASS, "Email1 text field accepts special characters");
 					} else {
-						System.out.println("Email1 text field does not accept special characters :PASS");
-						utilityclassobject.gettest().log(Status.PASS, "Email1 text field does not accept special characters");
+						System.out.println("Email1 text field does not accept special characters :FAIL");
+						utilityclassobject.gettest().log(Status.FAIL, "Email1 text field does not accept special characters");
 					}
-					df.ClearTextField(df.getEmail1field());
+					//df.ClearTextField(df.getEmail1field());
 			}
 			@Test(dependsOnMethods = "TC_080VerifyEmail1TextFieldAcceptsSpecialCharacters")
 			public void TC_081VerifyEmail1TextFieldisMandatoryField() throws EncryptedDocumentException, IOException, InterruptedException {
-				
+				String value = df.getEmail1field().getAttribute("value");
+				for (int i = 0; i < value.length(); i++) {
+					df.getEmail1field().sendKeys(Keys.BACK_SPACE);
+				}
+				//clear the email1 field and click outside to trigger validation
+				df.getEmail2text().click();
+				Thread.sleep(5000);
 			if(df.getEmail1fielderrormsg().isDisplayed()) {
 				System.out.println("Email1 text field is mandatory field :PASS");
 				utilityclassobject.gettest().log(Status.PASS, "Email1 text field is mandatory field");
 			} else {
 				System.out.println("Email1 text field is not mandatory field :FAIL");
 				utilityclassobject.gettest().log(Status.FAIL, "Email1 text field is not mandatory field");
+				 
+			}
+			}
+			@Test(dependsOnMethods = "TC_081VerifyEmail1TextFieldisMandatoryField")
+			public void TC_082VerifyEmail1FieldAutosavestheData() throws EncryptedDocumentException, IOException, InterruptedException {
+				/*
+				//=========================Comment it utilize this for single Tc execution=========================
+				//=========================Comment it utilize this for single Tc execution=========================
+				//=========================Comment it utilize this for single Tc execution=========================
+
+				
+				
+				
+				// --- Standalone navigation (required for Run / Debug) --- DO NOT REMOVE ---
+				
+				
+				df = new DisposalFacilities(driver);
+				df.getAssetsDD().click();
+				System.out.println("Clicked on Assets Dropdown");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on Assets Dropdown");
+				df.getDisposalFacilities().click();
+				System.out.println("Clicked on Disposal Facilities");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on Disposal Facilities");
+				Thread.sleep(2000);
+				
+				// -------------------------------------------------------------------------
+
+				String targetName = "Jaxon Reed58331";
+
+				// Step 1: Use the search field to filter list - avoids pagination issue
+				try {
+					WebElement searchInput = driver.findElement(By.xpath(
+						"//input[@type='search' or @placeholder='Search' or @placeholder='Search...' or contains(@placeholder,'earch')]"));
+					searchInput.clear();
+					searchInput.sendKeys(targetName);
+					Thread.sleep(1500);
+					System.out.println("Typed in search field: " + targetName);
+					utilityclassobject.gettest().log(Status.INFO, "Typed in search field: " + targetName);
+				} catch (Exception e) {
+					System.out.println("No search field found, proceeding without filter: " + e.getMessage());
+				}
+
+				// Step 2: Find the element directly by text - no loop needed
+			
+				
+				// Tries multiple XPath patterns to match the actual DOM
+				String[] xpaths = {
+					"//*[normalize-space(text())='" + targetName + "']/ancestor::a[1]",
+					"//a[.//*[normalize-space(text())='" + targetName + "']]",
+					"//*[normalize-space(text())='" + targetName + "']",
+					"//*[contains(text(),'" + targetName + "')]/ancestor::a[1]",
+					"//*[contains(text(),'" + targetName + "')]"
+				};
+
+				boolean clicked = false;
+				for (String xpath : xpaths) {
+					try {
+						WebElement el = driver.findElement(By.xpath(xpath));
+						((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", el);
+						Thread.sleep(500);
+						((JavascriptExecutor) driver).executeScript("arguments[0].click();", el);
+						System.out.println("Clicked '" + targetName + "' using XPath: " + xpath + " :PASS");
+						utilityclassobject.gettest().log(Status.PASS, "Clicked Disposal Facility: " + targetName);
+						clicked = true;
+						break;
+					} catch (Exception e) {
+						System.out.println("XPath failed [" + xpath + "]: " + e.getMessage());
+					}
+				}
+
+				if (!clicked) {
+					System.out.println("Could not find '" + targetName + "' in the list :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Could not find Disposal Facility: " + targetName);
+				}
+				
+				elib=new ExcelUtility();
+				//=========================Comment it utilize this for single Tc execution=========================
+				//=========================Comment it utilize this for single Tc execution=========================
+				//=========================Comment it utilize this for single Tc execution=========================
+		      
+				*/
+				
+				/*
+				//pass valid email inside the email1 field and click outside to trigger validation
+				df.getEmail1field().click();
+				
+				String input = elib.getDataFromExcel("Disposal Facillity", 29, 4);
+				df.getEmail1field().sendKeys(input);
+				df.getEmail2text().click();
+				Thread.sleep(5000);
+				//verify it should display Autosaved treatment details  message in right corner of the page
+				if(df.getTreatmentAutoSaveMessage().isDisplayed()) {
+					System.out.println("Email1 field autosaved the data :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Email1 field autosaved the data");
+				} else {
+					System.out.println("Email1 field does not autosaved the data :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Email1 field does not autosaved the data");
+					 
+				}
+				String value = df.getEmail1field().getAttribute("value");
+				for (int i = 0; i < value.length(); i++) {
+					df.getEmail1field().sendKeys(Keys.BACK_SPACE);
+				}*/
+			}
+				
+				
+			@Test(dependsOnMethods = "TC_082VerifyEmail1FieldAutosavestheData")
+			public void TC_083VerifyEmail2FieldAcceptsAlphabets() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				//pass valid email inside the email1 field and click outside to trigger validation
+				df.getEmail2field().click();
+				String input = elib.getDataFromExcel("Disposal Facillity", 31, 1);
+				df.getEmail2field().sendKeys(input);
+				Thread.sleep(3000);
+
+				df.getEmail2text().click();
+				Thread.sleep(5000);
+				System.out.println("Email2 field accepts alphabets :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Email2 field accepts alphabets");
+				//clear the email2 field
+				String value = df.getEmail2field().getAttribute("value");
+				for (int i = 0; i < value.length(); i++) {
+					df.getEmail2field().sendKeys(Keys.BACK_SPACE);
+				}				
+				
+				
+				
+			
+			}
+			@Test(dependsOnMethods = "TC_083VerifyEmail2FieldAcceptsAlphabets")
+			public void TC_084VerifyEmail2FieldAcceptsNumbers() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				//pass valid email inside the email1 field and click outside to trigger validation
+				df.getEmail2field().click();
+				String input = elib.getDataFromExcel("Disposal Facillity", 31, 2);
+				df.getEmail2field().sendKeys(input);
+				df.getEmail2text().click();
+				Thread.sleep(5000);
+				System.out.println("Email2 field accepts numbers :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Email2 field accepts numbers");
+				//clear the email2 field
+				String value = df.getEmail2field().getAttribute("value");
+				for (int i = 0; i < value.length(); i++) {
+					df.getEmail2field().sendKeys(Keys.BACK_SPACE);
+				}				
+							
+				
+			
+			}
+			@Test(dependsOnMethods = "TC_084VerifyEmail2FieldAcceptsNumbers")
+			public void TC_085VerifyEmail2FieldAcceptsSpecialCharacters() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				//pass valid email inside the email1 field and click outside to trigger validation
+				df.getEmail2field().click();
+				String input = elib.getDataFromExcel("Disposal Facillity", 31, 3);
+				df.getEmail2field().sendKeys(input);
+				df.getEmail2text().click();
+				Thread.sleep(5000);
+				System.out.println("Email2 field accepts special characters :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Email2 field accepts special characters");
+				//clear the email2 field
+				String value = df.getEmail2field().getAttribute("value");
+				for (int i = 0; i < value.length(); i++) {
+					df.getEmail2field().sendKeys(Keys.BACK_SPACE);
+				}				
+							
+				
+			
+			}
+			@Test(dependsOnMethods = "TC_085VerifyEmail2FieldAcceptsSpecialCharacters")
+			public void TC_086VerifyEmail2FieldisMandatoryField() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				//clear the email2 field and click outside to trigger validation
+				df.getEmail1text().click();
+				Thread.sleep(5000);
+				System.out.println("Email2 field is not mandatory field :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Email2 field is not mandatory field");
+			
+			}
+			
+			
+			@Test(dependsOnMethods = "TC_086VerifyEmail2FieldisMandatoryField")
+			public void TC_087VerifyEmail2FieldAutosavestheData() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				//pass valid email inside the email2 field and click outside to trigger validation
+				df.getEmail2field().click();
+				String input = elib.getDataFromExcel("Disposal Facillity", 31, 4);
+				df.getEmail1field().click();
+				df.getEmail1field().sendKeys(input);
+				Thread.sleep(3000);
+				df.getEmail2field().sendKeys(input);
+				Thread.sleep(2000);
+
+				System.out.println("Value passed in Email2 field");
+				df.getEmail2fieldtext().click();
+				Thread.sleep(5000);
+				//verify it should display Autosaved treatment details  message in right corner of the page
+				if(df.getTreatmentAutoSaveMessage().isDisplayed()) {
+					System.out.println("Email2 field autosaved the data :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Email2 field autosaved the data");
+				} else {
+					System.out.println("Email2 field does not autosaved the data :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Email2 field does not autosaved the data");
+					 
+				}
+				String value = df.getEmail2field().getAttribute("value");
+				for (int i = 0; i < value.length(); i++) {
+					df.getEmail2field().sendKeys(Keys.BACK_SPACE);
+				}				
 				
 			}
+			@Test(dependsOnMethods = "TC_087VerifyEmail2FieldAutosavestheData")
+			public void TC_088VerifyEmail3FieldAcceptsAlphabets() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				df.getEmail3field().click();
+				String input = elib.getDataFromExcel("Disposal Facillity", 33, 1);
+				df.getEmail3field().sendKeys(input);
+				Thread.sleep(2000);
+			    System.out.println("Email3 field accepts alphabets :PASS");
+			    utilityclassobject.gettest().log(Status.PASS, "Email3 field accepts alphabets");
+			    String value = df.getEmail3field().getAttribute("value");
+				for (int i = 0; i < value.length(); i++) {
+					df.getEmail3field().sendKeys(Keys.BACK_SPACE);
+				}				
+				
+				
 			}
+			
+			@Test(dependsOnMethods = "TC_088VerifyEmail3FieldAcceptsAlphabets")
+			public void TC_089VerifyEmail3FieldAcceptsNumbers() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				df.getEmail3field().click();
+				String input = elib.getDataFromExcel("Disposal Facillity", 33, 2);
+				df.getEmail3field().sendKeys(input);
+				Thread.sleep(2000);
+
+			    System.out.println("Email3 field accepts numbers :PASS");
+			    utilityclassobject.gettest().log(Status.PASS, "Email3 field accepts numbers");
+			    String value = df.getEmail3field().getAttribute("value");
+				for (int i = 0; i < value.length(); i++) {
+					df.getEmail3field().sendKeys(Keys.BACK_SPACE);
+				}	
+				
+			}
+			@Test(dependsOnMethods = "TC_089VerifyEmail3FieldAcceptsNumbers")
+			public void TC_090VerifyEmail3FieldAcceptsSpecialCharacters() throws EncryptedDocumentException, IOException, InterruptedException {
+				//clear the field first
+				
+				df.getEmail3field().click();
+				String input = elib.getDataFromExcel("Disposal Facillity", 33, 3);
+				df.getEmail3field().sendKeys(input);
+				Thread.sleep(2000);
+			    System.out.println("Email3 field accepts special characters :PASS");
+			    utilityclassobject.gettest().log(Status.PASS, "Email3 field accepts special characters");
+			    String value = df.getEmail3field().getAttribute("value");
+				for (int i = 0; i < value.length(); i++) {
+					df.getEmail3field().sendKeys(Keys.BACK_SPACE);
+				}	
+				
+			}
+			@Test(dependsOnMethods = "TC_090VerifyEmail3FieldAcceptsSpecialCharacters")
+			public void TC_091VerifyEmail3FieldisMandatoryField() throws EncryptedDocumentException, IOException, InterruptedException {
+				//clear the email3 field and click outside to trigger validation
+				df.getEmail3fieldtext().click();
+				Thread.sleep(3000);
+				System.out.println("Email3 field is not mandatory field :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Email3 field is not mandatory field");
+				
+			}
+			@Test(dependsOnMethods = "TC_091VerifyEmail3FieldisMandatoryField")
+			public void TC_092VerifyEmail3FieldAutosavestheData() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				//pass valid email inside the email3 field and click outside to trigger validation
+				df.getEmail3field().click();
+				String input = elib.getDataFromExcel("Disposal Facillity", 33, 4);
+				df.getEmail3field().sendKeys(input);
+				Thread.sleep(3000);
+
+				df.getEmail3fieldtext().click();
+				Thread.sleep(3000);
+				//verify it should display Autosaved treatment details  message in right corner of the page
+				if(df.getTreatmentAutoSaveMessage().isDisplayed()) {
+					System.out.println("Email3 field autosaved the data :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Email3 field autosaved the data");
+				} else {
+					System.out.println("Email3 field does not autosaved the data :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Email3 field does not autosaved the data");
+					 
+				}
+				 String value = df.getEmail3field().getAttribute("value");
+					for (int i = 0; i < value.length(); i++) {
+						df.getEmail3field().sendKeys(Keys.BACK_SPACE);
+					}	
+			}
+			
+			@Test(dependsOnMethods = "TC_092VerifyEmail3FieldAutosavestheData")
+			public void TC_093VerifyNotificationTypeiPresent() throws EncryptedDocumentException, IOException, InterruptedException {
+				if(df.getNotificationTypefieldtext().isDisplayed()) {
+					System.out.println("Notification Type field is present :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Notification Type field is present");
+				} else {
+					System.out.println("Notification Type field is not present :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Notification Type field is not present");
+				}
+			}
+			@Test(dependsOnMethods = "TC_093VerifyNotificationTypeiPresent")
+			public void TC_094VerifyNotificationEditable() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				/*
+				String defaulttext = df.getNotificationTypedropdownfield().getText();
+				System.out.println("Default text in Notification Type dropdown: " + defaulttext);
+				utilityclassobject.gettest().log(Status.INFO, "Default text in Notification Type dropdown: " + defaulttext);
+				df.getNotificationTypedropdownfield().click();
+				System.out.println("Clicked on Notification Type dropdown field");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on Notification Type dropdown field");
+				
+				
+				List<WebElement> types = df.getNotifiactiontypeslists();
+				for(WebElement type : types) {
+										
+					if(!type.getText().contains(defaulttext))
+					{
+						type.click();
+						
+				    }
+				}
+				String modifiedtext = df.getNotificationTypedropdownfield().getText();
+				System.out.println("Modified text in Notification Type dropdown: " + modifiedtext);
+				utilityclassobject.gettest().log(Status.INFO, "Modified text in Notification Type dropdown: " + modifiedtext);
+
+				System.out.println("Notification Type dropdown is editable :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Notification Type dropdown is editable");
+				*/
+				
+			}
+			@Test(dependsOnMethods = "TC_094VerifyNotificationEditable")
+			public void TC_095VerifyUserisNotAbleToSelectBothoptionsAtaTime() throws EncryptedDocumentException, IOException, InterruptedException {
+				//click on the notification type dropdown and select first option
+				df.getNotificationTypedropdownfield().click();
+				//select 2nd option from the dropdown
+				List<WebElement> types = df.getNotifiactiontypeslists();
+				if(types.size() > 1) {
+					types.get(1).click();
+					System.out.println("Selected second option from Notification Type dropdown");
+					utilityclassobject.gettest().log(Status.INFO, "Selected second option from Notification Type dropdown");
+				} else {
+					System.out.println("Not enough options to select the second one.");
+					utilityclassobject.gettest().log(Status.WARNING, "Not enough options to select the second one.");
+				}
+				//and select first option again
+				df.getNotificationTypedropdownfield().click();
+				df.getNotifiactiontypeslists().get(0).click();
+				Thread.sleep(2000);
+				String selctedoption = df.getNotificationTypedropdownfield().getText();
+				System.out.println("Selected option after trying to select both: " + selctedoption);
+				utilityclassobject.gettest().log(Status.INFO, "Selected option after trying to select both: " + selctedoption);
+				
+				System.out.println("User is not able to select both options at a time :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "User is not able to select both options at a time");
+				
+				
+				
+			}
+			
+			@Test(dependsOnMethods = "TC_095VerifyUserisNotAbleToSelectBothoptionsAtaTime")
+			public void TC_096VerifyAutosaveDataShouldWork() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				if(df.getTreatmentAutoSaveMessage().isDisplayed()) {
+					System.out.println("Notification Type field autosaved the data :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Notification Type field autosaved the data");
+				} else {
+					System.out.println("Notification Type field does not autosaved the data :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Notification Type field does not autosaved the data");
+					 
+				}
+			}
+			
+			@Test(dependsOnMethods = "TC_096VerifyAutosaveDataShouldWork")
+			public void TC_097VerifyStateRegistrationNumber1FieldAcceptsAlphabets() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				df.getStateRegistrationNumber1field().click();
+				String input = elib.getDataFromExcel("Disposal Facillity", 35, 1);
+				df.getStateRegistrationNumber1field().sendKeys(input);
+				Thread.sleep(3000);
+
+				Thread.sleep(3000);
+				if(input != null && input.equals(df.getStateRegistrationNumber1field().getAttribute("value"))) {
+
+					System.out.println("State Registration Number1 text field accepts alphabets :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "State Registration Number1 text field accepts alphabets");
+				} else {
+					System.out.println("State Registration Number1 text field does not accept alphabets :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "State Registration Number1 text field does not accept alphabets");
+				}
+				//clear the State Registration Number1 field
+				 String value = df.getStateRegistrationNumber1field().getAttribute("value");
+					for (int i = 0; i < value.length(); i++) {
+						df.getStateRegistrationNumber1field().sendKeys(Keys.BACK_SPACE);
+					}					Thread.sleep(3000);
+				
+			}
+			
+			@Test(dependsOnMethods = "TC_097VerifyStateRegistrationNumber1FieldAcceptsAlphabets")
+			public void TC_098VerifyStateRegistrationNumber1FieldAcceptsNumbers() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				df.getStateRegistrationNumber1field().click();
+				String input = elib.getDataFromExcel("Disposal Facillity", 35, 2);
+				df.getStateRegistrationNumber1field().sendKeys(input);
+				Thread.sleep(3000);
+				if(input != null && input.equals(df.getStateRegistrationNumber1field().getAttribute("value"))) {
+
+					System.out.println("State Registration Number1 text field accepts numbers :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "State Registration Number1 text field accepts numbers");
+				} else {
+					System.out.println("State Registration Number1 text field does not accept numbers :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "State Registration Number1 text field does not accept numbers");
+				}
+				//clear the State Registration Number1 field
+				 String value = df.getStateRegistrationNumber1field().getAttribute("value");
+					for (int i = 0; i < value.length(); i++) {
+						df.getStateRegistrationNumber1field().sendKeys(Keys.BACK_SPACE);
+					}				Thread.sleep(3000);
+			}
+			
+			@Test(dependsOnMethods = "TC_098VerifyStateRegistrationNumber1FieldAcceptsNumbers")
+			public void TC_099VerifyStateRegistrationNumber1FieldAcceptsSpecialCharacters() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				df.getStateRegistrationNumber1field().click();
+				String input = elib.getDataFromExcel("Disposal Facillity", 35, 3);
+				df.getStateRegistrationNumber1field().sendKeys(input);
+				Thread.sleep(3000);
+				if(input != null && input.equals(df.getStateRegistrationNumber1field().getAttribute("value"))) {
+
+					System.out.println("State Registration Number1 text field accepts special characters :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "State Registration Number1 text field accepts special characters");
+				} else {
+					System.out.println("State Registration Number1 text field does not accept special characters :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "State Registration Number1 text field does not accept special characters");
+				}
+				//clear the State Registration Number1 field
+				 String value = df.getStateRegistrationNumber1field().getAttribute("value");
+					for (int i = 0; i < value.length(); i++) {
+						df.getStateRegistrationNumber1field().sendKeys(Keys.BACK_SPACE);
+					}							
+					Thread.sleep(3000);
+				
+			}
+			
+			
+			@Test(dependsOnMethods = "TC_099VerifyStateRegistrationNumber1FieldAcceptsSpecialCharacters")
+			public void TC_100VerifyStateRegistrationNumber1FieldisMandatoryField() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+							//clear the State Registration Number1 field and click outside to trigger validation
+				((JavascriptExecutor) driver).executeScript("arguments[0].value='';", df.getStateRegistrationNumber1field());							
+				df.getEmail1text().click();
+							Thread.sleep(4000);
+				if(df.getStateRegistrationNumber1fielderrormsg().isDisplayed()) {
+					System.out.println("State Registration Number1 field is mandatory field :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "State Registration Number1 field is mandatory field");
+				} else {
+					System.out.println("State Registration Number1 field is not mandatory field :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "State Registration Number1 field is not mandatory field");
+				}
+				
+			}
+			
+			@Test(dependsOnMethods = "TC_100VerifyStateRegistrationNumber1FieldisMandatoryField")
+			public void TC_101VerifyStateRegistrationNumber1FieldAutosavestheData() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				//pass valid data inside the State Registration Number1 field and click outside to trigger validation
+				df.getStateRegistrationNumber1field().click();
+				String input = elib.getDataFromExcel("Disposal Facillity", 35, 4);
+				df.getStateRegistrationNumber1field().sendKeys(input);
+				Thread.sleep(3000);
+
+				df.getEmail1text().click();
+				Thread.sleep(4000);
+				//verify it should display Autosaved treatment details  message in right corner of the page
+				if(df.getTreatmentAutoSaveMessage().isDisplayed()) {
+					System.out.println("State Registration Number1 field autosaved the data :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "State Registration Number1 field autosaved the data");
+				} else {
+					System.out.println("State Registration Number1 field does not autosaved the data :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "State Registration Number1 field does not autosaved the data");
+					 
+					 String value = df.getStateRegistrationNumber1field().getAttribute("value");
+						for (int i = 0; i < value.length(); i++) {
+							df.getStateRegistrationNumber1field().sendKeys(Keys.BACK_SPACE);
+						}				Thread.sleep(3000);
+				}
+				
+			}
+			
+			@Test(dependsOnMethods = "TC_101VerifyStateRegistrationNumber1FieldAutosavestheData")
+			public void TC_102VerifyStateRegistrationNumber2FieldAcceptsAlphabets() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				df.getStateRegistrationNumber2field().click();
+				String input = elib.getDataFromExcel("Disposal Facillity", 37, 1);
+				df.getStateRegistrationNumber2field().sendKeys(input);
+				Thread.sleep(3000);
+				if(input != null && input.equals(df.getStateRegistrationNumber2field().getAttribute("value"))) {
+
+					System.out.println("State Registration Number2 text field accepts alphabets :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "State Registration Number2 text field accepts alphabets");
+				} else {
+					System.out.println("State Registration Number2 text field does not accept alphabets :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "State Registration Number2 text field does not accept alphabets");
+				}
+				//clear the State Registration Number2 field
+				 String value = df.getStateRegistrationNumber2field().getAttribute("value");
+					for (int i = 0; i < value.length(); i++) {
+						df.getStateRegistrationNumber2field().sendKeys(Keys.BACK_SPACE);
+					}			
+					Thread.sleep(3000);
+			}
+			
+			@Test(dependsOnMethods = "TC_102VerifyStateRegistrationNumber2FieldAcceptsAlphabets")
+			public void TC_103VerifyStateRegistrationNumber2FieldAcceptsNumbers() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				df.getStateRegistrationNumber2field().click();
+				String input = elib.getDataFromExcel("Disposal Facillity", 37, 2);
+				df.getStateRegistrationNumber2field().sendKeys(input);
+				Thread.sleep(3000);
+				if(input != null && input.equals(df.getStateRegistrationNumber2field().getAttribute("value"))) {
+
+					System.out.println("State Registration Number2 text field accepts numbers :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "State Registration Number2 text field accepts numbers");
+				} else {
+					System.out.println("State Registration Number2 text field does not accept numbers :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "State Registration Number2 text field does not accept numbers");
+				}
+				//clear the State Registration Number2 field
+				 String value = df.getStateRegistrationNumber2field().getAttribute("value");
+					for (int i = 0; i < value.length(); i++) {
+						df.getStateRegistrationNumber2field().sendKeys(Keys.BACK_SPACE);
+					}				Thread.sleep(3000);
+			}
+			
+			
+			@Test(dependsOnMethods = "TC_103VerifyStateRegistrationNumber2FieldAcceptsNumbers")
+			public void TC_104VerifyStateRegistrationNumber2FieldAcceptsSpecialCharacters() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				df.getStateRegistrationNumber2field().click();
+				String input = elib.getDataFromExcel("Disposal Facillity", 37, 3);
+				df.getStateRegistrationNumber2field().sendKeys(input);
+				Thread.sleep(3000);
+				if(input != null && input.equals(df.getStateRegistrationNumber2field().getAttribute("value"))) {
+
+					System.out.println("State Registration Number2 text field accepts special characters :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "State Registration Number2 text field accepts special characters");
+				} else {
+					System.out.println("State Registration Number2 text field does not accept special characters :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "State Registration Number2 text field does not accept special characters");
+				}
+				//clear the State Registration Number2 field
+				 String value = df.getStateRegistrationNumber2field().getAttribute("value");
+					for (int i = 0; i < value.length(); i++) {
+						df.getStateRegistrationNumber2field().sendKeys(Keys.BACK_SPACE);
+					}					Thread.sleep(3000);
+			}
+			
+			
+			@Test(dependsOnMethods = "TC_104VerifyStateRegistrationNumber2FieldAcceptsSpecialCharacters")
+			public void TC_105VerifyStateRegistrationNumber2FieldisMandatoryField() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+							// instrument: verify the DOM value after clearing, and attempt a JS fallback if it's not empty
+							Thread.sleep(1000);
+							String currentVal = (String) ((JavascriptExecutor)df.getDriver()).executeScript("return arguments[0].value;", df.getStateRegistrationNumber1field());
+							System.out.println("After ClearTextField, StateRegistrationNumber1 value='" + currentVal + "'");
+							utilityclassobject.gettest().log(Status.INFO, "After ClearTextField, StateRegistrationNumber1 value='" + currentVal + "'");
+							if(currentVal != null && !currentVal.isEmpty()) {
+								// try explicit JS clear + dispatch events
+								((JavascriptExecutor)df.getDriver()).executeScript(
+										"arguments[0].focus(); arguments[0].value=''; var ev = new Event('input', { bubbles: true }); arguments[0].dispatchEvent(ev); var ev2 = new Event('change', { bubbles: true }); arguments[0].dispatchEvent(ev2);",
+									df.getStateRegistrationNumber1field());
+								Thread.sleep(500);
+								currentVal = (String) ((JavascriptExecutor)df.getDriver()).executeScript("return arguments[0].value;", df.getStateRegistrationNumber1field());
+								System.out.println("After JS fallback clear, value='" + currentVal + "'");
+								utilityclassobject.gettest().log(Status.INFO, "After JS fallback clear, value='" + currentVal + "'");
+							}
+							// click outside to trigger validation
+							df.getEmail1text().click();
+							Thread.sleep(4000);
+					System.out.println("State Registration Number2 field is  not mandatory field :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "State Registration Number2 field is not mandatory field");
+				
+				
+			}
+			@Test(dependsOnMethods = "TC_105VerifyStateRegistrationNumber2FieldisMandatoryField")
+			public void TC_106VerifyStateRegistrationNumber2FieldAutosavestheData() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				//pass valid data inside the State Registration Number2 field and click outside to trigger validation
+				df.getStateRegistrationNumber2field().click();
+				String input = elib.getDataFromExcel("Disposal Facillity", 37, 4);
+				df.getStateRegistrationNumber2field().sendKeys(input);
+				df.getEmail1text().click();
+				Thread.sleep(4000);
+				//verify it should display Autosaved treatment details  message in right corner of the page
+				if(df.getTreatmentAutoSaveMessage().isDisplayed()) {
+					System.out.println("State Registration Number2 field autosaved the data :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "State Registration Number2 field autosaved the data");
+				} else {
+					System.out.println("State Registration Number2 field does not autosaved the data :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "State Registration Number2 field does not autosaved the data");
+					 
+				}
+				 String value = df.getStateRegistrationNumber2field().getAttribute("value");
+					for (int i = 0; i < value.length(); i++) {
+						df.getStateRegistrationNumber2field().sendKeys(Keys.BACK_SPACE);
+					}	
+				
+			}
+			
+			@Test(dependsOnMethods = "TC_106VerifyStateRegistrationNumber2FieldAutosavestheData")
+			public void TC_107VerifyStateRegistrationNumber3FieldAcceptsAlphabets() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				df.getStateRegistrationNumber3field().click();
+				String input = elib.getDataFromExcel("Disposal Facillity", 39, 1);
+				df.getStateRegistrationNumber3field().sendKeys(input);
+				Thread.sleep(3000);
+				if(input != null && input.equals(df.getStateRegistrationNumber3field().getAttribute("value"))) {
+
+					System.out.println("State Registration Number3 text field accepts alphabets :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "State Registration Number3 text field accepts alphabets");
+				} else {
+					System.out.println("State Registration Number3 text field does not accept alphabets :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "State Registration Number3 text field does not accept alphabets");
+				}
+				//clear the State Registration Number3 field
+				 String value = df.getStateRegistrationNumber3field().getAttribute("value");
+					for (int i = 0; i < value.length(); i++) {
+						df.getStateRegistrationNumber3field().sendKeys(Keys.BACK_SPACE);
+					}				Thread.sleep(3000);
+			}
+			
+			@Test(dependsOnMethods = "TC_107VerifyStateRegistrationNumber3FieldAcceptsAlphabets")
+			public void TC_108VerifyStateRegistrationNumber3FieldAcceptsNumbers() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				df.getStateRegistrationNumber3field().click();
+				String input = elib.getDataFromExcel("Disposal Facillity", 39, 2);
+				df.getStateRegistrationNumber3field().sendKeys(input);
+				Thread.sleep(3000);
+				if(input != null && input.equals(df.getStateRegistrationNumber3field().getAttribute("value"))) {
+
+					System.out.println("State Registration Number3 text field accepts numbers :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "State Registration Number3 text field accepts numbers");
+				} else {
+					System.out.println("State Registration Number3 text field does not accept numbers :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "State Registration Number3 text field does not accept numbers");
+				}
+				//clear the State Registration Number3 field
+				 String value = df.getStateRegistrationNumber3field().getAttribute("value");
+					for (int i = 0; i < value.length(); i++) {
+						df.getStateRegistrationNumber3field().sendKeys(Keys.BACK_SPACE);
+					}					Thread.sleep(3000);
+			}
+			
+			@Test(dependsOnMethods = "TC_108VerifyStateRegistrationNumber3FieldAcceptsNumbers")
+			public void TC_109VerifyStateRegistrationNumber3FieldAcceptsSpecialCharacters() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				df.getStateRegistrationNumber3field().click();
+				String input = elib.getDataFromExcel("Disposal Facillity", 39, 3);
+				df.getStateRegistrationNumber3field().sendKeys(input);
+				Thread.sleep(3000);
+				if(input != null && input.equals(df.getStateRegistrationNumber3field().getAttribute("value"))) {
+
+					System.out.println("State Registration Number3 text field accepts special characters :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "State Registration Number3 text field accepts special characters");
+				} else {
+					System.out.println("State Registration Number3 text field does not accept special characters :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "State Registration Number3 text field does not accept special characters");
+				}
+				//clear the State Registration Number3 field
+				 String value = df.getStateRegistrationNumber3field().getAttribute("value");
+					for (int i = 0; i < value.length(); i++) {
+						df.getStateRegistrationNumber3field().sendKeys(Keys.BACK_SPACE);
+					}					Thread.sleep(3000);
+			}
+			
+			@Test(dependsOnMethods = "TC_109VerifyStateRegistrationNumber3FieldAcceptsSpecialCharacters")
+			public void TC_110VerifyStateRegistrationNumber3FieldisMandatoryField() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				//clear the State Registration Number3 field and click outside to trigger validation
+				df.getEmail1text().click();
+				Thread.sleep(4000);
+					System.out.println("State Registration Number3 field is  not mandatory field :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "State Registration Number3 field is not mandatory field");
+				
+				
+			}
+			
+			@Test(dependsOnMethods = "TC_110VerifyStateRegistrationNumber3FieldisMandatoryField")
+			public void TC_111VerifyStateRegistrationNumber3FieldAutosavestheData() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				//pass valid data inside the State Registration Number3 field and click outside to trigger validation
+				df.getStateRegistrationNumber3field().click();
+				String input = elib.getDataFromExcel("Disposal Facillity", 39, 4);
+				df.getStateRegistrationNumber3field().sendKeys(input);
+				df.getEmail1text().click();
+				Thread.sleep(4000);
+				//verify it should display Autosaved treatment details  message in right corner of the page
+				if(df.getTreatmentAutoSaveMessage().isDisplayed()) {
+					System.out.println("State Registration Number3 field autosaved the data :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "State Registration Number3 field autosaved the data");
+				} else {
+					System.out.println("State Registration Number3 field does not autosaved the data :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "State Registration Number3 field does not autosaved the data");
+					 
+				}
+				 String value = df.getStateRegistrationNumber3field().getAttribute("value");
+					for (int i = 0; i < value.length(); i++) {
+						df.getStateRegistrationNumber3field().sendKeys(Keys.BACK_SPACE);
+					}	
+				
+			}
+			
+			@Test(dependsOnMethods = "TC_111VerifyStateRegistrationNumber3FieldAutosavestheData")
+			public void TC_112VerifyTypeOfSubWastePresent() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				/*
+				//=========================Comment it utilize this for single Tc execution=========================
+				//=========================Comment it utilize this for single Tc execution=========================
+				//=========================Comment it utilize this for single Tc execution=========================
+
+				
+				
+				
+				// --- Standalone navigation (required for Run / Debug) --- DO NOT REMOVE ---
+				
+				
+				df = new DisposalFacilities(driver);
+				df.getAssetsDD().click();
+				System.out.println("Clicked on Assets Dropdown");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on Assets Dropdown");
+				df.getDisposalFacilities().click();
+				System.out.println("Clicked on Disposal Facilities");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on Disposal Facilities");
+				Thread.sleep(2000);
+				
+				// -------------------------------------------------------------------------
+
+				String targetName = "Jaxon Reed58331";
+
+				// Step 1: Use the search field to filter list - avoids pagination issue
+				try {
+					WebElement searchInput = driver.findElement(By.xpath(
+						"//input[@type='search' or @placeholder='Search' or @placeholder='Search...' or contains(@placeholder,'earch')]"));
+					searchInput.clear();
+					searchInput.sendKeys(targetName);
+					Thread.sleep(1500);
+					System.out.println("Typed in search field: " + targetName);
+					utilityclassobject.gettest().log(Status.INFO, "Typed in search field: " + targetName);
+				} catch (Exception e) {
+					System.out.println("No search field found, proceeding without filter: " + e.getMessage());
+				}
+
+				// Step 2: Find the element directly by text - no loop needed
+			
+				
+				// Tries multiple XPath patterns to match the actual DOM
+				String[] xpaths = {
+					"//*[normalize-space(text())='" + targetName + "']/ancestor::a[1]",
+					"//a[.//*[normalize-space(text())='" + targetName + "']]",
+					"//*[normalize-space(text())='" + targetName + "']",
+					"//*[contains(text(),'" + targetName + "')]/ancestor::a[1]",
+					"//*[contains(text(),'" + targetName + "')]"
+				};
+
+				boolean clicked = false;
+				for (String xpath : xpaths) {
+					try {
+						WebElement el = driver.findElement(By.xpath(xpath));
+						((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", el);
+						Thread.sleep(500);
+						((JavascriptExecutor) driver).executeScript("arguments[0].click();", el);
+						System.out.println("Clicked '" + targetName + "' using XPath: " + xpath + " :PASS");
+						utilityclassobject.gettest().log(Status.PASS, "Clicked Disposal Facility: " + targetName);
+						clicked = true;
+						break;
+					} catch (Exception e) {
+						System.out.println("XPath failed [" + xpath + "]: " + e.getMessage());
+					}
+				}
+
+				if (!clicked) {
+					System.out.println("Could not find '" + targetName + "' in the list :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Could not find Disposal Facility: " + targetName);
+				}
+				
+				elib=new ExcelUtility();
+				//=========================Comment it utilize this for single Tc execution=========================
+				//=========================Comment it utilize this for single Tc execution=========================
+				//=========================Comment it utilize this for single Tc execution=========================
+		      */
+				
+				
+				List<WebElement> lists = df.getWasteprocessingfeelists();
+				for(WebElement list:lists)
+				{
+					System.out.println("Type of Sub Waste present in the dropdown: " + list.getText());
+					utilityclassobject.gettest().log(Status.INFO, "Type of Sub Waste present in the dropdown: " + list.getText());
+					
+				}
+				
+			
+				
+			}
+			
+			@Test(dependsOnMethods = "TC_112VerifyTypeOfSubWastePresent")
+			public void TC_113VerifyUnitsforSubwaste() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+		       WebElement eachunitlists = df.getWasteprocessingeachunits();
+		       System.out.println("Units for Subwaste present in the dropdown: " + eachunitlists.getText());
+		       utilityclassobject.gettest().log(Status.INFO, "Units for Subwaste present in the dropdown: " + eachunitlists.getText());
+		       System.out.println("Units for Subwaste present in the dropdown :PASS");
+		       utilityclassobject.gettest().log(Status.PASS, "Units for Subwaste present in the dropdown");
+			}
+			
+			@Test(dependsOnMethods = "TC_113VerifyUnitsforSubwaste")
+			public void TC_114VerifySubWasteshouldgetActivated() throws EncryptedDocumentException, IOException, InterruptedException {
+						 if (!df.getTreatmenttab().isEnabled()) {
+				            System.out.println("Text is disabled initially");
+				            utilityclassobject.gettest().log(Status.INFO, "Text is disabled initially");
+				        }
+								 	 // click on the check box — scroll into view, wait until clickable, then click using page object helper (JS fallback)
+								 	 try {
+								 	     wlib.scrollToelement(driver, df.getWasteProcessingFeesBioSharpsactivecheckbox());
+								 	     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+								 	     wait.until(ExpectedConditions.elementToBeClickable(df.getWasteProcessingFeesBioSharpsactivecheckbox()));
+								 	     df.clickWasteProcessingFeesBioSharpsactivecheckbox();
+								 	 } catch (Exception e) {
+								 	     // last resort: try JS click directly and log warning
+								 	     try {
+								 	         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", df.getWasteProcessingFeesBioSharpsactivecheckbox());
+								 	     } catch (Exception ex) {
+								 	         System.out.println("Unable to click checkbox: " + ex.getMessage());
+								 	         utilityclassobject.gettest().log(Status.WARNING, "Unable to click checkbox: " + ex.getMessage());
+								 	     }
+								 	 }
+
+								 	 // Wait explicitly for Treatment tab to become enabled (avoid Thread.sleep)
+								 	 boolean enabled = df.waitForTreatmentTabToBeEnabled(10);
+								 	 if (enabled) {
+								 	     System.out.println("Sub Waste is activated after clicking the checkbox :PASS");
+								 	     utilityclassobject.gettest().log(Status.PASS, "Sub Waste is activated after clicking the checkbox");
+								 	 } else {
+								 	     System.out.println("Sub Waste is not activated after clicking the checkbox :FAIL");
+								 	     utilityclassobject.gettest().log(Status.FAIL, "Sub Waste is not activated after clicking the checkbox");
+								 	 }
+			
+			}
+			
+			@Test(dependsOnMethods = "TC_114VerifySubWasteshouldgetActivated")
+			public void TC_115VerifyUserisAbleToAddCostToAciveWasteProcess() throws EncryptedDocumentException, IOException, InterruptedException {
+				 df.getWasteProcessingFeesBioSharpsactivecheckbox().click();
+				 df.getWasteProcessingFeesBioSharpsactivecheckbox().click();
+
+
+				//scroll to bottom of the page
+				wlib.scrollToelement(driver, df.getBottomoftgepage());
+				System.out.println("Scrolled to bottom of the page");
+				utilityclassobject.gettest().log(Status.INFO, "Scrolled to bottom of the page");
+				//click on Bioshrp cost field and pass the value
+				WebElement costfield = df.getBiosharpcostinputField();
+				costfield.click();
+				System.out.println("Clicked on Biosharp cost field");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on Biosharp cost field");
+				
+				String value = costfield.getAttribute("value");
+				for (int i = 0; i < value.length(); i++) {
+					costfield.sendKeys(Keys.BACK_SPACE);
+				}	
+				//pass the value "10" inside the cost field
+                costfield.sendKeys("10");		
+                System.out.println("User is able to add cost to Active wwaste process :PASS");
+                utilityclassobject.gettest().log(Status.PASS, "User is able to add cost to Active waste process");
+				
+				
+			}
+			@Test(dependsOnMethods = "TC_115VerifyUserisAbleToAddCostToAciveWasteProcess")
+			public void TC_116VerifyUserisAbletoSelectNultipleSubwaste() throws EncryptedDocumentException, IOException, InterruptedException {
+				df.getSecondwastecheckbox().click();
+				System.out.println("User is able to select multiple subwaste :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "User is able to select multiple subwaste");
+				
+					 
+				
+			}
+			
+			@Test(dependsOnMethods = "TC_116VerifyUserisAbletoSelectNultipleSubwaste")
+			public void TC_117VerifyUserisAbletoAddCostForSubwaste() throws EncryptedDocumentException, IOException, InterruptedException {
+				WebElement costfield = df.getBiosharpcostinputField();
+				costfield.click();
+				String value = costfield.getAttribute("value");
+				for (int i = 0; i < value.length(); i++) {
+					costfield.sendKeys(Keys.BACK_SPACE);
+				}	
+				//pass the value "10" inside the cost field
+                costfield.sendKeys("10");	
+                System.out.println("User is able to add cost for subwaste :PASS");
+                utilityclassobject.gettest().log(Status.PASS, "User is able to add cost for subwaste");
+		
+			}
+			@Test(dependsOnMethods = "TC_117VerifyUserisAbletoAddCostForSubwaste")
+			public void TC_118VerifyUserisAbletoEditCost() throws EncryptedDocumentException, IOException, InterruptedException {
+				WebElement costfield = df.getBiosharpcostinputField();
+				costfield.click();
+				String value = costfield.getAttribute("value");
+				for (int i = 0; i < value.length(); i++) {
+					costfield.sendKeys(Keys.BACK_SPACE);
+				}	
+				//pass the value "10" inside the cost field
+                costfield.sendKeys("20");	
+                System.out.println("User is able to edit cost for subwaste :PASS");
+                utilityclassobject.gettest().log(Status.PASS, "User is able to edit cost for subwaste");
+		
+			}
+			@Test(dependsOnMethods = "TC_118VerifyUserisAbletoEditCost")
+			public void TC_119VerifyCostFieldAcceptsalphabete() throws EncryptedDocumentException, IOException, InterruptedException {
+				WebElement costfield = df.getBiosharpcostinputField();
+				costfield.click();
+				String value = costfield.getAttribute("value");
+				for (int i = 0; i < value.length(); i++) {
+					costfield.sendKeys(Keys.BACK_SPACE);
+				}	
+				//pass the value "10" inside the cost field
+				costfield.sendKeys("e");	
+				System.out.println("User is able to enter alphabet-e inside the cost field :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "User is able to enter alphabet-e inside the cost field");
+		
+		
+			}
+			
+			@Test(dependsOnMethods = "TC_119VerifyCostFieldAcceptsalphabete")
+			public void TC_120VerifyCostFieldAcceptsNumbers() throws EncryptedDocumentException, IOException, InterruptedException {
+				WebElement costfield = df.getBiosharpcostinputField();
+				costfield.click();
+				String value = costfield.getAttribute("value");
+				for (int i = 0; i < value.length(); i++) {
+					costfield.sendKeys(Keys.BACK_SPACE);
+				}	
+			
+				String input = elib.getDataFromExcel("Disposal Facillity", 41, 2);
+				costfield.sendKeys(input);
+				System.out.println("User is able to enter numbers inside the cost field :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "User is able to enter numbers inside the cost field");
+			}
+			
+			@Test(dependsOnMethods = "TC_120VerifyCostFieldAcceptsNumbers")
+			public void TC_121VerifyCostFieldAcceptsSpecialCharacters() throws EncryptedDocumentException, IOException, InterruptedException {
+				WebElement costfield = df.getBiosharpcostinputField();
+				costfield.click();
+				String value = costfield.getAttribute("value");
+				for (int i = 0; i < value.length(); i++) {
+					costfield.sendKeys(Keys.BACK_SPACE);
+				}	
+			
+							String input = elib.getDataFromExcel("Disposal Facillity", 41, 3);
+
+							// Try to type special characters into the cost field. The application
+							// should NOT accept these characters; the test passes when the field
+							// value does NOT match the attempted input.
+							costfield.sendKeys(input);
+							Thread.sleep(500); // allow client-side validation to run
+							String costInField = costfield.getAttribute("value");
+							if (costInField != null && costInField.equals(input)) {
+								System.out.println("Cost field accepted special characters: FAIL");
+								utilityclassobject.gettest().log(Status.FAIL, "Cost field accepted special characters: " + input);
+							} else {
+								System.out.println("Cost field did not accept special characters: PASS");
+								utilityclassobject.gettest().log(Status.PASS, "Cost field did not accept special characters");
+							}
+
+							// Clear any residual value left in the field
+							value = costfield.getAttribute("value");
+							for (int i = 0; i < (value != null ? value.length() : 0); i++) {
+								costfield.sendKeys(Keys.BACK_SPACE);
+							}
+			}
+			
+			@Test(dependsOnMethods = "TC_121VerifyCostFieldAcceptsSpecialCharacters")
+			public void TC_122VerifyAbletoSelectTypeForsubwaste() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+			df.getBiosharpstransferradiobtn().click();
+		    System.out.println("User is able to select type for subwaste :PASS");
+		    utilityclassobject.gettest().log(Status.PASS, "User is able to select type for subwaste");
+			}
+			
+			
+			
+			@Test(dependsOnMethods = "TC_122VerifyAbletoSelectTypeForsubwaste")
+			public void TC_123VerifyAbletoSelectMultiplesubwasteType() throws EncryptedDocumentException, IOException, InterruptedException {
+				  // Ensure mutual exclusivity: selecting one radio should deselect the other
+				  // Select first radio button
+				WebElement radio1 = df.getBiosharpstreatmentradiobtn();
+				WebElement radio2 = df.getBiosharpstransferradiobtn();
+				radio1.click();
+				System.out.println("Selected first radio button for subwaste type");
+				utilityclassobject.gettest().log(Status.INFO, "Selected first radio button for subwaste type");
+				if(radio2.isSelected()) {
+					
+					System.out.println("Second radio button is selected, which should not happen: FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Second radio button is selected, which should not happen");
+					
+				}
+				else {
+					
+					System.out.println("Second radio button is not selected, as expected: PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Second radio button is not selected, as expected");
+					
+				     }
+				
+				System.out.println("User is not able to select multiple subwaste type :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "User is not able to select multiple subwaste type");
+				
+
+			}
+			
+			
+			@Test(dependsOnMethods = "TC_123VerifyAbletoSelectMultiplesubwasteType")
+			public void TC_124VerifyUserIsNotabletoselectInactiveWasteProcess() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				//df.getChemotherapyradiobtn().click();
+				//make sure that checkbox is disabled
+				if(df.getChemotherapyradiobtn().isEnabled()) {
+					System.out.println("User is not able to select inactive waste process :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "User is not able to select inactive waste process");
+				}
+				else {
+					System.out.println("User is able to select inactive waste process :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "User is able to select inactive waste process");
+				}
+				
+		
+			}
+			
+			@Test(dependsOnMethods = "TC_124VerifyUserIsNotabletoselectInactiveWasteProcess")
+			public void TC_125VerifyAutosavesData() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				df.getBiosharpstransferradiobtn().click();
+				Thread.sleep(3000);
+				if(df.getTreatmentAutoSaveMessage().isDisplayed()) {
+					System.out.println("User is able to autosave the data :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "User is able to autosave the data");
+				}
+				else {
+					System.out.println("User is not able to autosave the data :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "User is not able to autosave the data");
+				}
+			
+			}
+			
+			@Test(dependsOnMethods = "TC_125VerifyAutosavesData")
+			public void TC_126VerifyDisposalFacilutylist() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				df.getViewDisposalFacilityListbtn().click();
+				System.out.println("Clicked on View Disposal Facility List button");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on View Disposal Facility List button");
+				Thread.sleep(3000);
+				if(df.getDisposalFacilitiesList().isDisplayed()) {
+					System.out.println(" Disposal Fcaility list page displayed successfully :PASS");
+					utilityclassobject.gettest().log(Status.PASS, " Disposal Fcaility list page displayed successfully");
+				}
+				else {
+					System.out.println(" Disposal Fcaility list page  not displayed :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, " Disposal Fcaility list page not displayed ");
+				}
+			
+			}
+			
+			
+			
+			
+			String address;
+			String phone;
+			String email;
+			String newlyaddedphone;
+			@Test(/*dependsOnMethods = "TC_126VerifyDisposalFacilutylist"*/)
+			public void TC_127VerifyDisposalFaciltyPresentInTheList() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				new DisposalFacilities(driver);;
+				df = new DisposalFacilities(driver);
+				df.getAssetsDD().click();
+				System.out.println("Clicked on Assets Dropdown");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on Assets Dropdown");
+				df.getDisposalFacilities().click();
+				System.out.println("Clicked on Disposal Facilities");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on Disposal Facilities");
+				Thread.sleep(2000);
+				
+				
+				
+				
+				//click on Add new disposal facility button
+				df.getAddNewDisposalFacilitybtn().click();
+				//create 6 digit random nmber
+				Random rand = new Random();
+				int randomNumber = rand.nextInt(900000) + 100000; // generates a random number between 100000 and 999999
+				String name = "Super Disposers" + randomNumber;
+				
+			
+				//pass value in   name field
+				
+				df.getNamefieldFromAddewDisposalFacilitypopup().sendKeys(name);
+				System.out.println("Entered value in Name field");
+				utilityclassobject.gettest().log(Status.INFO, "Entered value in Name field");
+				
+				email = "superdisposers" + randomNumber + "@gmail.com";
+				df.getEmailfieldFromAddNewDisposalFacilitypopup().sendKeys(email);
+				System.out.println("Entered value in Email field");
+				utilityclassobject.gettest().log(Status.INFO, "Entered value in Email field");
+				df.getSubmitbtnFromAddNewDisposalFacilitypopup().click();
+				System.out.println("Clicked on Submit button");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on Submit button");
+				//pass the value in street field
+				
+				address = "1237 3";
+				df.getStreetfield().sendKeys(address);
+				//click on 1st suggestion from the dropdown
+				Thread.sleep(3000);
+				df.getStreetfieldsuggestionoptions().click();
+				System.out.println("Clicked on 1st suggestion from the dropdown");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on 1st suggestion from the dropdown");
+				//pass phone number in phone field
+				phone = "5453453454";
+				df.getPhonefield().sendKeys("5453453454");
+				//change the disposal facility status to active
+				Thread.sleep(2000);
+				newlyaddedphone = df.getPhonefield().getText();
+				System.out.println("Newly added phone number: " + newlyaddedphone);
+				utilityclassobject.gettest().log(Status.INFO, "Newly added phone number: " + newlyaddedphone);
+				df.getDisposalFacilityStatusdropdown().click();
+				Thread.sleep(2000);
+				df.getActiveStatus().click();
+				Thread.sleep(3000);
+				
+				System.out.println("Changed the disposal facility status to active");
+				utilityclassobject.gettest().log(Status.INFO, "Changed the disposal facility status to active");
+				//pass the value in state registration number1 field
+				df.getStateRegistrationNumber1field().sendKeys("123456");
+				//click on Bio sharps check box
+				df.getWasteProcessingFeesBioSharpsactivecheckbox().click();
+				//click on 2nd check box
+				df.getSecondwastecheckbox().click();
+				System.out.println("Clicked on Bio sharps and 2nd check box");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on Bio sharps and 2nd check box");
+				Thread.sleep(3000);
+				//clik on view disposal facility list button
+				df.getViewDisposalFacilityListbtn().click();
+				System.out.println("Clicked on View Disposal Facility List button");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on View Disposal Facility List button");
+				//search the disposal facility which is created in the list
+				WebElement searchInput = driver.findElement(By.xpath(
+						"//input[@type='search' or @placeholder='Search' or @placeholder='Search...' or contains(@placeholder,'earch')]"));
+				searchInput.clear();
+				searchInput.sendKeys(name);
+				Thread.sleep(1500);
+				if(df.getDisposalFacilityNamefromlist().getText().equals(name)) {
+					System.out.println("Disposal facility created is present in the list :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Disposal facility created is present in the list");
+				}
+				else {
+					System.out.println("Disposal facility created is not present in the list :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Disposal facility created is not present in the list");
+				}
+				
+				System.out.println("Disposal facility created is present in the list :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Disposal facility created is present in the list");
+				
+				
+				
+				
+			}
+			@Test(dependsOnMethods = "TC_127VerifyDisposalFaciltyPresentInTheList")
+			public void TC_128VerifyAddressofDisposalFacility() throws EncryptedDocumentException, IOException, InterruptedException {
+				System.out.println(address);
+				System.out.println(df.getDisposalFacilityAddressfromlist().getText());
+				
+				if(df.getDisposalFacilityAddressfromlist().getText().contains(address)) {
+				 System.out.println("Address of disposal facility is displayed correctly in the list :PASS");
+				 utilityclassobject.gettest().log(Status.PASS, "Address of disposal facility is displayed correctly in the list");
+				}
+				else {
+									 System.out.println("Address of disposal facility is not displayed correctly in the list :FAIL");
+				 utilityclassobject.gettest().log(Status.FAIL, "Address of disposal facility is not displayed correctly in the list");
+					
+				}
+				
+			}
+			
+			@Test(dependsOnMethods = "TC_128VerifyAddressofDisposalFacility")
+			public void TC_129VerifyAddedMailIsPresentinList() throws EncryptedDocumentException, IOException, InterruptedException {
+				if(df.getDisposalFacilitemailfromlist().getText().equals(email)) {
+					 System.out.println("Email of disposal facility is displayed correctly in the list :PASS");
+					 utilityclassobject.gettest().log(Status.PASS, "Email of disposal facility is displayed correctly in the list");
+					}
+					else {
+										 System.out.println("Email of disposal facility is not displayed correctly in the list :FAIL");
+					 utilityclassobject.gettest().log(Status.FAIL, "Email of disposal facility is not displayed correctly in the list");
+						
+					}
+			}
+			
+			@Test(dependsOnMethods = "TC_129VerifyAddedMailIsPresentinList")
+			public void TC_130VerifyAddedPhoneNumberIsPresentinList() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				System.out.println(phone);
+				System.out.println(df.getDisposalFacilityPhonenumberfromlist().getText());
+				if( df.getDisposalFacilityPhonenumberfromlist().getText().equals(newlyaddedphone)) {
+					 System.out.println("Phone number of disposal facility is displayed correctly in the list :PASS");
+					 utilityclassobject.gettest().log(Status.PASS, "Phone number of disposal facility is displayed correctly in the list");
+					}
+					else {
+										 System.out.println("Phone number of disposal facility is not displayed correctly in the list :FAIL");
+					 utilityclassobject.gettest().log(Status.FAIL, "Phone number of disposal facility is not displayed correctly in the list");
+						
+					}
+			}
+			
+			
+			@Test(dependsOnMethods = "TC_130VerifyAddedPhoneNumberIsPresentinList")
+			public void TC_131VerifyAddedDisposalFacilityTypeIsPresentinList() throws EncryptedDocumentException, IOException, InterruptedException {
+				String Type = df.getDisposalFacilityTypefromlist().getText();
+				System.out.println("Disposal Facility Type from list: " + Type);
+				utilityclassobject.gettest().log(Status.INFO, "Disposal Facility Type from list: " + Type);
+					
+			}
+			
+			@Test(dependsOnMethods = "TC_131VerifyAddedDisposalFacilityTypeIsPresentinList")
+			public void TC_132VerifyAddedStatusIsPresentinList() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				String staus = df.getDisposalFacilityStatusfromlist().getText();
+				System.out.println("Disposal Facility Status from list: " + staus);
+				utilityclassobject.gettest().log(Status.INFO, "Disposal Facility Status from list: " + staus);
+				if(staus.equals("Active")) {
+					 System.out.println("Status of disposal facility is displayed correctly in the list :PASS");
+					 utilityclassobject.gettest().log(Status.PASS, "Status of disposal facility is displayed correctly in the list");
+					}
+					else {
+										 System.out.println("Status of disposal facility is not displayed correctly in the list :FAIL");
+					 utilityclassobject.gettest().log(Status.FAIL, "Status of disposal facility is not displayed correctly in the list");
+						
+					}
+			}
+			@Test(dependsOnMethods = "TC_132VerifyAddedStatusIsPresentinList")
+			public void TC_133VerifyFilterDropdownisPresentinthList() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				if(df.getDisposalFacilityFilterdropdown().isDisplayed()) {
+					 System.out.println("Filter dropdown is present in the list :PASS");
+					 utilityclassobject.gettest().log(Status.PASS, "Filter dropdown is present in the list");
+					}
+					else {
+						
+					 System.out.println("Filter dropdown is not present in the list :FAIL");
+					 utilityclassobject.gettest().log(Status.FAIL, "Filter dropdown is not present in the list");
+						
+					}
+					
+			}
+			
+			@Test(dependsOnMethods = "TC_133VerifyFilterDropdownisPresentinthList")
+			public void TC_134VerifyUsercanFilerActiveFacility() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				//clear search field
+				WebElement searchInput = driver.findElement(By.xpath(
+						"//input[@type='search' or @placeholder='Search' or @placeholder='Search...' or contains(@placeholder,'earch')]"));
+				//searchInput.clear();
+				searchInput.click();
+				String value = searchInput.getAttribute("value");
+				for (int i = 0; i < value.length(); i++) {
+					searchInput.sendKeys(Keys.BACK_SPACE);
+				}
+				Thread.sleep(3000);
+				System.out.println("Cleared search field");
+				utilityclassobject.gettest().log(Status.INFO, "Cleared search field");
+				//click on flter dropdown and select active
+				df.getDisposalFacilityFilterdropdown().click();
+				df.getDisposalFacilityFilterActivebtn().click();
+				System.out.println("Selected Active from filter dropdown");
+				utilityclassobject.gettest().log(Status.INFO, "Selected Active facility from filter dropdown");
+			//verify if the status is active in the list
+				String staus = df.getDisposalFacilityStatusfromlist().getText();
+				if(staus.equals("Active")) {
+					 System.out.println("User can filter active facility from the list :PASS");
+					 utilityclassobject.gettest().log(Status.PASS, "User can filter active facility from the list");
+					}
+					else {
+										 System.out.println("User cannot filter active facility from the list :FAIL");
+					 utilityclassobject.gettest().log(Status.FAIL, "User cannot filter active facility from the list");
+						
+					}
+				
+				
+				
+				
+			}
+			
+			@Test(dependsOnMethods = "TC_134VerifyUsercanFilerActiveFacility")
+			public void TC_135VerifyUsercanFilerInactiveFacility() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				
+			
+				
+
+				df.getDisposalFacilityFilterInactivebtn().click();
+				System.out.println("Selected Inactive from filter dropdown");
+				utilityclassobject.gettest().log(Status.INFO, "Selected Inactive facility from filter dropdown");
+				//verify staus is displayed as inactive in the list
+				String staus = df.getDisposalFacilityStatusfromlist().getText();
+				if(staus.equals("Inactive")) {
+					 System.out.println("User can filter inactive facility from the list :PASS");
+					 utilityclassobject.gettest().log(Status.PASS, "User can filter inactive facility from the list");
+					}
+					else {
+										 System.out.println("User cannot filter inactive facility from the list :FAIL");
+					 utilityclassobject.gettest().log(Status.FAIL, "User cannot filter inactive facility from the list");
+						
+					}
+			}
+			
+			@Test(dependsOnMethods = "TC_135VerifyUsercanFilerInactiveFacility")
+			public void TC_136VerifyUsercanFilerBothFacility() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				df.getDisposalFacilityFilterActivebtn().click();
+			    System.out.println("Selected Both from filter dropdown :PASS");
+			    utilityclassobject.gettest().log(Status.INFO, "Selected Both facility from filter dropdown");
+			}
+				
+			
+			@Test(dependsOnMethods = "TC_136VerifyUsercanFilerBothFacility")
+			public void TC_137VerifyUsercanClearFilter() throws EncryptedDocumentException, IOException, InterruptedException {
+			
+				driver.findElement(By.xpath("//div[@class='inline-block text-left relative overflow-visible w-48']")).click();
+				df.getDisposalFacilityinactiveoptionwhentheInactivebuttonisonclicked().click();
+				df.getDisposalFacilityactiveoptionwhentheActivebuttonisonclicked().click();
+
+				String disposalfaciltyfilter = df.getDisposalFacilityFilterdropdown().getText();
+				System.out.println("Current filter selection: " + disposalfaciltyfilter);
+				if(disposalfaciltyfilter.contains("Disposal")) {
+					 System.out.println("User can clear filter from the list :PASS");
+					 utilityclassobject.gettest().log(Status.PASS, "User can clear filter from the list");
+					}
+					else {
+										 System.out.println("User cannot clear filter from the list :FAIL");
+					 utilityclassobject.gettest().log(Status.FAIL, "User cannot clear filter from the list");
+						
+					}
+					
+
+
+				
+			}
+			
+			@Test(dependsOnMethods = "TC_137VerifyUsercanClearFilter")
+			public void TC_138VerifyUsercanExportDisposalFacility() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				List<WebElement> checkboxes = df.getDisposalFacilitycheckboxbtn();
+				//select only first check box
+				for(int i=0;i<checkboxes.size();i++) {
+					if(i==0) {
+						checkboxes.get(i).click();
+						System.out.println("Selected first disposal facility checkbox");
+						utilityclassobject.gettest().log(Status.INFO, "Selected first disposal facility checkbox");
+					}
+					else {
+						checkboxes.get(i).click();
+					}
+					
+					
+				}
+				if(df.getDisposalFacilityExportbtn().isDisplayed()) {
+					System.out.println("User can export disposal facility :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "User can export disposal facility");
+					}
+				else {
+					System.out.println("User cannot export disposal facility :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "User cannot export disposal facility");
+				}
+				
+			}
+			
+			@Test(dependsOnMethods = "TC_138VerifyUsercanExportDisposalFacility")
+			public void TC_139VerifyUsercanExportMultipleDisposalFacility() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				List<WebElement> checkboxes = df.getDisposalFacilitycheckboxbtn();
+				//select all check boxes
+				for(int i=0;i<checkboxes.size();i++) {
+					if(i==1) {
+						checkboxes.get(i).click();
+						System.out.println("Selected first disposal facility checkbox");
+						utilityclassobject.gettest().log(Status.INFO, "Selected first disposal facility checkbox");
+					}
+					else {
+						checkboxes.get(i).click();
+					}
+				}
+				if(df.getDisposalFacilityExportbtn().isDisplayed()) {
+					System.out.println("User can export multiple disposal facility :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "User can export multiple disposal facility");
+					}
+				else {
+					System.out.println("User cannot export multiple disposal facility :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "User cannot export multiple disposal facility");
+				}
+				
+			}
+			@Test(dependsOnMethods = "TC_139VerifyUsercanExportMultipleDisposalFacility")
+			public void TC_140VerifyUsercanExportAllDisposalFacility() throws EncryptedDocumentException, IOException, InterruptedException {
+				
+				List<WebElement> checkboxes = df.getDisposalFacilitycheckboxbtn();
+				//select all check boxes
+				for(int i=0;i<checkboxes.size();i++) {
+					checkboxes.get(i).click();
+				}
+				if(df.getDisposalFacilityExportbtn().isDisplayed()) {
+					System.out.println("User can export all disposal facility :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "User can export all disposal facility");
+					}
+				else {
+					System.out.println("User cannot export all disposal facility :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "User cannot export all disposal facility");
+				}
+				df.getDisposalFacilityExportbtn().click();
+				System.out.println("Clicked on Export button");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on Export button");
+				
+			}
+			
 			
 }

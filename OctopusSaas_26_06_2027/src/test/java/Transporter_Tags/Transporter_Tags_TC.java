@@ -375,7 +375,7 @@ public class Transporter_Tags_TC extends BaseClassForGEneratorContacts {
 
 	@Test(dependsOnMethods = "TC_015VerifyCreatedTagNamePresentintheTagNameList")
 	public void TC_016VerifyaddedTagcolor() throws InterruptedException {
-		/*
+			/*
 		 * tst.getAddnewtagbtn().click(); tst.getTagnametxtfield().sendKeys(tagname);
 		 * tst.getThirdrdcolorbox().click(); colornum =
 		 * tst.getSelectedcolorname().getText();
