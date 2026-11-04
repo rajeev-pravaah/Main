@@ -1685,4 +1685,12 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		
 		
 	}
+	
+	@Test(dependsOnMethods = "TC_059VerifyBesidePriceperPoundColumnTotalChargeColumnisPresent")
+	public void TC_060VerifyTotalChargeColumnisNotEditable() {
+		
+			System.out.println("Some Total Charge fields are editable :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Some Total Charge fields are editable");
+		
+	}
 }
