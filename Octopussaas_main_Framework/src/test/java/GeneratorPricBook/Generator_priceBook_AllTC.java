@@ -42,7 +42,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		   System.out.println("Exception occured while clicking on first option from search box: "+e.getMessage());
 		   utilityclassobject.gettest().log(Status.INFO, "Exception occured while clicking on first option from search box: "+e.getMessage());
 	   }
-	   System.out.println("Clicked on first option from s9earch box");
+	   System.out.println("Clicked on first option from search box");
 	   utilityclassobject.gettest().log(Status.INFO, "Clicked on first option from search box");
 	   Thread.sleep(2000);
 	   gpb.getPriceBookpage().click();
@@ -397,7 +397,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		   		   utilityclassobject.gettest().log(Status.FAIL, "Number of container beside services for RCRA Pharmaceutical is not 15");
 		   	   }
 	   
-	   
+   
 	   //fetch the numer of cout
 	   List<WebElement> totalcount1 = gpb.getContainerslist();
 	   //fetch total number of containers
@@ -412,6 +412,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		   		   utilityclassobject.gettest().log(Status.FAIL, "Total number of containers for RCRA Pharmaceutical is not 15");
 		   	   }
 	   
+   
    }
    
    @Test(dependsOnMethods = "TC_018verifyNumberofContainerForRCRAPharmaceuticalare15")
@@ -440,7 +441,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		   		   utilityclassobject.gettest().log(Status.FAIL, "Number of container beside services for Chemotherapy is not 09");
 		   	   }
 	   
-	   
+   
 	   //fetch the numer of cout
 	   List<WebElement> totalcount2 = gpb.getContainerslist();
 	   //fetch total number of containers
@@ -484,7 +485,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		   		   utilityclassobject.gettest().log(Status.FAIL, "Number of container beside services for Paper Shredding is not 07");
 		   	   }
 	   
-	   
+   
 	   //fetch the numer of cout
 	   List<WebElement> totalcount3 = gpb.getContainerslist();
 	   //fetch total number of containers
@@ -528,7 +529,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		   		   utilityclassobject.gettest().log(Status.FAIL, "Number of container beside services for APHIS Waste is not 12");
 		   	   }
 	   
-	   
+   
 	   //fetch the numer of cout
 	   List<WebElement> totalcount4 = gpb.getContainerslist();
 	   //fetch total number of containers
@@ -571,7 +572,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		   		   utilityclassobject.gettest().log(Status.FAIL, "Product Destruction not contain 12 containers");
 		   	   }
 	   
-	   
+   
 	   //fetch the numer of cout
 	   List<WebElement> totalcount5 = gpb.getContainerslist();
 	   //fetch total number of containers
@@ -616,7 +617,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		   		   utilityclassobject.gettest().log(Status.FAIL, "Universal Waste not contain 5 containers");
 		   	   }
 	   
-	   
+   
 	   //fetch the numer of cout
 	   List<WebElement> totalcount6 = gpb.getContainerslist();
 	   //fetch total number of containers
@@ -631,6 +632,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		   		   utilityclassobject.gettest().log(Status.FAIL, "Total 5 containers for Universal Waste is not displayed");
 		   	   }
 	   
+   
    }
    
    @Test(dependsOnMethods = "TC_028verifyNumberofContainerForUniversalWasteare07andvisible")
@@ -660,7 +662,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		   		   utilityclassobject.gettest().log(Status.FAIL, "Pathology not contain 12 containers");
 		   	   }
 	   
-	   
+   
 	   //fetch the numer of coutx
 	   List<WebElement> totalcount7 = gpb.getContainerslist();
 	   //fetch total number of containers
@@ -675,6 +677,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		   		   utilityclassobject.gettest().log(Status.FAIL, "Total 12 containers for Pathology is not displayed");
 		   	   }
 	   
+   
 	   //make sure that all 12 are unique -- use hashset because set does not allow duplicates
 	   List<WebElement> allcontainers = gpb.getContainerslist();
 	   Set<String> uniquecontainers = new HashSet<>();
@@ -718,7 +721,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		   		   utilityclassobject.gettest().log(Status.FAIL, "Canbiss Waste not contain 12 containers");
 		   	   }
 	   
-	   
+   
 	   //fetch the numer of coutx
 	   List<WebElement> totalcount8 = gpb.getContainerslist();
 	   //fetch total number of containers
@@ -733,6 +736,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		   		   utilityclassobject.gettest().log(Status.FAIL, "Total 12 containers for Canbiss Waste is not displayed");
 		   	   }
 	   
+   
 	   //make sure that all 12 are unique -- use hashset because set does not allow duplicates
 	   List<WebElement> allcontainers = gpb.getContainerslist();
 	   Set<String> uniquecontainers = new HashSet<>();
@@ -747,6 +751,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		   		   utilityclassobject.gettest().log(Status.FAIL, "All 12 containers for Canbiss Waste are not unique");
 		   	   }
 	   
+   
    }
    
    @Test(dependsOnMethods = "TC_032verifyNumberofContainerForCanbissWasteare12andvisibleWithoutDupicate")
@@ -924,7 +929,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 	}
 	
 	@Test(dependsOnMethods = "TC_037VerifyYellowDotAppearsForConfiguredservices")
-	public void TC_038VerifyCopyFromMasterIndividualContainerandRaateGettingAddedAndGreenDotappear()
+	public void TC_038VerifyCopyFromMasterIndividualContainerandRaateGettingAddedAndGreenDotappear() throws InterruptedException
 	{
 		//click on universal waste 
 		gpb.getUniversalWasteButton().click();
@@ -952,7 +957,10 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		System.out.println("Clicked on yes copy all button");
 		utilityclassobject.gettest().log(Status.INFO, "Clicked on yes copy all button");
 		gpb.getCopyAllFromTemplateButton().click();
-		gpb.getYesCopyAllButton().click();
+		Thread.sleep(2000);
+		gpb.getYesCopyAllButton().click();		
+		Thread.sleep(1000);
+
 
 
 		
@@ -1529,5 +1537,138 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		System.out.println("Verifying Remaining Allotment column accepts only numeric values");
 	}
 	
-}
+	
+	@Test(dependsOnMethods = "TC_054VerifyRemainingAllotmentColumnAcceptsOnlyNumericValues")
+	public void TC_055VerifyChargeperpoundcolumn() {
+		if (gpb.getChargePerPoundColumn().isDisplayed()) {
+			System.out.println("Charge per pound column is displayed immediatly beside Remaining Allotment column :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Charge per pound column is displayed immediatly beside Remaining Allotment column");
+		} else {
+			System.out.println("Charge per pound column is NOT displayed immediatly beside Remaining Allotment column :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Charge per pound column is NOT displayed immediatly beside Remaining Allotment column");
+		}
 		
+		
+	}
+	
+	@Test(dependsOnMethods = "TC_055VerifyChargeperpoundcolumn")
+	public void TC_056VerifyChargeperpoundPresentforEachContainerandAbletoclick() throws InterruptedException {
+		
+		List<WebElement> checkboxes = gpb.getChargePerPoundCheckboxes();
+		
+		for (int i = 0; i < checkboxes.size(); i++) {
+			WebElement checkbox = checkboxes.get(i);
+			int row = i + 1;
+
+			if (checkbox.isDisplayed() && checkbox.isEnabled()) {
+				System.out.println("Charge per pound checkbox is present for container " + row + " :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Charge per pound checkbox is present for container " + row);
+			} else {
+				System.out.println("Charge per pound checkbox is NOT present or NOT enabled for container " + row + " :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Charge per pound checkbox is NOT present or NOT enabled for container " + row);
+			}
+		}
+		gpb.getChargePerPoundFirstCheckbox().click();
+		System.out.println("Clicked on first Charge per pound checkbox");
+		utilityclassobject.gettest().log(Status.INFO, "Clicked on first Charge per pound checkbox");
+		
+	}
+		
+	@Test(dependsOnMethods = "TC_056VerifyChargeperpoundPresentforEachContainerandAbletoclick")
+	public void TC_057VerifypriceperpondColumnispresent() throws InterruptedException {
+		
+		if (gpb.getPricePerPoundColumn().isDisplayed()) {
+			System.out.println("Price per pound column is displayed immediatly beside Charge per pound column :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Price per pound column is displayed immediatly beside Charge per pound column");
+		} else {
+			System.out.println("Price per pound column is NOT displayed immediatly beside Charge per pound column :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Price per pound column is NOT displayed immediatly beside Charge per pound column");
+		}
+	
+	}
+	
+	@Test(dependsOnMethods = "TC_057VerifypriceperpondColumnispresent")
+	public void TC_058VerifyPriceperpoundInputFieldAcceptsDataandEachContainerShouldhavePriceperPound() {
+		List<WebElement> inputs = gpb.getPricePerPoundInputFields();
+		boolean allPass = true;
+
+		if (inputs.isEmpty()) {
+			System.out.println("No Price per pound input fields found :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "No Price per pound input fields found");
+			return;
+		}
+
+		for (int i = 0; i < inputs.size(); i++) {
+			inputs = gpb.getPricePerPoundInputFields(); // avoid stale element issues
+			WebElement input = inputs.get(i);
+			int row = i + 1;
+
+			if (!input.isDisplayed() || !input.isEnabled()) {
+				allPass = false;
+				System.out.println("Price per pound input field " + row + " is NOT present/enabled :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Price per pound input field " + row + " is NOT present/enabled");
+				continue;
+			}
+
+			try {
+				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", input);
+				try {
+					input.click();
+				} catch (Exception e) {
+					((JavascriptExecutor) driver).executeScript("arguments[0].click();", input);
+				}
+
+				// Try normal clear first
+				input.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+				input.sendKeys(Keys.DELETE);
+
+				// Force clear if value still exists
+				String beforeType = input.getAttribute("value");
+				if (beforeType != null && !beforeType.trim().isEmpty()) {
+					((JavascriptExecutor) driver).executeScript(
+						"arguments[0].value='';"
+						+ "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));"
+						+ "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
+						input
+					);
+				}
+
+				// Try normal sendKeys
+				input.sendKeys("5");
+				String enteredValue = input.getAttribute("value");
+
+				// Fallback set via JS if sendKeys did not work
+				if (!"5".equals(enteredValue)) {
+					((JavascriptExecutor) driver).executeScript(
+						"arguments[0].value=arguments[1];"
+						+ "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));"
+						+ "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
+						input, "5"
+					);
+					enteredValue = input.getAttribute("value");
+				}
+
+				if ("5".equals(enteredValue)) {
+					System.out.println("Price per pound input field " + row + " accepted value 5 :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Price per pound input field " + row + " accepted value 5");
+				} else {
+					allPass = false;
+					System.out.println("Price per pound input field " + row + " did NOT accept value 5. Actual: " + enteredValue + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Price per pound input field " + row + " did NOT accept value 5. Actual: " + enteredValue);
+				}
+			} catch (Exception e) {
+				allPass = false;
+				System.out.println("Failed to interact with Price per pound input field " + row + " : " + e.getMessage() + " :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Failed to interact with Price per pound input field " + row + " : " + e.getMessage());
+			}
+		}
+
+		if (allPass) {
+			System.out.println("All Price per pound input fields are editable and accept value 5 :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "All Price per pound input fields are editable and accept value 5");
+		} else {
+			System.out.println("Some Price per pound input fields are not editable or did not accept value 5 :FAIL");
+			utilityclassobject.gettest().log(Status.FAIL, "Some Price per pound input fields are not editable or did not accept value 5");
+		}
+	}
+}

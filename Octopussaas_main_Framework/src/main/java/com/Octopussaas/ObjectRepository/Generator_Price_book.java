@@ -51,7 +51,7 @@ public class Generator_Price_book {
 		return searchBox;
 	}
 	
-	@FindBy(xpath = "(//div[@class='w-40 h-full text-cardTextBlue text-wrap flex items-center'])[2]")
+	@FindBy(xpath = "//div[@class='w-40 h-full text-cardTextBlue text-wrap flex items-center']")
 	private WebElement firstoptionfromsearchbox;
 	
 	public WebElement getFirstoptionfromsearchbox() {
@@ -520,6 +520,43 @@ public class Generator_Price_book {
 	public WebElement getRemainingAllotmentColumn() {
 		return remainingallotmentcolumn;
 	} 
+	
+	@FindBy(xpath = "//span[text()='Charge']")
+	private WebElement chargeperpoundcolumn;
+	
+	public WebElement getChargePerPoundColumn() {
+		return chargeperpoundcolumn;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[12]")
+	private List<WebElement> chargeperpoundcheckboxes;
+	
+	public List<WebElement> getChargePerPoundCheckboxes() {
+		return chargeperpoundcheckboxes;
+	}
+	
+	@FindBy(xpath = "(//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[12]/descendant::div)[2]")
+	private WebElement chargeperpoundfirstcheckbox;
+	
+	public WebElement getChargePerPoundFirstCheckbox() {
+		return chargeperpoundfirstcheckbox;
+	}
+	
+	@FindBy(xpath = "//span[text()='Price Per Pound /']")
+	private WebElement priceperpoundcolumn;
+	
+	public WebElement getPricePerPoundColumn() {
+		return priceperpoundcolumn;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[13]/descendant::div")
+	private List<WebElement> priceperpoundinputfields;
+	
+	public List<WebElement> getPricePerPoundInputFields() {
+		return priceperpoundinputfields;
+	}
+	
+	
 	
 	
 	
