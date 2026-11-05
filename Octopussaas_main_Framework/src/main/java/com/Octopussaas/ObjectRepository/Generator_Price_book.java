@@ -577,6 +577,27 @@ public class Generator_Price_book {
 		return tareweightdeductedcolumn;
 	}
 	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[19]/descendant::div[@role='checkbox']")
+	private List<WebElement> tareweightdeductedcheckboxes;
+	
+	public List<WebElement> getTareWeightDeductedCheckboxes() {
+		return tareweightdeductedcheckboxes;
+	}
+	
+	@FindBy(xpath = "(//span[text()='Tare'])[2]")
+	private WebElement tareweightcolumn;
+	
+	public WebElement getTareWeightColumn() {
+		return tareweightcolumn;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[20]//input")
+	private List<WebElement> tareweightinputfields;
+	
+	public List<WebElement> getTareWeightInputFields() {
+		return tareweightinputfields;
+	}
+	
 	
 	
 	

@@ -1762,6 +1762,109 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 			
 			
 		}
-	
-	
+		
+		@Test(dependsOnMethods = "TC_061VerifyTareWeightDeductColumnisPresent")
+		public void TC_062verifyTareweightDeductchecckboxispresentandClickabe() throws InterruptedException {
+			List<WebElement> chekboxes = gpb.getTareWeightDeductedCheckboxes();
+			for (int i = 0; i < chekboxes.size(); i++) {
+				WebElement checkbox = chekboxes.get(i);
+				int row = i + 1;
+
+				if (checkbox.isDisplayed() && checkbox.isEnabled()) {
+					System.out.println("Tare Weight Deduct checkbox is present for container " + row + " :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Tare Weight Deduct checkbox is present for container " + row);
+				} else {
+					System.out.println("Tare Weight Deduct checkbox is NOT present or NOT enabled for container " + row + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Tare Weight Deduct checkbox is NOT present or NOT enabled for container " + row);
+				}
+			}
+			//verify the checkbox is clickable
+			for (WebElement checkbox : chekboxes) {
+				if (checkbox.isDisplayed() && checkbox.isEnabled()) {
+					checkbox.click();
+					System.out.println("Clicked on Tare Weight Deduct checkbox");
+					utilityclassobject.gettest().log(Status.INFO, "Clicked on Tare Weight Deduct checkbox");
+				} else {
+					System.out.println("Tare Weight Deduct checkbox is NOT clickable");
+					utilityclassobject.gettest().log(Status.FAIL, "Tare Weight Deduct checkbox is NOT clickable");
+				}
+			}
+			//again uncheck the checkboxes to avoid any issues in next test case
+			for (WebElement checkbox : chekboxes) {
+				if (checkbox.isSelected()) {
+					checkbox.click();
+					System.out.println("Unchecked the Tare Weight Deduct checkbox");
+					utilityclassobject.gettest().log(Status.INFO, "Unchecked the Tare Weight Deduct checkbox");
+				}
+			}
+			
+		}
+		
+		
+		@Test(dependsOnMethods = "TC_062verifyTareweightDeductchecckboxispresentandClickabe")
+		public void TC_063VerifyTareWeightcolumnispresentbesidetareweightdeductcolumn() throws InterruptedException {
+			
+			if( gpb.getTareWeightColumn().isDisplayed()) {
+				System.out.println("Tare Weight column is displayed immediatly beside Tare Weight Deduct column :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Tare Weight column is displayed immediatly beside Tare Weight Deduct column");
+			} else {
+				System.out.println("Tare Weight column is NOT displayed immediatly beside Tare Weight Deduct column :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Tare Weight column is NOT displayed immediatly beside Tare Weight Deduct column");
+			}
+		
+			
+		}
+		
+		@Test(dependsOnMethods = "TC_063VerifyTareWeightcolumnispresentbesidetareweightdeductcolumn")
+		public void TC_064VerifyTareWeightInputFieldAcceptsOnlyNumericValues() throws InterruptedException, EncryptedDocumentException, IOException {
+			List<WebElement> tareWeightFields = gpb.getTareWeightInputFields();
+			boolean isPass = true;
+
+			if (tareWeightFields.isEmpty()) {
+				System.out.println("No Tare Weight input fields found :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "No Tare Weight input fields found");
+				return;
+			}
+
+			for (int i = 0; i < tareWeightFields.size(); i++) {
+				WebElement field = tareWeightFields.get(i);
+				int row = i + 1;
+
+				clearInputField(field);
+				Thread.sleep(2000); 
+				
+				//read the data from excel sheet
+				String tareweight = elib.getDataFromExcel("Generator price book", 1, 2);			
+				field.sendKeys(tareweight);
+				String valueAfterNumeric = field.getAttribute("value");
+
+				if ("5".equals(valueAfterNumeric)) {
+					System.out.println("Tare Weight field " + row + " accepted numeric value 5 :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Tare Weight field " + row + " accepted numeric value 5");
+				} else {
+					isPass = false;
+					System.out.println("Tare Weight field " + row + " did not keep numeric value 5. Actual: " + valueAfterNumeric + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Tare Weight field " + row + " did not keep numeric value 5. Actual: " + valueAfterNumeric);
+				}
+
+				clearInputField(field);
+				Thread.sleep(2000); 
+
+				String[] invalidInputs = {"abc", "@#$", "ab@12"};
+				for (String invalidInput : invalidInputs) {
+					field.sendKeys(invalidInput);
+					
+					gpb.getUniversalWasteText().click();
+					Thread.sleep(2000);
+					String actualValue = field.getAttribute("value");
+					String safeValue = actualValue == null ? "" : actualValue.trim();
+
+					if (safeValue.matches(".*[^0-9].*")) {
+						isPass = false;
+						System.out.println("Tare Weight field " + row + " accepted invalid input '" + invalidInput + "'. Actual: '" + safeValue + "' :FAIL");
+					}
+				}
+			}
+		}
+			
 }
