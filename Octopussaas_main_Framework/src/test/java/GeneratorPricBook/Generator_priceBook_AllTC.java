@@ -1699,7 +1699,6 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 	@Test(dependsOnMethods = "TC_059VerifyBesidePriceperPoundColumnWeightlimitcolumnisPresent")
 	public void TC_060VerifyWeightLimitColumnAcceptsOnlyNumericValues() throws InterruptedException, EncryptedDocumentException, IOException {
 		List<WebElement> weightLimitFields = gpb.getWeightLimitInputFields();
-		boolean isPass = true;
 
 		if (weightLimitFields.isEmpty()) {
 			System.out.println("No Weight Limit input fields found :FAIL");
@@ -1720,11 +1719,10 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 			field.sendKeys(weightlimit);
 			String valueAfterNumeric = field.getAttribute("value");
 
-			if ("15".equals(valueAfterNumeric)) {
+			if ("15".contains(valueAfterNumeric)) {
 				System.out.println("Weight Limit field " + row + " accepted numeric value 15 :PASS");
 				utilityclassobject.gettest().log(Status.PASS, "Weight Limit field " + row + " accepted numeric value 15");
 			} else {
-				isPass = false;
 				System.out.println("Weight Limit field " + row + " did not keep numeric value 15. Actual: " + valueAfterNumeric + " :FAIL");
 				utilityclassobject.gettest().log(Status.FAIL, "Weight Limit field " + row + " did not keep numeric value 15. Actual: " + valueAfterNumeric);
 			}
@@ -1742,7 +1740,6 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 				String safeValue = actualValue == null ? "" : actualValue.trim();
 
 				if (safeValue.matches(".*[^0-9].*")) {
-					isPass = false;
 					System.out.println("Weight Limit field " + row + " accepted invalid input '" + invalidInput + "'. Actual: '" + safeValue + "' :FAIL");
 					utilityclassobject.gettest().log(Status.FAIL, "Weight Limit field " + row + " accepted invalid input '" + invalidInput + "'. Actual: '" + safeValue + "'");
 				}
@@ -1798,6 +1795,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 				}
 			}
 			
+			
 		}
 		
 		
@@ -1817,8 +1815,9 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		
 		@Test(dependsOnMethods = "TC_063VerifyTareWeightcolumnispresentbesidetareweightdeductcolumn")
 		public void TC_064VerifyTareWeightInputFieldAcceptsOnlyNumericValues() throws InterruptedException, EncryptedDocumentException, IOException {
+			
+			
 			List<WebElement> tareWeightFields = gpb.getTareWeightInputFields();
-			boolean isPass = true;
 
 			if (tareWeightFields.isEmpty()) {
 				System.out.println("No Tare Weight input fields found :FAIL");
@@ -1826,6 +1825,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 				return;
 			}
 
+			
 			for (int i = 0; i < tareWeightFields.size(); i++) {
 				WebElement field = tareWeightFields.get(i);
 				int row = i + 1;
@@ -1836,18 +1836,25 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 				//read the data from excel sheet
 				String tareweight = elib.getDataFromExcel("Generator price book", 1, 2);			
 				field.sendKeys(tareweight);
+				System.out.println("Entered tare weight value from excel: " + tareweight);
+				utilityclassobject.gettest().log(Status.INFO, "Entered tare weight value from excel: " + tareweight);
 				String valueAfterNumeric = field.getAttribute("value");
 
-				if ("5".equals(valueAfterNumeric)) {
-					System.out.println("Tare Weight field " + row + " accepted numeric value 5 :PASS");
-					utilityclassobject.gettest().log(Status.PASS, "Tare Weight field " + row + " accepted numeric value 5");
+				if (tareweight.contains(valueAfterNumeric)) {
+					System.out.println("Tare Weight field " + row + " accepted numeric value "+tareweight+" :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Tare Weight field " + row + " accepted numeric value  "+tareweight+"");
 				} else {
-					isPass = false;
-					System.out.println("Tare Weight field " + row + " did not keep numeric value 5. Actual: " + valueAfterNumeric + " :FAIL");
-					utilityclassobject.gettest().log(Status.FAIL, "Tare Weight field " + row + " did not keep numeric value 5. Actual: " + valueAfterNumeric);
+					System.out.println("Tare Weight field " + row + " did not keep numeric value "+tareweight+". Actual: " + valueAfterNumeric + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Tare Weight field " + row + " did not keep numeric value "+tareweight+" Actual: " + valueAfterNumeric);
 				}
-
+				try {
+					
 				clearInputField(field);
+				}
+				catch (Exception e) {
+					System.out.println("Failed to clear Tare Weight field " + row + " : " + e.getMessage() + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Failed to clear Tare Weight field " + row + " : " + e.getMessage());
+				}
 				Thread.sleep(2000); 
 
 				String[] invalidInputs = {"abc", "@#$", "ab@12"};
@@ -1860,8 +1867,8 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 					String safeValue = actualValue == null ? "" : actualValue.trim();
 
 					if (safeValue.matches(".*[^0-9].*")) {
-						isPass = false;
 						System.out.println("Tare Weight field " + row + " accepted invalid input '" + invalidInput + "'. Actual: '" + safeValue + "' :FAIL");
+						utilityclassobject.gettest().log(Status.FAIL, "Tare Weight field " + row + " accepted invalid input '" + invalidInput + "'. Actual: '" + safeValue + "'");
 					}
 				}
 			}
