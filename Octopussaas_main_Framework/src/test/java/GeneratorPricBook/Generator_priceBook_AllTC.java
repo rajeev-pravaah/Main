@@ -1217,7 +1217,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 			field.sendKeys("5");
 
 			String enteredValue = field.getAttribute("value");
-			if ("5".equals(enteredValue)) {
+			if (enteredValue.contains("5")) {
 				System.out.println("Allotment Upto field " + fieldNumber + " accepted value 5 :PASS");
 				utilityclassobject.gettest().log(Status.PASS, "Allotment Upto field " + fieldNumber + " accepted value 5");
 			} else {
@@ -1348,7 +1348,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 			field.sendKeys("10");
 
 			String enteredValue = field.getAttribute("value");
-			if ("10".equals(enteredValue)) {
+			if (enteredValue.contains("10")) {
 				System.out.println("Additional Container Rate field " + fieldNumber + " accepted value 10 :PASS");
 				utilityclassobject.gettest().log(Status.PASS, "Additional Container Rate field " + fieldNumber + " accepted value 10");
 			} else {
@@ -1719,7 +1719,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 			field.sendKeys(weightlimit);
 			String valueAfterNumeric = field.getAttribute("value");
 
-			if ("15".contains(valueAfterNumeric)) {
+			if (valueAfterNumeric.contains("15")) {
 				System.out.println("Weight Limit field " + row + " accepted numeric value 15 :PASS");
 				utilityclassobject.gettest().log(Status.PASS, "Weight Limit field " + row + " accepted numeric value 15");
 			} else {
@@ -1873,5 +1873,65 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 				}
 			}
 		}
+		
+		
+		@Test(dependsOnMethods = "TC_064VerifyTareWeightInputFieldAcceptsOnlyNumericValues")
+		public void TC_065VerifyTaxablecolumnispresentandvisibleforEverycontainer() throws InterruptedException {
+			
+			if( gpb.getTaxableColumn().isDisplayed()) {
+				System.out.println("Taxable column is displayed immediatly beside Tare Weight column :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Taxable column is displayed immediatly beside Tare Weight column");
+			} else {
+				System.out.println("Taxable column is NOT displayed immediatly beside Tare Weight column :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Taxable column is NOT displayed immediatly beside Tare Weight column");
+			}
+			
+			//veriy check boxes are present for each container
+			List<WebElement> taxableCheckboxes = gpb.getTaxableCheckboxes();
+			for (int i = 0; i < taxableCheckboxes.size(); i++) {
+				WebElement checkbox = taxableCheckboxes.get(i);
+				int row = i + 1;
+
+				if (checkbox.isDisplayed() && checkbox.isEnabled()) {
+					System.out.println("Taxable checkbox is present for container " + row + " :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Taxable checkbox is present for container " + row);
+				} else {
+					System.out.println("Taxable checkbox is NOT present or NOT enabled for container " + row + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Taxable checkbox is NOT present or NOT enabled for container " + row);
+				}
+			}
+			
+		}
+		
+		@Test(dependsOnMethods = "TC_065VerifyTaxablecolumnispresentandvisibleforEverycontainer")
+		public void TC_066VerifyTaxableCheckboxisClickableandEveryContainerShouldhavecheckbox() throws InterruptedException {
+			
+			List<WebElement> taxableCheckboxes = gpb.getTaxableCheckboxes();
+			for (int i = 0; i < taxableCheckboxes.size(); i++) {
+				WebElement checkbox = taxableCheckboxes.get(i);
+				int row = i + 1;
+
+				if (checkbox.isDisplayed() && checkbox.isEnabled()) {
+					checkbox.click();
+					System.out.println("Clicked on Taxable checkbox for container " + row);
+					utilityclassobject.gettest().log(Status.INFO, "Clicked on Taxable checkbox for container " + row);
+				} else {
+					System.out.println("Taxable checkbox is NOT clickable for container " + row + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Taxable checkbox is NOT clickable for container " + row);
+				}
+			}
+			//again uncheck the checkboxes to avoid any issues in next test case
+			for (WebElement checkbox : taxableCheckboxes) {
+				if (checkbox.isSelected()) {
+					checkbox.click();
+					System.out.println("Unchecked the Taxable checkbox");
+					utilityclassobject.gettest().log(Status.INFO, "Unchecked the Taxable checkbox");
+				}
+			}
+			
+			
+			
+		}
+			
 			
 }

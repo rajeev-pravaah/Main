@@ -598,6 +598,20 @@ public class Generator_Price_book {
 		return tareweightinputfields;
 	}
 	
+	@FindBy(xpath = "//div[text()='Taxable']")
+	private WebElement taxablecolumn;
+	
+	public WebElement getTaxableColumn() {
+		return taxablecolumn;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[21]/descendant::div[@role='checkbox']")
+	private List<WebElement> taxablecheckboxes;
+	
+	public List<WebElement> getTaxableCheckboxes() {
+		return taxablecheckboxes;
+	}
+	
 	
 	
 	
