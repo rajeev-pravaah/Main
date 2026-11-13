@@ -1763,6 +1763,8 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		@Test(dependsOnMethods = "TC_061VerifyTareWeightDeductColumnisPresent")
 		public void TC_062verifyTareweightDeductchecckboxispresentandClickabe() throws InterruptedException {
 			List<WebElement> chekboxes = gpb.getTareWeightDeductedCheckboxes();
+			int totalCheckboxes = chekboxes.size();
+
 			for (int i = 0; i < chekboxes.size(); i++) {
 				WebElement checkbox = chekboxes.get(i);
 				int row = i + 1;
@@ -1786,14 +1788,31 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 					utilityclassobject.gettest().log(Status.FAIL, "Tare Weight Deduct checkbox is NOT clickable");
 				}
 			}
-			//again uncheck the checkboxes to avoid any issues in next test case
-			for (WebElement checkbox : chekboxes) {
-				if (checkbox.isSelected()) {
-					checkbox.click();
-					System.out.println("Unchecked the Tare Weight Deduct checkbox");
-					utilityclassobject.gettest().log(Status.INFO, "Unchecked the Tare Weight Deduct checkbox");
-				}
-			}
+			// again uncheck only taxable checkboxes to avoid issues in next test case
+			//List<WebElement> tareweightchekboxes = gpb.getTareWeightDeductedCheckboxes();
+
+						for (int i = 0; i < totalCheckboxes; i++) {
+							List<WebElement> tarableCheckboxes = gpb.getTareWeightDeductedCheckboxes();
+							WebElement checkbox = tarableCheckboxes.get(i);
+							int row = i + 1;
+							String state = checkbox.getAttribute("aria-checked");
+							if ("true".equalsIgnoreCase(state)) {
+								((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", checkbox);
+								try {
+									checkbox.click();
+								} catch (Exception e) {
+									((JavascriptExecutor) driver).executeScript("arguments[0].click();", checkbox);
+								}
+								Thread.sleep(200);
+								String latestState = gpb.getTareWeightDeductedCheckboxes().get(i).getAttribute("aria-checked");
+								if ("true".equalsIgnoreCase(latestState)) {
+									((JavascriptExecutor) driver).executeScript("arguments[0].click();", gpb.getTareWeightDeductedCheckboxes().get(i));
+									Thread.sleep(200);
+								}
+								System.out.println("Unchecked the Tarable checkbox for container " + row);
+								utilityclassobject.gettest().log(Status.INFO, "Unchecked the Tarable checkbox for container " + row);
+							}
+						}
 			
 			
 		}
@@ -1907,12 +1926,20 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		public void TC_066VerifyTaxableCheckboxisClickableandEveryContainerShouldhavecheckbox() throws InterruptedException {
 			
 			List<WebElement> taxableCheckboxes = gpb.getTaxableCheckboxes();
-			for (int i = 0; i < taxableCheckboxes.size(); i++) {
+			int totalCheckboxes = taxableCheckboxes.size();
+			for (int i = 0; i < totalCheckboxes; i++) {
+				taxableCheckboxes = gpb.getTaxableCheckboxes();
 				WebElement checkbox = taxableCheckboxes.get(i);
 				int row = i + 1;
 
 				if (checkbox.isDisplayed() && checkbox.isEnabled()) {
-					checkbox.click();
+					((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", checkbox);
+					try {
+						checkbox.click();
+					} catch (Exception e) {
+						((JavascriptExecutor) driver).executeScript("arguments[0].click();", checkbox);
+					}
+					Thread.sleep(200);
 					System.out.println("Clicked on Taxable checkbox for container " + row);
 					utilityclassobject.gettest().log(Status.INFO, "Clicked on Taxable checkbox for container " + row);
 				} else {
@@ -1920,18 +1947,279 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 					utilityclassobject.gettest().log(Status.FAIL, "Taxable checkbox is NOT clickable for container " + row);
 				}
 			}
-			//again uncheck the checkboxes to avoid any issues in next test case
-			for (WebElement checkbox : taxableCheckboxes) {
-				if (checkbox.isSelected()) {
-					checkbox.click();
-					System.out.println("Unchecked the Taxable checkbox");
-					utilityclassobject.gettest().log(Status.INFO, "Unchecked the Taxable checkbox");
+			// again uncheck only taxable checkboxes to avoid issues in next test case
+			for (int i = 0; i < totalCheckboxes; i++) {
+				taxableCheckboxes = gpb.getTaxableCheckboxes();
+				WebElement checkbox = taxableCheckboxes.get(i);
+				int row = i + 1;
+				String state = checkbox.getAttribute("aria-checked");
+				if ("true".equalsIgnoreCase(state)) {
+					((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", checkbox);
+					try {
+						checkbox.click();
+					} catch (Exception e) {
+						((JavascriptExecutor) driver).executeScript("arguments[0].click();", checkbox);
+					}
+					Thread.sleep(200);
+					String latestState = gpb.getTaxableCheckboxes().get(i).getAttribute("aria-checked");
+					if ("true".equalsIgnoreCase(latestState)) {
+						((JavascriptExecutor) driver).executeScript("arguments[0].click();", gpb.getTaxableCheckboxes().get(i));
+						Thread.sleep(200);
+					}
+					System.out.println("Unchecked the Taxable checkbox for container " + row);
+					utilityclassobject.gettest().log(Status.INFO, "Unchecked the Taxable checkbox for container " + row);
 				}
 			}
 			
 			
 			
 		}
+		
+		@Test(dependsOnMethods = "TC_066VerifyTaxableCheckboxisClickableandEveryContainerShouldhavecheckbox")
+		public void TC_067VerifyBesideTaxableColumnAlow0$chargeColumnisPresent() {
 			
+			if( gpb.getAllowZeroDollarChargeColumn().isDisplayed()) {
+				System.out.println("Allow 0$ charge column is displayed immediatly beside Taxable column :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Allow 0$ charge column is displayed immediatly beside Taxable column");
+			} else {
+				System.out.println("Allow 0$ charge column is NOT displayed immediatly beside Taxable column :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Allow 0$ charge column is NOT displayed immediatly beside Taxable column");
+			}
+			
+			
+		}
+
+		
+		@Test(dependsOnMethods = "TC_067VerifyBesideTaxableColumnAlow0$chargeColumnisPresent")
+		public void TC_068VerifyAllow0$chargeCheckboxisClickableandEveryContainerShouldhavecheckbox() throws InterruptedException {
+			
+			List<WebElement> allowZeroChargeCheckboxes = gpb.getAllowZeroDollarChargeCheckboxes();
+			int totalCheckboxes = allowZeroChargeCheckboxes.size();
+			for (int i = 0; i < totalCheckboxes; i++) {
+				allowZeroChargeCheckboxes = gpb.getAllowZeroDollarChargeCheckboxes();
+				WebElement checkbox = allowZeroChargeCheckboxes.get(i);
+				int row = i + 1;
+
+				if (checkbox.isDisplayed() && checkbox.isEnabled()) {
+					((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", checkbox);
+					try {
+						checkbox.click();
+					} catch (Exception e) {
+						((JavascriptExecutor) driver).executeScript("arguments[0].click();", checkbox);
+					}
+					Thread.sleep(200);
+					System.out.println("Clicked on Allow 0$ charge checkbox for container " + row);
+					utilityclassobject.gettest().log(Status.INFO, "Clicked on Allow 0$ charge checkbox for container " + row);
+				} else {
+					System.out.println("Allow 0$ charge checkbox is NOT clickable for container " + row + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Allow 0$ charge checkbox is NOT clickable for container " + row);
+				}
+			}
+			// again uncheck only Allow 0$ charge checkboxes to avoid issues in next test case
+			for (int i = 0; i < totalCheckboxes; i++) {
+				allowZeroChargeCheckboxes = gpb.getAllowZeroDollarChargeCheckboxes();
+				WebElement checkbox = allowZeroChargeCheckboxes.get(i);
+				int row = i + 1;
+				String state = checkbox.getAttribute("aria-checked");
+				if ("true".equalsIgnoreCase(state)) {
+					((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", checkbox);
+					try {
+						checkbox.click();
+					} catch (Exception e) {
+						((JavascriptExecutor) driver).executeScript("arguments[0].click();", checkbox);
+					}
+					Thread.sleep(200);
+					String latestState = gpb.getAllowZeroDollarChargeCheckboxes().get(i).getAttribute("aria-checked");
+					if ("true".equalsIgnoreCase(latestState)) {
+						((JavascriptExecutor) driver).executeScript("arguments[0].click();", gpb.getAllowZeroDollarChargeCheckboxes().get(i));
+						Thread.sleep(200);
+					}
+					System.out.println("Unchecked the Allow 0$ charge checkbox for container " + row);
+					utilityclassobject.gettest().log(Status.INFO, "Unchecked the Allow 0$ charge checkbox for container " + row);
+					
+					
+				}
+			}
+		}
+		
+		@Test(dependsOnMethods = "TC_068VerifyAllow0$chargeCheckboxisClickableandEveryContainerShouldhavecheckbox")
+		public void TC_069VerifyProductMenuisPresent() {
+			
+			if( gpb.getProductsmenu().isDisplayed()) {
+				System.out.println("Products menu is displayed on the page :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Products menu is displayed on the page");
+				
+			} else {
+				System.out.println("Products menu is NOT displayed on the page :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Products menu is NOT displayed on the page");
+			}
+		}
+		
+		@Test(dependsOnMethods = "TC_069VerifyProductMenuisPresent")
+		public void TC_070VerifyProductContainerDisplayednadabletochangeContainer() {
+			
+			if( gpb.getProductsmenu().isDisplayed() && gpb.getProductsmenu().isEnabled()) {
+				gpb.getProductsmenu().click();
+				System.out.println("Products menu is  displayed and clickable :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Products menu is displayed and clickable");
+				
+			} else {
+				System.out.println("Products menu is NOT displayed and clickable :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Products menu is NOT displayed and clickable");
+			}
+			//verify able to selecct every container from the product menu
+			List<WebElement> productMenuItems = gpb.getProductContainerOptions();
+			for (int i = 0; i < productMenuItems.size(); i++) {
+				WebElement menuItem = productMenuItems.get(i);
+				String containerName = menuItem.getText();
+				if (menuItem.isDisplayed() && menuItem.isEnabled()) {
+					menuItem.click();
+					System.out.println("Selected container " + (i + 1) + " [" + containerName + "] from Products menu :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Selected container " + (i + 1) + " [" + containerName + "] from Products menu");
+				} else {
+					System.out.println("Container " + (i + 1) + " [" + containerName + "] is NOT selectable from Products menu :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Container " + (i + 1) + " [" + containerName + "] is NOT selectable from Products menu");
+				}
+			}
+			//again click on 1st container to avoid issues in next test case
+			if (!productMenuItems.isEmpty()) {
+				WebElement firstMenuItem = productMenuItems.get(0);
+				if (firstMenuItem.isDisplayed() && firstMenuItem.isEnabled()) {
+					firstMenuItem.click();
+					System.out.println("Re-selected the first container from Products menu to reset state");
+					utilityclassobject.gettest().log(Status.INFO, "Re-selected the first container from Products menu to reset state");
+				}
+			}
+			System.out.println("All containers in Products menu are selectable and the menu is functional :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "All containers in Products menu are selectable and the menu is functional");
+			
+			
+			
+		}
+		
+		@Test(dependsOnMethods = "TC_070VerifyProductContainerDisplayednadabletochangeContainer")
+		public void TC_071VerifySharpproductsWith21Items() {
+			
+			List<WebElement> items = gpb.getProductItems();
+			//fetch total items count from the product menu
+			
+			int actualsize = items.size();
+			System.out.println("Total product items found: " + actualsize);
+			utilityclassobject.gettest().log(Status.INFO, "Total product items found: " + actualsize);
+			
+			for (int i = 0; i < items.size(); i++) {
+				WebElement item = items.get(i);
+				int row = i + 1;
+
+				if (item.isDisplayed()) {
+					System.out.println("Product item " + row + " is displayed :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Product item " + row + " is displayed");
+				} else {
+					System.out.println("Product item " + row + " is NOT displayed :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Product item " + row + " is NOT displayed");
+				}
+			}
+			
+		}
+	
+			
+		
+		@Test(dependsOnMethods = "TC_071VerifySharpproductsWith21Items")
+		public void TC_072VerifySharpsheaderisPresentwithProducts() throws InterruptedException {
+			if(gpb.getSharpsHeader().isDisplayed()) {
+				System.out.println("Sharps header is displayed above the number products  :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Sharps header is displayed above the number products  ");
+			} else {
+				System.out.println("Sharps header is NOT displayed above the number products   :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Sharps header is NOT displayed above the number products   list");
+			}
+			
+			//fetch number of products
+			WebElement txt = gpb.getSharpsHeader();
+			System.out.println("Sharps Header with number of: " + txt.getText() + " products");
+			utilityclassobject.gettest().log(Status.INFO, "Sharps Header with number of: " + txt.getText() + " products");
+			
+			
+			
+			
+		}
+		
+		@Test(dependsOnMethods = "TC_072VerifySharpsheaderisPresentwithProducts")
+		public void TC_073VerifyCopyFromMasterColumnDisplayedin1stHeader() {
+			if(gpb.getCopyFromMasterColumnFromProductsMenu().isDisplayed()) {
+				System.out.println("Copy From Master column is displayed in the 1st header of Products menu :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Copy From Master column is displayed in the 1st header of Products menu");
+			}else {
+				System.out.println("Copy From Master column is NOT displayed in the 1st header of Products menu :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Copy From Master column is NOT displayed in the 1st header of Products menu");
+			}
+		}
+		
+		@Test(dependsOnMethods = "TC_073VerifyCopyFromMasterColumnDisplayedin1stHeader")
+		public void TC_074VerifyCopybuttonisPresentinAllRowBelowCopyfromMasterColumn() {
+			
+			for (int i = 0; i < gpb.getCopyFromMasterButtons().size(); i++) {
+				WebElement copyButton = gpb.getCopyFromMasterButtons().get(i);
+				int row = i + 1;
+
+				if (copyButton.isDisplayed()) {
+					System.out.println("Copy button is present and clickable for product row " + row + " :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Copy button is present  for product row " + row);
+				} else {
+					System.out.println("Copy button is NOT present for product row " + row + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Copy button is NOT present for product row " + row);
+				}
+			}
+		}
+			
+		@Test(dependsOnMethods = "TC_074VerifyCopybuttonisPresentinAllRowBelowCopyfromMasterColumn")
+		public void TC_075VerifyMasterItemNameColumnBesideCopyfromMasterColumn() throws InterruptedException {
+			
+			if(gpb.getMasterItemNameColumnFromSProductsMenu().isDisplayed()) {
+				System.out.println("Master Item Name column is displayed immediatly beside Copy From Master column :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Master Item Name column is displayed immediatly beside Copy From Master column");
+			} else {
+				System.out.println("Master Item Name column is NOT displayed immediatly beside Copy From Master column :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Master Item Name column is NOT displayed immediatly beside Copy From Master column");
+			}
+			
+		}
+		
+		@Test(dependsOnMethods = "TC_075VerifyMasterItemNameColumnBesideCopyfromMasterColumn")
+		public void TC_076Verify21ItemsarePresentinMasterItemNameColumn() {
+			
+			List<WebElement> masterItemNames = gpb.getProductItemsList();
+			int actualsize = masterItemNames.size();
+			System.out.println("Total Master Item Name items found: " + actualsize);
+			utilityclassobject.gettest().log(Status.INFO, "Total Master Item Name items found: " + actualsize);
+			
+			//print each item name
+			for (int i = 0; i < masterItemNames.size(); i++) {
+				WebElement item = masterItemNames.get(i);
+				int row = i + 1;
+
+				if (item.isDisplayed()) {
+					System.out.println("Master Item Name " + row + " is displayed: " + item.getText() + " :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Master Item Name " + row + " is displayed: " + item.getText());
+				} else {
+					System.out.println("Master Item Name " + row + " is NOT displayed :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Master Item Name " + row + " is NOT displayed");
+				}
+			}
+		}
+		
+		@Test(dependsOnMethods = "TC_076Verify21ItemsarePresentinMasterItemNameColumn")
+		public void TC_077VerifySalePriceisPresentbesideMasterNameColumn() throws InterruptedException {
+			
+			if(gpb.getSalePriceColumnFromProductsMenu().isDisplayed()) {
+				System.out.println("Sale Price column is displayed immediatly beside Master Item Name column :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Sale Price column is displayed immediatly beside Master Item Name column");
+			} else {
+				System.out.println("Sale Price column is NOT displayed immediatly beside Master Item Name column :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Sale Price column is NOT displayed immediatly beside Master Item Name column");
+			}
+			
+			
+		}
 			
 }

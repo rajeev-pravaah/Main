@@ -49,6 +49,7 @@ public class BaseClassForGEneratorContacts {
 	 * Removes invisible/control characters (BOM, CR, LF, tabs),
 	 * trims whitespace, strips inner spaces, and ensures a valid scheme.
 	 */
+	
 	private String sanitizeUrl(String url) {
 		if (url == null) return "";
 		// Remove BOM and all control/invisible characters (CR, LF, tab, BOM etc.)
@@ -90,6 +91,7 @@ public class BaseClassForGEneratorContacts {
 			);
 		}
 	}
+
 
 	@BeforeClass(alwaysRun = true)
 	public void Bc(/*@Optional("Chrome") String browser*/) throws IOException, InterruptedException, AWTException {

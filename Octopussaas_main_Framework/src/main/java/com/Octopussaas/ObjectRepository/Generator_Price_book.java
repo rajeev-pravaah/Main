@@ -612,8 +612,94 @@ public class Generator_Price_book {
 		return taxablecheckboxes;
 	}
 	
+	@FindBy(xpath = "//span[text()='Allow $0']")
+	private WebElement allowzerodollarchargercolumn;
+	
+	public WebElement getAllowZeroDollarChargeColumn() {
+		return allowzerodollarchargercolumn;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[22]/descendant::div[@role='checkbox']")
+	private List<WebElement> allowzerodollarchargecheckboxes;
+	
+	public List<WebElement> getAllowZeroDollarChargeCheckboxes() {
+		return allowzerodollarchargecheckboxes;
+	}
+	
+	@FindBy(xpath = "//button[text()='Products']")
+
+	private WebElement productsbutton;
+	
+	public WebElement getProductsmenu() {
+		return productsbutton;
+	}
+	
+	@FindBy(xpath = "//div[@class='flex flex-wrap gap-2']/descendant::button")
+	private List<WebElement> productcontaineroptions;
+	
+	public List<WebElement> getProductContainerOptions() {
+		return productcontaineroptions;
+	}
 	
 	
+	@FindBy(xpath = "//div[@class='min-w-0 pt-0.5']")
+	private List<WebElement> productitmes;
+	
+	public List<WebElement> getProductItems() {
+		return productitmes;
+	}
+	
+	@FindBy(xpath = "//h3[text()='Sharps']/../descendant::p")
+	private WebElement sharpsheader;
+	
+	public WebElement getSharpsHeader() {
+		return sharpsheader;
+	}
+	
+	
+	@FindBy(xpath = "//div[@class='flex w-[3rem] flex-none items-start justify-center pt-1']/descendant::button")
+	private List<WebElement> copybuttofromallrows;
+	
+	public List<WebElement> getCopyButtonFromAllRows() {
+		return copybuttofromallrows;
+	}
+	
+	
+	
+	@FindBy(xpath = "//span[text()='Copy From']")
+	private WebElement copyfrommastercolumnfromproductsmenu;
+	
+	public WebElement getCopyFromMasterColumnFromProductsMenu() {
+		return copyfrommastercolumnfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//span[text()='Master Item']")
+	private WebElement masteritemnamecolumnfromproductsmenu;
+	
+	public WebElement getMasterItemNameColumnFromProductsMenu() {
+		return masteritemnamecolumnfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//span[text()='Master Item Name']")
+	private WebElement masteritemnamecolumnfromsproductmenu;
+	
+	public WebElement getMasterItemNameColumnFromSProductsMenu() {
+		return masteritemnamecolumnfromsproductmenu;
+	}
+	
+	@FindBy(xpath = "//div[@class='flex min-w-0 items-start gap-2']")
+	private List<WebElement> productitemslist;
+	
+	public List<WebElement> getProductItemsList() {
+		return productitemslist;
+	}
+	
+	@FindBy(xpath = "//div[text()='Sale Price']")
+	private WebElement salepricecolumnfromproductsmenu;
+	
+	public WebElement getSalePriceColumnFromProductsMenu() {
+		return salepricecolumnfromproductsmenu;
+	}
 	
 	
 	
