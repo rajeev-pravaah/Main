@@ -49,6 +49,7 @@ public class BaseClassForGEneratorContacts {
 	 * Removes invisible/control characters (BOM, CR, LF, tabs),
 	 * trims whitespace, strips inner spaces, and ensures a valid scheme.
 	 */
+	
 	private String sanitizeUrl(String url) {
 		if (url == null) return "";
 		// Remove BOM and all control/invisible characters (CR, LF, tab, BOM etc.)
@@ -68,6 +69,30 @@ public class BaseClassForGEneratorContacts {
 		System.out.println("[INFO] Sanitized URL: " + url);
 		return url;
 	}
+
+	private boolean isPolicyBlockedDriverError(Exception e) {
+		String message = e.getMessage();
+		if (message == null) {
+			return false;
+		}
+		String lower = message.toLowerCase();
+		return lower.contains("createprocess error=4551")
+				|| lower.contains("application control policy has blocked this file");
+	}
+
+	private WebDriver createEdgeDriverFallback() {
+		System.out.println("[WARN] Falling back to EdgeDriver because ChromeDriver launch is blocked by local policy.");
+		try {
+			return new EdgeDriver();
+		} catch (Exception edgeException) {
+			throw new RuntimeException(
+				"ChromeDriver is blocked by policy and Edge fallback also failed. Configure an allowed driver binary and retry.",
+				edgeException
+			);
+		}
+	}
+
+
 	@BeforeClass(alwaysRun = true)
 	public void Bc(/*@Optional("Chrome") String browser*/) throws IOException, InterruptedException, AWTException {
 		System.out.println("Before class");
@@ -100,7 +125,15 @@ public class BaseClassForGEneratorContacts {
 			        Arrays.asList("enable-automation"));
 			options.setExperimentalOption("useAutomationExtension", false);
 			
-			driver= new ChromeDriver(options);
+			try {
+				driver = new ChromeDriver(options);
+			} catch (Exception chromeException) {
+				if (isPolicyBlockedDriverError(chromeException)) {
+					driver = createEdgeDriverFallback();
+				} else {
+					throw chromeException;
+				}
+			}
 			((JavascriptExecutor) driver).executeScript(
 				    "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})");
 			//to clear all the cookies
