@@ -246,5 +246,17 @@ public class Subcontractor_Servicerequest extends BaseClassForGEneratorContacts{
 		utilityclassobject.gettest().log(Status.INFO, "In Status dropdown Terminated status checkbox is present and it is clickable");		
 	}
 	
+	@Test(dependsOnMethods = "TC_013VerifySubcontractorSerivce_withTerminationserviceStatus")
+	public void TC_015VerifySubcontractorService_WithTerminatedStatus() throws InterruptedException
+	{
+		sub.getTerminatedStatus().click();
+		sub.getTerminatedStatus().click();
+		Thread.sleep(2000);
+		sub.getTerminatedStatus().click();
+		sub.getTerminatedStatus().click();
+		System.out.println("In Status dropdown Terminated status checkbox is present and it is clickable");
+		utilityclassobject.gettest().log(Status.INFO, "In Status dropdown Terminated status checkbox is present and it is clickable");		
+	}
+	
 
 }
