@@ -172,8 +172,8 @@ public class Subcontractor_Servicerequest extends BaseClassForGEneratorContacts{
 	public void TC_009VerifySubcontractorSerivce_DefaultStatus() throws InterruptedException
 	{
 		sub.getStatusDrp().click();
-		Assert.assertTrue(sub.getPendingStatus().isEnabled(), "Pending satatus is selected");
-		Assert.assertTrue(sub.getTerminationStatus().isEnabled(), "Termination request satatus is selected");
+		Assert.assertTrue(sub.getPendingStatus().findElement(By.tagName("input")).isSelected(), "Pending status should be selected by default");
+		Assert.assertTrue(sub.getTerminationStatus().findElement(By.tagName("input")).isSelected(), "Termination Requested status should be selected by default");
 		sub.getPendingStatus().click();
 		Thread.sleep(2000);
 		sub.getPendingStatus().click();
