@@ -2282,7 +2282,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		}
 		
 		@Test(/*dependsOnMethods = "TC_078VerifySalePriceInputFieldAcceptsOnlyNumericValues"*/)
-		public void TC_079VerifySalePriceInputFieldAcceptsDecimalValues() throws InterruptedException, EncryptedDocumentException, IOException {
+		public void TC_079VerifyUptoAllotmentColmnispresentbrsideSalesprice() throws InterruptedException, EncryptedDocumentException, IOException {
 			
 			
 			
@@ -2344,10 +2344,73 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 			//comment till here while running batch file
 
 			//comment till here while running batch file
+			
+			if(gpb.getAllotmentUptoColumnFromProductsMenu().isDisplayed()) {
+				System.out.println("Upto / Allotment column is displayed immediatly beside Sale Price column :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Upto / Allotment column is displayed immediatly beside Sale Price column");
+			} else {
+				System.out.println("Upto / Allotment column is NOT displayed immediatly beside Sale Price column :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Upto / Allotment column is NOT displayed immediatly beside Sale Price column");
+			}
 
 			
 
 		}
 		
+		@Test(dependsOnMethods = "TC_079VerifyUptoAllotmentColmnispresentbrsideSalesprice")
+		public void TC_080VerifyUptoAllotmentInputFieldAcceptsOnlyNumericValues() throws InterruptedException, EncryptedDocumentException, IOException {
+			
+			
+			List<WebElement> uptoAllotmentFields = gpb.getAllotmentUptoInputFieldsFromProductsMenu();
+
+			if (uptoAllotmentFields.isEmpty()) {
+				System.out.println("No Upto / Allotment input fields found :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "No Upto / Allotment input fields found");
+				return;
+			}
+
+			
+			for (int i = 0; i < uptoAllotmentFields.size(); i++) {
+				WebElement field = uptoAllotmentFields.get(i);
+				int row = i + 1;
+
+				clearInputField(field);
+				Thread.sleep(2000); 
+				
+				//read the data from excel sheet
+				String uptoallotment = elib.getDataFromExcel("Generator price book", 5, 1);			
+				field.sendKeys(uptoallotment);
+				System.out.println("Entered Upto / Allotment value from excel: " + uptoallotment);
+				utilityclassobject.gettest().log(Status.INFO, "Entered Upto / Allotment value from excel: " + uptoallotment);
+				String valueAfterNumeric = field.getAttribute("value");
+
+				if (uptoallotment.contains(valueAfterNumeric)) {
+					System.out.println("Upto / Allotment field " + row + " accepted numeric value "+uptoallotment+" :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Upto / Allotment field " + row + " accepted numeric value  "+uptoallotment+"");
+				} else {
+					System.out.println("Upto / Allotment field " + row + " did not keep numeric value "+uptoallotment+". Actual: " + valueAfterNumeric + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Upto / Allotment field " + row + " did not keep numeric value "+uptoallotment+" Actual: " + valueAfterNumeric);
+				}
+				
+			}
+			
+			// again clear the Upto / Allotment fields to avoid issues in next test case
+			for (int i = 0; i < uptoAllotmentFields.size(); i++) {
+				WebElement field = uptoAllotmentFields.get(i);
+				int row = i + 1;
+				try {
+					clearInputField(field);
+					System.out.println("Cleared Upto / Allotment field " + row + " to reset state");
+					utilityclassobject.gettest().log(Status.INFO, "Cleared Upto / Allotment field " + row + " to reset state");
+				} catch (Exception e) {
+					System.out.println("Failed to clear Upto / Allotment field " + row + " : " + e.getMessage() + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Failed to clear Upto / Allotment field " + row + " : " + e.getMessage());
+				}
+			}
+		}
+		
+		@Test(dependsOnMethods = "TC_080VerifyUptoAllotmentInputFieldAcceptsOnlyNumericValues")
+		public void TC_081VerifyAdditionalContainer () throws InterruptedException, EncryptedDocumentException, IOException {
+			
   		
 }

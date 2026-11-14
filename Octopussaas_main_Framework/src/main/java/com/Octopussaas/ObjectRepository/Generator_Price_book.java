@@ -708,6 +708,27 @@ public class Generator_Price_book {
 		return salepriceinputfieldsfromproductsmenu;
 	}
 	
+	@FindBy(xpath = "//span[text()='Up To /']")
+	private WebElement allotmentuptocolumnfromproductsmenu;
+	
+	public WebElement getAllotmentUptoColumnFromProductsMenu() {
+		return allotmentuptocolumnfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[4]//input")
+
+	private List<WebElement> allotmentuptoinputfieldsfromproductsmenu;
+	
+	public List<WebElement> getAllotmentUptoInputFieldsFromProductsMenu() {
+		return allotmentuptoinputfieldsfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//span[text()='Additional']")
+	private WebElement additionalcontainerratecolumnfromproductsmenu;
+	
+	public WebElement getAdditionalContainerRateColumnFromProductsMenu() {
+		return additionalcontainerratecolumnfromproductsmenu;
+	}
 	
 	
 	public void clearInputField(WebElement field) {
