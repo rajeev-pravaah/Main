@@ -1713,8 +1713,8 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 			clearInputField(field);
 			Thread.sleep(2000); 
 			
-			//read the datsa from excel sheet
-			;
+			//read the data from excel sheet
+			
 			String weightlimit = elib.getDataFromExcel("Generator price book", 1, 1);			
 			field.sendKeys(weightlimit);
 			String valueAfterNumeric = field.getAttribute("value");
@@ -2221,5 +2221,133 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 			
 			
 		}
+		
+		@Test(dependsOnMethods = "TC_077VerifySalePriceisPresentbesideMasterNameColumn")
+		public void TC_078VerifySalePriceInputFieldAcceptsOnlyNumericValues() throws InterruptedException, EncryptedDocumentException, IOException {
 			
+			
+			//write code to ove to the generator and got to the price book page and clik on product item
+			
+			
+			
+			List<WebElement> salePriceFields = gpb.getSalePriceInputFieldsFromProductsMenu();
+
+			if (salePriceFields.isEmpty()) {
+				System.out.println("No Sale Price input fields found :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "No Sale Price input fields found");
+				return;
+			}
+
+			
+			for (int i = 0; i < salePriceFields.size(); i++) {
+				WebElement field = salePriceFields.get(i);
+				int row = i + 1;
+
+				clearInputField(field);
+				Thread.sleep(2000); 
+				
+				//read the data from excel sheet
+				String saleprice = elib.getDataFromExcel("Generator price book", 3, 1);			
+				field.sendKeys(saleprice);
+				System.out.println("Entered sale price value from excel: " + saleprice);
+				utilityclassobject.gettest().log(Status.INFO, "Entered sale price value from excel: " + saleprice);
+				String valueAfterNumeric = field.getAttribute("value");
+
+				if (saleprice.contains(valueAfterNumeric)) {
+					System.out.println("Sale Price field " + row + " accepted numeric value "+saleprice+" :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Sale Price field " + row + " accepted numeric value  "+saleprice+"");
+				} else {
+					System.out.println("Sale Price field " + row + " did not keep numeric value "+saleprice+". Actual: " + valueAfterNumeric + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Sale Price field " + row + " did not keep numeric value "+saleprice+" Actual: " + valueAfterNumeric);
+				}
+				
+			}
+			
+			// again clear the sale price fields to avoid issues in next test case
+			for (int i = 0; i < salePriceFields.size(); i++) {
+				WebElement field = salePriceFields.get(i);
+				int row = i + 1;
+				try {
+					clearInputField(field);
+					System.out.println("Cleared Sale Price field " + row + " to reset state");
+					utilityclassobject.gettest().log(Status.INFO, "Cleared Sale Price field " + row + " to reset state");
+				} catch (Exception e) {
+					System.out.println("Failed to clear Sale Price field " + row + " : " + e.getMessage() + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Failed to clear Sale Price field " + row + " : " + e.getMessage());
+				}
+			}
+			
+			
+			
+		}
+		
+		@Test(/*dependsOnMethods = "TC_078VerifySalePriceInputFieldAcceptsOnlyNumericValues"*/)
+		public void TC_079VerifySalePriceInputFieldAcceptsDecimalValues() throws InterruptedException, EncryptedDocumentException, IOException {
+			
+			
+			
+			
+			
+			//direct move to  product menu
+			//direct move to  product menu
+			//direct move to  product menu
+
+			
+			//comment while running batch file
+			//comment while running batch file
+
+			
+			
+			
+			if (gpb == null) {
+				gpb = new Generator_Price_book(driver);
+			}
+
+			// Navigate to Generator -> Price Book and open Products for this test case setup.
+			gpb.getGeneratorManagement().click();
+			System.out.println("Clicked on Generator Management");
+			utilityclassobject.gettest().log(Status.INFO, "Clicked on Generator Management");
+			Thread.sleep(1000);
+
+			gpb.getGeneratorLocation().click();
+			System.out.println("Clicked on Generator Location");
+			utilityclassobject.gettest().log(Status.INFO, "Clicked on Generator Location");
+			Thread.sleep(1000);
+
+			WebElement searchField = gpb.getSearchBox();
+			searchField.click();
+			searchField.sendKeys(Keys.CONTROL, "a");
+			searchField.sendKeys(Keys.BACK_SPACE);
+			searchField.sendKeys("Genpricebook solutions");
+			System.out.println("Searched generator location: Genpricebook solutions");
+			utilityclassobject.gettest().log(Status.INFO, "Searched generator location: Genpricebook solutions");
+			Thread.sleep(2000);
+
+			gpb.getFirstoptionfromsearchbox().click();
+			System.out.println("Selected first option from search results");
+			utilityclassobject.gettest().log(Status.INFO, "Selected first option from search results");
+			Thread.sleep(2000);
+
+			gpb.getPriceBookpage().click();
+			System.out.println("Clicked on Price Book page");
+			utilityclassobject.gettest().log(Status.INFO, "Clicked on Price Book page");
+			Thread.sleep(3000);
+
+			gpb.getProductsmenu().click();
+			System.out.println("Clicked on Products menu");
+			utilityclassobject.gettest().log(Status.INFO, "Clicked on Products menu");
+			Thread.sleep(2000);
+			
+			
+			
+			//comment till here while running batch file
+			//comment till here while running batch file
+
+			//comment till here while running batch file
+
+			
+
+		}
+		
+  		
 }

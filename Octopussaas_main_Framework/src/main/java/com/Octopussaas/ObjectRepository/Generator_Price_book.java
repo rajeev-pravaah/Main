@@ -701,6 +701,13 @@ public class Generator_Price_book {
 		return salepricecolumnfromproductsmenu;
 	}
 	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[3]//input")
+	private List<WebElement> salepriceinputfieldsfromproductsmenu;
+	
+	public List<WebElement> getSalePriceInputFieldsFromProductsMenu() {
+		return salepriceinputfieldsfromproductsmenu;
+	}
+	
 	
 	
 	public void clearInputField(WebElement field) {
