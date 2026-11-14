@@ -3,15 +3,22 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="GeneratorPricBook.Generator_priceBook_AllTC">
+      <class name="Octo_Connect.Subcontractor_Servicerequest">
         <methods>
           <include name="Ac"/>
+          <include name="TC_001VerifySubcontractorService_IncomingSSR"/>
           <include name="Bc"/>
+          <include name="TC_006VerifySubcontractorserivce_withStatusDropdown"/>
+          <include name="TC_005VerifySubcontractorService_TransporterwithSavedcontractor"/>
+          <include name="TC_008VerifySubcontractorService_Statuswithclickable"/>
+          <include name="TC_004VerifySubcontractorService_Transporterwithcontractors"/>
           <include name="Bm"/>
+          <include name="TC_009VerifySubcontractorSerivce_DefaultStatus"/>
+          <include name="TC_010VerifySubcontractorService_WithAcceptedstatus"/>
+          <include name="TC_007VerifySubcontractorSerivce_withAllthestatus"/>
           <include name="Am"/>
-          <include name="TC_001verifyMenuButtonFromGeneratorPri"/>
         </methods>
-      </class> <!-- GeneratorPricBook.Generator_priceBook_AllTC -->
+      </class> <!-- Octo_Connect.Subcontractor_Servicerequest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

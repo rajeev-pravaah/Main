@@ -259,6 +259,7 @@ public class GeneratorPortal_login extends BaseClassForGEneratorContacts{
 	@Test(dependsOnMethods = "TC_012VerifyGeneratorPortal_EmailwithInvalidinput")
 	public void TC_013VerifyGeneratorPortal_EmailwithValidInput() throws EncryptedDocumentException, IOException
 	{
+		
 		gpn.getEmailtextfield().click();
 		gpn.getEmailtextfield().sendKeys(Keys.CONTROL + "a");
 		gpn.getEmailtextfield().sendKeys(Keys.DELETE);
@@ -1064,10 +1065,10 @@ public class GeneratorPortal_login extends BaseClassForGEneratorContacts{
 			  WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(),'Service location address is required')]")));
 
 					// Verify the error message
-					String actualMessage = toast.getText();
-					Assert.assertEquals(actualMessage,"Service location address is required");
-					System.out.println("Error toast verified: " + actualMessage); 
-					Thread.sleep(2000);
+				String actualMessage = toast.getText();
+				Assert.assertEquals(actualMessage,"Service location address is required");
+				System.out.println("Error toast verified: " + actualMessage); 
+				Thread.sleep(2000);
 			  gpn.getSerivcelocationAddress().click();
 			  String input = elib.getDataFromExcel("GeneratorPortal", 25, 2);
 			  gpn.getSerivcelocationAddress().sendKeys(input); 
@@ -1160,6 +1161,8 @@ public class GeneratorPortal_login extends BaseClassForGEneratorContacts{
 			gpn.getFirstname().click();
 			gpn.getFirstname().sendKeys(Keys.CONTROL+"a");
 			gpn.getFirstname().sendKeys(Keys.DELETE);
+			
+			
 			String input = elib.getDataFromExcel("GeneratorPortal", 10, 5);
 			gpn.getFirstname().sendKeys(input);
 			
@@ -1307,7 +1310,8 @@ public class GeneratorPortal_login extends BaseClassForGEneratorContacts{
 			placefolder.click();
 			placefolder.sendKeys(input2);
 			Thread.sleep(200);
-			String authcode = driver.findElement(By.xpath("(//span[@class='text-xs px-2 py-0.5 bg-blue-50 text-blue-700 rounded-full'])[2]")).getText();		
+			String authcode = driver.findElement(By.xpath("(//span[@class='text-xs px-2 py-0.5 bg-blue-50 text-blue-700 rounded-full'])[2]")).getText();	
+			
 			System.out.println(authcode);
 			
 			Thread.sleep(2000);			
@@ -1369,47 +1373,5 @@ public class GeneratorPortal_login extends BaseClassForGEneratorContacts{
 			utilityclassobject.gettest().log(Status.PASS,"Welcome page is displayed");
 		}
 		
-		
-		
-		@Test(dependsOnMethods = "TC_090VerifyGeneratorPortal_Welcomepagewithnewuaser")
-		public void TC_091()
-		{
-			System.out.println("HI");
-		}
-		
-		@Test(dependsOnMethods = "TC_091")
-		
-		public void TC_092()
-		{
-			System.out.println("HEllor");
-		}
-		
-		
-@Test(dependsOnMethods = "TC_091")
-		
-		public void TC_093()
-		{
-			System.out.println("HEllor");
-		}
-		
-@Test(dependsOnMethods = "TC_093")
-
-public void TC_094()
-{
-	System.out.println("HEllor");
-}
-		
-
-@Test(dependsOnMethods = "TC_094")
-
-public void TC_095()
-{
-System.out.println("HEllor");
-}	
-	
-	
-	
-	
-	
 	
 }

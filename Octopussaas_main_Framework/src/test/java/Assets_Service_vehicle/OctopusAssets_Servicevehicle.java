@@ -912,7 +912,7 @@ public class OctopusAssets_Servicevehicle extends BaseClassForGEneratorContacts 
 			utilityclassobject.gettest().log(Status.INFO, "Payload capacity field will not accept alphabets");		
 		}
 		
-		@Test(dependsOnMethods = "TC_062AssetsServicevehicle_Payloadwithalphabets")
+		@Test(dependsOnMethods = "TC_062AssetsServicevehicle_Payloadwithalphabets") 
 		public void TC_063AssetsServicevehicle_Payloadwithnumbers() throws EncryptedDocumentException, IOException
 		{
 			as.getPayloadCapicty().click();
@@ -1342,6 +1342,7 @@ public class OctopusAssets_Servicevehicle extends BaseClassForGEneratorContacts 
 			as.getSpecialequipment().sendKeys(Keys.DELETE);
 			String input = elib.getDataFromExcel("Servicevehicle", 28, 3);
 			as.getSpecialequipment().sendKeys(input);
+		
 			utilityclassobject.gettest().log(Status.INFO, "special equipment field will accept numbers");		
 		}
 		
