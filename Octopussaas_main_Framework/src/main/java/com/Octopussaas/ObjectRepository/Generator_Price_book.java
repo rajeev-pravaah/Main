@@ -731,10 +731,22 @@ public class Generator_Price_book {
 	}
 	
 	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[5]//input")
+	private List<WebElement> additionalcontainerrateinputfieldsfromproductsmenu;
+	
+	public List<WebElement> getAdditionalContainerRateInputFieldsFromProductsMenu() {
+		return additionalcontainerrateinputfieldsfromproductsmenu;
+	}
+	
+	
 	public void clearInputField(WebElement field) {
 		field.click();
+		try {
 		field.sendKeys(Keys.chord(Keys.CONTROL, "a"));
 		field.sendKeys(Keys.DELETE);
+		}catch(StaleElementReferenceException e) {
+			System.out.println("StaleElementReferenceException occurred while clearing the field: " + e.getMessage());
+		}
 
 		String currentValue = field.getAttribute("value");
 		if (currentValue != null && !currentValue.trim().isEmpty()) {
@@ -746,5 +758,7 @@ public class Generator_Price_book {
 			);
 		}
 	}
+	
+	
 
 }

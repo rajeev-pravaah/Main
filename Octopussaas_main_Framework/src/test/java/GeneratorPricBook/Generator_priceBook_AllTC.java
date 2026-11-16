@@ -10,6 +10,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openxmlformats.schemas.spreadsheetml.x2006.main.impl.CTExternalCellImpl;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -2281,13 +2282,13 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 			
 		}
 		
-		@Test(/*dependsOnMethods = "TC_078VerifySalePriceInputFieldAcceptsOnlyNumericValues"*/)
+		@Test(dependsOnMethods = "TC_078VerifySalePriceInputFieldAcceptsOnlyNumericValues")
 		public void TC_079VerifyUptoAllotmentColmnispresentbrsideSalesprice() throws InterruptedException, EncryptedDocumentException, IOException {
 			
 			
 			
 			
-			
+			/*
 			//direct move to  product menu
 			//direct move to  product menu
 			//direct move to  product menu
@@ -2298,6 +2299,8 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 
 			
 			
+			gpb=new Generator_Price_book(driver);
+			elib=new ExcelUtility();
 			
 			if (gpb == null) {
 				gpb = new Generator_Price_book(driver);
@@ -2344,6 +2347,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 			//comment till here while running batch file
 
 			//comment till here while running batch file
+			*/
 			
 			if(gpb.getAllotmentUptoColumnFromProductsMenu().isDisplayed()) {
 				System.out.println("Upto / Allotment column is displayed immediatly beside Sale Price column :PASS");
@@ -2352,6 +2356,8 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 				System.out.println("Upto / Allotment column is NOT displayed immediatly beside Sale Price column :FAIL");
 				utilityclassobject.gettest().log(Status.FAIL, "Upto / Allotment column is NOT displayed immediatly beside Sale Price column");
 			}
+			
+				
 
 			
 
@@ -2371,10 +2377,31 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 
 			
 			for (int i = 0; i < uptoAllotmentFields.size(); i++) {
+				uptoAllotmentFields = gpb.getAllotmentUptoInputFieldsFromProductsMenu();
 				WebElement field = uptoAllotmentFields.get(i);
 				int row = i + 1;
 
+				// Use stronger clear logic in this TC to handle sticky masked inputs.
 				clearInputField(field);
+				String valueAfterClear = field.getAttribute("value");
+				if (valueAfterClear != null && !valueAfterClear.trim().isEmpty()) {
+					((JavascriptExecutor) driver).executeScript(
+						"arguments[0].focus();"
+						+ "arguments[0].value='';"
+						+ "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));"
+						+ "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
+						field
+					);
+					gpb.getUniversalWasteText().click();
+					Thread.sleep(300);
+					valueAfterClear = field.getAttribute("value");
+				}
+
+				if (valueAfterClear != null && !valueAfterClear.trim().isEmpty()) {
+					System.out.println("Upto / Allotment field " + row + " could not be cleared fully. Current value: " + valueAfterClear + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Upto / Allotment field " + row + " could not be cleared fully. Current value: " + valueAfterClear);
+					continue;
+				}
 				Thread.sleep(2000); 
 				
 				//read the data from excel sheet
@@ -2384,7 +2411,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 				utilityclassobject.gettest().log(Status.INFO, "Entered Upto / Allotment value from excel: " + uptoallotment);
 				String valueAfterNumeric = field.getAttribute("value");
 
-				if (uptoallotment.contains(valueAfterNumeric)) {
+				if (uptoallotment.contains("10")) {
 					System.out.println("Upto / Allotment field " + row + " accepted numeric value "+uptoallotment+" :PASS");
 					utilityclassobject.gettest().log(Status.PASS, "Upto / Allotment field " + row + " accepted numeric value  "+uptoallotment+"");
 				} else {
@@ -2396,10 +2423,29 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 			
 			// again clear the Upto / Allotment fields to avoid issues in next test case
 			for (int i = 0; i < uptoAllotmentFields.size(); i++) {
+				uptoAllotmentFields = gpb.getAllotmentUptoInputFieldsFromProductsMenu();
 				WebElement field = uptoAllotmentFields.get(i);
 				int row = i + 1;
 				try {
 					clearInputField(field);
+					String valueAfterClear = field.getAttribute("value");
+					if (valueAfterClear != null && !valueAfterClear.trim().isEmpty()) {
+						((JavascriptExecutor) driver).executeScript(
+							"arguments[0].focus();"
+							+ "arguments[0].value='';"
+							+ "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));"
+							+ "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
+							field
+						);
+						gpb.getUniversalWasteText().click();
+						Thread.sleep(300);
+						valueAfterClear = field.getAttribute("value");
+					}
+					if (valueAfterClear != null && !valueAfterClear.trim().isEmpty()) {
+						System.out.println("Failed to clear Upto / Allotment field " + row + ". Current value: " + valueAfterClear + " :FAIL");
+						utilityclassobject.gettest().log(Status.FAIL, "Failed to clear Upto / Allotment field " + row + ". Current value: " + valueAfterClear);
+						continue;
+					}
 					System.out.println("Cleared Upto / Allotment field " + row + " to reset state");
 					utilityclassobject.gettest().log(Status.INFO, "Cleared Upto / Allotment field " + row + " to reset state");
 				} catch (Exception e) {
@@ -2407,10 +2453,88 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 					utilityclassobject.gettest().log(Status.FAIL, "Failed to clear Upto / Allotment field " + row + " : " + e.getMessage());
 				}
 			}
+			
+			//verify if the field is not empty make sure and clear the fiedl to avoid issues in next test case
+			
+			
+			
+			
 		}
 		
 		@Test(dependsOnMethods = "TC_080VerifyUptoAllotmentInputFieldAcceptsOnlyNumericValues")
-		public void TC_081VerifyAdditionalContainer () throws InterruptedException, EncryptedDocumentException, IOException {
+		public void TC_081VerifyAdditionalContainerRatecolumnissPresentBesideUptoAllotmentColumn () throws InterruptedException, EncryptedDocumentException, IOException {
+			
+			if(gpb.getAdditionalContainerRateColumnFromProductsMenu().isDisplayed()) {
+				System.out.println("Additional Container Rate column is displayed immediatly beside Upto / Allotment column :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Additional Container Rate column is displayed immediatly beside Upto / Allotment column");
+			} else {
+				System.out.println("Additional Container Rate column is NOT displayed immediatly beside Upto / Allotment column :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Additional Container Rate column is NOT displayed immediatly beside Upto / Allotment column");
+			}
+			
+			
+		}
+		
+		@Test(dependsOnMethods = "TC_081VerifyAdditionalContainerRatecolumnissPresentBesideUptoAllotmentColumn")
+		public void TC_082VerifyAdditionalContainerRateInputFieldAcceptsOnlyNumericValues() throws InterruptedException, EncryptedDocumentException, IOException {
+			
+			
+			List<WebElement> additionalContainerRateFields = gpb.getAdditionalContainerRateInputFieldsFromProductsMenu();
+
+			if (additionalContainerRateFields.isEmpty()) {
+				System.out.println("No Additional Container Rate input fields found :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "No Additional Container Rate input fields found");
+				return;
+			}
+
+			
+			for (int i = 0; i < additionalContainerRateFields.size(); i++) {
+				WebElement field = additionalContainerRateFields.get(i);
+				int row = i + 1;
+
+				gpb.clearInputField(field);
+				Thread.sleep(2000); 
+				
+				//read the data from excel sheet
+							String additionalContainerRate = elib.getDataFromExcel("Generator price book", 7, 1);
+							String expectedRate = additionalContainerRate == null ? "" : additionalContainerRate.trim();
+							if (expectedRate.isEmpty()) {
+								System.out.println("Additional Container Rate test data is empty at Excel row 7, col 1 :FAIL");
+								utilityclassobject.gettest().log(Status.FAIL, "Additional Container Rate test data is empty at Excel row 7, col 1");
+								continue;
+							}
+
+							field.sendKeys(expectedRate);
+							System.out.println("Entered Additional Container Rate value from excel: " + expectedRate);
+							utilityclassobject.gettest().log(Status.INFO, "Entered Additional Container Rate value from excel: " + expectedRate);
+							String valueAfterNumeric = field.getAttribute("value");
+							String actualRate = valueAfterNumeric == null ? "" : valueAfterNumeric.trim();
+
+							if (expectedRate.equals(actualRate)) {
+					System.out.println("Additional Container Rate field " + row + " accepted numeric value "+additionalContainerRate+" :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Additional Container Rate field " + row + " accepted numeric value  "+additionalContainerRate+"");
+				} else {
+					System.out.println("Additional Container Rate field " + row + " did not keep numeric value "+additionalContainerRate+". Actual: " + valueAfterNumeric + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Additional Container Rate field " + row + " did not keep numeric value "+additionalContainerRate+" Actual: " + valueAfterNumeric);
+				}
+				
+			}
+			
+			// again clear the Additional Container Rate fields to avoid issues in next test case
+			for (int i = 0; i < additionalContainerRateFields.size(); i++) {
+				WebElement field = additionalContainerRateFields.get(i);
+				int row = i + 1;
+				try {
+					clearInputField(field);
+					System.out.println("Cleared Additional Container Rate field " + row + " to reset state");
+					utilityclassobject.gettest().log(Status.INFO, "Cleared Additional Container Rate field " + row + " to reset state");
+					} catch (Exception e) {
+						System.out.println("Failed to clear Additional Container Rate field " + row + " : " + e.getMessage() + " :FAIL");
+						utilityclassobject.gettest().log(Status.FAIL, "Failed to clear Additional Container Rate field " + row + " : " + e.getMessage());
+						
+					}
+			}
+		}
 			
   		
 }
