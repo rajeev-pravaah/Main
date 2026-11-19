@@ -738,6 +738,125 @@ public class Generator_Price_book {
 		return additionalcontainerrateinputfieldsfromproductsmenu;
 	}
 	
+	@FindBy(xpath = "(//span[text()='Allotment'])[2]")
+	private WebElement allotmentfrequencycolumnfromproductsmenu;
+	
+	public WebElement getAllotmentFrequencyColumnFromProductsMenu() {
+		return allotmentfrequencycolumnfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[6]//button")
+	private List<WebElement> allotmentfrequencydropdownsfromeachrowfromproductsmenu;
+	
+	public List<WebElement> getAllotmentFrequencyDropdownsFromEachRowFromProductsMenu() {
+		return allotmentfrequencydropdownsfromeachrowfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//li[@role='option']")
+	private List<WebElement> allotmentfrequencydropdownoptionsfromproductsmenu;
+	
+	public List<WebElement> getAllotmentFrequencyDropdownOptionsFromProductsMenu() {
+		return allotmentfrequencydropdownoptionsfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//span[text()='Used']")
+	private WebElement usedAllotmentcolumnfromproductsmenu;
+	
+	public WebElement getUsedAllotmentColumnFromProductsMenu() {
+		return usedAllotmentcolumnfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[7]//input")
+	private List<WebElement> usedallotmentsinputfieldsfromproductsmenu;
+	
+	public List<WebElement> getUsedAllotmentsInputFieldsFromProductsMenu() {
+		return usedallotmentsinputfieldsfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//span[text()='Remaining']")
+	private WebElement remainingallotmentcolumnfromproductsmenu;
+	
+	public WebElement getRemainingAllotmentColumnFromProductsMenu() {
+		return remainingallotmentcolumnfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[8]//input")
+	private List<WebElement> remainingallotmentinputfieldsfromproductsmenu;
+	
+	public List<WebElement> getRemainingAllotmentInputFieldsFromProductsMenu() {
+		return remainingallotmentinputfieldsfromproductsmenu;
+	}
+	
+	
+	@FindBy(xpath = "//div[text()='Taxable']")
+	private WebElement taxablecolumnfromproductsmenu;
+	
+	public WebElement getTaxableColumnFromProductsMenu() {
+		return taxablecolumnfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[9]//div[@role='checkbox']")
+	private List<WebElement> taxablecheckboxesfromproductsmenu;
+	
+	public List<WebElement> getTaxableCheckboxesFromProductsMenu() {
+		return taxablecheckboxesfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//span[text()='Allow $0']")
+	private WebElement allowzerodollarchargercolumnfromproductsmenu;
+	
+	public WebElement getAllowZeroDollarChargeColumnFromProductsMenu() {
+		return allowzerodollarchargercolumnfromproductsmenu;
+	}
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[10]//div[@role='checkbox']")
+	private List<WebElement> allowzerodollarchargecheckboxesfromproductsmenu;
+	
+	public List<WebElement> getAllowZeroDollarChargeCheckboxesFromProductsMenu() {
+		return allowzerodollarchargecheckboxesfromproductsmenu;
+	}
+	
+	@FindBy(xpath =" //div[text()='SKU']")
+	private WebElement skucolumnfromproductsmenu;
+	
+	public WebElement getSKUColumnFromProductsMenu() {
+		return skucolumnfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[11]//span")
+	private List<WebElement> skuvaluesfromproductsmenu;
+	
+	public List<WebElement> getSKUValuesFromProductsMenu() {
+		return skuvaluesfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//div[text()='Cost']")
+	private WebElement costcolumnfromproductsmenu;
+	
+	public WebElement getCostColumnFromProductsMenu() {
+		return costcolumnfromproductsmenu;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	public void clearInputField(WebElement field) {
 		field.click();

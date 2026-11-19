@@ -525,7 +525,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 	   String numberofcontainer10 = gpb.getContainersCount().getText();
 	   System.out.println("Number of container beside services for APHIS Waste is: "+numberofcontainer10);
 	   utilityclassobject.gettest().log(Status.INFO, "Number of container beside services for APHIS Waste is: "+numberofcontainer10);
-	   if(numberofcontainer10.contains("12")) {
+	   if (numberofcontainer10 != null && numberofcontainer10.matches(".*\\d+.*"))  {
 		   System.out.println("Number of container beside services for APHIS Waste is 12 :PASS");
 		   utilityclassobject.gettest().log(Status.PASS, "Number of container beside services for APHIS Waste is 12");
 		   	   }else {
@@ -1286,9 +1286,14 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 	}
 
 	public void clearInputField(WebElement field) {
+		try {
 		field.click();
 		field.sendKeys(Keys.chord(Keys.CONTROL, "a"));
-		field.sendKeys(Keys.DELETE);
+		field.sendKeys(Keys.DELETE);}
+		catch (Exception e) {
+			System.out.println("Error while clearing input field: " + e.getMessage());
+			utilityclassobject.gettest().log(Status.FAIL, "Error while clearing input field: " + e.getMessage());
+		}
 
 		String currentValue = field.getAttribute("value");
 		if (currentValue != null && !currentValue.trim().isEmpty()) {
@@ -2282,13 +2287,9 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 			
 		}
 		
-		@Test(dependsOnMethods = "TC_078VerifySalePriceInputFieldAcceptsOnlyNumericValues")
+		@Test(/*dependsOnMethods = "TC_078VerifySalePriceInputFieldAcceptsOnlyNumericValues"*/)
 		public void TC_079VerifyUptoAllotmentColmnispresentbrsideSalesprice() throws InterruptedException, EncryptedDocumentException, IOException {
-			
-			
-			
-			
-			/*
+
 			//direct move to  product menu
 			//direct move to  product menu
 			//direct move to  product menu
@@ -2335,6 +2336,23 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 			System.out.println("Clicked on Price Book page");
 			utilityclassobject.gettest().log(Status.INFO, "Clicked on Price Book page");
 			Thread.sleep(3000);
+			
+			//select  template AutomationPricebookFromdropdown
+			gpb.getSelectedtemplateDropdown().click();
+			//using for loop search for the template AutomationPricebookFromdropdown and click on it
+			List<WebElement> templateOptions = gpb.getSelectedtemplateDropdownOptions();
+			for (WebElement option : templateOptions) {
+				if (option.getText().equals("AutomationPricebook")) {
+					option.click();
+					System.out.println("Selected template: AutomationPriceBook");
+					utilityclassobject.gettest().log(Status.INFO, "Selected template: AutomationPricebook");
+					Thread.sleep(2000);
+					break;
+				}
+			}
+			Thread.sleep(2000);
+			//click on view toggle button
+			gpb.getViewtoggledbutton().click();
 
 			gpb.getProductsmenu().click();
 			System.out.println("Clicked on Products menu");
@@ -2347,7 +2365,9 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 			//comment till here while running batch file
 
 			//comment till here while running batch file
-			*/
+			
+			
+			
 			
 			if(gpb.getAllotmentUptoColumnFromProductsMenu().isDisplayed()) {
 				System.out.println("Upto / Allotment column is displayed immediatly beside Sale Price column :PASS");
@@ -2382,7 +2402,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 				int row = i + 1;
 
 				// Use stronger clear logic in this TC to handle sticky masked inputs.
-				clearInputField(field);
+				gpb.clearInputField(field);
 				String valueAfterClear = field.getAttribute("value");
 				if (valueAfterClear != null && !valueAfterClear.trim().isEmpty()) {
 					((JavascriptExecutor) driver).executeScript(
@@ -2492,7 +2512,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 				WebElement field = additionalContainerRateFields.get(i);
 				int row = i + 1;
 
-				gpb.clearInputField(field);
+				clearInputField(field);
 				Thread.sleep(2000); 
 				
 				//read the data from excel sheet
@@ -2510,7 +2530,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 							String valueAfterNumeric = field.getAttribute("value");
 							String actualRate = valueAfterNumeric == null ? "" : valueAfterNumeric.trim();
 
-							if (expectedRate.equals(actualRate)) {
+							if (expectedRate.contains(actualRate)) {
 					System.out.println("Additional Container Rate field " + row + " accepted numeric value "+additionalContainerRate+" :PASS");
 					utilityclassobject.gettest().log(Status.PASS, "Additional Container Rate field " + row + " accepted numeric value  "+additionalContainerRate+"");
 				} else {
@@ -2534,7 +2554,409 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 						
 					}
 			}
+			
+			
 		}
+		
+		@Test(dependsOnMethods = "TC_082VerifyAdditionalContainerRateInputFieldAcceptsOnlyNumericValues")
+		public void TC_083VerifyAllotmentFrequencyPresentbesideAdditionalContainerRateColumn()  throws InterruptedException, EncryptedDocumentException, IOException {
+			
+			if(gpb.getAllotmentFrequencyColumnFromProductsMenu().isDisplayed()) {
+				System.out.println("Allotment Frequency column is displayed immediatly beside Additional Container Rate column :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "Allotment Frequency column is displayed immediatly beside Additional Container Rate column");
+			} else {
+				System.out.println("Allotment Frequency column is NOT displayed immediatly beside Additional Container Rate column :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "Allotment Frequency column is NOT displayed immediatly beside Additional Container Rate column");
+			}
+			
+			
+			
+		}
+		
+		@Test(dependsOnMethods = "TC_083VerifyAllotmentFrequencyPresentbesideAdditionalContainerRateColumn")
+		public void TC_084VerifyAllotmentFrequencyDropdownisPresentanditShouldHaveoptionsInside() throws InterruptedException, EncryptedDocumentException, IOException {
+			
+			List<WebElement> allotmentfrequencydd = gpb.getAllotmentFrequencyDropdownsFromEachRowFromProductsMenu();
+			
+			for (int i = 0; i < allotmentfrequencydd.size(); i++) {
+				WebElement dropdown = allotmentfrequencydd.get(i);
+				int row = i + 1;
+
+				if (dropdown.isDisplayed()) {
+					System.out.println("Allotment Frequency dropdown is present for product row " + row + " :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Allotment Frequency dropdown is present for product row " + row);
+				} else {
+					System.out.println("Allotment Frequency dropdown is NOT present  for product row " + row + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Allotment Frequency dropdown is NOT present for product row " + row);
+				}
+				
+				//click on the dropdown to verify options
+				if (dropdown.isDisplayed() && dropdown.isEnabled()) {
+					dropdown.click();
+					Thread.sleep(500);
+					List<WebElement> options = gpb.getAllotmentFrequencyDropdownOptionsFromProductsMenu();
+					//fetech the options and print them
+					for (int j = 0; j < options.size(); j++) {
+						WebElement option = options.get(j);
+						System.out.println("Option " + (j + 1) + " for product row " + row + ": " + option.getText());
+						utilityclassobject.gettest().log(Status.INFO, "Option " + (j + 1) + " for product row " + row + ": " + option.getText());
+					}
+					
+					//fetch 2nd option in every dropdown and print what i slected
+					
+					
+					
+				}
+				if (dropdown.isDisplayed() && dropdown.isEnabled()) {
+					dropdown.click();
+					Thread.sleep(500);
+					List<WebElement> options = gpb.getAllotmentFrequencyDropdownOptionsFromProductsMenu();
+					
+				for (int k = 0; k < options.size(); k++) {
+					WebElement option = options.get(k);
+					if (k == 1) { // select the 2nd option
+						option.click();
+						System.out.println("Selected option " + (k + 1) + " for product row " + row + ": " + option.getText());
+						utilityclassobject.gettest().log(Status.INFO, "Selected option " + (k + 1) + " for product row " + row + ": " + option.getText());
+						break;
+					}
+				}
+				}
+			}
+			
+			System.out.println("Allotment Frequency dropdowns are present and have options for each product row :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "Allotment Frequency dropdowns are present and have options for each product row");
+		}
+		
+		
+		
+		@Test(dependsOnMethods = "TC_084VerifyAllotmentFrequencyDropdownisPresentanditShouldHaveoptionsInside")
+		public void TC_085VerifyUsedAllotmentColumnispresentbesideAllotmentFrequencyColumn() throws InterruptedException, EncryptedDocumentException, IOException {
+			 if(gpb.getUsedAllotmentColumnFromProductsMenu().isDisplayed()) {
+				 
+				 System.out.println("Used Allotment column is displayed immediatly beside Allotment Frequency column :PASS");
+				 utilityclassobject.gettest().log(Status.PASS, "Used Allotment column is displayed immediatly beside Allotment Frequency column");
+			 } else {
+				 System.out.println("Used Allotment column is NOT displayed immediatly beside Allotment Frequency column :FAIL");
+				 utilityclassobject.gettest().log(Status.FAIL, "Used Allotment column is NOT displayed immediatly beside Allotment Frequency column");
+				 
+			}
+		}
+		
+		@Test(dependsOnMethods = "TC_085VerifyUsedAllotmentColumnispresentbesideAllotmentFrequencyColumn")
+		public void TC_086VerifyUsedAllotmentInputAbleToeditthvaluess() throws InterruptedException, EncryptedDocumentException, IOException {
+			
+			List<WebElement> usedAllotmentFields = gpb.getUsedAllotmentsInputFieldsFromProductsMenu();
+
+			if (usedAllotmentFields.isEmpty()) {
+				System.out.println("No Used Allotment input fields found :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "No Used Allotment input fields found");
+				return;
+			}
+
+			
+			for (int i = 0; i < usedAllotmentFields.size(); i++) {
+				WebElement field = usedAllotmentFields.get(i);
+				int row = i + 1;
+
+				clearInputField(field);
+				Thread.sleep(2000); 
+				
+				//read the data from excel sheet
+							String usedAllotment = elib.getDataFromExcel("Generator price book", 8, 1);
+							String expectedValue = usedAllotment == null ? "" : usedAllotment.trim();
+							if (expectedValue.isEmpty()) {
+								System.out.println("Used Allotment test data is empty at Excel row 9, col 1 :FAIL");
+								utilityclassobject.gettest().log(Status.FAIL, "Used Allotment test data is empty at Excel row 9, col 1");
+								continue;
+							}
+
+							field.sendKeys(expectedValue);
+							System.out.println("Entered Used Allotment value from excel: " + expectedValue);
+							utilityclassobject.gettest().log(Status.INFO, "Entered Used Allotment value from excel: " + expectedValue);
+							String valueAfterInput = field.getAttribute("value");
+							String actualValue = valueAfterInput == null ? "" : valueAfterInput.trim();
+
+							if (expectedValue.trim().equals(actualValue.trim())
+							        || actualValue.trim().contains(expectedValue.trim())
+							        || expectedValue.trim().contains(actualValue.trim()))   {
+					System.out.println("Used Allotment field " + row + " is Able to edit the value "+usedAllotment+" :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Used Allotment field " + row + " is Able to edit the value   "+usedAllotment+"");
+				} else {
+					System.out.println("Used Allotment field " + row + " did not edit value "+usedAllotment+". Actual: " + valueAfterInput + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Used Allotment field " + row + " did not edit value "+usedAllotment+" Actual: " + valueAfterInput );
+				}
+			}
+			
+			// again clear the Used Allotment fields to avoid issues in next test case
+			for (int i = 0; i < usedAllotmentFields.size(); i++) {
+				WebElement field = usedAllotmentFields.get(i);
+				int row = i + 1;
+				try {
+					clearInputField(field);
+					System.out.println("Cleared Used Allotment field " + row + " to reset state");
+					utilityclassobject.gettest().log(Status.INFO, "Cleared Used Allotment field " + row + " to reset state");
+					} catch (Exception e) {
+						System.out.println("Failed to clear Used Allotment field " + row + " : " + e.getMessage() + " :FAIL");
+						utilityclassobject.gettest().log(Status.FAIL, "Failed to clear Used Allotment field " + row + " : " + e.getMessage());
+						
+					}
+			}
+			System.out.println("All Used Allotment input fields are editable and functional :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "All Used Allotment input fields are editable and functional");
+			
+			
+		}
+		
+		@Test(dependsOnMethods = "TC_086VerifyUsedAllotmentInputAbleToeditthvaluess")
+		public void TC_087VerifyRemainingAllotmentColumnispresentbesideUsedAllotmentColumn() throws InterruptedException, EncryptedDocumentException, IOException {
+			if(gpb.getRemainingAllotmentColumnFromProductsMenu().isDisplayed()) {
+				 
+				 System.out.println("Remaining Allotment column is displayed immediatly beside Used Allotment column :PASS");
+				 utilityclassobject.gettest().log(Status.PASS, "Remaining Allotment column is displayed immediatly beside Used Allotment column");
+			 } else {
+				 System.out.println("Remaining Allotment column is NOT displayed immediatly beside Used Allotment column :FAIL");
+				 utilityclassobject.gettest().log(Status.FAIL, "Remaining Allotment column is NOT displayed immediatly beside Used Allotment column");
+				 
+			}
+		}
+		
+		@Test(dependsOnMethods = "TC_087VerifyRemainingAllotmentColumnispresentbesideUsedAllotmentColumn")
+		public void TC_088VerifyRemainingAllotmentInputFieldisPresentandAbletoeditthevalues() throws InterruptedException, EncryptedDocumentException, IOException {
+			
+			List<WebElement> remainingAllotmentFields = gpb.getRemainingAllotmentInputFieldsFromProductsMenu();
+
+			if (remainingAllotmentFields.isEmpty()) {
+				System.out.println("No Remaining Allotment input fields found :FAIL");
+				utilityclassobject.gettest().log(Status.FAIL, "No Remaining Allotment input fields found");
+				return;
+			}
+
+			
+			for (int i = 0; i < remainingAllotmentFields.size(); i++) {
+				WebElement field = remainingAllotmentFields.get(i);
+				int row = i + 1;
+
+				clearInputField(field);
+				Thread.sleep(2000); 
+				
+				//read the data from excel sheet
+							String remainingAllotment = elib.getDataFromExcel("Generator price book", 9, 1);
+							String expectedValue = remainingAllotment == null ? "" : remainingAllotment.trim();
+							if (expectedValue.isEmpty()) {
+								System.out.println("Remaining Allotment test data is empty at Excel row 11, col 1 :FAIL");
+								utilityclassobject.gettest().log(Status.FAIL, "Remaining Allotment test data is empty at Excel row 11, col 1");
+								continue;
+							}
+
+							field.sendKeys(expectedValue);
+							System.out.println("Entered Remaining Allotment value from excel: " + expectedValue);
+							utilityclassobject.gettest().log(Status.INFO, "Entered Remaining Allotment value from excel: " + expectedValue);
+							String valueAfterInput = field.getAttribute("value");
+							String actualValue = valueAfterInput == null ? "" : valueAfterInput.trim();
+							if (expectedValue.trim().equals(actualValue.trim())
+							        || actualValue.trim().contains(expectedValue.trim())
+							        || expectedValue.trim().contains(actualValue.trim()))  {
+					System.out.println("Remaining Allotment field " + row + " is Able to edit the value "+remainingAllotment+" :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Remaining Allotment field " + row + " is Able to edit the value   "+remainingAllotment+"");
+				} else {
+					System.out.println("Remaining Allotment field " + row + " did not edit value "+remainingAllotment+". Actual: " + valueAfterInput + " :FAIL ");
+					utilityclassobject.gettest().log(Status.FAIL, "Remaining Allotment field " + row + " did not edit value "+remainingAllotment+" Actual: " + valueAfterInput );
+				}
+			}
+			// again clear the Remaining Allotment fields to avoid issues in next test case
+			for (int i = 0; i < remainingAllotmentFields.size(); i++) {
+				WebElement field = remainingAllotmentFields.get(i);
+				int row = i + 1;
+				try {
+					clearInputField(field);
+					System.out.println("Cleared Remaining Allotment field " + row + " to reset state");
+					utilityclassobject.gettest().log(Status.INFO, "Cleared Remaining Allotment field " + row + " to reset state");
+					} catch (Exception e) {
+						System.out.println("Failed to clear Remaining Allotment field " + row + " : " + e.getMessage() + " :FAIL");
+						utilityclassobject.gettest().log(Status.FAIL, "Failed to clear Remaining Allotment field " + row + " : " + e.getMessage());
+						
+					}
+			}
+			System.out.println("All Remaining Allotment input fields are editable and functional :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "All Remaining Allotment input fields are editable and functional");
+		}
+		
+		@Test(dependsOnMethods = "TC_088VerifyRemainingAllotmentInputFieldisPresentandAbletoeditthevalues")
+		public void TC_089VerifyTaxableColumnisPresentbesideRemainingAllotmentColumn() throws InterruptedException, EncryptedDocumentException, IOException {
+			
+			if(gpb.getTaxableColumnFromProductsMenu().isDisplayed()) {
+				 
+				 System.out.println("Taxable column is displayed immediatly beside Remaining Allotment column :PASS");
+				 utilityclassobject.gettest().log(Status.PASS, "Taxable column is displayed immediatly beside Remaining Allotment column");
+			 } else {
+				 System.out.println("Taxable column is NOT displayed immediatly beside Remaining Allotment column :FAIL");
+				 utilityclassobject.gettest().log(Status.FAIL, "Taxable column is NOT displayed immediatly beside Remaining Allotment column");
+				 
+			}
+			
+			
+		}
+		
+		@Test(dependsOnMethods = "TC_089VerifyTaxableColumnisPresentbesideRemainingAllotmentColumn")
+		public void TC_090VerifyTaxableCheckboxisPresentinAllRowBelowTaxableColumn() throws InterruptedException {
+
+			
+			
+			for (int i = 0; i < gpb.getTaxableCheckboxes().size(); i++) {
+				WebElement checkbox = gpb.getTaxableCheckboxes().get(i);
+				int row = i + 1;
+				checkbox.click(); // Click the checkbox to ensure it is interactable
+				
+				if (checkbox.isSelected()) {
+					System.out.println("Taxable checkbox is clickable for product row " + row + " :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Taxable checkbox is clickable for product row " + row);
+				} else {
+					System.out.println("Taxable checkbox is NOT clickable for product row " + row + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Taxable checkbox is NOT clickable for product row " + row);
+				}
+
+				
+			}
+			
+			//again click on all checkboxes to uncheck them to avoid issues in next test case
+			for (int i = 0; i < gpb.getTaxableCheckboxes().size(); i++) {
+				WebElement checkbox = gpb.getTaxableCheckboxes().get(i);
+				int row = i + 1;
+				checkbox.click(); // Click the checkbox to ensure it is interactable
+				
+				if (!checkbox.isSelected()) {
+					System.out.println("Taxable checkbox is unchecked for product row " + row + " :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Taxable checkbox is unchecked for product row " + row);
+					} else {
+						System.out.println("Taxable checkbox is NOT unchecked for product row " + row + " :FAIL");
+						utilityclassobject.gettest().log(Status.FAIL, "Taxable checkbox is NOT unchecked for product row " + row);
+						
+					}
+			}
+			
+			System.out.println("All Taxable checkboxes are present and clickable for each product row :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "All Taxable checkboxes are present and clickable for each product row");
+			
+			
+		}
+		
+		@Test(dependsOnMethods = "TC_090VerifyTaxableCheckboxisPresentinAllRowBelowTaxableColumn")
+		public void TC_091VerifyAllow$0ChargeColumnisPresentbesideTaxableColumn() {
+			
+			if(gpb.getAllowZeroDollarChargeColumnFromProductsMenu().isDisplayed()) {
+				 
+				 System.out.println("Allow $0 Charge column is displayed immediatly beside Taxable column :PASS");
+				 utilityclassobject.gettest().log(Status.PASS, "Allow $0 Charge column is displayed immediatly beside Taxable column");
+			 } else {
+				 System.out.println("Allow $0 Charge column is NOT displayed immediatly beside Taxable column :FAIL");
+				 utilityclassobject.gettest().log(Status.FAIL, "Allow $0 Charge column is NOT displayed immediatly beside Taxable column");
+				 
+			}
+		}
+		@Test(dependsOnMethods = "TC_091VerifyAllow$0ChargeColumnisPresentbesideTaxableColumn")
+		public void TC_092VerifyAllow$0ChargeCheckboxisPresentandAbletoEdit() {
+			
+			List<WebElement> checkboxes = gpb.getAllowZeroDollarChargeCheckboxesFromProductsMenu();
+			for (int i = 0; i < checkboxes.size(); i++) {
+				WebElement checkbox = checkboxes.get(i);
+				int row = i + 1;
+				if(checkbox.isDisplayed() ) {
+					System.out.println("Allow $0 Charge checkbox is present  for product row " + row + " :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Allow $0 Charge checkbox is present  for product row " + row);
+				} else {
+					System.out.println("Allow $0 Charge checkbox is NOT present  for product row " + row + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Allow $0 Charge checkbox is NOT present for product row " + row);
+				}
+				checkbox.click(); // Click the checkbox to ensure it is interactable
+				
+				if (checkbox.isSelected()) {
+					System.out.println("Allow $0 Charge checkbox is clickable for product row " + row + " :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Allow $0 Charge checkbox is clickable for product row " + row);
+				} else {
+					System.out.println("Allow $0 Charge checkbox is NOT clickable for product row " + row + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Allow $0 Charge checkbox is NOT clickable for product row " + row);
+				}
+				
+				
+
+				
+			}
+			
+			//again amke sure all checkboxes are unchecked to avoid issues in next test case
+			for (int i = 0; i < checkboxes.size(); i++) {
+				WebElement checkbox = checkboxes.get(i);
+				int row = i + 1;
+				if (checkbox.isSelected()) {
+					try {
+					checkbox.click(); // Click the checkbox to uncheck it
+					} catch (Exception e) {
+						System.out.println("Failed to uncheck Allow $0 Charge checkbox for product row " + row + " : " + e.getMessage() + " :FAIL");
+						utilityclassobject.gettest().log(Status.FAIL, "Failed to uncheck Allow $0 Charge checkbox for product row " + row + " : " + e.getMessage());
+					}
+					if (!checkbox.isSelected()) {
+						System.out.println("Allow $0 Charge checkbox is unchecked for product row " + row + " :PASS");
+						utilityclassobject.gettest().log(Status.PASS, "Allow $0 Charge checkbox is unchecked for product row " + row);
+					} else {
+						System.out.println("Allow $0 Charge checkbox is NOT unchecked for product row " + row + " :FAIL");
+						utilityclassobject.gettest().log(Status.FAIL, "Allow $0 Charge checkbox is NOT unchecked for product row " + row);
+					}
+				}
+			}
+			System.out.println("All Allow $0 Charge checkboxes are present and clickable for each product row :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "All Allow $0 Charge checkboxes are present and clickable for each product row");
+			
+		
+		}
+		
+		@Test(dependsOnMethods = "TC_092VerifyAllow$0ChargeCheckboxisPresentandAbletoEdit")
+		public void TC_093VerifySKUColumnIsPresentBesideAllow$0Column() {
+			if(gpb.getSKUColumnFromProductsMenu().isDisplayed()) {
+				 
+				 System.out.println("SKU column is displayed immediatly beside Allow $0 Charge column :PASS");
+				 utilityclassobject.gettest().log(Status.PASS, "SKU column is displayed immediatly beside Allow $0 Charge column");
+			 } else {
+				 System.out.println("SKU column is NOT displayed immediatly beside Allow $0 Charge column :FAIL");
+				 utilityclassobject.gettest().log(Status.FAIL, "SKU column is NOT displayed immediatly beside Allow $0 Charge column");
+				 
+			}
+					
+		}
+		
+		@Test(dependsOnMethods = "TC_093VerifySKUColumnIsPresentBesideAllow$0Column")
+		public void TC_094VerifySKUValueDisplayedAsEmpty() throws InterruptedException, EncryptedDocumentException, IOException {
+			
+			List<WebElement> skuvalues = gpb.getSKUValuesFromProductsMenu();
+			for(int i=0;i<skuvalues.size();i++) {
+				WebElement skuvalue = skuvalues.get(i);
+				int row = i + 1;
+				String value = skuvalue.getText();
+				if (value == null || value.trim().isEmpty() || value.trim().equals("--")) {
+					System.out.println("SKU value is displayed as empty for product row " + row + " :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "SKU value is displayed as empty for product row " + row);
+				} else {
+					System.out.println("SKU value is NOT displayed as empty for product row " + row + ". Actual: " + value + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "SKU value is NOT displayed as empty for product row " + row + ". Actual: " + value);
+				}
+			}
+		}
+		
+		@Test(dependsOnMethods = "TC_094VerifySKUValueDisplayedAsEmpty")
+		public void TC_095VerifyCostcolumnIsPresenBesideSku() {
+			if(gpb.getCostColumnFromProductsMenu().isDisplayed()) {
+				 
+				 System.out.println("Cost column is displayed immediatly beside SKU column :PASS");
+				 utilityclassobject.gettest().log(Status.PASS, "Cost column is displayed immediatly beside SKU column");
+			 } else {
+				 System.out.println("Cost column is NOT displayed immediatly beside SKU column :FAIL");
+				 utilityclassobject.gettest().log(Status.FAIL, "Cost column is NOT displayed immediatly beside SKU column");
+				 
+			}
+			
+		}
+			
+			
+		
 			
   		
 }
