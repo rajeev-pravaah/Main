@@ -514,6 +514,45 @@ public class Subcontractor_Servicerequest extends BaseClassForGEneratorContacts{
 		    }
 		    
 		    @Test(dependsOnMethods = "TC_031VerifySubcontractorService_WithScopeofwork")
+		    public void TC_033VerifySubcontractorSerivce_WithalltheScopeofcontainers()
+		    {
+		    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			    String[] types = {
+			           "10 Gallon Regulated Medical Waste Container",
+			           "10 Gallon Regulated Medical Waste Container",
+			           "10 Gallon Regulated Medical Waste Container",
+			           "17 Gallon APHIS Waste Container",
+			           "28 Gallon APHIS Waste Container",
+			           "10 Gallon Regulated Medical Waste Container",
+			           "10 Gallon Regulated Medical Waste Container",
+			           "15 Gallon Corrugated Medical Waste Box"
+			    };
+
+			    Actions actions = new Actions(driver);
+
+			    for (String type : types) {
+
+			        WebElement typeElement = wait.until( ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains (text(),'"+type+"')]")));
+			        System.out.println(typeElement.getText());
+
+			        actions.moveToElement(typeElement).perform();
+
+			        Assert.assertTrue(typeElement.isDisplayed(), type + " is displayed");
+			        System.out.println("In 'Scope Of Work (SOW)' column, there is all the containers added while creating the SSR.");
+					utilityclassobject.gettest().log(Status.INFO, "In 'Scope Of Work (SOW)' column, there is all the containers added while creating the SSR.");
+		    }
+		}
+		    
+		  
+		    public void TC_032VerifySubcontractorService_WithScopeofwork()
+		    {
+		    	Assert.assertTrue(sub.getScopeofwork().isDisplayed(), "Scope of work column is displayed");
+		    	System.out.println("Scope of work column is displayed");
+				utilityclassobject.gettest().log(Status.INFO, "Scope of work column is displayed");
+
+		    }
+		    
+		    @Test(dependsOnMethods = "TC_031VerifySubcontractorService_WithScopeofwork")
 		    public void TC_032VerifySubcontractorSerivce_WithalltheScopeofcontainers()
 		    {
 		    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
