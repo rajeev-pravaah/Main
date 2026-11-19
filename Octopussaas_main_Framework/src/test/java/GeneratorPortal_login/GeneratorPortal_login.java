@@ -705,6 +705,7 @@ public class GeneratorPortal_login extends BaseClassForGEneratorContacts{
 	{
 		gpn.getLastname().click();
 		gpn.getLastname().sendKeys(Keys.CONTROL+"a");
+		
 		gpn.getLastname().sendKeys(Keys.DELETE);
 		String input = elib.getDataFromExcel("GeneratorPortal", 13, 4);
 		gpn.getLastname().sendKeys(input);
@@ -733,6 +734,7 @@ public class GeneratorPortal_login extends BaseClassForGEneratorContacts{
 		gpn.getLastname().click();
 		gpn.getLastname().sendKeys(Keys.CONTROL+"a");
 		gpn.getLastname().sendKeys(Keys.DELETE);
+		
 		gpn.getRegisternowButton().click();
 		
 		

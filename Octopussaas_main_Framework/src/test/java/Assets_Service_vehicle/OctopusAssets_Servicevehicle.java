@@ -217,7 +217,7 @@ public class OctopusAssets_Servicevehicle extends BaseClassForGEneratorContacts 
 			    };
 
 			    Actions actions = new Actions(driver);
-
+			    		
 			    for (String type : types) {
 
 			        WebElement typeElement = wait.until(

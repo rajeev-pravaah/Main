@@ -1,5 +1,6 @@
 package com.Octopussaas.ObjectRepository;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -50,6 +51,54 @@ public class SubcontractorSerivce_Request {
 	private WebElement terminatedStatus;
 	@FindBy (xpath = "(//button[@class='px-2 text-primary text-nowrap hover:text-blue-900 text-sm'])[1]")
 	private WebElement incominfFilter;
+	@FindBy (xpath = "//div[contains (text(),'Transporter Name')]")
+	private WebElement transportername;
+	@FindBy (xpath = "(//div[contains (text(),'OCTO Number')])[1]")
+	private WebElement octoNumber;
+	@FindBy (xpath = "//span[contains (text(),'G-103-5647')]")
+	private WebElement goctoNumber;
+	@FindBy (xpath = "(//div[contains (text(),'Generator Name')])[1]")
+	private WebElement generatorName;
+	@FindBy (xpath = "(//div[contains (text(),'Service Address')])[1]")
+	private WebElement serivceAddress;
+	@FindBy (xpath = "(//div[contains (text(),'Service Type')])[1]")
+	private WebElement serivceType;
+	@FindBy (xpath = "(//div[contains (text(),'Service Frequency')])[1]")
+	private WebElement serviceFrequency;
+	@FindBy (xpath = "(//div[contains (text(),'Scope Of Work (SOW)')])[1]")
+	private WebElement scopeofwork;
+
+	public WebElement getScopeofwork() {
+		return scopeofwork;
+	}
+
+	public WebElement getServiceFrequency() {
+		return serviceFrequency;
+	}
+
+	public WebElement getSerivceType() {
+		return serivceType;
+	}
+
+	public WebElement getSerivceAddress() {
+		return serivceAddress;
+	}
+
+	public WebElement getGeneratorName() {
+		return generatorName;
+	}
+
+	public WebElement getGoctoNumber() {
+		return goctoNumber;
+	}
+
+	public WebElement getOctoNumber() {
+		return octoNumber;
+	}
+
+	public WebElement getTransportername() {
+		return transportername;
+	}
 
 	public WebElement getIncominfFilter() {
 		return incominfFilter;
