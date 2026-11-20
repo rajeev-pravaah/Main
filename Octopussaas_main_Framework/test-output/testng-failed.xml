@@ -6,33 +6,39 @@
       <class name="Octo_Connect.Subcontractor_Servicerequest">
         <methods>
           <include name="Ac"/>
-          <include name="TC_023VerifySubcontractorSerivce_WithAllGeneratornames"/>
+          <include name="TC_034VerifySubcontractorService_withDateandTime"/>
           <include name="TC_015VerifySubcontractorService_WithClearfilter"/>
+          <include name="TC_023VerifySubcontractorSerivce_WithAllGeneratornames"/>
           <include name="TC_013VerifySubcontractorSerivce_withTerminationserviceStatus"/>
           <include name="TC_014VerifySubcontractorService_WithTerminatedStatus"/>
           <include name="TC_026VerifySubcontractorService_withAllserviceaddress"/>
+          <include name="TC_032VerifySubcontractorSerivce_WithalltheScopeofcontainers"/>
           <include name="Am"/>
           <include name="TC_017VerifySubcontractorserivce_withTransportername"/>
-          <include name="TC_029VerifySubcontractorSerivce_withSerivceFrequency"/>
           <include name="TC_012VerifySubcontractorService_WithCanceledStatus"/>
+          <include name="TC_029VerifySubcontractorSerivce_withSerivceFrequency"/>
+          <include name="TC_035VerifySubcontractorService_withFormatDate"/>
           <include name="TC_009VerifySubcontractorSerivce_DefaultStatus"/>
           <include name="TC_019VerifySubcontractorService_withOctonumber"/>
+          <include name="TC_030VerifySubcontractorSerivce_WithallServiceFrequency"/>
           <include name="TC_022VerifySubcontractorSerivce_withGeneratorName"/>
           <include name="TC_020VerifySubcontractorService_withValidOctoNumber"/>
           <include name="TC_001VerifySubcontractorService_IncomingSSR"/>
           <include name="TC_006VerifySubcontractorserivce_withStatusDropdown"/>
-          <include name="Bc"/>
           <include name="TC_027VerifySubcontractorSerivce_withServiceType"/>
-          <include name="TC_008VerifySubcontractorService_Statuswithclickable"/>
+          <include name="Bc"/>
+          <include name="TC_033VerifySubcontractorService_withnumberofContainers"/>
           <include name="TC_005VerifySubcontractorService_TransporterwithSavedcontractor"/>
+          <include name="TC_008VerifySubcontractorService_Statuswithclickable"/>
           <include name="TC_025VerifySubcontractorService_WithServiceaddress"/>
           <include name="Bm"/>
+          <include name="TC_031VerifySubcontractorService_WithScopeofwork"/>
           <include name="TC_010VerifySubcontractorService_WithAcceptedstatus"/>
           <include name="TC_011VerifySubcontractorService_withDeclinedStatus"/>
           <include name="TC_021VerifySubcontractorService_Octonumebrwitdetails"/>
           <include name="TC_004VerifySubcontractorService_Transporterwithcontractors"/>
-          <include name="TC_007VerifySubcontractorSerivce_withAllthestatus"/>
           <include name="TC_018VerifySubcontractorService_withalltheTransportername"/>
+          <include name="TC_007VerifySubcontractorSerivce_withAllthestatus"/>
           <include name="TC_016VerifySubcontractorSerivce_withpreselectedfilters"/>
         </methods>
       </class> <!-- Octo_Connect.Subcontractor_Servicerequest -->

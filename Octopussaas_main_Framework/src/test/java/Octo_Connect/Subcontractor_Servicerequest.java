@@ -3,7 +3,13 @@ package Octo_Connect;
 import static org.testng.Assert.assertTrue;
 
 import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.time.format.DateTimeParseException;
+import java.time.format.ResolverStyle;
 import java.util.List;
+import java.util.Locale;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -45,7 +51,7 @@ public class Subcontractor_Servicerequest extends BaseClassForGEneratorContacts{
 				
 	}
 	
-	/*@Test(dependsOnMethods = "TC_001VerifySubcontractorService_IncomingSSR")
+	@Test(dependsOnMethods = "TC_001VerifySubcontractorService_IncomingSSR")
 	public void TC_002VerifySubcontractorSerivce_RequsetFilter()
 	{
 		sub.getRequestFilter().isDisplayed();
@@ -61,9 +67,9 @@ public class Subcontractor_Servicerequest extends BaseClassForGEneratorContacts{
 		System.out.println("The 'Transporter' filter dropdown button is present in the right upper side of the page.");
 		utilityclassobject.gettest().log(Status.PASS, "The 'Transporter' filter dropdown button is present in the right upper side of the page.");
 					
-	}*/
+	}
 	
-	@Test(dependsOnMethods = "TC_001VerifySubcontractorService_IncomingSSR")
+	@Test(dependsOnMethods = "TC_003VerifySubcontractorService_TransporterDrp")
 	public void TC_004VerifySubcontractorService_Transporterwithcontractors() throws InterruptedException
 	{
 		sub.getTransporterDrp().click();
@@ -514,45 +520,6 @@ public class Subcontractor_Servicerequest extends BaseClassForGEneratorContacts{
 		    }
 		    
 		    @Test(dependsOnMethods = "TC_031VerifySubcontractorService_WithScopeofwork")
-		    public void TC_033VerifySubcontractorSerivce_WithalltheScopeofcontainers()
-		    {
-		    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-			    String[] types = {
-			           "10 Gallon Regulated Medical Waste Container",
-			           "10 Gallon Regulated Medical Waste Container",
-			           "10 Gallon Regulated Medical Waste Container",
-			           "17 Gallon APHIS Waste Container",
-			           "28 Gallon APHIS Waste Container",
-			           "10 Gallon Regulated Medical Waste Container",
-			           "10 Gallon Regulated Medical Waste Container",
-			           "15 Gallon Corrugated Medical Waste Box"
-			    };
-
-			    Actions actions = new Actions(driver);
-
-			    for (String type : types) {
-
-			        WebElement typeElement = wait.until( ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains (text(),'"+type+"')]")));
-			        System.out.println(typeElement.getText());
-
-			        actions.moveToElement(typeElement).perform();
-
-			        Assert.assertTrue(typeElement.isDisplayed(), type + " is displayed");
-			        System.out.println("In 'Scope Of Work (SOW)' column, there is all the containers added while creating the SSR.");
-					utilityclassobject.gettest().log(Status.INFO, "In 'Scope Of Work (SOW)' column, there is all the containers added while creating the SSR.");
-		    }
-		}
-		    
-		  
-		    public void TC_032VerifySubcontractorService_WithScopeofwork()
-		    {
-		    	Assert.assertTrue(sub.getScopeofwork().isDisplayed(), "Scope of work column is displayed");
-		    	System.out.println("Scope of work column is displayed");
-				utilityclassobject.gettest().log(Status.INFO, "Scope of work column is displayed");
-
-		    }
-		    
-		    @Test(dependsOnMethods = "TC_031VerifySubcontractorService_WithScopeofwork")
 		    public void TC_032VerifySubcontractorSerivce_WithalltheScopeofcontainers()
 		    {
 		    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -582,11 +549,73 @@ public class Subcontractor_Servicerequest extends BaseClassForGEneratorContacts{
 		    }
 		}
 		    
-		    @Test
-		    public void TC_033()
+		    @Test(dependsOnMethods = "TC_032VerifySubcontractorSerivce_WithalltheScopeofcontainers")
+		    public void TC_033VerifySubcontractorService_withnumberofContainers()
 		    {
-		    	System.out.println("HI");
-		    }
-	
+		    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			    String[] types = {
+			           "10 Gallon Regulated Medical Waste Container",
+			           "10 Gallon Regulated Medical Waste Container",
+			           "10 Gallon Regulated Medical Waste Container",
+			           "17 Gallon APHIS Waste Container",
+			           "28 Gallon APHIS Waste Container",
+			           "10 Gallon Regulated Medical Waste Container",
+			           "10 Gallon Regulated Medical Waste Container",
+			           "15 Gallon Corrugated Medical Waste Box"
+			    };
 
+			    Actions actions = new Actions(driver);
+
+			    for (String type : types) {
+
+			        WebElement typeElement = wait.until( ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@title='"+type+"']/parent::div")));
+			        System.out.println(typeElement.getText());
+
+			        actions.moveToElement(typeElement).perform();
+
+			        Assert.assertTrue(typeElement.isDisplayed(), type + " is displayed");
+			        System.out.println("In 'Scope Of Work (SOW)' column, there is shown the count of each different kind of containers.");
+					utilityclassobject.gettest().log(Status.INFO, "In 'Scope Of Work (SOW)' column, there is shown the count of each different kind of containers.");
+		    	
+		    }
+		    }
+		    
+		    @Test(dependsOnMethods = "TC_033VerifySubcontractorService_withnumberofContainers")
+		    public void TC_034VerifySubcontractorService_withDateandTime()
+		    {
+		    	Assert.assertTrue(sub.getDateTime().isDisplayed(), "Date and time column is displayed");
+		    	System.out.println("Date and time column is displayed");
+		    	utilityclassobject.gettest().log(Status.PASS, "Date and time column is displayed");
+		    }
+		    
+		    @Test(dependsOnMethods = "TC_034VerifySubcontractorService_withDateandTime")
+		    public void TC_035VerifySubcontractorService_withFormatDate()
+		    {
+		    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+			    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[contains (text(),'Date/Time')])[1]")));
+
+			    List<WebElement> dates = driver.findElements(By.xpath("(//div[contains(@class,'truncate') and contains(@class,'w-60') and contains(@class,'items-center')])[3]"));
+
+			        DateTimeFormatter formatter = new DateTimeFormatterBuilder().appendPattern("EEE, MM/dd/uuuu h:mm a").toFormatter(Locale.US).withResolverStyle(ResolverStyle.STRICT);
+
+			        Assert.assertTrue(dates.size() > 0, "No date elements found");
+
+			        for (WebElement date : dates) {
+
+			            String actualDate = date.getText().trim();
+
+			            try {
+			                LocalDateTime.parse(actualDate, formatter);
+
+			                System.out.println("Valid date format: " + actualDate);
+
+			            } catch (DateTimeParseException e) {
+
+			                Assert.fail("Invalid date format found: " + actualDate);
+			            }
+			        }
+		    }
+		    
+		
+		    
 }

@@ -67,6 +67,12 @@ public class SubcontractorSerivce_Request {
 	private WebElement serviceFrequency;
 	@FindBy (xpath = "(//div[contains (text(),'Scope Of Work (SOW)')])[1]")
 	private WebElement scopeofwork;
+	@FindBy (xpath = "(//div[contains (text(),'Date/Time')])[1]")
+	private WebElement dateTime;
+
+	public WebElement getDateTime() {
+		return dateTime;
+	}
 
 	public WebElement getScopeofwork() {
 		return scopeofwork;
