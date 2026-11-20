@@ -836,6 +836,126 @@ public class Generator_Price_book {
 		return costcolumnfromproductsmenu;
 	}
 	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[12]//span")
+	private List<WebElement> costvaluesfromproductsmenu;
+	
+	public List<WebElement> getCostValuesFromProductsMenu() {
+		return costvaluesfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//div[text()='On Hand']")
+	private WebElement onhandcolumnfromproductsmenu;
+	
+	public WebElement getOnHandColumnFromProductsMenu() {
+		return onhandcolumnfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[13]//span")
+	private List<WebElement> onhandvaluesfromproductsmenu;
+	
+	public List<WebElement> getOnHandValuesFromProductsMenu() {
+		return onhandvaluesfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//span[text()='Low Stock']")
+	private WebElement lowstockalertcolumnfromproductsmenu;
+	
+	public WebElement getLowStockAlertColumnFromProductsMenu() {
+		return lowstockalertcolumnfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'group') and contains(@class,'items-stretch')]/div[14]//span")
+	private List<WebElement> lowstockalertvaluesfromproductsmenu;
+	
+	public List<WebElement> getLowStockAlertValuesFromProductsMenu() {
+		return lowstockalertvaluesfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//button[text()='Biohazard']")
+	private WebElement biohazardbuttonfromproductsmenu;
+	
+	public WebElement getBiohazardButtonFromProductsMenu() {
+		return biohazardbuttonfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//div[@class='flex min-w-0 items-start gap-2']")
+	private List<WebElement> biohazarditemslist;
+	
+	public List<WebElement> getBiohazardItemsList() {
+		return biohazarditemslist;
+	}
+	
+	@FindBy(xpath = "//div[@class='flex w-full items-start gap-2 text-xs font-semibold text-gray-700']/descendant::div")
+	private List<WebElement> biohazardColmunsfromproductsmenu;
+
+	public List<WebElement> getBiohazardColmunsFromProductsMenu() {
+		return biohazardColmunsfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//button[text()='Sharps']")
+	private WebElement sharpsbuttonfromproductsmenu;
+	
+	public WebElement getSharpsButtonFromProductsMenu() {
+		return sharpsbuttonfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//div[@class='flex w-full items-start gap-2 text-xs font-semibold text-gray-700']/descendant::div")
+	private List<WebElement> sharpsColmunsfromproductsmenu;
+	
+	public List<WebElement> getSharpsColmunsFromProductsMenu() {
+		return sharpsColmunsfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//button[text()='Non-RCRA Pharmaceutical']")
+	private WebElement nonrcrapharmaceuticalbuttonfromproductsmenu;
+	
+	public WebElement getNonRCRAPharmaceuticalButtonFromProductsMenu() {
+		return nonrcrapharmaceuticalbuttonfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//div[@class='flex min-w-0 items-start gap-2']")
+	private List<WebElement> itemslist;
+	
+	public List<WebElement> getItemsList() {
+		return itemslist;
+	}
+	
+	@FindBy(xpath = "//div[@class='flex w-full items-start gap-2 text-xs font-semibold text-gray-700']/descendant::div")
+	private List<WebElement> NonRCRAcolmunsfromproductsmenu;
+	
+	public List<WebElement> getNonRCRAColmunsFromProductsMenu() {
+		return NonRCRAcolmunsfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//button[text()='RCRA Pharmaceutical']")
+	private WebElement rcrapharmaceuticalbuttonfromproductsmenu;
+	
+	public WebElement getRCRAPharmaceuticalButtonFromProductsMenu() {
+		return rcrapharmaceuticalbuttonfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//div[@class='flex w-full items-start gap-2 text-xs font-semibold text-gray-700']/descendant::div")
+	private List<WebElement> RCRAcolmunsfromproductsmenu;
+	
+	public List<WebElement> getRCRAColmunsFromProductsMenu() {
+		return RCRAcolmunsfromproductsmenu;
+	}
+	
+	
+	@FindBy(xpath = "//button[text()='Chemotherapy']")
+	private WebElement chemotherapybuttonfromproductsmenu;
+	
+	public WebElement getChemotherapyButtonFromProductsMenu() {
+		return chemotherapybuttonfromproductsmenu;
+	}
+	
+	@FindBy(xpath = "//div[@class='flex w-full items-start gap-2 text-xs font-semibold text-gray-700']/descendant::div")
+	private List<WebElement> chemotherapycolmunsfromproductsmenu;
+	
+	public List<WebElement> getChemotherapyColmunsFromProductsMenu() {
+		return chemotherapycolmunsfromproductsmenu;
+	}
+	
 	
 	
 	

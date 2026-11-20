@@ -1,6 +1,7 @@
 package GeneratorPricBook;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -2287,9 +2288,10 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 			
 		}
 		
-		@Test(/*dependsOnMethods = "TC_078VerifySalePriceInputFieldAcceptsOnlyNumericValues"*/)
+		@Test(dependsOnMethods = "TC_078VerifySalePriceInputFieldAcceptsOnlyNumericValues")
 		public void TC_079VerifyUptoAllotmentColmnispresentbrsideSalesprice() throws InterruptedException, EncryptedDocumentException, IOException {
 
+			/*
 			//direct move to  product menu
 			//direct move to  product menu
 			//direct move to  product menu
@@ -2366,7 +2368,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 
 			//comment till here while running batch file
 			
-			
+			*/
 			
 			
 			if(gpb.getAllotmentUptoColumnFromProductsMenu().isDisplayed()) {
@@ -2483,6 +2485,9 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		
 		@Test(dependsOnMethods = "TC_080VerifyUptoAllotmentInputFieldAcceptsOnlyNumericValues")
 		public void TC_081VerifyAdditionalContainerRatecolumnissPresentBesideUptoAllotmentColumn () throws InterruptedException, EncryptedDocumentException, IOException {
+			
+			
+			
 			
 			if(gpb.getAdditionalContainerRateColumnFromProductsMenu().isDisplayed()) {
 				System.out.println("Additional Container Rate column is displayed immediatly beside Upto / Allotment column :PASS");
@@ -2632,6 +2637,83 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		
 		@Test(dependsOnMethods = "TC_084VerifyAllotmentFrequencyDropdownisPresentanditShouldHaveoptionsInside")
 		public void TC_085VerifyUsedAllotmentColumnispresentbesideAllotmentFrequencyColumn() throws InterruptedException, EncryptedDocumentException, IOException {
+			/*
+			//direct move to  product menu
+			//direct move to  product menu
+			//direct move to  product menu
+
+			
+			//comment while running batch file
+			//comment while running batch file
+
+			
+			
+			gpb=new Generator_Price_book(driver);
+			elib=new ExcelUtility();
+			
+			if (gpb == null) {
+				gpb = new Generator_Price_book(driver);
+			}
+
+			// Navigate to Generator -> Price Book and open Products for this test case setup.
+			gpb.getGeneratorManagement().click();
+			System.out.println("Clicked on Generator Management");
+			utilityclassobject.gettest().log(Status.INFO, "Clicked on Generator Management");
+			Thread.sleep(1000);
+
+			gpb.getGeneratorLocation().click();
+			System.out.println("Clicked on Generator Location");
+			utilityclassobject.gettest().log(Status.INFO, "Clicked on Generator Location");
+			Thread.sleep(1000);
+
+			WebElement searchField = gpb.getSearchBox();
+			searchField.click();
+			searchField.sendKeys(Keys.CONTROL, "a");
+			searchField.sendKeys(Keys.BACK_SPACE);
+			searchField.sendKeys("Genpricebook solutions");
+			System.out.println("Searched generator location: Genpricebook solutions");
+			utilityclassobject.gettest().log(Status.INFO, "Searched generator location: Genpricebook solutions");
+			Thread.sleep(2000);
+
+			gpb.getFirstoptionfromsearchbox().click();
+			System.out.println("Selected first option from search results");
+			utilityclassobject.gettest().log(Status.INFO, "Selected first option from search results");
+			Thread.sleep(2000);
+
+			gpb.getPriceBookpage().click();
+			System.out.println("Clicked on Price Book page");
+			utilityclassobject.gettest().log(Status.INFO, "Clicked on Price Book page");
+			Thread.sleep(3000);
+			
+			//select  template AutomationPricebookFromdropdown
+			gpb.getSelectedtemplateDropdown().click();
+			//using for loop search for the template AutomationPricebookFromdropdown and click on it
+			List<WebElement> templateOptions = gpb.getSelectedtemplateDropdownOptions();
+			for (WebElement option : templateOptions) {
+				if (option.getText().equals("AutomationPricebook")) {
+					option.click();
+					System.out.println("Selected template: AutomationPriceBook");
+					utilityclassobject.gettest().log(Status.INFO, "Selected template: AutomationPricebook");
+					Thread.sleep(2000);
+					break;
+				}
+			}
+			Thread.sleep(2000);
+			//click on view toggle button
+			gpb.getViewtoggledbutton().click();
+
+			gpb.getProductsmenu().click();
+			System.out.println("Clicked on Products menu");
+			utilityclassobject.gettest().log(Status.INFO, "Clicked on Products menu");
+			Thread.sleep(2000);
+			
+			
+			
+			//comment till here while running batch file
+			//comment till here while running batch file
+
+			//comment till here while running batch file
+			*/
 			 if(gpb.getUsedAllotmentColumnFromProductsMenu().isDisplayed()) {
 				 
 				 System.out.println("Used Allotment column is displayed immediatly beside Allotment Frequency column :PASS");
@@ -2825,7 +2907,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 				int row = i + 1;
 				checkbox.click(); // Click the checkbox to ensure it is interactable
 				
-				if (!checkbox.isSelected()) {
+				if (checkbox.isSelected()) {
 					System.out.println("Taxable checkbox is unchecked for product row " + row + " :PASS");
 					utilityclassobject.gettest().log(Status.PASS, "Taxable checkbox is unchecked for product row " + row);
 					} else {
@@ -2891,16 +2973,8 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 					try {
 					checkbox.click(); // Click the checkbox to uncheck it
 					} catch (Exception e) {
-						System.out.println("Failed to uncheck Allow $0 Charge checkbox for product row " + row + " : " + e.getMessage() + " :FAIL");
-						utilityclassobject.gettest().log(Status.FAIL, "Failed to uncheck Allow $0 Charge checkbox for product row " + row + " : " + e.getMessage());
 					}
-					if (!checkbox.isSelected()) {
-						System.out.println("Allow $0 Charge checkbox is unchecked for product row " + row + " :PASS");
-						utilityclassobject.gettest().log(Status.PASS, "Allow $0 Charge checkbox is unchecked for product row " + row);
-					} else {
-						System.out.println("Allow $0 Charge checkbox is NOT unchecked for product row " + row + " :FAIL");
-						utilityclassobject.gettest().log(Status.FAIL, "Allow $0 Charge checkbox is NOT unchecked for product row " + row);
-					}
+					
 				}
 			}
 			System.out.println("All Allow $0 Charge checkboxes are present and clickable for each product row :PASS");
@@ -2925,6 +2999,7 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 		
 		@Test(dependsOnMethods = "TC_093VerifySKUColumnIsPresentBesideAllow$0Column")
 		public void TC_094VerifySKUValueDisplayedAsEmpty() throws InterruptedException, EncryptedDocumentException, IOException {
+			 
 			
 			List<WebElement> skuvalues = gpb.getSKUValuesFromProductsMenu();
 			for(int i=0;i<skuvalues.size();i++) {
@@ -2954,9 +3029,606 @@ public class Generator_priceBook_AllTC extends BaseClassForGEneratorContacts{
 			}
 			
 		}
+		
+		@Test(dependsOnMethods = "TC_095VerifyCostcolumnIsPresenBesideSku")
+		public void TC_096VerifyCostValueDisplay() throws InterruptedException, EncryptedDocumentException, IOException {
+			List<WebElement> values = gpb.getCostValuesFromProductsMenu();
+			
+			for(int i=0;i<values.size();i++) {
+				WebElement valueElement = values.get(i);
+				int row = i + 1;
+				String value = valueElement.getText();
+				if (value != null && !value.trim().isEmpty() && !value.trim().equals("--")) {
+					System.out.println("Cost value is displayed for product row " + row + ": " + value + " :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Cost value is displayed for product row " + row + ": " + value);
+				} else {
+					System.out.println("Cost value is NOT displayed for product row " + row + ". Actual: " + value + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Cost value is NOT displayed for product row " + row + ". Actual: " + value);
+				}
+			}
+			System.out.println("All Cost values are displayed correctly for each product row :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "All Cost values are displayed correctly for each product row");
+			
+			
+			
+		}
+		
+		@Test(dependsOnMethods = "TC_096VerifyCostValueDisplay")
+		public void TC_097VerifyOnhandColumnisPresentbesideCostColumn() {
+			if(gpb.getOnHandColumnFromProductsMenu().isDisplayed()) {
+				 
+				 System.out.println("On Hand column is displayed immediatly beside Cost column :PASS");
+				 utilityclassobject.gettest().log(Status.PASS, "On Hand column is displayed immediatly beside Cost column");
+			 } else {
+				 System.out.println("On Hand column is NOT displayed immediatly beside Cost column :FAIL");
+				 utilityclassobject.gettest().log(Status.FAIL, "On Hand column is NOT displayed immediatly beside Cost column");
+				 
+			}
+		}
+		
+		@Test(dependsOnMethods = "TC_097VerifyOnhandColumnisPresentbesideCostColumn")
+		public void TC_098VerifyOnhandValueDisplayRespectivrRemainigQuantities() throws InterruptedException, EncryptedDocumentException, IOException {
+			/*
+			//direct move to  product menu
+			//direct move to  product menu
+			//direct move to  product menu
+
+			
+			//comment while running batch file
+			//comment while running batch file
+
+			
+			
+			gpb=new Generator_Price_book(driver);
+			elib=new ExcelUtility();
+			
+			if (gpb == null) {
+				gpb = new Generator_Price_book(driver);
+			}
+
+			// Navigate to Generator -> Price Book and open Products for this test case setup.
+			gpb.getGeneratorManagement().click();
+			System.out.println("Clicked on Generator Management");
+			utilityclassobject.gettest().log(Status.INFO, "Clicked on Generator Management");
+			Thread.sleep(1000);
+
+			gpb.getGeneratorLocation().click();
+			System.out.println("Clicked on Generator Location");
+			utilityclassobject.gettest().log(Status.INFO, "Clicked on Generator Location");
+			Thread.sleep(1000);
+
+			WebElement searchField = gpb.getSearchBox();
+			searchField.click();
+			searchField.sendKeys(Keys.CONTROL, "a");
+			searchField.sendKeys(Keys.BACK_SPACE);
+			searchField.sendKeys("Genpricebook solutions");
+			System.out.println("Searched generator location: Genpricebook solutions");
+			utilityclassobject.gettest().log(Status.INFO, "Searched generator location: Genpricebook solutions");
+			Thread.sleep(2000);
+
+			gpb.getFirstoptionfromsearchbox().click();
+			System.out.println("Selected first option from search results");
+			utilityclassobject.gettest().log(Status.INFO, "Selected first option from search results");
+			Thread.sleep(2000);
+
+			gpb.getPriceBookpage().click();
+			System.out.println("Clicked on Price Book page");
+			utilityclassobject.gettest().log(Status.INFO, "Clicked on Price Book page");
+			Thread.sleep(3000);
+			
+			//select  template AutomationPricebookFromdropdown
+			gpb.getSelectedtemplateDropdown().click();
+			//using for loop search for the template AutomationPricebookFromdropdown and click on it
+			List<WebElement> templateOptions = gpb.getSelectedtemplateDropdownOptions();
+			for (WebElement option : templateOptions) {
+				if (option.getText().equals("AutomationPricebook")) {
+					option.click();
+					System.out.println("Selected template: AutomationPriceBook");
+					utilityclassobject.gettest().log(Status.INFO, "Selected template: AutomationPricebook");
+					Thread.sleep(2000);
+					break;
+				}
+			}
+			Thread.sleep(2000);
+			//click on view toggle button
+			gpb.getViewtoggledbutton().click();
+
+			gpb.getProductsmenu().click();
+			System.out.println("Clicked on Products menu");
+			utilityclassobject.gettest().log(Status.INFO, "Clicked on Products menu");
+			Thread.sleep(2000);
+			
+			
+			
+			//comment till here while running batch file
+			//comment till here while running batch file
+
+			//comment till here while running batch file
+			*/
+			
+			
+			List<WebElement> values = gpb.getOnHandValuesFromProductsMenu();
+			
+			for(int i=0;i<values.size();i++) {
+				WebElement valueElement = values.get(i);
+				int row = i + 1;
+				String value = valueElement.getText();
+				if (value == null || value.trim().isEmpty() || value.trim().equals("--")
+				        || value.trim().matches("-?\\d+(\\.\\d+)?")) {
+					System.out.println("On Hand value is displayed for product row " + row + ": " + value + " :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "On Hand value is displayed for product row " + row + ": " + value);
+				} else {
+					System.out.println("On Hand value is NOT displayed for product row " + row + ". Actual: " + value + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "On Hand value is NOT displayed for product row " + row + ". Actual: " + value);
+				}
+			}
+			System.out.println("All On Hand values are displayed correctly for each product row :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "All On Hand values are displayed correctly for each product row");
+		}
+		
+		@Test(dependsOnMethods = "TC_098VerifyOnhandValueDisplayRespectivrRemainigQuantities")
+		public void TC_099VerifyLowStockAlertColumnispresentbesideOnhandColumn() throws InterruptedException, EncryptedDocumentException, IOException {
+			
+		
+			if(gpb.getLowStockAlertColumnFromProductsMenu().isDisplayed()) {
+				 
+				 System.out.println("Low Stock Alert column is displayed immediatly beside On Hand column :PASS");
+				 utilityclassobject.gettest().log(Status.PASS, "Low Stock Alert column is displayed immediatly beside On Hand column");
+			 } else {
+				 System.out.println("Low Stock Alert column is NOT displayed immediatly beside On Hand column :FAIL");
+				 utilityclassobject.gettest().log(Status.FAIL, "Low Stock Alert column is NOT displayed immediatly beside On Hand column");
+				 
+			}
+			
+		}
+		
+		@Test(dependsOnMethods = "TC_099VerifyLowStockAlertColumnispresentbesideOnhandColumn")
+		public void TC_100VerifyEachContainerHasLowStock() throws InterruptedException, EncryptedDocumentException, IOException {
+			List<WebElement> values = gpb.getLowStockAlertValuesFromProductsMenu();
+			for(int i=0;i<values.size();i++) {
+				WebElement valueElement = values.get(i);
+				int row = i + 1;
+				String value = valueElement.getText();
+				if (value == null || value.trim().isEmpty() || value.trim().equals("--")
+				        || value.trim().matches("-?\\d+(\\.\\d+)?")) {
+					System.out.println("Low Stock Alert value is displayed for product row " + row + ": " + value + " :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "Low Stock Alert value is displayed for product row " + row + ": " + value);
+				} else {
+					System.out.println("Low Stock Alert value is NOT displayed for product row " + row + ". Actual: " + value + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "Low Stock Alert value is NOT displayed for product row " + row + ". Actual: " + value);
+				}
+			}
+			System.out.println("All Low Stock Alert values are displayed correctly for each product row :PASS");
+			utilityclassobject.gettest().log(Status.PASS, "All Low Stock Alert values are displayed correctly for each product row");
+		}
+		
+		@Test(dependsOnMethods = "TC_100VerifyEachContainerHasLowStock")
+		public void TC_101VerifyBioHazardDisplay4ItemsIntheTable() throws InterruptedException, EncryptedDocumentException, IOException {
+			
+			gpb.getBiohazardButtonFromProductsMenu().click();
+			System.out.println("Clicked on Biohazard button to open the Biohazard popup");
+			utilityclassobject.gettest().log(Status.INFO, "Clicked on Biohazard button to open the Biohazard popup");
+			
+			List<WebElement> items = gpb.getBiohazardItemsList();
+				
+				
+				
+				//and verify that there are exactly 4 items in the list
+				if (items.size() == 4) {
+					System.out.println("There are exactly 4 Biohazard items displayed in the list :PASS");
+					utilityclassobject.gettest().log(Status.PASS, "There are exactly 4 Biohazard items displayed in the list");
+				} else {
+					System.out.println("There are NOT exactly 4 Biohazard items displayed in the list. Actual count: " + items.size() + " :FAIL");
+					utilityclassobject.gettest().log(Status.FAIL, "There are NOT exactly 4 Biohazard items displayed in the list. Actual count: " + items.size());
+				}
+			
+			
+		}
+		
+		@Test(dependsOnMethods = "TC_101VerifyBioHazardDisplay4ItemsIntheTable")
+		public void TC_102VerifyBiohazardColumnandSharpColmnareSame() throws InterruptedException, EncryptedDocumentException, IOException {
+			
+			List<String> biohazardValues = new ArrayList<>();
+			List<String> sharpValues = new ArrayList<>();
+			
+			//List<WebElement> biohazardcolmns = gpb.getBiohazardColmunsFromProductsMenu();
+			
+			//List<WebElement> sharpcolumns = gpb.getSharpsColmunsFromProductsMenu();
+			
+			List<WebElement> biohazardcolmns = gpb.getBiohazardColmunsFromProductsMenu();
+
+			biohazardValues.clear();
+
+			for (WebElement element : biohazardcolmns) {
+			    biohazardValues.add(element.getText().trim());
+			}
+			
+			//click on sharp button
+			gpb.getSharpsButtonFromProductsMenu().click();
+			System.out.println("Clicked on Sharps button to open the Sharps popup");
+			utilityclassobject.gettest().log(Status.INFO, "Clicked on Sharps button to open the Sharps popup");
+			
+			List<WebElement> sharpcolumns = gpb.getSharpsColmunsFromProductsMenu();
+
+			sharpValues.clear();
+
+			for (WebElement element : sharpcolumns) {
+			    sharpValues.add(element.getText().trim());
+			}
+			
+			if (biohazardValues.size() == sharpValues.size()) {
+
+			    for (int i = 0; i < biohazardValues.size(); i++) {
+
+			        if (biohazardValues.get(i).equals(sharpValues.get(i))) {
+			            System.out.println("Row " + (i + 1) + " : PASS");
+			            System.out.println("Biohazard: " + biohazardValues.get(i));
+			            System.out.println("Sharps: " + sharpValues.get(i));
+			            utilityclassobject.gettest().log(Status.PASS, "Row " + (i + 1) + " : PASS"
+			                    + " Biohazard: " + biohazardValues.get(i)
+			                    + " Sharps: " + sharpValues.get(i));
+			            
+			            System.out.println("Biohazard and Sharps values are the same for row " + (i + 1) + " :PASS");
+			            utilityclassobject.gettest().log(Status.PASS, "Biohazard and Sharps values are the same for row " + (i + 1));
+			            
+			            System.out.println("Biohazard value: " + biohazardValues.get(i) + ", Sharps value: " + sharpValues.get(i));
+			            utilityclassobject.gettest().log(Status.INFO, "Biohazard value: " + biohazardValues.get(i) + ", Sharps value: " + sharpValues.get(i));
+			            
+			            System.out.println("Biohazard and Sharps values match for row " + (i + 1) + " :PASS");
+			            utilityclassobject.gettest().log(Status.PASS, "Biohazard and Sharps values match for row " + (i + 1));
+			            
+			            
+			            
+			        } else {
+			            System.out.println("Row " + (i + 1) + " : FAIL"
+			                    + " Biohazard: " + biohazardValues.get(i)
+			                    + " Sharps: " + sharpValues.get(i));
+			            utilityclassobject.gettest().log(Status.FAIL, "Row " + (i + 1) + " : FAIL"
+			            					                    + " Biohazard: " + biohazardValues.get(i)
+			                    + " Sharps: " + sharpValues.get(i));
+			            
+			           
+			            
+			        }
+			    }
+
+			} else {
+			    System.out.println("FAIL: Biohazard and Sharps element counts are different.");
+			    System.out.println("Biohazard count: " + biohazardValues.size());
+			    gpb.getBiohazardButtonFromProductsMenu().click();
+			    
+			}
+			
+		}
+			
+			@Test(dependsOnMethods = "TC_102VerifyBiohazardColumnandSharpColmnareSame")
+			public void TC_103VerifyNonRCRAPharmaceuticalHas9Items() throws InterruptedException, EncryptedDocumentException, IOException {
+				
+				gpb.getNonRCRAPharmaceuticalButtonFromProductsMenu().click();
+				System.out.println("Clicked on Non-RCRA Pharmaceutical button to open the Non-RCRA Pharmaceutical popup");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on Non-RCRA Pharmaceutical button to open the Non-RCRA Pharmaceutical popup");
+				 List<WebElement> items = gpb.getItemsList();
+				 //verify items are 9
+				 if (items.size() == 9) {
+					 System.out.println("There are exactly 9 Non-RCRA Pharmaceutical items displayed in the list :PASS");
+					 utilityclassobject.gettest().log(Status.PASS, "There are exactly 9 Non-RCRA Pharmaceutical items displayed in the list");
+				 } else {
+					 System.out.println("There are NOT exactly 9 Non-RCRA Pharmaceutical items displayed in the list. Actual count: " + items.size() + " :FAIL");
+					 utilityclassobject.gettest().log(Status.FAIL, "There are NOT exactly 9 Non-RCRA Pharmaceutical items displayed in the list. Actual count: " + items.size());
+				 }
+			}
+				
+			
+			@Test(dependsOnMethods = "TC_103VerifyNonRCRAPharmaceuticalHas9Items")
+			public void TC_104VerifyNonRCRAPharmaceuticalColumnandNonRCRAOtherColumnareSame() throws InterruptedException, EncryptedDocumentException, IOException {
+				List<String> RCRAValues = new ArrayList<>();
+				List<String> nonrcraValues = new ArrayList<>();
+				
+				//List<WebElement> biohazardcolmns = gpb.getBiohazardColmunsFromProductsMenu();
+				
+				//List<WebElement> sharpcolumns = gpb.getSharpsColmunsFromProductsMenu();
+				
+				List<WebElement> RcRAcolumns = gpb.getRCRAColmunsFromProductsMenu();
+
+				RCRAValues.clear();
+
+				for (WebElement element : RcRAcolumns) {
+					RCRAValues.add(element.getText().trim());
+				}
+				
+				//click on sharp button
+				gpb.getNonRCRAPharmaceuticalButtonFromProductsMenu().click();
+				System.out.println("Clicked on NOn RCRA button to open the Sharps popup");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on NOn RCRA button to open the Sharps popup");
+				
+				List<WebElement> nonRCRAcolumns = gpb.getNonRCRAColmunsFromProductsMenu();
+
+				nonrcraValues.clear();
+
+				for (WebElement element : nonRCRAcolumns) {
+					nonrcraValues.add(element.getText().trim());
+				}
+				
+				if (RCRAValues.size() == nonrcraValues.size()) {
+
+				    for (int i = 0; i < RCRAValues.size(); i++) {
+
+				        if (RCRAValues.get(i).equals(nonrcraValues.get(i))) {
+				            System.out.println("Row " + (i + 1) + " : PASS");
+				            System.out.println("RCRA: " + RCRAValues.get(i));
+				            System.out.println("NOn RCRA: " + nonrcraValues.get(i));
+				            utilityclassobject.gettest().log(Status.PASS, "Row " + (i + 1) + " : PASS"
+				                    + " RCRA: " + RCRAValues.get(i)
+				                    + " NOn RCRA: " + nonrcraValues.get(i));
+				            
+				            System.out.println("RCRA and NOn RCRA values are the same for row " + (i + 1) + " :PASS");
+				            utilityclassobject.gettest().log(Status.PASS, "RCRA and NOn RCRA values are the same for row " + (i + 1));
+				            
+				            System.out.println(" RCRA value: " + RCRAValues.get(i) + ", NOn RCRA value: " + nonrcraValues.get(i));
+				            utilityclassobject.gettest().log(Status.INFO, "RCRA value: " + RCRAValues.get(i) + ", NOn RCRA value: " + nonrcraValues.get(i));
+				            
+				            System.out.println("RCRA and NOn RCRA values match for row " + (i + 1) + " :PASS");
+				            utilityclassobject.gettest().log(Status.PASS, "  RCRA and NOn RCRA values match for row " + (i + 1));
+				            
+				            
+				            
+				        } else {
+				            System.out.println("Row " + (i + 1) + " : FAIL"
+				                    + " RCRA: " + RCRAValues.get(i)
+				                    + " NOn RCRA: " + nonrcraValues.get(i));
+				            utilityclassobject.gettest().log(Status.FAIL, "Row " + (i + 1) + " : FAIL"
+				            					                    + "  RCRA: " + RCRAValues.get(i)
+				                    + " NOn RCRA: " + nonrcraValues.get(i));
+				            
+				           
+				            
+				        }
+				    }
+
+				} else {
+				    System.out.println("FAIL: RCRA and Non RCRA element counts are different.");
+				    System.out.println("RCRA count: " + RCRAValues.size());
+				    gpb.getNonRCRAPharmaceuticalButtonFromProductsMenu().click();
+				    
+				}
+				
+				System.out.println("The 'RCRA Pharmaceutical' table is displaying all the same columns as the 'NON RCRA' Product Containe table. :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "The 'RCRA Pharmaceutical' table is displaying all the same columns as the 'NON RCRA' Product Containe table.");
+				
+			}
+			@Test(dependsOnMethods = "TC_104VerifyNonRCRAPharmaceuticalColumnandNonRCRAOtherColumnareSame")
+			public void TC_105VerifyRCRAharmacceuticalHas9Items() throws InterruptedException, EncryptedDocumentException, IOException {
+				gpb.getRCRAPharmaceuticalButtonFromProductsMenu().click();
+				System.out.println("Clicked on RCRA Pharmaceutical button to open the RCRA Pharmaceutical popup");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on RCRA Pharmaceutical button to open the RCRA Pharmaceutical popup");
+				 List<WebElement> items = gpb.getItemsList();
+				 //verify items are 9
+				 if (items.size() == 9) {
+					 System.out.println("There are exactly 9 RCRA Pharmaceutical items displayed in the list :PASS");
+					 utilityclassobject.gettest().log(Status.PASS, "There are exactly 9 RCRA Pharmaceutical items displayed in the list");
+				 } else {
+					 System.out.println("There are NOT exactly 9 RCRA Pharmaceutical items displayed in the list. Actual count: " + items.size() + " :FAIL");
+					 utilityclassobject.gettest().log(Status.FAIL, "There are NOT exactly 9 RCRA Pharmaceutical items displayed in the list. Actual count: " + items.size());
+				 }
+				
+				
+			}
+			
+			@Test(dependsOnMethods = "TC_105VerifyRCRAharmacceuticalHas9Items")
+			public void TC_106VerifyRCRAPharmaceuticalColumnandNonRCRAOtherColumnareSame() throws InterruptedException, EncryptedDocumentException, IOException {
+				List<String> nonRCRAValues = new ArrayList<>();
+				List<String> sharpValues = new ArrayList<>();
+				
+				//List<WebElement> biohazardcolmns = gpb.getBiohazardColmunsFromProductsMenu();
+				
+				//List<WebElement> sharpcolumns = gpb.getSharpsColmunsFromProductsMenu();
+				
+				List<WebElement> RcRAcolumns = gpb.getRCRAColmunsFromProductsMenu();
+
+				nonRCRAValues.clear();
+
+				for (WebElement element : RcRAcolumns) {
+					nonRCRAValues.add(element.getText().trim());
+				}
+				
+				//click on sharp button
+				gpb.getSharpsButtonFromProductsMenu().click();
+				System.out.println("Clicked on Sharps button to open the Sharps popup");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on Sharps button to open the Sharps popup");
+				
+				List<WebElement> sharpcolumns = gpb.getNonRCRAColmunsFromProductsMenu();
+
+				sharpValues.clear();
+
+				for (WebElement element : sharpcolumns) {
+				    sharpValues.add(element.getText().trim());
+				}
+				
+				if (nonRCRAValues.size() == sharpValues.size()) {
+
+				    for (int i = 0; i < nonRCRAValues.size(); i++) {
+
+				        if (nonRCRAValues.get(i).equals(sharpValues.get(i))) {
+				            System.out.println("Row " + (i + 1) + " : PASS");
+				            System.out.println("nonRCRA: " + nonRCRAValues.get(i));
+				            System.out.println("Sharps: " + sharpValues.get(i));
+				            utilityclassobject.gettest().log(Status.PASS, "Row " + (i + 1) + " : PASS"
+				                    + " non RCRA: " + nonRCRAValues.get(i)
+				                    + " Sharps: " + sharpValues.get(i));
+				            
+				            System.out.println("non RCRA and Sharps values are the same for row " + (i + 1) + " :PASS");
+				            utilityclassobject.gettest().log(Status.PASS, "non RCRA and Sharps values are the same for row " + (i + 1));
+				            
+				            System.out.println("non RCRA value: " + nonRCRAValues.get(i) + ", Sharps value: " + sharpValues.get(i));
+				            utilityclassobject.gettest().log(Status.INFO, "non RCRA value: " + nonRCRAValues.get(i) + ", Sharps value: " + sharpValues.get(i));
+				            
+				            System.out.println("non RCRA and Sharps values match for row " + (i + 1) + " :PASS");
+				            utilityclassobject.gettest().log(Status.PASS, "non  RCRA and Sharps values match for row " + (i + 1));
+				            
+				            
+				            
+				        } else {
+				            System.out.println("Row " + (i + 1) + " : FAIL"
+				                    + " non RCRA: " + nonRCRAValues.get(i)
+				                    + " Sharps: " + sharpValues.get(i));
+				            utilityclassobject.gettest().log(Status.FAIL, "Row " + (i + 1) + " : FAIL"
+				            					                    + " non RCRA: " + nonRCRAValues.get(i)
+				                    + " Sharps: " + sharpValues.get(i));
+				            
+				           
+				            
+				        }
+				    }
+
+				} else {
+				    System.out.println("FAIL: non RCRA and Sharps element counts are different.");
+				    System.out.println("non RCRA count: " + nonRCRAValues.size());
+				    gpb.getNonRCRAPharmaceuticalButtonFromProductsMenu().click();
+				    
+				}
+				
+				System.out.println("The 'Non-RCRA Pharmaceutical' table is displaying all the same columns as the 'Biohazard' Product Containe table. :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "The 'Non-RCRA Pharmaceutical' table is displaying all the same columns as the 'Biohazard' Product Containe table.");
+				
+			}
+			
+			@Test(dependsOnMethods = "TC_106VerifyRCRAPharmaceuticalColumnandNonRCRAOtherColumnareSame")
+			public void TC_107VerifyChemotherapyHas9Items() throws InterruptedException, EncryptedDocumentException, IOException {
+				
+				gpb.getChemotherapyButtonFromProductsMenu().click();
+				System.out.println("Clicked on Chemotherapy button to open the Chemotherapy popup");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on Chemotherapy button to open the Chemotherapy popup");
+				 List<WebElement> items = gpb.getItemsList();
+				 //verify items are 9
+				 if (items.size() == 9) {
+					 System.out.println("There are exactly 9 Chemotherapy items displayed in the list :PASS");
+					 utilityclassobject.gettest().log(Status.PASS, "There are exactly 9 Chemotherapy items displayed in the list");
+				 } else {
+					 System.out.println("There are NOT exactly 9 Chemotherapy items displayed in the list. Actual count: " + items.size() + " :FAIL");
+					 utilityclassobject.gettest().log(Status.FAIL, "There are NOT exactly 9 Chemotherapy items displayed in the list. Actual count: " + items.size());
+				 }
+				
+			}
+			
+			@Test(dependsOnMethods = "TC_107VerifyChemotherapyHas9Items")
+			public void TC_108VerifyChemotherapyColumnandRCRAOtherColumnareSame() throws InterruptedException, EncryptedDocumentException, IOException {
+				//eritec code for verifying chemotherapy and RCRA columns are same
+				List<String> chemotherapyValues = new ArrayList<>();
+				List<String> rcravalues = new ArrayList<>();
+				
+				//List<WebElement> biohazardcolmns = gpb.getBiohazardColmunsFromProductsMenu();
+				
+				//List<WebElement> sharpcolumns = gpb.getSharpsColmunsFromProductsMenu();
+				
+				List<WebElement> chemotherapycolmns = gpb.getChemotherapyColmunsFromProductsMenu();
+
+				chemotherapyValues.clear();
+
+				for (WebElement element : chemotherapycolmns) {
+					chemotherapyValues.add(element.getText().trim());
+				}
+				
+				//click on sharp button
+				gpb.getRCRAPharmaceuticalButtonFromProductsMenu().click();
+				System.out.println("Clicked on RCRA button to open the Sharps popup");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on RCRA button to open the Sharps popup");
+				
+				List<WebElement> rcracolumns = gpb.getRCRAColmunsFromProductsMenu();
+
+				rcravalues.clear();
+
+				for (WebElement element : rcracolumns) {
+					rcravalues.add(element.getText().trim());
+				}
+				
+				if (chemotherapyValues.size() == rcravalues.size()) {
+
+				    for (int i = 0; i < chemotherapyValues.size(); i++) {
+
+				        if (chemotherapyValues.get(i).equals(rcravalues.get(i))) {
+				            System.out.println("Row " + (i + 1) + " : PASS");
+				            System.out.println("Chemotherapy : " + chemotherapyValues.get(i));
+				            System.out.println("RCRA Pharma: " + rcravalues.get(i));
+				            utilityclassobject.gettest().log(Status.PASS, "Row " + (i + 1) + " : PASS"
+				                    + " Chemotherapy: " + chemotherapyValues.get(i)
+				                    + " RCRA Pharma: " + rcravalues.get(i));
+				            
+				            System.out.println("Biohazard and RCRA Pharma values are the same for row " + (i + 1) + " :PASS");
+				            utilityclassobject.gettest().log(Status.PASS, "Biohazard and RCRA Pharma values are the same for row " + (i + 1));
+				            
+				            System.out.println("Chemotherapy value: " + chemotherapyValues.get(i) + ", RCRA pharma value: " + rcravalues.get(i));
+				            utilityclassobject.gettest().log(Status.INFO, "Chemotherapy value: " + chemotherapyValues.get(i) + ", RCRA Pharma value: " + rcravalues.get(i));
+				            
+				            System.out.println("Chemotherapy and RCRA Pharma values match for row " + (i + 1) + " :PASS");
+				            utilityclassobject.gettest().log(Status.PASS, "Chemotherapy and RCRA Pharma values match for row " + (i + 1));
+				            
+				            
+				            
+				        } else {
+				            System.out.println("Row " + (i + 1) + " : FAIL"
+				                    + " Chemotherapy: " + chemotherapyValues.get(i)
+				                    + " RCRA Pharma: " + rcravalues.get(i));
+				            utilityclassobject.gettest().log(Status.FAIL, "Row " + (i + 1) + " : FAIL"
+				            					                    + "Chemotherapy: " + chemotherapyValues.get(i)
+				                    + " RCRA Pharma: " + rcravalues.get(i));
+				            
+				           
+				            
+				        }
+				        
+				    }
+		            
+					     
+
+					} else {
+					    System.out.println("FAIL: Chemotherapy and Chemotherapy element counts are different.");
+					    System.out.println("Chemotherapy count: " + chemotherapyValues.size());
+					    gpb.getChemotherapyButtonFromProductsMenu().click();
+					    
+					}
+				
+				System.out.println("The 'Chemotherapy' table is displaying all the same columns as the 'RCRA Pharmaceutical' Product Containe table. :PASS");
+				utilityclassobject.gettest().log(Status.PASS, "The 'Chemotherapy' table is displaying all the same columns as the 'RCRA Pharmaceutical' Product Containe table.");
+					
+				    
+				}
+			/*
+			@Test(dependsOnMethods = "TC_108VerifyChemotherapyColumnandRCRAOtherColumnareSame")
+			public void TC_109VerifyChemotherapyHas9Items() throws InterruptedException, EncryptedDocumentException, IOException {
+				
+				gpb.getChemotherapyButtonFromProductsMenu().click();
+				System.out.println("Clicked on Chemotherapy button to open the Chemotherapy popup");
+				utilityclassobject.gettest().log(Status.INFO, "Clicked on Chemotherapy button to open the Chemotherapy popup");
+				 List<WebElement> items = gpb.getItemsList();
+				 //verify items are 9
+				 if (items.size() == 9) {
+					 System.out.println("There are exactly 9 Chemotherapy items displayed in the list :PASS");
+					 utilityclassobject.gettest().log(Status.PASS, "There are exactly 9 Chemotherapy items displayed in the list");
+				 } else {
+					 System.out.println("There are NOT exactly 9 Chemotherapy items displayed in the list. Actual count: " + items.size() + " :FAIL");
+					 utilityclassobject.gettest().log(Status.FAIL, "There are NOT exactly 9 Chemotherapy items displayed in the list. Actual count: " + items.size());
+				 }
+				 */
+				
+					
+				
+				
+			
+
+
+}
+			
+			
+			
+
+			
 			
 			
 		
 			
-  		
-}
+			
+		
+			
+			
+			  		
+

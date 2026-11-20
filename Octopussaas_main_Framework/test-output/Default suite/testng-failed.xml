@@ -6,26 +6,18 @@
       <class name="GeneratorPricBook.Generator_priceBook_AllTC">
         <methods>
           <include name="Ac"/>
+          <include name="TC_099VerifyLowStockAlertColumnispresentbesideOnhandColumn"/>
           <include name="Bc"/>
-          <include name="TC_090VerifyTaxableCheckboxisPresentinAllRowBelowTaxableColumn"/>
+          <include name="TC_101VerifyBioHazardDisplay4ItemsIntheTable"/>
+          <include name="TC_103VerifyNonRCRAPharmaceuticalHas9Items"/>
+          <include name="TC_102VerifyBiohazardColumnandSharpColmnareSame"/>
+          <include name="TC_100VerifyEachContainerHasLowStock"/>
+          <include name="TC_106VerifyRCRAPharmaceuticalColumnandNonRCRAOtherColumnareSame"/>
+          <include name="TC_098VerifyOnhandValueDisplayRespectivrRemainigQuantities"/>
           <include name="Bm"/>
-          <include name="TC_084VerifyAllotmentFrequencyDropdownisPresentanditShouldHaveoptionsInside"/>
-          <include name="TC_095VerifyCostcolumnIsPresenBesideSku"/>
-          <include name="TC_079VerifyUptoAllotmentColmnispresentbrsideSalesprice"/>
-          <include name="TC_089VerifyTaxableColumnisPresentbesideRemainingAllotmentColumn"/>
+          <include name="TC_104VerifyNonRCRAPharmaceuticalColumnandNonRCRAOtherColumnareSame"/>
+          <include name="TC_105VerifyRCRAharmacceuticalHas9Items"/>
           <include name="Am"/>
-          <include name="TC_093VerifySKUColumnIsPresentBesideAllow$0Column"/>
-          <include name="TC_092VerifyAllow$0ChargeCheckboxisPresentandAbletoEdit"/>
-          <include name="TC_080VerifyUptoAllotmentInputFieldAcceptsOnlyNumericValues"/>
-          <include name="TC_087VerifyRemainingAllotmentColumnispresentbesideUsedAllotmentColumn"/>
-          <include name="TC_086VerifyUsedAllotmentInputAbleToeditthvaluess"/>
-          <include name="TC_091VerifyAllow$0ChargeColumnisPresentbesideTaxableColumn"/>
-          <include name="TC_082VerifyAdditionalContainerRateInputFieldAcceptsOnlyNumericValues"/>
-          <include name="TC_085VerifyUsedAllotmentColumnispresentbesideAllotmentFrequencyColumn"/>
-          <include name="TC_088VerifyRemainingAllotmentInputFieldisPresentandAbletoeditthevalues"/>
-          <include name="TC_081VerifyAdditionalContainerRatecolumnissPresentBesideUptoAllotmentColumn"/>
-          <include name="TC_094VerifySKUValueDisplayedAsEmpty"/>
-          <include name="TC_083VerifyAllotmentFrequencyPresentbesideAdditionalContainerRateColumn"/>
         </methods>
       </class> <!-- GeneratorPricBook.Generator_priceBook_AllTC -->
     </classes>
