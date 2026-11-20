@@ -612,6 +612,7 @@ public class Subcontractor_Servicerequest extends BaseClassForGEneratorContacts{
 			            } catch (DateTimeParseException e) {
 
 			                Assert.fail("Invalid date format found: " + actualDate);
+			                System.out.println("Hi");
 			            }
 			        }
 		    }
